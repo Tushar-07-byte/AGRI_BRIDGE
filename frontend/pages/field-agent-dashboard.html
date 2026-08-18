@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Field Agent Dashboard - AgriBridge</title>
+
+    <link rel="stylesheet" href="../styles/field-agent-dashboard.css">
+</head>
+
+<body>
+    <nav class="nav">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+            <a href="field-agent-dashboard.html">
+                <img src="/assets/logo/logo.png" alt="Agri-Bridge Logo">
+            </a>
+        </div>
+
+
+        <!-- FIELD AGENT NAVIGATION -->
+
+        <div class="mid">
+
+            <a href="field-agent-dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="#pending-container">
+                Pending Verification
+            </a>
+
+        </div>
+
+
+        <!-- USER -->
+
+        <div class="register">
+
+            <span class="user-role">
+                👨‍🌾 Field Agent
+            </span>
+
+            <button class="stylish-btn" onclick="window.location.href='/pages/index.html'">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header class="dashboard-header">
+
+        <div>
+            <h1>Field Agent Dashboard</h1>
+            <p>Review and verify farmer crop submissions.</p>
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main class="dashboard-container">
+
+
+        <!-- =====================================
+             DASHBOARD OVERVIEW
+             ===================================== -->
+
+        <section class="overview-section">
+
+            <h2>Verification Overview</h2>
+
+            <div class="overview-grid">
+
+                <div class="overview-card">
+
+                    <div class="overview-icon">
+                        📋
+                    </div>
+
+                    <div>
+                        <h3>Pending</h3>
+                        <p>3</p>
+                    </div>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <div class="overview-icon">
+                        ✅
+                    </div>
+
+                    <div>
+                        <h3>Verified</h3>
+                        <p>12</p>
+                    </div>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <div class="overview-icon">
+                        ❌
+                    </div>
+
+                    <div>
+                        <h3>Rejected</h3>
+                        <p>2</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PENDING VERIFICATIONS
+             ===================================== -->
+
+        <section class="pending-section">
+
+            <h2 class="section-title">
+                Pending Verifications
+            </h2>
+
+            <div id="pending-container" class="pending-container">
+
+                <!-- JavaScript will add pending crops here -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../scripts/field-agent-dashboard.js"></script>
+
+</body>
+
+</html>

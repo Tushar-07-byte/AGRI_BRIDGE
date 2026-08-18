@@ -1,0 +1,679 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.nav {
+    width: 100%;
+    min-height: 70px;
+
+    padding: 8px 40px;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+    z-index: 1000;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    flex: 0 0 auto;
+}
+
+.nav img {
+    display: block;
+
+    width: auto;
+    height: 55px;
+
+    max-width: 160px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    padding: 14px 22px;
+
+    background: #F2F4F3;
+
+    border-radius: 30px;
+
+    /* Important */
+    min-width: 0;
+    max-width: 100%;
+}
+
+
+/* =========================================
+   NAV LINKS
+========================================= */
+
+.mid a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+}
+
+
+/* =========================================
+   UNDERLINE
+========================================= */
+
+.mid a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: linear-gradient(135deg,
+            #2fff2f,
+            #008600);
+
+    transition: width 0.3s ease;
+}
+
+.mid a:hover {
+    color: #2E7D32;
+}
+
+.mid a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   ACTIVE
+========================================= */
+
+.mid a.active {
+    color: #2E7D32;
+}
+
+.mid a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   LOGIN / SIGNUP
+========================================= */
+
+.register {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex: 0 0 auto;
+}
+
+.stylish-btn {
+    border: none;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    background-color: #2E7D32;
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.2s ease;
+}
+
+.stylish-btn:hover {
+    background-color: #1B5E20;
+
+    transform: translateY(-2px);
+}
+
+.hero-section {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    gap: 15px;
+}
+
+.hero-section img {
+    width: 65vw;
+    height: auto;
+    border-radius: 13px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-content h1 {
+    color: #008600;
+    text-align: center;
+}
+
+.hero-content h3 {
+    text-align: center;
+}
+
+.hero-points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content ul {
+    width: 300px;
+    height: 200px;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+        -15px -15px 30px #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.hero-content ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 23px;
+    margin-top: 20px;
+}
+
+.features-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.features-section h2 {
+    font-size: 30px;
+}
+
+.features-container {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    gap: 70px;
+}
+
+.feature-header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    text-align: center;
+}
+
+.feature-card {
+    width: 250px;
+    min-height: 280px;
+    height: auto;
+
+    padding: 25px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 15px;
+
+    border-radius: 30px;
+    background: #ffffff;
+
+    box-shadow:
+        15px 15px 30px #bebebe,
+        -15px -15px 30px #ffffff;
+
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-card img {
+    width: 160px;
+    height: auto;
+}
+
+.feature-header p {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    text-align: center;
+
+    line-height: 1.2;
+}
+
+.feature-description {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    text-align: center;
+}
+
+.how-it-works-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    margin-top: 20px;
+}
+
+.how-it-works-section h2 {
+    font-size: 30px;
+}
+
+.workflow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.workflow-step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 250px;
+    height: 200px;
+    border-radius: 30px;
+    background: #c5ecc1;
+    box-shadow: 15px 15px 30px #bebebe,
+        -15px -15px 30px #ffffff;
+}
+
+.workflow-step h4 {
+    font-size: 20px;
+}
+
+.arrow {
+    font-size: 40px;
+    color: green;
+}
+
+/* -------------------- */
+/* USER ROLES SECTION */
+/* -------------------- */
+
+.roles-section {
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.roles-section h2 {
+    color: #2E7D32;
+    margin-bottom: 40px;
+}
+
+.roles-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.role-card {
+    background-color: #ffffff;
+    width: 280px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-8px);
+}
+
+.role-card h4 {
+    color: #2E7D32;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.role-card p {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+/* -------------------- */
+/* DEMO WORKFLOW SECTION */
+/* -------------------- */
+
+.demo-workflow-section {
+    padding: 80px;
+    text-align: center;
+}
+
+.demo-workflow-section h2 {
+    color: #2E7D32;
+    margin-bottom: 40px;
+}
+
+.workflow-container-demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.workflow-step-demo {
+    width: 200px;
+    min-height: 130px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workflow-step-demo p {
+    color: #333;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Arrow between workflow cards */
+
+.workflow-step-demo:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #2E7D32;
+}
+
+/* -------------------- */
+/* FOOTER */
+/* -------------------- */
+
+.footer {
+    background-color: #2E7D32;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.footer p {
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .nav {
+        padding: 8px 25px;
+        gap: 12px;
+    }
+
+    .nav img {
+        max-width: 135px;
+        height: 50px;
+    }
+
+    .mid {
+        gap: 15px;
+        padding: 12px 16px;
+    }
+
+    .mid a {
+        font-size: 13px;
+    }
+
+    .stylish-btn {
+        padding: 9px 13px;
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================
+   SMALL LAPTOP / TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        padding: 12px 20px;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .mid {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        overflow-x: auto;
+
+        scrollbar-width: none;
+    }
+
+    .mid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .register {
+        margin-left: auto;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .nav {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+
+        padding: 12px 15px;
+    }
+
+    .logo {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav img {
+        height: 48px;
+        max-width: 140px;
+    }
+
+    .mid {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        gap: 25px;
+
+        padding: 12px 18px;
+
+        border-radius: 25px;
+
+        overflow-x: auto;
+    }
+
+    .mid a {
+        font-size: 14px;
+    }
+
+    .register {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    .stylish-btn {
+        flex: 1;
+
+        max-width: 130px;
+
+        padding: 10px 15px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .nav {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .mid {
+        gap: 20px;
+        padding: 11px 15px;
+    }
+
+    .mid a {
+        font-size: 13px;
+    }
+
+    .stylish-btn {
+        max-width: 120px;
+        font-size: 13px;
+    }
+}

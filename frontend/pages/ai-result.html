@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Crop Analysis - AgriBridge</title>
+
+    <link rel="stylesheet" href="/styles/ai-result.css">
+</head>
+
+<body>
+
+    <main class="analysis-page">
+
+        <section class="analysis-card">
+
+            <h1>Crop Analysis</h1>
+
+            <p class="description">
+                Our AI has analyzed your uploaded crop image.
+            </p>
+
+
+            <!-- Crop Image -->
+
+            <div class="crop-image-container">
+
+                <img
+                    id="crop-image"
+                    src=""
+                    alt="Uploaded crop"
+                >
+
+            </div>
+
+
+            <!-- Result -->
+
+            <div class="result-section">
+
+                <div id="result-icon" class="result-icon">
+                    🌱
+                </div>
+
+                <h2 id="result-title">
+                    AI Check Passed
+                </h2>
+
+                <p id="result-message">
+                    Your crop has passed the initial AI health check
+                    and is ready for field verification.
+                </p>
+
+            </div>
+
+
+            <!-- Guidance -->
+
+            <div id="guidance-section" class="guidance-section">
+
+                <h3>What you should do</h3>
+
+                <ul>
+                    <li>Upload a clear image of the crop.</li>
+                    <li>Make sure the crop is clearly visible.</li>
+                    <li>Avoid blurry or dark images.</li>
+                </ul>
+
+            </div>
+
+
+            <!-- Actions -->
+
+            <div class="action-buttons">
+
+                <button
+                    id="continue-button"
+                    type="button">
+                    Continue
+                </button>
+
+                <button
+                    id="resubmit-button"
+                    type="button">
+                    Resubmit Image
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/scripts/ai-result.js"></script>
+
+</body>
+
+</html>

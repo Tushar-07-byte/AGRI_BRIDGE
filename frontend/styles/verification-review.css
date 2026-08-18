@@ -1,0 +1,386 @@
+/* =========================================
+   GLOBAL RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    background-color: #f1f8e9;
+    color: #333;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   MAIN PAGE
+   ========================================= */
+
+.review-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================================
+   REVIEW CARD
+   ========================================= */
+
+.review-card {
+    width: 100%;
+    max-width: 750px;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.review-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.review-header h1 {
+    color: #2E7D32;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+.review-header p {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   CROP IMAGE
+   ========================================= */
+
+.crop-image-section {
+    width: 100%;
+
+    height: 320px;
+
+    background-color: #f1f8e9;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    margin-bottom: 30px;
+}
+
+
+#crop-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================
+   CROP INFORMATION
+   ========================================= */
+
+.crop-information {
+    margin-bottom: 30px;
+}
+
+
+.crop-information h2 {
+    color: #2E7D32;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+
+.information-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+.information-item {
+    background-color: #f9fafb;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.information-label {
+    color: #777;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.information-value {
+    color: #333;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   AI RESULT
+   ========================================= */
+
+.ai-result-section {
+    margin-bottom: 30px;
+}
+
+
+.ai-result-section h2 {
+    color: #2E7D32;
+
+    font-size: 21px;
+
+    margin-bottom: 15px;
+}
+
+
+.ai-result-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background-color: #f1f8e9;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    border-left: 5px solid #2E7D32;
+}
+
+
+.ai-icon {
+    font-size: 35px;
+
+    flex-shrink: 0;
+}
+
+
+.ai-result-content h3 {
+    color: #2E7D32;
+
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+
+.ai-result-content p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   DECISION SECTION
+   ========================================= */
+
+.decision-section {
+    border-top: 1px solid #eeeeee;
+
+    padding-top: 30px;
+
+    text-align: center;
+}
+
+
+.decision-section h2 {
+    color: #2E7D32;
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+
+.decision-section > p {
+    color: #666;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   DECISION BUTTONS
+   ========================================= */
+
+.decision-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+.decision-buttons button {
+    min-width: 180px;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.3s ease;
+}
+
+
+/* Approve */
+
+.approve-button {
+    background-color: #2E7D32;
+}
+
+
+.approve-button:hover {
+    background-color: #1b5e20;
+
+    transform: translateY(-2px);
+}
+
+
+/* Reject */
+
+.reject-button {
+    background-color: #c62828;
+}
+
+
+.reject-button:hover {
+    background-color: #b71c1c;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   DECISION MESSAGE
+   ========================================= */
+
+.decision-message {
+    margin-top: 20px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .review-page {
+        padding: 20px 15px;
+    }
+
+
+    .review-card {
+        padding: 30px 20px;
+    }
+
+
+    .review-header h1 {
+        font-size: 25px;
+    }
+
+
+    .crop-image-section {
+        height: 230px;
+    }
+
+
+    .information-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .decision-buttons {
+        flex-direction: column;
+    }
+
+
+    .decision-buttons button {
+        width: 100%;
+    }
+
+}
+

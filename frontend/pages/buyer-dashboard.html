@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buyer Dashboard - AgriBridge</title>
+
+    <link rel="stylesheet" href="/styles/buyer-dashboard.css">
+</head>
+
+<body>
+
+    <nav class="nav">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+            <a href="buyer-dashboard.html">
+                <img src="/assets/logo/logo.png" alt="Agri-Bridge Logo">
+            </a>
+        </div>
+
+
+        <!-- BUYER NAVIGATION -->
+
+        <div class="mid">
+
+            <a href="buyer-dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="buyer-dashboard.html#listings">
+                Verified Crops
+            </a>
+
+        </div>
+
+
+        <!-- USER -->
+
+        <div class="register">
+
+            <span class="user-role">
+                🛒 Buyer
+            </span>
+
+            <button class="stylish-btn" onclick="window.location.href='/pages/index.html'">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header class="dashboard-header">
+
+        <div>
+            <h1>Buyer Dashboard</h1>
+
+            <p>
+                Find verified crops directly from farmers.
+            </p>
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         VERIFIED CROPS
+         ========================================= -->
+
+    <main>
+
+        <section id="listings" class="listings-section">
+
+            <h2>Verified Crop Listings</h2>
+
+            <p class="section-description">
+                These crops have been checked and verified
+                by our field agents.
+            </p>
+
+
+            <!-- JavaScript will add crops here -->
+
+            <div id="listings-container" class="listings-container">
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/scripts/buyer-dashboard.js"></script>
+
+</body>
+
+</html>

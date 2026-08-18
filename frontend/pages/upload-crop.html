@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Crop - AgriBridge</title>
+
+    <link rel="stylesheet" href="/styles/upload-crop.css">
+</head>
+
+<body>
+
+    <section class="upload-section">
+
+        <h1>Upload Your Crop</h1>
+
+        <p class="page-description">
+            Add your crop details and upload a photo for AI health analysis.
+        </p>
+
+        <form id="crop-form">
+
+            <!-- Crop Name -->
+            <div class="form-group">
+
+                <label for="crop-name">
+                    Crop Name
+                </label>
+
+                <input
+                    type="text"
+                    id="crop-name"
+                    placeholder="Enter crop name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Quantity -->
+            <div class="form-group">
+
+                <label for="quantity">
+                    Quantity (kg)
+                </label>
+
+                <input
+                    type="number"
+                    id="quantity"
+                    placeholder="Enter quantity"
+                    min="1"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Harvest Date -->
+            <div class="form-group">
+
+                <label for="harvest-date">
+                    Expected Harvest Date
+                </label>
+
+                <input
+                    type="date"
+                    id="harvest-date"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Location -->
+            <div class="form-group">
+
+                <label for="location">
+                    Farm Location
+                </label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Enter your farm location"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Crop Image -->
+            <div class="form-group">
+
+                <label for="crop-image">
+                    Upload Crop Image
+                </label>
+
+                <input
+                    type="file"
+                    id="crop-image"
+                    accept="image/*"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Image Preview -->
+            <div class="preview-container">
+
+                <img
+                    id="image-preview"
+                    src=""
+                    alt="Crop image preview"
+                >
+
+            </div>
+
+
+            <!-- Submit -->
+            <button type="submit" id="analyze-button">
+                Analyze Crop
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </section>
+
+
+    <script src="/scripts/upload-crop.js"></script>
+
+</body>
+
+</html>

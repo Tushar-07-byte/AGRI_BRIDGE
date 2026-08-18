@@ -1,0 +1,285 @@
+/* =========================================
+   GLOBAL RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* =========================================
+   PAGE
+   ========================================= */
+
+body {
+    background-color: #f1f8e9;
+    color: #333;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+
+.verification-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px;
+}
+
+
+/* =========================================
+   VERIFICATION CARD
+   ========================================= */
+
+.verification-card {
+    width: 100%;
+    max-width: 600px;
+
+    background-color: white;
+
+    padding: 45px 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================
+   STATUS ICON
+   ========================================= */
+
+.status-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background-color: #f1f8e9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 42px;
+}
+
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.verification-card h1 {
+    color: #2E7D32;
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   STATUS TITLE
+   ========================================= */
+
+.status-title {
+    color: #2E7D32;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   STATUS MESSAGE
+   ========================================= */
+
+.status-message {
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    max-width: 480px;
+
+    margin: 0 auto 25px;
+}
+
+
+/* =========================================
+   STATUS BOX
+   ========================================= */
+
+.status-box {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #f1f8e9;
+
+    padding: 16px 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+}
+
+
+.status-label {
+    color: #555;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+.status-value {
+    background-color: #fff3cd;
+
+    color: #856404;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INFORMATION BOX
+   ========================================= */
+
+.info-box {
+    text-align: left;
+
+    background-color: #fafafa;
+
+    border: 1px solid #eeeeee;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+.info-box h3 {
+    color: #2E7D32;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+
+.info-box p {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   DASHBOARD BUTTON
+   ========================================= */
+
+#dashboard-button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #2E7D32;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+
+#dashboard-button:hover {
+    background-color: #1b5e20;
+
+    transform: translateY(-2px);
+}
+
+
+#dashboard-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .verification-page {
+        padding: 20px 15px;
+    }
+
+
+    .verification-card {
+        padding: 35px 20px;
+    }
+
+
+    .verification-card h1 {
+        font-size: 25px;
+    }
+
+
+    .status-title {
+        font-size: 19px;
+    }
+
+
+    .status-box {
+        padding: 14px 15px;
+    }
+
+
+    .info-box {
+        padding: 16px;
+    }
+}
+

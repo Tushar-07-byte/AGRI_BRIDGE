@@ -1,0 +1,150 @@
+/* --- Global Reset & Background --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f8e9; /* Our AgriBridge earthy background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* =========================================
+   Upload Section (The Main Card)
+   ========================================= */
+.upload-section {
+    background-color: white;
+    width: 100%;
+    max-width: 550px; /* Keeps the form from getting too wide on desktop */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section h1 {
+    color: #2E7D32;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.page-description {
+    text-align: center;
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   Form Layout & Inputs
+   ========================================= */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+/* Styling text, number, and date inputs uniformly */
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="file"] {
+    padding: 12px 15px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus states for accessibility and UI feedback */
+.form-group input:focus {
+    outline: none;
+    border-color: #2E7D32;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+    background-color: white;
+}
+
+/* File input specific tweak */
+.form-group input[type="file"] {
+    padding: 9px 15px;
+    cursor: pointer;
+}
+
+/* =========================================
+   Image Preview Area
+   ========================================= */
+.preview-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#image-preview {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: none; /* Hidden by default, JS will reveal it when a file is chosen */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    margin-top: 10px;
+}
+
+/* =========================================
+   Submit Button
+   ========================================= */
+#analyze-button {
+    width: 100%;
+    background-color: #2E7D32;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+#analyze-button:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+#analyze-button:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   Status Message (For JS updates)
+   ========================================= */
+#message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #2E7D32;
+}
+
+/* =========================================
+   Responsive Adjustments
+   ========================================= */
+@media (max-width: 600px) {
+    .upload-section {
+        padding: 30px 20px;
+    }
+}

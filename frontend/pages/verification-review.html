@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Review Crop - AgriBridge</title>
+
+    <link rel="stylesheet"
+          href="../styles/verification-review.css">
+
+</head>
+
+
+<body>
+
+    <main class="review-page">
+
+        <section class="review-card">
+
+
+            <!-- =================================
+                 PAGE HEADER
+                 ================================= -->
+
+            <div class="review-header">
+
+                <h1>Crop Verification</h1>
+
+                <p>
+                    Review the crop information before
+                    approving or rejecting the submission.
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 CROP IMAGE
+                 ================================= -->
+
+            <div class="crop-image-section">
+
+                <img
+                    id="crop-image"
+                    src=""
+                    alt="Crop submitted by farmer">
+
+            </div>
+
+
+            <!-- =================================
+                 CROP INFORMATION
+                 ================================= -->
+
+            <div class="crop-information">
+
+                <h2 id="crop-name">
+                    Tomato
+                </h2>
+
+
+                <div class="information-grid">
+
+
+                    <div class="information-item">
+
+                        <span class="information-label">
+                            Farmer
+                        </span>
+
+                        <span id="farmer-name"
+                              class="information-value">
+                            Rajesh Kumar
+                        </span>
+
+                    </div>
+
+
+                    <div class="information-item">
+
+                        <span class="information-label">
+                            Quantity
+                        </span>
+
+                        <span id="crop-quantity"
+                              class="information-value">
+                            100 kg
+                        </span>
+
+                    </div>
+
+
+                    <div class="information-item">
+
+                        <span class="information-label">
+                            Location
+                        </span>
+
+                        <span id="crop-location"
+                              class="information-value">
+                            Bhopal
+                        </span>
+
+                    </div>
+
+
+                    <div class="information-item">
+
+                        <span class="information-label">
+                            Harvest Date
+                        </span>
+
+                        <span id="harvest-date"
+                              class="information-value">
+                            25 August 2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 AI RESULT
+                 ================================= -->
+
+            <div class="ai-result-section">
+
+                <h2>AI Analysis</h2>
+
+
+                <div class="ai-result-box">
+
+                    <div class="ai-icon">
+                        🌱
+                    </div>
+
+
+                    <div class="ai-result-content">
+
+                        <h3>
+                            AI Check Passed
+                        </h3>
+
+                        <p>
+                            The crop passed the initial
+                            AI health check.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 AGENT DECISION
+                 ================================= -->
+
+            <div class="decision-section">
+
+                <h2>Verification Decision</h2>
+
+                <p>
+                    Does the submitted information
+                    match the crop shown in the image?
+                </p>
+
+
+                <div class="decision-buttons">
+
+                    <button
+                        id="approve-button"
+                        class="approve-button"
+                        type="button">
+
+                        ✓ Approve Crop
+
+                    </button>
+
+
+                    <button
+                        id="reject-button"
+                        class="reject-button"
+                        type="button">
+
+                        ✕ Reject Crop
+
+                    </button>
+
+                </div>
+
+
+                <!-- Status message -->
+
+                <p id="decision-message"
+                   class="decision-message">
+                </p>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="../scripts/verification-review.js"></script>
+
+</body>
+
+</html>
+

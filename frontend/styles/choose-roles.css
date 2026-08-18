@@ -1,0 +1,214 @@
+/* -------------------- */
+/* GLOBAL */
+/* -------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f8e9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+/* -------------------- */
+/* MAIN CONTAINER */
+/* -------------------- */
+
+.container {
+    width: 100%;
+    max-width: 550px;
+}
+
+
+/* -------------------- */
+/* ROLE SELECTION CARD */
+/* -------------------- */
+
+.signup-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+
+    transition: 0.3s ease;
+}
+
+
+/* -------------------- */
+/* CARD HEADER */
+/* -------------------- */
+
+.card-header {
+    margin-bottom: 30px;
+}
+
+.card-header h2 {
+    color: #2E7D32;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.card-header p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* -------------------- */
+/* FORM GROUP */
+/* -------------------- */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+/* -------------------- */
+/* ROLE SELECT */
+/* -------------------- */
+
+select {
+    width: 100%;
+
+    padding: 12px 15px;
+
+    font-size: 15px;
+
+    color: #333;
+
+    background-color: #f9fafb;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+select:hover {
+    border-color: #2E7D32;
+}
+
+select:focus {
+    outline: none;
+
+    border-color: #2E7D32;
+
+    background-color: white;
+
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+
+/* -------------------- */
+/* BUTTON */
+/* -------------------- */
+
+.primary-btn {
+    width: 100%;
+
+    background-color: #2E7D32;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    padding: 14px 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #1B5E20;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0px 5px 12px rgba(46, 125, 50, 0.2);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+
+/* -------------------- */
+/* MESSAGE */
+/* -------------------- */
+
+#message {
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #2E7D32;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* -------------------- */
+/* MOBILE */
+/* -------------------- */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .signup-card {
+        padding: 30px 20px;
+    }
+
+    .card-header h2 {
+        font-size: 24px;
+    }
+
+    .card-header p {
+        font-size: 14px;
+    }
+
+    select {
+        font-size: 14px;
+    }
+
+    .primary-btn {
+        font-size: 16px;
+    }
+}

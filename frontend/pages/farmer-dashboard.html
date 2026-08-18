@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard - AgriBridge</title>
+    <link rel="stylesheet" href="/styles/farmer-dashboard.css">
+</head>
+
+<body>
+
+    <nav class="nav">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="farmer-dashboard.html">
+                <img src="/assets/logo/logo.png" alt="Agri-Bridge Logo">
+            </a>
+        </div>
+
+        <!-- FARMER NAVIGATION -->
+        <div class="mid">
+            <a href="farmer-dashboard.html" class="active">Dashboard</a>
+            <a href="upload-crop.html">Upload Crop</a>
+            <a href="crop-listings.html">My Listings</a>
+            <a href="orders.html">Commitments</a>
+        </div>
+
+        <!-- USER -->
+        <div class="register">
+            <span class="user-role">👨‍🌾 Farmer</span>
+            <button type="button" class="stylish-btn" onclick="window.location.href='/pages/index.html';">
+                Logout
+            </button>
+        </div>
+
+    </nav>
+
+    <section class="welcome-section">
+        <h1>Welcome, Farmer! 👨‍🌾</h1>
+        <p>
+            Manage your crops, monitor their health,
+            and connect with buyers using AI-powered insights.
+        </p>
+        <h4>Growing smarter, earning better.</h4>
+    </section>
+
+    <section class="action-section">
+        <h2 class="section-title">Quick Actions</h2>
+
+        <div class="card-grid">
+
+            <a href="upload-crop.html" class="action-card">
+                <div class="card-icon">📤</div>
+                <h3>Upload Crop</h3>
+                <p>Upload your crop details and a photo for AI health analysis.</p>
+            </a>
+
+            <a href="crop-listings.html" class="action-card">
+                <div class="card-icon">📋</div>
+                <h3>My Listings</h3>
+                <p>View and manage your crops available for buyers.</p>
+            </a>
+
+            <a href="ai-result.html" class="action-card">
+                <div class="card-icon">🩺</div>
+                <h3>Crop Health</h3>
+                <p>View AI-powered health analysis of your crops.</p>
+            </a>
+
+            <a href="orders.html" class="action-card">
+                <div class="card-icon">🤝</div>
+                <h3>Commitments</h3>
+                <p>Track buyers who have committed to purchase your crops.</p>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="stats-section">
+
+        <h2 class="section-title">Overview</h2>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon">🌾</div>
+                <h3>Total Crops</h3>
+                <p class="stat-number">5</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📋</div>
+                <h3>Active Listings</h3>
+                <p class="stat-number">3</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">🤝</div>
+                <h3>Commitments</h3>
+                <p class="stat-number">2</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">🩺</div>
+                <h3>Healthy Crops</h3>
+                <p class="stat-number">4</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="orders-section">
+
+        <h2 class="section-title">Incoming Orders</h2>
+
+        <div id="orders-container" class="orders-container">
+
+            <!-- JavaScript will display the order here -->
+
+        </div>
+
+    </section>
+
+    <section class="activity-section">
+
+        <h2 class="section-title">Recent Activity</h2>
+
+        <div class="activity-container">
+
+            <div class="activity-item">
+                <div class="activity-icon">🌱</div>
+
+                <div class="activity-content">
+                    <h3>Tomato crop uploaded</h3>
+                    <p>2 hours ago</p>
+                </div>
+            </div>
+
+
+            <div class="activity-item">
+                <div class="activity-icon">🩺</div>
+
+                <div class="activity-content">
+                    <h3>AI health analysis completed</h3>
+                    <p>3 hours ago</p>
+                </div>
+            </div>
+
+
+            <div class="activity-item">
+                <div class="activity-icon">📋</div>
+
+                <div class="activity-content">
+                    <h3>Wheat listing created</h3>
+                    <p>Yesterday</p>
+                </div>
+            </div>
+
+
+            <div class="activity-item">
+                <div class="activity-icon">🤝</div>
+
+                <div class="activity-content">
+                    <h3>Buyer committed to purchase 50 kg</h3>
+                    <p>Yesterday</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="/scripts/farmer-dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Listings - AgriBridge</title>
+
+    <link rel="stylesheet" href="../styles/crop-listings.css">
+</head>
+
+<body>
+
+    <main class="listings-page">
+
+        <section class="listings-header">
+
+            <h1>My Crop Listings 🌾</h1>
+
+            <p>
+                View the crops you have submitted and track their
+                verification and buyer status.
+            </p>
+
+        </section>
+
+
+        <!-- Crop Listing -->
+
+        <section class="listing-card">
+
+            <!-- Crop Image -->
+
+            <div class="listing-image-container">
+
+                <img
+                    id="crop-image"
+                    src=""
+                    alt="Crop image"
+                >
+
+            </div>
+
+
+            <!-- Crop Details -->
+
+            <div class="listing-details">
+
+                <h2 id="crop-name">
+                    Crop Name
+                </h2>
+
+                <div class="detail-row">
+                    <span>Quantity</span>
+                    <strong id="crop-quantity">-</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Harvest Date</span>
+                    <strong id="harvest-date">-</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Location</span>
+                    <strong id="crop-location">-</strong>
+                </div>
+
+
+                <!-- Verification Status -->
+
+                <div class="status-row">
+
+                    <span>Verification</span>
+
+                    <span
+                        id="verification-status"
+                        class="status pending">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <!-- Buyer Status -->
+
+                <div class="status-row">
+
+                    <span>Buyer Status</span>
+
+                    <span
+                        id="buyer-status"
+                        class="status pending">
+                        No Buyer Yet
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- No Listing Message -->
+
+        <div
+            id="no-listing"
+            class="no-listing">
+
+            <h2>No crops submitted yet 🌱</h2>
+
+            <p>
+                Upload your first crop to create a listing.
+            </p>
+
+            <button id="upload-button">
+                Upload Crop
+            </button>
+
+        </div>
+
+
+        <!-- Back Button -->
+
+        <button
+            id="dashboard-button"
+            class="dashboard-button">
+
+            ← Back to Dashboard
+
+        </button>
+
+    </main>
+
+
+    <script src="../scripts/crop-listings.js"></script>
+
+</body>
+
+</html>

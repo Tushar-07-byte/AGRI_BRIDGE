@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verification Status - AgriBridge</title>
+
+    <link rel="stylesheet" href="../styles/verification-status.css">
+</head>
+
+<body>
+
+    <main class="verification-page">
+
+        <section class="verification-card">
+
+            <div class="status-icon">
+                🌱
+            </div>
+
+            <h1>Crop Verification</h1>
+
+            <p class="status-title" id="status-title">
+                Waiting for Verification
+            </p>
+
+            <p class="status-message" id="status-message">
+                Your crop has passed the initial AI health check
+                and is now waiting for field-agent verification.
+            </p>
+
+            <!-- Status -->
+
+            <div class="status-box">
+
+                <span class="status-label">
+                    Current Status
+                </span>
+
+                <span class="status-value" id="status-value">
+                    Pending
+                </span>
+
+            </div>
+
+
+            <!-- Verification Information -->
+
+            <div class="info-box">
+
+                <h3>What happens next?</h3>
+
+                <p>
+                    A field agent will review your crop information
+                    and verify the crop before it becomes available
+                    to buyers.
+                </p>
+
+            </div>
+
+
+            <!-- Back Button -->
+
+            <button id="dashboard-button" type="button">
+                Back to Dashboard
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="../scripts/verification-status.js"></script>
+
+</body>
+
+</html>

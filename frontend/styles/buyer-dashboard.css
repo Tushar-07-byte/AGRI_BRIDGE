@@ -1,0 +1,743 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f1f8e9;
+    color: #333;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 80px;
+
+    background-color: white;
+
+    box-shadow:
+        0px 4px 15px rgba(0, 0, 0, 0.1);
+
+    height: 80px;
+
+    /* SPACE BETWEEN NAVBAR AND DASHBOARD HEADER */
+    margin-bottom: 20px;
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo img {
+    width: auto;
+    height: 55px;
+    display: block;
+    cursor: pointer;
+}
+
+
+/* NAVIGATION */
+
+.mid {
+    display: flex;
+    gap: 45px;
+
+    background: #F2F4F3;
+
+    padding: 17px;
+
+    border-radius: 30px;
+}
+
+
+/* NAV LINKS */
+
+.mid a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    font-family: sans-serif;
+
+    transition: all 0.3s ease;
+}
+
+
+/* UNDERLINE */
+
+.mid a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 2px;
+
+    background: linear-gradient(135deg,
+            #2fff2f,
+            #008600);
+
+    transition: width 0.3s ease;
+}
+
+
+.mid a:hover {
+    color: #303030;
+}
+
+
+.mid a:hover::after {
+    width: 100%;
+}
+
+
+/* ACTIVE */
+
+.mid a.active {
+    color: #2E7D32;
+}
+
+
+.mid a.active::after {
+    width: 100%;
+}
+
+
+/* USER AREA */
+
+.register {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.user-role {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    background-color: #f1f8e9;
+
+    color: #2E7D32;
+
+    font-weight: 600;
+}
+
+
+/* LOGOUT BUTTON */
+
+.stylish-btn {
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 9px;
+
+    background-color: #2E7D32;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.stylish-btn:hover {
+    background-color: #1b5e20;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MOBILE NAVBAR
+========================================= */
+
+@media (max-width: 700px) {
+
+    .nav {
+        height: auto;
+
+        padding: 15px 20px;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+
+    .logo {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+    }
+
+
+    .mid {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 15px;
+
+        padding: 10px;
+
+        overflow-x: auto;
+    }
+
+
+    .mid a {
+        font-size: 13px;
+
+        white-space: nowrap;
+    }
+
+
+    .register {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.dashboard-header {
+    padding: 55px 30px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f8fff5
+    );
+
+    border: 1px solid #e1ebe0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 6px 20px rgba(46, 125, 50, 0.08);
+
+    margin: 0 30px;
+}
+
+.dashboard-header h1 {
+    color: #2E7D32;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.dashboard-header p {
+    color: #666;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   LISTINGS SECTION
+========================================= */
+
+.listings-section {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 50px 40px 70px;
+}
+
+.listings-section h2 {
+    color: #245f28;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.listings-section h2::before {
+    content: "";
+
+    width: 5px;
+    height: 25px;
+
+    background-color: #2E7D32;
+
+    border-radius: 5px;
+}
+
+.section-description {
+    color: #666;
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   LISTINGS GRID
+========================================= */
+
+.listings-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   CROP CARD
+========================================= */
+
+.crop-card {
+    overflow: hidden;
+
+    background-color: white;
+
+    padding: 18px;
+
+    border: 1px solid #e1ebe0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.crop-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #b9d7ba;
+
+    box-shadow:
+        0 12px 28px rgba(46, 125, 50, 0.13);
+}
+
+
+/* =========================================
+   CROP IMAGE
+========================================= */
+
+.crop-card img {
+    width: 100%;
+    height: 230px;
+
+    display: block;
+
+    object-fit: cover;
+
+    background-color: #f1f8e9;
+
+    border-radius: 13px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   CROP INFORMATION
+========================================= */
+
+.crop-card h3 {
+    color: #2E7D32;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    margin-bottom: 13px;
+}
+
+.crop-card p {
+    color: #555;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   VERIFIED BADGE
+========================================= */
+
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+
+    background-color: #e8f5e9;
+
+    color: #2E7D32;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    margin: 10px 0 16px;
+}
+
+
+/* =========================================
+   COMMIT BUTTON
+========================================= */
+
+.commit-button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 9px;
+
+    background-color: #2E7D32;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.commit-button:hover {
+    background-color: #1b5e20;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(46, 125, 50, 0.2);
+}
+
+.commit-button:active {
+    transform: translateY(0);
+}
+
+.commit-button:disabled {
+    background-color: #81a982;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   EMPTY MESSAGE
+========================================= */
+
+.empty-message {
+    grid-column: 1 / -1;
+
+    min-height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #e1ebe0;
+    border-radius: 18px;
+
+    text-align: center;
+
+    color: #666;
+
+    font-size: 16px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 750px) {
+
+    .listings-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .dashboard-header {
+        padding: 40px 20px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 28px;
+    }
+
+    .dashboard-header p {
+        font-size: 15px;
+    }
+
+    .listings-section {
+        padding: 35px 20px 50px;
+    }
+
+    .listings-section h2 {
+        font-size: 21px;
+    }
+
+    .listings-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .crop-card {
+        padding: 15px;
+    }
+
+    .crop-card img {
+        height: 240px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .dashboard-header {
+        margin: 0 15px;
+        padding: 40px 20px;
+    }
+
+}
+
+/* =========================================
+   PURCHASE SUCCESS MESSAGE
+========================================= */
+
+.commitment-message {
+    display: none;
+
+    max-width: 700px;
+
+    margin: 30px auto 0;
+
+    padding: 20px 25px;
+
+    background: #e8f5e9;
+
+    border: 1px solid #c8e6c9;
+
+    border-left: 5px solid #2E7D32;
+
+    border-radius: 14px;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 5px 18px rgba(46, 125, 50, 0.08);
+
+    animation: successSlide 0.35s ease;
+}
+
+.success-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #2E7D32;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.commitment-message h3 {
+    color: #2E7D32;
+
+    font-size: 17px;
+
+    margin-bottom: 3px;
+}
+
+.commitment-message p {
+    color: #555;
+
+    font-size: 14px;
+}
+
+@keyframes successSlide {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .commitment-message {
+        margin-top: 20px;
+
+        padding: 18px;
+
+        align-items: flex-start;
+    }
+
+}
+
+.commitment-message {
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 14px;
+
+    background: #e8f5e9;
+
+    border: 1px solid #c8e6c9;
+
+    border-left: 4px solid #2E7D32;
+
+    border-radius: 10px;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.success-icon {
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #2E7D32;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.commitment-message h3 {
+    color: #2E7D32;
+
+    font-size: 15px;
+
+    margin-bottom: 2px;
+}
+
+.commitment-message p {
+    color: #555;
+
+    font-size: 13px;
+}
