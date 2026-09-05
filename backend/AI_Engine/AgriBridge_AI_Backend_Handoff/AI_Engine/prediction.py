@@ -167,10 +167,12 @@ def validate_leaf_image_quality(image_path):
         raise FileNotFoundError(f"Image not found: {image_path}")
 
     try:
-        from PIL import Image
-        img = Image.open(image_path).convert("RGB").resize((224, 224))
-        arr = np.array(img, dtype=float)
-        r, g, b = arr[:, :, 0], arr[:, :, 1], arr[:, :, 2]
+        if Image is not None:
+            img = Image.open(image_path).convert("RGB").resize((224, 224))
+            arr = np.array(img, dtype=float)
+            r, g, b = arr[:, :, 0], arr[:, :, 1], arr[:, :, 2]
+        else:
+            return True
 
         # Calculate HSV saturation to exclude neutral whites, grays, and blacks
         max_c = np.maximum(np.maximum(r, g), b)
