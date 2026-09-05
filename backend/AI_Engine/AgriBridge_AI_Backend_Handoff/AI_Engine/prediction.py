@@ -7,13 +7,20 @@ import json
 import numpy as np
 
 try:
-    import tensorflow as tf
-    from tensorflow.keras.preprocessing import image
+    import tensorflow as tf  # type: ignore # pyright: ignore[reportMissingImports,reportMissingModuleSource]
+    from tensorflow.keras.preprocessing import image  # type: ignore # pyright: ignore[reportMissingImports]
     HAS_TENSORFLOW = True
-except ImportError:
+except (ImportError, ModuleNotFoundError, Exception):
     tf = None
     image = None
     HAS_TENSORFLOW = False
+
+try:
+    from PIL import Image  # type: ignore # pyright: ignore[reportMissingImports]
+    HAS_PIL = True
+except (ImportError, ModuleNotFoundError, Exception):
+    Image = None
+    HAS_PIL = False
 
 from model_selection import (
     MODEL_SELECTION,
@@ -219,10 +226,11 @@ def preprocess_leaf_image(image_path):
 
     if not HAS_TENSORFLOW or image is None:
         try:
-            from PIL import Image
-            img = Image.open(image_path).convert("RGB").resize(IMAGE_SIZE)
-            img_array = np.array(img, dtype="float32")
-            return np.expand_dims(img_array, axis=0)
+            if Image is not None:
+                img = Image.open(image_path).convert("RGB").resize(IMAGE_SIZE)
+                img_array = np.array(img, dtype="float32")
+                return np.expand_dims(img_array, axis=0)
+            return np.zeros((1, 224, 224, 3), dtype="float32")
         except Exception:
             return np.zeros((1, 224, 224, 3), dtype="float32")
 
@@ -318,29 +326,34 @@ def predict_disease(
 
         # Botanical pixel analysis to detect presence of disease lesions / chlorosis
         try:
-            from PIL import Image
-            img = Image.open(image_path).convert("RGB").resize((224, 224))
-            arr = np.array(img, dtype=float)
-            r, g, b = arr[:, :, 0], arr[:, :, 1], arr[:, :, 2]
-            max_c = np.maximum(np.maximum(r, g), b)
-            min_c = np.minimum(np.minimum(r, g), b)
-            delta = max_c - min_c
-            sat = np.where(max_c > 0, delta / max_c, 0)
+            if Image is not None:
+                img = Image.open(image_path).convert("RGB").resize((224, 224))
+                arr = np.array(img, dtype=float)
+                r, g, b = arr[:, :, 0], arr[:, :, 1], arr[:, :, 2]
+                max_c = np.maximum(np.maximum(r, g), b)
+                min_c = np.minimum(np.minimum(r, g), b)
+                delta = max_c - min_c
+                sat = np.where(max_c > 0, delta / max_c, 0)
 
-            # 1. Pure Healthy Botanical Green:
-            green_mask = (sat > 0.15) & (g > r * 1.10) & (g > b * 1.10) & (g > 35)
+                # 1. Pure Healthy Botanical Green:
+                green_mask = (sat > 0.15) & (g > r * 1.10) & (g > b * 1.10) & (g > 35)
 
-            # 2. Chlorotic Yellow / Orange / Rust Pustules:
-            rust_yellow_mask = (sat > 0.20) & (r > 65) & (g > 45) & (b < r * 0.75) & (abs(r - g) < 55)
+                # 2. Chlorotic Yellow / Orange / Rust Pustules:
+                rust_yellow_mask = (sat > 0.20) & (r > 65) & (g > 45) & (b < r * 0.75) & (abs(r - g) < 55)
 
-            # 3. Dark Necrotic / Brown / Blight Lesions:
-            necrotic_mask = (sat > 0.08) & (r < 95) & (g < 95) & (b < 85) & (r >= b) & ((r + g + b) > 35)
+                # 3. Dark Necrotic / Brown / Blight Lesions:
+                necrotic_mask = (sat > 0.08) & (r < 95) & (g < 95) & (b < 85) & (r >= b) & ((r + g + b) > 35)
 
-            total_foliage = max(1, int(np.sum(green_mask | rust_yellow_mask | necrotic_mask)))
-            green_ratio = float(np.sum(green_mask)) / total_foliage
-            rust_yellow_ratio = float(np.sum(rust_yellow_mask)) / total_foliage
-            necrotic_ratio = float(np.sum(necrotic_mask)) / total_foliage
-            lesion_ratio = rust_yellow_ratio + necrotic_ratio
+                total_foliage = max(1, int(np.sum(green_mask | rust_yellow_mask | necrotic_mask)))
+                green_ratio = float(np.sum(green_mask)) / total_foliage
+                rust_yellow_ratio = float(np.sum(rust_yellow_mask)) / total_foliage
+                necrotic_ratio = float(np.sum(necrotic_mask)) / total_foliage
+                lesion_ratio = rust_yellow_ratio + necrotic_ratio
+            else:
+                green_ratio = 0.50
+                rust_yellow_ratio = 0.30
+                necrotic_ratio = 0.20
+                lesion_ratio = 0.50
         except Exception:
             green_ratio = 0.50
             rust_yellow_ratio = 0.30
