@@ -308,7 +308,7 @@ def predict_disease(
             "grape": 14,
             "peach": 17,
             "pepper": 19,
-            "strawberry": 27
+            "strawberry": 27,
             "strawberry": 27,
             "blueberry": 4,
             "raspberry": 23,
@@ -316,7 +316,6 @@ def predict_disease(
             "squash": 25
         }
 
-        if "healthy" in fname:
         # Botanical pixel analysis to detect presence of disease lesions / chlorosis
         try:
             from PIL import Image
