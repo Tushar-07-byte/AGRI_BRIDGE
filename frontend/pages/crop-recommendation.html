@@ -7,202 +7,287 @@
     <title>Crop Recommendation — AgriBridge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/frontend/styles/global.css">
     <link rel="stylesheet" href="/frontend/styles/crop-recommendation.css">
 </head>
 
 <body>
 
-    <!-- ========================================= -->
-    <!-- NAVIGATION                                -->
-    <!-- ========================================= -->
-    <nav class="nav">
-        <div class="logo">
-            <a href="/frontend/pages/index.html">
-                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
-            </a>
-        </div>
+    <div class="page-wrapper">
 
-        <div class="mid">
-            <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
-            <a href="/frontend/pages/crop-monitoring.html">Crop Monitoring</a>
-            <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
-            <a href="/frontend/pages/crop-recommendation.html" class="active" data-i18n="landing.cropRecommendation">Recommendations</a>
-            <a href="/frontend/pages/crop-listings.html" data-i18n="nav.marketplace">Marketplace</a>
-            <a href="/frontend/pages/voice-assistant.html" data-i18n="nav.voiceAssistant">Voice AI</a>
-            <a href="/frontend/pages/farmer-profile.html" data-i18n="nav.myProfile">Profile</a>
-        </div>
-
-        <div class="register">
-            <button type="button" class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/farmer-dashboard.html'">
-                ← Back to Dashboard
-            </button>
-        </div>
-    </nav>
-
-    <!-- ========================================= -->
-    <!-- MAIN RECOMMENDATION CONTAINER             -->
-    <!-- ========================================= -->
-    <main class="recommendation-page-container">
-
-        <!-- HEADER -->
-        <header class="rec-header-card">
-            <div class="rec-header-left">
-                <div class="ab-badge ab-badge-gold">🌱 AGRONOMIC INTELLIGENCE</div>
-                <h1 data-i18n="recommendation.title">Scientific Crop Recommendations</h1>
-                <p data-i18n="recommendation.description">
-                    Optimize yield and profitability with data-driven crop suitability rankings based on your soil profile, climate, agro-climatic zone, and seasonal rainfall.
-                </p>
-            </div>
-        </header>
-
-        <!-- ===================================== -->
-        <!-- RECOMMENDATION FORM CARD              -->
-        <!-- ===================================== -->
-        <section class="rec-form-card">
-            <div class="rec-form-header">
-                <h2>📍 Farm Profile & Soil Parameters</h2>
-                <span class="rec-form-sub">Fill in your farm details to generate tailored crop recommendations</span>
+        <!-- =========================================================
+             AGRIBRIDGE — UNIFIED MASTER NAVBAR
+             ========================================================= -->
+        <nav class="nav">
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="/frontend/pages/index.html">
+                    <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+                </a>
             </div>
 
-            <form id="recommendation-form" class="rec-form-grid">
-
-                <!-- STATE -->
-                <div class="form-group">
-                    <label for="rec-state" data-i18n="recommendation.state">State *</label>
-                    <select id="rec-state" required>
-                        <option value="" data-i18n="recommendation.selectState">Select State</option>
-                    </select>
-                </div>
-
-                <!-- DISTRICT -->
-                <div class="form-group">
-                    <label for="rec-district" data-i18n="recommendation.district">District *</label>
-                    <select id="rec-district" required disabled>
-                        <option value="" data-i18n="recommendation.selectDistrict">Select District</option>
-                    </select>
-                </div>
-
-                <!-- SEASON -->
-                <div class="form-group">
-                    <label for="rec-season" data-i18n="recommendation.season">Season *</label>
-                    <select id="rec-season" required disabled>
-                        <option value="" data-i18n="recommendation.selectSeason">Select Season</option>
-                    </select>
-                </div>
-
-                <!-- SOIL TYPE -->
-                <div class="form-group">
-                    <label for="rec-soil-type" data-i18n="recommendation.soilType">Soil Type *</label>
-                    <select id="rec-soil-type" required disabled>
-                        <option value="" data-i18n="recommendation.selectSoilType">Select Soil Type</option>
-                    </select>
-                </div>
-
-                <!-- SOIL pH (OPTIONAL) -->
-                <div class="form-group">
-                    <label for="rec-ph" data-i18n="recommendation.soilPh">Soil pH (Optional)</label>
-                    <input
-                        type="number"
-                        id="rec-ph"
-                        data-i18n-placeholder="recommendation.phPlaceholder"
-                        placeholder="e.g. 6.5"
-                        min="0"
-                        max="14"
-                        step="0.1"
-                    >
-                </div>
-
-                <!-- FARM SIZE (OPTIONAL) -->
-                <div class="form-group">
-                    <label for="rec-farm-size" data-i18n="recommendation.farmSize">Farm Size in Acres (Optional)</label>
-                    <input
-                        type="number"
-                        id="rec-farm-size"
-                        data-i18n-placeholder="recommendation.farmSizePlaceholder"
-                        placeholder="e.g. 5"
-                        min="0.1"
-                        step="0.1"
-                    >
-                </div>
-
-                <!-- FORM MESSAGE -->
-                <div class="rec-message-row">
-                    <p id="rec-message" class="form-message"></p>
-                </div>
-
-                <!-- SUBMIT BUTTON -->
-                <div class="rec-submit-row">
-                    <button type="submit" class="stylish-btn ab-btn-primary rec-submit-btn" id="rec-submit-btn">
-                        🌱 <span data-i18n="recommendation.getRecommendations">Generate Recommendations</span>
-                    </button>
-                </div>
-
-            </form>
-        </section>
-
-        <!-- ===================================== -->
-        <!-- RESULTS SECTION                       -->
-        <!-- ===================================== -->
-        <section id="rec-results-section" class="rec-results-card fade-in" style="display: none;">
-
-            <div class="results-header-row">
-                <div class="ab-badge ab-badge-verified">✓ SUITABILITY ANALYSIS COMPLETE</div>
-                <h2 data-i18n="recommendation.resultsTitle">Recommended Crops For Your Farm</h2>
+            <!-- NAVIGATION LINKS -->
+            <div class="mid">
+                <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+                <a href="/frontend/pages/crop-monitoring.html">Crop Monitoring</a>
+                <a href="/frontend/pages/upload-crop.html" data-i18n="farmer.quickActions.uploadCrop">AI Crop Scan</a>
+                <a href="/frontend/pages/crop-recommendation.html" class="active" data-i18n="landing.cropRecommendation">Recommendations</a>
+                <a href="/frontend/pages/crop-listings.html" data-i18n="nav.marketplace">Marketplace</a>
+                <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
+                <a href="/frontend/pages/voice-assistant.html" data-i18n="nav.voiceAssistant">Voice AI</a>
+                <a href="/frontend/pages/farm-command-center.html" class="nav-fcc-link">⚡ Command Center</a>
             </div>
 
-            <!-- SUMMARY BAR -->
-            <div id="rec-summary-bar" class="rec-summary-bar">
-                <!-- Injected dynamically by JS -->
-            </div>
-
-            <!-- RECOMMENDED CROPS GRID -->
-            <div id="rec-crops-container" class="rec-crops-grid">
-                <!-- Crop cards injected by JS -->
-            </div>
-
-            <!-- AGRICULTURAL TIPS -->
-            <div id="rec-tips-container" class="rec-tips-container">
-                <!-- Injected dynamically by JS -->
-            </div>
-
-            <!-- NEW RECOMMENDATION BUTTON -->
-            <div class="rec-new-btn-row">
-                <button type="button" class="stylish-btn ab-btn-secondary" id="new-recommendation-button">
-                    ← New Recommendation
+            <!-- USER & ACTIONS -->
+            <div class="register">
+                <div id="language-selector-container"></div>
+                <a href="/frontend/pages/farmer-dashboard.html#notification-center" class="nav-notif-btn" id="navNotifBtn" title="Notifications">
+                    🔔 <span class="nav-notif-badge" id="navNotifCount">0</span>
+                </a>
+                <a href="/frontend/pages/farmer-profile.html" class="user-role-badge" style="text-decoration: none;" title="Farmer Profile">
+                    👨‍🌾 <span id="navbarUserName">Farmer</span>
+                </a>
+                <button type="button" class="stylish-btn ab-btn-primary" onclick="if(window.AgriBridgeAuth){AgriBridgeAuth.logout();}else{window.location.href='/frontend/pages/login.html';}" data-i18n="nav.logout">
+                    Logout
                 </button>
             </div>
+        </nav>
 
-        </section>
+        <!-- ========================================= -->
+        <!-- MAIN RECOMMENDATION CONTAINER             -->
+        <!-- ========================================= -->
+        <main class="recommendation-page-container">
 
-    </main>
+            <!-- HEADER BANNER CARD -->
+            <header class="rec-header-card">
+                <div class="rec-header-left">
+                    <div class="ab-badge ab-badge-gold">🌱 AGRONOMIC SUITABILITY ENGINE</div>
+                    <h1 data-i18n="recommendation.title">Scientific Crop Recommendations</h1>
+                    <p data-i18n="recommendation.description">
+                        Optimize yield and profitability with data-driven crop suitability rankings based on your soil profile, climate, agro-climatic zone, and seasonal rainfall patterns.
+                    </p>
+                </div>
+                <div class="rec-header-metrics-preview">
+                    <div class="header-stat-box">
+                        <strong>36</strong>
+                        <span>States & UTs</span>
+                    </div>
+                    <div class="header-stat-box">
+                        <strong>729</strong>
+                        <span>Districts</span>
+                    </div>
+                    <div class="header-stat-box">
+                        <strong>22+</strong>
+                        <span>Crop Models</span>
+                    </div>
+                    <div class="header-stat-box">
+                        <strong>ICAR</strong>
+                        <span>Validated</span>
+                    </div>
+                </div>
+            </header>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-bottom" style="border: none; padding: 0;">
-            <p>© 2026 AgriBridge. Crop Intelligence Engine. Pan-India Soil & Climate Analytics.</p>
-            <div class="footer-bottom-links">
-                <a href="/frontend/pages/farmer-dashboard.html">Dashboard</a> •
-                <a href="/frontend/pages/weather-dashboard.html">Weather</a>
+            <!-- ===================================== -->
+            <!-- RECOMMENDATION FORM CARD              -->
+            <!-- ===================================== -->
+            <section class="rec-form-card" id="rec-form-section">
+                <div class="rec-form-header">
+                    <div class="rec-form-title-group">
+                        <h2>📍 Farm Profile & Agro-Climatic Parameters</h2>
+                        <span class="rec-form-sub">Select your region, season, and soil characteristics to generate precision crop matches</span>
+                    </div>
+                    <div class="rec-form-header-badge">
+                        <span class="pulse-dot"></span> Real-time Agronomic Indexing
+                    </div>
+                </div>
+
+                <form id="recommendation-form" class="rec-form-grid">
+
+                    <!-- STATE -->
+                    <div class="form-group">
+                        <label for="rec-state">
+                            <span class="label-icon">🗺️</span>
+                            <span data-i18n="recommendation.state">Indian State / UT</span>
+                            <span class="req-star">*</span>
+                        </label>
+                        <select id="rec-state" required>
+                            <option value="" data-i18n="recommendation.selectState">Select State</option>
+                        </select>
+                    </div>
+
+                    <!-- DISTRICT -->
+                    <div class="form-group">
+                        <label for="rec-district">
+                            <span class="label-icon">📍</span>
+                            <span data-i18n="recommendation.district">District</span>
+                            <span class="req-star">*</span>
+                        </label>
+                        <select id="rec-district" required disabled>
+                            <option value="" data-i18n="recommendation.selectDistrict">Select District</option>
+                        </select>
+                    </div>
+
+                    <!-- SEASON -->
+                    <div class="form-group">
+                        <label for="rec-season">
+                            <span class="label-icon">🌦️</span>
+                            <span data-i18n="recommendation.season">Agricultural Season</span>
+                            <span class="req-star">*</span>
+                        </label>
+                        <select id="rec-season" required disabled>
+                            <option value="" data-i18n="recommendation.selectSeason">Select Season</option>
+                        </select>
+                    </div>
+
+                    <!-- SOIL TYPE -->
+                    <div class="form-group">
+                        <label for="rec-soil-type">
+                            <span class="label-icon">🪴</span>
+                            <span data-i18n="recommendation.soilType">Soil Type</span>
+                            <span class="req-star">*</span>
+                        </label>
+                        <select id="rec-soil-type" required disabled>
+                            <option value="" data-i18n="recommendation.selectSoilType">Select Soil Type</option>
+                        </select>
+                    </div>
+
+                    <!-- SOIL pH (OPTIONAL) -->
+                    <div class="form-group">
+                        <label for="rec-ph">
+                            <span class="label-icon">🧪</span>
+                            <span data-i18n="recommendation.soilPh">Soil pH (0 - 14)</span>
+                            <span class="opt-tag">Optional</span>
+                        </label>
+                        <input
+                            type="number"
+                            id="rec-ph"
+                            data-i18n-placeholder="recommendation.phPlaceholder"
+                            placeholder="e.g. 6.5"
+                            min="0"
+                            max="14"
+                            step="0.1"
+                        >
+                    </div>
+
+                    <!-- FARM SIZE (OPTIONAL) -->
+                    <div class="form-group">
+                        <label for="rec-farm-size">
+                            <span class="label-icon">📐</span>
+                            <span data-i18n="recommendation.farmSize">Farm Size in Acres</span>
+                            <span class="opt-tag">Optional</span>
+                        </label>
+                        <input
+                            type="number"
+                            id="rec-farm-size"
+                            data-i18n-placeholder="recommendation.farmSizePlaceholder"
+                            placeholder="e.g. 5"
+                            min="0.1"
+                            step="0.1"
+                        >
+                    </div>
+
+                    <!-- FORM MESSAGE ROW -->
+                    <div class="rec-message-row">
+                        <p id="rec-message" class="form-message"></p>
+                    </div>
+
+                    <!-- SUBMIT BUTTON ROW -->
+                    <div class="rec-submit-row">
+                        <button type="submit" class="stylish-btn ab-btn-primary rec-submit-btn" id="rec-submit-btn">
+                            🌱 <span data-i18n="recommendation.getRecommendations">Generate Crop Recommendations</span>
+                        </button>
+                    </div>
+
+                </form>
+            </section>
+
+            <!-- ===================================== -->
+            <!-- RESULTS SECTION                       -->
+            <!-- ===================================== -->
+            <section id="rec-results-section" class="rec-results-card fade-in" style="display: none;">
+
+                <div class="results-header-row">
+                    <div class="results-badge-group">
+                        <div class="ab-badge ab-badge-verified">✓ SUITABILITY ANALYSIS COMPLETE</div>
+                        <div class="ab-badge ab-badge-gold">ICAR AGRONOMIC ALIGNMENT</div>
+                    </div>
+                    <div class="results-title-group">
+                        <h2 data-i18n="recommendation.resultsTitle">Recommended Crops For Your Farm</h2>
+                        <p class="results-subtitle">Ranked by climate suitability, soil compatibility, and regional yield potential</p>
+                    </div>
+                </div>
+
+                <!-- SUMMARY BAR -->
+                <div id="rec-summary-bar" class="rec-summary-bar">
+                    <!-- Injected dynamically by JS -->
+                </div>
+
+                <!-- RECOMMENDED CROPS GRID -->
+                <div id="rec-crops-container" class="rec-crops-grid">
+                    <!-- Crop cards injected by JS -->
+                </div>
+
+                <!-- AGRONOMIC INSIGHTS & MANAGEMENT ADVISORY -->
+                <div class="rec-advisory-banner">
+                    <div class="rec-advisory-header">
+                        <span class="rec-advisory-icon">💡</span>
+                        <h3>Agronomic Recommendations & Best Practices</h3>
+                    </div>
+                    <ul class="rec-advisory-list">
+                        <li><strong>Basal Nutrition:</strong> Apply well-rotted farmyard manure (FYM) or compost at 4-5 tonnes/acre before sowing.</li>
+                        <li><strong>Certified Seeds:</strong> Use ICAR/State Agriculture University certified seed varieties with >85% germination rate.</li>
+                        <li><strong>Seed Treatment:</strong> Treat seeds with <em>Trichoderma viride</em> (4g/kg) or appropriate fungicide to prevent soil-borne seedling rot.</li>
+                        <li><strong>Irrigation Window:</strong> Schedule the first irrigation based on root initiation (e.g. CRI stage for Wheat) and verify upcoming 48-hour rainfall forecasts.</li>
+                    </ul>
+                </div>
+
+                <!-- ACTION BUTTONS -->
+                <div class="rec-new-btn-row">
+                    <button type="button" class="stylish-btn ab-btn-secondary" id="new-recommendation-button">
+                        ← Modify Parameters / New Search
+                    </button>
+                    <a href="/frontend/pages/farmer-dashboard.html" class="stylish-btn ab-btn-primary">
+                        Go to Dashboard →
+                    </a>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-bottom" style="border: none; padding: 0;">
+                <p>© 2026 AgriBridge. Crop Intelligence Engine. Pan-India Soil & Climate Analytics.</p>
+                <div class="footer-bottom-links">
+                    <a href="/frontend/pages/farmer-dashboard.html">Dashboard</a> •
+                    <a href="/frontend/pages/crop-monitoring.html">Monitoring</a> •
+                    <a href="/frontend/pages/weather-dashboard.html">Weather</a> •
+                    <a href="/frontend/pages/crop-listings.html">Marketplace</a>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+
+        <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
+        <a href="/frontend/pages/voice-assistant.html?from_page=crop-recommendation" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
+            title="Voice Farming Assistant / आवाज से पूछें">
+            <div class="voice-mic-icon-box">
+                <div class="voice-pulse-ring"></div>
+                🎙️
+            </div>
+            <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
+        </a>
+
+    </div>
 
     <!-- SCRIPTS -->
     <script src="/frontend/scripts/i18n.js"></script>
     <script src="/frontend/scripts/language-selector.js"></script>
     <script src="/frontend/scripts/auth.js"></script>
     <script src="/frontend/scripts/crop-recommendation.js"></script>
-    <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
-    <a href="/frontend/pages/voice-assistant.html?from_page=crop-recommendation" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
-        title="Voice Farming Assistant / आवाज से पूछें">
-        <div class="voice-mic-icon-box">
-            <div class="voice-pulse-ring"></div>
-            🎙️
-        </div>
-        <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
-    </a>
 
 </body>
 

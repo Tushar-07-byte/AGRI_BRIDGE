@@ -511,28 +511,76 @@ function displayResults(data) {
     `;
 
     // ------------------------------------
-    // Crops
+    // Crops Metadata & Rendering
     // ------------------------------------
+
+    const CROP_META = {
+        "wheat": { emoji: "🌾", category: "Cereal / Grain", water: "💧 Medium", duration: "⏱️ 110-130 Days" },
+        "rice": { emoji: "🍚", category: "Cereal / Staple", water: "💧 High", duration: "⏱️ 120-150 Days" },
+        "maize": { emoji: "🌽", category: "Coarse Grain", water: "💧 Medium", duration: "⏱️ 90-110 Days" },
+        "cotton": { emoji: "☁️", category: "Commercial Cash Crop", water: "💧 Medium-High", duration: "⏱️ 150-180 Days" },
+        "sugarcane": { emoji: "🎋", category: "Commercial Cash Crop", water: "💧 High", duration: "⏱️ 10-12 Months" },
+        "potato": { emoji: "🥔", category: "Horticulture / Tuber", water: "💧 Medium", duration: "⏱️ 80-100 Days" },
+        "tomato": { emoji: "🍅", category: "Horticulture / Vegetable", water: "💧 Medium", duration: "⏱️ 90-120 Days" },
+        "onion": { emoji: "🧅", category: "Horticulture / Bulb", water: "💧 Medium", duration: "⏱️ 110-140 Days" },
+        "chilli": { emoji: "🌶️", category: "Spice / Cash Crop", water: "💧 Low-Medium", duration: "⏱️ 120-150 Days" },
+        "mustard": { emoji: "🌼", category: "Oilseed", water: "💧 Low-Medium", duration: "⏱️ 90-110 Days" },
+        "soybean": { emoji: "🌿", category: "Legume / Oilseed", water: "💧 Medium", duration: "⏱️ 95-105 Days" },
+        "groundnut": { emoji: "🥜", category: "Oilseed", water: "💧 Medium", duration: "⏱️ 100-120 Days" },
+        "gram": { emoji: "🌱", category: "Pulse / Legume", water: "💧 Low", duration: "⏱️ 90-110 Days" },
+        "tur": { emoji: "🌱", category: "Pulse / Legume", water: "💧 Low-Medium", duration: "⏱️ 150-180 Days" },
+        "moong": { emoji: "🌱", category: "Pulse / Short Duration", water: "💧 Low", duration: "⏱️ 60-70 Days" },
+        "urad": { emoji: "🌱", category: "Pulse / Legume", water: "💧 Low", duration: "⏱️ 70-80 Days" },
+        "barley": { emoji: "🌾", category: "Cereal / Fodder", water: "💧 Low-Medium", duration: "⏱️ 100-120 Days" },
+        "jowar": { emoji: "🌾", category: "Millets / Nutri-Cereal", water: "💧 Low", duration: "⏱️ 100-115 Days" },
+        "bajra": { emoji: "🌾", category: "Millets / Drought-Hardy", water: "💧 Low", duration: "⏱️ 80-90 Days" },
+        "ragi": { emoji: "🌾", category: "Finger Millet", water: "💧 Low-Medium", duration: "⏱️ 105-120 Days" },
+        "sunflower": { emoji: "🌻", category: "Oilseed", water: "💧 Medium", duration: "⏱️ 85-95 Days" },
+        "jute": { emoji: "🧶", category: "Fibre Crop", water: "💧 High", duration: "⏱️ 120-140 Days" }
+    };
 
     const cropsContainer =
         document.getElementById("rec-crops-container");
 
     cropsContainer.innerHTML = "";
 
-    data.recommended_crops.forEach(function (crop) {
+    data.recommended_crops.forEach(function (crop, index) {
+        const cropKey = crop.toLowerCase().trim();
+        const meta = CROP_META[cropKey] || { emoji: "🌱", category: "Agricultural Crop", water: "💧 Medium", duration: "⏱️ Seasonal" };
+        
+        let matchBadgeClass = "badge-standard-match";
+        let matchBadgeText = "✓ Suitable";
+        if (index === 0) {
+            matchBadgeClass = "badge-top-match";
+            matchBadgeText = "⭐ Top Match";
+        } else if (index === 1) {
+            matchBadgeClass = "badge-high-match";
+            matchBadgeText = "🌱 High Match";
+        }
 
-        const cropCard =
-            document.createElement("div");
-
+        const cropCard = document.createElement("div");
         cropCard.classList.add("rec-crop-card");
 
         cropCard.innerHTML = `
-            <div class="rec-crop-icon">🌱</div>
-            <div class="rec-crop-name">${crop}</div>
+            <div class="rec-crop-card-top">
+                <div class="rec-crop-icon-wrap">${meta.emoji}</div>
+                <span class="rec-crop-badge ${matchBadgeClass}">${matchBadgeText}</span>
+            </div>
+            <div class="rec-crop-body">
+                <h3 class="rec-crop-name">${crop}</h3>
+                <span class="rec-crop-category">${meta.category}</span>
+                <div class="rec-crop-meta-chips">
+                    <span class="meta-chip">${meta.water}</span>
+                    <span class="meta-chip">${meta.duration}</span>
+                </div>
+            </div>
+            <div class="rec-crop-actions">
+                <a href="/frontend/pages/farmer-dashboard.html" class="crop-action-btn btn-plan">🌱 Plan Sowing</a>
+                <a href="/frontend/pages/crop-listings.html" class="crop-action-btn btn-mandi">📈 Mandi Rates</a>
+            </div>
         `;
 
         cropsContainer.appendChild(cropCard);
-
     });
 
 }
@@ -598,3 +646,18 @@ if (newRecommendationButton) {
     }
 
 })();
+
+// =========================================
+// SYNC NAVBAR USER NAME
+// =========================================
+
+(function syncNavbarUser() {
+    try {
+        const user = window.AgriBridgeAuth ? window.AgriBridgeAuth.getUser() : JSON.parse(localStorage.getItem("agribridge_user") || "{}");
+        const userNameEl = document.getElementById("navbarUserName");
+        if (userNameEl && user && user.name) {
+            userNameEl.textContent = user.name;
+        }
+    } catch (e) {}
+})();
+
