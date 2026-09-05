@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Listings — AgriBridge Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/crop-listings.css">
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- NAVIGATION                                -->
+    <!-- ========================================= -->
+    <nav class="nav">
+        <div class="logo">
+            <a href="/frontend/pages/index.html">
+                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+            </a>
+        </div>
+
+        <div class="mid">
+            <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+            <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
+            <a href="/frontend/pages/crop-recommendation.html" data-i18n="landing.cropRecommendation">Recommendations</a>
+            <a href="/frontend/pages/crop-listings.html" class="active" data-i18n="nav.myListings">My Listings</a>
+            <a href="/frontend/pages/voice-assistant.html" data-i18n="nav.voiceAssistant">Voice AI</a>
+            <a href="/frontend/pages/farmer-profile.html" data-i18n="nav.myProfile">Profile</a>
+        </div>
+
+        <div class="register">
+            <button type="button" class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/farmer-dashboard.html'">
+                ← Back to Dashboard
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- MAIN LISTINGS CONTAINER                   -->
+    <!-- ========================================= -->
+    <main class="listings-page-container">
+
+        <!-- HEADER -->
+        <header class="listings-header-card">
+            <div class="listings-header-left">
+                <div class="ab-badge ab-badge-gold">🛒 PRE-HARVEST COMMODITIES</div>
+                <h1 data-i18n="cropListings.title">My Farm Crop Listings</h1>
+                <p data-i18n="cropListings.description">
+                    Track your active harvest submissions, view field-agent quality certifications, and monitor advance buyer commitments.
+                </p>
+            </div>
+            <div class="listings-header-action">
+                <button class="stylish-btn ab-btn-primary" onclick="window.location.href='/frontend/pages/upload-crop.html'">
+                    + List New Crop
+                </button>
+            </div>
+        </header>
+
+        <!-- DYNAMIC MULTI-CROP LISTINGS GRID -->
+        <div class="listings-grid" id="farmer-listings-grid">
+            <!-- Rendered by crop-listings.js -->
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-bottom" style="border: none; padding: 0;">
+            <p>© 2026 AgriBridge. Verified Agricultural Marketplace.</p>
+            <div class="footer-bottom-links">
+                <a href="/frontend/pages/farmer-dashboard.html">Dashboard</a> •
+                <a href="/frontend/pages/weather-dashboard.html">Weather</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/crop-listings.js"></script>
+
+</body>
+
+</html>

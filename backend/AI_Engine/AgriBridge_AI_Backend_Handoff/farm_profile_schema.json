@@ -1,0 +1,93 @@
+{
+    "farm_area": {
+        "type": "number",
+        "unit": "acres",
+        "required": true
+    },
+    "growth_stage": {
+        "type": "string",
+        "required": true,
+        "options": [
+            "seedling",
+            "vegetative",
+            "flowering",
+            "fruiting",
+            "maturity"
+        ]
+    },
+    "irrigation_method": {
+        "type": "string",
+        "required": true,
+        "options": [
+            "drip",
+            "sprinkler",
+            "flood",
+            "furrow",
+            "rainfed"
+        ]
+    },
+    "irrigation_status": {
+        "type": "string",
+        "required": true,
+        "options": [
+            "dry",
+            "normal",
+            "wet",
+            "waterlogged"
+        ]
+    },
+    "recent_rainfall": {
+        "type": "string",
+        "required": true,
+        "options": [
+            "none",
+            "low",
+            "moderate",
+            "heavy"
+        ]
+    },
+    "humidity": {
+        "type": "string",
+        "required": true,
+        "options": [
+            "low",
+            "moderate",
+            "high"
+        ]
+    },
+    "fertilizer_applied": {
+        "type": "string",
+        "required": true,
+        "options": [
+            "None",
+            "Urea",
+            "DAP",
+            "NPK",
+            "MOP (Potassium)",
+            "SSP",
+            "Compost",
+            "Farmyard Manure (FYM)",
+            "Vermicompost",
+            "Organic Fertilizer",
+            "Micronutrient Fertilizer",
+            "Other"
+        ]
+    },
+    "previous_crop": {
+        "type": "string",
+        "required": true
+    },
+    "disease_severity": {
+        "type": "string",
+        "required": true,
+        "options": [
+            "low",
+            "moderate",
+            "high"
+        ]
+    },
+    "region": {
+        "type": "string",
+        "required": true
+    }
+}

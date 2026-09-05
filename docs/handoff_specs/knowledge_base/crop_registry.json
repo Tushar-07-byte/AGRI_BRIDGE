@@ -1,0 +1,146 @@
+{
+    "wheat": {
+        "crop_id": "wheat",
+        "crop_name": "Wheat",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "rice": {
+        "crop_id": "rice",
+        "crop_name": "Rice",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "apple": {
+        "crop_id": "apple",
+        "crop_name": "Apple",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "blueberry": {
+        "crop_id": "blueberry",
+        "crop_name": "Blueberry",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "cherry": {
+        "crop_id": "cherry",
+        "crop_name": "Cherry",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "corn": {
+        "crop_id": "corn",
+        "crop_name": "Corn",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "grape": {
+        "crop_id": "grape",
+        "crop_name": "Grape",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "orange": {
+        "crop_id": "orange",
+        "crop_name": "Orange",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "peach": {
+        "crop_id": "peach",
+        "crop_name": "Peach",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "pepper": {
+        "crop_id": "pepper",
+        "crop_name": "Pepper",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "potato": {
+        "crop_id": "potato",
+        "crop_name": "Potato",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "raspberry": {
+        "crop_id": "raspberry",
+        "crop_name": "Raspberry",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "soybean": {
+        "crop_id": "soybean",
+        "crop_name": "Soybean",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "squash": {
+        "crop_id": "squash",
+        "crop_name": "Squash",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "strawberry": {
+        "crop_id": "strawberry",
+        "crop_name": "Strawberry",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    },
+    "tomato": {
+        "crop_id": "tomato",
+        "crop_name": "Tomato",
+        "country": "India",
+        "scientific_calendar": true,
+        "management_calendar": true,
+        "weather_aware": true,
+        "monitoring_enabled": true
+    }
+}

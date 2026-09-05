@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FieldAgentAPIContract",
+  "type": "object",
+  "properties": {
+    "endpoints": {
+      "type": "object",
+      "properties": {
+        "GET /api/field-agent/tasks": {
+          "description": "List field agent tasks filtered by state (PENDING, ACCEPTED, IN_PROGRESS, FIELD_VISIT, REPORT_SUBMITTED, VERIFIED, REJECTED)"
+        },
+        "POST /api/field-agent/tasks/{task_id}/accept": {
+          "description": "Field Agent accepts a pending escalation task"
+        },
+        "POST /api/field-agent/tasks/{task_id}/reject": {
+          "description": "Field Agent rejects a task. Requires non-empty reason."
+        },
+        "POST /api/field-agent/tasks/{task_id}/verify": {
+          "description": "Submits field visit report and verification result (VERIFIED_DISEASE, NOT_VERIFIED, INCONCLUSIVE)"
+        },
+        "POST /api/field-agent/evaluate-telemetry": {
+          "description": "Evaluates IoT sensor telemetry for range, rapid drop, and suspicious zero readings"
+        },
+        "GET /api/notifications/farmer/{farmer_id}/tracked": {
+          "description": "Returns farmer notifications with genuine lifecycle delivery tracking states"
+        },
+        "POST /api/notifications/{notification_id}/mark-read": {
+          "description": "Transitions notification status to READ upon farmer viewing"
+        }
+      }
+    }
+  }
+}
+

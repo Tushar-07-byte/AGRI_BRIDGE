@@ -1,0 +1,68 @@
+{
+    "recommendation_id": "REC_20260831183214",
+    "farmer_id": "TEST_FARMER_001",
+    "farm_id": "",
+    "field_id": "",
+    "crop_id": "wheat",
+    "crop": "Wheat",
+    "growth_stage": "Sowing",
+    "action": {
+        "title": "Perform Wheat Sowing and Basal Fertilizer Application",
+        "summary": "Complete the overdue wheat sowing activity immediately while clear weather persists.",
+        "irrigation": "Provide light irrigation (Halka Paani) post-sowing to ensure proper soil moisture for germination.",
+        "fertilizer": "Apply 50kg DAP + 25kg MOP + 10kg Zinc per acre as a basal dose during sowing.",
+        "crop_protection": "No specific chemical protection required at this stage."
+    },
+    "timing": {
+        "recommended_date": "2026-09-01",
+        "timing_status": "overdue"
+    },
+    "reason": "Complete the overdue wheat sowing activity immediately while clear weather persists.",
+    "weather_impact": {
+        "decision": "Current weather is clear at 28°C with no rain expected. It is safe to proceed with sowing and light irrigation.",
+        "reasons": [
+            "Current weather is clear at 28°C with no rain expected. It is safe to proceed with sowing and light irrigation."
+        ]
+    },
+    "calendar": {
+        "update_required": false,
+        "original_date": "2026-09-01",
+        "updated_date": ""
+    },
+    "notification": {
+        "required": true,
+        "sent": false,
+        "type": "activity_reminder"
+    },
+    "farmer_action": {
+        "required": true,
+        "completed": false,
+        "instructions": "Complete the overdue wheat sowing activity immediately while clear weather persists."
+    },
+    "safety": {
+        "warning": "Follow standard safety precautions when handling fertilizers and farm machinery."
+    },
+    "sources": [
+        "AgriBridge Scientific Crop Management Calendar"
+    ],
+    "generated_at": "2026-08-31T18:32:14.164985",
+    "model": "gemini-3.6-flash",
+    "next_stage": {
+        "stage_number": 5,
+        "stage_name": "Germination",
+        "expected_timeline": "Within 4 to 7 days post-sowing",
+        "what_to_expect": "Look for uniform seed emergence across the field. Ensure soil does not form a hard crust that prevents seedling breakthrough."
+    },
+    "disease_inspection": {
+        "inspection_only": true,
+        "guidance": "Inspect emerging seedlings for spots, discoloration, or wilting. If abnormal leaves or seedlings are noticed, take a clear photograph and use the AgriBridge Disease Detection feature.",
+        "diagnosis": false,
+        "prediction": false,
+        "model_inference": false,
+        "redirect_to_disease_detection": true
+    },
+    "marketplace": {
+        "platform": "AgriBridge Marketplace",
+        "ultimate_goal": "Healthy crop management will prepare your harvest for listing and sale on the AgriBridge Marketplace."
+    }
+}

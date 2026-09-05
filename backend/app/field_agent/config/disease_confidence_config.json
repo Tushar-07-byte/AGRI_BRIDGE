@@ -1,0 +1,30 @@
+{
+  "system": "AgriBridge Disease Confidence Gating Engine",
+  "disease_low_confidence_threshold": 0.60,
+  "confidence_status_definitions": {
+    "LOW": {
+      "min_score": 0.0,
+      "max_score": 0.5999,
+      "action": "LOCK_CHEMICALS_AND_ESCALATE",
+      "field_agent_escalation": true,
+      "chemical_recommendation_status": "LOCKED",
+      "lock_reason": "LOW_DISEASE_CONFIDENCE",
+      "farmer_message": "AI confidence is low for this disease prediction. Chemical treatment recommendation is temporarily locked. A Field Agent verification is required before treatment guidance can be provided."
+    },
+    "ACCEPTABLE": {
+      "min_score": 0.60,
+      "max_score": 1.00,
+      "action": "PROCEED_NORMAL_ADVISORY",
+      "field_agent_escalation": false,
+      "chemical_recommendation_rule": "UNLOCKED_ONLY_IF_VERIFIED_KB_EXISTS",
+      "lock_reason": null
+    }
+  },
+  "chemical_recommendation_states": [
+    "LOCKED",
+    "AVAILABLE",
+    "UNAVAILABLE",
+    "PENDING_VERIFICATION"
+  ]
+}
+

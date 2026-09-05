@@ -1,0 +1,34 @@
+{
+    "calendar": "Dynamic Daily Crop Calendar",
+    "inputs": [
+        "crop",
+        "crop_start_date",
+        "monitoring_date",
+        "weather",
+        "iot_telemetry"
+    ],
+    "analysis_modules": [
+        "crop_stage",
+        "irrigation",
+        "fertilizer",
+        "disease_risk",
+        "pest_risk",
+        "weather_stress",
+        "daily_priority",
+        "harvest_status"
+    ],
+    "outputs": [
+        "today_actions",
+        "daily_priority",
+        "tomorrow_focus",
+        "harvest_status",
+        "llm_ready_context"
+    ],
+    "data_policy": {
+        "fake_weather": false,
+        "fake_iot": false,
+        "real_external_data": "Supported",
+        "baseline_without_live_data": "Supported"
+    },
+    "status": "READY"
+}

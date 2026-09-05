@@ -1,0 +1,99 @@
+/* ==========================================================================
+   AGRIBRIDGE — FARMER PROFILE STYLES
+   Agrova-Inspired Clean Profile Setup UI
+   ========================================================================== */
+
+.profile-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: radial-gradient(circle at 50% 10%, rgba(220, 232, 210, 0.45) 0%, transparent 70%),
+                var(--ab-warm-bg);
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 680px;
+    background: #FFFFFF;
+    padding: 48px;
+    border-radius: var(--ab-radius-xl);
+    box-shadow: var(--ab-shadow-md);
+    border: 1px solid var(--ab-border);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ab-light-green);
+    border-radius: 50%;
+    font-size: 34px;
+    box-shadow: var(--ab-shadow-xs);
+}
+
+.profile-header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.profile-header p {
+    font-size: 14px;
+    color: var(--ab-text-muted);
+    max-width: 480px;
+    line-height: 1.5;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.profile-btn {
+    width: 100%;
+    padding: 14px 28px;
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+.skip-link {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.skip-link a {
+    color: var(--ab-text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--ab-transition-fast);
+}
+
+.skip-link a:hover {
+    color: var(--ab-primary-dark);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 32px 24px;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

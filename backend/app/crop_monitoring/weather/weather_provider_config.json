@@ -1,0 +1,27 @@
+{
+    "provider": "weather_api",
+    "country": "India",
+    "forecast_days": 7,
+    "location_priority": [
+        "latitude_longitude",
+        "village_district_state"
+    ],
+    "required_fields": [
+        "temperature",
+        "humidity",
+        "rainfall",
+        "wind_speed",
+        "weather_condition",
+        "forecast",
+        "weather_alerts"
+    ],
+    "agricultural_processing": {
+        "rain_risk": true,
+        "heavy_rain_risk": true,
+        "heat_risk": true,
+        "cold_risk": true,
+        "wind_risk": true,
+        "humidity_risk": true,
+        "disease_favorable_conditions": true
+    }
+}

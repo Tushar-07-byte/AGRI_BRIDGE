@@ -4,273 +4,948 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agri-Bridge</title>
-    <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/styles/landing.css">
+
+    <meta name="description"
+        content="AgriBridge — AI-powered agriculture platform connecting farmers, weather intelligence, crop insights and agricultural markets.">
+
+    <title>AgriBridge | Smart Agriculture Platform</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/frontend/styles/landing.css">
+
+    <!-- Optional Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
 </head>
 
 <body>
-    <div class="container">
 
-        <!-- NAVBAR -->
+    <div class="landing-wrapper">
+
+        <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
 
         <nav class="nav">
 
-            <!-- LOGO -->
             <div class="logo">
-                <a href="index.html">
-                    <img src="/assets/logo/logo.png" alt="Agri-Bridge Logo">
+                <a href="#home">
+                    <img src="/frontend/assets/logo/logo.png" alt="AgriBridge">
                 </a>
             </div>
 
-            <!-- LANDING PAGE NAVIGATION -->
             <div class="mid">
-
                 <a href="#home" class="active">
                     Home
                 </a>
-
                 <a href="#features">
                     Features
                 </a>
-
+                <a href="#weather">
+                    Weather
+                </a>
                 <a href="#how-it-works">
                     How It Works
                 </a>
-
                 <a href="#roles">
-                    User Roles
+                    For Everyone
                 </a>
-
-                <a href="#contact">
-                    Contact
+                <a href="/frontend/pages/admin-dashboard.html" class="nav-admin-link">
+                    👑 Admin
                 </a>
-
             </div>
 
-            <!-- LOGIN / SIGN UP -->
             <div class="register">
-
-                <button class="stylish-btn" onclick="window.location.href='/pages/login.html'">
+                <a href="/frontend/pages/login.html" class="stylish-btn ab-btn-secondary">
                     Login
-                </button>
-
-                <button class="stylish-btn" onclick="window.location.href='/pages/signup.html'">
-                    Sign Up
-                </button>
-
+                </a>
+                <a href="/frontend/pages/signup.html" class="stylish-btn ab-btn-primary">
+                    Get Started
+                </a>
             </div>
 
         </nav>
-        <section class="hero-section" id="home">
 
-            <div class="hero-content">
 
-                <h1>AI-Powered Smart Agriculture Platform</h1>
+        <!-- =====================================================
+         HERO
+         ===================================================== -->
 
-                <h3>Connecting Farmers and Buyers Before Harvest.</h3>
-                <div class="hero-points">
-                    <ul>
-                        <li>Increase profits.</li>
-                        <li>Reduce wastage.</li>
-                        <li>Get AI-based crop analysis.</li>
-                    </ul>
+        <main id="home">
+
+            <section class="hero-section">
+
+                <!-- =================================================
+                 BACKGROUND VIDEO
+                 ================================================= -->
+
+                <video class="hero-video" id="hero-bg-video" autoplay muted loop playsinline preload="auto"
+                    poster="/frontend/assets/images/farmer.png" aria-hidden="true">
+                    <source src="/frontend/assets/videos/Generate_ONE_premium_cinemati.mp4" type="video/mp4">
+                    <source src="/frontend/assets/videos/agribridge-hero.mp4" type="video/mp4">
+                </video>
+
+                <!-- VIDEO OVERLAY -->
+                <div class="hero-video-overlay"></div>
+
+                <!-- VIDEO STATUS -->
+                <div class="hero-video-label">
+                    <span></span>
+                    SMART AGRICULTURE
+                </div>
+
+
+                <!-- =================================================
+                 HERO CONTENT
+                 ================================================= -->
+
+                <div class="hero-grid">
+
+                    <div class="hero-content">
+
+                        <div class="hero-eyebrow">
+                            <span class="eyebrow-dot"></span>
+                            AI-POWERED AGRICULTURE
+                        </div>
+
+                        <h1 class="hero-title">
+                            <span>Smart Farming.</span>
+                            <span class="text-gradient">Better Decisions.</span>
+                        </h1>
+
+                        <p class="hero-desc">
+                            AI-powered farm intelligence that turns crop, weather and farm data into actionable decisions — and connects verified harvests to buyers.
+                        </p>
+
+                        <!-- SENSE - REASON - PLAN - ACT - VERIFY - CONNECT PIPELINE BADGE -->
+                        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; font-size: 0.76rem; font-weight: 800; color: #6EE7B7; background: rgba(16, 185, 129, 0.12); padding: 8px 14px; border-radius: 8px; border: 1px solid rgba(110, 231, 183, 0.25);">
+                            <span>SENSE</span> ➔ <span>REASON</span> ➔ <span>PLAN</span> ➔ <span>ACT</span> ➔ <span>VERIFY</span> ➔ <span>CONNECT</span>
+                        </div>
+
+                        <!-- HERO FEATURES -->
+                        <div class="hero-points">
+                            <div class="point-item">
+                                <span class="point-icon">✓</span>
+                                Virtual IoT & Multi-Agent Intelligence
+                            </div>
+                            <div class="point-item">
+                                <span class="point-icon">✓</span>
+                                Weather-Driven AI Replanning
+                            </div>
+                            <div class="point-item">
+                                <span class="point-icon">✓</span>
+                                Verified Pre-Harvest Commodity Marketplace
+                            </div>
+                        </div>
+
+
+                        <!-- HERO BUTTONS -->
+                        <div class="hero-buttons">
+                            <a href="/frontend/pages/farm-command-center.html" class="stylish-btn ab-btn-primary hero-main-btn" style="background: linear-gradient(135deg, #2E7D32 0%, #1E3B19 100%); border: 1px solid #A7F3D0; box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);">
+                                ⚡ Enter Farm Command Center
+                                <span class="btn-arrow">→</span>
+                            </a>
+                            <a href="/frontend/pages/buyer-dashboard.html" class="stylish-btn ab-btn-secondary">
+                                🛒 Explore Market
+                            </a>
+                        </div>
+
+
+                        <!-- HERO STATS -->
+                        <div class="hero-stats-mini">
+                            <div class="mini-stat">
+                                <strong>36</strong>
+                                <span>States & UTs</span>
+                            </div>
+                            <div class="mini-divider"></div>
+                            <div class="mini-stat">
+                                <strong>729+</strong>
+                                <span>Districts</span>
+                            </div>
+                            <div class="mini-divider"></div>
+                            <div class="mini-stat">
+                                <strong>15</strong>
+                                <span>Day Forecast</span>
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
 
-                <div class="hero-buttons">
-                    <button class="primary-btn stylish-btn " id="get-started">Get Started</button>
-                    <button class="secondary-btn stylish-btn" id="demo">View Demo</button>
+
+                <!-- =================================================
+                 FLOATING WEATHER CARD
+                 ================================================= -->
+
+                <div class="floating-info-card float-weather">
+                    <div class="float-icon-box">
+                        ☀️
+                    </div>
+                    <div>
+                        <div class="float-label">
+                            WEATHER INTELLIGENCE
+                        </div>
+                        <div class="float-value">
+                            28°C
+                            <span>Clear</span>
+                        </div>
+                        <div class="float-sub">
+                            Smart weather insights for better farming decisions.
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- =================================================
+                 FLOATING CROP HEALTH CARD
+                 ================================================= -->
+
+                <div class="floating-info-card float-health">
+                    <div class="float-icon-box bg-green">
+                        🌱
+                    </div>
+                    <div>
+                        <div class="float-label">
+                            CROP HEALTH
+                        </div>
+                        <div class="float-value text-green">
+                            92%
+                        </div>
+                        <div class="float-sub">
+                            Healthy crop condition detected.
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- =================================================
+                 FLOATING MARKET CARD
+                 ================================================= -->
+
+                <div class="floating-info-card float-market">
+                    <div class="float-icon-box bg-gold">
+                        📈
+                    </div>
+                    <div>
+                        <div class="float-label">
+                            MARKET INSIGHT
+                        </div>
+                        <div class="float-value text-gold">
+                            +8.4%
+                        </div>
+                        <div class="float-sub">
+                            Market trend updated.
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+             PLATFORM SCALE
+             ===================================================== -->
+
+            <section class="scale-section">
+
+                <div class="scale-container">
+
+                    <div class="scale-card">
+                        <div class="scale-num">
+                            36
+                        </div>
+                        <div class="scale-label">
+                            States & UTs
+                        </div>
+                        <div class="scale-sub">
+                            Nationwide coverage
+                        </div>
+                    </div>
+
+                    <div class="scale-card">
+                        <div class="scale-num">
+                            729+
+                        </div>
+                        <div class="scale-label">
+                            Districts
+                        </div>
+                        <div class="scale-sub">
+                            Localized intelligence
+                        </div>
+                    </div>
+
+                    <div class="scale-card">
+                        <div class="scale-num">
+                            15
+                        </div>
+                        <div class="scale-label">
+                            Day Forecast
+                        </div>
+                        <div class="scale-sub">
+                            Weather planning
+                        </div>
+                    </div>
+
+                    <div class="scale-card">
+                        <div class="scale-num">
+                            AI
+                        </div>
+                        <div class="scale-label">
+                            Smart Recommendations
+                        </div>
+                        <div class="scale-sub">
+                            Data-driven decisions
+                        </div>
+                    </div>
+
+                    <div class="scale-card">
+                        <div class="scale-num">
+                            11+
+                        </div>
+                        <div class="scale-label">
+                            Languages
+                        </div>
+                        <div class="scale-sub">
+                            Farmer-friendly access
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+             FEATURES
+             ===================================================== -->
+
+            <section class="features-section" id="features">
+
+                <div class="section-header">
+                    <span class="ab-badge">
+                        THE AGRIBRIDGE ECOSYSTEM
+                    </span>
+                    <h2 class="section-heading">
+                        Everything farmers need.
+                        <br>
+                        In one place.
+                    </h2>
+                    <p class="section-subtitle">
+                        AgriBridge brings agricultural intelligence,
+                        weather insights, crop recommendations,
+                        market access and multilingual assistance
+                        together in one connected platform.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+
+                    <!-- FEATURE 1 -->
+                    <article class="feature-card feature-hero-card">
+                        <div class="feature-card-content">
+                            <div class="feature-tag">
+                                AI AGRICULTURE
+                            </div>
+                            <h3>
+                                Turn agricultural data
+                                into better decisions.
+                            </h3>
+                            <p>
+                                Get intelligent insights designed around
+                                your crops, location, weather and farming
+                                conditions.
+                            </p>
+                            <div class="feature-preview-bar">
+                                <span class="pill-chip">
+                                    Crop Insights
+                                </span>
+                                <span class="pill-chip">
+                                    AI Recommendations
+                                </span>
+                                <span class="pill-chip">
+                                    Weather Intelligence
+                                </span>
+                            </div>
+                            <a href="#weather" class="feature-link" style="color:white;">
+                                Explore intelligence →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- FEATURE 2 -->
+                    <article class="feature-card">
+                        <div class="feature-icon-box">
+                            ☁️
+                        </div>
+                        <h3>
+                            Weather Intelligence
+                        </h3>
+                        <p>
+                            Monitor current conditions and plan farming
+                            activities using detailed localized forecasts.
+                        </p>
+                        <a href="#weather" class="feature-link">
+                            Explore weather →
+                        </a>
+                    </article>
+
+                    <!-- FEATURE 3 -->
+                    <article class="feature-card">
+                        <div class="feature-icon-box bg-gold">
+                            🌾
+                        </div>
+                        <h3>
+                            Crop Recommendations
+                        </h3>
+                        <p>
+                            Receive agriculture-focused recommendations
+                            based on crop and farming conditions.
+                        </p>
+                        <a href="#features" class="feature-link">
+                            Discover insights →
+                        </a>
+                    </article>
+
+                    <!-- FEATURE 4 -->
+                    <article class="feature-card">
+                        <div class="feature-icon-box">
+                            🎙️
+                        </div>
+                        <h3>
+                            Voice Assistant
+                        </h3>
+                        <p>
+                            Ask agriculture-related questions naturally
+                            and receive assistance in your selected language.
+                        </p>
+                        <a href="#features" class="feature-link">
+                            Meet the assistant →
+                        </a>
+                    </article>
+
+                    <!-- FEATURE 5 -->
+                    <article class="feature-card">
+                        <div class="feature-icon-box bg-gold">
+                            🤝
+                        </div>
+                        <h3>
+                            Farmer Marketplace
+                        </h3>
+                        <p>
+                            Connect agricultural supply and demand through
+                            a transparent digital marketplace.
+                        </p>
+                        <a href="#roles" class="feature-link">
+                            Explore marketplace →
+                        </a>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+             WEATHER + VOICE
+             ===================================================== -->
+
+            <section class="spotlight-section" id="weather">
+
+                <div class="spotlight-grid">
+
+                    <!-- WEATHER -->
+                    <article class="spotlight-card">
+                        <div class="spotlight-badge">
+                            WEATHER INTELLIGENCE
+                        </div>
+                        <h3>
+                            Know the weather.
+                            Plan with confidence.
+                        </h3>
+                        <p>
+                            Access localized weather information and
+                            agricultural insights designed to help farmers
+                            make timely decisions.
+                        </p>
+
+                        <div class="weather-demo-box">
+                            <div class="weather-demo-header">
+                                <div>
+                                    <strong>
+                                        Ranchi, Jharkhand
+                                    </strong>
+                                    <span>
+                                        Current conditions
+                                    </span>
+                                </div>
+                                <div class="weather-temp-badge">
+                                    28°
+                                </div>
+                            </div>
+
+                            <div class="weather-metrics-demo">
+                                <div class="metric-demo-item">
+                                    <span>
+                                        Humidity
+                                    </span>
+                                    <strong>
+                                        72%
+                                    </strong>
+                                </div>
+                                <div class="metric-demo-item">
+                                    <span>
+                                        Wind
+                                    </span>
+                                    <strong>
+                                        12 km/h
+                                    </strong>
+                                </div>
+                                <div class="metric-demo-item">
+                                    <span>
+                                        Rain
+                                    </span>
+                                    <strong>
+                                        20%
+                                    </strong>
+                                </div>
+                            </div>
+
+                            <div class="weather-advice-snippet">
+                                <strong>
+                                    Agricultural insight
+                                </strong>
+                                <p>
+                                    Consider monitoring soil moisture
+                                    before irrigation.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- VOICE -->
+                    <article class="spotlight-card bg-dark-card">
+                        <div class="spotlight-badge ab-badge-gold">
+                            VOICE ASSISTANT
+                        </div>
+                        <h3 style="color:white;">
+                            Agriculture advice,
+                            in your language.
+                        </h3>
+                        <p style="color:#aebba8;">
+                            Ask questions naturally and receive
+                            agriculture-focused assistance in your
+                            selected language.
+                        </p>
+
+                        <div class="voice-demo-box">
+                            <div class="voice-mic-visual">
+                                <div class="voice-pulse-ring"></div>
+                                <div class="voice-mic-icon">
+                                    🎙️
+                                </div>
+                            </div>
+
+                            <div class="voice-demo-prompt">
+                                <div class="prompt-chip">
+                                    "What should I do if heavy rain is expected?"
+                                </div>
+                            </div>
+
+                            <div class="voice-demo-response">
+                                <div class="speaker-icon">
+                                    🔊
+                                </div>
+                                <p>
+                                    AgriBridge can provide
+                                    agriculture-focused guidance
+                                    based on your location and
+                                    weather conditions.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+             HOW IT WORKS / WORKFLOW
+             ===================================================== -->
+
+            <section class="workflow-section" id="how-it-works">
+
+                <div class="section-header">
+                    <span class="ab-badge">
+                        HOW AGRIBRIDGE WORKS
+                    </span>
+                    <h2 class="section-heading">
+                        From information
+                        to action.
+                    </h2>
+                    <p class="section-subtitle">
+                        A simple connected workflow designed to turn
+                        agricultural information into useful decisions.
+                    </p>
+                </div>
+
+                <div class="workflow-cards-container">
+
+                    <div class="step-card">
+                        <div class="step-number">
+                            01
+                        </div>
+                        <h4>
+                            Choose your location
+                        </h4>
+                        <p>
+                            Select your state and district to receive
+                            localized agricultural information.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">
+                            02
+                        </div>
+                        <h4>
+                            Understand conditions
+                        </h4>
+                        <p>
+                            View weather, crop and environmental
+                            information relevant to your farm.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">
+                            03
+                        </div>
+                        <h4>
+                            Get intelligent insights
+                        </h4>
+                        <p>
+                            Use AI-powered recommendations to support
+                            farming decisions.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">
+                            04
+                        </div>
+                        <h4>
+                            Take action
+                        </h4>
+                        <p>
+                            Plan farming activities using timely,
+                            understandable information.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">
+                            05
+                        </div>
+                        <h4>
+                            Connect to markets
+                        </h4>
+                        <p>
+                            Discover opportunities to connect farmers
+                            with buyers and agricultural markets.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+             USER ROLES
+             ===================================================== -->
+
+            <section class="roles-section" id="roles">
+
+                <div class="section-header">
+                    <span class="ab-badge">
+                        ONE PLATFORM
+                    </span>
+                    <h2 class="section-heading">
+                        Built for the
+                        agriculture ecosystem.
+                    </h2>
+                    <p class="section-subtitle">
+                        AgriBridge brings different participants of the
+                        agricultural ecosystem onto one connected platform.
+                    </p>
+                </div>
+
+                <div class="roles-grid">
+
+                    <!-- FARMER -->
+                    <article class="role-card">
+                        <div class="role-icon">
+                            🌾
+                        </div>
+                        <h3>
+                            Farmers
+                        </h3>
+                        <ul class="role-features">
+                            <li>
+                                <span>✓</span>
+                                Weather intelligence
+                            </li>
+                            <li>
+                                <span>✓</span>
+                                Crop recommendations
+                            </li>
+                            <li>
+                                <span>✓</span>
+                                Voice assistance
+                            </li>
+                            <li>
+                                <span>✓</span>
+                                Multilingual support
+                            </li>
+                            <li>
+                                <span>✓</span>
+                                Marketplace access
+                            </li>
+                        </ul>
+                        <a href="/frontend/pages/signup.html" class="stylish-btn ab-btn-primary">
+                            Join as Farmer
+                        </a>
+                    </article>
+
+                    <!-- BUYER -->
+                    <article class="role-card">
+                        <div class="role-icon">
+                            🛒
+                        </div>
+                        <h3>
+                            Buyers
+                        </h3>
+                        <ul class="role-features">
+                            <li>
+                                <span>✓</span>
+                                Discover listings
+                            </li>
+                            <li>
+                                <span>✓</span>
+                                Connect with farmers
+                            </li>
+                            <li>
+                                <span>✓</span>
+                                Marketplace visibility
+                            </li>
+                            <li>
+                                <span>✓</span>
+                                Transparent transactions
+                            </li>
+                        </ul>
+                        <a href="/frontend/pages/signup.html" class="stylish-btn ab-btn-secondary">
+                            Join as Buyer
+                        </a>
+                    </article>
+
+                    <!-- AGRI PROFESSIONAL -->
+                    <article class="role-card">
+                        <div class="role-icon">
+                            👨‍🌾
+                        </div>
+                        <h3>
+                            Agriculture Professionals
+                        </h3>
+                        <ul class="role-features">
+                            <li>
+                                <span>✓</span>
+                                Agricultural insights
+                            </li>
+                            <li>
+                                <span>✓</span>
+                                Farmer assistance
+                            </li>
+                            <li>
+                                <span>✓</span>
+                                Platform ecosystem
+                            </li>
+                            <li>
+                                <span>✓</span>
+                                Data-driven decisions
+                            </li>
+                        </ul>
+                        <a href="/frontend/pages/signup.html" class="stylish-btn ab-btn-secondary">
+                            Get Started
+                        </a>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+             FINAL CTA
+             ===================================================== -->
+
+            <section class="cta-banner-section">
+
+                <div class="cta-banner-card">
+                    <h2>
+                        Agriculture is changing.
+                        <br>
+                        Let's build it smarter.
+                    </h2>
+                    <p>
+                        Bring weather intelligence, agricultural
+                        recommendations, market connectivity and
+                        farmer-focused technology together with
+                        AgriBridge.
+                    </p>
+
+                    <div class="cta-actions">
+                        <a href="/frontend/pages/signup.html" class="stylish-btn ab-btn-primary">
+                            Get Started
+                            <span class="btn-arrow">
+                                →
+                            </span>
+                        </a>
+                        <a href="#features" class="stylish-btn ab-btn-secondary"
+                            style="color:white; border-color:rgba(255,255,255,.25);">
+                            Explore Platform
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+        <footer class="footer">
+
+            <div class="footer-grid">
+
+                <!-- BRAND -->
+                <div>
+                    <img class="footer-logo" src="/frontend/assets/logo/logo.png" alt="AgriBridge">
+                    <div class="footer-tagline">
+                        Smart farming. Better decisions.
+                    </div>
+                    <p class="footer-desc">
+                        AgriBridge is an agriculture technology platform
+                        designed to connect farmers with intelligent
+                        agricultural information, recommendations and
+                        market opportunities.
+                    </p>
+                </div>
+
+                <!-- PLATFORM -->
+                <div class="footer-links-col">
+                    <h4>
+                        Platform
+                    </h4>
+                    <a href="#features">
+                        Features
+                    </a>
+                    <a href="#weather">
+                        Weather
+                    </a>
+                    <a href="#workflow">
+                        How It Works
+                    </a>
+                    <a href="#roles">
+                        User Roles
+                    </a>
+                </div>
+
+                <!-- ACCESS -->
+                <div class="footer-links-col">
+                    <h4>
+                        Access
+                    </h4>
+                    <a href="/frontend/pages/login.html">
+                        Login
+                    </a>
+                    <a href="/frontend/pages/signup.html">
+                        Register
+                    </a>
+                    <a href="/frontend/pages/farmer-dashboard.html">
+                        Farmer Dashboard
+                    </a>
+                    <a href="/frontend/pages/buyer-dashboard.html">
+                        Buyer Dashboard
+                    </a>
+                    <a href="/frontend/pages/field-agent-dashboard.html">
+                        Field Agent Portal
+                    </a>
+                    <a href="/frontend/pages/admin-dashboard.html" style="color: var(--green-light); font-weight: 700;">
+                        👑 Admin Control Center
+                    </a>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="footer-links-col">
+                    <h4>
+                        AgriBridge
+                    </h4>
+                    <p>
+                        AI-powered agriculture
+                    </p>
+                    <p>
+                        Weather intelligence
+                    </p>
+                    <p>
+                        Multilingual assistance
+                    </p>
+                    <p>
+                        Connected marketplace
+                    </p>
                 </div>
 
             </div>
 
-            <div class="hero-image">
-                <img src="/assets/images/farmer.png" alt="Farmer using Agri-Bridge">
+            <div class="footer-bottom">
+                <span>
+                    © 2026 AgriBridge. All rights reserved.
+                </span>
+                <span>
+                    Smart Agriculture · Connected Future
+                </span>
             </div>
 
-    </div>
-
-    </section>
-    <div class="features-section" id="features">
-
-        <h2>Our Features</h2>
-
-        <div class="features-container">
-
-            <div class="feature-card">
-
-                <div class="feature-header">
-                    <img src="/assets/icons/crop-analysis.png" alt="AI Crop Analysis">
-                    <p>AI Crop Analysis</p>
-                </div>
-
-                <div class="feature-description">
-                    <p>Predicts crop health.</p>
-                    <p>Shows confidence score.</p>
-                </div>
-
-            </div>
-
-            <div class="feature-card">
-
-                <div class="feature-header">
-                    <img src="/assets/icons/marketplace.png" alt="Farmer Marketplace">
-                    <p>Farmer Marketplace</p>
-                </div>
-
-                <div class="feature-description">
-                    <p>Allows farmers to list crops.</p>
-                    <p>Connects farmers and buyers.</p>
-                </div>
-
-            </div>
-
-            <div class="feature-card">
-
-                <div class="feature-header">
-                    <img src="/assets/icons/crop-monitoring.png" alt="Smart Monitoring">
-                    <p>Smart Monitoring</p>
-                </div>
-
-                <div class="feature-description">
-                    <p>Provides crop recommendations.</p>
-                    <p>Tracks crop condition.</p>
-                </div>
-
-            </div>
-
-            <div class="feature-card">
-
-                <div class="feature-header">
-                    <img src="/assets/icons/pre-harvest.png" alt="Pre Harvest">
-                    <p>Pre Harvest</p>
-                </div>
-
-                <div class="feature-description">
-                    <p>Buyers can commit before harvest.</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    </div>
-    <section class="how-it-works-section" id="how-it-works">
-
-        <h2>How Agri-Bridge Works</h2>
-
-        <div class="workflow-container">
-
-            <div class="workflow-step">
-                <h4>Step 1</h4>
-                <p>Upload Crop Image</p>
-            </div>
-
-            <div class="arrow">
-                ↓
-            </div>
-
-            <div class="workflow-step">
-                <h4>Step 2</h4>
-                <p>AI Image Analysis</p>
-            </div>
-
-            <div class="arrow">
-                ↓
-            </div>
-
-            <div class="workflow-step">
-                <h4>Step 3</h4>
-                <p>Crop Listing</p>
-            </div>
-
-            <div class="arrow">
-                ↓
-            </div>
-
-            <div class="workflow-step">
-                <h4>Step 4</h4>
-                <p>Buyer Commitment</p>
-            </div>
-
-            <div class="arrow">
-                ↓
-            </div>
-
-            <div class="workflow-step">
-                <h4>Step 5</h4>
-                <p>Farmer Notification</p>
-            </div>
-
-        </div>
-
-    </section>
-    <section class="roles-section" id="roles">
-
-        <h2>User Roles</h2>
-
-        <div class="roles-container">
-
-            <div class="role-card">
-                <h4>Farmer</h4>
-                <p>Upload crops.</p>
-                <p>View AI analysis.</p>
-                <p>Track listings.</p>
-            </div>
-
-            <div class="role-card">
-                <h4>Buyer</h4>
-                <p>Browse listings.</p>
-                <p>Commit to buy.</p>
-                <p>View crop details.</p>
-            </div>
-
-            <div class="role-card">
-                <h4>Field Agent</h4>
-                <p>Verify crops.</p>
-                <p>Approve information.</p>
-            </div>
-
-        </div>
-
-    </section>
-    <section class="demo-workflow-section" id="demo-workflow">
-
-        <h2>Demo Workflow</h2>
-
-        <div class="workflow-container-demo">
-
-            <div class="workflow-step-demo">
-                <p>AI Checks Health</p>
-            </div>
-
-            <div class="workflow-step-demo">
-                <p>Crop Gets Listed</p>
-            </div>
-
-            <div class="workflow-step-demo">
-                <p>Buyer Commits</p>
-            </div>
-
-            <div class="workflow-step-demo">
-                <p>Farmer Receives Order</p>
-            </div>
-
-        </div>
-
-    </section>
-    <div class="footer" id="contact">
-        <footer>
-            <h3>Agri-Bridge</h3>
-            <p>AI Powered Smart Agriculture Platform</p>
-            <p>Made for Hackathon 2026</p>
-            <p>Contact Us</p>
         </footer>
+
     </div>
-    <script src="/scripts/landing.js"></script>
+
+
+    <!-- =========================================================
+     SCRIPTS
+     ========================================================= -->
+
+    <script src="/frontend/scripts/landing.js"></script>
+
+    <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
+    <a href="/frontend/pages/voice-assistant.html?from_page=index" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
+        title="Voice Farming Assistant / आवाज से पूछें">
+        <div class="voice-mic-icon-box">
+            <div class="voice-pulse-ring"></div>
+            🎙️
+        </div>
+        <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
+    </a>
+
 </body>
 
 </html>

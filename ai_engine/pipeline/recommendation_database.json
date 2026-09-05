@@ -1,0 +1,1606 @@
+{
+    "plantvillage_0": {
+        "model": "plantvillage",
+        "class_id": 0,
+        "crop": "Apple",
+        "disease": "Apple scab",
+        "description": "Fungal disease caused by Venturia inaequalis.",
+        "treatment": "At green-tip stage, apply Bacillus subtilis 5 g/L or Pseudomonas fluorescens 5 g/L. Chemical backup: Mancozeb 75% WP 2.5 g/L or Difenoconazole 25% EC 0.5 mL/L.",
+        "prevention": "After leaf fall, spray 5% urea or Trichoderma viride 5 g/L on orchard-floor leaf litter. Prune interior branches to improve sunlight.",
+        "organic_option": "5% urea or Trichoderma viride 5 g/L on fallen leaves.",
+        "bio_fungicide": "Bacillus subtilis 5 g/L; Pseudomonas fluorescens 5 g/L.",
+        "bio_pesticide": "",
+        "chemical_option": "Mancozeb 75% WP 2.5 g/L; Difenoconazole 25% EC 0.5 mL/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Decompose/remove overwintering leaf litter and prune dense interior branches.",
+        "weather_condition": "Favorable weather for fungal development requires preventive management.",
+        "humidity_risk": "High humidity/favorable wet conditions increase scab risk.",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_0"
+    },
+    "plantvillage_1": {
+        "model": "plantvillage",
+        "class_id": 1,
+        "crop": "Apple",
+        "disease": "Black rot",
+        "description": "Fungal black rot associated with Botryosphaeria obtusa.",
+        "treatment": "Remove infected material and protect pruning wounds. Copper Oxychloride 50% WP 3 g/L or Captan 50% WP 2.5 g/L are listed as treatment options.",
+        "prevention": "Remove mummified fruits and cankered twigs during winter pruning.",
+        "organic_option": "Trichoderma harzianum paste on pruning cuts.",
+        "bio_fungicide": "Trichoderma harzianum paste.",
+        "bio_pesticide": "",
+        "chemical_option": "Copper Oxychloride 50% WP 3 g/L; Captan 50% WP 2.5 g/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Remove mummified fruits and cankered twigs.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_1"
+    },
+    "plantvillage_2": {
+        "model": "plantvillage",
+        "class_id": 2,
+        "crop": "Apple",
+        "disease": "Cedar apple rust",
+        "description": "Rust disease caused by Gymnosporangium juniperi-virginianae.",
+        "treatment": "Apply Bacillus subtilis 5 g/L preventively or Myclobutanil 10% WP 0.4 g/L at pink-bud stage.",
+        "prevention": "Eradicate alternate host wild juniper bushes within a 500 m radius.",
+        "organic_option": "Bacillus subtilis 5 g/L preventively.",
+        "bio_fungicide": "Bacillus subtilis 5 g/L.",
+        "bio_pesticide": "",
+        "chemical_option": "Myclobutanil 10% WP 0.4 g/L at pink-bud stage.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Remove alternate host wild juniper/cedar bushes within the stated radius.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_2"
+    },
+    "plantvillage_3": {
+        "model": "plantvillage",
+        "class_id": 3,
+        "crop": "Apple",
+        "disease": "Healthy",
+        "description": "No disease detected in the Apple leaf.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular crop monitoring.",
+            "Inspect plants regularly for early disease or pest symptoms.",
+            "Maintain balanced crop nutrition.",
+            "Maintain appropriate soil moisture."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate irrigation according to crop growth stage.",
+            "Avoid unnecessary waterlogging or severe water stress."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application.",
+            "Avoid excessive fertilizer application."
+        ],
+        "field_sanitation": [
+            "Keep the field clean and remove severely diseased plant material when appropriate."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "No disease treatment is required when the crop is classified as healthy.",
+        "source": [
+            "AgriBridge healthy-crop management logic"
+        ],
+        "verified": true,
+        "_recommendation_key": "plantvillage_3"
+    },
+    "plantvillage_4": {
+        "model": "plantvillage",
+        "class_id": 4,
+        "crop": "Blueberry",
+        "disease": "Healthy",
+        "description": "No disease detected in the Blueberry leaf.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular crop monitoring.",
+            "Inspect plants regularly for early disease or pest symptoms.",
+            "Maintain balanced crop nutrition.",
+            "Maintain appropriate soil moisture."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate irrigation according to crop growth stage.",
+            "Avoid unnecessary waterlogging or severe water stress."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application.",
+            "Avoid excessive fertilizer application."
+        ],
+        "field_sanitation": [
+            "Keep the field clean and remove severely diseased plant material when appropriate."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "No disease treatment is required when the crop is classified as healthy.",
+        "source": [
+            "AgriBridge healthy-crop management logic"
+        ],
+        "verified": true,
+        "_recommendation_key": "plantvillage_4"
+    },
+    "plantvillage_5": {
+        "model": "plantvillage",
+        "class_id": 5,
+        "crop": "Cherry",
+        "disease": "Powdery mildew",
+        "description": "Powdery mildew caused by Podosphaera clausa.",
+        "treatment": "Foliar spray of Ampelomyces quisqualis 5 g/L or Neem Oil 10,000 ppm 3 mL/L at post-petal fall. Chemical treatment: Wettable Sulphur 80% WP 3 g/L or Hexaconazole 5% EC 1 mL/L.",
+        "prevention": "Prune water sprouts and inner canopy foliage to improve air circulation.",
+        "organic_option": "Neem Oil 10,000 ppm 3 mL/L.",
+        "bio_fungicide": "Ampelomyces quisqualis 5 g/L.",
+        "bio_pesticide": "",
+        "chemical_option": "Wettable Sulphur 80% WP 3 g/L; Hexaconazole 5% EC 1 mL/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "",
+        "weather_condition": "",
+        "humidity_risk": "Dense canopy and high humidity favor powdery mildew.",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_5"
+    },
+    "plantvillage_6": {
+        "model": "plantvillage",
+        "class_id": 6,
+        "crop": "Cherry",
+        "disease": "Healthy",
+        "description": "No disease detected in the Cherry leaf.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular crop monitoring.",
+            "Inspect plants regularly for early disease or pest symptoms.",
+            "Maintain balanced crop nutrition.",
+            "Maintain appropriate soil moisture."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate irrigation according to crop growth stage.",
+            "Avoid unnecessary waterlogging or severe water stress."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application.",
+            "Avoid excessive fertilizer application."
+        ],
+        "field_sanitation": [
+            "Keep the field clean and remove severely diseased plant material when appropriate."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "No disease treatment is required when the crop is classified as healthy.",
+        "source": [
+            "AgriBridge healthy-crop management logic"
+        ],
+        "verified": true,
+        "_recommendation_key": "plantvillage_6"
+    },
+    "plantvillage_7": {
+        "model": "plantvillage",
+        "class_id": 7,
+        "crop": "Corn",
+        "disease": "Cercospora leaf spot Gray leaf spot",
+        "description": "Gray leaf spot caused by Cercospora zeae-maydis.",
+        "treatment": "Seed treatment with Trichoderma viride 10 g/kg seed. Foliar Azoxystrobin 18.2% + Difenoconazole 11.4% SC 1 mL/L.",
+        "prevention": "Rotate crops with legumes such as soybean or pigeon pea and deep-plow field residue.",
+        "organic_option": "Trichoderma viride 10 g/kg seed.",
+        "bio_fungicide": "Trichoderma viride 10 g/kg seed.",
+        "bio_pesticide": "",
+        "chemical_option": "Azoxystrobin 18.2% + Difenoconazole 11.4% SC 1 mL/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Deep-plow field residues to bury fungal inoculum.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_7"
+    },
+    "plantvillage_8": {
+        "model": "plantvillage",
+        "class_id": 8,
+        "crop": "Corn",
+        "disease": "Common rust",
+        "description": "Rust disease caused by Puccinia sorghi.",
+        "treatment": "Apply Pseudomonas fluorescens 5 g/L preventively or Mancozeb 75% WP 2.5 g/L at first pustule sign.",
+        "prevention": "Maintain balanced NPK nutrition and avoid excessive nitrogen.",
+        "organic_option": "Pseudomonas fluorescens 5 g/L.",
+        "bio_fungicide": "Pseudomonas fluorescens 5 g/L.",
+        "bio_pesticide": "",
+        "chemical_option": "Mancozeb 75% WP 2.5 g/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "Maintain balanced NPK; avoid excessive nitrogen.",
+        "field_sanitation": "",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_8"
+    },
+    "plantvillage_9": {
+        "model": "plantvillage",
+        "class_id": 9,
+        "crop": "Corn",
+        "disease": "Northern Leaf Blight",
+        "description": "Northern leaf blight caused by Exserohilum turcicum.",
+        "treatment": "Seed treatment with Pseudomonas fluorescens 10 g/kg seed plus Trichoderma viride 5 g/L foliar spray. Chemical options: Propiconazole 25% EC 1 mL/L or Mancozeb 75% WP 2.5 g/L.",
+        "prevention": "Avoid late-afternoon overhead irrigation and use seed coating before sowing.",
+        "organic_option": "Pseudomonas fluorescens 10 g/kg seed; Trichoderma viride 5 g/L.",
+        "bio_fungicide": "Pseudomonas fluorescens; Trichoderma viride.",
+        "bio_pesticide": "",
+        "chemical_option": "Propiconazole 25% EC 1 mL/L; Mancozeb 75% WP 2.5 g/L.",
+        "irrigation_advice": "Avoid late-afternoon overhead irrigation.",
+        "fertilizer_advice": "",
+        "field_sanitation": "",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_9"
+    },
+    "plantvillage_10": {
+        "model": "plantvillage",
+        "class_id": 10,
+        "crop": "Corn",
+        "disease": "Healthy",
+        "description": "No disease detected in the Corn leaf.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular crop monitoring.",
+            "Inspect plants regularly for early disease or pest symptoms.",
+            "Maintain balanced crop nutrition.",
+            "Maintain appropriate soil moisture."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate irrigation according to crop growth stage.",
+            "Avoid unnecessary waterlogging or severe water stress."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application.",
+            "Avoid excessive fertilizer application."
+        ],
+        "field_sanitation": [
+            "Keep the field clean and remove severely diseased plant material when appropriate."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "No disease treatment is required when the crop is classified as healthy.",
+        "source": [
+            "AgriBridge healthy-crop management logic"
+        ],
+        "verified": true,
+        "_recommendation_key": "plantvillage_10"
+    },
+    "plantvillage_11": {
+        "model": "plantvillage",
+        "class_id": 11,
+        "crop": "Grape",
+        "disease": "Black rot",
+        "description": "Black rot caused by Guignardia bidwellii.",
+        "treatment": "Spray Bacillus subtilis 5 g/L before flowering or Mancozeb 75% WP 2 g/L / Difenoconazole 25% EC 0.5 mL/L.",
+        "prevention": "Remove dried mummified berries and infected canes during winter pruning.",
+        "organic_option": "Bacillus subtilis 5 g/L.",
+        "bio_fungicide": "Bacillus subtilis 5 g/L.",
+        "bio_pesticide": "",
+        "chemical_option": "Mancozeb 75% WP 2 g/L; Difenoconazole 25% EC 0.5 mL/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Remove mummified berries and infected canes.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_11"
+    },
+    "plantvillage_12": {
+        "model": "plantvillage",
+        "class_id": 12,
+        "crop": "Grape",
+        "disease": "Esca (Black Measles)",
+        "description": "Esca/Black Measles is associated with a complex of fungi.",
+        "treatment": "There is no direct chemical cure once heartwood decay is established. Management focuses on sanitation, wound protection and avoiding plant stress.",
+        "prevention": "Disinfect pruning shears between vines and paint pruning wounds over 1 cm with Trichoderma harzianum paste.",
+        "organic_option": "Trichoderma harzianum paste.",
+        "bio_fungicide": "Trichoderma harzianum paste.",
+        "bio_pesticide": "",
+        "chemical_option": "No direct chemical cure once heartwood decay occurs.",
+        "irrigation_advice": "Avoid water stress.",
+        "fertilizer_advice": "",
+        "field_sanitation": "Disinfect pruning tools with 70% alcohol between vines.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; source recommends integrated management.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_12"
+    },
+    "plantvillage_13": {
+        "model": "plantvillage",
+        "class_id": 13,
+        "crop": "Grape",
+        "disease": "Leaf blight (Isariopsis Leaf Spot)",
+        "description": "Grape leaf blight / Isariopsis leaf spot associated with Pseudocercospora vitis.",
+        "treatment": "Spray Pseudomonas fluorescens 5 g/L or Copper Oxychloride 50% WP 2.5 g/L post-monsoon.",
+        "prevention": "Remove lower canopy leaves up to 30 cm above ground to reduce soil splash.",
+        "organic_option": "Pseudomonas fluorescens 5 g/L.",
+        "bio_fungicide": "Pseudomonas fluorescens 5 g/L.",
+        "bio_pesticide": "",
+        "chemical_option": "Copper Oxychloride 50% WP 2.5 g/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Remove lower canopy leaves up to 30 cm above ground.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_13"
+    },
+    "plantvillage_14": {
+        "model": "plantvillage",
+        "class_id": 14,
+        "crop": "Grape",
+        "disease": "Healthy",
+        "description": "No disease detected in the Grape leaf.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular crop monitoring.",
+            "Inspect plants regularly for early disease or pest symptoms.",
+            "Maintain balanced crop nutrition.",
+            "Maintain appropriate soil moisture."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate irrigation according to crop growth stage.",
+            "Avoid unnecessary waterlogging or severe water stress."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application.",
+            "Avoid excessive fertilizer application."
+        ],
+        "field_sanitation": [
+            "Keep the field clean and remove severely diseased plant material when appropriate."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "No disease treatment is required when the crop is classified as healthy.",
+        "source": [
+            "AgriBridge healthy-crop management logic"
+        ],
+        "verified": true,
+        "_recommendation_key": "plantvillage_14"
+    },
+    "plantvillage_15": {
+        "model": "plantvillage",
+        "class_id": 15,
+        "crop": "Orange",
+        "disease": "Haunglongbing (Citrus greening)",
+        "description": "Citrus greening associated with Candidatus Liberibacter asiaticus.",
+        "treatment": "Control the psyllid vector using Verticillium lecanii 5 g/L or Neem Oil 10,000 ppm 3 mL/L. Chemical vector control: Imidacloprid 17.8% SL 0.5 mL/L during new leaf flushes. Nutritional support may include Zinc Sulphate 0.5% + Ferrous Sulphate 0.25% + Solubor 0.1%.",
+        "prevention": "Use certified disease-free tissue-cultured plants and uproot severely infected trees as described by the source.",
+        "organic_option": "Neem Oil 10,000 ppm 3 mL/L.",
+        "bio_fungicide": "Verticillium lecanii 5 g/L.",
+        "bio_pesticide": "Verticillium lecanii 5 g/L for psyllid vector control.",
+        "chemical_option": "Imidacloprid 17.8% SL 0.5 mL/L during new flushes.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "Zinc Sulphate 0.5% + Ferrous Sulphate 0.25% + Solubor 0.1% as nutritional support.",
+        "field_sanitation": "Uproot severely infected trees according to the source.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_15"
+    },
+    "plantvillage_16": {
+        "model": "plantvillage",
+        "class_id": 16,
+        "crop": "Peach",
+        "disease": "Bacterial spot",
+        "description": "Bacterial spot caused by Xanthomonas arboricola pv. pruni.",
+        "treatment": "Pseudomonas fluorescens 5 g/L or Streptocycline 0.15 g/L + Copper Hydroxide 77% WP 2 g/L at shuck-split stage.",
+        "prevention": "Avoid high late-season nitrogen fertilization and apply dormant copper spray.",
+        "organic_option": "Pseudomonas fluorescens 5 g/L.",
+        "bio_fungicide": "Pseudomonas fluorescens 5 g/L.",
+        "bio_pesticide": "",
+        "chemical_option": "Streptocycline 0.15 g/L + Copper Hydroxide 77% WP 2 g/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "Avoid excessive late-season nitrogen.",
+        "field_sanitation": "",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_16"
+    },
+    "plantvillage_17": {
+        "model": "plantvillage",
+        "class_id": 17,
+        "crop": "Peach",
+        "disease": "Healthy",
+        "description": "No disease detected in the Peach leaf.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular crop monitoring.",
+            "Inspect plants regularly for early disease or pest symptoms.",
+            "Maintain balanced crop nutrition.",
+            "Maintain appropriate soil moisture."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate irrigation according to crop growth stage.",
+            "Avoid unnecessary waterlogging or severe water stress."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application.",
+            "Avoid excessive fertilizer application."
+        ],
+        "field_sanitation": [
+            "Keep the field clean and remove severely diseased plant material when appropriate."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "No disease treatment is required when the crop is classified as healthy.",
+        "source": [
+            "AgriBridge healthy-crop management logic"
+        ],
+        "verified": true,
+        "_recommendation_key": "plantvillage_17"
+    },
+    "plantvillage_18": {
+        "model": "plantvillage",
+        "class_id": 18,
+        "crop": "Pepper",
+        "disease": "Bacterial spot",
+        "description": "Bacterial spot caused by Xanthomonas euvesicatoria.",
+        "treatment": "Seed treatment with Pseudomonas fluorescens 10 g/kg seed and foliar spray 5 g/L. Chemical treatment: Streptocycline 0.15 g/L + Copper Oxychloride 50% WP 2.5 g/L.",
+        "prevention": "Hot-water seed treatment at 50°C for 25 minutes and 2–3 year crop rotation without solanaceous crops.",
+        "organic_option": "Pseudomonas fluorescens 10 g/kg seed and 5 g/L foliar.",
+        "bio_fungicide": "Pseudomonas fluorescens.",
+        "bio_pesticide": "",
+        "chemical_option": "Streptocycline 0.15 g/L + Copper Oxychloride 50% WP 2.5 g/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Avoid practices that spread bacterial inoculum.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_18"
+    },
+    "plantvillage_19": {
+        "model": "plantvillage",
+        "class_id": 19,
+        "crop": "Pepper",
+        "disease": "Healthy",
+        "description": "No disease detected in the Pepper leaf.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular crop monitoring.",
+            "Inspect plants regularly for early disease or pest symptoms.",
+            "Maintain balanced crop nutrition.",
+            "Maintain appropriate soil moisture."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate irrigation according to crop growth stage.",
+            "Avoid unnecessary waterlogging or severe water stress."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application.",
+            "Avoid excessive fertilizer application."
+        ],
+        "field_sanitation": [
+            "Keep the field clean and remove severely diseased plant material when appropriate."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "No disease treatment is required when the crop is classified as healthy.",
+        "source": [
+            "AgriBridge healthy-crop management logic"
+        ],
+        "verified": true,
+        "_recommendation_key": "plantvillage_19"
+    },
+    "plantvillage_20": {
+        "model": "plantvillage",
+        "class_id": 20,
+        "crop": "Potato",
+        "disease": "Early blight",
+        "description": "Early blight caused by Alternaria solani.",
+        "treatment": "Foliar Trichoderma viride 5 g/L or chemical Mancozeb 75% WP 2.5 g/L / Azoxystrobin 23% SC 1 mL/L.",
+        "prevention": "Apply recommended potassium levels and strip lower leaves touching soil.",
+        "organic_option": "Trichoderma viride 5 g/L.",
+        "bio_fungicide": "Trichoderma viride 5 g/L.",
+        "bio_pesticide": "",
+        "chemical_option": "Mancozeb 75% WP 2.5 g/L; Azoxystrobin 23% SC 1 mL/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "Recommended potassium level stated by source: 60–80 kg/acre.",
+        "field_sanitation": "Remove lower leaves touching soil.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_20"
+    },
+    "plantvillage_21": {
+        "model": "plantvillage",
+        "class_id": 21,
+        "crop": "Potato",
+        "disease": "Late blight",
+        "description": "Late blight caused by Phytophthora infestans.",
+        "treatment": "Apply Trichoderma viride 2.5 kg/acre mixed with 100 kg FYM at planting plus Pseudomonas fluorescens 5 g/L spray. Chemical options: Metalaxyl 8% + Mancozeb 64% WP 2.5 g/L or Cymoxanil + Mancozeb 3 g/L.",
+        "prevention": "Use certified disease-free seed tubers and proper earthing-up with approximately 15–20 cm ridge height.",
+        "organic_option": "Trichoderma viride 2.5 kg/acre + 100 kg FYM.",
+        "bio_fungicide": "Trichoderma viride; Pseudomonas fluorescens 5 g/L.",
+        "bio_pesticide": "",
+        "chemical_option": "Metalaxyl 8% + Mancozeb 64% WP 2.5 g/L; Cymoxanil + Mancozeb 3 g/L.",
+        "irrigation_advice": "Maintain management that prevents sporangia wash-down onto tubers.",
+        "fertilizer_advice": "",
+        "field_sanitation": "Destroy haulms 10–12 days before harvest.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_21"
+    },
+    "plantvillage_22": {
+        "model": "plantvillage",
+        "class_id": 22,
+        "crop": "Potato",
+        "disease": "Healthy",
+        "description": "No disease detected in the Potato leaf.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular crop monitoring.",
+            "Inspect plants regularly for early disease or pest symptoms.",
+            "Maintain balanced crop nutrition.",
+            "Maintain appropriate soil moisture."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate irrigation according to crop growth stage.",
+            "Avoid unnecessary waterlogging or severe water stress."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application.",
+            "Avoid excessive fertilizer application."
+        ],
+        "field_sanitation": [
+            "Keep the field clean and remove severely diseased plant material when appropriate."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "No disease treatment is required when the crop is classified as healthy.",
+        "source": [
+            "AgriBridge healthy-crop management logic"
+        ],
+        "verified": true,
+        "_recommendation_key": "plantvillage_22"
+    },
+    "plantvillage_23": {
+        "model": "plantvillage",
+        "class_id": 23,
+        "crop": "Raspberry",
+        "disease": "Healthy",
+        "description": "No disease detected in the Raspberry leaf.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular crop monitoring.",
+            "Inspect plants regularly for early disease or pest symptoms.",
+            "Maintain balanced crop nutrition.",
+            "Maintain appropriate soil moisture."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate irrigation according to crop growth stage.",
+            "Avoid unnecessary waterlogging or severe water stress."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application.",
+            "Avoid excessive fertilizer application."
+        ],
+        "field_sanitation": [
+            "Keep the field clean and remove severely diseased plant material when appropriate."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "No disease treatment is required when the crop is classified as healthy.",
+        "source": [
+            "AgriBridge healthy-crop management logic"
+        ],
+        "verified": true,
+        "_recommendation_key": "plantvillage_23"
+    },
+    "plantvillage_24": {
+        "model": "plantvillage",
+        "class_id": 24,
+        "crop": "Soybean",
+        "disease": "Healthy",
+        "description": "No disease detected in the Soybean leaf.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular crop monitoring.",
+            "Inspect plants regularly for early disease or pest symptoms.",
+            "Maintain balanced crop nutrition.",
+            "Maintain appropriate soil moisture."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate irrigation according to crop growth stage.",
+            "Avoid unnecessary waterlogging or severe water stress."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application.",
+            "Avoid excessive fertilizer application."
+        ],
+        "field_sanitation": [
+            "Keep the field clean and remove severely diseased plant material when appropriate."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "No disease treatment is required when the crop is classified as healthy.",
+        "source": [
+            "AgriBridge healthy-crop management logic"
+        ],
+        "verified": true,
+        "_recommendation_key": "plantvillage_24"
+    },
+    "plantvillage_25": {
+        "model": "plantvillage",
+        "class_id": 25,
+        "crop": "Squash",
+        "disease": "Powdery mildew",
+        "description": "Powdery mildew caused by Podosphaera xanthii.",
+        "treatment": "Foliar Ampelomyces quisqualis 5 g/L or Neem Oil 10,000 ppm 3 mL/L + Milk Whey 10%. Chemical options: Dinocap 48% EC 0.5 mL/L or Wettable Sulphur 80% WP 3 g/L.",
+        "prevention": "Maintain wider spacing of approximately 1.5 m × 1.0 m and keep field margins free of wild cucurbit weeds.",
+        "organic_option": "Neem Oil 10,000 ppm 3 mL/L + Milk Whey 10%.",
+        "bio_fungicide": "Ampelomyces quisqualis 5 g/L.",
+        "bio_pesticide": "",
+        "chemical_option": "Dinocap 48% EC 0.5 mL/L; Wettable Sulphur 80% WP 3 g/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Remove wild cucurbit weeds from field margins.",
+        "weather_condition": "",
+        "humidity_risk": "Improve ventilation and avoid conditions favoring high humidity.",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_25"
+    },
+    "plantvillage_26": {
+        "model": "plantvillage",
+        "class_id": 26,
+        "crop": "Strawberry",
+        "disease": "Leaf scorch",
+        "description": "Leaf scorch caused by Diplocarpon earlianum.",
+        "treatment": "Apply Trichoderma viride 5 g/L or Bacillus subtilis 5 g/L preventively. Chemical option: Captan 50% WP 2.5 g/L.",
+        "prevention": "Use black plastic mulch under drip irrigation lines and remove old spotted leaves after harvest.",
+        "organic_option": "Trichoderma viride 5 g/L; Bacillus subtilis 5 g/L.",
+        "bio_fungicide": "Trichoderma viride; Bacillus subtilis.",
+        "bio_pesticide": "",
+        "chemical_option": "Captan 50% WP 2.5 g/L.",
+        "irrigation_advice": "Use drip irrigation with mulch to reduce soil splash.",
+        "fertilizer_advice": "",
+        "field_sanitation": "Remove old spotted leaves after harvest.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_26"
+    },
+    "plantvillage_27": {
+        "model": "plantvillage",
+        "class_id": 27,
+        "crop": "Strawberry",
+        "disease": "Healthy",
+        "description": "No disease detected in the Strawberry leaf.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular crop monitoring.",
+            "Inspect plants regularly for early disease or pest symptoms.",
+            "Maintain balanced crop nutrition.",
+            "Maintain appropriate soil moisture."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate irrigation according to crop growth stage.",
+            "Avoid unnecessary waterlogging or severe water stress."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application.",
+            "Avoid excessive fertilizer application."
+        ],
+        "field_sanitation": [
+            "Keep the field clean and remove severely diseased plant material when appropriate."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "No disease treatment is required when the crop is classified as healthy.",
+        "source": [
+            "AgriBridge healthy-crop management logic"
+        ],
+        "verified": true,
+        "_recommendation_key": "plantvillage_27"
+    },
+    "plantvillage_28": {
+        "model": "plantvillage",
+        "class_id": 28,
+        "crop": "Tomato",
+        "disease": "Bacterial spot",
+        "description": "Bacterial spot caused by Xanthomonas spp.",
+        "treatment": "Seed soak using Pseudomonas fluorescens 10 g/L or 10% Trisodium Phosphate. Chemical option: Streptocycline 0.15 g/L + Copper Oxychloride 2.5 g/L.",
+        "prevention": "Avoid field operations when plants are wet and use preventive seed treatment.",
+        "organic_option": "Pseudomonas fluorescens 10 g/L seed soak.",
+        "bio_fungicide": "Pseudomonas fluorescens.",
+        "bio_pesticide": "",
+        "chemical_option": "Streptocycline 0.15 g/L + Copper Oxychloride 2.5 g/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Avoid mechanical spread during wet conditions.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_28"
+    },
+    "plantvillage_29": {
+        "model": "plantvillage",
+        "class_id": 29,
+        "crop": "Tomato",
+        "disease": "Early blight",
+        "description": "Early blight caused by Alternaria solani.",
+        "treatment": "Apply Pseudomonas fluorescens 5 g/L preventively and Trichoderma harzianum 2.5 kg/acre in soil. Chemical option: Mancozeb 2.5 g/L.",
+        "prevention": "Use plastic mulching and soil application of Trichoderma harzianum.",
+        "organic_option": "Trichoderma harzianum 2.5 kg/acre.",
+        "bio_fungicide": "Pseudomonas fluorescens 5 g/L; Trichoderma harzianum.",
+        "bio_pesticide": "",
+        "chemical_option": "Mancozeb 2.5 g/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Use mulching and reduce soil splash.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_29"
+    },
+    "plantvillage_30": {
+        "model": "plantvillage",
+        "class_id": 30,
+        "crop": "Tomato",
+        "disease": "Late blight",
+        "description": "Late blight caused by Phytophthora infestans.",
+        "treatment": "Apply Pseudomonas fluorescens 5 g/L preventively and Trichoderma harzianum 2.5 kg/acre in soil. Chemical option: Dimethomorph 50% WP 1 g/L + Mancozeb 2 g/L.",
+        "prevention": "Use plastic mulching and preventive biological management.",
+        "organic_option": "Trichoderma harzianum 2.5 kg/acre.",
+        "bio_fungicide": "Pseudomonas fluorescens 5 g/L; Trichoderma harzianum.",
+        "bio_pesticide": "",
+        "chemical_option": "Dimethomorph 50% WP 1 g/L + Mancozeb 2 g/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Use mulching to reduce soil splash.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_30"
+    },
+    "plantvillage_31": {
+        "model": "plantvillage",
+        "class_id": 31,
+        "crop": "Tomato",
+        "disease": "Leaf Mold",
+        "description": "Leaf mold caused by Passalora fulva.",
+        "treatment": "Maintain polyhouse humidity below 85% and spray Bacillus subtilis 5 g/L. Chemical options: Difenoconazole 25% EC 0.5 mL/L or Chlorothalonil 75% WP 2 g/L.",
+        "prevention": "Control humidity and maintain ventilation.",
+        "organic_option": "Bacillus subtilis 5 g/L.",
+        "bio_fungicide": "Bacillus subtilis 5 g/L.",
+        "bio_pesticide": "",
+        "chemical_option": "Difenoconazole 25% EC 0.5 mL/L; Chlorothalonil 75% WP 2 g/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "",
+        "weather_condition": "High-humidity conditions favor leaf mold.",
+        "humidity_risk": "High humidity is a major risk; source recommends <85% RH in polyhouses.",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_31"
+    },
+    "plantvillage_32": {
+        "model": "plantvillage",
+        "class_id": 32,
+        "crop": "Tomato",
+        "disease": "Septoria leaf spot",
+        "description": "Septoria leaf spot caused by Septoria lycopersici.",
+        "treatment": "Spray Trichoderma viride 5 g/L. Chemical options: Zineb 75% WP 2 g/L or Pyraclostrobin 20% WG 1 g/L.",
+        "prevention": "Use bamboo staking and prune lower leaves up to approximately 30 cm.",
+        "organic_option": "Trichoderma viride 5 g/L.",
+        "bio_fungicide": "Trichoderma viride 5 g/L.",
+        "bio_pesticide": "",
+        "chemical_option": "Zineb 75% WP 2 g/L; Pyraclostrobin 20% WG 1 g/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Remove/prune lower foliage to reduce disease spread.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_32"
+    },
+    "plantvillage_33": {
+        "model": "plantvillage",
+        "class_id": 33,
+        "crop": "Tomato",
+        "disease": "Spider mites Two-spotted spider mite",
+        "description": "Two-spotted spider mite caused by Tetranychus urticae.",
+        "treatment": "Use Neem Oil 10,000 ppm 3 mL/L or predatory mites (Phytoseiulus persimilis). Chemical options: Spiromesifen 22.9% SC 1 mL/L or Abamectin 1.9% EC 0.5 mL/L.",
+        "prevention": "Use neem oil or biological predatory mites as described by the source.",
+        "organic_option": "Neem Oil 10,000 ppm 3 mL/L.",
+        "bio_fungicide": "",
+        "bio_pesticide": "Phytoseiulus persimilis; Neem Oil 10,000 ppm.",
+        "chemical_option": "Spiromesifen 22.9% SC 1 mL/L; Abamectin 1.9% EC 0.5 mL/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_33"
+    },
+    "plantvillage_34": {
+        "model": "plantvillage",
+        "class_id": 34,
+        "crop": "Tomato",
+        "disease": "Target Spot",
+        "description": "Target spot caused by Corynespora cassiicola.",
+        "treatment": "Spray Trichoderma viride 5 g/L. Chemical options: Zineb 75% WP 2 g/L or Pyraclostrobin 20% WG 1 g/L.",
+        "prevention": "Use bamboo staking and prune lower leaves up to approximately 30 cm.",
+        "organic_option": "Trichoderma viride 5 g/L.",
+        "bio_fungicide": "Trichoderma viride 5 g/L.",
+        "bio_pesticide": "",
+        "chemical_option": "Zineb 75% WP 2 g/L; Pyraclostrobin 20% WG 1 g/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Prune lower foliage and improve crop airflow.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_34"
+    },
+    "plantvillage_35": {
+        "model": "plantvillage",
+        "class_id": 35,
+        "crop": "Tomato",
+        "disease": "Tomato Yellow Leaf Curl Virus",
+        "description": "Viral disease transmitted by whitefly vectors.",
+        "treatment": "Control whiteflies using Beauveria bassiana 5 mL/L. Chemical vector-control options listed by the source include Imidacloprid 17.8% SL 0.5 mL/L or Cyantraniliprole 10.26% OD 1.8 mL/L.",
+        "prevention": "Raise nursery under 60-mesh nets, install 20 yellow sticky traps/acre, and rogue infected plants immediately.",
+        "organic_option": "Beauveria bassiana 5 mL/L.",
+        "bio_fungicide": "",
+        "bio_pesticide": "Beauveria bassiana 5 mL/L.",
+        "chemical_option": "Imidacloprid 17.8% SL 0.5 mL/L; Cyantraniliprole 10.26% OD 1.8 mL/L.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Rogue out virus-infected plants immediately.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Yellow sticky traps: 20/acre.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Use biological and chemical products according to the registered product label and local agricultural guidance. Do not tank-mix bio-fungicides directly with synthetic fungicides; the source recommends a 5–7 day gap.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_35"
+    },
+    "plantvillage_36": {
+        "model": "plantvillage",
+        "class_id": 36,
+        "crop": "Tomato",
+        "disease": "Tomato mosaic virus",
+        "description": "Tomato mosaic virus management focuses on sanitation and prevention of mechanical spread.",
+        "treatment": "Use root dip in 10% skimmed milk solution before transplanting for susceptible cultivars as described by the source.",
+        "prevention": "Raise nursery under 60-mesh nets, use sanitation, and avoid mechanical spread.",
+        "organic_option": "10% skimmed milk root dip.",
+        "bio_fungicide": "",
+        "bio_pesticide": "Beauveria bassiana 5 mL/L is listed for whitefly-vector management in the virus-management section.",
+        "chemical_option": "The source lists Imidacloprid/Cyantraniliprole for vector control.",
+        "irrigation_advice": "",
+        "fertilizer_advice": "",
+        "field_sanitation": "Rogue infected plants and maintain clean nursery/tools.",
+        "weather_condition": "",
+        "humidity_risk": "",
+        "farm_area": "Not specified in source.",
+        "regional_advice": "India context; follow local ICAR/CIBRC and product-label guidance.",
+        "safety_note": "Virus management is primarily preventive. Follow the source's sanitation and vector-management recommendations.",
+        "source": "crop_disease_prevention_guide(3).pdf — ICAR-Aligned Crop Disease Prevention & IDM Guide (India Context)",
+        "verified": true,
+        "_recommendation_key": "plantvillage_36"
+    },
+    "plantvillage_37": {
+        "model": "plantvillage",
+        "class_id": 37,
+        "crop": "Tomato",
+        "disease": "Healthy",
+        "description": "No disease detected in the Tomato leaf.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular crop monitoring.",
+            "Inspect plants regularly for early disease or pest symptoms.",
+            "Maintain balanced crop nutrition.",
+            "Maintain appropriate soil moisture."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate irrigation according to crop growth stage.",
+            "Avoid unnecessary waterlogging or severe water stress."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application.",
+            "Avoid excessive fertilizer application."
+        ],
+        "field_sanitation": [
+            "Keep the field clean and remove severely diseased plant material when appropriate."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "No disease treatment is required when the crop is classified as healthy.",
+        "source": [
+            "AgriBridge healthy-crop management logic"
+        ],
+        "verified": true,
+        "_recommendation_key": "plantvillage_37"
+    },
+    "rice_0": {
+        "model": "rice",
+        "class_id": 0,
+        "crop": "Rice",
+        "disease": "Bacterial Leaf Blight",
+        "description": "Bacterial disease caused by Xanthomonas oryzae pv. oryzae.",
+        "treatment": [
+            "Treat seeds with Pseudomonas fluorescens @ 10 g/kg seed.",
+            "Dip seedling roots in Pseudomonas fluorescens slurry @ 20 g/L for 30 minutes before transplanting.",
+            "At initial symptom appearance, spray Streptocycline @ 0.15 g/L + Copper Oxychloride 50% WP @ 2.5 g/L."
+        ],
+        "prevention": [
+            "Avoid clipping root or leaf tips of seedlings during transplanting.",
+            "Drain excess water from the field for 2–3 days during early tillering.",
+            "Avoid excessive nitrogen application (>120 kg N/ha)."
+        ],
+        "organic_option": [
+            "Pseudomonas fluorescens seed treatment @ 10 g/kg seed.",
+            "Pseudomonas fluorescens root dip @ 20 g/L for 30 minutes."
+        ],
+        "bio_fungicide": [
+            "Pseudomonas fluorescens @ 10 g/kg seed.",
+            "Pseudomonas fluorescens root dip @ 20 g/L."
+        ],
+        "bio_pesticide": [],
+        "chemical_option": [
+            "Streptocycline @ 0.15 g/L + Copper Oxychloride 50% WP @ 2.5 g/L at initial symptom appearance."
+        ],
+        "irrigation_advice": [
+            "Drain excess field water for 2–3 days during early tillering."
+        ],
+        "fertilizer_advice": [
+            "Avoid excessive nitrogen application above 120 kg N/ha."
+        ],
+        "field_sanitation": [],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "Follow product labels and local agricultural recommendations when using chemical products.",
+        "source": [
+            "User-provided verified Rice treatment/prevention dataset"
+        ],
+        "verified": true,
+        "_recommendation_key": "rice_0"
+    },
+    "rice_1": {
+        "model": "rice",
+        "class_id": 1,
+        "crop": "Rice",
+        "disease": "Brown Spot",
+        "description": "Rice brown spot caused by Bipolaris oryzae / Helminthosporium oryzae.",
+        "treatment": [
+            "Treat seeds with Trichoderma viride @ 10 g/kg seed.",
+            "Alternatively treat seeds with Pseudomonas fluorescens @ 10 g/kg seed.",
+            "Spray Pseudomonas fluorescens @ 5 g/L at maximum tillering.",
+            "Spray Mancozeb 75% WP @ 2.5 g/L or Propiconazole 25% EC @ 1.0 mL/L."
+        ],
+        "prevention": [
+            "Correct soil nutrient deficiencies, especially Potassium, Silicon and Zinc.",
+            "Use well-rotted Farmyard Manure (FYM).",
+            "Avoid water stress during tillering."
+        ],
+        "organic_option": [
+            "Trichoderma viride seed treatment @ 10 g/kg seed.",
+            "Pseudomonas fluorescens seed treatment @ 10 g/kg seed.",
+            "Well-rotted Farmyard Manure (FYM)."
+        ],
+        "bio_fungicide": [
+            "Trichoderma viride @ 10 g/kg seed.",
+            "Pseudomonas fluorescens @ 10 g/kg seed.",
+            "Pseudomonas fluorescens foliar spray @ 5 g/L."
+        ],
+        "bio_pesticide": [],
+        "chemical_option": [
+            "Mancozeb 75% WP @ 2.5 g/L.",
+            "Propiconazole 25% EC @ 1.0 mL/L."
+        ],
+        "irrigation_advice": [
+            "Avoid water stress during tillering."
+        ],
+        "fertilizer_advice": [
+            "Correct Potassium deficiencies.",
+            "Correct Silicon deficiencies.",
+            "Correct Zinc deficiencies."
+        ],
+        "field_sanitation": [],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "Follow product labels and local agricultural recommendations.",
+        "source": [
+            "User-provided verified Rice treatment/prevention dataset"
+        ],
+        "verified": true,
+        "_recommendation_key": "rice_1"
+    },
+    "rice_2": {
+        "model": "rice",
+        "class_id": 2,
+        "crop": "Rice",
+        "disease": "Healthy Rice Leaf",
+        "description": "No rice disease detected by the Rice V2 model.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular crop monitoring.",
+            "Maintain balanced irrigation and nutrient management.",
+            "Inspect leaves regularly for early disease symptoms."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate field moisture according to crop growth stage."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application."
+        ],
+        "field_sanitation": [
+            "Keep the field and surrounding area free from unnecessary plant debris."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "",
+        "source": [
+            "Agriculture management recommendation"
+        ],
+        "verified": true,
+        "_recommendation_key": "rice_2"
+    },
+    "rice_3": {
+        "model": "rice",
+        "class_id": 3,
+        "crop": "Rice",
+        "disease": "Leaf Blast",
+        "description": "Rice blast caused by Magnaporthe oryzae / Pyricularia oryzae.",
+        "treatment": [
+            "Treat seeds with Trichoderma harzianum @ 10 g/kg seed.",
+            "Apply Pseudomonas fluorescens @ 5 g/L preventively before tillering and panicle initiation.",
+            "Spray Tricyclazole 75% WP @ 0.6 g/L or Isoprothiolane 40% EC @ 1.5 mL/L."
+        ],
+        "prevention": [
+            "Split nitrogen application into 3–4 equal doses instead of heavy basal application.",
+            "Avoid late-night overhead irrigation.",
+            "Keep bunds free of weed hosts."
+        ],
+        "organic_option": [
+            "Trichoderma harzianum seed treatment @ 10 g/kg seed.",
+            "Pseudomonas fluorescens foliar spray @ 5 g/L."
+        ],
+        "bio_fungicide": [
+            "Trichoderma harzianum @ 10 g/kg seed.",
+            "Pseudomonas fluorescens @ 5 g/L."
+        ],
+        "bio_pesticide": [],
+        "chemical_option": [
+            "Tricyclazole 75% WP @ 0.6 g/L.",
+            "Isoprothiolane 40% EC @ 1.5 mL/L."
+        ],
+        "irrigation_advice": [
+            "Avoid late-night overhead irrigation."
+        ],
+        "fertilizer_advice": [
+            "Split nitrogen application into 3–4 equal doses.",
+            "Avoid heavy basal nitrogen application."
+        ],
+        "field_sanitation": [
+            "Keep bunds free of weed hosts."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "Follow product labels and local agricultural recommendations.",
+        "source": [
+            "User-provided verified Rice treatment/prevention dataset"
+        ],
+        "verified": true,
+        "_recommendation_key": "rice_3"
+    },
+    "rice_4": {
+        "model": "rice",
+        "class_id": 4,
+        "crop": "Rice",
+        "disease": "Leaf scald",
+        "description": "Rice leaf scald caused by Microdochium oryzae / Rhynchosporium oryzae.",
+        "treatment": [
+            "Spray Bacillus subtilis @ 5 g/L at initial leaf-tip scalding appearance.",
+            "Alternatively spray Pseudomonas fluorescens @ 5 g/L.",
+            "Apply Carbendazim 50% WP @ 1.0 g/L or Benomyl 50% WP @ 1.0 g/L."
+        ],
+        "prevention": [
+            "Maintain optimal plant density of 20 cm × 15 cm.",
+            "Avoid over-fertilization with nitrogen.",
+            "Maintain good light penetration and airflow."
+        ],
+        "organic_option": [
+            "Bacillus subtilis @ 5 g/L.",
+            "Pseudomonas fluorescens @ 5 g/L."
+        ],
+        "bio_fungicide": [
+            "Bacillus subtilis @ 5 g/L.",
+            "Pseudomonas fluorescens @ 5 g/L."
+        ],
+        "bio_pesticide": [],
+        "chemical_option": [
+            "Carbendazim 50% WP @ 1.0 g/L.",
+            "Benomyl 50% WP @ 1.0 g/L."
+        ],
+        "irrigation_advice": [],
+        "fertilizer_advice": [
+            "Avoid over-fertilization with nitrogen."
+        ],
+        "field_sanitation": [],
+        "weather_condition": [
+            "Good airflow and light penetration are recommended through proper plant spacing."
+        ],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "Follow product labels and local agricultural recommendations.",
+        "source": [
+            "User-provided verified Rice treatment/prevention dataset"
+        ],
+        "verified": true,
+        "_recommendation_key": "rice_4"
+    },
+    "rice_5": {
+        "model": "rice",
+        "class_id": 5,
+        "crop": "Rice",
+        "disease": "Sheath Blight",
+        "description": "Rice sheath blight caused by Rhizoctonia solani.",
+        "treatment": [
+            "Enrich 100 kg FYM with 2.5 kg Trichoderma harzianum, incubate for 7 days and apply during field preparation.",
+            "Spray Pseudomonas fluorescens @ 5 g/L toward the base of plants at tillering.",
+            "Spray Hexaconazole 5% EC @ 2.0 mL/L or Validamycin 3% L @ 2.0 mL/L directed at the canopy base."
+        ],
+        "prevention": [
+            "Clean field bunds.",
+            "Destroy previous crop stubble to eliminate sclerotia.",
+            "Avoid close planting.",
+            "Apply Potassium in two split doses."
+        ],
+        "organic_option": [
+            "Trichoderma harzianum enriched FYM application."
+        ],
+        "bio_fungicide": [
+            "Trichoderma harzianum @ 2.5 kg per 100 kg FYM.",
+            "Pseudomonas fluorescens @ 5 g/L."
+        ],
+        "bio_pesticide": [],
+        "chemical_option": [
+            "Hexaconazole 5% EC @ 2.0 mL/L.",
+            "Validamycin 3% L @ 2.0 mL/L."
+        ],
+        "irrigation_advice": [],
+        "fertilizer_advice": [
+            "Apply Potassium in two split doses."
+        ],
+        "field_sanitation": [
+            "Clean field bunds.",
+            "Destroy previous crop stubble to eliminate sclerotia."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "Follow product labels and local agricultural recommendations.",
+        "source": [
+            "User-provided verified Rice treatment/prevention dataset"
+        ],
+        "verified": true,
+        "_recommendation_key": "rice_5"
+    },
+    "wheat_0": {
+        "model": "wheat",
+        "class_id": 0,
+        "crop": "Wheat",
+        "disease": "BlackPoint",
+        "description": "Kernel discoloration and mold development associated with Black Point.",
+        "treatment": [
+            "Harvest promptly when the crop reaches maturity.",
+            "Avoid leaving mature wheat standing during humid weather."
+        ],
+        "prevention": [
+            "Avoid excessive late nitrogen application.",
+            "Avoid excessive overhead irrigation during grain filling and dough stages.",
+            "Harvest promptly at maturity."
+        ],
+        "organic_option": [
+            "Trichoderma viride seed treatment at 10 g/kg seed.",
+            "Pseudomonas fluorescens seed treatment at 10 g/kg seed."
+        ],
+        "bio_fungicide": [
+            "Trichoderma viride 1% WP at 10 g/kg seed.",
+            "Pseudomonas fluorescens at 10 g/kg seed."
+        ],
+        "bio_pesticide": [],
+        "chemical_option": [
+            "Mancozeb 75% WP at 2.5 g/L under wet weather conditions during heading.",
+            "Propiconazole 25% EC at 1.0 mL/L during flowering/heading."
+        ],
+        "irrigation_advice": [
+            "Avoid excessive overhead irrigation during grain filling and dough stages."
+        ],
+        "fertilizer_advice": [
+            "Avoid excessive late nitrogen application."
+        ],
+        "field_sanitation": [],
+        "weather_condition": [
+            "Wet and humid conditions can increase risk."
+        ],
+        "humidity_risk": "High",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "Follow the product label and local agricultural recommendations when using chemical fungicides.",
+        "source": [
+            "User-provided verified Wheat treatment/prevention dataset"
+        ],
+        "verified": true,
+        "_recommendation_key": "wheat_0"
+    },
+    "wheat_1": {
+        "model": "wheat",
+        "class_id": 1,
+        "crop": "Wheat",
+        "disease": "FusariumFootRot",
+        "description": "Fusarium-associated seedling mortality and crown/root rot.",
+        "treatment": [
+            "Treat seed before sowing.",
+            "Apply biological treatment through seed and soil management."
+        ],
+        "prevention": [
+            "Practice a 2-year crop rotation with non-graminaceous crops.",
+            "Deep plow to bury crop residues after harvest.",
+            "Avoid waterlogging.",
+            "Avoid severe dry-soil stress during early seedling growth."
+        ],
+        "organic_option": [
+            "Trichoderma harzianum seed treatment at 10 g/kg seed.",
+            "Trichoderma viride-enriched FYM soil application."
+        ],
+        "bio_fungicide": [
+            "Trichoderma harzianum at 10 g/kg seed.",
+            "Trichoderma viride at 2.5 kg/acre enriched in 100 kg FYM."
+        ],
+        "bio_pesticide": [],
+        "chemical_option": [
+            "Carbendazim 50% WP at 2 g/kg seed.",
+            "Tebuconazole 2% DS at 1.25 g/kg seed."
+        ],
+        "irrigation_advice": [
+            "Avoid waterlogging.",
+            "Maintain balanced soil moisture during early growth."
+        ],
+        "fertilizer_advice": [],
+        "field_sanitation": [
+            "Deep plow to bury crop residues after harvest."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "Follow product labels and local agricultural recommendations.",
+        "source": [
+            "User-provided verified Wheat treatment/prevention dataset"
+        ],
+        "verified": true,
+        "_recommendation_key": "wheat_1"
+    },
+    "wheat_2": {
+        "model": "wheat",
+        "class_id": 2,
+        "crop": "Wheat",
+        "disease": "HealthyLeaf",
+        "description": "No wheat disease detected. The leaf is classified as healthy.",
+        "treatment": [],
+        "prevention": [
+            "Continue regular field monitoring.",
+            "Inspect plants regularly for early disease symptoms.",
+            "Maintain balanced crop nutrition.",
+            "Maintain appropriate soil moisture."
+        ],
+        "organic_option": [],
+        "bio_fungicide": [],
+        "bio_pesticide": [],
+        "chemical_option": [],
+        "irrigation_advice": [
+            "Maintain appropriate soil moisture according to crop growth stage.",
+            "Avoid unnecessary waterlogging."
+        ],
+        "fertilizer_advice": [
+            "Maintain balanced nutrient application.",
+            "Avoid excessive fertilizer application."
+        ],
+        "field_sanitation": [
+            "Keep the field clean and monitor crop residues."
+        ],
+        "weather_condition": [],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "No disease treatment is required when the crop is classified as healthy.",
+        "source": [
+            "AgriBridge healthy-crop management logic"
+        ],
+        "verified": true,
+        "_recommendation_key": "wheat_2"
+    },
+    "wheat_3": {
+        "model": "wheat",
+        "class_id": 3,
+        "crop": "Wheat",
+        "disease": "LeafBlight",
+        "description": "Foliar blight/spot disease causing leaf drying and premature senescence.",
+        "treatment": [
+            "Apply a foliar biological treatment at first appearance of brownish-black spots.",
+            "Use a suitable fungicide program when disease pressure remains high."
+        ],
+        "prevention": [
+            "Complete sowing within the recommended window.",
+            "Destroy infected stubble after harvest."
+        ],
+        "organic_option": [
+            "Pseudomonas fluorescens foliar spray at 5 g/L.",
+            "Trichoderma harzianum foliar spray at 5 g/L."
+        ],
+        "bio_fungicide": [
+            "Pseudomonas fluorescens at 5 g/L.",
+            "Trichoderma harzianum at 5 g/L."
+        ],
+        "bio_pesticide": [],
+        "chemical_option": [
+            "Propiconazole 25% EC at 1.0 mL/L.",
+            "Azoxystrobin 18.2% + Difenoconazole 11.4% SC at 1.0 mL/L."
+        ],
+        "irrigation_advice": [],
+        "fertilizer_advice": [],
+        "field_sanitation": [
+            "Destroy infected stubble after harvest."
+        ],
+        "weather_condition": [
+            "Humid conditions can increase disease pressure."
+        ],
+        "humidity_risk": "High",
+        "farm_area": [],
+        "regional_advice": [
+            "For the supplied dataset, recommended sowing window is 1–15 November in North India."
+        ],
+        "safety_note": "Follow product labels and local agricultural recommendations.",
+        "source": [
+            "User-provided verified Wheat treatment/prevention dataset"
+        ],
+        "verified": true,
+        "_recommendation_key": "wheat_3"
+    },
+    "wheat_4": {
+        "model": "wheat",
+        "class_id": 4,
+        "crop": "Wheat",
+        "disease": "WheatBlast",
+        "description": "Wheat blast affecting spikes and heads and potentially causing severe crop loss.",
+        "treatment": [
+            "Use certified disease-free seed.",
+            "Apply preventive protection around boot-to-heading stage where appropriate."
+        ],
+        "prevention": [
+            "Use certified disease-free seeds.",
+            "Maintain strict field sanitation.",
+            "Remove alternate grass hosts around field borders.",
+            "Remove infected crop residues according to local agricultural guidance."
+        ],
+        "organic_option": [
+            "Pseudomonas fluorescens seed treatment at 10 g/kg seed.",
+            "Bacillus subtilis foliar application at 5 g/L.",
+            "Neem oil 10,000 ppm at 3.0 mL/L."
+        ],
+        "bio_fungicide": [
+            "Bacillus subtilis at 5 g/L.",
+            "Pseudomonas fluorescens at 10 g/kg seed."
+        ],
+        "bio_pesticide": [
+            "Neem oil 10,000 ppm at 3.0 mL/L."
+        ],
+        "chemical_option": [
+            "Tebuconazole 50% + Trifloxystrobin 25% WG at 0.6 g/L.",
+            "Tebuconazole 25.9% EC at 1.5 mL/L."
+        ],
+        "irrigation_advice": [],
+        "fertilizer_advice": [],
+        "field_sanitation": [
+            "Remove alternate grass hosts around field borders.",
+            "Manage infected crop residues according to local guidance."
+        ],
+        "weather_condition": [
+            "Disease risk can be associated with conducive environmental conditions around heading."
+        ],
+        "humidity_risk": "",
+        "farm_area": [],
+        "regional_advice": [],
+        "safety_note": "Follow product labels and local agricultural recommendations.",
+        "source": [
+            "User-provided verified Wheat treatment/prevention dataset"
+        ],
+        "verified": true,
+        "_recommendation_key": "wheat_4"
+    }
+}

@@ -1,40 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgriBridge - Choose Your Role</title>
-    <link rel="stylesheet" href="/styles/choose-roles.css">
+    <title>AgriBridge | Login to Your Account</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/choose-roles.css">
 </head>
+
 <body>
 
-    <main class="container">
-        <div class="signup-card">
-            
-            <header class="card-header">
-                <h2>Join AgriBridge</h2>
-                <p>Select your role to get started on the platform.</p>
-            </header>
+    <div class="auth-page-wrapper">
 
-            <form id="role-form" action="#" method="POST">
-                <div class="form-group">
-                    <label for="choose-role">I am a...</label>
-                    <select id="choose-role" name="role" required>
-                        <option value="" disabled selected>Select your role</option>
-                        <option value="farmer">🌾 Farmer</option>
-                        <option value="buyer">🛒 Buyer</option>
-                        <option value="field-agent">📋 Field Agent</option>
-                    </select>
+        <!-- TOP BAR -->
+        <header class="auth-topbar">
+            <a href="/frontend/pages/index.html" class="auth-brand-logo">
+                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+            </a>
+
+            <div class="auth-top-actions">
+                <a href="/frontend/pages/index.html" class="back-home-link">
+                    ← Back to Home
+                </a>
+            </div>
+        </header>
+
+        <!-- MAIN LOGIN CARD -->
+        <main class="auth-container">
+            <div class="auth-card">
+
+                <div class="auth-badge">
+                    🔐 SECURE PLATFORM ACCESS
                 </div>
 
-                <button type="submit" id="continue-btn" class="primary-btn">
-                    Continue
-                </button>
-            </form>
+                <h1 class="auth-title">Welcome Back</h1>
+                <p class="auth-subtitle">
+                    Login to continue to AgriBridge.
+                </p>
 
+                <!-- DYNAMIC ALERT / NOTIFICATION BOX -->
+                <div id="login-alert-box" class="auth-alert-box"></div>
+
+                <!-- LOGIN FORM -->
+                <form id="login-form">
+
+                    <div class="form-inputs-group">
+
+                        <!-- MOBILE NUMBER -->
+                        <div class="input-field-wrap">
+                            <label for="login-mobile">Mobile Number</label>
+                            <div class="input-with-prefix">
+                                <span class="input-prefix">+91</span>
+                                <input type="tel" id="login-mobile" placeholder="Enter 10-digit mobile number" maxlength="10" required>
+                            </div>
+                        </div>
+
+                        <!-- PASSWORD GROUP (PRIMARY) -->
+                        <div class="input-field-wrap" id="password-group">
+                            <div class="input-label-row">
+                                <label for="login-password">Password</label>
+                                <button type="button" class="text-btn" id="forgot-password-link">Forgot Password?</button>
+                            </div>
+                            <div class="input-with-action">
+                                <input type="password" id="login-password" placeholder="Enter your password">
+                                <button type="button" class="inline-input-btn" id="toggle-password-visibility">👁️ Show</button>
+                            </div>
+                        </div>
+
+                        <!-- OTP GROUP (OPTIONAL ALTERNATIVE) -->
+                        <div class="input-field-wrap" id="otp-group" style="display: none;">
+                            <div class="input-label-row">
+                                <label for="otp-code">6-Digit OTP Code</label>
+                                <button type="button" class="text-btn" id="resend-otp-btn" style="display: none;">Resend OTP</button>
+                            </div>
+                            <div class="input-with-action">
+                                <input type="text" id="otp-code" placeholder="Enter 6-digit OTP" maxlength="6">
+                                <button type="button" class="inline-input-btn" id="send-otp-btn">Send OTP</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <button type="submit" id="login-submit-btn" class="auth-submit-btn">
+                        Login to Dashboard →
+                    </button>
+
+                    <!-- MODE TOGGLE BUTTON -->
+                    <div class="auth-mode-toggle">
+                        <button type="button" id="toggle-otp-mode-btn">
+                            Login with 6-Digit OTP
+                        </button>
+                    </div>
+
+                </form>
+
+
+
+                <!-- FOOTER SWITCH -->
+                <div class="auth-footer-switch">
+                    Don't have an account? <a href="/frontend/pages/signup.html">Create Account</a>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- FORGOT PASSWORD MODAL -->
+        <div id="forgot-password-modal" class="auth-modal-overlay">
+            <div class="auth-modal-card">
+                <div class="auth-modal-header">
+                    <h3>Reset Your Password</h3>
+                    <button type="button" class="modal-close-btn" id="close-forgot-modal-btn">&times;</button>
+                </div>
+
+                <div id="forgot-alert-box" class="auth-alert-box"></div>
+
+                <!-- STEP 1: MOBILE & SEND OTP -->
+                <div id="forgot-step-1">
+                    <p style="font-size: 13px; color: #55684e; margin-bottom: 16px;">
+                        Enter your registered mobile number to receive a 6-digit password reset code.
+                    </p>
+                    <div class="input-field-wrap" style="margin-bottom: 16px;">
+                        <label for="forgot-mobile">Registered Mobile</label>
+                        <div class="input-with-prefix">
+                            <span class="input-prefix">+91</span>
+                            <input type="tel" id="forgot-mobile" placeholder="10-digit mobile number" maxlength="10">
+                        </div>
+                    </div>
+                    <button type="button" id="forgot-send-otp-btn" class="auth-submit-btn">
+                        Send Reset OTP →
+                    </button>
+                </div>
+
+                <!-- STEP 2: VERIFY OTP & ENTER NEW PASSWORD -->
+                <div id="forgot-step-2" style="display: none;">
+                    <div class="input-field-wrap" style="margin-bottom: 12px;">
+                        <label for="forgot-otp">6-Digit Reset OTP</label>
+                        <input type="text" id="forgot-otp" placeholder="Enter 6-digit OTP" maxlength="6">
+                    </div>
+                    <div class="input-field-wrap" style="margin-bottom: 12px;">
+                        <label for="forgot-new-password">New Password (min 8 chars)</label>
+                        <input type="password" id="forgot-new-password" placeholder="••••••••">
+                    </div>
+                    <div class="input-field-wrap" style="margin-bottom: 18px;">
+                        <label for="forgot-confirm-password">Confirm New Password</label>
+                        <input type="password" id="forgot-confirm-password" placeholder="••••••••">
+                    </div>
+                    <button type="button" id="forgot-reset-btn" class="auth-submit-btn">
+                        Reset Password & Save →
+                    </button>
+                </div>
+            </div>
         </div>
-    </main>
 
-    <script src="/scripts/choose_role.js"></script>
+        <!-- FOOTER BRANDING -->
+        <footer class="auth-page-footer">
+            © 2026 AgriBridge. Smart Agriculture & Multi-stakeholder Platform.
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/auth.js"></script>
+    <script src="/frontend/scripts/login.js"></script>
+
+    <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
+    <a href="/frontend/pages/voice-assistant.html?from_page=login" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
+        title="Voice Farming Assistant / आवाज से पूछें">
+        <div class="voice-mic-icon-box">
+            <div class="voice-pulse-ring"></div>
+            🎙️
+        </div>
+        <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
+    </a>
+
 </body>
+
 </html>

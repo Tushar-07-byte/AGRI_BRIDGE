@@ -1,0 +1,44 @@
+[
+    {
+        "action_id": "DAILY_001",
+        "farmer_id": "TEST_FARMER_001",
+        "crop_id": "wheat",
+        "crop_stage": "Sowing",
+        "date": "2026-09-21",
+        "timing_status": "overdue",
+        "weather_decision": "Keep",
+        "recommended_date": "2026-09-01",
+        "activities": {
+            "irrigation": "Halka Paani",
+            "fertilizer": "50kg DAP + 25kg MOP + 10kg Zinc",
+            "crop_protection": "None specified"
+        },
+        "weather_reasons": [
+            "No major weather constraint detected"
+        ],
+        "leaf_inspection": null,
+        "farmer_action_required": true,
+        "completed": false
+    },
+    {
+        "action_id": "DAILY_002",
+        "farmer_id": "TEST_FARMER_001",
+        "crop_id": "wheat",
+        "crop_stage": "CRI",
+        "date": "2026-09-21",
+        "timing_status": "due_today",
+        "weather_decision": "Keep",
+        "recommended_date": "2026-09-21",
+        "activities": {
+            "irrigation": "1st Paani",
+            "fertilizer": "45kg Urea",
+            "crop_protection": "Weedicide: Clodinafop / Sulfosulfuron"
+        },
+        "weather_reasons": [
+            "No major weather constraint detected"
+        ],
+        "leaf_inspection": null,
+        "farmer_action_required": true,
+        "completed": false
+    }
+]

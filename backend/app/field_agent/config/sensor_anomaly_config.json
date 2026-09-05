@@ -1,0 +1,71 @@
+{
+  "system": "AgriBridge IoT Sensor Validation & Anomaly Detection Layer",
+  "sensors": {
+    "soil_moisture": {
+      "unit": "% VWC",
+      "valid_min": 5.0,
+      "valid_max": 95.0,
+      "allow_zero_without_anomaly": false,
+      "zero_interpretation": "Zero value indicates disconnected sensor probe, severed wire, or dry air exposure. Physical inspection required.",
+      "max_hourly_rate_of_change_pct": 35.0,
+      "anomaly_reasons": {
+        "ZERO_READING": "UNUSUAL_SENSOR_READING",
+        "OUT_OF_RANGE": "SENSOR_VALUE_OUT_OF_RANGE",
+        "RAPID_DROP": "SENSOR_DATA_ANOMALY",
+        "MISSING": "SENSOR_DATA_MISSING"
+      }
+    },
+    "soil_temperature": {
+      "unit": "°C",
+      "valid_min": -5.0,
+      "valid_max": 60.0,
+      "allow_zero_without_anomaly": true,
+      "max_hourly_rate_of_change_pct": 15.0,
+      "anomaly_reasons": {
+        "OUT_OF_RANGE": "SENSOR_VALUE_OUT_OF_RANGE",
+        "MISSING": "SENSOR_DATA_MISSING"
+      }
+    },
+    "air_temperature": {
+      "unit": "°C",
+      "valid_min": -10.0,
+      "valid_max": 55.0,
+      "allow_zero_without_anomaly": true,
+      "max_hourly_rate_of_change_pct": 20.0,
+      "anomaly_reasons": {
+        "OUT_OF_RANGE": "SENSOR_VALUE_OUT_OF_RANGE",
+        "MISSING": "SENSOR_DATA_MISSING"
+      }
+    },
+    "relative_humidity": {
+      "unit": "%",
+      "valid_min": 1.0,
+      "valid_max": 100.0,
+      "allow_zero_without_anomaly": false,
+      "zero_interpretation": "0% humidity is physically impossible in open farm environments. Indicates sensor failure.",
+      "max_hourly_rate_of_change_pct": 40.0,
+      "anomaly_reasons": {
+        "ZERO_READING": "UNUSUAL_SENSOR_READING",
+        "OUT_OF_RANGE": "SENSOR_VALUE_OUT_OF_RANGE",
+        "MISSING": "SENSOR_DATA_MISSING"
+      }
+    },
+    "leaf_wetness": {
+      "unit": "index (0-15)",
+      "valid_min": 0.0,
+      "valid_max": 15.0,
+      "allow_zero_without_anomaly": true,
+      "zero_interpretation": "0 indicates dry leaf surface under normal sunny conditions. Not an anomaly.",
+      "anomaly_reasons": {
+        "OUT_OF_RANGE": "SENSOR_VALUE_OUT_OF_RANGE",
+        "MISSING": "SENSOR_DATA_MISSING"
+      }
+    }
+  },
+  "escalation_policy": {
+    "escalate_on_anomaly": true,
+    "default_priority": "HIGH",
+    "require_human_inspection": true
+  }
+}
+

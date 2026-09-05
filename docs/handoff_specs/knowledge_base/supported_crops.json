@@ -1,0 +1,98 @@
+{
+    "wheat": {
+        "crop_name": "Wheat",
+        "category": "Cereal",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "rice": {
+        "crop_name": "Rice",
+        "category": "Cereal",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "apple": {
+        "crop_name": "Apple",
+        "category": "Fruit",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "blueberry": {
+        "crop_name": "Blueberry",
+        "category": "Fruit",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "cherry": {
+        "crop_name": "Cherry",
+        "category": "Fruit",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "corn": {
+        "crop_name": "Corn",
+        "category": "Cereal",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "grape": {
+        "crop_name": "Grape",
+        "category": "Fruit",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "orange": {
+        "crop_name": "Orange",
+        "category": "Fruit",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "peach": {
+        "crop_name": "Peach",
+        "category": "Fruit",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "pepper": {
+        "crop_name": "Pepper",
+        "category": "Vegetable",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "potato": {
+        "crop_name": "Potato",
+        "category": "Vegetable",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "raspberry": {
+        "crop_name": "Raspberry",
+        "category": "Fruit",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "soybean": {
+        "crop_name": "Soybean",
+        "category": "Pulse / Oilseed",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "squash": {
+        "crop_name": "Squash",
+        "category": "Vegetable",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "strawberry": {
+        "crop_name": "Strawberry",
+        "category": "Fruit",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    },
+    "tomato": {
+        "crop_name": "Tomato",
+        "category": "Vegetable",
+        "monitoring_enabled": true,
+        "disease_inspection": true
+    }
+}

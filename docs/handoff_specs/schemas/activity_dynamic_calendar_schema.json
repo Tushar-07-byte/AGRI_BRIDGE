@@ -1,0 +1,59 @@
+{
+    "activity": {
+        "activity_id": "",
+        "crop_id": "",
+        "field_id": "",
+        "activity_type": "",
+        "activity_name": "",
+        "description": "",
+        "recommended_date": "",
+        "recommended_time": "",
+        "duration_days": null,
+        "growth_stage": "",
+        "priority": "medium",
+        "status": "upcoming",
+        "weather_dependency": false,
+        "weather_conditions": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "rainfall": {
+                "expected": null,
+                "max": null
+            },
+            "humidity": {
+                "min": null,
+                "max": null
+            },
+            "wind_speed": {
+                "max": null
+            }
+        },
+        "original_date": "",
+        "date_modified": false,
+        "modification_reason": "",
+        "scientific_reason": "",
+        "llm_reasoning": "",
+        "notification": {
+            "enabled": true,
+            "sent": false,
+            "notification_time": "",
+            "message": ""
+        },
+        "completion": {
+            "completed": false,
+            "completed_date": "",
+            "farmer_notes": ""
+        }
+    },
+    "calendar": {
+        "calendar_id": "",
+        "crop_id": "",
+        "field_id": "",
+        "created_date": "",
+        "last_updated": "",
+        "auto_update_enabled": true,
+        "events": []
+    }
+}

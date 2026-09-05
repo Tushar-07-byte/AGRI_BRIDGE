@@ -1,0 +1,20 @@
+SPRING BOOT INTEGRATION NOTE
+
+Frontend -> Spring Boot -> AI/ML orchestration service.
+
+AI/ML returns risk, action, calendar, notification and escalation data.
+Spring Boot should persist these outputs and handle:
+1. Calendar scheduling
+2. Notification delivery
+3. Task status transitions
+4. Weather re-check before execution
+5. Rescheduling when weather is unsuitable
+6. Field-agent routing for escalation
+7. Authentication/authorization
+8. Database and deployment
+
+Notification lifecycle:
+PENDING -> NOTIFIED -> ACKNOWLEDGED -> IN_PROGRESS -> COMPLETED
+or SKIPPED / ESCALATED as applicable.
+
+Secrets are deployment responsibilities and are not included.

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard — AgriBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/weather-dashboard.css">
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- NAVIGATION BAR                            -->
+    <!-- ========================================= -->
+    <nav class="nav">
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="/frontend/pages/index.html">
+                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+            </a>
+        </div>
+
+        <!-- NAVIGATION LINKS -->
+        <div class="mid">
+            <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+            <a href="/frontend/pages/weather-dashboard.html" class="active" data-i18n="nav.weather">Weather</a>
+            <a href="/frontend/pages/crop-recommendation.html" data-i18n="landing.cropRecommendation">Recommendations</a>
+            <a href="/frontend/pages/crop-listings.html" data-i18n="nav.marketplace">Marketplace</a>
+            <a href="/frontend/pages/voice-assistant.html" data-i18n="nav.voiceAssistant">Voice AI</a>
+            <a href="/frontend/pages/farmer-profile.html" data-i18n="nav.myProfile">Profile</a>
+        </div>
+
+        <!-- USER SECTION -->
+        <div class="register">
+            <button class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/farmer-dashboard.html'">
+                ← Back to Dashboard
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- MAIN WEATHER CONTAINER                    -->
+    <!-- ========================================= -->
+    <main class="weather-dashboard-container">
+
+        <!-- HEADER -->
+        <header class="weather-header-card">
+            <div class="weather-header-left">
+                <div class="ab-badge ab-badge-gold">🌦️ PAN-INDIA AGRO-METEOROLOGY</div>
+                <h1 data-i18n="weatherDashboard.title">AgriBridge Weather Intelligence</h1>
+                <p data-i18n="weatherDashboard.description">
+                    Hyper-local real-time meteorological conditions, 15-day crop forecasts, and AI-powered agronomic decision support across all 36 States/UTs and 729 districts.
+                </p>
+            </div>
+            <div class="weather-header-metrics-preview">
+                <div class="header-stat-box">
+                    <strong>36</strong>
+                    <span>States & UTs</span>
+                </div>
+                <div class="header-stat-box">
+                    <strong>729</strong>
+                    <span>Cleaned Districts</span>
+                </div>
+                <div class="header-stat-box">
+                    <strong>15-Day</strong>
+                    <span>Forecast AI</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========================================= -->
+        <!-- LOCATION & CROP SELECTOR FORM             -->
+        <!-- ========================================= -->
+        <section class="selector-card">
+            <div class="selector-card-header">
+                <h2 data-i18n="weatherDashboard.selectLocation">📍 Select Farm Location & Crop Parameters</h2>
+                <span class="selector-card-sub">Dynamic weather coordinates and crop advisory models</span>
+            </div>
+
+            <form id="weather-form" class="weather-form-grid">
+
+                <!-- STATE (36 States/UTs) -->
+                <div class="form-group">
+                    <label for="weather-state" data-i18n="weatherDashboard.state">Indian State / UT *</label>
+                    <select id="weather-state" required>
+                        <option value="" data-i18n="weatherDashboard.selectState">Select State</option>
+                    </select>
+                </div>
+
+                <!-- DISTRICT (729 Districts) -->
+                <div class="form-group">
+                    <label for="weather-district" data-i18n="weatherDashboard.district">District *</label>
+                    <select id="weather-district" required disabled>
+                        <option value="" data-i18n="weatherDashboard.selectDistrict">Select District</option>
+                    </select>
+                </div>
+
+                <!-- CROP -->
+                <div class="form-group">
+                    <label for="weather-crop" data-i18n="weatherDashboard.crop">Target Crop *</label>
+                    <select id="weather-crop" required>
+                        <option value="" data-i18n="weatherDashboard.selectCrop">Select Crop</option>
+                    </select>
+                </div>
+
+                <!-- GROWTH STAGE -->
+                <div class="form-group">
+                    <label for="weather-growth-stage" data-i18n="weatherDashboard.growthStage">Growth Stage *</label>
+                    <select id="weather-growth-stage" required>
+                        <option value="" data-i18n="weatherDashboard.selectGrowthStage">Select Growth Stage</option>
+                    </select>
+                </div>
+
+                <!-- FORM MESSAGE -->
+                <div class="form-message-wrapper">
+                    <p id="weather-message" class="form-message"></p>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <div class="form-submit-wrapper">
+                    <button type="submit" class="stylish-btn ab-btn-primary weather-submit-btn" id="get-weather-btn">
+                        🌦️ <span data-i18n="weatherDashboard.getWeather">Get Weather & Advisory</span>
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- ========================================= -->
+        <!-- CURRENT WEATHER RESULTS                   -->
+        <!-- ========================================= -->
+        <section id="current-weather-section" class="result-section fade-in" style="display: none;">
+            <div class="result-header-row">
+                <h2 data-i18n="weatherDashboard.currentWeather">🌡️ Current Agro-Meteorological Conditions</h2>
+                <div id="current-weather-location" class="weather-location-label"></div>
+            </div>
+
+            <div class="current-weather-grid">
+
+                <div class="weather-metric-card temp-hero-card">
+                    <div class="metric-icon">🌡️</div>
+                    <div class="metric-info-col">
+                        <div class="metric-label" data-i18n="weatherDashboard.temperature">Temperature</div>
+                        <div class="metric-value" id="wd-temperature">--</div>
+                    </div>
+                </div>
+
+                <div class="weather-metric-card">
+                    <div class="metric-icon">💧</div>
+                    <div class="metric-info-col">
+                        <div class="metric-label" data-i18n="weatherDashboard.humidity">Humidity</div>
+                        <div class="metric-value" id="wd-humidity">--</div>
+                    </div>
+                </div>
+
+                <div class="weather-metric-card">
+                    <div class="metric-icon">🌧️</div>
+                    <div class="metric-info-col">
+                        <div class="metric-label" data-i18n="weatherDashboard.rainfall">Precipitation</div>
+                        <div class="metric-value" id="wd-rainfall">--</div>
+                    </div>
+                </div>
+
+                <div class="weather-metric-card">
+                    <div class="metric-icon">💨</div>
+                    <div class="metric-info-col">
+                        <div class="metric-label" data-i18n="weatherDashboard.windSpeed">Wind Speed</div>
+                        <div class="metric-value" id="wd-wind-speed">--</div>
+                    </div>
+                </div>
+
+                <div class="weather-metric-card weather-condition-card">
+                    <div class="metric-icon">☁️</div>
+                    <div class="metric-info-col">
+                        <div class="metric-label" data-i18n="weatherDashboard.condition">Sky Condition</div>
+                        <div class="metric-value" id="wd-condition">--</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================= -->
+        <!-- 15-DAY FORECAST SECTION                   -->
+        <!-- ========================================= -->
+        <section id="forecast-section" class="result-section fade-in" style="display: none;">
+            <div class="result-header-row">
+                <h2 data-i18n="weatherDashboard.forecast15Day">📅 15-Day Agricultural Forecast Trend</h2>
+                <span class="forecast-hint">Horizontal scrollable 15-day timeline</span>
+            </div>
+
+            <div id="forecast-container" class="forecast-grid">
+                <!-- Injected dynamically by weather-dashboard.js -->
+            </div>
+        </section>
+
+        <!-- ========================================= -->
+        <!-- AGRICULTURAL ADVISORY (Gemini + Fallback) -->
+        <!-- ========================================= -->
+        <section id="advisory-section" class="result-section advisory-card fade-in" style="display: none;">
+            <div class="advisory-header">
+                <div class="advisory-icon-box">🌱</div>
+                <div class="advisory-title-group">
+                    <div class="ab-badge ab-badge-gold">AI AGRONOMY ENGINE</div>
+                    <h2 data-i18n="weatherDashboard.aiAdvisory">AI Agricultural Advisory & Action Plan</h2>
+                </div>
+            </div>
+
+            <div id="advisory-content" class="advisory-content-body">
+                <!-- Advisory markdown rendered by JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-bottom" style="border: none; padding: 0;">
+            <p>© 2026 AgriBridge. Meteorological & Advisory Operations. 36 States/UTs • 729 Districts.</p>
+            <div class="footer-bottom-links">
+                <a href="/frontend/pages/farmer-dashboard.html">Farmer Dashboard</a> •
+                <a href="/frontend/pages/voice-assistant.html">Voice Assistant</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/weather-dashboard.js"></script>
+
+</body>
+
+</html>

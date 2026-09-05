@@ -1,0 +1,339 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background-color: #f1f8e9;
+
+    color: #333;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 600px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.details-card {
+
+    background-color: white;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.10);
+
+    border: 1px solid #e4eee3;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.card-header {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.header-icon {
+
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 36px;
+
+    background-color: #f1f8e9;
+
+    border-radius: 50%;
+}
+
+
+.card-header h1 {
+
+    color: #2E7D32;
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+
+.card-header p {
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 22px;
+}
+
+
+.form-group label {
+
+    color: #333;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.form-group input {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    font-size: 15px;
+
+    color: #333;
+
+    background-color: #f9fafb;
+
+    border: 1px solid #ccc;
+
+    border-radius: 9px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+.form-group input:hover {
+
+    border-color: #81c784;
+}
+
+
+.form-group input:focus {
+
+    outline: none;
+
+    background-color: white;
+
+    border-color: #2E7D32;
+
+    box-shadow:
+        0 0 0 3px rgba(46, 125, 50, 0.12);
+}
+
+
+.form-group input::placeholder {
+
+    color: #999;
+}
+
+
+/* =========================================
+   FARM AREA INPUT
+========================================= */
+
+.input-with-unit {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.input-with-unit input {
+
+    padding-right: 75px;
+}
+
+
+.input-with-unit span {
+
+    position: absolute;
+
+    right: 15px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.form-message {
+
+    min-height: 20px;
+
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.primary-btn {
+
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background-color: #2E7D32;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.primary-btn:hover {
+
+    background-color: #1B5E20;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(46, 125, 50, 0.20);
+}
+
+
+.primary-btn:active {
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 15px;
+    }
+
+
+    .details-card {
+
+        padding: 30px 22px;
+
+        border-radius: 16px;
+    }
+
+
+    .card-header h1 {
+
+        font-size: 24px;
+    }
+
+
+    .card-header p {
+
+        font-size: 14px;
+    }
+
+
+    .header-icon {
+
+        width: 60px;
+        height: 60px;
+
+        font-size: 30px;
+    }
+
+}

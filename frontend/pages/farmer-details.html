@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Farmer Details - AgriBridge</title>
+
+    <link
+        rel="stylesheet"
+        href="/frontend/styles/farmer-details.css"
+    >
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+
+</head>
+
+
+<body>
+
+    <nav class="nav">
+        <div class="logo">
+            <a href="/frontend/pages/index.html">
+                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+            </a>
+        </div>
+
+        <div class="mid">
+            <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+            <a href="/frontend/pages/crop-listings.html" data-i18n="nav.marketplace">Marketplace</a>
+            <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
+            <a href="/frontend/pages/farmer-details.html" class="active">Farmer Details</a>
+        </div>
+
+        <div class="register">
+            <button type="button" class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/farmer-dashboard.html'">
+                ← Back to Dashboard
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+
+
+        <div class="details-card">
+
+
+            <!-- =====================================
+                 HEADER
+                 ===================================== -->
+
+            <header class="card-header">
+
+                <div class="header-icon">
+                    👨‍🌾
+                </div>
+
+                <h1 data-i18n="profile.farmerProfile.title">Complete Your Profile</h1>
+
+                <p data-i18n="profile.farmerProfile.description">
+                    Tell us a little about your farm
+                    so we can personalize your AgriBridge experience.
+                </p>
+
+            </header>
+
+
+            <!-- =====================================
+                 FARMER DETAILS FORM
+                 ===================================== -->
+
+            <form id="farmer-details-form">
+
+
+                <!-- FARMER NAME -->
+
+                <div class="form-group">
+
+                    <label for="farmer-name" data-i18n="profile.fields.fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="farmer-name"
+                        name="farmerName"
+                        data-i18n-placeholder="profile.placeholders.enterFullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- FARM AREA -->
+
+                <div class="form-group">
+
+                    <label for="farm-area" data-i18n="profile.fields.farmArea">
+                        Farm Area
+                    </label>
+
+                    <div class="input-with-unit">
+
+                        <input
+                            type="number"
+                            id="farm-area"
+                            name="farmArea"
+                            placeholder="Enter farm area"
+                            min="0"
+                            step="0.01"
+                            required
+                        >
+
+                        <span>acres</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="form-group">
+
+                    <label for="farm-location" data-i18n="profile.fields.location">
+                        Farm Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="farm-location"
+                        name="farmLocation"
+                        data-i18n-placeholder="profile.placeholders.villageCityDistrict"
+                        placeholder="Village / City / District"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phone" data-i18n="profile.fields.phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        data-i18n-placeholder="profile.placeholders.enterPhone"
+                        placeholder="Enter your phone number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <p
+                    id="form-message"
+                    class="form-message"
+                ></p>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+                    <span data-i18n="profile.farmerProfile.continueButton">Continue to Dashboard →</span>
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+
+    </main>
+
+
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/auth.js"></script>
+    <script src="/frontend/scripts/farmer-details.js"></script>
+    <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
+    <a href="/frontend/pages/voice-assistant.html?from_page=farmer-details" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
+        title="Voice Farming Assistant / आवाज से पूछें">
+        <div class="voice-mic-icon-box">
+            <div class="voice-pulse-ring"></div>
+            🎙️
+        </div>
+        <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
+    </a>
+
+</body>
+
+</html>

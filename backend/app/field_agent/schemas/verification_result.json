@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VerificationResult",
+  "type": "object",
+  "required": [
+    "task_id",
+    "verification_status",
+    "verified_by_agent",
+    "verified_at",
+    "downstream_action"
+  ],
+  "properties": {
+    "task_id": { "type": "string" },
+    "verification_status": {
+      "type": "string",
+      "enum": ["VERIFIED_DISEASE", "NOT_VERIFIED", "INCONCLUSIVE"]
+    },
+    "verified_by_agent": { "type": "string" },
+    "verified_at": { "type": "string", "format": "date-time" },
+    "disease_confirmed": { "type": "boolean" },
+    "confirmed_pathogen": { "type": ["string", "null"] },
+    "downstream_action": {
+      "type": "string",
+      "enum": [
+        "UNLOCK_TREATMENT_ADVISORY",
+        "DISMISS_ALERT",
+        "ESCALATE_LAB_DIAGNOSIS"
+      ]
+    },
+    "chemical_recommendation_new_status": {
+      "type": "string",
+      "enum": ["AVAILABLE", "UNAVAILABLE", "LOCKED"]
+    }
+  }
+}
+

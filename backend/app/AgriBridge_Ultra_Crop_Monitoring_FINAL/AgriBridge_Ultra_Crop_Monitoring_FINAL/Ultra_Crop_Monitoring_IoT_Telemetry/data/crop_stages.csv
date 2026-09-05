@@ -1,0 +1,62 @@
+﻿crop,stage,start_day,end_day,stage_duration_days
+Wheat,Sowing & Germination,0,15,16
+Wheat,Crown Root Initiation (CRI),20,25,6
+Wheat,Tillering & Jointing,40,45,6
+Wheat,Booting & Flowering,60,65,6
+Wheat,Milking Stage,80,85,6
+Wheat,Dough & Maturity,100,120,21
+Rice,Nursery & Transplanting,0,15,16
+Rice,Active Tillering,20,35,16
+Rice,Panicle Initiation,60,65,6
+Rice,Flowering & Heading,80,85,6
+Rice,Grain Filling & Maturity,100,140,41
+Corn,Sowing & Seedling,0,15,16
+Corn,Knee-High Stage,25,30,6
+Corn,Tasseling & Silking,50,55,6
+Corn,Grain Filling & Harvest,75,120,46
+Potato,Planting & Emergence,0,20,21
+Potato,Stolonization & Earthing Up,25,30,6
+Potato,Tuber Initiation & Bulking,50,75,26
+Potato,Maturity & Haulm Cutting,85,110,26
+Soybean,Sowing & Germination,0,15,16
+Soybean,Vegetative Growth,20,30,11
+Soybean,Flowering Stage,45,50,6
+Soybean,Pod Formation & Filling,65,85,21
+Tomato,Transplanting,0,15,16
+Tomato,Vegetative & Branching,20,30,11
+Tomato,Flowering & Fruit Set,40,50,11
+Tomato,Fruit Sizing & Harvesting,60,150,91
+Pepper,Transplanting,0,15,16
+Pepper,Vegetative Growth,20,35,16
+Pepper,Flowering & Fruiting,45,70,26
+Pepper,Continuous Picking,75,150,76
+Squash,Sowing & Vining,0,20,21
+Squash,Flowering,35,45,11
+Squash,Fruit Sizing & Harvest,50,110,61
+Strawberry,Runner Planting,0,15,16
+Strawberry,Crown & Leaf Growth,20,35,16
+Strawberry,Bloom & Fruit Development,40,80,41
+Raspberry,Spring Bud Break,1,30,30
+Raspberry,Bloom & Fruit Set,35,60,26
+Raspberry,Fruit Ripening & Harvest,60,110,51
+Grape,Post-Pruning & Bud Break,1,25,25
+Grape,Flower Initiation & Berry Set,30,50,21
+Grape,Veraison (Coloring & Sugar),65,100,36
+Grape,Harvest,110,160,51
+Apple,Pink Bud & Bloom,1,30,30
+Apple,Petal Fall & Fruit Set,35,60,26
+Apple,Fruit Expansion,70,130,61
+Apple,Maturity & Harvest,140,180,41
+Peach,Bloom & Petal Fall,1,30,30
+Peach,Pit Hardening,45,60,16
+Peach,Final Fruit Growth & Harvest,75,130,56
+Cherry,Bloom & Fruit Set,1,30,30
+Cherry,Fruit Expansion,35,60,26
+Cherry,Ripening & Harvest,60,90,31
+Blueberry,Bud Break & Bloom,1,30,30
+Blueberry,Fruit Set & Sizing,35,70,36
+Blueberry,Harvest Window,80,120,41
+Orange,Ambe Bahar Bloom,1,30,30
+Orange,Fruit Drop & Setting,60,120,61
+Orange,Fruit Expansion,180,240,61
+Orange,Maturation & Harvest,270,360,91

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Plan Trace & Reasoning — AgriBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/action-plan-trace.css">
+</head>
+
+<body>
+    <div class="trace-page-wrapper">
+
+        <!-- MASTER NAVBAR -->
+        <nav class="nav">
+            <div class="logo">
+                <a href="/frontend/pages/index.html">
+                    <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+                </a>
+            </div>
+
+            <div class="mid">
+                <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+                <a href="/frontend/pages/crop-monitoring.html">Crop Monitoring</a>
+                <a href="/frontend/pages/crop-listings.html" data-i18n="nav.marketplace">Marketplace</a>
+                <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
+                <a href="/frontend/pages/action-plan-trace.html" class="active">Action Plan Trace</a>
+            </div>
+
+            <div class="register">
+                <button class="stylish-btn ab-btn-secondary" onclick="window.history.back()">
+                    ← Back
+                </button>
+                <button class="stylish-btn ab-btn-primary" onclick="triggerRecheckDemo()">
+                    🔄 Simulate Weather Recheck
+                </button>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTAINER -->
+        <main class="trace-container">
+
+            <!-- HEADER BANNER -->
+            <section class="trace-header-card">
+                <div class="trace-header-top">
+                    <div class="trace-badge-row">
+                        <span class="trace-chip-badge badge-pulse">⚡ AUTONOMOUS AGENT OBSERVABILITY</span>
+                        <span class="trace-chip-badge" id="plan-risk-badge">Risk Type: --</span>
+                        <span class="trace-chip-badge" id="plan-status-badge">Status: --</span>
+                    </div>
+                    <div class="plan-id-display">
+                        <span>ACTION PLAN ID:</span>
+                        <strong id="plan-id-label">#--</strong>
+                    </div>
+                </div>
+
+                <h1 class="trace-title">Field Action Plan Reasoning & Adaptation Trace</h1>
+                <p class="trace-subtitle">
+                    Full chronological audit log of diagnostic evaluation, weather fusion, schedule generation, and automated replanning decisions.
+                </p>
+
+                <div class="trace-meta-strip">
+                    <div class="meta-item">
+                        <span class="meta-icon">👨‍🌾</span>
+                        <span>Farmer ID: <strong id="meta-farmer-id">--</strong></span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">📅</span>
+                        <span>Initialized: <strong id="meta-created-at">--</strong></span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">⏱️</span>
+                        <span>Last Evaluated: <strong id="meta-updated-at">--</strong></span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">📋</span>
+                        <span>Total Milestones: <strong id="meta-total-tasks">--</strong></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TIMELINE SECTION -->
+            <section class="trace-timeline-section">
+                <div class="timeline-header">
+                    <h2>Chronological Decision Stream</h2>
+                    <span class="timeline-sub">Evaluated in real-time by the AgriBridge Autonomous Orchestrator</span>
+                </div>
+
+                <div id="timeline-stream" class="timeline-stream">
+                    <!-- Dynamic timeline items loaded via action-plan-trace.js -->
+                    <div class="timeline-loading">
+                        <div class="spinner"></div>
+                        <p>Retrieving autonomous reasoning trace from server...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JUDGE OBSERVABILITY: MULTI-SIGNAL POLICY DECISION & PROVENANCE MATRIX -->
+            <section class="demo-controls-card" style="margin-bottom: 30px; background: #FFFFFF; border: 1.5px solid #CBD5E1;">
+                <div class="demo-controls-header">
+                    <h3>⚖️ Canonical Multi-Signal Policy Decision & Provenance Matrix</h3>
+                    <p>Machine-reasoning evaluation across all 20 agricultural signals in the Farm Decision Context (SH-AGR-001).</p>
+                </div>
+
+                <div id="action-plan-multi-signal-box" style="margin-top: 14px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px;">
+                        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px;">
+                            <div style="font-size: 11px; font-weight: 700; color: #64748B; text-transform: uppercase;">Overall Decision Risk</div>
+                            <div id="trace-eval-risk" style="font-size: 16px; font-weight: 800; color: #16A34A; margin-top: 2px;">MODERATE</div>
+                        </div>
+                        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px;">
+                            <div style="font-size: 11px; font-weight: 700; color: #64748B; text-transform: uppercase;">Gating Constraints</div>
+                            <div id="trace-eval-constraints" style="font-size: 13px; font-weight: 700; color: #0F172A; margin-top: 2px;">None (Clear)</div>
+                        </div>
+                        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px;">
+                            <div style="font-size: 11px; font-weight: 700; color: #64748B; text-transform: uppercase;">Escalation Status</div>
+                            <div id="trace-eval-escalation" style="font-size: 13px; font-weight: 700; color: #059669; margin-top: 2px;">🛡️ Farmer Autonomous</div>
+                        </div>
+                    </div>
+
+                    <!-- Granular Rule Trace Table -->
+                    <div style="overflow-x: auto; border: 1px solid #E2E8F0; border-radius: 8px;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 12.5px; text-align: left;">
+                            <thead style="background: #F1F5F9; color: #334155; font-size: 11px; text-transform: uppercase;">
+                                <tr>
+                                    <th style="padding: 8px 12px; border-bottom: 1px solid #CBD5E1;">Signal</th>
+                                    <th style="padding: 8px 12px; border-bottom: 1px solid #CBD5E1;">Condition</th>
+                                    <th style="padding: 8px 12px; border-bottom: 1px solid #CBD5E1;">Rule Evaluated</th>
+                                    <th style="padding: 8px 12px; border-bottom: 1px solid #CBD5E1;">Decision Effect</th>
+                                    <th style="padding: 8px 12px; border-bottom: 1px solid #CBD5E1;">Provenance</th>
+                                </tr>
+                            </thead>
+                            <tbody id="trace-eval-rules-tbody">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- REPLAN DEMO CONTROLS (FOR JUDGES / LIVE DEMO) -->
+            <section class="demo-controls-card">
+                <div class="demo-controls-header">
+                    <h3>🧪 Live Hackathon Demonstration Panel</h3>
+                    <p>Trigger instant environmental forecast shifts to observe dynamic replanning and task invalidation in real-time.</p>
+                </div>
+
+                <div class="demo-btn-group">
+                    <button type="button" class="demo-btn btn-rain" onclick="simulateWeatherShift(85, 'Heavy convective thunderstorm expected', '2026-09-08 (Sunny & Dry Window)')">
+                        🌧️ Simulate 85% Rain Surge (Forces Reschedule)
+                    </button>
+                    <button type="button" class="demo-btn btn-clear" onclick="simulateWeatherShift(10, 'Clear, sunny & dry conditions', 'Tomorrow Morning (6:00 AM)')">
+                        ☀️ Simulate Rain Cleared (Forces Expedited Spray)
+                    </button>
+                    <button type="button" class="demo-btn btn-complete" onclick="markActiveTaskDone()">
+                        ✅ Mark Active Task "Completed"
+                    </button>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="trace-footer">
+            <p>© 2026 AgriBridge. Autonomous Agricultural Decision System. Clean Trace Architecture.</p>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="/frontend/scripts/auth.js"></script>
+    <script src="/frontend/scripts/action-plan-trace.js"></script>
+    <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
+    <a href="/frontend/pages/voice-assistant.html?from_page=action-plan-trace" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
+        title="Voice Farming Assistant / आवाज से पूछें">
+        <div class="voice-mic-icon-box">
+            <div class="voice-pulse-ring"></div>
+            🎙️
+        </div>
+        <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
+    </a>
+
+</body>
+
+</html>
+

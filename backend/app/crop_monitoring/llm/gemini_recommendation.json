@@ -1,0 +1,21 @@
+{
+    "current_stage": "showing (Transplanting - Day 0)",
+    "stage_status": "Active (Planting date: 2026-09-01, Days After Planting: 0)",
+    "next_stage": "Vegetative (Day 15-20, as per management calendar)",
+    "weather_summary": "Current weather in Dhanpatganj, Sultanpur, Uttar Pradesh is Dense drizzle at 27.2°C with 95% humidity, wind speed of 9.8 km/h, and 0.3 mm precipitation. The 7-day forecast indicates persistent thunderstorm activity with daily rainfall ranging between 1.1 mm and 8.9 mm, along with slight hail risks on 2026-09-01 and 2026-09-05.",
+    "weather_risk": "Overall weather risk is High. High humidity (95%) presents a severe risk, and moderate risk is present due to continuous heavy rainfall and thunderstorms forecasted over the next 7 days.",
+    "weather_decision": "Keep (Current weather conditions do not indicate a major reason to change scheduled crop activities, though moisture management is required).",
+    "recommended_action": "Carry out transplanting/day 0 activities as scheduled while ensuring effective field drainage to handle forecasted rain and thunderstorm conditions.",
+    "irrigation_guidance": "Provide water after transplanting ('Ropai ke baad paani') according to the management calendar. Monitor field moisture closely due to the ongoing dense drizzle and expected 7-day rainfall to avoid excess water accumulation.",
+    "fertilizer_guidance": "Apply 50kg DAP + 30kg MOP at Transplanting (Day 0) as per the management calendar.",
+    "crop_protection_guidance": "Conduct field inspection for damping off symptoms during transplanting. The management calendar indicates Copper Oxychloride for damping off management. Disease diagnosis or prediction is strictly excluded; perform inspection only.",
+    "monitoring_guidance": "Inspect young plants for proper establishment, monitor field drainage to avoid waterlogging, and conduct visual inspections for early signs of seedling stress under high humidity (95%).",
+    "marketplace_guidance": "AgriBridge Marketplace is available for price monitoring, market price comparison, buyer connections, crop sale tracking, and post-harvest selling planning.",
+    "safety_information": "Disease handling is limited to inspection only. No disease diagnosis, prediction, or disease model inference is provided. Field symptoms do not prove a disease without official expert verification.",
+    "important_note": "Detailed scientific calendar stage dates and specific lifecycle activities are currently unavailable in the provided context. Guidance is strictly derived from the available management calendar and live weather analysis.",
+    "sources": [
+        "AgriBridge System Context (2026-09-01)",
+        "Tomato Management Calendar",
+        "Open-Meteo Weather Service"
+    ]
+}

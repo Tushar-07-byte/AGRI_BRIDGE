@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgriBridge AI Dynamic Monitoring Output",
+  "description": "Dynamic monitoring response returned to backend.",
+  "type": "object",
+  "required": [
+    "farm",
+    "crop",
+    "stage",
+    "weather",
+    "iot",
+    "decisions",
+    "notifications",
+    "farmer_guidance",
+    "harvest",
+    "data_transparency"
+  ],
+  "properties": {
+    "farm": {
+      "type": "object"
+    },
+    "crop": {
+      "type": "object"
+    },
+    "stage": {
+      "type": "object"
+    },
+    "weather": {
+      "type": "object"
+    },
+    "iot": {
+      "type": "object"
+    },
+    "decisions": {
+      "type": "object",
+      "properties": {
+        "irrigation": {
+          "type": "object"
+        },
+        "disease": {
+          "type": "object"
+        },
+        "pest": {
+          "type": "object"
+        },
+        "fertilizer": {
+          "type": "object"
+        },
+        "weather_stress": {
+          "type": "object"
+        }
+      }
+    },
+    "notifications": {
+      "type": "array"
+    },
+    "farmer_guidance": {
+      "type": "object"
+    },
+    "harvest": {
+      "type": "object"
+    },
+    "data_transparency": {
+      "type": "object"
+    },
+    "marketplace": {
+      "type": "object",
+      "description": "Pre-harvest marketplace listing recommendation.",
+      "properties": {
+        "crop_listed": {
+          "type": "boolean"
+        },
+        "listing_decision": {
+          "type": "object"
+        },
+        "listing_notification": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "crop_listed",
+        "listing_decision",
+        "listing_notification"
+      ]
+    }
+  }
+}

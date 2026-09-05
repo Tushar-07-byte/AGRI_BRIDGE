@@ -1,0 +1,42 @@
+{
+    "validation_status": true,
+    "required_fields": {
+        "current_stage": true,
+        "stage_status": true,
+        "next_stage": true,
+        "weather_summary": true,
+        "weather_risk": true,
+        "weather_decision": true,
+        "recommended_action": true,
+        "irrigation_guidance": true,
+        "fertilizer_guidance": true,
+        "crop_protection_guidance": true,
+        "monitoring_guidance": true,
+        "marketplace_guidance": true,
+        "safety_information": true,
+        "important_note": true,
+        "sources": true
+    },
+    "safety_checks": {
+        "required_fields": true,
+        "disease_diagnosis_disabled": true,
+        "disease_prediction_disabled": true,
+        "disease_model_disabled": true,
+        "disease_inspection_only": true,
+        "disease_safety_violation": true,
+        "weather_available": true,
+        "marketplace_connected": true,
+        "sources_available": true
+    },
+    "failed_checks": [],
+    "policy": {
+        "disease_diagnosis_disabled": true,
+        "disease_prediction_disabled": true,
+        "disease_model_disabled": true,
+        "disease_inspection_only": true
+    },
+    "validated_at": "2026-09-01",
+    "crop": "Tomato",
+    "provider": "Google Gemini",
+    "model": "gemini-3.6-flash"
+}

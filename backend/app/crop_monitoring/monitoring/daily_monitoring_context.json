@@ -1,0 +1,134 @@
+{
+    "system": {
+        "name": "AgriBridge",
+        "country": "India",
+        "date": "2026-09-01",
+        "time": "06:59:10",
+        "session_id": "AGRIBRIDGE_20260901_065910"
+    },
+    "farmer": {
+        "farmer_id": "FARMER_20260901070849",
+        "location": {
+            "country": "India",
+            "state": "Uttar Pradesh",
+            "district": "Sultanpur",
+            "village": "Dhanpatganj",
+            "latitude": null,
+            "longitude": null
+        }
+    },
+    "crop": {
+        "crop_id": "tomato",
+        "crop_name": "Tomato"
+    },
+    "date_tracking": {
+        "planting_date": "2026-09-01",
+        "days_after_planting": 0,
+        "current_date": "2026-09-01"
+    },
+    "stage": {
+        "current_stage": "showing",
+        "stage_number": null,
+        "total_stages": 16,
+        "stage_source": "farmer_input",
+        "next_stage": null
+    },
+    "management": {
+        "available": false,
+        "stage": null
+    },
+    "weather": {
+        "current": {
+            "temperature": 27.2,
+            "humidity": 95,
+            "precipitation": 0.3,
+            "rainfall": 0.3,
+            "wind_speed": 9.8,
+            "wind_direction": 72,
+            "weather_code": 55,
+            "condition": "Dense drizzle",
+            "observed_at": "2026-09-01T12:45"
+        },
+        "forecast": [
+            {
+                "date": "2026-09-01",
+                "temperature_max": 30.3,
+                "temperature_min": 25.3,
+                "rainfall": 8.9,
+                "precipitation": 27.2,
+                "wind_speed_max": 10.3,
+                "weather_condition": "Thunderstorm with slight hail"
+            },
+            {
+                "date": "2026-09-02",
+                "temperature_max": 29.7,
+                "temperature_min": 25.5,
+                "rainfall": 6.2,
+                "precipitation": 13.9,
+                "wind_speed_max": 19.2,
+                "weather_condition": "Thunderstorm"
+            },
+            {
+                "date": "2026-09-03",
+                "temperature_max": 30.7,
+                "temperature_min": 25.9,
+                "rainfall": 1.1,
+                "precipitation": 2.3,
+                "wind_speed_max": 22.0,
+                "weather_condition": "Thunderstorm"
+            },
+            {
+                "date": "2026-09-04",
+                "temperature_max": 31.4,
+                "temperature_min": 26.4,
+                "rainfall": 2.5,
+                "precipitation": 3.3,
+                "wind_speed_max": 19.2,
+                "weather_condition": "Thunderstorm"
+            },
+            {
+                "date": "2026-09-05",
+                "temperature_max": 30.3,
+                "temperature_min": 25.9,
+                "rainfall": 1.5,
+                "precipitation": 6.6,
+                "wind_speed_max": 15.0,
+                "weather_condition": "Thunderstorm with slight hail"
+            },
+            {
+                "date": "2026-09-06",
+                "temperature_max": 31.1,
+                "temperature_min": 25.9,
+                "rainfall": 1.2,
+                "precipitation": 2.4,
+                "wind_speed_max": 13.2,
+                "weather_condition": "Thunderstorm"
+            },
+            {
+                "date": "2026-09-07",
+                "temperature_max": 31.4,
+                "temperature_min": 26.2,
+                "rainfall": 3.0,
+                "precipitation": 4.8,
+                "wind_speed_max": 12.3,
+                "weather_condition": "Thunderstorm"
+            }
+        ],
+        "risk": "high",
+        "decision": "Keep",
+        "reason": "Current weather conditions do not indicate a major reason to change scheduled crop activities."
+    },
+    "disease_policy": {
+        "inspection_only": true,
+        "diagnosis": false,
+        "prediction": false,
+        "model_inference": false
+    },
+    "marketplace": {
+        "enabled": true,
+        "platform": "AgriBridge Marketplace",
+        "selling_guidance": true,
+        "price_monitoring": true,
+        "buyer_connection": true
+    }
+}

@@ -1,0 +1,82 @@
+================================================================================
+AGRIBRIDGE WHEAT AI DIAGNOSTIC PIPELINE MAP
+================================================================================
+
+1. FRONTEND USER INTERACTION
+   FILE:     frontend/pages/upload-crop.html
+   FUNCTION: HTML Form (<form id="crop-upload-form">)
+   PURPOSE:  Farmer selects "Wheat", uploads leaf photo, enters farm details.
+   INPUT:    User file input (JPEG/PNG) + Farm metadata.
+   OUTPUT:   DOM FormData object.
+
+2. FRONTEND API DISPATCH
+   FILE:     frontend/scripts/upload-crop.js
+   FUNCTION: uploadForm.addEventListener("submit", ...)
+   PURPOSE:  Sends multipart/form-data to FastAPI backend.
+   INPUT:    FormData with keys: 'image', 'crop_type'='wheat', 'farm_area', 'farm_location'.
+   OUTPUT:   HTTP POST request to /api/ai/analyze-crop.
+
+3. BACKEND API ROUTER
+   FILE:     backend/app/routes/ai.py
+   FUNCTION: analyze_crop_image() [Endpoint: POST /api/ai/analyze-crop]
+   PURPOSE:  Receives upload, writes file to disk (uploads/temp_*.jpg), calls AI service.
+   INPUT:    UploadFile, crop_type: str, farm_location: str, farm_area: float.
+   OUTPUT:   JSON response with prediction, confidence, treatment, dosage, and spray timing.
+
+4. AI SERVICE COORDINATOR
+   FILE:     backend/app/services/ai_service.py
+   FUNCTION: analyze_crop(image_path, plant, farm)
+   PURPOSE:  Initializes models and recommendation DB, orchestrates prediction & weather advice.
+   INPUT:    image_path: str, plant='wheat', farm: dict.
+   OUTPUT:   Consolidated result dictionary containing ML prediction + clinical treatment.
+
+5. BACKEND AI PIPELINE DISPATCHER
+   FILE:     backend/AI_Engine/AgriBridge_AI_Backend_Handoff/AI_Engine/backend_pipeline.py
+   FUNCTION: agribridge_predict(image_path, plant, farm)
+   PURPOSE:  Invokes disease prediction and farm advice generation.
+   INPUT:    image_path: str, plant='wheat', farm: dict.
+   OUTPUT:   Full diagnostic report dictionary.
+
+6. MODEL CONFIGURATION & MAPPING
+   FILE:     backend/AI_Engine/AgriBridge_AI_Backend_Handoff/AI_Engine/model_selection.py
+   FUNCTION: MODEL_SELECTION["wheat"] and PLANT_MODEL_MAP["wheat"]
+   PURPOSE:  Maps 'wheat' to model path and valid class IDs: [0, 1, 2, 3, 4].
+   INPUT:    Plant key 'wheat'.
+   OUTPUT:   Model selection config (model_path, num_classes=5).
+
+7. IMAGE QUALITY VALIDATION & PREPROCESSING
+   FILE:     backend/AI_Engine/AgriBridge_AI_Backend_Handoff/AI_Engine/prediction.py
+   FUNCTION: validate_leaf_image_quality(image_path) & preprocess_leaf_image(image_path)
+   PURPOSE:  Checks botanical color saturation, Laplacian sharpness (>5.0), resizes to (224, 224), converts to float32 [0..255].
+   INPUT:    Raw image file on disk.
+   OUTPUT:   Batch tensor of shape (1, 224, 224, 3), dtype float32.
+
+8. NEURAL NETWORK INFERENCE
+   FILE:     backend/AI_Engine/AgriBridge_AI_Backend_Handoff/AI_Engine/prediction.py
+   FUNCTION: predict_disease(image_path, plant)
+   PURPOSE:  Executes model.predict(), applies plant-specific class filter, calculates confidence.
+   INPUT:    Preprocessed image tensor + Wheat class IDs [0, 1, 2, 3, 4].
+   OUTPUT:   dict: {"plant": "Wheat", "model": "wheat", "class_id": int, "confidence": float}.
+
+9. CLINICAL ADVICE & DOSAGE ENGINE
+   FILE:     backend/AI_Engine/AgriBridge_AI_Backend_Handoff/AI_Engine/farm_advice.py
+   FUNCTION: generate_farm_advice(prediction, farm)
+   PURPOSE:  Retrieves verified treatment from recommendation_database.json (wheat_0 to wheat_4).
+   INPUT:    Prediction dict + Farm area/location.
+   OUTPUT:   Clinical advice dict (organic, chemical, bio-pesticides, dosage calculation).
+
+10. WEATHER-AWARE SPRAY TIMING
+    FILE:     backend/app/services/timing_advice_service.py
+    FUNCTION: calculate_timing_advice(disease_name, farm_location)
+    PURPOSE:  Integrates live Open-Meteo rain & wind risk with disease spray suitability.
+    INPUT:    Disease name, Farm location.
+    OUTPUT:   Optimal spray window, risk score, rain delay warning.
+
+11. FRONTEND CLINICAL DASHBOARD DISPLAY
+    FILE:     frontend/pages/ai-result.html & frontend/scripts/ai-result.js
+    FUNCTION: renderAIResult(data)
+    PURPOSE:  Renders tabbed clinical report, severity gauge, interactive dosage calculator, voice readout.
+    INPUT:    API JSON payload from localStorage or live response.
+    OUTPUT:   Interactive visual UI for farmer.
+================================================================================
+

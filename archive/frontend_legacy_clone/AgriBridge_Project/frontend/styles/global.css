@@ -1,0 +1,507 @@
+/* ==========================================================================
+   AGRIBRIDGE — GLOBAL DESIGN SYSTEM & VARIABLES
+   Earthy Agro-Tech Design Language (Inspired by Modern Editorial Agriculture UI)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Brand Color Palette */
+    --ab-primary-dark: #10200D;       /* Deep forest background & strong headings */
+    --ab-primary-green: #315C2A;      /* Primary agriculture green */
+    --ab-secondary-green: #527A45;    /* Balanced secondary green */
+    --ab-light-green: #DCE8D2;        /* Soft organic badge & card tint */
+    --ab-warm-bg: #F5F5EF;            /* Warm earthy off-white background */
+    --ab-card-bg: #FFFFFF;            /* Pure white card surface */
+    --ab-card-hover: #FCFDFB;         /* Subtle hover surface */
+    
+    /* Accent & Semantic */
+    --ab-accent-gold: #D8B84C;        /* Golden wheat accent */
+    --ab-accent-gold-soft: #FAF3DE;   /* Light gold for badges/warnings */
+    --ab-accent-gold-dark: #A88624;   /* Deep gold for text readability */
+    --ab-success: #2E7D32;            /* Verified green */
+    --ab-success-soft: #E8F5E9;
+    --ab-warning: #ED6C02;            /* Alert orange */
+    --ab-warning-soft: #FFF4E5;
+    --ab-danger: #D32F2F;             /* Critical red */
+    --ab-danger-soft: #FFEBEE;
+    --ab-info: #0288D1;               /* Weather blue */
+    --ab-info-soft: #E1F5FE;
+
+    /* Typography & Contrast */
+    --ab-text-dark: #142411;          /* High contrast primary text */
+    --ab-text-body: #2B3A28;          /* Rich readable body copy */
+    --ab-text-muted: #667060;         /* Editorial muted text */
+    --ab-text-subtle: #8D9987;        /* Subtle placeholders & meta */
+    --ab-text-light: #F5F7F3;         /* Inverted text on dark backgrounds */
+    
+    /* Borders & Dividers */
+    --ab-border: #E1E7DB;             /* Soft organic border */
+    --ab-border-subtle: #EDF1E8;      /* Ultra subtle border */
+    --ab-border-dark: #23391F;        /* Border for dark cards */
+
+    /* Elevation & Shadows */
+    --ab-shadow-xs: 0 1px 3px rgba(16, 32, 13, 0.04);
+    --ab-shadow-sm: 0 4px 14px rgba(16, 32, 13, 0.06);
+    --ab-shadow-md: 0 12px 32px rgba(16, 32, 13, 0.08);
+    --ab-shadow-lg: 0 24px 56px rgba(16, 32, 13, 0.12);
+    --ab-shadow-glow: 0 0 24px rgba(49, 92, 42, 0.25);
+
+    /* Radii */
+    --ab-radius-sm: 10px;
+    --ab-radius-md: 16px;
+    --ab-radius-lg: 24px;
+    --ab-radius-xl: 32px;
+    --ab-radius-full: 9999px;
+
+    /* Transitions */
+    --ab-transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    --ab-transition-base: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    --ab-transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Box Sizing */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--ab-warm-bg);
+    color: var(--ab-text-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   NAVIGATION BAR (Standardized & Responsive)
+   ========================================================================== */
+
+nav.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background: rgba(245, 245, 239, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--ab-border);
+    transition: all var(--ab-transition-base);
+}
+
+nav.nav.scrolled {
+    padding: 12px 40px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--ab-shadow-sm);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+    transition: transform var(--ab-transition-fast);
+}
+
+.logo a:hover img {
+    transform: scale(1.03);
+}
+
+.mid {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(220, 232, 210, 0.45);
+    padding: 6px 10px;
+    border-radius: var(--ab-radius-full);
+    border: 1px solid var(--ab-border);
+}
+
+.mid a {
+    text-decoration: none;
+    color: var(--ab-text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: var(--ab-radius-full);
+    transition: all var(--ab-transition-fast);
+    white-space: nowrap;
+}
+
+.mid a:hover {
+    color: var(--ab-primary-dark);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.mid a.active {
+    color: var(--ab-primary-dark);
+    background: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(16, 32, 13, 0.08);
+}
+
+.register {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ==========================================================================
+   BUTTONS & ACTIONS
+   ========================================================================== */
+
+.stylish-btn, .ab-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: var(--ab-radius-full);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all var(--ab-transition-smooth);
+    white-space: nowrap;
+    background: var(--ab-primary-dark);
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(16, 32, 13, 0.16);
+}
+
+.stylish-btn:hover, .ab-btn:hover {
+    background: var(--ab-primary-green);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(49, 92, 42, 0.28);
+    color: #FFFFFF;
+}
+
+.stylish-btn:active, .ab-btn:active {
+    transform: scale(0.98);
+}
+
+.ab-btn-primary {
+    background: var(--ab-primary-green);
+    color: #FFFFFF;
+    box-shadow: 0 4px 16px rgba(49, 92, 42, 0.25);
+}
+
+.ab-btn-primary:hover {
+    background: var(--ab-primary-dark);
+    box-shadow: 0 8px 26px rgba(16, 32, 13, 0.28);
+}
+
+.ab-btn-secondary {
+    background: #FFFFFF;
+    color: var(--ab-primary-dark);
+    border: 1px solid var(--ab-border);
+    box-shadow: var(--ab-shadow-xs);
+}
+
+.ab-btn-secondary:hover {
+    background: var(--ab-light-green);
+    border-color: var(--ab-secondary-green);
+    color: var(--ab-primary-dark);
+}
+
+.ab-btn-gold {
+    background: linear-gradient(135deg, #E6C65D, #D8B84C);
+    color: var(--ab-primary-dark);
+    font-weight: 700;
+    box-shadow: 0 4px 16px rgba(216, 184, 76, 0.3);
+}
+
+.ab-btn-gold:hover {
+    background: linear-gradient(135deg, #D8B84C, #C4A133);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(216, 184, 76, 0.4);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ab-primary-green);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: var(--ab-radius-md);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--ab-transition-fast);
+}
+
+.btn:hover {
+    background-color: var(--ab-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--ab-shadow-md);
+}
+
+/* ==========================================================================
+   LANGUAGE SELECTOR
+   ========================================================================== */
+
+.language-selector-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FFFFFF;
+    padding: 4px 12px;
+    border-radius: var(--ab-radius-full);
+    border: 1px solid var(--ab-border);
+    box-shadow: var(--ab-shadow-xs);
+    transition: border-color var(--ab-transition-fast);
+}
+
+.language-selector-container:hover {
+    border-color: var(--ab-secondary-green);
+}
+
+.lang-label {
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.lang-select {
+    padding: 6px 8px;
+    border: none;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    background: transparent;
+    color: var(--ab-text-dark);
+    cursor: pointer;
+    outline: none;
+}
+
+/* ==========================================================================
+   BADGES & CHIPS
+   ========================================================================== */
+
+.ab-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-radius: var(--ab-radius-full);
+    background: var(--ab-light-green);
+    color: var(--ab-primary-dark);
+    border: 1px solid rgba(49, 92, 42, 0.12);
+}
+
+.ab-badge-gold {
+    background: var(--ab-accent-gold-soft);
+    color: var(--ab-accent-gold-dark);
+    border-color: rgba(216, 184, 76, 0.28);
+}
+
+.ab-badge-dark {
+    background: rgba(255, 255, 255, 0.12);
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.ab-badge-verified {
+    background: var(--ab-success-soft);
+    color: var(--ab-success);
+    border-color: rgba(46, 125, 50, 0.2);
+}
+
+/* ==========================================================================
+   COMMON CARDS & PANELS
+   ========================================================================== */
+
+.ab-card {
+    background: var(--ab-card-bg);
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-lg);
+    padding: 32px;
+    box-shadow: var(--ab-shadow-sm);
+    transition: all var(--ab-transition-base);
+}
+
+.ab-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ab-shadow-md);
+    border-color: rgba(49, 92, 42, 0.2);
+}
+
+.ab-card-dark {
+    background: var(--ab-primary-dark);
+    color: var(--ab-text-light);
+    border: 1px solid var(--ab-border-dark);
+}
+
+.ab-card-dark:hover {
+    box-shadow: 0 20px 48px rgba(16, 32, 13, 0.35);
+}
+
+/* ==========================================================================
+   FORM CONTROLS
+   ========================================================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ab-text-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ab-text-dark);
+    background: #FFFFFF;
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-md);
+    outline: none;
+    transition: all var(--ab-transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--ab-primary-green);
+    box-shadow: 0 0 0 4px rgba(49, 92, 42, 0.12);
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+    background: #F0F2EC;
+    color: var(--ab-text-subtle);
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   ANIMATIONS & EFFECTS
+   ========================================================================== */
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(49, 92, 42, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 16px rgba(49, 92, 42, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(49, 92, 42, 0);
+    }
+}
+
+.pulse-animation {
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.45s ease-out forwards;
+}
+
+/* ==========================================================================
+   STANDALONE PAGES LANGUAGE POSITIONING
+   ========================================================================== */
+
+.analysis-page, .verification-page, .profile-page, .review-page {
+    position: relative;
+}
+
+/* Ensure Indian script fonts render properly across all scripts */
+[lang="hi"], [lang="mr"], [lang="bn"], [lang="te"], [lang="ta"], [lang="kn"], [lang="ml"], [lang="gu"], [lang="pa"], [lang="or"] {
+    font-family: "Plus Jakarta Sans", "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Telugu", "Noto Sans Tamil", "Noto Sans Kannada", "Noto Sans Malayalam", "Noto Sans Gujarati", "Noto Sans Gurmukhi", "Noto Sans Odia", sans-serif;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (Global)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    nav.nav {
+        padding: 14px 24px;
+    }
+    .mid {
+        gap: 4px;
+    }
+    .mid a {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav.nav {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .mid {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        overflow-x: auto;
+        padding: 4px;
+    }
+    .mid a {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    .register {
+        gap: 8px;
+    }
+    .stylish-btn, .ab-btn {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}

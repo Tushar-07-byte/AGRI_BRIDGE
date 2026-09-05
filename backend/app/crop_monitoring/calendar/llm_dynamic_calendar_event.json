@@ -1,0 +1,32 @@
+{
+    "event_id": "WHEAT_ACTIVITY_001",
+    "farmer_id": "TEST_FARMER_001",
+    "crop_id": "wheat",
+    "crop": "Wheat",
+    "stage": "Sowing",
+    "original_date": "2026-09-01",
+    "recommended_date": "2026-09-01",
+    "weather_decision": "Keep",
+    "status": "scheduled",
+    "action": {
+        "title": "Perform Wheat Sowing and Basal Fertilizer Application",
+        "summary": "Complete the overdue wheat sowing activity immediately while clear weather persists.",
+        "irrigation": "Provide light irrigation (Halka Paani) post-sowing to ensure proper soil moisture for germination.",
+        "fertilizer": "Apply 50kg DAP + 25kg MOP + 10kg Zinc per acre as a basal dose during sowing.",
+        "crop_protection": "No specific chemical protection required at this stage."
+    },
+    "reason": "Complete the overdue wheat sowing activity immediately while clear weather persists.",
+    "weather_impact": {
+        "decision": "Current weather is clear at 28°C with no rain expected. It is safe to proceed with sowing and light irrigation.",
+        "reasons": [
+            "Current weather is clear at 28°C with no rain expected. It is safe to proceed with sowing and light irrigation."
+        ]
+    },
+    "notification_required": true,
+    "farmer_action": {
+        "required": true,
+        "completed": false,
+        "instructions": "Complete the overdue wheat sowing activity immediately while clear weather persists."
+    },
+    "updated_at": "2026-08-31T18:36:28.653947"
+}

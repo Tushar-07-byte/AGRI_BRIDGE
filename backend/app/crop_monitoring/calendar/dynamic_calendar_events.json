@@ -1,0 +1,152 @@
+[
+    {
+        "event_id": "WHEAT_EVENT_001",
+        "crop_id": "wheat",
+        "crop_stage": "Sowing",
+        "activity": {
+            "irrigation": "Halka Paani",
+            "fertilizer": "50kg DAP + 25kg MOP + 10kg Zinc",
+            "crop_protection": "None specified"
+        },
+        "original_schedule": {
+            "start_day": 0,
+            "end_day": 0,
+            "recommended_date": "2026-09-01"
+        },
+        "weather": {
+            "decision": "Keep",
+            "reasons": [
+                "Activity is not marked as weather-sensitive"
+            ]
+        },
+        "dynamic_update": {
+            "required": false,
+            "previous_date": "2026-09-01",
+            "new_date": "",
+            "updated": false
+        },
+        "calendar_status": "scheduled",
+        "farmer_action_completed": false,
+        "notification_sent": false
+    },
+    {
+        "event_id": "WHEAT_EVENT_002",
+        "crop_id": "wheat",
+        "crop_stage": "CRI",
+        "activity": {
+            "irrigation": "1st Paani",
+            "fertilizer": "45kg Urea",
+            "crop_protection": "Weedicide: Clodinafop / Sulfosulfuron"
+        },
+        "original_schedule": {
+            "start_day": 20,
+            "end_day": 25,
+            "recommended_date": "2026-09-21"
+        },
+        "weather": {
+            "decision": "Keep",
+            "reasons": [
+                "Activity is not marked as weather-sensitive"
+            ]
+        },
+        "dynamic_update": {
+            "required": false,
+            "previous_date": "2026-09-21",
+            "new_date": "",
+            "updated": false
+        },
+        "calendar_status": "scheduled",
+        "farmer_action_completed": false,
+        "notification_sent": false
+    },
+    {
+        "event_id": "WHEAT_EVENT_003",
+        "crop_id": "wheat",
+        "crop_stage": "Tillering",
+        "activity": {
+            "irrigation": "2nd Paani",
+            "fertilizer": "45kg Urea",
+            "crop_protection": "Rust/Yellow Rust: Propiconazole 25% EC"
+        },
+        "original_schedule": {
+            "start_day": 40,
+            "end_day": 45,
+            "recommended_date": "2026-10-11"
+        },
+        "weather": {
+            "decision": "Keep",
+            "reasons": [
+                "Activity is not marked as weather-sensitive"
+            ]
+        },
+        "dynamic_update": {
+            "required": false,
+            "previous_date": "2026-10-11",
+            "new_date": "",
+            "updated": false
+        },
+        "calendar_status": "scheduled",
+        "farmer_action_completed": false,
+        "notification_sent": false
+    },
+    {
+        "event_id": "WHEAT_EVENT_004",
+        "crop_id": "wheat",
+        "crop_stage": "Booting",
+        "activity": {
+            "irrigation": "3rd Paani",
+            "fertilizer": "None specified",
+            "crop_protection": "Aphids: Imidacloprid 17.8% SL"
+        },
+        "original_schedule": {
+            "start_day": 60,
+            "end_day": 65,
+            "recommended_date": "2026-10-31"
+        },
+        "weather": {
+            "decision": "Keep",
+            "reasons": [
+                "Activity is not marked as weather-sensitive"
+            ]
+        },
+        "dynamic_update": {
+            "required": false,
+            "previous_date": "2026-10-31",
+            "new_date": "",
+            "updated": false
+        },
+        "calendar_status": "scheduled",
+        "farmer_action_completed": false,
+        "notification_sent": false
+    },
+    {
+        "event_id": "WHEAT_EVENT_005",
+        "crop_id": "wheat",
+        "crop_stage": "Flowering",
+        "activity": {
+            "irrigation": "4th Paani",
+            "fertilizer": "NPK 0-52-34",
+            "crop_protection": "Blight: Mancozeb"
+        },
+        "original_schedule": {
+            "start_day": 80,
+            "end_day": 85,
+            "recommended_date": "2026-11-20"
+        },
+        "weather": {
+            "decision": "Keep",
+            "reasons": [
+                "Activity is not marked as weather-sensitive"
+            ]
+        },
+        "dynamic_update": {
+            "required": false,
+            "previous_date": "2026-11-20",
+            "new_date": "",
+            "updated": false
+        },
+        "calendar_status": "scheduled",
+        "farmer_action_completed": false,
+        "notification_sent": false
+    }
+]

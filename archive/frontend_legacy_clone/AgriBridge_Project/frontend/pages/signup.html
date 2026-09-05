@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriBridge - Choose Your Role</title>
+    <link rel="stylesheet" href="/frontend/styles/choose-roles.css">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+</head>
+<body>
+
+    <main class="container">
+        <div class="signup-card">
+            
+            <header class="card-header">
+                <h2 data-i18n="auth.joinTitle">Join AgriBridge</h2>
+                <p data-i18n="auth.joinDescription">Select your role to get started on the platform.</p>
+            </header>
+
+            <form id="role-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="choose-role" data-i18n="auth.iamLabel">I am a...</label>
+                    <select id="choose-role" name="role" required>
+                        <option value="" disabled selected data-i18n="auth.selectRole">Select your role</option>
+                        <option value="farmer">🌾 <span data-i18n="auth.farmerRole">Farmer</span></option>
+                        <option value="buyer">🛒 <span data-i18n="auth.buyerRole">Buyer</span></option>
+                        <option value="field-agent">📋 <span data-i18n="auth.fieldAgentRole">Field Agent</span></option>
+                        <option value="admin">👑 Administrator</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="continue-btn" class="primary-btn" data-i18n="common.continue">
+                    Continue
+                </button>
+            </form>
+
+        </div>
+    </main>
+
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/choose_role.js"></script>
+</body>
+</html>

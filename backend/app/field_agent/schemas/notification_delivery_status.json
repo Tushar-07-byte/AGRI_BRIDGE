@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NotificationDeliveryStatus",
+  "type": "object",
+  "required": [
+    "notification_id",
+    "farmer_id",
+    "title",
+    "message",
+    "delivery_status",
+    "channel",
+    "created_at"
+  ],
+  "properties": {
+    "notification_id": { "type": "string" },
+    "farmer_id": { "type": "string" },
+    "title": { "type": "string" },
+    "message": { "type": "string" },
+    "category": { "type": "string" },
+    "priority": { "type": "string", "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW"] },
+    "delivery_status": {
+      "type": "string",
+      "enum": ["CREATED", "QUEUED", "SENT", "DELIVERED", "READ", "FAILED", "RETRYING"]
+    },
+    "channel": { "type": "string" },
+    "retry_count": { "type": "integer", "minimum": 0 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "sent_at": { "type": ["string", "null"], "format": "date-time" },
+    "delivered_at": { "type": ["string", "null"], "format": "date-time" },
+    "read_at": { "type": ["string", "null"], "format": "date-time" },
+    "failure_reason": { "type": ["string", "null"] }
+  }
+}
+

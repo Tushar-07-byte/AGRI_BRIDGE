@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamic Crop Monitoring & IoT Telemetry — AgriBridge AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/crop-monitoring.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         NAVIGATION BAR
+    ========================================== -->
+    <nav class="nav">
+        <div class="logo">
+            <a href="/frontend/pages/farmer-dashboard.html">
+                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo" onerror="this.src='/frontend/assets/logo/logo.svg';">
+            </a>
+        </div>
+
+        <div class="mid">
+            <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+            <a href="/frontend/pages/crop-monitoring.html" class="active">Crop Monitoring</a>
+            <a href="/frontend/pages/upload-crop.html" data-i18n="nav.uploadCrop">AI Crop Scan</a>
+            <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
+            <a href="/frontend/pages/voice-assistant.html" data-i18n="nav.voiceAssistant">Voice AI</a>
+            <a href="/frontend/pages/crop-listings.html" data-i18n="nav.marketplace">Marketplace</a>
+        </div>
+
+        <div class="register" style="display: flex; align-items: center; gap: 12px;">
+            <div id="language-selector-container"></div>
+            <button type="button" class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/farmer-dashboard.html'">
+                ← Dashboard
+            </button>
+        </div>
+    </nav>
+
+    <!-- =========================================
+         MAIN MONITORING WRAPPER
+    ========================================== -->
+    <main class="monitoring-page">
+
+        <div class="monitoring-container">
+
+            <!-- PAGE HEADER -->
+            <header class="page-header">
+                <div class="header-badge">🌱 ULTRA CROP MONITORING + IoT TELEMETRY ENGINE</div>
+                <h1>Dynamic Crop Monitoring & Multi-Signal Advisory</h1>
+                <p>
+                    Autonomous farm-to-field monitoring connecting stage-specific biological models, 
+                    live Open-Meteo weather intelligence, synthetic IoT telemetry, multi-signal risk decisions, 
+                    and pre-harvest marketplace reminders.
+                </p>
+
+                <!-- DEMO PRESETS ROW -->
+                <div class="demo-pills-row no-print">
+                    <span class="demo-pills-label">💡 Interactive Sample Scenarios:</span>
+                    <button type="button" class="demo-btn" onclick="loadDemoScenario('wheat_cri')">🌾 Wheat CRI Stage (Auto Stage)</button>
+                    <button type="button" class="demo-btn" onclick="loadDemoScenario('six_days_harvest')">🔔 6 Days to Harvest (1st Reminder)</button>
+                    <button type="button" class="demo-btn" onclick="loadDemoScenario('three_days_harvest')">⏳ 3 Days to Harvest (Follow-up)</button>
+                    <button type="button" class="demo-btn" onclick="loadDemoScenario('one_day_harvest')">🚨 1 Day to Harvest (Final Reminder)</button>
+                    <button type="button" class="demo-btn" onclick="loadDemoScenario('high_disease')">🔬 High Disease Risk (Scout Alert)</button>
+                    <button type="button" class="demo-btn" onclick="loadDemoScenario('low_moisture')">💧 Low Moisture (Irrigation Due)</button>
+                </div>
+            </header>
+
+            <!-- =========================================
+                 FARM & CROP SETUP CARD
+            ========================================== -->
+            <section class="setup-card no-print">
+                <div class="card-header">
+                    <h2>📍 1. Farm, Field & Crop Configuration</h2>
+                    <span class="card-sub">Select your Indian location, farm identifiers, crop timeline, and telemetry parameters</span>
+                </div>
+
+                <form id="monitoring-form" class="form-grid">
+                    
+                    <!-- STATE -->
+                    <div class="form-group">
+                        <label for="state-select">Indian State *</label>
+                        <select id="state-select" required>
+                            <option value="">Loading States...</option>
+                        </select>
+                    </div>
+
+                    <!-- DISTRICT -->
+                    <div class="form-group">
+                        <label for="district-select">District *</label>
+                        <select id="district-select" required disabled>
+                            <option value="">Select State First</option>
+                        </select>
+                    </div>
+
+                    <!-- VILLAGE -->
+                    <div class="form-group">
+                        <label for="village-input">Village / Tehsil (Optional)</label>
+                        <input type="text" id="village-input" placeholder="e.g. Demo Village" value="Demo Village">
+                    </div>
+
+                    <!-- FARM ID & FIELD ID -->
+                    <div class="form-group">
+                        <label for="farm-id-input">Farm ID *</label>
+                        <input type="text" id="farm-id-input" placeholder="e.g. FARM_001" value="FARM_001" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="field-id-input">Field ID *</label>
+                        <input type="text" id="field-id-input" placeholder="e.g. FIELD_001" value="FIELD_001" required>
+                    </div>
+
+                    <!-- REGISTERED CROPS -->
+                    <div class="form-group">
+                        <label for="crop-select">Crop (Registered Crops) *</label>
+                        <select id="crop-select" required>
+                            <option value="">Loading Crops...</option>
+                        </select>
+                    </div>
+
+                    <!-- SOWING / PLANTING DATE -->
+                    <div class="form-group">
+                        <label for="planting-date">Planting / Sowing Date *</label>
+                        <input type="date" id="planting-date" required>
+                    </div>
+
+                    <!-- STAGE MODE -->
+                    <div class="form-group">
+                        <label for="stage-mode-select">Crop Stage Mode</label>
+                        <select id="stage-mode-select">
+                            <option value="AUTO" selected>AUTO (Calculate dynamically from date)</option>
+                            <option value="MANUAL">MANUAL (Specify stage directly)</option>
+                        </select>
+                    </div>
+
+                    <!-- MANUAL STAGE (IF MODE IS MANUAL) -->
+                    <div class="form-group" id="manual-stage-group" style="display: none;">
+                        <label for="manual-stage-select">Crop Stage *</label>
+                        <select id="manual-stage-select">
+                            <option value="">Select Crop Stage</option>
+                        </select>
+                    </div>
+
+                    <!-- MARKETPLACE LISTED TOGGLE -->
+                    <div class="form-group checkbox-group" style="grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; background: var(--ab-warm-bg); padding: 12px 16px; border-radius: var(--ab-radius-md); border: 1px solid var(--ab-border);">
+                        <input type="checkbox" id="crop-listed-checkbox" style="width: 20px; height: 20px; accent-color: var(--ab-primary-green); cursor: pointer;">
+                        <label for="crop-listed-checkbox" style="font-weight: 700; color: var(--ab-primary-dark); cursor: pointer;">
+                            📦 Crop is already listed in AgriBridge Marketplace (Suppresses pre-harvest reminders)
+                        </label>
+                    </div>
+
+                    <!-- ADVANCED IoT TELEMETRY ACCORDION TOGGLE -->
+                    <div style="grid-column: 1 / -1;">
+                        <button type="button" id="toggle-telemetry-btn" class="demo-btn" style="width: 100%; text-align: left; padding: 10px 16px; background: #F8FAF6;">
+                            ⚙️ Customize Synthetic IoT Telemetry Parameters (Optional) ▼
+                        </button>
+                    </div>
+
+                    <!-- TELEMETRY CUSTOMIZATION DRAWER -->
+                    <div id="telemetry-drawer" class="form-grid" style="grid-column: 1 / -1; display: none; background: #F8FAF6; padding: 18px; border-radius: var(--ab-radius-md); border: 1px solid var(--ab-border);">
+                        <div class="form-group">
+                            <label for="iot-moisture">Soil Moisture (%)</label>
+                            <input type="number" id="iot-moisture" step="0.1" value="30.5" min="0" max="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="iot-soil-temp">Soil Temp (°C)</label>
+                            <input type="number" id="iot-soil-temp" step="0.1" value="23.6">
+                        </div>
+                        <div class="form-group">
+                            <label for="iot-air-temp">Air Temp (°C)</label>
+                            <input type="number" id="iot-air-temp" step="0.1" value="25.7">
+                        </div>
+                        <div class="form-group">
+                            <label for="iot-humidity">Relative Humidity (%)</label>
+                            <input type="number" id="iot-humidity" step="0.1" value="70.0" min="0" max="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="iot-rainfall">Rainfall (mm)</label>
+                            <input type="number" id="iot-rainfall" step="0.1" value="0.0" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="iot-leaf-wetness">Leaf Wetness</label>
+                            <select id="iot-leaf-wetness">
+                                <option value="false" selected>Dry (False)</option>
+                                <option value="true">Wet / Active (True)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="iot-ec">Soil EC (dS/m)</label>
+                            <input type="number" id="iot-ec" step="0.01" value="0.93">
+                        </div>
+                        <div class="form-group">
+                            <label for="iot-ph">Soil pH</label>
+                            <input type="number" id="iot-ph" step="0.1" value="6.5" min="3" max="11">
+                        </div>
+                        <div class="form-group">
+                            <label for="iot-nitrogen">Soil Nitrogen N (mg/kg)</label>
+                            <input type="number" id="iot-nitrogen" step="1" value="110" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="iot-phosphorus">Soil Phosphorus P (mg/kg)</label>
+                            <input type="number" id="iot-phosphorus" step="1" value="18" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="iot-potassium">Soil Potassium K (mg/kg)</label>
+                            <input type="number" id="iot-potassium" step="1" value="210" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="iot-organic-carbon">Soil Organic Carbon OC (%)</label>
+                            <input type="number" id="iot-organic-carbon" step="0.01" value="0.42" min="0" max="10">
+                        </div>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <div class="form-action-col" style="grid-column: 1 / -1;">
+                        <button type="submit" id="generate-btn" class="generate-btn">
+                            🚀 Run Dynamic Crop Monitoring Analysis
+                        </button>
+                    </div>
+
+                </form>
+            </section>
+
+            <!-- LOADING SPINNER -->
+            <div id="loading-spinner" class="loading-box" style="display: none;">
+                <div class="spinner"></div>
+                <p>Executing Ultra Crop Monitoring Engine, Open-Meteo Weather, and Decision Matrix...</p>
+            </div>
+
+            <!-- =========================================
+                 DYNAMIC RESULTS DASHBOARD
+            ========================================== -->
+            <div id="monitoring-results" class="results-dashboard" style="display: none;">
+
+                <!-- ACTION BAR TOP -->
+                <div class="results-action-bar no-print">
+                    <div class="active-crop-badge" id="active-crop-pill">
+                        🌾 <span id="res-crop-header">Wheat</span> • <span id="res-location-header">Varanasi, Uttar Pradesh</span> • <span id="res-farm-header">FARM_001 / FIELD_001</span>
+                    </div>
+                    <div class="action-btn-group">
+                        <button type="button" id="btn-listen" class="tool-btn btn-audio">
+                            🔊 <span id="tts-label">Listen to Plan (आवाज में सुनें)</span>
+                        </button>
+                        <button type="button" id="btn-print-plan" class="tool-btn btn-print">
+                            📄 Print / Download Schedule
+                        </button>
+                        <button type="button" id="btn-ask-voice" class="tool-btn btn-voice">
+                            🎙️ Ask Voice AI (Saathi)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRE-HARVEST MARKETPLACE REMINDER BANNER -->
+                <div id="marketplace-reminder-banner" class="marketplace-reminder-card" style="display: none;">
+                    <div class="mpr-icon">🔔</div>
+                    <div class="mpr-body">
+                        <div class="mpr-title-row">
+                            <strong id="mpr-title">Marketplace Listing Reminder</strong>
+                            <span id="mpr-badge" class="mpr-badge">FIRST_REMINDER</span>
+                        </div>
+                        <p id="mpr-text">Your crop is expected to reach harvest in approximately 6 days. List your crop now on AgriBridge Marketplace so buyers can discover it early.</p>
+                    </div>
+                    <div class="mpr-action">
+                        <button type="button" id="mpr-list-btn" class="stylish-btn ab-btn-gold" style="white-space: nowrap;">
+                            ⚡ LIST CROP ON MARKETPLACE →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 1. HERO LIFECYCLE & LIVE WEATHER GRID -->
+                <div class="hero-metrics-grid">
+                    
+                    <!-- Biological Stage Card -->
+                    <div class="metric-box stage-metric-box">
+                        <div class="box-top">
+                            <span class="box-label">Crop Lifecycle Progress</span>
+                            <span class="dap-badge" id="dap-badge">Day 34 (DAP)</span>
+                        </div>
+                        <h3 class="active-stage-title" id="active-stage-title">Crown Root Initiation (CRI)</h3>
+                        <p class="stage-desc" id="stage-status-text">Active Stage (Calculated from planting date: 2026-08-01)</p>
+                        
+                        <div class="stage-progress-bar">
+                            <div class="progress-fill" id="stage-progress-fill" style="width: 30%;"></div>
+                        </div>
+
+                        <div class="stage-footer-row" style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-size: 13px;">
+                            <span>🔜 <strong>Next Stage:</strong> <span id="next-stage-text">Tillering & Jointing</span></span>
+                            <span>⏳ <strong>Days to Harvest:</strong> <span id="days-to-harvest-text" style="font-weight: 800; color: var(--ab-primary-green);">86 days</span></span>
+                        </div>
+                    </div>
+
+                    <!-- Live Open-Meteo Weather Card -->
+                    <div class="metric-box weather-metric-box" id="weather-decision-box">
+                        <div class="box-top">
+                            <span class="box-label">Live Open-Meteo Weather</span>
+                            <span class="transparency-tag tag-live" id="weather-source-badge">LIVE_REAL</span>
+                        </div>
+                        <h3 class="weather-temp-headline" id="weather-temp-headline">28.4°C • Favorable</h3>
+                        <p class="weather-decision-detail" id="weather-decision-detail">
+                            Live atmospheric conditions dynamically retrieved using farm geographic coordinates.
+                        </p>
+
+                        <!-- Microclimate Grid -->
+                        <div class="microclimate-row">
+                            <div class="micro-item">
+                                <span class="mi-icon">💧</span>
+                                <span class="mi-val" id="wm-humidity-val">70%</span>
+                                <span class="mi-lbl">Humidity</span>
+                            </div>
+                            <div class="micro-item">
+                                <span class="mi-icon">💨</span>
+                                <span class="mi-val" id="wm-wind-val">10.0 km/h</span>
+                                <span class="mi-lbl">Wind Speed</span>
+                            </div>
+                            <div class="micro-item">
+                                <span class="mi-icon">🌧️</span>
+                                <span class="mi-val" id="wm-rain-val">0.0 mm</span>
+                                <span class="mi-lbl">Rainfall</span>
+                            </div>
+                            <div class="micro-item">
+                                <span class="mi-icon">🛡️</span>
+                                <span class="mi-val" id="daily-priority-val">HIGH</span>
+                                <span class="mi-lbl">Daily Priority</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 2. DYNAMIC DATE-AWARE LIFECYCLE & EVENT CALENDAR -->
+                <section class="prescription-card" id="calendar-section" style="background: #FFFFFF;">
+                    <div class="presc-header">
+                        <h2>📅 Dynamic Date-Aware Lifecycle & Event Calendar</h2>
+                        <span class="transparency-tag tag-database">STAGE_MANAGEMENT_DATABASE (Date-Calculated)</span>
+                    </div>
+
+                    <div class="calendar-timeline-container">
+                        <!-- Stage Timeline Cards Grid -->
+                        <div>
+                            <span style="font-size: 13px; font-weight: 700; color: #475569;">Growth Stage Milestones (Calculated from Planting Date)</span>
+                            <div class="stage-timeline-cards" id="stage-timeline-cards" style="margin-top: 8px;">
+                                <!-- Rendered dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Calendar Daily Action Events -->
+                        <div style="margin-top: 8px;">
+                            <span style="font-size: 13px; font-weight: 700; color: #475569;">Daily Scheduled Actions & Milestones</span>
+                            <div class="calendar-events-list" id="calendar-events-list">
+                                <!-- Rendered dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. TODAY'S ACTIONS (MANDATORY 4-QUESTION FORMAT: WHAT, WHY, HOW, WHEN) -->
+                <section class="prescription-card" id="today-actions-section" style="background: #FFFFFF; border-left: 4px solid #10B981;">
+                    <div class="presc-header">
+                        <h2>🎯 Today's Prioritized Farm Actions</h2>
+                        <span class="transparency-tag tag-database">STAGE_MANAGEMENT_DATABASE + WEATHER_AWARE</span>
+                    </div>
+                    <p style="font-size: 13px; color: #64748B; margin-top: 4px;">
+                        Structured execution protocol answering <strong>WHAT</strong>, <strong>WHY</strong>, <strong>HOW</strong>, and <strong>WHEN</strong> for every recommendation.
+                    </p>
+
+                    <div class="action-4q-container" id="today-actions-container">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </section>
+
+                <!-- 4. SOIL FERTILITY & NUTRIENT STATUS ENGINE -->
+                <section class="prescription-card" id="soil-fertility-section" style="background: #FFFFFF;">
+                    <div class="presc-header">
+                        <h2>🧪 Soil Fertility & Nutrient Intelligence Engine</h2>
+                        <span class="transparency-tag tag-database">STAGE_MANAGEMENT_DATABASE</span>
+                    </div>
+                    <p style="font-size: 13px; color: #64748B; margin-top: 4px;">
+                        Agronomic evaluation of Nitrogen (N), Phosphorus (P), Potassium (K), Organic Carbon (OC), pH, and Electrical Conductivity (EC).
+                    </p>
+
+                    <div class="soil-fertility-grid" id="soil-fertility-grid">
+                        <!-- Rendered dynamically -->
+                    </div>
+
+                    <!-- Deficiencies / Fertility Summary Callout -->
+                    <div id="fertility-deficiency-callout" style="margin-top: 14px; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 12px 16px; font-size: 13px; color: #334155;">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </section>
+
+                <!-- 5. FERTILIZER & NUTRIENT MANAGEMENT (4-QUESTION PROTOCOL) -->
+                <section class="prescription-card" id="fertilizer-section" style="background: #FFFFFF;">
+                    <div class="presc-header">
+                        <h2>🌾 Stage-Specific Fertilizer & Nutrient Prescription</h2>
+                        <span class="transparency-tag tag-database" id="fert-source-tag">STAGE_MANAGEMENT_DATABASE</span>
+                    </div>
+
+                    <!-- Weather Adjustment Alert if any -->
+                    <div id="fert-weather-adjustment" class="weather-adjustment-callout" style="display: none; margin-top: 12px;">
+                        🌧️ <strong>Weather Adjustment:</strong> <span id="fert-weather-adjustment-text"></span>
+                    </div>
+
+                    <div class="action-4q-card" style="margin-top: 14px;" id="fert-4q-card">
+                        <div class="action-4q-card-header">
+                            <h3 class="action-4q-title">🌾 Stage Nutrition Strategy</h3>
+                            <span class="dec-badge badge-scheduled" id="fert-priority-badge">SCHEDULED</span>
+                        </div>
+                        <div class="action-4q-grid">
+                            <div class="action-4q-item">
+                                <span class="action-4q-q">1. What to Do</span>
+                                <p class="action-4q-a" id="fert-what">Loading...</p>
+                            </div>
+                            <div class="action-4q-item item-why">
+                                <span class="action-4q-q">2. Why to Do It</span>
+                                <p class="action-4q-a" id="fert-why">Loading...</p>
+                            </div>
+                            <div class="action-4q-item item-how">
+                                <span class="action-4q-q">3. How to Do It</span>
+                                <p class="action-4q-a" id="fert-how">Loading...</p>
+                            </div>
+                            <div class="action-4q-item item-when">
+                                <span class="action-4q-q">4. When to Do It</span>
+                                <p class="action-4q-a" id="fert-when">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. VIRTUAL IoT TELEMETRY CARD -->
+                <section class="prescription-card" style="background: #FFFFFF;">
+                    <div class="presc-header">
+                        <h2>📡 Virtual IoT Soil & Environmental Telemetry</h2>
+                        <span class="transparency-tag tag-synthetic">
+                            SYNTHETIC_HACKATHON_DEMO (physical_sensor_connected: false)
+                        </span>
+                    </div>
+
+                    <div class="microclimate-row" style="grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); margin-top: 14px;">
+                        <div class="micro-item">
+                            <span class="mi-icon">🌱</span>
+                            <span class="mi-val" id="iot-val-moisture">30.5%</span>
+                            <span class="mi-lbl">Soil Moisture</span>
+                        </div>
+                        <div class="micro-item">
+                            <span class="mi-icon">🌡️</span>
+                            <span class="mi-val" id="iot-val-soil-temp">23.6°C</span>
+                            <span class="mi-lbl">Soil Temp</span>
+                        </div>
+                        <div class="micro-item">
+                            <span class="mi-icon">🌤️</span>
+                            <span class="mi-val" id="iot-val-air-temp">25.7°C</span>
+                            <span class="mi-lbl">Air Temp</span>
+                        </div>
+                        <div class="micro-item">
+                            <span class="mi-icon">💦</span>
+                            <span class="mi-val" id="iot-val-rh">70.0%</span>
+                            <span class="mi-lbl">Rel. Humidity</span>
+                        </div>
+                        <div class="micro-item">
+                            <span class="mi-icon">🍃</span>
+                            <span class="mi-val" id="iot-val-wetness">Dry</span>
+                            <span class="mi-lbl">Leaf Wetness</span>
+                        </div>
+                        <div class="micro-item">
+                            <span class="mi-icon">⚡</span>
+                            <span class="mi-val" id="iot-val-ec">0.93 dS/m</span>
+                            <span class="mi-lbl">Soil EC</span>
+                        </div>
+                        <div class="micro-item">
+                            <span class="mi-icon">🧪</span>
+                            <span class="mi-val" id="iot-val-ph">6.49</span>
+                            <span class="mi-lbl">Soil pH</span>
+                        </div>
+                        <div class="micro-item">
+                            <span class="mi-icon">☀️</span>
+                            <span class="mi-val" id="iot-val-light">8.0 hrs</span>
+                            <span class="mi-lbl">Light Hours</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. MULTI-SIGNAL DECISION MATRIX -->
+                <section class="prescription-card">
+                    <div class="presc-header">
+                        <h2>🎯 Multi-Signal Decision Matrix</h2>
+                        <span class="transparency-tag tag-database">Deterministic Autonomous Engine Decisions</span>
+                    </div>
+
+                    <div class="guidance-cards-grid" style="margin-top: 14px;">
+                        
+                        <!-- Irrigation -->
+                        <div class="guidance-card irrigation-card">
+                            <div class="gc-header">
+                                <span class="gc-icon">💧</span>
+                                <div>
+                                    <h3>Irrigation Decision</h3>
+                                    <span id="dec-irrigation-status" class="dec-badge badge-scheduled">SCHEDULED</span>
+                                </div>
+                            </div>
+                            <p id="dec-irrigation-reason">Soil moisture is currently within the optimal monitoring range.</p>
+                        </div>
+
+                        <!-- Disease Risk -->
+                        <div class="guidance-card protection-card">
+                            <div class="gc-header">
+                                <span class="gc-icon">🔬</span>
+                                <div>
+                                    <h3>Disease Risk Decision</h3>
+                                    <span id="dec-disease-status" class="dec-badge badge-high">HIGH</span>
+                                </div>
+                            </div>
+                            <p id="dec-disease-reason">High humidity or leaf wetness supports disease development. Scout crop today.</p>
+                        </div>
+
+                        <!-- Pest Risk -->
+                        <div class="guidance-card protection-card" style="border-left-color: #E65100;">
+                            <div class="gc-header">
+                                <span class="gc-icon">🐛</span>
+                                <div>
+                                    <h3>Pest Risk Decision</h3>
+                                    <span id="dec-pest-status" class="dec-badge badge-medium">MEDIUM</span>
+                                </div>
+                            </div>
+                            <p id="dec-pest-reason">Temperature and humidity conditions support closer pest scouting.</p>
+                        </div>
+
+                        <!-- Weather Stress -->
+                        <div class="guidance-card market-card" style="border-left-color: #F57F17;">
+                            <div class="gc-header">
+                                <span class="gc-icon">⚡</span>
+                                <div>
+                                    <h3>Weather Stress Decision</h3>
+                                    <span id="dec-stress-status" class="dec-badge badge-medium">MEDIUM</span>
+                                </div>
+                            </div>
+                            <p id="dec-stress-reason">Current weather conditions require closer microclimate monitoring.</p>
+                        </div>
+
+                        <!-- Fertilizer -->
+                        <div class="guidance-card fertilizer-card">
+                            <div class="gc-header">
+                                <span class="gc-icon">🌾</span>
+                                <div>
+                                    <h3>Fertilizer / Nutrition</h3>
+                                    <span id="dec-fertilizer-status" class="dec-badge badge-scheduled">SCHEDULED</span>
+                                </div>
+                            </div>
+                            <p id="dec-fertilizer-reason">Follow the crop-stage management plan for nutrition and top-dressing.</p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- 8. NOTIFICATION CENTER (INTERACTIVE) -->
+                <section class="notifications-card no-print">
+                    <div class="notif-header">
+                        <h2>🔔 Notification Center & Action Tasks</h2>
+                        <span class="notif-sub">Automated structured alerts with one-click farmer actions</span>
+                    </div>
+
+                    <div class="notifications-list" id="notifications-list">
+                        <!-- Populated dynamically -->
+                    </div>
+                </section>
+
+                <!-- 9. GEMINI FARMER GUIDANCE -->
+                <section class="prescription-card">
+                    <div class="presc-header">
+                        <h2>🤖 Gemini AI Farmer Guidance & Advisory</h2>
+                        <span class="transparency-tag tag-gemini">EXPLANATION_LAYER_ONLY (Non-Overriding)</span>
+                    </div>
+
+                    <div class="recommended-action-banner" style="background: #F4F8F1; border-color: var(--ab-primary-green);">
+                        <div class="banner-icon">💬</div>
+                        <div class="banner-text">
+                            <strong>Agronomist Summary:</strong>
+                            <p id="gemini-guidance-text">
+                                Your Wheat crop is currently in the Crown Root Initiation (CRI) stage. Soil moisture is within normal range. 
+                                High ambient humidity warrants close visual inspection of lower leaves for early fungal spotting.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/auth.js"></script>
+    <script src="/frontend/scripts/crop-monitoring.js"></script>
+
+    <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
+    <a href="/frontend/pages/voice-assistant.html?from_page=crop-monitoring" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
+        title="Voice Farming Assistant / आवाज से पूछें">
+        <div class="voice-mic-icon-box">
+            <div class="voice-pulse-ring"></div>
+            🎙️
+        </div>
+        <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
+    </a>
+
+</body>
+
+</html>

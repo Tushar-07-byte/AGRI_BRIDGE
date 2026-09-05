@@ -1,0 +1,34 @@
+================================================================================
+AGRIBRIDGE WHEAT DATASET AUDIT REPORT (PHASE 8 & PHASE 9)
+================================================================================
+
+1. DATASET LOCATION & ARTIFACT STATUS
+   - Local Workspace Raw Training Dataset: NOT INCLUDED ON DISK (Models delivered pre-trained in handoff package).
+   - Local Test / Validation Artifacts: backend/test_images/ (7 benchmark images).
+   - Historical Training Logs / TensorBoard Artifacts: CANNOT BE VERIFIED FROM AVAILABLE ARTIFACTS.
+
+2. SUPPORTED CLASSES (5 CLASSES)
+   Class 0: BlackPoint
+   Class 1: FusariumFootRot
+   Class 2: HealthyLeaf
+   Class 3: LeafBlight
+   Class 4: WheatBlast
+
+3. MODEL RECEPTIVITY & PREPROCESSING COMPLIANCE
+   - Input Dimensions: (224, 224, 3)
+   - Color Channels: RGB
+   - Expected Input Range: Raw float32 [0.0, 255.0]
+   - Embedded Preprocessing: Both Phase1 and Stage2 contain internal Rescaling(scale=1/255) and Normalization layers inside the EfficientNetB0 backbone.
+   - Preprocessing Match: CONFIRMED (Production preprocessing feeds raw [0..255] float32; no double-scaling error).
+
+4. MODEL VERSION SELECTION AUDIT
+   - Current backend configuration in model_selection.py points to:
+     ../AgriBridge_Wheat_EfficientNetB0_Phase1.keras (Directory format, 6,405 trainable params)
+   - Available Stage 2 Model:
+     AgriBridge_Wheat_EfficientNetB0_Stage2_Best.keras (Directory & single-file format, 2,043,925 trainable params)
+   - Model Upgrade Justification: Stage 2 has fine-tuned backbone feature extractors for improved generalization across the 5 wheat classes.
+
+5. OVERFITTING STATUS:
+   OVERFITTING STATUS: CANNOT BE VERIFIED FROM AVAILABLE ARTIFACTS (Original training epoch logs are not packaged in the repository).
+================================================================================
+

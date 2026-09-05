@@ -1,0 +1,12 @@
+{
+  "navbar": {
+    "home": "होम",
+    "marketplace": "मार्केटप्लेस",
+    "about": "हमारे बारे में",
+    "login": "लॉगिन",
+    "register": "रजिस्टर करें"
+  },
+  "language": {
+    "select": "भाषा"
+  }
+}

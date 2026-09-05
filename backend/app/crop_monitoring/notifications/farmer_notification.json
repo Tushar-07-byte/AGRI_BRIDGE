@@ -1,0 +1,14 @@
+{
+    "notification_id": "NOTIFY_AGRIBRIDGE_20260901_065910",
+    "farmer_id": "FARMER_20260901070849",
+    "date": "2026-09-01",
+    "crop": "Tomato",
+    "stage": "showing",
+    "title": "Tomato crop activity recommendation",
+    "message": "Carry out transplanting/day 0 activities as scheduled while ensuring effective field drainage to handle forecasted rain and thunderstorm conditions. Detailed scientific calendar stage dates and specific lifecycle activities are currently unavailable in the provided context. Guidance is strictly derived from the available management calendar and live weather analysis.",
+    "weather_decision": "Keep (Current weather conditions do not indicate a major reason to change scheduled crop activities, though moisture management is required).",
+    "calendar_status": "scheduled",
+    "next_stage": null,
+    "status": "pending",
+    "created_at": "2026-09-01T07:35:42.594137"
+}

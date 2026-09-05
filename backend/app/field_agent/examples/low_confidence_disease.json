@@ -1,0 +1,18 @@
+{
+  "disease_prediction": "Wheat Yellow Rust (Puccinia striiformis)",
+  "confidence": 0.54,
+  "confidence_threshold": 0.60,
+  "confidence_status": "LOW",
+  "field_agent_escalation": true,
+  "escalation_reason": "LOW_CONFIDENCE_DISEASE_PREDICTION",
+  "chemical_recommendation": {
+    "status": "LOCKED",
+    "reason": "LOW_DISEASE_CONFIDENCE",
+    "pesticide_name": null,
+    "dosage": null,
+    "application_schedule": null
+  },
+  "farmer_message": "AI confidence is low for this disease prediction. Chemical treatment recommendation is temporarily locked. A Field Agent verification is required before treatment guidance can be provided.",
+  "recommended_action": "Inspection uncertainty requires on-site verification by an Agri-Field Agent."
+}
+

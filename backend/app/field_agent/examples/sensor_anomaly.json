@@ -1,0 +1,17 @@
+{
+  "sensor_id": "SN_SOIL_04",
+  "farm_id": "FARM_NORTH_12",
+  "crop": "Wheat",
+  "stage": "Tillering",
+  "sensor_type": "soil_moisture",
+  "observed_value": 0.0,
+  "unit": "% VWC",
+  "expected_range": [15.0, 75.0],
+  "anomaly_detected": true,
+  "anomaly_type": "ZERO_READING",
+  "escalation_reason": "UNUSUAL_SENSOR_READING",
+  "interpretation": "Soil moisture dropped to 0% in irrigated plot. Probable disconnected wire, probe detachment, or sensor fault.",
+  "field_agent_escalation": true,
+  "priority": "HIGH"
+}
+

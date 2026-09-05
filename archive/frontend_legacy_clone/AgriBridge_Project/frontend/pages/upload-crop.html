@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Crop - AgriBridge</title>
+
+    <link rel="stylesheet" href="/frontend/styles/upload-crop.css">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+</head>
+
+<body>
+
+    <section class="upload-section">
+
+        <h1 data-i18n="crop.upload.title">Upload Your Crop</h1>
+
+        <p class="page-description" data-i18n="crop.upload.description">
+            Add your crop details and upload a photo for AI health analysis.
+        </p>
+
+        <form id="crop-form" novalidate>
+
+            <div class="form-group">
+
+                <label for="crop-name" data-i18n="crop.fields.cropName">
+                    Crop Name
+                </label>
+
+                <input type="text" id="crop-name" data-i18n-placeholder="crop.placeholders.enterCropName" placeholder="Enter crop name" required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="quantity" data-i18n="crop.fields.quantity">
+                    Quantity (kg)
+                </label>
+
+                <input type="number" id="quantity" data-i18n-placeholder="crop.placeholders.enterQuantity" placeholder="Enter quantity" min="1" required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="harvest-date" data-i18n="crop.fields.harvestDate">
+                    Expected Harvest Date
+                </label>
+
+                <input type="date" id="harvest-date" required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="location" data-i18n="crop.fields.farmLocation">
+                    Farm Location
+                </label>
+
+                <input type="text" id="location" data-i18n-placeholder="crop.placeholders.enterLocation" placeholder="Enter your farm location" required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="farm-area" data-i18n="crop.fields.farmArea">Farm Area (acres)</label>
+
+                <input type="number" id="farm-area" min="0.01" step="0.01" required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="growth-stage" data-i18n="crop.fields.growthStage">Growth Stage</label>
+
+                <select id="growth-stage" required>
+                    <option value="" data-i18n="crop.growthStage.select">Select growth stage</option>
+                    <option value="seedling" data-i18n="crop.growthStage.seedling">Seedling</option>
+                    <option value="vegetative" data-i18n="crop.growthStage.vegetative">Vegetative</option>
+                    <option value="flowering" data-i18n="crop.growthStage.flowering">Flowering</option>
+                    <option value="fruiting" data-i18n="crop.growthStage.fruiting">Fruiting</option>
+                    <option value="maturity" data-i18n="crop.growthStage.maturity">Maturity</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="irrigation-method" data-i18n="crop.fields.irrigationMethod">Irrigation Method</label>
+
+                <select id="irrigation-method" required>
+                    <option value="" data-i18n="crop.irrigationMethod.select">Select irrigation method</option>
+                    <option value="drip" data-i18n="crop.irrigationMethod.drip">Drip</option>
+                    <option value="sprinkler" data-i18n="crop.irrigationMethod.sprinkler">Sprinkler</option>
+                    <option value="flood" data-i18n="crop.irrigationMethod.flood">Flood</option>
+                    <option value="furrow" data-i18n="crop.irrigationMethod.furrow">Furrow</option>
+                    <option value="rainfed" data-i18n="crop.irrigationMethod.rainfed">Rainfed</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="irrigation-status" data-i18n="crop.fields.irrigationStatus">Irrigation Status</label>
+
+                <select id="irrigation-status" required>
+                    <option value="" data-i18n="crop.irrigationStatus.select">Select irrigation status</option>
+                    <option value="dry" data-i18n="crop.irrigationStatus.dry">Dry</option>
+                    <option value="normal" data-i18n="crop.irrigationStatus.normal">Normal</option>
+                    <option value="wet" data-i18n="crop.irrigationStatus.wet">Wet</option>
+                    <option value="waterlogged" data-i18n="crop.irrigationStatus.waterlogged">Waterlogged</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="recent-rainfall" data-i18n="crop.fields.recentRainfall">Recent Rainfall</label>
+
+                <select id="recent-rainfall" required>
+                    <option value="" data-i18n="crop.rainfall.select">Select rainfall level</option>
+                    <option value="none" data-i18n="crop.rainfall.none">None</option>
+                    <option value="low" data-i18n="crop.rainfall.low">Low</option>
+                    <option value="moderate" data-i18n="crop.rainfall.moderate">Moderate</option>
+                    <option value="heavy" data-i18n="crop.rainfall.heavy">Heavy</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="humidity" data-i18n="crop.fields.humidity">Humidity</label>
+
+                <select id="humidity" required>
+                    <option value="" data-i18n="crop.humidity.select">Select humidity</option>
+                    <option value="low" data-i18n="crop.humidity.low">Low</option>
+                    <option value="moderate" data-i18n="crop.humidity.moderate">Moderate</option>
+                    <option value="high" data-i18n="crop.humidity.high">High</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="fertilizer-applied" data-i18n="crop.fields.fertilizerApplied">Fertilizer Applied</label>
+
+                <select id="fertilizer-applied" required>
+
+                    <option value="" data-i18n="crop.fertilizer.select">Select fertilizer</option>
+
+                    <option value="None" data-i18n="crop.fertilizer.none">None</option>
+                    <option value="Urea" data-i18n="crop.fertilizer.urea">Urea</option>
+                    <option value="DAP" data-i18n="crop.fertilizer.dap">DAP</option>
+                    <option value="NPK" data-i18n="crop.fertilizer.npk">NPK</option>
+                    <option value="MOP (Potassium)" data-i18n="crop.fertilizer.mop">MOP (Potassium)</option>
+                    <option value="SSP" data-i18n="crop.fertilizer.ssp">SSP</option>
+                    <option value="Compost" data-i18n="crop.fertilizer.compost">Compost</option>
+                    <option value="Farmyard Manure (FYM)" data-i18n="crop.fertilizer.fym">
+                        Farmyard Manure (FYM)
+                    </option>
+                    <option value="Vermicompost" data-i18n="crop.fertilizer.vermicompost">Vermicompost</option>
+                    <option value="Organic Fertilizer" data-i18n="crop.fertilizer.organic">
+                        Organic Fertilizer
+                    </option>
+                    <option value="Micronutrient Fertilizer" data-i18n="crop.fertilizer.micronutrient">
+                        Micronutrient Fertilizer
+                    </option>
+                    <option value="Other" data-i18n="crop.fertilizer.other">Other</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="previous-crop" data-i18n="crop.fields.previousCrop">Previous Crop</label>
+
+                <input type="text" id="previous-crop" required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="disease-severity" data-i18n="crop.fields.diseaseSeverity">Observed Disease Severity</label>
+
+                <select id="disease-severity" required>
+                    <option value="" data-i18n="crop.diseaseSeverity.select">Select severity</option>
+                    <option value="low" data-i18n="crop.diseaseSeverity.low">Low</option>
+                    <option value="moderate" data-i18n="crop.diseaseSeverity.moderate">Moderate</option>
+                    <option value="high" data-i18n="crop.diseaseSeverity.high">High</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="crop-image" data-i18n="crop.fields.uploadImage">
+                    Upload Crop Image
+                </label>
+
+                <input type="file" id="crop-image" accept="image/jpeg,image/png,image/jpg" required>
+
+            </div>
+
+
+            <div class="preview-container">
+
+                <img id="image-preview" src="" alt="Crop image preview">
+
+            </div>
+
+
+            <button type="button" id="analyze-button" data-i18n="crop.upload.analyzeButton">
+                Analyze Crop
+            </button>
+
+        </form>
+
+
+        <p id="message"></p>
+
+    </section>
+
+
+    <!-- ONLY ONE upload-crop.js -->
+
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/upload-crop.js"></script>
+
+</body>
+
+</html>

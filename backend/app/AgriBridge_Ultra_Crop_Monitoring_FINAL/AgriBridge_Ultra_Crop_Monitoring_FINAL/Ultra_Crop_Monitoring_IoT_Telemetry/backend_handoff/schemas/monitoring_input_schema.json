@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgriBridge AI Dynamic Monitoring Input",
+  "description": "Dynamic input contract for the AgriBridge AI monitoring engine.",
+  "type": "object",
+  "required": [
+    "farm_id",
+    "field_id",
+    "telemetry_id",
+    "location",
+    "crop"
+  ],
+  "properties": {
+    "farm_id": {
+      "type": "string",
+      "description": "Unique farm identifier."
+    },
+    "field_id": {
+      "type": "string",
+      "description": "Unique field identifier."
+    },
+    "telemetry_id": {
+      "type": "string",
+      "description": "Telemetry/device record identifier."
+    },
+    "location": {
+      "type": "object",
+      "required": [
+        "state",
+        "district",
+        "village"
+      ],
+      "properties": {
+        "state": {
+          "type": "string"
+        },
+        "district": {
+          "type": "string"
+        },
+        "village": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        }
+      }
+    },
+    "crop": {
+      "type": "object",
+      "required": [
+        "crop_name"
+      ],
+      "properties": {
+        "crop_name": {
+          "type": "string"
+        },
+        "planting_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "crop_stage_mode": {
+          "type": "string",
+          "enum": [
+            "AUTO",
+            "MANUAL"
+          ],
+          "default": "AUTO"
+        },
+        "crop_stage": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Required when crop_stage_mode is MANUAL."
+        }
+      }
+    },
+    "telemetry": {
+      "type": "object",
+      "properties": {
+        "soil_moisture_percent": {
+          "type": "number"
+        },
+        "soil_temperature_c": {
+          "type": "number"
+        },
+        "air_temperature_c": {
+          "type": "number"
+        },
+        "relative_humidity_percent": {
+          "type": "number"
+        },
+        "rainfall_mm": {
+          "type": "number"
+        },
+        "leaf_wetness": {
+          "type": "boolean"
+        },
+        "soil_ec_ds_m": {
+          "type": "number"
+        },
+        "soil_ph": {
+          "type": "number"
+        },
+        "light_hours": {
+          "type": "number"
+        },
+        "wind_speed_kmh": {
+          "type": "number"
+        }
+      }
+    },
+    "marketplace": {
+      "type": "object",
+      "description": "Marketplace state supplied by backend.",
+      "properties": {
+        "crop_listed": {
+          "type": "boolean",
+          "description": "True if the crop is already listed in the marketplace."
+        }
+      },
+      "required": [
+        "crop_listed"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

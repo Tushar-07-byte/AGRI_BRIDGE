@@ -1,0 +1,39 @@
+Index,True Class,Predicted Class,Confidence,Image Path
+6,Bacterial Leaf Blight,Leaf Blast,0.7902704,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Bacterial Leaf Blight/IMG_20231014_173602.jpg
+27,Bacterial Leaf Blight,Leaf scald,0.5391291,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Bacterial Leaf Blight/aug_0_2924.jpg
+51,Bacterial Leaf Blight,Leaf Blast,0.5079249,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Bacterial Leaf Blight/aug_0_4435.jpg
+70,Bacterial Leaf Blight,Brown Spot,0.7954201,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Bacterial Leaf Blight/aug_0_5602.jpg
+82,Bacterial Leaf Blight,Leaf scald,0.5577179,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Bacterial Leaf Blight/aug_0_6368.jpg
+106,Brown Spot,Leaf scald,0.60313445,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Brown Spot/Brown_spot (208).jpg
+108,Brown Spot,Leaf Blast,0.56398517,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Brown Spot/IMG_20231014_173237.jpg
+111,Brown Spot,Leaf Blast,0.64925486,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Brown Spot/IMG_20231018_143020.jpg
+144,Brown Spot,Healthy Rice Leaf,0.63386875,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Brown Spot/aug_0_6216.jpg
+147,Brown Spot,Healthy Rice Leaf,0.5054849,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Brown Spot/aug_0_6519.jpg
+150,Brown Spot,Healthy Rice Leaf,0.8080958,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Brown Spot/aug_0_6621.jpg
+156,Brown Spot,Leaf Blast,0.708835,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Brown Spot/aug_0_6908.jpg
+161,Brown Spot,Bacterial Leaf Blight,0.5721642,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Brown Spot/aug_0_7206.jpg
+167,Brown Spot,Leaf scald,0.6836242,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Brown Spot/aug_0_7578.jpg
+177,Brown Spot,Leaf Blast,0.5136929,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Brown Spot/aug_0_7960.jpg
+227,Healthy Rice Leaf,Brown Spot,0.6405992,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Healthy Rice Leaf/aug_0_1777.jpg
+246,Healthy Rice Leaf,Brown Spot,0.99871576,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Healthy Rice Leaf/aug_0_756.jpg
+291,Leaf Blast,Brown Spot,0.5426549,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf Blast/IMG_20231006_170559.jpg
+292,Leaf Blast,Sheath Blight,0.72826034,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf Blast/IMG_20231014_170731.jpg
+298,Leaf Blast,Bacterial Leaf Blight,0.8143524,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf Blast/IMG_20231018_143101.jpg
+326,Leaf Blast,Bacterial Leaf Blight,0.71009094,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf Blast/aug_0_7285.jpg
+329,Leaf Blast,Brown Spot,0.57779974,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf Blast/aug_0_7540.jpg
+331,Leaf Blast,Leaf scald,0.66226435,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf Blast/aug_0_7581.jpg
+381,Leaf Blast,Brown Spot,0.70294684,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf Blast/aug_0_9906.jpg
+391,Leaf scald,Bacterial Leaf Blight,0.39841172,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf scald/Leaf_scald (68).jpg
+394,Leaf scald,Leaf Blast,0.73088396,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf scald/Leaf_scald (80).jpg
+412,Leaf scald,Bacterial Leaf Blight,0.7277057,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf scald/aug_0_1570.jpg
+443,Leaf scald,Bacterial Leaf Blight,0.4539856,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf scald/aug_0_3584.jpg
+444,Leaf scald,Bacterial Leaf Blight,0.7329871,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf scald/aug_0_3619.jpg
+446,Leaf scald,Bacterial Leaf Blight,0.7278398,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf scald/aug_0_3635.jpg
+474,Leaf scald,Bacterial Leaf Blight,0.50095624,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf scald/aug_0_6273.jpg
+476,Leaf scald,Bacterial Leaf Blight,0.60693765,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Leaf scald/aug_0_77.jpg
+489,Sheath Blight,Leaf Blast,0.40653113,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Sheath Blight/IMG_20231014_172936.jpg
+495,Sheath Blight,Bacterial Leaf Blight,0.98567814,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Sheath Blight/IMG_20231014_173719.jpg
+515,Sheath Blight,Brown Spot,0.34629217,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Sheath Blight/Sheath_Blight (39).jpg
+532,Sheath Blight,Bacterial Leaf Blight,0.57847726,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Sheath Blight/aug_0_458.jpg
+541,Sheath Blight,Bacterial Leaf Blight,0.4438327,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Sheath Blight/aug_0_81.jpg
+564,Sheath Blight,Bacterial Leaf Blight,0.5329429,/content/drive/MyDrive/AgriBridge_AI/dataset/Rice_V2_Split/test/Sheath Blight/aug_0_9508.jpg

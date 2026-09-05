@@ -1,0 +1,35 @@
+{
+  "system_name": "AgriBridge Field Agent Human-in-the-Loop System",
+  "version": "2.0.0",
+  "default_assigned_agent": {
+    "agent_id": "AGENT_007",
+    "agent_name": "Rahul Verma",
+    "role": "Senior Agricultural Field Officer",
+    "region": "Varanasi / Raipur Agro-Climatic Zone",
+    "contact": "+91-98765-43210"
+  },
+  "task_sla_hours": {
+    "CRITICAL": 6,
+    "HIGH": 12,
+    "MEDIUM": 24,
+    "LOW": 48
+  },
+  "supported_actions": [
+    "ACCEPT",
+    "REJECT",
+    "SCHEDULE_VISIT",
+    "SUBMIT_REPORT",
+    "CLOSE"
+  ],
+  "verification_outcomes": [
+    "VERIFIED_DISEASE",
+    "NOT_VERIFIED",
+    "INCONCLUSIVE"
+  ],
+  "rejection_policy": {
+    "reason_mandatory": true,
+    "min_reason_length": 5,
+    "preserve_audit_history": true
+  }
+}
+

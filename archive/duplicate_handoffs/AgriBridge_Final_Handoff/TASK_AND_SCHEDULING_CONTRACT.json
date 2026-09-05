@@ -1,0 +1,13 @@
+{
+  "allowed_statuses": [
+    "PENDING",
+    "NOTIFIED",
+    "ACKNOWLEDGED",
+    "IN_PROGRESS",
+    "COMPLETED",
+    "SKIPPED",
+    "ESCALATED"
+  ],
+  "normal_flow": "PENDING -> NOTIFIED -> ACKNOWLEDGED -> IN_PROGRESS -> COMPLETED",
+  "weather_rule": "Re-check weather before execution; reschedule if unsuitable."
+}

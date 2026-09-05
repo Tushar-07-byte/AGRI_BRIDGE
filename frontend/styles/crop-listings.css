@@ -1,285 +1,764 @@
-/* =========================================
-   GLOBAL
-========================================= */
+/* ==========================================================================
+   AGRIBRIDGE — CROP LISTINGS & TWO-PHASE MARKETPLACE STYLES
+   ========================================================================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #f1f8e9;
-    color: #333;
-}
-
-
-/* =========================================
-   MAIN PAGE
-========================================= */
-
-.listings-page {
-    width: 100%;
-    max-width: 1000px;
+.listings-page-container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 30px;
-}
-
-
-/* =========================================
-   HEADER
-========================================= */
-
-.listings-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.listings-header h1 {
-    color: #2E7D32;
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.listings-header p {
-    color: #666;
-    font-size: 16px;
-}
-
-
-/* =========================================
-   LISTING CARD
-========================================= */
-
-.listing-card {
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    gap: 35px;
-
-    background-color: white;
-
-    padding: 30px;
-
-    border-radius: 18px;
-
-    box-shadow:
-        0px 4px 15px rgba(0, 0, 0, 0.1);
-
-    margin-bottom: 30px;
-}
-
-
-/* =========================================
-   IMAGE
-========================================= */
-
-.listing-image-container {
+    padding: 36px 40px 80px;
     width: 100%;
-    height: 300px;
-
-    border-radius: 14px;
-
-    overflow: hidden;
-
-    background-color: #f1f8e9;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.listing-image-container img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-}
-
-
-/* =========================================
-   CROP DETAILS
-========================================= */
-
-.listing-details {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 28px;
 }
 
-.listing-details h2 {
-    color: #2E7D32;
-    font-size: 28px;
-    margin-bottom: 25px;
-}
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
 
-
-/* =========================================
-   DETAIL ROW
-========================================= */
-
-.detail-row,
-.status-row {
+.listings-header-card {
+    background: linear-gradient(135deg, #10200D 0%, #1D3717 100%);
+    border-radius: var(--ab-radius-xl);
+    padding: 36px 44px;
+    color: #FFFFFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 14px 0;
-
-    border-bottom: 1px solid #eeeeee;
+    gap: 24px;
+    box-shadow: var(--ab-shadow-md);
+    border: 1px solid var(--ab-border-dark);
 }
 
-.detail-row span,
-.status-row span:first-child {
-    color: #666;
+.listings-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.detail-row strong {
-    color: #333;
+.listings-header-left h1 {
+    font-size: clamp(26px, 2.6vw, 34px);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.2;
 }
 
-
-/* =========================================
-   STATUS
-========================================= */
-
-.status {
-    padding: 6px 12px;
-
-    border-radius: 20px;
-
-    font-size: 14px;
-
-    font-weight: 600;
+.listings-header-left p {
+    font-size: 14.5px;
+    color: #BDCEB7;
+    max-width: 680px;
+    line-height: 1.6;
 }
 
+/* ==========================================================================
+   MARKETPLACE PHASE TABS
+   ========================================================================== */
 
-/* Pending */
-
-.status.pending {
-    background-color: #fff3cd;
-    color: #856404;
+.marketplace-phase-tabs {
+    display: flex;
+    gap: 16px;
+    background: #EBF0E8;
+    padding: 8px;
+    border-radius: var(--ab-radius-xl);
+    border: 1px solid var(--ab-border);
 }
 
-
-/* Verified */
-
-.status.verified {
-    background-color: #dff5e1;
-    color: #2E7D32;
-}
-
-
-/* Rejected */
-
-.status.rejected {
-    background-color: #ffebee;
-    color: #c62828;
-}
-
-
-/* Committed */
-
-.status.committed {
-    background-color: #e8f5e9;
-    color: #1b5e20;
-}
-
-
-/* =========================================
-   NO LISTING
-========================================= */
-
-.no-listing {
-    display: none;
-
-    background-color: white;
-
-    padding: 50px 30px;
-
-    border-radius: 18px;
-
-    text-align: center;
-
-    box-shadow:
-        0px 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.no-listing h2 {
-    color: #2E7D32;
-    margin-bottom: 10px;
-}
-
-.no-listing p {
-    color: #666;
-    margin-bottom: 25px;
-}
-
-
-/* =========================================
-   BUTTONS
-========================================= */
-
-button {
+.phase-tab-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
+    border-radius: var(--ab-radius-lg);
+    background: transparent;
     border: none;
-
-    background-color: #2E7D32;
-
-    color: white;
-
-    padding: 13px 25px;
-
-    border-radius: 8px;
-
-    font-size: 15px;
-
-    font-weight: 600;
-
     cursor: pointer;
-
-    transition: 0.2s ease;
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--ab-text-muted);
+    transition: all 0.25s ease;
 }
 
-button:hover {
-    background-color: #1b5e20;
-
-    transform: translateY(-2px);
+.phase-tab-btn:hover {
+    color: var(--ab-primary-dark);
+    background: rgba(255, 255, 255, 0.6);
 }
 
+.phase-tab-btn.active {
+    background: #FFFFFF;
+    color: var(--ab-primary-dark);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
 
-.dashboard-button {
+.phase-tab-icon {
+    font-size: 18px;
+}
+
+.marketplace-phase-panel {
+    display: none;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.marketplace-phase-panel.active {
+    display: flex;
+}
+
+/* ==========================================================================
+   PHASE 1: PRE-HARVEST INTELLIGENCE GRID
+   ========================================================================== */
+
+.preharvest-intel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.intel-card {
+    background: #FFFFFF;
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-lg);
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: var(--ab-shadow-sm);
+}
+
+.intel-label {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--ab-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.intel-val {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.intel-sub {
+    font-size: 13px;
+    color: var(--ab-text-muted);
+}
+
+.text-success {
+    color: #2E7D32 !important;
+}
+
+/* ==========================================================================
+   PRE-HARVEST GUIDANCE CARD
+   ========================================================================== */
+
+.preharvest-guidance-card {
+    background: #F4F8F1;
+    border: 1px solid #C8DEC2;
+    border-radius: var(--ab-radius-xl);
+    padding: 24px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.guidance-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.guidance-icon {
+    font-size: 22px;
+}
+
+.guidance-card-header h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.preharvest-guidance-card p {
+    font-size: 14.5px;
+    color: var(--ab-text-dark);
+    line-height: 1.6;
+}
+
+.market-reminders-box {
+    background: #FFFFFF;
+    padding: 16px 20px;
+    border-radius: var(--ab-radius-md);
+    border: 1px solid #D5E5CF;
+    font-size: 14px;
+}
+
+.market-reminders-box strong {
+    color: var(--ab-primary-dark);
     display: block;
-
-    margin: 30px auto 0;
+    margin-bottom: 8px;
 }
 
+.market-reminders-box ul {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--ab-text-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
 
-/* =========================================
-   MOBILE
-========================================= */
+/* ==========================================================================
+   LISTING SHOWCASE CARD (PRE-HARVEST)
+   ========================================================================== */
 
-@media (max-width: 700px) {
+.listing-showcase-card {
+    background: #FFFFFF;
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-xl);
+    padding: 32px;
+    box-shadow: var(--ab-shadow-sm);
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 36px;
+    align-items: center;
+}
 
-    .listings-page {
-        padding: 30px 20px;
-    }
+.listing-image-container {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    border-radius: var(--ab-radius-lg);
+    overflow: hidden;
+    background: var(--ab-warm-bg);
+    border: 1px solid var(--ab-border);
+}
 
-    .listing-card {
+.crop-img-view {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.listing-badge-overlay {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+}
+
+.ab-badge-preharvest {
+    background: #10200D;
+    color: #E8B931;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 6px 12px;
+    border-radius: var(--ab-radius-sm);
+    display: block;
+    text-align: center;
+    border: 1px solid rgba(232, 185, 49, 0.4);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.listing-details-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.listing-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.crop-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.crop-category-tag {
+    font-size: 12px;
+    font-weight: 700;
+    background: var(--ab-light-green);
+    color: var(--ab-primary-dark);
+    padding: 4px 12px;
+    border-radius: var(--ab-radius-full);
+}
+
+.details-grid-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    background: var(--ab-warm-bg);
+    padding: 16px 20px;
+    border-radius: var(--ab-radius-lg);
+    border: 1px solid var(--ab-border);
+}
+
+.detail-stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.detail-stat-item span {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--ab-text-muted);
+}
+
+.detail-stat-item strong {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.status-badges-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.status-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+}
+
+.status-box-label {
+    font-weight: 700;
+    color: var(--ab-text-dark);
+}
+
+.status-chip-view {
+    padding: 4px 12px;
+    border-radius: var(--ab-radius-full);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.status-chip-view.pending {
+    background: var(--ab-warning-soft);
+    color: var(--ab-warning);
+    border: 1px solid rgba(237, 108, 2, 0.2);
+}
+
+.status-chip-view.verified, .status-chip-view.committed {
+    background: var(--ab-success-soft);
+    color: var(--ab-success);
+    border: 1px solid rgba(46, 125, 50, 0.2);
+}
+
+.preharvest-notice-box {
+    font-size: 13px;
+    color: #61735C;
+    background: #F3F6F1;
+    padding: 10px 14px;
+    border-radius: var(--ab-radius-md);
+    border-left: 3px solid #739B64;
+}
+
+.listing-actions-row {
+    display: flex;
+    gap: 14px;
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   PHASE 2: POST-HARVEST BANNER & FLOW
+   ========================================================================== */
+
+.postharvest-banner-card {
+    background: linear-gradient(135deg, #183313 0%, #2A5422 100%);
+    border-radius: var(--ab-radius-xl);
+    padding: 36px 40px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: var(--ab-shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.banner-badge {
+    align-self: flex-start;
+    background: #E8B931;
+    color: #10200D;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: var(--ab-radius-full);
+}
+
+.banner-quote {
+    font-size: clamp(20px, 2.2vw, 26px);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.4;
+}
+
+.banner-subtitle {
+    font-size: 14.5px;
+    color: #D3E4CD;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* Visual 8-Step Flow */
+.postharvest-flow-card {
+    background: #FFFFFF;
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-xl);
+    padding: 24px 30px;
+    box-shadow: var(--ab-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.flow-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.flow-steps-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+}
+
+.flow-step-item {
+    background: #F4F8F1;
+    border: 1px solid #D5E5CF;
+    border-radius: var(--ab-radius-md);
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.step-num {
+    background: var(--ab-primary-dark);
+    color: #FFFFFF;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ab-primary-dark);
+    white-space: nowrap;
+}
+
+.flow-arrow {
+    color: #9AB690;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* Two-Column Grid: Cleaning Protocols & Quality Calculator */
+.postharvest-twocol-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 28px;
+}
+
+.cleaning-protocol-card, .quality-calculator-card {
+    background: #FFFFFF;
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-xl);
+    padding: 28px 30px;
+    box-shadow: var(--ab-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.protocol-header, .calc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--ab-border);
+    padding-bottom: 14px;
+}
+
+.protocol-header h3, .calc-header h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.calc-sub {
+    font-size: 12.5px;
+    color: var(--ab-text-muted);
+}
+
+.protocol-select {
+    padding: 8px 14px;
+    border-radius: var(--ab-radius-md);
+    border: 1px solid var(--ab-border);
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--ab-primary-dark);
+    background: #F9FAF8;
+    cursor: pointer;
+}
+
+.protocol-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.proto-section {
+    background: #F9FAF8;
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-md);
+    padding: 14px 18px;
+}
+
+.proto-section h4 {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+    margin-bottom: 6px;
+}
+
+.proto-section p {
+    font-size: 13.5px;
+    color: var(--ab-text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.proto-section ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 13.5px;
+    color: var(--ab-text-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Quality Form Styles */
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group label {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--ab-text-dark);
+}
+
+.calc-input {
+    padding: 10px 14px;
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-md);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ab-text-dark);
+    background: #FAFAFA;
+}
+
+.calc-input:focus {
+    border-color: var(--ab-primary);
+    outline: none;
+    background: #FFFFFF;
+}
+
+.input-hint {
+    font-size: 11px;
+    color: #7B8F77;
+}
+
+.full-width-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14.5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Result Box */
+.quality-result-box {
+    background: #F4F8F1;
+    border: 1px solid #BCDAB4;
+    border-radius: var(--ab-radius-lg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 8px;
+}
+
+.result-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grade-comparison {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.grade-pill {
+    background: #FFFFFF;
+    border: 1px solid var(--ab-border);
+    padding: 6px 12px;
+    border-radius: var(--ab-radius-full);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
+
+.grade-pill.achieved {
+    background: #E8F5E9;
+    border-color: #81C784;
+}
+
+.grade-highlight {
+    color: #2E7D32;
+    font-weight: 800;
+}
+
+.grade-vs {
+    color: #7B8F77;
+    font-weight: 800;
+}
+
+.premium-pricing-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border: 1px solid #D5E5CF;
+    border-radius: var(--ab-radius-md);
+    padding: 14px 18px;
+}
+
+.price-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.p-label {
+    font-size: 11.5px;
+    color: var(--ab-text-muted);
+    font-weight: 600;
+}
+
+.p-val {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.p-badge {
+    font-size: 11px;
+    font-weight: 800;
+    color: #2E7D32;
+    background: #E8F5E9;
+    padding: 2px 8px;
+    border-radius: var(--ab-radius-full);
+    align-self: flex-start;
+}
+
+.price-arrow {
+    font-size: 18px;
+    color: #9AB690;
+    font-weight: 800;
+}
+
+.assessment-explanation {
+    font-size: 13px;
+    color: var(--ab-text-dark);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.disclaimer-note {
+    font-size: 11.5px;
+    color: #7B8F77;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 8px 12px;
+    border-radius: var(--ab-radius-sm);
+    border-left: 2px solid #E8B931;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   RESPONSIVENESS
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    .listing-showcase-card {
         grid-template-columns: 1fr;
-
-        gap: 25px;
-
-        padding: 20px;
     }
-
     .listing-image-container {
-        height: 250px;
+        height: 240px;
     }
-
-    .listings-header h1 {
-        font-size: 27px;
+    .preharvest-intel-grid {
+        grid-template-columns: 1fr;
     }
+    .postharvest-twocol-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
+@media (max-width: 768px) {
+    .listings-page-container {
+        padding: 20px 16px 60px;
+        gap: 20px;
+    }
+    .listings-header-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 20px;
+    }
+    .marketplace-phase-tabs {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .listing-showcase-card {
+        padding: 24px 20px;
+    }
+    .details-grid-box {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .listing-actions-row {
+        flex-direction: column;
+    }
+    .form-row-2 {
+        grid-template-columns: 1fr;
+    }
 }

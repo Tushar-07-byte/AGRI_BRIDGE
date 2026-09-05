@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "module": "Ultra Crop Monitoring",
+  "endpoints": {
+    "monitoring_analyze": {
+      "method": "POST",
+      "path": "/api/v1/monitoring/analyze",
+      "purpose": "Run dynamic crop monitoring analysis.",
+      "request_schema": "schemas/monitoring_input_schema.json",
+      "response_schema": "schemas/monitoring_output_schema.json"
+    },
+    "notification_action": {
+      "method": "POST",
+      "path": "/api/v1/monitoring/notification/action",
+      "purpose": "Update notification state.",
+      "request_schema": "schemas/notification_action_schema.json"
+    }
+  },
+  "weather_source": "LIVE_REAL",
+  "iot_source": "SYNTHETIC_HACKATHON_DEMO",
+  "physical_sensor_connected": false,
+  "llm_provider": "Google Gemini",
+  "llm_role": "Explanation layer only. Does not override monitoring decisions."
+}

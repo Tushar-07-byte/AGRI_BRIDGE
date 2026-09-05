@@ -1,0 +1,34 @@
+{
+    "engine": "AgriBridge Multi-Crop Production Monitoring Engine",
+    "country": "India",
+    "supported_crop_count": 16,
+    "supported_crops": {
+        "wheat": "Wheat",
+        "rice": "Rice",
+        "apple": "Apple",
+        "blueberry": "Blueberry",
+        "cherry": "Cherry",
+        "corn": "Corn",
+        "grape": "Grape",
+        "orange": "Orange",
+        "peach": "Peach",
+        "pepper": "Pepper",
+        "potato": "Potato",
+        "raspberry": "Raspberry",
+        "soybean": "Soybean",
+        "squash": "Squash",
+        "strawberry": "Strawberry",
+        "tomato": "Tomato"
+    },
+    "monitoring_policy": {
+        "complete_crop_journey": true,
+        "weather_aware": true,
+        "location_aware": true,
+        "crop_specific_calendar": true,
+        "dynamic_calendar": true,
+        "notifications": true,
+        "disease_inspection_only": true,
+        "marketplace_integration": true
+    },
+    "generated_at": "2026-08-31T18:41:29.862005"
+}

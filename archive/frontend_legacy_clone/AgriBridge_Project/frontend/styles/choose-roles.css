@@ -1,0 +1,48 @@
+/* ==========================================================================
+   AGRIBRIDGE — CHOOSE ROLE STYLES (Login & Signup)
+   Agrova-Inspired Clean Authentication UI
+   ========================================================================== */
+
+.container {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.signup-card {
+    background: #FFFFFF;
+    padding: 48px;
+    border-radius: var(--ab-radius-xl);
+    box-shadow: var(--ab-shadow-md);
+    border: 1px solid var(--ab-border);
+    text-align: center;
+    position: relative;
+}
+
+.card-header {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-header h2 {
+    color: var(--ab-primary-dark);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.card-header p {
+    color: var(--ab-text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#continue-btn, .primary-btn {
+    width: 100%;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+}

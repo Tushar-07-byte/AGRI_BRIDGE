@@ -4,137 +4,419 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My Listings - AgriBridge</title>
-
-    <link rel="stylesheet" href="../styles/crop-listings.css">
+    <title>My Listings — AgriBridge Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/crop-listings.css">
 </head>
 
 <body>
 
-    <main class="listings-page">
+    <!-- ========================================= -->
+    <!-- NAVIGATION                                -->
+    <!-- ========================================= -->
+    <nav class="nav">
+        <div class="logo">
+            <a href="/frontend/pages/index.html">
+                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+            </a>
+        </div>
 
-        <section class="listings-header">
+        <div class="mid">
+            <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+            <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
+            <a href="/frontend/pages/crop-recommendation.html" data-i18n="landing.cropRecommendation">Recommendations</a>
+            <a href="/frontend/pages/crop-listings.html" class="active" data-i18n="nav.myListings">My Listings</a>
+            <a href="/frontend/pages/voice-assistant.html" data-i18n="nav.voiceAssistant">Voice AI</a>
+            <a href="/frontend/pages/farmer-profile.html" data-i18n="nav.myProfile">Profile</a>
+        </div>
 
-            <h1>My Crop Listings 🌾</h1>
-
-            <p>
-                View the crops you have submitted and track their
-                verification and buyer status.
-            </p>
-
-        </section>
-
-
-        <!-- Crop Listing -->
-
-        <section class="listing-card">
-
-            <!-- Crop Image -->
-
-            <div class="listing-image-container">
-
-                <img
-                    id="crop-image"
-                    src=""
-                    alt="Crop image"
-                >
-
-            </div>
-
-
-            <!-- Crop Details -->
-
-            <div class="listing-details">
-
-                <h2 id="crop-name">
-                    Crop Name
-                </h2>
-
-                <div class="detail-row">
-                    <span>Quantity</span>
-                    <strong id="crop-quantity">-</strong>
-                </div>
-
-                <div class="detail-row">
-                    <span>Harvest Date</span>
-                    <strong id="harvest-date">-</strong>
-                </div>
-
-                <div class="detail-row">
-                    <span>Location</span>
-                    <strong id="crop-location">-</strong>
-                </div>
-
-
-                <!-- Verification Status -->
-
-                <div class="status-row">
-
-                    <span>Verification</span>
-
-                    <span
-                        id="verification-status"
-                        class="status pending">
-                        Pending
-                    </span>
-
-                </div>
-
-
-                <!-- Buyer Status -->
-
-                <div class="status-row">
-
-                    <span>Buyer Status</span>
-
-                    <span
-                        id="buyer-status"
-                        class="status pending">
-                        No Buyer Yet
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- No Listing Message -->
-
-        <div
-            id="no-listing"
-            class="no-listing">
-
-            <h2>No crops submitted yet 🌱</h2>
-
-            <p>
-                Upload your first crop to create a listing.
-            </p>
-
-            <button id="upload-button">
-                Upload Crop
+        <div class="register">
+            <button type="button" class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/farmer-dashboard.html'">
+                ← Back to Dashboard
             </button>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- MAIN LISTINGS CONTAINER                   -->
+    <!-- ========================================= -->
+    <main class="listings-page-container">
+
+        <!-- HEADER -->
+        <header class="listings-header-card">
+            <div class="listings-header-left">
+                <div class="ab-badge ab-badge-gold">🛒 AGRIBRIDGE MARKETPLACE</div>
+                <h1 data-i18n="cropListings.title">AgriBridge Marketplace & Guidance</h1>
+                <p data-i18n="cropListings.description">
+                    Access Pre-Harvest market intelligence and advance forward listings, or discover home cleaning protocols and quality grading for potential post-harvest premium prices.
+                </p>
+            </div>
+            <div class="listings-header-action">
+                <button class="stylish-btn ab-btn-primary" onclick="window.location.href='/frontend/pages/upload-crop.html'">
+                    + List Crop
+                </button>
+            </div>
+        </header>
+
+        <!-- MARKETPLACE PHASE NAVIGATION TABS -->
+        <div class="marketplace-phase-tabs" role="tablist">
+            <button class="phase-tab-btn active" id="tab-btn-pre-harvest" onclick="switchMarketplacePhase('pre-harvest')">
+                <span class="phase-tab-icon">🌾</span>
+                <span class="phase-tab-text">1. Pre-Harvest Marketplace</span>
+            </button>
+            <button class="phase-tab-btn" id="tab-btn-post-harvest" onclick="switchMarketplacePhase('post-harvest')">
+                <span class="phase-tab-icon">✨</span>
+                <span class="phase-tab-text">2. Post-Harvest — Cleaned Crop</span>
+            </button>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- PHASE 1: PRE-HARVEST MARKETPLACE PANEL                           -->
+        <!-- ================================================================= -->
+        <div id="panel-pre-harvest" class="marketplace-phase-panel active">
+
+            <!-- Market Intelligence Row -->
+            <section class="preharvest-intel-grid">
+                <div class="intel-card">
+                    <span class="intel-label">Mandi Benchmark Rate</span>
+                    <div class="intel-val" id="intel-mandi-price">₹2,275 / qtl</div>
+                    <span class="intel-sub" id="intel-market-loc">Khanna / Varanasi APMC Mandi</span>
+                </div>
+                <div class="intel-card">
+                    <span class="intel-label">Market Price Trend</span>
+                    <div class="intel-val text-success" id="intel-trend">📈 Bullish (+2.4%)</div>
+                    <span class="intel-sub">Based on regional mandi arrivals</span>
+                </div>
+                <div class="intel-card">
+                    <span class="intel-label">Estimated Days to Harvest</span>
+                    <div class="intel-val" id="intel-harvest-days">~24 Days</div>
+                    <span class="intel-sub" id="intel-harvest-date">Target: 28 Mar 2026</span>
+                </div>
+            </section>
+
+            <!-- Selling Guidance Card -->
+            <section class="preharvest-guidance-card">
+                <div class="guidance-card-header">
+                    <span class="guidance-icon">💡</span>
+                    <h3>Pre-Harvest Selling & Market Guidance</h3>
+                </div>
+                <p id="preharvest-selling-guidance-text">
+                    Mandi price for Wheat is currently Bullish at ₹2,275/quintal (+2.4% in Khanna APMC). Harvest is estimated in 24 days. You can list your upcoming croplot in the Pre-Harvest Marketplace to connect with advance wholesale buyers.
+                </p>
+                <div class="market-reminders-box">
+                    <strong>Market Preparation Reminders:</strong>
+                    <ul id="preharvest-reminders-list">
+                        <li>Monitor local APMC mandi price arrivals 7-10 days before harvest</li>
+                        <li>Engage verified buyers via advance forward crop listings</li>
+                        <li>Prepare transport crates or clean gunny bags before harvest week</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- CROP LISTING CARD (EXPLICITLY PRE-HARVEST) -->
+            <section class="listing-showcase-card">
+
+                <!-- Crop Image -->
+                <div class="listing-image-container">
+                    <img id="crop-image" src="/frontend/assets/images/farmer.png" alt="Crop image" class="crop-img-view">
+                    <div class="listing-badge-overlay">
+                        <span class="ab-badge ab-badge-preharvest">CROP LISTING — VALID ONLY FOR PRE-HARVEST MARKETPLACE</span>
+                    </div>
+                </div>
+
+                <!-- Crop Details -->
+                <div class="listing-details-col">
+
+                    <div class="listing-title-row">
+                        <h2 id="crop-name" class="crop-title">Sharbati Wheat</h2>
+                        <span class="crop-category-tag">Cereal / Grain</span>
+                    </div>
+
+                    <div class="details-grid-box">
+                        <div class="detail-stat-item">
+                            <span data-i18n="cropListings.quantity">Estimated Quantity</span>
+                            <strong id="crop-quantity">-</strong>
+                        </div>
+
+                        <div class="detail-stat-item">
+                            <span data-i18n="cropListings.harvestDate">Target Harvest Date</span>
+                            <strong id="harvest-date">-</strong>
+                        </div>
+
+                        <div class="detail-stat-item">
+                            <span data-i18n="cropListings.location">Farm Location</span>
+                            <strong id="crop-location">-</strong>
+                        </div>
+                    </div>
+
+                    <!-- Status Badges Row -->
+                    <div class="status-badges-row">
+                        <div class="status-box">
+                            <span class="status-box-label" data-i18n="cropListings.verification">Field Verification:</span>
+                            <span id="verification-status" class="status-chip-view pending">Pending</span>
+                        </div>
+
+                        <div class="status-box">
+                            <span class="status-box-label" data-i18n="cropListings.buyerStatus">Buyer Status:</span>
+                            <span id="buyer-status" class="status-chip-view pending">No Buyer Yet</span>
+                        </div>
+                    </div>
+
+                    <!-- Pre-Harvest Phase Notice -->
+                    <div class="preharvest-notice-box">
+                        ℹ️ <em>Pre-harvest listing is for discovering advance wholesale buyers before harvest. Cleaning, sorting, and quality grading apply strictly after harvest.</em>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="listing-actions-row">
+                        <button class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/ai-result.html'">
+                            🩺 View AI Health Scan
+                        </button>
+                        <button class="stylish-btn ab-btn-primary" onclick="window.location.href='/frontend/pages/orders.html'">
+                            📦 Manage Orders
+                        </button>
+                    </div>
+
+                </div>
+
+            </section>
 
         </div>
 
+        <!-- ================================================================= -->
+        <!-- PHASE 2: POST-HARVEST — CLEANED CROP PANEL                       -->
+        <!-- ================================================================= -->
+        <div id="panel-post-harvest" class="marketplace-phase-panel">
 
-        <!-- Back Button -->
+            <!-- Farmer Message Banner -->
+            <section class="postharvest-banner-card">
+                <div class="banner-badge">✨ POST-HARVEST QUALITY ENHANCEMENT</div>
+                <h2 class="banner-quote">
+                    "If you want to earn more, clean, dry and properly sort your harvested crop at home. After quality assessment, you may become eligible for a potential premium price."
+                </h2>
+                <p class="banner-subtitle">
+                    Harvested crops sold raw often receive standard market rates. Taking simple cleaning, drying, and sorting steps at home improves grade quality and can unlock higher buyer offers.
+                </p>
+            </section>
 
-        <button
-            id="dashboard-button"
-            class="dashboard-button">
+            <!-- 8-Step Visual Process Flow -->
+            <section class="postharvest-flow-card">
+                <h3 class="flow-title">8-Step Post-Harvest Value Realization Flow</h3>
+                <div class="flow-steps-container">
+                    <div class="flow-step-item">
+                        <span class="step-num">1</span>
+                        <span class="step-text">HARVEST</span>
+                    </div>
+                    <span class="flow-arrow">➔</span>
+                    <div class="flow-step-item">
+                        <span class="step-num">2</span>
+                        <span class="step-text">CLEANING AT HOME</span>
+                    </div>
+                    <span class="flow-arrow">➔</span>
+                    <div class="flow-step-item">
+                        <span class="step-num">3</span>
+                        <span class="step-text">DRYING</span>
+                    </div>
+                    <span class="flow-arrow">➔</span>
+                    <div class="flow-step-item">
+                        <span class="step-num">4</span>
+                        <span class="step-text">SORTING</span>
+                    </div>
+                    <span class="flow-arrow">➔</span>
+                    <div class="flow-step-item">
+                        <span class="step-num">5</span>
+                        <span class="step-text">QUALITY ASSESSMENT</span>
+                    </div>
+                    <span class="flow-arrow">➔</span>
+                    <div class="flow-step-item">
+                        <span class="step-num">6</span>
+                        <span class="step-text">QUALITY GRADE</span>
+                    </div>
+                    <span class="flow-arrow">➔</span>
+                    <div class="flow-step-item">
+                        <span class="step-num">7</span>
+                        <span class="step-text">POTENTIAL PREMIUM</span>
+                    </div>
+                    <span class="flow-arrow">➔</span>
+                    <div class="flow-step-item">
+                        <span class="step-num">8</span>
+                        <span class="step-text">OPTIONAL LISTING</span>
+                    </div>
+                </div>
+            </section>
 
-            ← Back to Dashboard
+            <!-- Crop Cleaning Protocols & Quality Calculator Grid -->
+            <div class="postharvest-twocol-grid">
 
-        </button>
+                <!-- Col 1: Cleaning & Sorting Protocol Guide -->
+                <section class="cleaning-protocol-card">
+                    <div class="protocol-header">
+                        <h3>🌿 Home Cleaning & Sorting Guide</h3>
+                        <select id="protocol-crop-select" class="protocol-select" onchange="updateCropCleaningProtocol()">
+                            <option value="wheat" selected>🌾 Wheat (गेहूं)</option>
+                            <option value="rice">🌾 Rice / Paddy (धान)</option>
+                            <option value="tomato">🍅 Tomato (टमाटर)</option>
+                            <option value="potato">🥔 Potato (आलू)</option>
+                            <option value="corn">🌽 Corn / Maize (मक्का)</option>
+                            <option value="soybean">🌱 Soybean (सोयाबीन)</option>
+                        </select>
+                    </div>
+
+                    <div class="protocol-content" id="protocol-details-container">
+                        <div class="proto-section">
+                            <h4>1. Cleaning at Home</h4>
+                            <ul id="proto-cleaning-steps">
+                                <li>Sieve harvested grain with standard 2mm mesh to remove chaff, weed seeds, and small stones.</li>
+                                <li>Use winnowing fan or gentle wind to blow away light husk and dust.</li>
+                            </ul>
+                        </div>
+                        <div class="proto-section">
+                            <h4>2. Drying Protocol</h4>
+                            <p id="proto-drying-steps">Sun dry grain on clean tarpaulin for 1-2 days until moisture drops below 12%. Avoid drying directly on bare soil.</p>
+                        </div>
+                        <div class="proto-section">
+                            <h4>3. Sorting & Grading</h4>
+                            <p id="proto-sorting-steps">Remove broken grains, shriveled kernels, and discolored seeds manually or using grading screens.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Col 2: Quality Assessment & Premium Calculator -->
+                <section class="quality-calculator-card">
+                    <div class="calc-header">
+                        <h3>🧪 Quality Assessment & Premium Calculator</h3>
+                        <span class="calc-sub">Evaluate physical parameters to determine Achieved Grade</span>
+                    </div>
+
+                    <form id="quality-assessment-form" onsubmit="calculateQualityAssessment(event)">
+                        
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="calc-target-grade">Target Grade (Farmer Selected):</label>
+                                <select id="calc-target-grade" class="calc-input">
+                                    <option value="Grade A" selected>Grade A (Highest Premium)</option>
+                                    <option value="Grade B">Grade B (Moderate Premium)</option>
+                                    <option value="Grade C">Grade C (Standard Base Rate)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="calc-base-price">Base Mandi Price (₹/qtl):</label>
+                                <input type="number" id="calc-base-price" class="calc-input" value="2275" min="500" max="20000" step="5">
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="calc-moisture">Moisture Content (%):</label>
+                                <input type="number" id="calc-moisture" class="calc-input" value="11.5" min="0" max="35" step="0.1" required>
+                                <span class="input-hint">Ideal for Grade A: &le; 12.0%</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="calc-foreign-matter">Foreign Matter / Dust (%):</label>
+                                <input type="number" id="calc-foreign-matter" class="calc-input" value="0.6" min="0" max="20" step="0.1" required>
+                                <span class="input-hint">Ideal for Grade A: &le; 1.0%</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="calc-defects">Defects / Damaged (%):</label>
+                                <input type="number" id="calc-defects" class="calc-input" value="1.2" min="0" max="30" step="0.1" required>
+                                <span class="input-hint">Ideal for Grade A: &le; 2.0%</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="calc-uniformity">Size Uniformity (%):</label>
+                                <input type="number" id="calc-uniformity" class="calc-input" value="94" min="0" max="100" step="1">
+                                <span class="input-hint">Ideal for Grade A: &ge; 90%</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="stylish-btn ab-btn-primary full-width-btn" id="btn-assess-quality">
+                            🔬 Calculate Quality Grade & Potential Premium
+                        </button>
+                    </form>
+
+                    <!-- Assessment Result Showcase -->
+                    <div id="quality-result-box" class="quality-result-box" style="display: none;">
+                        <div class="result-top-row">
+                            <div class="grade-comparison">
+                                <div class="grade-pill">
+                                    <span class="grade-label">Target Grade:</span>
+                                    <strong id="res-target-grade">Grade A</strong>
+                                </div>
+                                <span class="grade-vs">➔</span>
+                                <div class="grade-pill achieved">
+                                    <span class="grade-label">Achieved Grade:</span>
+                                    <strong id="res-achieved-grade" class="grade-highlight">Grade A</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="premium-pricing-display">
+                            <div class="price-box base">
+                                <span class="p-label">Base Mandi Rate</span>
+                                <span class="p-val" id="res-base-price">₹2,275 / qtl</span>
+                            </div>
+                            <div class="price-arrow">➔</div>
+                            <div class="price-box premium">
+                                <span class="p-label">Potential Premium Price</span>
+                                <span class="p-val text-success" id="res-premium-price">₹2,730 / qtl</span>
+                                <span class="p-badge" id="res-premium-pct">+20% Upside</span>
+                            </div>
+                        </div>
+
+                        <p class="assessment-explanation" id="res-explanation">
+                            Cleaned lot meets strict Grade A moisture (&le;12%) and purity specifications.
+                        </p>
+
+                        <div class="disclaimer-note">
+                            ⚠️ <strong>Disclaimer:</strong> Potential configured premium price estimate. Final realization depends on buyer agreement, market demand, and physical lot inspection upon delivery.
+                        </div>
+
+                        <div class="result-action-row">
+                            <button class="stylish-btn ab-btn-primary full-width-btn" onclick="alert('Cleaned crop lot registered! You can now publish an optional premium listing.')">
+                                📋 List Cleaned Crop (Optional)
+                            </button>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
 
     </main>
 
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-bottom" style="border: none; padding: 0;">
+            <p>© 2026 AgriBridge. Verified Agricultural Marketplace.</p>
+            <div class="footer-bottom-links">
+                <a href="/frontend/pages/farmer-dashboard.html">Dashboard</a> •
+                <a href="/frontend/pages/weather-dashboard.html">Weather</a>
+            </div>
+        </div>
+    </footer>
 
-    <script src="../scripts/crop-listings.js"></script>
+    <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
+    <a href="/frontend/pages/voice-assistant.html?from_page=crop-listings" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
+        title="Voice Farming Assistant / आवाज से पूछें">
+        <div class="voice-mic-icon-box">
+            <div class="voice-pulse-ring"></div>
+            🎙️
+        </div>
+        <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
+    </a>
 
+    <!-- SCRIPTS -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/auth.js"></script>
+    <script src="/frontend/scripts/crop-listings.js"></script>
 </body>
 
 </html>

@@ -141,3 +141,43 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Python & Pytest
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+*.sqlite3
+
+# Scratch & Debug artifacts
+scratch/
+scratch_*
+*.log
+
+# Virtual environments
+venv/
+.venv/
+.venv*/
+backend/.venv*/
+
+# Staging & Local Archives
+AgriBridge_FINAL_SUBMISSION/
+AgriBridge_FINAL_SUBMISSION.zip
+*.zip
+*.tar.gz
+
+# Local databases & uploads
+*.db
+backend/agribridge.db
+uploads/
+backend/uploads/
+!uploads/.gitkeep
+!backend/uploads/.gitkeep
+
+# IDE and scratch files
+.vscode/
+walkthrough.md
+login_helper.html
+

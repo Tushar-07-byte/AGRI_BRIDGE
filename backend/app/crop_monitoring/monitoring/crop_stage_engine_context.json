@@ -1,0 +1,157 @@
+{
+    "crop_id": "tomato",
+    "crop_name": "Tomato",
+    "current_date": "2026-09-01",
+    "planting_date": "2026-09-01",
+    "days_after_planting": 0,
+    "lifecycle": {
+        "total_stages": 16,
+        "stages": [
+            {
+                "stage_key": "farm_preparation",
+                "stage_name": "Farm Preparation",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "soil_preparation",
+                "stage_name": "Soil Preparation",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "seed_treatment",
+                "stage_name": "Seed Selection / Treatment",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "sowing",
+                "stage_name": "Sowing",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "germination",
+                "stage_name": "Germination",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "early_growth",
+                "stage_name": "Early Growth",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "vegetative_growth",
+                "stage_name": "Vegetative Growth",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "nutrient_management",
+                "stage_name": "Nutrient Management",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "irrigation_management",
+                "stage_name": "Irrigation Management",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "disease_pest_monitoring",
+                "stage_name": "Disease & Pest Monitoring",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "weather_decisions",
+                "stage_name": "Weather-based Decisions",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "flowering_reproductive",
+                "stage_name": "Flowering / Reproductive Stage",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "maturity",
+                "stage_name": "Maturity",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "harvest_planning",
+                "stage_name": "Harvest Planning",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "post_harvest",
+                "stage_name": "Post-Harvest",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            {
+                "stage_key": "marketplace",
+                "stage_name": "Marketplace",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            }
+        ]
+    },
+    "management": {
+        "total_management_stages": 4,
+        "stages": [
+            {
+                "stage": "Transplanting",
+                "day_range": "Day 0",
+                "irrigation": "Ropai ke baad paani",
+                "fertilizer": "50kg DAP + 30kg MOP",
+                "crop_protection": "Damping off: Copper Oxychloride"
+            },
+            {
+                "stage": "Vegetative",
+                "day_range": "Day 15-20",
+                "irrigation": "5-7 din gap",
+                "fertilizer": "25kg Urea",
+                "crop_protection": "Whitefly / Virus: Cyantraniliprole / Imidacloprid"
+            },
+            {
+                "stage": "Flowering",
+                "day_range": "Day 35-40",
+                "irrigation": "Regular Drip/Flood",
+                "fertilizer": "Calcium Nitrate + Boron",
+                "crop_protection": "Early/Late Blight: Azoxystrobin + Difenoconazole"
+            },
+            {
+                "stage": "Fruiting",
+                "day_range": "Day 60+",
+                "irrigation": "Nami Maintain",
+                "fertilizer": "NPK 13-0-45 Weekly",
+                "crop_protection": "Fruit Borer: Spinetoram / Chlorantraniliprole"
+            }
+        ]
+    }
+}

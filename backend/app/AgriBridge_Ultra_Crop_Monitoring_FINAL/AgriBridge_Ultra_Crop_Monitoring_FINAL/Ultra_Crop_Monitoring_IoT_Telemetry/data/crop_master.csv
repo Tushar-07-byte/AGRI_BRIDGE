@@ -1,0 +1,17 @@
+﻿crop,total_duration_min,total_duration_max,harvest_window
+Wheat,120,140,120-140 days
+Rice,130,160,130-160 days
+Corn,90,140,90-140 days
+Potato,100,130,100-130 days
+Soybean,120,150,120-150 days
+Tomato,120,160,120-160 days
+Pepper,120,150,120-150 days
+Squash,90,120,90-120 days
+Strawberry,60,90,60-90 days
+Raspberry,90,120,90-120 days
+Grape,140,170,140-170 days
+Apple,160,180,160-180 days
+Peach,120,150,120-150 days
+Cherry,80,90,80-90 days
+Blueberry,100,130,100-130 days
+Orange,300,360,300-360 days

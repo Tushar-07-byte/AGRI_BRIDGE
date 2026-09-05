@@ -1,0 +1,74 @@
+{
+    "knowledge_entry": {
+        "knowledge_id": "",
+        "crop": {
+            "crop_name": "",
+            "variety": "",
+            "season": ""
+        },
+        "location": {
+            "country": "India",
+            "state": "",
+            "district": "",
+            "agro_climatic_zone": ""
+        },
+        "growth_stage": {
+            "stage_id": "",
+            "stage_name": "",
+            "days_after_sowing": {
+                "minimum": null,
+                "maximum": null
+            }
+        },
+        "activity": {
+            "activity_type": "",
+            "activity_name": "",
+            "recommended_window": {
+                "minimum_day": null,
+                "maximum_day": null
+            },
+            "conditions": [],
+            "purpose": ""
+        },
+        "irrigation": {
+            "required": false,
+            "conditions": [],
+            "soil_moisture_range": {
+                "minimum": null,
+                "maximum": null
+            }
+        },
+        "nutrient_management": {
+            "required": false,
+            "nutrient": "",
+            "conditions": [],
+            "soil_test_required": true
+        },
+        "disease_management": {
+            "monitoring_required": false,
+            "risk_conditions": [],
+            "inspection_frequency": ""
+        },
+        "weather_constraints": {
+            "avoid_rain": false,
+            "avoid_high_wind": false,
+            "avoid_extreme_temperature": false,
+            "minimum_weather_gap_hours": null
+        },
+        "harvest": {
+            "maturity_indicators": [],
+            "recommended_harvest_window": ""
+        },
+        "source": {
+            "organization": "",
+            "document": "",
+            "reference": "",
+            "year": null
+        },
+        "verification": {
+            "verified": false,
+            "verified_by": "",
+            "verification_date": ""
+        }
+    }
+}

@@ -1,0 +1,16 @@
+# AgriBridge Database
+
+Project : AgriBridge
+
+Role : Database Engineer
+
+Database : MySQL
+
+Tables
+1. Farmers
+2. Buyers
+3. Listings
+4. Orders
+
+Prepared By:
+AYUSHMAN

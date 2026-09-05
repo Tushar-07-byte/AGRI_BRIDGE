@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Assistant — AgriBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/voice-assistant.css">
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- NAVIGATION                                -->
+    <!-- ========================================= -->
+    <nav class="nav">
+        <div class="logo">
+            <a href="/frontend/pages/index.html">
+                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+            </a>
+        </div>
+
+        <div class="mid">
+            <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+            <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
+            <a href="/frontend/pages/crop-recommendation.html" data-i18n="landing.cropRecommendation">Recommendations</a>
+            <a href="/frontend/pages/crop-listings.html" data-i18n="nav.marketplace">Marketplace</a>
+            <a href="/frontend/pages/voice-assistant.html" class="active" data-i18n="nav.voiceAssistant">Voice AI</a>
+            <a href="/frontend/pages/farmer-profile.html" data-i18n="nav.myProfile">Profile</a>
+        </div>
+
+        <div class="register">
+            <button type="button" class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/farmer-dashboard.html'">
+                ← Back to Dashboard
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- VOICE ASSISTANT MAIN CONTAINER            -->
+    <!-- ========================================= -->
+    <main class="voice-assistant-page">
+
+        <!-- HEADER -->
+        <header class="assistant-header">
+            <div class="header-badge" data-i18n="voiceAssistant.agricultureOnlyNote">
+                🌱 Note: This assistant only answers agriculture and farming questions.
+            </div>
+            <h1 data-i18n="voiceAssistant.title">AgriBridge Voice Assistant</h1>
+            <p data-i18n="voiceAssistant.subtitle">
+                Ask any farming, crop disease, irrigation, or weather question in your preferred Indian language.
+            </p>
+        </header>
+
+        <!-- ACTIVE FARM & CROP CONTEXT -->
+        <section class="farm-context-bar">
+            <div class="context-item">
+                <span class="context-icon">🌾</span>
+                <span class="context-label" data-i18n="voiceAssistant.cropContext">Active Crop:</span>
+                <select id="context-crop" class="context-select">
+                    <option value="">Select Crop (Optional)</option>
+                    <option value="Wheat">Wheat</option>
+                    <option value="Rice">Rice</option>
+                    <option value="Potato">Potato</option>
+                    <option value="Tomato">Tomato</option>
+                    <option value="Cotton">Cotton</option>
+                    <option value="Soybean">Soybean</option>
+                    <option value="Corn">Corn</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Grape">Grape</option>
+                    <option value="Chilli">Chilli</option>
+                    <option value="Sugarcane">Sugarcane</option>
+                    <option value="Onion">Onion</option>
+                </select>
+            </div>
+
+            <div class="context-item">
+                <span class="context-icon">🌿</span>
+                <span class="context-label" data-i18n="voiceAssistant.growthStage">Growth Stage:</span>
+                <select id="context-growth-stage" class="context-select">
+                    <option value="">Select Stage</option>
+                    <option value="Seedling">Seedling</option>
+                    <option value="Vegetative">Vegetative</option>
+                    <option value="Flowering">Flowering</option>
+                    <option value="Fruiting">Fruiting</option>
+                    <option value="Maturity">Maturity</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- CONVERSATION / MESSAGE FEED -->
+        <section class="assistant-conversation-card">
+            <div id="assistant-conversation" class="conversation-feed">
+                <!-- Welcome greeting bubble -->
+                <div class="assistant-message bot-message">
+                    <div class="message-icon">🤖</div>
+                    <div class="message-content">
+                        <strong>AgriBridge</strong>
+                        <p id="assistant-welcome-message">
+                            Namaste! How can I help you with your crop or farming today?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VOICE INTERACTION CORE -->
+        <section class="voice-control-card">
+            <div class="pulse-container" id="pulse-wrapper">
+                <button type="button" id="voice-button" class="voice-mic-btn" aria-label="Tap to speak">
+                    🎙️
+                </button>
+            </div>
+
+            <div id="voice-status" class="voice-status-text" data-i18n="voiceAssistant.idle">
+                Tap the microphone and ask your farming question
+            </div>
+
+            <div class="voice-actions-row">
+                <button type="button" id="stop-voice-btn" class="stylish-btn ab-btn-secondary" style="display: none;">
+                    ⏹️ Stop
+                </button>
+                <button type="button" id="replay-voice-btn" class="stylish-btn ab-btn-gold" style="display: none;">
+                    🔊 Replay Answer
+                </button>
+            </div>
+        </section>
+
+        <!-- TEXT FALLBACK INTERFACE -->
+        <section class="text-fallback-card">
+            <div class="text-fallback-toggle">
+                <span class="toggle-icon">⌨️</span>
+                <span data-i18n="voiceAssistant.typeInstead">Type your question instead:</span>
+            </div>
+            <form id="text-assistant-form" class="text-input-group">
+                <input
+                    type="text"
+                    id="assistant-text-input"
+                    class="text-query-field"
+                    placeholder="Ask about crop diseases, irrigation, weather, fertilizer..."
+                    data-i18n-placeholder="voiceAssistant.typePlaceholder"
+                    autocomplete="off"
+                >
+                <button type="submit" id="send-text-btn" class="stylish-btn ab-btn-primary" data-i18n="voiceAssistant.send">
+                    Ask Assistant →
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- AUDIO PLAYER -->
+    <audio id="assistant-audio-player" style="display: none;"></audio>
+
+    <!-- SCRIPTS -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/voice-assistant.js"></script>
+
+</body>
+
+</html>

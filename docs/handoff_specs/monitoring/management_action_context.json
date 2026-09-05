@@ -1,0 +1,25 @@
+{
+    "crop_id": "tomato",
+    "crop_name": "Tomato",
+    "current_stage": null,
+    "management_available": false,
+    "management_action": null,
+    "weather": {
+        "status": "available",
+        "risk": "high",
+        "decision": "Keep",
+        "reason": "Current weather conditions do not indicate a major reason to change scheduled crop activities."
+    },
+    "date": {
+        "current_date": "2026-09-01",
+        "planting_date": "2026-09-01",
+        "days_after_planting": 0
+    },
+    "disease_policy": {
+        "inspection_only": true,
+        "diagnosis": false,
+        "prediction": false,
+        "model_inference": false
+    },
+    "marketplace": "AgriBridge Marketplace"
+}

@@ -1,0 +1,39 @@
+{
+  "project": "AgriBridge AI",
+  "module": "Ultra Crop Monitoring + IoT Telemetry",
+  "handoff_version": "1.0",
+  "generated_at": "2026-09-03T19:44:00.876366",
+  "status": "READY",
+  "main_document": "README_BACKEND_HANDOFF.md",
+  "schemas": [
+    "schemas/monitoring_input_schema.json",
+    "schemas/monitoring_output_schema.json",
+    "schemas/notification_action_schema.json",
+    "schemas/api_contract.json"
+  ],
+  "examples": [
+    "examples/monitoring_request_auto_stage.json",
+    "examples/monitoring_request_manual_stage.json",
+    "examples/notification_action_examples.json"
+  ],
+  "dynamic_fields": [
+    "farm_id",
+    "field_id",
+    "telemetry_id",
+    "state",
+    "district",
+    "village",
+    "latitude",
+    "longitude",
+    "crop_name",
+    "planting_date",
+    "crop_stage_mode",
+    "crop_stage",
+    "telemetry"
+  ],
+  "weather_source": "LIVE_REAL",
+  "iot_source": "SYNTHETIC_HACKATHON_DEMO",
+  "physical_sensor_connected": false,
+  "llm_provider": "Google Gemini",
+  "llm_role": "Explanation layer only"
+}

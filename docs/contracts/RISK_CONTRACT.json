@@ -1,0 +1,16 @@
+{
+  "dimensions": [
+    "weather",
+    "water_moisture",
+    "disease_pest_environment",
+    "nutrient",
+    "market"
+  ],
+  "disease_rule": "Inspection-only; do not treat as definitive diagnosis.",
+  "escalation": {
+    "low": "routine monitoring",
+    "moderate": "farmer action + monitoring",
+    "high": "field agent",
+    "critical": "field agent"
+  }
+}

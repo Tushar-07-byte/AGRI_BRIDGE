@@ -1,0 +1,38 @@
+{
+    "package": "AgriBridge AI/ML Handoff",
+    "generated_at": "2026-09-01T08:09:17.705232",
+    "country": "India",
+    "supported_crops": 16,
+    "model_files_copied": 12,
+    "components": {
+        "knowledge_base": true,
+        "llm": true,
+        "prompts": true,
+        "schemas": true,
+        "monitoring": true,
+        "weather": true,
+        "calendar": true,
+        "notifications": true,
+        "marketplace": true
+    },
+    "gemini": {
+        "provider": "Google Gemini",
+        "model": "gemini-3.6-flash",
+        "api_key_included": false
+    },
+    "weather": {
+        "provider": "Open-Meteo",
+        "dynamic_location": true
+    },
+    "calendar": {
+        "date_tracking": true,
+        "notifications_supported": true
+    },
+    "safety": {
+        "disease_inspection_only": true,
+        "diagnosis": false,
+        "prediction": false,
+        "model_inference": false
+    },
+    "backend_code_included": false
+}

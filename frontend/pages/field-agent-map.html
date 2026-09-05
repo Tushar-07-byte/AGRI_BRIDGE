@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriBridge | Field Agent Agricultural Map & Verification</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        crossorigin=""
+    >
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/frontend/styles/field-agent-map.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =========================================
+         SIDEBAR NAVIGATION
+    ========================================== -->
+    <aside class="sidebar">
+
+        <div class="brand" style="cursor: pointer;" onclick="window.location.href='/frontend/pages/field-agent-dashboard.html'">
+            <div class="brand-logo">
+                🌾
+            </div>
+            <div>
+                <h1>AgriBridge</h1>
+                <span>Field Agent Portal</span>
+            </div>
+        </div>
+
+        <div class="agent-card">
+            <div class="agent-avatar">
+                FA
+            </div>
+            <div>
+                <strong>Field Agent #104</strong>
+                <small>
+                    <span class="online-dot" id="sidebarGpsDot"></span>
+                    <span id="agentStatusText">GPS Ready • Online</span>
+                </small>
+            </div>
+        </div>
+
+        <!-- Sidebar Nav Items with IDs & Data Views -->
+        <nav class="sidebar-nav">
+            <a href="/frontend/pages/field-agent-dashboard.html" class="nav-item" style="text-decoration: none; color: inherit;">
+                <span class="nav-icon">📊</span>
+                Dashboard
+            </a>
+            <button class="nav-item active" id="navMapBtn" data-view="map" type="button">
+                <span class="nav-icon">🗺️</span>
+                Field Map
+            </button>
+
+            <button class="nav-item" id="navFieldsBtn" data-view="fields" type="button">
+                <span class="nav-icon">🌾</span>
+                Farmer Fields
+                <span class="nav-badge" id="navFieldsCount">12</span>
+            </button>
+
+            <button class="nav-item" id="navVerificationBtn" data-view="verification" type="button">
+                <span class="nav-icon">✓</span>
+                Verification
+                <span class="nav-badge pending" id="navPendingBadge">9</span>
+            </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="legend-title">
+                MAP STATUS
+            </div>
+
+            <div class="legend-row">
+                <span class="legend-dot pending"></span>
+                Pending Verification
+            </div>
+
+            <div class="legend-row">
+                <span class="legend-dot verified"></span>
+                Verified & Approved
+            </div>
+
+            <div class="legend-row">
+                <span class="legend-dot rejected"></span>
+                Rejected / Flagged
+            </div>
+
+            <button id="resetDemoBtn" class="demo-reset-btn" type="button">
+                🔄 Reset Demo Data
+            </button>
+        </div>
+
+    </aside>
+
+    <!-- =========================================
+         MAIN CONTENT AREA
+    ========================================== -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+            <div>
+                <div class="eyebrow" id="topbarEyebrow">
+                    FIELD OPERATIONS
+                </div>
+                <h2 id="topbarTitle">
+                    Farmer Field Map
+                </h2>
+                <p id="topbarSubtitle">
+                    Locate registered farmer fields, inspect crops, and verify field submissions.
+                </p>
+            </div>
+
+            <div class="top-actions">
+                <div class="location-pill" id="gpsPill" title="Click to view GPS Telemetry">
+                    <span class="online-dot" id="topbarGpsDot"></span>
+                    <span id="gpsPillText">GPS Ready</span>
+                </div>
+
+                <button id="liveGpsToggleBtn" class="btn-gps-live" type="button" title="Toggle Continuous Real-time GPS Tracking">
+                    📡 Live GPS Track
+                </button>
+
+                <button id="getLocationBtn" class="location-btn" type="button" title="Get Instant GPS Coordinates">
+                    📍 My Location
+                </button>
+            </div>
+        </header>
+
+        <!-- =========================================
+             VIEW 1: FIELD MAP VIEW
+        ========================================== -->
+        <section id="viewMap" class="view-panel active">
+            <div class="map-wrapper">
+                <div id="map"></div>
+
+                <!-- GEOFENCE LIVE ALERT BANNER -->
+                <div class="geofence-banner" id="geofenceBanner">
+                    <span>🌾</span>
+                    <span id="geofenceBannerText">GEOFENCE ACTIVE: Inside Field #1 (Ramesh Kumar - Wheat)</span>
+                </div>
+
+                <!-- FLOATING SEARCH -->
+                <div class="floating-search">
+                    <span>🔎</span>
+                    <input
+                        id="farmerSearch"
+                        type="text"
+                        placeholder="Search farmer, crop, or village..."
+                        autocomplete="off"
+                    >
+                    <button id="clearSearchBtn" class="search-clear" type="button">✕</button>
+                </div>
+
+                <!-- STATUS FILTERS -->
+                <div class="map-filter">
+                    <button class="filter-btn active" data-filter="all" type="button">
+                        All
+                    </button>
+                    <button class="filter-btn" data-filter="Pending" type="button">
+                        Pending
+                    </button>
+                    <button class="filter-btn" data-filter="Verified" type="button">
+                        Verified
+                    </button>
+                </div>
+
+                <!-- MAP CONTROLS -->
+                <div class="map-tools">
+                    <button id="locateBtn" type="button" title="Center on My GPS Position">
+                        📍
+                    </button>
+                    <button id="liveGpsBtn" type="button" title="Toggle Live Continuous GPS Tracking">
+                        📡
+                    </button>
+                    <button id="toggleGpsHudBtn" type="button" title="Toggle GPS Telemetry HUD">
+                        🧭
+                    </button>
+                    <button id="gpsSurveyBtn" type="button" title="GPS Field Survey & Acreage Calculator">
+                        📐
+                    </button>
+                    <button id="resetBtn" type="button" title="Reset map view">
+                        ⛶
+                    </button>
+                </div>
+
+                <!-- GPS TELEMETRY HUD CARD -->
+                <div class="gps-hud-card" id="gpsHudCard">
+                    <div class="gps-hud-header">
+                        <div class="gps-hud-title">
+                            <span>🛰️</span> GPS TELEMETRY HUD
+                        </div>
+                        <button class="close-panel" id="closeGpsHud" style="position: static; width: 22px; height: 22px; font-size: 14px;" type="button">×</button>
+                    </div>
+
+                    <div class="gps-hud-grid">
+                        <div class="gps-hud-item">
+                            <span>GPS LATITUDE</span>
+                            <strong id="hudLat">21.251432</strong>
+                        </div>
+                        <div class="gps-hud-item">
+                            <span>GPS LONGITUDE</span>
+                            <strong id="hudLng">81.629618</strong>
+                        </div>
+                        <div class="gps-hud-item">
+                            <span>ACCURACY</span>
+                            <strong id="hudAccuracy">± 4.2 meters</strong>
+                        </div>
+                        <div class="gps-hud-item">
+                            <span>SPEED / ALT</span>
+                            <strong id="hudSpeedAlt">0 km/h • 284 m</strong>
+                        </div>
+                        <div class="gps-hud-item" style="grid-column: 1 / -1;">
+                            <span>GEOFENCE STATUS</span>
+                            <strong id="hudGeofence" style="color: #2e7d32;">Outside Farm Boundaries</strong>
+                        </div>
+                    </div>
+
+                    <div class="gps-hud-actions">
+                        <button class="btn-gps-mini" id="hudCopyCoordsBtn" type="button">
+                            📋 Copy GPS
+                        </button>
+                        <button class="btn-gps-mini" id="hudCenterMapBtn" type="button">
+                            📍 Center Map
+                        </button>
+                        <button class="btn-gps-mini" id="hudSurveyLaunchBtn" type="button">
+                            📐 Survey Farm
+                        </button>
+                    </div>
+                </div>
+
+                <!-- LIVE MAP SUMMARY STRIP -->
+                <div class="map-summary">
+                    <div>
+                        <span>FARMER FIELDS</span>
+                        <strong id="farmerCount">12</strong>
+                    </div>
+                    <div>
+                        <span>PENDING</span>
+                        <strong id="pendingCount">9</strong>
+                    </div>
+                    <div>
+                        <span>VERIFIED</span>
+                        <strong id="verifiedCount">3</strong>
+                    </div>
+                </div>
+
+                <!-- FIELD DETAILS SLIDE-IN PANEL -->
+                <div id="fieldDetails" class="field-panel hidden">
+                    <button id="closePanel" class="close-panel" type="button" title="Close details">
+                        ×
+                    </button>
+
+                    <div class="panel-label">
+                        SELECTED FARM FIELD
+                    </div>
+
+                    <div class="farmer-heading">
+                        <div id="farmerInitial" class="farmer-avatar">
+                            R
+                        </div>
+                        <div>
+                            <h3 id="selectedFarmer">
+                                Ramesh Kumar
+                            </h3>
+                            <span id="selectedStatus" class="status-badge pending">
+                                Pending
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="field-info">
+                        <div>
+                            <span>🌾 Crop</span>
+                            <strong id="selectedCrop">Wheat</strong>
+                        </div>
+                        <div>
+                            <span>📦 Quantity</span>
+                            <strong id="selectedQuantity">1000 kg</strong>
+                        </div>
+                        <div>
+                            <span>📅 Harvest</span>
+                            <strong id="selectedHarvest">15 Oct 2026</strong>
+                        </div>
+                        <div>
+                            <span>📍 Distance</span>
+                            <strong id="selectedDistance">--</strong>
+                        </div>
+                    </div>
+
+                    <div class="coordinates-small">
+                        <span>LAT</span>
+                        <strong id="selectedLat">21.2514</strong>
+                        <span>LON</span>
+                        <strong id="selectedLon">81.6296</strong>
+                    </div>
+
+                    <div class="panel-actions">
+                        <button id="verifyBtn" class="verify-btn" type="button">
+                            ✓ Verify Field
+                        </button>
+                        <button id="routeBtn" class="route-btn" type="button" title="Draw GPS Navigation Route on Map">
+                            🧭 Route
+                        </button>
+                        <button id="rejectBtn" class="reject-btn" type="button" title="Flag submission issues">
+                            ✕ Flag
+                        </button>
+                        <button id="directionsBtn" class="direction-btn" type="button" title="Open Google Maps directions">
+                            Google Maps
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             VIEW 2: FARMER FIELDS DIRECTORY
+        ========================================== -->
+        <section id="viewFields" class="view-panel" style="display: none;">
+            <div class="view-container">
+
+                <!-- KPI Metric Strip -->
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-icon">🌾</div>
+                        <div class="kpi-content">
+                            <span>TOTAL REGISTERED FIELDS</span>
+                            <strong id="kpiTotalFields">12 Fields</strong>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon pending">⏳</div>
+                        <div class="kpi-content">
+                            <span>AWAITING VERIFICATION</span>
+                            <strong id="kpiPendingFields">9 Pending</strong>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon verified">✅</div>
+                        <div class="kpi-content">
+                            <span>VERIFIED CROPS</span>
+                            <strong id="kpiVerifiedFields">3 Verified</strong>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon yield">📦</div>
+                        <div class="kpi-content">
+                            <span>TOTAL ESTIMATED YIELD</span>
+                            <strong id="kpiTotalYield">20,400 kg</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls & Filters -->
+                <div class="directory-controls">
+                    <div class="dir-search-wrap">
+                        <span>🔎</span>
+                        <input
+                            id="dirSearchInput"
+                            type="text"
+                            placeholder="Search farmer name, crop, village..."
+                        >
+                    </div>
+
+                    <div class="dir-filter-chips" id="cropFilterChips">
+                        <button class="chip-btn active" data-crop="all" type="button">All Crops</button>
+                        <button class="chip-btn" data-crop="Wheat" type="button">Wheat</button>
+                        <button class="chip-btn" data-crop="Rice" type="button">Rice</button>
+                        <button class="chip-btn" data-crop="Tomato" type="button">Tomato</button>
+                        <button class="chip-btn" data-crop="Maize" type="button">Maize</button>
+                        <button class="chip-btn" data-crop="Soybean" type="button">Soybean</button>
+                    </div>
+                </div>
+
+                <!-- Farmer Cards Grid -->
+                <div class="fields-grid" id="farmerCardsGrid">
+                    <!-- Populated dynamically by app.js -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================
+             VIEW 3: VERIFICATION OPERATIONS HUB
+        ========================================== -->
+        <section id="viewVerification" class="view-panel" style="display: none;">
+            <div class="view-container">
+
+                <!-- Header Banner -->
+                <div class="verification-header-banner">
+                    <div>
+                        <h3>Field Agent Verification Command Center</h3>
+                        <p>
+                            Perform on-site inspections, validate crop health and farm GPS boundaries, and issue official AgriBridge farmer verification credentials.
+                        </p>
+                    </div>
+                    <div class="top-actions">
+                        <button id="quickAuditNextBtn" class="location-btn" type="button" style="background: white; color: #1b5e20;">
+                            ⚡ Verify Next in Queue
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sub-tabs for Verification -->
+                <div class="verification-tabs-bar">
+                    <button class="v-tab-btn active" id="vTabPending" data-vtab="pending" type="button">
+                        Pending Queue
+                        <span class="v-count-badge" id="vBadgePending">4</span>
+                    </button>
+                    <button class="v-tab-btn" id="vTabAll" data-vtab="all" type="button">
+                        All Records & Audit History
+                        <span class="v-count-badge" id="vBadgeAll">5</span>
+                    </button>
+                </div>
+
+                <!-- Verification Items List -->
+                <div class="verification-list" id="verificationList">
+                    <!-- Populated dynamically by app.js -->
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<!-- =========================================
+     MOBILE BOTTOM NAVIGATION
+========================================== -->
+<div class="mobile-nav" id="mobileNav">
+    <a href="/frontend/pages/field-agent-dashboard.html" class="mobile-nav-item" style="text-decoration: none; color: inherit;">
+        <span class="m-icon">📊</span>
+        <span>Dashboard</span>
+    </a>
+    <button class="mobile-nav-item active" data-view="map" type="button">
+        <span class="m-icon">🗺️</span>
+        <span>Map</span>
+    </button>
+    <button class="mobile-nav-item" data-view="fields" type="button">
+        <span class="m-icon">🌾</span>
+        <span>Fields</span>
+    </button>
+    <button class="mobile-nav-item" data-view="verification" type="button">
+        <span class="m-icon">✓</span>
+        <span>Verify</span>
+    </button>
+</div>
+
+<!-- =========================================
+     GPS FIELD SURVEY & ACREAGE MODAL
+========================================== -->
+<div class="modal-overlay hidden" id="gpsSurveyModal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>📐 GPS Farm Boundary Survey</h3>
+            <button class="close-panel" id="closeSurveyModalBtn" type="button">×</button>
+        </div>
+
+        <div class="modal-body">
+            <div class="survey-stat-strip">
+                <div>
+                    <span>GPS POINTS RECORDED</span>
+                    <strong id="surveyPointCount">5 Points</strong>
+                </div>
+                <div>
+                    <span>SURVEYED AREA</span>
+                    <strong id="surveyCalculatedAcres">3.24 Acres</strong>
+                </div>
+                <div>
+                    <span>CLAIMED ACREAGE</span>
+                    <strong id="surveyClaimedAcres">3.20 Acres</strong>
+                </div>
+            </div>
+
+            <div class="checklist-group">
+                <div class="checklist-label">SURVEY INSTRUCTIONS</div>
+                <p style="font-size: 12px; color: #5a665b; line-height: 1.5; margin-bottom: 8px;">
+                    Walk around the perimeter corners of the agricultural parcel with GPS active. AgriBridge automatically samples boundary coordinates and computes geodesic acreage using Gauss's area theorem.
+                </p>
+            </div>
+
+            <div class="form-group">
+                <label>Select Farm for GPS Boundary Audit:</label>
+                <select id="surveyFarmerSelect" style="padding: 10px; border-radius: 8px; border: 1px solid #d4e0d2; width: 100%;">
+                    <!-- Populated by app.js -->
+                </select>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn-v-audit" id="surveySimulateWalkBtn" type="button">🚶 Simulate Walk Boundary</button>
+            <button class="btn-v-approve" id="surveyApplyBtn" type="button">✅ Confirm & Save GPS Boundary</button>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================
+     INSPECTION & VERIFICATION MODAL
+========================================== -->
+<div class="modal-overlay hidden" id="verificationModal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modalFarmerTitle">Field Inspection & Verification</h3>
+            <button class="close-panel" id="closeModalBtn" type="button">×</button>
+        </div>
+
+        <div class="modal-body">
+            <div class="modal-field-summary" id="modalFieldSummary">
+                <!-- Injected by app.js -->
+            </div>
+
+            <div class="checklist-group">
+                <div class="checklist-label">FIELD AGENT AUDIT CHECKLIST</div>
+                <label class="checkbox-row">
+                    <input type="checkbox" id="checkGps" checked>
+                    <span><strong>GPS Boundary Check:</strong> Physical farm matches mapped coordinates.</span>
+                </label>
+                <label class="checkbox-row">
+                    <input type="checkbox" id="checkCrop" checked>
+                    <span><strong>Crop Health & Variety:</strong> Crop standing condition is healthy and verified.</span>
+                </label>
+                <label class="checkbox-row">
+                    <input type="checkbox" id="checkYield" checked>
+                    <span><strong>Yield Estimate:</strong> Quantity is realistic based on farm acreage.</span>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="inspectorNotes">Field Agent Observation Notes:</label>
+                <textarea id="inspectorNotes" rows="3" placeholder="Enter on-site notes e.g., Inspected standing wheat crop. Good germination and moisture. Ready for mid-October harvest."></textarea>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn-v-reject" id="modalRejectBtn" type="button">✕ Flag Issue</button>
+            <button class="btn-v-approve" id="modalApproveBtn" type="button">✅ Submit Official Verification</button>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================
+     TOAST NOTIFICATIONS
+========================================== -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- Leaflet JS -->
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin="">
+</script>
+
+<!-- Main JavaScript -->
+<script src="/frontend/scripts/field-agent-map.js"></script>
+
+</body>
+</html>

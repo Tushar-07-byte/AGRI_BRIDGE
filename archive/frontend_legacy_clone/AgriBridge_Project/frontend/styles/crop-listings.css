@@ -1,0 +1,223 @@
+/* ==========================================================================
+   AGRIBRIDGE — CROP LISTINGS STYLES
+   Agrova-Inspired Marketplace Listings
+   ========================================================================== */
+
+.listings-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 36px 40px 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.listings-header-card {
+    background: linear-gradient(135deg, #10200D 0%, #1D3717 100%);
+    border-radius: var(--ab-radius-xl);
+    padding: 40px 48px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    box-shadow: var(--ab-shadow-md);
+    border: 1px solid var(--ab-border-dark);
+}
+
+.listings-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.listings-header-left h1 {
+    font-size: clamp(28px, 3vw, 38px);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+.listings-header-left p {
+    font-size: 15px;
+    color: #BDCEB7;
+    max-width: 640px;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   LISTING SHOWCASE CARD
+   ========================================================================== */
+
+.listing-showcase-card {
+    background: #FFFFFF;
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-xl);
+    padding: 36px;
+    box-shadow: var(--ab-shadow-sm);
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.listing-image-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    border-radius: var(--ab-radius-lg);
+    overflow: hidden;
+    background: var(--ab-warm-bg);
+    border: 1px solid var(--ab-border);
+}
+
+.crop-img-view {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.listing-badge-overlay {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+}
+
+.listing-details-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.listing-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.crop-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.crop-category-tag {
+    font-size: 12px;
+    font-weight: 700;
+    background: var(--ab-light-green);
+    color: var(--ab-primary-dark);
+    padding: 4px 12px;
+    border-radius: var(--ab-radius-full);
+}
+
+.details-grid-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    background: var(--ab-warm-bg);
+    padding: 18px 24px;
+    border-radius: var(--ab-radius-lg);
+    border: 1px solid var(--ab-border);
+}
+
+.detail-stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.detail-stat-item span {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ab-text-muted);
+}
+
+.detail-stat-item strong {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.status-badges-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.status-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.status-box-label {
+    font-weight: 700;
+    color: var(--ab-text-dark);
+}
+
+.status-chip-view {
+    padding: 6px 14px;
+    border-radius: var(--ab-radius-full);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.status-chip-view.pending {
+    background: var(--ab-warning-soft);
+    color: var(--ab-warning);
+    border: 1px solid rgba(237, 108, 2, 0.2);
+}
+
+.status-chip-view.verified, .status-chip-view.committed {
+    background: var(--ab-success-soft);
+    color: var(--ab-success);
+    border: 1px solid rgba(46, 125, 50, 0.2);
+}
+
+.listing-actions-row {
+    display: flex;
+    gap: 14px;
+    margin-top: 8px;
+}
+
+/* ==========================================================================
+   RESPONSIVENESS (Crop Listings)
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    .listing-showcase-card {
+        grid-template-columns: 1fr;
+    }
+    .listing-image-container {
+        height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .listings-page-container {
+        padding: 20px 16px 60px;
+        gap: 24px;
+    }
+    .listings-header-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 20px;
+    }
+    .listing-showcase-card {
+        padding: 24px 20px;
+    }
+    .details-grid-box {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .listing-actions-row {
+        flex-direction: column;
+    }
+}

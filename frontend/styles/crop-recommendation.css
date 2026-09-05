@@ -1,0 +1,249 @@
+/* ==========================================================================
+   AGRIBRIDGE — CROP RECOMMENDATION STYLES
+   Agrova-Inspired Crop Intelligence UI
+   ========================================================================== */
+
+.recommendation-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 36px 40px 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.rec-header-card {
+    background: linear-gradient(135deg, #10200D 0%, #1D3717 100%);
+    border-radius: var(--ab-radius-xl);
+    padding: 40px 48px;
+    color: #FFFFFF;
+    box-shadow: var(--ab-shadow-md);
+    border: 1px solid var(--ab-border-dark);
+}
+
+.rec-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rec-header-left h1 {
+    font-size: clamp(28px, 3vw, 38px);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+.rec-header-left p {
+    font-size: 15px;
+    color: #BDCEB7;
+    max-width: 640px;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   FORM CARD
+   ========================================================================== */
+
+.rec-form-card {
+    background: #FFFFFF;
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-xl);
+    padding: 36px 40px;
+    box-shadow: var(--ab-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.rec-form-header h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.rec-form-sub {
+    font-size: 13px;
+    color: var(--ab-text-muted);
+}
+
+.rec-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.rec-message-row {
+    grid-column: span 3;
+}
+
+.rec-submit-row {
+    grid-column: span 3;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rec-submit-btn {
+    padding: 14px 32px;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   RESULTS CARD & CROPS GRID
+   ========================================================================== */
+
+.rec-results-card {
+    background: #FFFFFF;
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-xl);
+    padding: 36px 40px;
+    box-shadow: var(--ab-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.results-header-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.results-header-row h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.rec-summary-bar {
+    background: var(--ab-warm-bg);
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-md);
+    padding: 18px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.rec-crops-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.rec-crop-card {
+    background: var(--ab-warm-bg);
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all var(--ab-transition-base);
+}
+
+.rec-crop-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ab-shadow-md);
+    border-color: var(--ab-primary-green);
+    background: #FFFFFF;
+}
+
+.rec-crop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rec-crop-name {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.rec-score-badge {
+    padding: 6px 12px;
+    border-radius: var(--ab-radius-full);
+    font-size: 13px;
+    font-weight: 800;
+    background: var(--ab-success-soft);
+    color: var(--ab-success);
+}
+
+.rec-crop-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    font-size: 13px;
+    background: #FFFFFF;
+    padding: 12px;
+    border-radius: var(--ab-radius-md);
+    border: 1px solid var(--ab-border-subtle);
+}
+
+.rec-metric-item span {
+    color: var(--ab-text-muted);
+    font-size: 11px;
+    display: block;
+}
+
+.rec-metric-item strong {
+    color: var(--ab-text-dark);
+}
+
+.rec-tips-container {
+    background: #E8F0E4;
+    border-left: 4px solid var(--ab-primary-green);
+    padding: 20px 24px;
+    border-radius: var(--ab-radius-sm);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.rec-tips-container h3 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+    margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   RESPONSIVENESS (Crop Recommendation)
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    .rec-form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .rec-message-row, .rec-submit-row {
+        grid-column: span 2;
+    }
+    .rec-crops-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .recommendation-page-container {
+        padding: 20px 16px 60px;
+        gap: 24px;
+    }
+    .rec-header-card, .rec-form-card, .rec-results-card {
+        padding: 24px 20px;
+    }
+    .rec-form-grid {
+        grid-template-columns: 1fr;
+    }
+    .rec-message-row, .rec-submit-row {
+        grid-column: span 1;
+    }
+    .rec-crops-grid {
+        grid-template-columns: 1fr;
+    }
+}

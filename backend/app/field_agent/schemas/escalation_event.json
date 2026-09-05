@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EscalationEvent",
+  "type": "object",
+  "required": [
+    "escalation_id",
+    "trigger_type",
+    "reason",
+    "priority",
+    "timestamp",
+    "payload"
+  ],
+  "properties": {
+    "escalation_id": { "type": "string" },
+    "trigger_type": {
+      "type": "string",
+      "enum": [
+        "LOW_CONFIDENCE_DISEASE_PREDICTION",
+        "UNUSUAL_SENSOR_READING",
+        "SENSOR_DATA_MISSING",
+        "SENSOR_VALUE_OUT_OF_RANGE",
+        "CRITICAL_PEST_OUTBREAK_RISK"
+      ]
+    },
+    "reason": { "type": "string" },
+    "priority": { "type": "string", "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW"] },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "payload": { "type": "object" },
+    "chemical_lock_enforced": { "type": "boolean" }
+  }
+}
+

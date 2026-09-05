@@ -1,0 +1,84 @@
+{
+    "crop_lifecycle": {
+        "preparation": {
+            "stage": "Farm Preparation",
+            "activities": [
+                "land_preparation",
+                "soil_testing",
+                "soil_preparation",
+                "seed_selection",
+                "seed_treatment"
+            ]
+        },
+        "sowing": {
+            "stage": "Sowing",
+            "activities": [
+                "sowing",
+                "initial_irrigation",
+                "sowing_verification"
+            ]
+        },
+        "early_growth": {
+            "stage": "Germination and Early Growth",
+            "activities": [
+                "germination_monitoring",
+                "weed_monitoring",
+                "soil_moisture_monitoring"
+            ]
+        },
+        "vegetative_growth": {
+            "stage": "Vegetative Growth",
+            "activities": [
+                "irrigation",
+                "nutrient_management",
+                "weed_monitoring",
+                "disease_monitoring",
+                "pest_monitoring"
+            ]
+        },
+        "reproductive_stage": {
+            "stage": "Flowering and Reproductive Growth",
+            "activities": [
+                "irrigation",
+                "nutrient_management",
+                "disease_monitoring",
+                "pest_monitoring",
+                "weather_monitoring"
+            ]
+        },
+        "maturity": {
+            "stage": "Maturity",
+            "activities": [
+                "crop_maturity_monitoring",
+                "irrigation_management",
+                "disease_monitoring",
+                "harvest_preparation"
+            ]
+        },
+        "harvest": {
+            "stage": "Harvest",
+            "activities": [
+                "harvest_timing",
+                "weather_check",
+                "harvesting"
+            ]
+        },
+        "post_harvest": {
+            "stage": "Post Harvest",
+            "activities": [
+                "drying",
+                "storage",
+                "quality_check"
+            ]
+        },
+        "marketplace": {
+            "stage": "Marketplace",
+            "activities": [
+                "market_price_check",
+                "buyer_check",
+                "market_selection",
+                "selling"
+            ]
+        }
+    }
+}

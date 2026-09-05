@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FieldVisitReport",
+  "type": "object",
+  "required": [
+    "report_id",
+    "task_id",
+    "agent_id",
+    "visit_date",
+    "field_observation",
+    "disease_observed",
+    "verification_result"
+  ],
+  "properties": {
+    "report_id": { "type": "string" },
+    "task_id": { "type": "string" },
+    "agent_id": { "type": "string" },
+    "visit_date": { "type": "string", "format": "date-time" },
+    "field_observation": { "type": "string" },
+    "disease_observed": { "type": "string", "enum": ["YES", "NO", "UNCERTAIN"] },
+    "pathogen_identified": { "type": ["string", "null"] },
+    "affected_area_pct": { "type": ["number", "null"] },
+    "sensor_condition": { "type": ["string", "null"] },
+    "notes": { "type": "string" },
+    "evidence_photos": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "verification_result": {
+      "type": "string",
+      "enum": ["VERIFIED_DISEASE", "NOT_VERIFIED", "INCONCLUSIVE"]
+    },
+    "recommended_treatment_category": { "type": ["string", "null"] }
+  }
+}
+

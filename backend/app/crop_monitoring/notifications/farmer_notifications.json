@@ -1,0 +1,72 @@
+[
+    {
+        "notification_id": "NOTIFICATION_001",
+        "event_id": "WHEAT_EVENT_001",
+        "crop_id": "wheat",
+        "crop_stage": "Sowing",
+        "scheduled_date": "2026-09-01",
+        "title": "Sowing activity recommended",
+        "message": "Your crop is scheduled for Sowing on 2026-09-01.",
+        "priority": "medium",
+        "notification_type": "activity_reminder",
+        "sent": false,
+        "farmer_action_completed": false,
+        "created_at": "2026-08-31T17:48:31.567219"
+    },
+    {
+        "notification_id": "NOTIFICATION_002",
+        "event_id": "WHEAT_EVENT_002",
+        "crop_id": "wheat",
+        "crop_stage": "CRI",
+        "scheduled_date": "2026-09-21",
+        "title": "CRI activity recommended",
+        "message": "Your crop is scheduled for CRI on 2026-09-21.",
+        "priority": "medium",
+        "notification_type": "activity_reminder",
+        "sent": false,
+        "farmer_action_completed": false,
+        "created_at": "2026-08-31T17:48:31.567235"
+    },
+    {
+        "notification_id": "NOTIFICATION_003",
+        "event_id": "WHEAT_EVENT_003",
+        "crop_id": "wheat",
+        "crop_stage": "Tillering",
+        "scheduled_date": "2026-10-11",
+        "title": "Tillering activity recommended",
+        "message": "Your crop is scheduled for Tillering on 2026-10-11.",
+        "priority": "medium",
+        "notification_type": "activity_reminder",
+        "sent": false,
+        "farmer_action_completed": false,
+        "created_at": "2026-08-31T17:48:31.567241"
+    },
+    {
+        "notification_id": "NOTIFICATION_004",
+        "event_id": "WHEAT_EVENT_004",
+        "crop_id": "wheat",
+        "crop_stage": "Booting",
+        "scheduled_date": "2026-10-31",
+        "title": "Booting activity recommended",
+        "message": "Your crop is scheduled for Booting on 2026-10-31.",
+        "priority": "medium",
+        "notification_type": "activity_reminder",
+        "sent": false,
+        "farmer_action_completed": false,
+        "created_at": "2026-08-31T17:48:31.567245"
+    },
+    {
+        "notification_id": "NOTIFICATION_005",
+        "event_id": "WHEAT_EVENT_005",
+        "crop_id": "wheat",
+        "crop_stage": "Flowering",
+        "scheduled_date": "2026-11-20",
+        "title": "Flowering activity recommended",
+        "message": "Your crop is scheduled for Flowering on 2026-11-20.",
+        "priority": "medium",
+        "notification_type": "activity_reminder",
+        "sent": false,
+        "farmer_action_completed": false,
+        "created_at": "2026-08-31T17:48:31.567249"
+    }
+]

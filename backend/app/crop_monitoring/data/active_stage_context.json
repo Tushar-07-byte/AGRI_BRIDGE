@@ -1,0 +1,9 @@
+{
+    "crop_id": "tomato",
+    "crop_name": "Tomato",
+    "user_stage": "showing",
+    "resolved_stage": "showing",
+    "days_after_planting": 0,
+    "planting_date": "2026-09-01",
+    "current_date": "2026-09-01"
+}

@@ -1,0 +1,461 @@
+{
+    "Wheat": [
+        {
+            "crop": "Wheat",
+            "stage": "Sowing & Germination",
+            "start_day": 0,
+            "end_day": 15,
+            "stage_duration_days": 16
+        },
+        {
+            "crop": "Wheat",
+            "stage": "Crown Root Initiation (CRI)",
+            "start_day": 20,
+            "end_day": 25,
+            "stage_duration_days": 6
+        },
+        {
+            "crop": "Wheat",
+            "stage": "Tillering & Jointing",
+            "start_day": 40,
+            "end_day": 45,
+            "stage_duration_days": 6
+        },
+        {
+            "crop": "Wheat",
+            "stage": "Booting & Flowering",
+            "start_day": 60,
+            "end_day": 65,
+            "stage_duration_days": 6
+        },
+        {
+            "crop": "Wheat",
+            "stage": "Milking Stage",
+            "start_day": 80,
+            "end_day": 85,
+            "stage_duration_days": 6
+        },
+        {
+            "crop": "Wheat",
+            "stage": "Dough & Maturity",
+            "start_day": 100,
+            "end_day": 120,
+            "stage_duration_days": 21
+        }
+    ],
+    "Rice": [
+        {
+            "crop": "Rice",
+            "stage": "Nursery & Transplanting",
+            "start_day": 0,
+            "end_day": 15,
+            "stage_duration_days": 16
+        },
+        {
+            "crop": "Rice",
+            "stage": "Active Tillering",
+            "start_day": 20,
+            "end_day": 35,
+            "stage_duration_days": 16
+        },
+        {
+            "crop": "Rice",
+            "stage": "Panicle Initiation",
+            "start_day": 60,
+            "end_day": 65,
+            "stage_duration_days": 6
+        },
+        {
+            "crop": "Rice",
+            "stage": "Flowering & Heading",
+            "start_day": 80,
+            "end_day": 85,
+            "stage_duration_days": 6
+        },
+        {
+            "crop": "Rice",
+            "stage": "Grain Filling & Maturity",
+            "start_day": 100,
+            "end_day": 140,
+            "stage_duration_days": 41
+        }
+    ],
+    "Corn": [
+        {
+            "crop": "Corn",
+            "stage": "Sowing & Seedling",
+            "start_day": 0,
+            "end_day": 15,
+            "stage_duration_days": 16
+        },
+        {
+            "crop": "Corn",
+            "stage": "Knee-High Stage",
+            "start_day": 25,
+            "end_day": 30,
+            "stage_duration_days": 6
+        },
+        {
+            "crop": "Corn",
+            "stage": "Tasseling & Silking",
+            "start_day": 50,
+            "end_day": 55,
+            "stage_duration_days": 6
+        },
+        {
+            "crop": "Corn",
+            "stage": "Grain Filling & Harvest",
+            "start_day": 75,
+            "end_day": 120,
+            "stage_duration_days": 46
+        }
+    ],
+    "Potato": [
+        {
+            "crop": "Potato",
+            "stage": "Planting & Emergence",
+            "start_day": 0,
+            "end_day": 20,
+            "stage_duration_days": 21
+        },
+        {
+            "crop": "Potato",
+            "stage": "Stolonization & Earthing Up",
+            "start_day": 25,
+            "end_day": 30,
+            "stage_duration_days": 6
+        },
+        {
+            "crop": "Potato",
+            "stage": "Tuber Initiation & Bulking",
+            "start_day": 50,
+            "end_day": 75,
+            "stage_duration_days": 26
+        },
+        {
+            "crop": "Potato",
+            "stage": "Maturity & Haulm Cutting",
+            "start_day": 85,
+            "end_day": 110,
+            "stage_duration_days": 26
+        }
+    ],
+    "Soybean": [
+        {
+            "crop": "Soybean",
+            "stage": "Sowing & Germination",
+            "start_day": 0,
+            "end_day": 15,
+            "stage_duration_days": 16
+        },
+        {
+            "crop": "Soybean",
+            "stage": "Vegetative Growth",
+            "start_day": 20,
+            "end_day": 30,
+            "stage_duration_days": 11
+        },
+        {
+            "crop": "Soybean",
+            "stage": "Flowering Stage",
+            "start_day": 45,
+            "end_day": 50,
+            "stage_duration_days": 6
+        },
+        {
+            "crop": "Soybean",
+            "stage": "Pod Formation & Filling",
+            "start_day": 65,
+            "end_day": 85,
+            "stage_duration_days": 21
+        }
+    ],
+    "Tomato": [
+        {
+            "crop": "Tomato",
+            "stage": "Transplanting",
+            "start_day": 0,
+            "end_day": 15,
+            "stage_duration_days": 16
+        },
+        {
+            "crop": "Tomato",
+            "stage": "Vegetative & Branching",
+            "start_day": 20,
+            "end_day": 30,
+            "stage_duration_days": 11
+        },
+        {
+            "crop": "Tomato",
+            "stage": "Flowering & Fruit Set",
+            "start_day": 40,
+            "end_day": 50,
+            "stage_duration_days": 11
+        },
+        {
+            "crop": "Tomato",
+            "stage": "Fruit Sizing & Harvesting",
+            "start_day": 60,
+            "end_day": 150,
+            "stage_duration_days": 91
+        }
+    ],
+    "Pepper": [
+        {
+            "crop": "Pepper",
+            "stage": "Transplanting",
+            "start_day": 0,
+            "end_day": 15,
+            "stage_duration_days": 16
+        },
+        {
+            "crop": "Pepper",
+            "stage": "Vegetative Growth",
+            "start_day": 20,
+            "end_day": 35,
+            "stage_duration_days": 16
+        },
+        {
+            "crop": "Pepper",
+            "stage": "Flowering & Fruiting",
+            "start_day": 45,
+            "end_day": 70,
+            "stage_duration_days": 26
+        },
+        {
+            "crop": "Pepper",
+            "stage": "Continuous Picking",
+            "start_day": 75,
+            "end_day": 150,
+            "stage_duration_days": 76
+        }
+    ],
+    "Squash": [
+        {
+            "crop": "Squash",
+            "stage": "Sowing & Vining",
+            "start_day": 0,
+            "end_day": 20,
+            "stage_duration_days": 21
+        },
+        {
+            "crop": "Squash",
+            "stage": "Flowering",
+            "start_day": 35,
+            "end_day": 45,
+            "stage_duration_days": 11
+        },
+        {
+            "crop": "Squash",
+            "stage": "Fruit Sizing & Harvest",
+            "start_day": 50,
+            "end_day": 110,
+            "stage_duration_days": 61
+        }
+    ],
+    "Strawberry": [
+        {
+            "crop": "Strawberry",
+            "stage": "Runner Planting",
+            "start_day": 0,
+            "end_day": 15,
+            "stage_duration_days": 16
+        },
+        {
+            "crop": "Strawberry",
+            "stage": "Crown & Leaf Growth",
+            "start_day": 20,
+            "end_day": 35,
+            "stage_duration_days": 16
+        },
+        {
+            "crop": "Strawberry",
+            "stage": "Bloom & Fruit Development",
+            "start_day": 40,
+            "end_day": 80,
+            "stage_duration_days": 41
+        }
+    ],
+    "Raspberry": [
+        {
+            "crop": "Raspberry",
+            "stage": "Spring Bud Break",
+            "start_day": 1,
+            "end_day": 30,
+            "stage_duration_days": 30
+        },
+        {
+            "crop": "Raspberry",
+            "stage": "Bloom & Fruit Set",
+            "start_day": 35,
+            "end_day": 60,
+            "stage_duration_days": 26
+        },
+        {
+            "crop": "Raspberry",
+            "stage": "Fruit Ripening & Harvest",
+            "start_day": 60,
+            "end_day": 110,
+            "stage_duration_days": 51
+        }
+    ],
+    "Grape": [
+        {
+            "crop": "Grape",
+            "stage": "Post-Pruning & Bud Break",
+            "start_day": 1,
+            "end_day": 25,
+            "stage_duration_days": 25
+        },
+        {
+            "crop": "Grape",
+            "stage": "Flower Initiation & Berry Set",
+            "start_day": 30,
+            "end_day": 50,
+            "stage_duration_days": 21
+        },
+        {
+            "crop": "Grape",
+            "stage": "Veraison (Coloring & Sugar)",
+            "start_day": 65,
+            "end_day": 100,
+            "stage_duration_days": 36
+        },
+        {
+            "crop": "Grape",
+            "stage": "Harvest",
+            "start_day": 110,
+            "end_day": 160,
+            "stage_duration_days": 51
+        }
+    ],
+    "Apple": [
+        {
+            "crop": "Apple",
+            "stage": "Pink Bud & Bloom",
+            "start_day": 1,
+            "end_day": 30,
+            "stage_duration_days": 30
+        },
+        {
+            "crop": "Apple",
+            "stage": "Petal Fall & Fruit Set",
+            "start_day": 35,
+            "end_day": 60,
+            "stage_duration_days": 26
+        },
+        {
+            "crop": "Apple",
+            "stage": "Fruit Expansion",
+            "start_day": 70,
+            "end_day": 130,
+            "stage_duration_days": 61
+        },
+        {
+            "crop": "Apple",
+            "stage": "Maturity & Harvest",
+            "start_day": 140,
+            "end_day": 180,
+            "stage_duration_days": 41
+        }
+    ],
+    "Peach": [
+        {
+            "crop": "Peach",
+            "stage": "Bloom & Petal Fall",
+            "start_day": 1,
+            "end_day": 30,
+            "stage_duration_days": 30
+        },
+        {
+            "crop": "Peach",
+            "stage": "Pit Hardening",
+            "start_day": 45,
+            "end_day": 60,
+            "stage_duration_days": 16
+        },
+        {
+            "crop": "Peach",
+            "stage": "Final Fruit Growth & Harvest",
+            "start_day": 75,
+            "end_day": 130,
+            "stage_duration_days": 56
+        }
+    ],
+    "Cherry": [
+        {
+            "crop": "Cherry",
+            "stage": "Bloom & Fruit Set",
+            "start_day": 1,
+            "end_day": 30,
+            "stage_duration_days": 30
+        },
+        {
+            "crop": "Cherry",
+            "stage": "Fruit Expansion",
+            "start_day": 35,
+            "end_day": 60,
+            "stage_duration_days": 26
+        },
+        {
+            "crop": "Cherry",
+            "stage": "Ripening & Harvest",
+            "start_day": 60,
+            "end_day": 90,
+            "stage_duration_days": 31
+        }
+    ],
+    "Blueberry": [
+        {
+            "crop": "Blueberry",
+            "stage": "Bud Break & Bloom",
+            "start_day": 1,
+            "end_day": 30,
+            "stage_duration_days": 30
+        },
+        {
+            "crop": "Blueberry",
+            "stage": "Fruit Set & Sizing",
+            "start_day": 35,
+            "end_day": 70,
+            "stage_duration_days": 36
+        },
+        {
+            "crop": "Blueberry",
+            "stage": "Harvest Window",
+            "start_day": 80,
+            "end_day": 120,
+            "stage_duration_days": 41
+        }
+    ],
+    "Orange": [
+        {
+            "crop": "Orange",
+            "stage": "Ambe Bahar Bloom",
+            "start_day": 1,
+            "end_day": 30,
+            "stage_duration_days": 30
+        },
+        {
+            "crop": "Orange",
+            "stage": "Fruit Drop & Setting",
+            "start_day": 60,
+            "end_day": 120,
+            "stage_duration_days": 61
+        },
+        {
+            "crop": "Orange",
+            "stage": "Fruit Expansion",
+            "start_day": 180,
+            "end_day": 240,
+            "stage_duration_days": 61
+        },
+        {
+            "crop": "Orange",
+            "stage": "Maturation & Harvest",
+            "start_day": 270,
+            "end_day": 360,
+            "stage_duration_days": 91
+        }
+    ]
+}

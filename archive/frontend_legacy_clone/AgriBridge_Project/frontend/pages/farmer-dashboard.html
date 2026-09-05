@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard — AgriBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/farmer-dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-wrapper">
+
+        <!-- ========================================= -->
+        <!-- NAVIGATION BAR                            -->
+        <!-- ========================================= -->
+        <nav class="nav">
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="/frontend/pages/farmer-dashboard.html">
+                    <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+                </a>
+            </div>
+
+            <!-- FARMER NAVIGATION -->
+            <div class="mid">
+                <a href="/frontend/pages/farmer-dashboard.html" class="active" data-i18n="nav.dashboard">Dashboard</a>
+                <a href="/frontend/pages/upload-crop.html" data-i18n="nav.uploadCrop">Upload Crop</a>
+                <a href="/frontend/pages/crop-listings.html" data-i18n="nav.myListings">My Listings</a>
+                <a href="/frontend/pages/crop-recommendation.html" data-i18n="landing.cropRecommendation">Recommendations</a>
+                <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
+                <a href="/frontend/pages/voice-assistant.html" data-i18n="nav.voiceAssistant">Voice AI</a>
+                <a href="/frontend/pages/orders.html" data-i18n="nav.commitments">Orders</a>
+                <a href="/frontend/pages/farmer-profile.html" data-i18n="nav.myProfile">Profile</a>
+            </div>
+
+            <!-- USER & LOGOUT -->
+            <div class="register">
+                <span class="user-role-badge" data-i18n="farmer.dashboard.farmerLabel">👨‍🌾 Farmer Portal</span>
+                <button type="button" class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/index.html';" data-i18n="nav.logout">
+                    Logout
+                </button>
+            </div>
+        </nav>
+
+        <!-- ========================================= -->
+        <!-- MAIN DASHBOARD CONTENT                    -->
+        <!-- ========================================= -->
+        <main class="dashboard-container">
+
+            <!-- WELCOME & FARM PROFILE BANNER -->
+            <section class="welcome-banner">
+                <div class="welcome-text-side">
+                    <div class="ab-badge ab-badge-gold">🌱 LIVE FARM COMMAND CENTER</div>
+                    <h1 class="welcome-heading">
+                        <span data-i18n="farmer.dashboard.title">Welcome,</span>
+                        <span id="farmer-name">Farmer</span>!
+                    </h1>
+                    <p class="welcome-sub" data-i18n="farmer.dashboard.subtitle">
+                        Manage your crops, inspect AI disease diagnostics, monitor real-time weather, and connect with verified buyers.
+                    </p>
+
+                    <div class="farmer-summary-chips">
+                        <div class="summary-chip">
+                            <span class="chip-icon">🌾</span>
+                            <span class="chip-label" data-i18n="farmer.summary.area">Farm Area:</span>
+                            <strong id="farm-area">--</strong>
+                        </div>
+                        <div class="summary-chip">
+                            <span class="chip-icon">📍</span>
+                            <span class="chip-label" data-i18n="farmer.summary.location">Location:</span>
+                            <strong id="farm-location">--</strong>
+                        </div>
+                        <div class="summary-chip status-chip">
+                            <span class="chip-icon">✓</span>
+                            <span>Status: <strong>Active & Verified</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="welcome-quick-weather" onclick="window.location.href='/frontend/pages/weather-dashboard.html'">
+                    <div class="mini-weather-header">
+                        <span>🌦️ Live Farm Weather</span>
+                        <span class="mini-weather-link">View 15-Day →</span>
+                    </div>
+                    <div class="mini-weather-main">
+                        <div class="mini-temp">28°C</div>
+                        <div class="mini-weather-cond">
+                            <strong>Partly Cloudy</strong>
+                            <span>Humidity: 62% • Wind: 6.5 km/h</span>
+                        </div>
+                    </div>
+                    <div class="mini-weather-advisory">
+                        🌱 Good conditions for fertilizer and foliar spray
+                    </div>
+                </div>
+            </section>
+
+            <!-- QUICK ACTIONS GRID -->
+            <section class="action-section">
+                <div class="section-title-row">
+                    <h2 class="section-title" data-i18n="farmer.quickActions.title">Quick Farm Actions</h2>
+                    <span class="section-hint">Select a core workflow to begin</span>
+                </div>
+
+                <div class="action-card-grid">
+
+                    <!-- AI FARM COMMAND CENTER -->
+                    <a href="/frontend/pages/farm-command-center.html" class="action-card" style="border: 2px solid var(--ab-primary-green); background: linear-gradient(135deg, #FFFFFF 0%, #F5FAF3 100%);">
+                        <div class="action-icon-box" style="background: #EBF3E7; color: #315C2A; font-size: 1.6rem;">⚡</div>
+                        <div class="action-card-text">
+                            <h3 style="color: var(--ab-primary-green);">AI Farm Command Center</h3>
+                            <p>Live Virtual IoT telemetry, multi-agent risk engines, automated weather replanning, and closed-loop verification.</p>
+                        </div>
+                        <span class="action-arrow" style="color: var(--ab-primary-green); font-weight: 800;">→</span>
+                    </a>
+
+                    <!-- UPLOAD CROP -->
+                    <a href="/frontend/pages/upload-crop.html" class="action-card">
+                        <div class="action-icon-box">📤</div>
+                        <div class="action-card-text">
+                            <h3 data-i18n="farmer.quickActions.uploadCrop">Upload Crop Photo</h3>
+                            <p data-i18n="farmer.quickActions.uploadCropDesc">Upload crop photos for instant deep-learning plant health and disease analysis.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <!-- MY LISTINGS -->
+                    <a href="/frontend/pages/crop-listings.html" class="action-card">
+                        <div class="action-icon-box bg-gold">📋</div>
+                        <div class="action-card-text">
+                            <h3 data-i18n="farmer.quickActions.myListings">My Marketplace Listings</h3>
+                            <p data-i18n="farmer.quickActions.myListingsDesc">Manage pre-harvest crop listings and view buyer commitments.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <!-- CROP HEALTH -->
+                    <a href="/frontend/pages/ai-result.html" class="action-card">
+                        <div class="action-icon-box bg-green">🩺</div>
+                        <div class="action-card-text">
+                            <h3 data-i18n="farmer.quickActions.cropHealth">Crop Health & Remedies</h3>
+                            <p data-i18n="farmer.quickActions.cropHealthDesc">Review verified disease diagnostics, treatment schedules, and bio-pesticides.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <!-- CROP RECOMMENDATION -->
+                    <a href="/frontend/pages/crop-recommendation.html" class="action-card">
+                        <div class="action-icon-box">🌱</div>
+                        <div class="action-card-text">
+                            <h3>Crop Recommendations</h3>
+                            <p>Soil and climate matched crop suitability rankings with estimated yield & profit insights.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <!-- WEATHER DASHBOARD -->
+                    <a href="/frontend/pages/weather-dashboard.html" class="action-card">
+                        <div class="action-icon-box">🌦️</div>
+                        <div class="action-card-text">
+                            <h3>15-Day Weather & Advisory</h3>
+                            <p>All 36 States/UTs and 729 districts with agricultural rain alerts and spray windows.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <!-- VOICE ASSISTANT -->
+                    <a href="/frontend/pages/voice-assistant.html" class="action-card">
+                        <div class="action-icon-box bg-gold">🎙️</div>
+                        <div class="action-card-text">
+                            <h3>Voice Farming Assistant</h3>
+                            <p>Ask questions in Hindi, Odia, Bengali, Marathi, Telugu, Tamil, and 5 other languages.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- TWO-COLUMN DASHBOARD LOWER ROW -->
+            <div class="dashboard-split-row">
+
+                <!-- LEFT: INCOMING ORDERS -->
+                <section class="orders-section">
+                    <div class="section-title-row">
+                        <h2 class="section-title" data-i18n="farmer.orders.title">Incoming Buyer Orders</h2>
+                        <a href="/frontend/pages/orders.html" class="title-link">View All Orders →</a>
+                    </div>
+
+                    <div id="orders-container" class="orders-container">
+                        <!-- Populated by farmer-dashboard.js -->
+                    </div>
+                </section>
+
+                <!-- RIGHT: RECENT ACTIVITY & ADVISORIES -->
+                <section class="activity-section">
+                    <div class="section-title-row">
+                        <h2 class="section-title" data-i18n="farmer.activity.title">Farm Activity & Alerts</h2>
+                    </div>
+
+                    <div class="activity-container">
+
+                        <div class="activity-item">
+                            <div class="activity-icon bg-green">🌱</div>
+                            <div class="activity-content">
+                                <h3>Crop Upload & Analysis Recorded</h3>
+                                <p>Tomato crop photo analyzed — 94% health confidence</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon bg-gold">🌦️</div>
+                            <div class="activity-content">
+                                <h3>Weather Window Advisory</h3>
+                                <p>No heavy rainfall expected in your district for next 48h</p>
+                                <span class="activity-time">3 hours ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon bg-green">📋</div>
+                            <div class="activity-content">
+                                <h3>Marketplace Listing Published</h3>
+                                <p>Premium Sharbati Wheat listed for pre-harvest commitments</p>
+                                <span class="activity-time">Yesterday</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon">🤝</div>
+                            <div class="activity-content">
+                                <h3>Buyer Purchase Commitment</h3>
+                                <p>AgroCorp Ltd committed to 50 Quintals @ ₹2,450/Qtl</p>
+                                <span class="activity-time">2 days ago</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-bottom" style="border: none; padding: 0;">
+                <p>© 2026 AgriBridge. Farmer Command Center. Building resilient agriculture for India.</p>
+                <div class="footer-bottom-links">
+                    <a href="/frontend/pages/voice-assistant.html">Voice Assistant</a> •
+                    <a href="/frontend/pages/weather-dashboard.html">Weather</a> •
+                    <a href="/frontend/pages/farmer-profile.html">Edit Profile</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/farmer-dashboard.js"></script>
+</body>
+
+</html>

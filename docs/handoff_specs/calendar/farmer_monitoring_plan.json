@@ -1,0 +1,212 @@
+[
+    {
+        "event_id": "WHEAT_ACTIVITY_001",
+        "crop_id": "wheat",
+        "crop_stage": "Sowing",
+        "days_after_sowing_or_planting": 0,
+        "recommended_date": "2026-09-01",
+        "date_window": {
+            "start_day": 0,
+            "end_day": 0
+        },
+        "activities": {
+            "irrigation": "Halka Paani",
+            "fertilizer": "50kg DAP + 25kg MOP + 10kg Zinc",
+            "crop_protection": "None specified"
+        },
+        "monitoring": {
+            "weather_check_required": true,
+            "leaf_inspection": true,
+            "disease_diagnosis": false,
+            "disease_prediction": false
+        },
+        "calendar": {
+            "status": "scheduled",
+            "weather_adjustment_allowed": true,
+            "original_date": "2026-09-01",
+            "updated_date": ""
+        },
+        "notification": {
+            "required": true,
+            "sent": false,
+            "completed": false
+        },
+        "farmer_id": "TEST_FARMER_001",
+        "location": {
+            "country": "India",
+            "state": "Uttar Pradesh",
+            "district": "Example District",
+            "village": "Example Village",
+            "latitude": null,
+            "longitude": null
+        }
+    },
+    {
+        "event_id": "WHEAT_ACTIVITY_002",
+        "crop_id": "wheat",
+        "crop_stage": "CRI",
+        "days_after_sowing_or_planting": 20,
+        "recommended_date": "2026-09-21",
+        "date_window": {
+            "start_day": 20,
+            "end_day": 25
+        },
+        "activities": {
+            "irrigation": "1st Paani",
+            "fertilizer": "45kg Urea",
+            "crop_protection": "Weedicide: Clodinafop / Sulfosulfuron"
+        },
+        "monitoring": {
+            "weather_check_required": true,
+            "leaf_inspection": true,
+            "disease_diagnosis": false,
+            "disease_prediction": false
+        },
+        "calendar": {
+            "status": "scheduled",
+            "weather_adjustment_allowed": true,
+            "original_date": "2026-09-21",
+            "updated_date": ""
+        },
+        "notification": {
+            "required": true,
+            "sent": false,
+            "completed": false
+        },
+        "farmer_id": "TEST_FARMER_001",
+        "location": {
+            "country": "India",
+            "state": "Uttar Pradesh",
+            "district": "Example District",
+            "village": "Example Village",
+            "latitude": null,
+            "longitude": null
+        }
+    },
+    {
+        "event_id": "WHEAT_ACTIVITY_003",
+        "crop_id": "wheat",
+        "crop_stage": "Tillering",
+        "days_after_sowing_or_planting": 40,
+        "recommended_date": "2026-10-11",
+        "date_window": {
+            "start_day": 40,
+            "end_day": 45
+        },
+        "activities": {
+            "irrigation": "2nd Paani",
+            "fertilizer": "45kg Urea",
+            "crop_protection": "Rust/Yellow Rust: Propiconazole 25% EC"
+        },
+        "monitoring": {
+            "weather_check_required": true,
+            "leaf_inspection": true,
+            "disease_diagnosis": false,
+            "disease_prediction": false
+        },
+        "calendar": {
+            "status": "scheduled",
+            "weather_adjustment_allowed": true,
+            "original_date": "2026-10-11",
+            "updated_date": ""
+        },
+        "notification": {
+            "required": true,
+            "sent": false,
+            "completed": false
+        },
+        "farmer_id": "TEST_FARMER_001",
+        "location": {
+            "country": "India",
+            "state": "Uttar Pradesh",
+            "district": "Example District",
+            "village": "Example Village",
+            "latitude": null,
+            "longitude": null
+        }
+    },
+    {
+        "event_id": "WHEAT_ACTIVITY_004",
+        "crop_id": "wheat",
+        "crop_stage": "Booting",
+        "days_after_sowing_or_planting": 60,
+        "recommended_date": "2026-10-31",
+        "date_window": {
+            "start_day": 60,
+            "end_day": 65
+        },
+        "activities": {
+            "irrigation": "3rd Paani",
+            "fertilizer": "None specified",
+            "crop_protection": "Aphids: Imidacloprid 17.8% SL"
+        },
+        "monitoring": {
+            "weather_check_required": true,
+            "leaf_inspection": true,
+            "disease_diagnosis": false,
+            "disease_prediction": false
+        },
+        "calendar": {
+            "status": "scheduled",
+            "weather_adjustment_allowed": true,
+            "original_date": "2026-10-31",
+            "updated_date": ""
+        },
+        "notification": {
+            "required": true,
+            "sent": false,
+            "completed": false
+        },
+        "farmer_id": "TEST_FARMER_001",
+        "location": {
+            "country": "India",
+            "state": "Uttar Pradesh",
+            "district": "Example District",
+            "village": "Example Village",
+            "latitude": null,
+            "longitude": null
+        }
+    },
+    {
+        "event_id": "WHEAT_ACTIVITY_005",
+        "crop_id": "wheat",
+        "crop_stage": "Flowering",
+        "days_after_sowing_or_planting": 80,
+        "recommended_date": "2026-11-20",
+        "date_window": {
+            "start_day": 80,
+            "end_day": 85
+        },
+        "activities": {
+            "irrigation": "4th Paani",
+            "fertilizer": "NPK 0-52-34",
+            "crop_protection": "Blight: Mancozeb"
+        },
+        "monitoring": {
+            "weather_check_required": true,
+            "leaf_inspection": true,
+            "disease_diagnosis": false,
+            "disease_prediction": false
+        },
+        "calendar": {
+            "status": "scheduled",
+            "weather_adjustment_allowed": true,
+            "original_date": "2026-11-20",
+            "updated_date": ""
+        },
+        "notification": {
+            "required": true,
+            "sent": false,
+            "completed": false
+        },
+        "farmer_id": "TEST_FARMER_001",
+        "location": {
+            "country": "India",
+            "state": "Uttar Pradesh",
+            "district": "Example District",
+            "village": "Example Village",
+            "latitude": null,
+            "longitude": null
+        }
+    }
+]

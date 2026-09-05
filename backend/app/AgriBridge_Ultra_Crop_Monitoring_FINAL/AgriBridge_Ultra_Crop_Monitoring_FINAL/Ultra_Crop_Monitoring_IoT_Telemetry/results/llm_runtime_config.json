@@ -1,0 +1,14 @@
+{
+  "engine": "AgriBridge AI Farmer Guidance Engine",
+  "provider": "Google Gemini",
+  "model": "gemini-3.6-flash",
+  "mode": "LIVE_LLM",
+  "weather_source": "LIVE_REAL",
+  "iot_source": "SYNTHETIC_HACKATHON_DEMO",
+  "physical_sensor_connected": false,
+  "decision_engine_override": false,
+  "synthetic_iot_disclosure_required": true,
+  "input_context": "/content/drive/MyDrive/AgriBridge_AI/Ultra_Crop_Monitoring_IoT_Telemetry/results/llm_guidance_context.json",
+  "request_payload": "/content/drive/MyDrive/AgriBridge_AI/Ultra_Crop_Monitoring_IoT_Telemetry/results/llm_request_payload.json",
+  "output_file": "/content/drive/MyDrive/AgriBridge_AI/Ultra_Crop_Monitoring_IoT_Telemetry/results/farmer_guidance.json"
+}

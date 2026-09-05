@@ -1,0 +1,52 @@
+{
+  "six_days_before_harvest": {
+    "backend_input": {
+      "marketplace": {
+        "crop_listed": false
+      }
+    },
+    "expected": {
+      "status": "LISTING_DUE",
+      "reminder": true,
+      "reminder_type": "FIRST_REMINDER",
+      "action": "LIST_CROP"
+    }
+  },
+  "three_days_before_harvest": {
+    "backend_input": {
+      "marketplace": {
+        "crop_listed": false
+      }
+    },
+    "expected": {
+      "status": "LISTING_DUE",
+      "reminder": true,
+      "reminder_type": "FOLLOW_UP_REMINDER",
+      "action": "LIST_CROP"
+    }
+  },
+  "one_day_before_harvest": {
+    "backend_input": {
+      "marketplace": {
+        "crop_listed": false
+      }
+    },
+    "expected": {
+      "status": "LISTING_URGENT",
+      "reminder": true,
+      "reminder_type": "FINAL_REMINDER",
+      "action": "LIST_CROP"
+    }
+  },
+  "already_listed": {
+    "backend_input": {
+      "marketplace": {
+        "crop_listed": true
+      }
+    },
+    "expected": {
+      "status": "LISTED",
+      "reminder": false
+    }
+  }
+}

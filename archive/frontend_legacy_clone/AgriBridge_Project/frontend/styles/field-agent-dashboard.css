@@ -1,0 +1,152 @@
+/* ==========================================================================
+   AGRIBRIDGE — FIELD AGENT DASHBOARD STYLES
+   Agrova-Inspired Field Verification Portal
+   ========================================================================== */
+
+.dashboard-header {
+    background: linear-gradient(135deg, #10200D 0%, #1D3717 100%);
+    border-radius: var(--ab-radius-xl);
+    padding: 40px 48px;
+    color: #FFFFFF;
+    margin: 20px 40px 36px;
+    box-shadow: var(--ab-shadow-md);
+    border: 1px solid var(--ab-border-dark);
+}
+
+.dashboard-header h1 {
+    font-size: clamp(28px, 3vw, 38px);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.dashboard-header p {
+    font-size: 15px;
+    color: #BDCEB7;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.dashboard-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.summary-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.summary-card {
+    background: #FFFFFF;
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-lg);
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: var(--ab-shadow-xs);
+}
+
+.summary-icon {
+    font-size: 32px;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--ab-radius-md);
+    background: var(--ab-light-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.summary-text h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ab-text-muted);
+    text-transform: uppercase;
+}
+
+.summary-text p {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+    line-height: 1.2;
+}
+
+.pending-crops-section, .verified-crops-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pending-crops-section h2, .verified-crops-section h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.crop-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.crop-card {
+    background: #FFFFFF;
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: var(--ab-shadow-xs);
+}
+
+.crop-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ab-shadow-md);
+    border-color: rgba(49, 92, 42, 0.3);
+}
+
+.crop-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--ab-radius-md);
+    background: var(--ab-warm-bg);
+}
+
+.crop-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.crop-card p {
+    font-size: 14px;
+    color: var(--ab-text-muted);
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .summary-cards-container, .crop-card-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header, .dashboard-container {
+        margin: 16px;
+        padding: 20px 16px;
+    }
+    .summary-cards-container, .crop-card-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "task_id": "TASK_ESC_9081",
+  "verification_status": "VERIFIED_DISEASE",
+  "disease_observed": "YES",
+  "pathogen_identified": "Wheat Yellow Rust (Puccinia striiformis)",
+  "affected_area_pct": 8.5,
+  "verified_by_agent": "Rahul Verma (AGENT_007)",
+  "verified_at": "2026-09-04T14:45:00Z",
+  "downstream_action": "UNLOCK_TREATMENT_ADVISORY",
+  "chemical_recommendation_new_status": "AVAILABLE",
+  "unlocked_treatment": {
+    "chemical": "Propiconazole 25% EC @ 1.0 ml/L water",
+    "dosage": "1.0 ml / L water",
+    "phi": "14 Days",
+    "notes": "Verified initial pustule formation on upper leaf blades. Early localized spray recommended."
+  }
+}
+

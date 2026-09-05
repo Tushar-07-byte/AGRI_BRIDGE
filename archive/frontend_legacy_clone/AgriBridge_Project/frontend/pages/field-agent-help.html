@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Get Help - AgriBridge</title>
+
+    <link
+        rel="stylesheet"
+        href="/frontend/styles/field-agent-help.css"
+    >
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVBAR
+         ========================================= -->
+
+    <nav class="nav">
+
+        <div class="logo">
+
+            <a href="/frontend/pages/farmer-dashboard.html">
+
+                <img
+                    src="/frontend/assets/logo/logo.png"
+                    alt="Agri-Bridge Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <div class="mid">
+
+            <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">
+                Dashboard
+            </a>
+
+            <a
+                href="/frontend/pages/field-agent-help.html"
+                class="active"
+                data-i18n="nav.getHelp"
+            >
+                Get Help
+            </a>
+
+        </div>
+
+
+        <div class="register">
+
+            <span class="user-role" data-i18n="farmer.dashboard.farmerLabel">
+                👨‍🌾 Farmer
+            </span>
+
+            <button
+                class="stylish-btn"
+                onclick="window.location.href='/frontend/pages/farmer-dashboard.html'"
+                data-i18n="nav.dashboard"
+            >
+                Dashboard
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header class="help-header">
+
+        <div class="help-header-icon">
+            🧑‍🌾
+        </div>
+
+        <h1 data-i18n="fieldAgentHelp.title">
+            Get Help from Field Agents
+        </h1>
+
+        <p data-i18n="fieldAgentHelp.description">
+            Connect with experienced agricultural experts
+            for guidance about your crops and farm.
+        </p>
+
+    </header>
+
+
+    <!-- =========================================
+         FIELD AGENTS
+         ========================================= -->
+
+    <main class="help-container">
+
+        <h2 data-i18n="fieldAgentHelp.availableAgents">
+            Available Field Agents
+        </h2>
+
+
+        <div
+            id="agents-container"
+            class="agents-container"
+        >
+
+            <!-- JavaScript will add agents -->
+
+        </div>
+
+
+        <!-- =====================================
+             REQUEST STATUS
+             ===================================== -->
+
+        <div
+            id="request-message"
+            class="request-message"
+        ></div>
+
+
+        <button
+            id="back-dashboard"
+            class="back-button"
+        >
+            ← <span data-i18n="fieldAgentHelp.backToDashboard">Back to Dashboard</span>
+        </button>
+
+    </main>
+
+
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/field-agent-help.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+  "system": "AgriBridge Reliable Notification Delivery Engine",
+  "delivery_states": [
+    "CREATED",
+    "QUEUED",
+    "SENT",
+    "DELIVERED",
+    "READ"
+  ],
+  "failure_states": [
+    "FAILED",
+    "RETRYING"
+  ],
+  "channels": {
+    "primary": "IN_APP_DASHBOARD",
+    "secondary": "PUSH_NOTIFICATION",
+    "fallback": "SMS_GATEWAY"
+  },
+  "retry_policy": {
+    "max_retries": 3,
+    "initial_backoff_seconds": 5,
+    "backoff_multiplier": 2.0,
+    "auto_fallback_on_max_retries": true
+  },
+  "display_rules": {
+    "show_realtime_status_on_farmer_ui": true,
+    "forbid_fake_delivered_status": true
+  }
+}
+

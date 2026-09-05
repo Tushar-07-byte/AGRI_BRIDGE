@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buyer Marketplace — AgriBridge</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Global and Component CSS -->
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/buyer-dashboard.css">
+</head>
+
+<body>
+
+    <div class="buyer-page-wrapper">
+
+        <!-- =====================================================
+             NAVIGATION BAR
+             ===================================================== -->
+        <nav class="nav">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="/frontend/pages/buyer-dashboard.html" title="AgriBridge Buyer Marketplace">
+                    <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+                </a>
+            </div>
+
+            <!-- BUYER NAVIGATION TABS -->
+            <div class="mid">
+                <button type="button" id="tab-marketplace-btn" class="nav-tab active" data-tab="marketplace">
+                    🛒 <span data-i18n="nav.marketplace">Marketplace</span>
+                </button>
+
+                <button type="button" id="tab-commitments-btn" class="nav-tab" data-tab="commitments">
+                    🤝 <span data-i18n="nav.commitments">My Commitments</span>
+                    <span id="commitments-nav-badge" class="nav-counter-badge">0</span>
+                </button>
+            </div>
+
+            <!-- BUYER PROFILE & MODE CONTROLS -->
+            <div class="register">
+
+                <!-- Live / Demo Mode Switcher Badge -->
+                <button type="button" id="mode-toggle-btn" class="mode-toggle-btn" title="Click to toggle between Live API and Demo Mode">
+                    <span class="mode-indicator-dot"></span>
+                    <span id="mode-toggle-label" class="mode-toggle-text">Checking Backend...</span>
+                </button>
+
+                <!-- Buyer Profile Chip -->
+                <div class="buyer-profile-chip" title="Active Buyer Account">
+                    <div class="buyer-avatar">🧑‍💼</div>
+                    <div class="buyer-profile-info">
+                        <span class="buyer-profile-name" id="buyer-display-name">Demo Buyer</span>
+                        <span class="buyer-profile-role">Wholesale Buyer • #101</span>
+                    </div>
+                </div>
+
+                <!-- Logout -->
+                <button type="button" class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/index.html'" data-i18n="nav.logout">
+                    Logout
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- =====================================================
+             HERO SECTION
+             ===================================================== -->
+        <header class="buyer-hero">
+
+            <div class="hero-content">
+                <div class="hero-top-badge">
+                    <span class="ab-badge ab-badge-gold">🌱 VERIFIED AGRICULTURAL SUPPLY</span>
+                    <span class="trust-pill">🛡️ End-to-End Field Agent Physical Audits</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Secure verified harvests <span class="highlight-text">before harvest.</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Discover upcoming agricultural supply physically audited by certified AgriBridge Field Agents and validated by AI crop health models. Check ground-truth health reports before committing.
+                </p>
+
+                <!-- Marketplace Highlights Stats Row -->
+                <div class="hero-stats-row">
+                    <div class="stat-card">
+                        <div class="stat-icon">🌾</div>
+                        <div class="stat-data">
+                            <span class="stat-value" id="stat-verified-count">0</span>
+                            <span class="stat-label">Verified Listings</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">📦</div>
+                        <div class="stat-data">
+                            <span class="stat-value" id="stat-total-supply">0 kg</span>
+                            <span class="stat-label">Available Supply</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">🤝</div>
+                        <div class="stat-data">
+                            <span class="stat-value" id="stat-commitments-count">0</span>
+                            <span class="stat-label">My Commitments</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">🛡️</div>
+                        <div class="stat-data">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">Field Agent Audited</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Value Pillars Banner: Discover -> Trust -> Commit -->
+            <div class="hero-pillars-banner">
+                <div class="pillar-item">
+                    <div class="pillar-number">1</div>
+                    <div class="pillar-text">
+                        <strong>DISCOVER</strong>
+                        <span>Upcoming crops & expected harvest timelines</span>
+                    </div>
+                </div>
+                <div class="pillar-arrow">→</div>
+                <div class="pillar-item">
+                    <div class="pillar-number">2</div>
+                    <div class="pillar-text">
+                        <strong>TRUST & AUDIT</strong>
+                        <span>AI crop diagnosis + Field Agent physical 6-point check</span>
+                    </div>
+                </div>
+                <div class="pillar-arrow">→</div>
+                <div class="pillar-item">
+                    <div class="pillar-number">3</div>
+                    <div class="pillar-text">
+                        <strong>COMMIT</strong>
+                        <span>Lock pre-harvest volume directly with farmers</span>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             MAIN APPLICATION CONTAINER
+             ===================================================== -->
+        <main class="buyer-main-content">
+
+            <!-- =================================================
+                 TAB 1: VERIFIED MARKETPLACE VIEW
+                 ================================================= -->
+            <section id="marketplace-tab-view" class="tab-view active">
+
+                <!-- Section Title & Description -->
+                <div class="section-heading-bar">
+                    <div>
+                        <h2 class="section-title">Verified Marketplace</h2>
+                        <p class="section-description">
+                            Upcoming harvests ready for buyer advance commitments. Every lot includes a certified Field Agent physical health audit.
+                        </p>
+                    </div>
+
+                    <div class="view-indicator-tag">
+                        <span class="pulse-green-dot"></span>
+                        <span>Live Audited Catalog</span>
+                    </div>
+                </div>
+
+                <!-- SEARCH, FILTER & SORT TOOLBAR -->
+                <div class="marketplace-toolbar">
+
+                    <!-- Search Input -->
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="search-input" placeholder="Search crop, farmer, field agent, or location..." aria-label="Search listings">
+                        <button type="button" id="clear-search-btn" class="clear-search-btn" title="Clear search" style="display: none;">✕</button>
+                    </div>
+
+                    <!-- Filter Dropdowns Row -->
+                    <div class="filter-controls-group">
+
+                        <!-- Crop Filter -->
+                        <div class="filter-select-wrapper">
+                            <label for="crop-filter" class="filter-label">Crop:</label>
+                            <select id="crop-filter" aria-label="Filter by Crop">
+                                <option value="">All Crops</option>
+                            </select>
+                        </div>
+
+                        <!-- Location Filter -->
+                        <div class="filter-select-wrapper">
+                            <label for="location-filter" class="filter-label">Location:</label>
+                            <select id="location-filter" aria-label="Filter by Location">
+                                <option value="">All Locations</option>
+                            </select>
+                        </div>
+
+                        <!-- Field Agent Filter -->
+                        <div class="filter-select-wrapper">
+                            <label for="agent-filter" class="filter-label">Field Agent:</label>
+                            <select id="agent-filter" aria-label="Filter by Field Agent">
+                                <option value="">All Field Agents</option>
+                            </select>
+                        </div>
+
+                        <!-- Quality Grade Filter -->
+                        <div class="filter-select-wrapper">
+                            <label for="grade-filter" class="filter-label">Grade:</label>
+                            <select id="grade-filter" aria-label="Filter by Quality Grade">
+                                <option value="">All Grades</option>
+                                <option value="Grade A+">Grade A+ (Premium)</option>
+                                <option value="Grade A">Grade A (Standard)</option>
+                            </select>
+                        </div>
+
+                        <!-- Status Filter -->
+                        <div class="filter-select-wrapper">
+                            <label for="status-filter" class="filter-label">Status:</label>
+                            <select id="status-filter" aria-label="Filter by Status">
+                                <option value="">All Statuses</option>
+                                <option value="available" selected>Available (Uncommitted)</option>
+                                <option value="committed">Committed</option>
+                            </select>
+                        </div>
+
+                        <!-- Sort By -->
+                        <div class="filter-select-wrapper">
+                            <label for="sort-by" class="filter-label">Sort by:</label>
+                            <select id="sort-by" aria-label="Sort listings">
+                                <option value="harvest_asc">Harvest Date (Soonest)</option>
+                                <option value="price_asc">Price: Low to High</option>
+                                <option value="price_desc">Price: High to Low</option>
+                                <option value="confidence_desc">AI Confidence (Highest)</option>
+                                <option value="grade_desc">Field Quality Score</option>
+                                <option value="quantity_desc">Quantity: High to Low</option>
+                            </select>
+                        </div>
+
+                        <!-- Reset Button -->
+                        <button type="button" id="reset-filters-btn" class="reset-btn" title="Reset all filters">
+                            ↺ Reset
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Results Counter & Status Summary -->
+                <div class="results-meta-bar">
+                    <span id="results-count-text">Showing verified harvests...</span>
+                    <span id="active-filter-tags" class="active-filter-tags"></span>
+                </div>
+
+                <!-- LOADING STATE -->
+                <div id="listings-loading" class="state-container loading-state">
+                    <div class="spinner-ring"></div>
+                    <h3>Loading verified harvests...</h3>
+                    <p>Connecting to AgriBridge catalog and verifying Field Agent physical audit records.</p>
+                </div>
+
+                <!-- ERROR STATE -->
+                <div id="listings-error" class="state-container error-state" style="display: none;">
+                    <div class="state-icon">⚠️</div>
+                    <h3>Marketplace unavailable</h3>
+                    <p id="error-details-text">Unable to load crop listings from the server.</p>
+                    <button type="button" id="retry-btn" class="stylish-btn ab-btn-primary">
+                        Try Again
+                    </button>
+                </div>
+
+                <!-- EMPTY STATE -->
+                <div id="listings-empty" class="state-container empty-state" style="display: none;">
+                    <div class="state-icon">🌾</div>
+                    <h3>No matching harvests</h3>
+                    <p>No verified crop listings match your active search or filter criteria.</p>
+                    <button type="button" id="empty-reset-btn" class="stylish-btn ab-btn-secondary">
+                        Clear Search & Filters
+                    </button>
+                </div>
+
+                <!-- LISTINGS CARDS GRID -->
+                <div id="listings-container" class="listings-grid">
+                    <!-- Populated dynamically by buyer-dashboard.js -->
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 TAB 2: MY COMMITMENTS VIEW
+                 ================================================= -->
+            <section id="commitments-tab-view" class="tab-view" style="display: none;">
+
+                <!-- Section Title & Description -->
+                <div class="section-heading-bar">
+                    <div>
+                        <h2 class="section-title">My Advance Commitments 🤝</h2>
+                        <p class="section-description">
+                            Track all crop supply you have committed to purchase before harvest. Farmers and Field Agents are notified of your reservation.
+                        </p>
+                    </div>
+
+                    <button type="button" id="back-to-marketplace-btn" class="stylish-btn ab-btn-secondary">
+                        ← Back to Marketplace
+                    </button>
+                </div>
+
+                <!-- Commitments Empty State -->
+                <div id="commitments-empty" class="state-container empty-state" style="display: none;">
+                    <div class="state-icon">📋</div>
+                    <h3>No commitments yet</h3>
+                    <p>You have not committed to purchase any upcoming harvests yet. Explore the marketplace to secure high-quality verified supply.</p>
+                    <button type="button" class="stylish-btn ab-btn-primary" onclick="switchTab('marketplace')">
+                        Explore Verified Marketplace
+                    </button>
+                </div>
+
+                <!-- Commitments Container -->
+                <div id="commitments-container" class="commitments-grid">
+                    <!-- Populated dynamically by buyer-dashboard.js -->
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- =====================================================
+             MODAL 1: VIEW DETAILS MODAL
+             ===================================================== -->
+        <div id="details-modal" class="modal-backdrop" aria-hidden="true" role="dialog">
+            <div class="modal-card modal-large" role="document">
+
+                <header class="modal-header">
+                    <div class="modal-title-box">
+                        <span class="modal-tag">CROP SPECIFICATION</span>
+                        <h2 id="modal-crop-title" class="modal-title">Crop Details</h2>
+                    </div>
+                    <button type="button" class="modal-close-btn" id="modal-details-close-btn" aria-label="Close modal">✕</button>
+                </header>
+
+                <div class="modal-body" id="modal-details-body">
+                    <!-- Content inserted dynamically -->
+                </div>
+
+                <footer class="modal-footer">
+                    <button type="button" class="stylish-btn ab-btn-secondary" id="modal-details-cancel-btn">
+                        Close
+                    </button>
+                    <button type="button" class="stylish-btn ab-btn-primary" id="modal-details-commit-btn">
+                        Commit to Buy →
+                    </button>
+                </footer>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             MODAL 2: FIELD AGENT PHYSICAL INSPECTION AUDIT CERTIFICATE
+             ===================================================== -->
+        <div id="field-report-modal" class="modal-backdrop" aria-hidden="true" role="dialog">
+            <div class="modal-card modal-extra-large" role="document">
+
+                <header class="modal-header certificate-header">
+                    <div class="certificate-badge-seal">
+                        <span class="cert-icon">🛡️</span>
+                        <div>
+                            <span class="cert-super-tag">OFFICIAL FIELD AUDIT CERTIFICATE</span>
+                            <h2 id="cert-crop-title" class="modal-title">Field Agent Crop Health Audit</h2>
+                        </div>
+                    </div>
+                    <button type="button" class="modal-close-btn" id="modal-field-close-btn" aria-label="Close certificate">✕</button>
+                </header>
+
+                <div class="modal-body" id="modal-field-body">
+                    <!-- Content inserted dynamically by buyer-dashboard.js -->
+                </div>
+
+                <footer class="modal-footer certificate-footer">
+                    <button type="button" class="stylish-btn ab-btn-secondary" id="modal-field-reinspect-btn">
+                        🔍 Request On-Demand Re-Inspection
+                    </button>
+                    <button type="button" class="stylish-btn ab-btn-secondary" id="modal-field-cancel-btn">
+                        Close
+                    </button>
+                    <button type="button" class="stylish-btn ab-btn-primary" id="modal-field-commit-btn">
+                        Commit with Verified Confidence →
+                    </button>
+                </footer>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             MODAL 3: ON-DEMAND RE-INSPECTION REQUEST MODAL
+             ===================================================== -->
+        <div id="reinspect-modal" class="modal-backdrop" aria-hidden="true" role="dialog">
+            <div class="modal-card modal-confirm" role="document">
+
+                <header class="modal-header confirm-header">
+                    <div class="confirm-icon-badge">📋</div>
+                    <div>
+                        <h2 class="modal-title">Request Field Re-Inspection</h2>
+                        <p class="modal-subtitle">
+                            Dispatch an AgriBridge Field Agent for a fresh physical health check before large order commitments.
+                        </p>
+                    </div>
+                    <button type="button" class="modal-close-btn" id="modal-reinspect-close-btn" aria-label="Close modal">✕</button>
+                </header>
+
+                <div class="modal-body">
+                    <form id="reinspect-form">
+                        <div class="form-group">
+                            <label>Target Crop Lot</label>
+                            <input type="text" id="reinspect-lot-name" disabled style="background: #F0F2EC; font-weight: 700;">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Assigned Field Agent</label>
+                            <input type="text" id="reinspect-agent-name" disabled style="background: #F0F2EC;">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Inspection Focus Areas (Select All That Apply)</label>
+                            <div class="reinspect-checks-grid">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="focus" value="pest" checked>
+                                    <span>🐛 Pest & Pathogen Verification</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="focus" value="moisture" checked>
+                                    <span>💧 Soil Moisture & Irrigation Health</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="focus" value="sampling" checked>
+                                    <span>⚖️ Plot Yield Sampling & Density Check</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="focus" value="maturity">
+                                    <span>🌾 Harvest Date & Maturity Timeline</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reinspect-notes">Special Instructions / Custom Notes for Agent</label>
+                            <textarea id="reinspect-notes" rows="3" placeholder="e.g. Please verify grain moisture percentage and take fresh canopy photos."></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <footer class="modal-footer">
+                    <button type="button" class="stylish-btn ab-btn-secondary" id="reinspect-cancel-btn">
+                        Cancel
+                    </button>
+                    <button type="button" class="stylish-btn ab-btn-primary" id="reinspect-submit-btn">
+                        Submit Inspection Request
+                    </button>
+                </footer>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             MODAL 4: COMMITMENT CONFIRMATION MODAL
+             ===================================================== -->
+        <div id="commit-modal" class="modal-backdrop" aria-hidden="true" role="dialog">
+            <div class="modal-card modal-confirm" role="document">
+
+                <header class="modal-header confirm-header">
+                    <div class="confirm-icon-badge">🤝</div>
+                    <div>
+                        <h2 class="modal-title">Commit to Buy?</h2>
+                        <p class="modal-subtitle">
+                            You are submitting a buyer commitment for this verified upcoming harvest.
+                        </p>
+                    </div>
+                    <button type="button" class="modal-close-btn" id="modal-commit-close-btn" aria-label="Close modal">✕</button>
+                </header>
+
+                <div class="modal-body">
+
+                    <!-- Summary Card -->
+                    <div class="order-summary-box">
+                        <div class="summary-row">
+                            <span class="summary-label">Crop</span>
+                            <strong class="summary-val" id="confirm-crop-name">--</strong>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Farmer</span>
+                            <span class="summary-val" id="confirm-farmer-name">--</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Farm Location</span>
+                            <span class="summary-val" id="confirm-location">--</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Quantity Reserved</span>
+                            <strong class="summary-val" id="confirm-quantity">--</strong>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Unit Price</span>
+                            <span class="summary-val" id="confirm-price">--</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span class="summary-label">Estimated Total Value</span>
+                            <strong class="summary-val highlight-val" id="confirm-total-value">--</strong>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Expected Harvest Date</span>
+                            <span class="summary-val" id="confirm-harvest-date">--</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Field Audit Status</span>
+                            <span class="summary-val status-verified-badge" id="confirm-verification">✓ Field Agent Verified</span>
+                        </div>
+                    </div>
+
+                    <!-- Trust Note -->
+                    <div class="commit-guarantee-note">
+                        <span class="note-icon">🛡️</span>
+                        <p>
+                            <strong>AgriBridge Direct Guarantee:</strong> Your commitment directly reserves this pre-harvest volume. Payment settlement and physical logistics occur at harvest upon final quality handover.
+                        </p>
+                    </div>
+
+                </div>
+
+                <footer class="modal-footer">
+                    <button type="button" class="stylish-btn ab-btn-secondary" id="confirm-cancel-btn">
+                        Cancel
+                    </button>
+                    <button type="button" class="stylish-btn ab-btn-primary" id="confirm-submit-btn">
+                        Confirm Commitment
+                    </button>
+                </footer>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             FLOATING TOAST NOTIFICATION CONTAINER
+             ===================================================== -->
+        <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+
+        <!-- =====================================================
+             FOOTER
+             ===================================================== -->
+        <footer class="footer">
+            <div class="footer-bottom">
+                <p>© 2026 AgriBridge. Verified Agriculture Marketplace. Connecting Farmers, Field Agents & Buyers.</p>
+                <div class="footer-bottom-links">
+                    <a href="/frontend/pages/index.html">Home</a> •
+                    <a href="/frontend/pages/farmer-dashboard.html">Farmer Portal</a> •
+                    <a href="/frontend/pages/field-agent-dashboard.html">Field Agent Portal</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/image-utils.js"></script>
+    <script src="/frontend/scripts/buyer-dashboard.js"></script>
+
+</body>
+
+</html>

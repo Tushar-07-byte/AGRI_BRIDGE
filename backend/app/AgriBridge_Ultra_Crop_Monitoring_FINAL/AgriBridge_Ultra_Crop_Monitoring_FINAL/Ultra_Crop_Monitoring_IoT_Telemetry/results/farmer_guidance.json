@@ -1,0 +1,78 @@
+{
+  "today_summary": "Your Wheat crop is 33 days old and in the Crown Root Initiation (CRI) stage. High humidity and wet leaf conditions create a high risk for disease development, making field scouting your most important task today.",
+  "priority_alerts": [
+    {
+      "title": "High Disease Risk",
+      "priority": "HIGH",
+      "status": "DUE",
+      "explanation": "Increase disease scouting today because high humidity (94%) and leaf wetness create favorable conditions for disease development."
+    }
+  ],
+  "todays_actions": [
+    {
+      "action": "Disease Scouting",
+      "priority": "HIGH",
+      "status": "DUE",
+      "reason": "Increase disease scouting because moisture conditions are favorable."
+    },
+    {
+      "action": "Pest Scouting",
+      "priority": "MEDIUM",
+      "status": "SCHEDULED",
+      "reason": "Scout crop for pest activity before taking control action."
+    },
+    {
+      "action": "Fertilizer / Nutrition",
+      "priority": "MEDIUM",
+      "status": "SCHEDULED",
+      "reason": "Follow the stage-specific fertilizer plan."
+    },
+    {
+      "action": "Irrigation Monitoring",
+      "priority": "LOW",
+      "status": "SCHEDULED",
+      "reason": "Soil moisture is currently adequate. Continue monitoring according to the stage plan."
+    }
+  ],
+  "why_it_matters": [
+    "High disease risk does not mean your crop is currently diseased; scouting helps catch early symptoms before problems spread.",
+    "Soil moisture is adequate at 30.56%, so additional watering is not currently needed.",
+    "Scouting for pests before applying treatments prevents unnecessary costs and protects crop health."
+  ],
+  "notifications": [
+    {
+      "title": "High Disease Risk",
+      "status": "DUE",
+      "priority": "HIGH",
+      "date": "2026-09-03"
+    },
+    {
+      "title": "Pest Scouting Reminder",
+      "status": "SCHEDULED",
+      "priority": "MEDIUM",
+      "date": "2026-09-03"
+    },
+    {
+      "title": "Fertilizer Scheduled",
+      "status": "SCHEDULED",
+      "priority": "MEDIUM",
+      "date": "2026-09-03"
+    },
+    {
+      "title": "Irrigation Monitoring",
+      "status": "SCHEDULED",
+      "priority": "LOW",
+      "date": "2026-09-03"
+    }
+  ],
+  "next_stage_harvest": {
+    "next_stage": "Tillering & Jointing",
+    "harvest_status": "GROWING",
+    "days_to_harvest": 67
+  },
+  "data_source_note": {
+    "weather": "LIVE_REAL",
+    "iot": "SYNTHETIC_HACKATHON_DEMO",
+    "physical_sensor_connected": false
+  }
+}

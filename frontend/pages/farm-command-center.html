@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Farm Command Center | AgriBridge</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/farm-command-center.css">
+</head>
+
+<body class="fcc-body">
+
+    <!-- =========================================================
+         AGRIBRIDGE — UNIFIED MASTER NAVBAR
+         ========================================================= -->
+    <nav class="nav">
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="/frontend/pages/farmer-dashboard.html">
+                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo" onerror="this.src='/frontend/assets/icons/crop-analysis.png'">
+            </a>
+        </div>
+
+        <!-- NAVIGATION LINKS -->
+        <div class="mid">
+            <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+            <a href="/frontend/pages/crop-monitoring.html">Crop Monitoring</a>
+            <a href="/frontend/pages/upload-crop.html" data-i18n="farmer.quickActions.uploadCrop">AI Crop Scan</a>
+            <a href="/frontend/pages/crop-listings.html" data-i18n="nav.marketplace">Marketplace</a>
+            <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
+            <a href="/frontend/pages/voice-assistant.html" data-i18n="nav.voiceAssistant">Voice AI</a>
+        </div>
+
+        <!-- USER & ACTIONS -->
+        <div class="register">
+            <div id="language-selector-container"></div>
+            <span class="user-role-badge">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: #10B981; display: inline-block; box-shadow: 0 0 8px #10B981;"></span>
+                <span>🟢 IoT Telemetry Live</span>
+            </span>
+            <button type="button" class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/farmer-dashboard.html'">
+                ← Dashboard
+            </button>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <main class="fcc-container">
+
+        <!-- AI FARM INTELLIGENCE ALERT BANNER -->
+        <section class="fcc-demo-banner">
+            <div class="fcc-demo-banner-content">
+                <span class="fcc-demo-icon">⚡</span>
+                <div>
+                    <div class="fcc-demo-title">AI Farm Intelligence Alert</div>
+                    <div class="fcc-demo-desc">Storm conditions detected. AgriBridge has automatically optimized the irrigation plan to protect your crop and potentially avoid 420 L of unnecessary water use.</div>
+                </div>
+            </div>
+            <div class="fcc-demo-actions">
+                <button id="btn-run-demo" class="fcc-demo-btn">
+                    View Smart Action
+                </button>
+            </div>
+        </section>
+
+        <!-- OFFLINE QUEUE NOTIFICATION BAR (Only visible when offline or actions queued) -->
+        <section id="fcc-offline-queue" class="fcc-offline-queue-bar" style="display: none;">
+            <div>
+                <strong>🟠 Offline Mode Active:</strong> <span id="fcc-offline-queue-count">0</span> action(s) queued locally.
+            </div>
+            <button id="btn-sync-offline" class="fcc-demo-btn" style="background: var(--ab-primary-green); color: #FFFFFF;">
+                🔄 Sync Now
+            </button>
+        </section>
+
+        <!-- COMPACT SYSTEM STATUS SECTION (Operational Health) -->
+        <section class="fcc-system-status-strip" style="display: flex; align-items: center; justify-content: space-between; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; padding: 10px 16px; margin-bottom: 20px; font-size: 0.8rem; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #22C55E; box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);"></span>
+                <strong style="color: #1E293B;">System Status: Operational</strong>
+            </div>
+            <div style="display: flex; gap: 16px; color: #64748B; flex-wrap: wrap;">
+                <span>🤖 AI Inference: <strong style="color: #16A34A;" title="Real-time EfficientNet inference models">Live EfficientNet</strong></span>
+                <span>🌦️ Weather Service: <strong style="color: #16A34A;" title="Live open-meteo weather feed">Live Weather API</strong></span>
+                <span>📡 Telemetry: <strong style="color: #2563EB;" title="Virtual Prototype IoT Telemetry Node for Hackathon Demonstration">Virtual IoT Node</strong></span>
+                <span>📚 Regimens: <strong style="color: #059669;" title="Evidence-based regimens curated from ICAR-IIHR agronomy guidelines">Verified ICAR Protocols</strong></span>
+                <span id="fcc-db-indicator">🗄️ Database: <strong id="fcc-db-status" style="color: #16A34A;">MySQL — ACTIVE</strong></span>
+            </div>
+        </section>
+
+        <!-- LIVE FARM INTELLIGENCE SCENARIO SELECTOR -->
+        <section class="fcc-scenario-bar">
+            <div class="fcc-scenario-title-group">
+                <span class="fcc-scenario-label">Scenario Engine:</span>
+                <span class="fcc-sim-badge" title="Virtual multi-scenario stress simulator testing real-time agronomic decision logic">Virtual Farm Scenario Simulator</span>
+            </div>
+            <div class="fcc-scenario-chips" id="scenario-btn-group">
+                <button class="fcc-scenario-btn active" data-scenario="NORMAL" onclick="FCC.runDeterministicScenario('NORMAL')">🟢 Normal</button>
+                <button class="fcc-scenario-btn" data-scenario="SCENARIO_A" onclick="FCC.runDeterministicScenario('A')" style="background: #ECFDF5; color: #047857; border: 1.5px solid #10B981; font-weight: 700;" title="Scenario A: High Confidence (82%), Rain 10%, Wind 12 km/h">🟢 Demo A (82% Conf • Safe)</button>
+                <button class="fcc-scenario-btn" data-scenario="SCENARIO_B" onclick="FCC.runDeterministicScenario('B')" style="background: #FFFBEB; color: #B45309; border: 1.5px solid #F59E0B; font-weight: 700;" title="Scenario B: Borderline Yellow Rust (51.69%), 24% VWC, Rx Locked">🟡 Demo B (51.69% • Rx Locked)</button>
+                <button class="fcc-scenario-btn" data-scenario="SCENARIO_C" onclick="FCC.runDeterministicScenario('C')" style="background: #FEF2F2; color: #B91C1C; border: 1.5px solid #EF4444; font-weight: 700;" title="Scenario C: High Conf (82%), 85% Rain Surge, 25 km/h Wind Block">⛈️ Demo C (85% Rain Block)</button>
+                <button class="fcc-scenario-btn" data-scenario="SCENARIO_D" onclick="FCC.runDeterministicScenario('D')" style="background: #F3E8FF; color: #6B21A8; border: 1.5px solid #A855F7; font-weight: 700;" title="Scenario D: Missing NPK, Zero Fabricated Dosage, Mixed Provenance">🧪 Demo D (Missing NPK)</button>
+                <button class="fcc-scenario-btn" data-scenario="WATER_STRESS" onclick="FCC.applyScenario('WATER_STRESS')">💧 Water Stress</button>
+                <button class="fcc-scenario-btn" data-scenario="DISEASE_RISK" onclick="FCC.applyScenario('DISEASE_RISK')">🦠 Disease Risk</button>
+                <button class="fcc-scenario-btn" onclick="FCC.resetDemo()" style="background: #F1F5F9; color: #334155; border: 1px solid #CBD5E1; font-weight: 700;">↻ Reset</button>
+            </div>
+        </section>
+
+        <!-- TOP SECTION: FARM HEALTH & 5 MODULAR RISK CARDS -->
+        <section class="fcc-hero-grid">
+            <!-- Farm Health Score Dial -->
+            <div class="fcc-score-card">
+                <div class="fcc-score-dial-wrap">
+                    <svg class="fcc-score-svg" viewBox="0 0 140 140">
+                        <circle class="fcc-score-circle-bg" cx="70" cy="70" r="60"></circle>
+                        <circle id="fcc-score-circle" class="fcc-score-circle-val" cx="70" cy="70" r="60"></circle>
+                    </svg>
+                    <div class="fcc-score-num-box">
+                        <span id="fcc-health-score" class="fcc-score-num">86</span>
+                        <span class="fcc-score-denom">/ 100</span>
+                    </div>
+                </div>
+                <h2 class="fcc-score-title">Farm Health Index</h2>
+                <span id="fcc-score-badge" class="fcc-score-status-pill">Optimal Farm Stand</span>
+                <p id="fcc-score-summary" class="fcc-score-desc">
+                    Vegetative tillering stable. Soil hydration balanced at field capacity. Zero fungal spore infestation detected.
+                </p>
+            </div>
+
+            <!-- 5 Modular Risk Cards -->
+            <div class="fcc-risk-grid">
+                <!-- 1. Water Risk -->
+                <div id="risk-card-water" class="fcc-risk-card risk-low">
+                    <div class="fcc-risk-card-header">
+                        <div class="fcc-risk-icon-name">💧 Water Risk</div>
+                        <span id="badge-water-risk" class="fcc-risk-badge badge-low">LOW (14%)</span>
+                    </div>
+                    <div class="fcc-risk-metric-box">
+                        <div id="val-water-risk" class="fcc-risk-score-val">14 / 100</div>
+                    </div>
+                    <p id="factors-water-risk" class="fcc-risk-factors">Soil moisture at 24%. Evapotranspiration nominal.</p>
+                    <div id="action-water-risk" class="fcc-risk-action-hint">Next irrigation in 48 hrs</div>
+                </div>
+
+                <!-- 2. Disease Risk -->
+                <div id="risk-card-disease" class="fcc-risk-card risk-low">
+                    <div class="fcc-risk-card-header">
+                        <div class="fcc-risk-icon-name">🦠 Disease Risk</div>
+                        <span id="badge-disease-risk" class="fcc-risk-badge badge-low">LOW (12%)</span>
+                    </div>
+                    <div class="fcc-risk-metric-box">
+                        <div id="val-disease-risk" class="fcc-risk-score-val">12 / 100</div>
+                    </div>
+                    <p id="factors-disease-risk" class="fcc-risk-factors">Canopy aeration good. Leaf wetness index 10%.</p>
+                    <div id="action-disease-risk" class="fcc-risk-action-hint">No fungal spray required</div>
+                </div>
+
+                <!-- 3. Weather Risk -->
+                <div id="risk-card-weather" class="fcc-risk-card risk-low">
+                    <div class="fcc-risk-card-header">
+                        <div class="fcc-risk-icon-name">🌦️ Weather Risk</div>
+                        <span id="badge-weather-risk" class="fcc-risk-badge badge-low">LOW (15%)</span>
+                    </div>
+                    <div class="fcc-risk-metric-box">
+                        <div id="val-weather-risk" class="fcc-risk-score-val">15 / 100</div>
+                    </div>
+                    <p id="factors-weather-risk" class="fcc-risk-factors">Calm winds (8 km/h). Temperature 29°C.</p>
+                    <div id="action-weather-risk" class="fcc-risk-action-hint">Favorable field conditions</div>
+                </div>
+
+                <!-- 4. Estimated Nutrient Risk -->
+                <div id="risk-card-nutrient" class="fcc-risk-card risk-low">
+                    <div class="fcc-risk-card-header">
+                        <div class="fcc-risk-icon-name">🧪 Estimated Nutrient Risk</div>
+                        <span id="badge-nutrient-risk" class="fcc-risk-badge badge-low">LOW (10%)</span>
+                    </div>
+                    <div class="fcc-risk-metric-box">
+                        <div id="val-nutrient-risk" class="fcc-risk-score-val">10 / 100</div>
+                    </div>
+                    <p id="factors-nutrient-risk" class="fcc-risk-factors">Soil pH 6.6 (optimal for wheat cation uptake).</p>
+                    <div id="action-nutrient-risk" class="fcc-risk-action-hint">Maintain bio-fertilizer schedule</div>
+                </div>
+
+                <!-- 5. Overall Farm Risk -->
+                <div id="risk-card-overall" class="fcc-risk-card risk-low">
+                    <div class="fcc-risk-card-header">
+                        <div class="fcc-risk-icon-name">🛡️ Overall Farm Risk</div>
+                        <span id="badge-overall-risk" class="fcc-risk-badge badge-low">SAFE</span>
+                    </div>
+                    <div class="fcc-risk-metric-box">
+                        <div id="val-overall-risk" class="fcc-risk-score-val">12% Combined</div>
+                    </div>
+                    <p id="factors-overall-risk" class="fcc-risk-factors">All multi-agent risk signals within safe operational bounds.</p>
+                    <div id="action-overall-risk" class="fcc-risk-action-hint">Standard farm monitoring</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVE FARM TELEMETRY (VIRTUAL IoT • SIMULATION MODE) -->
+        <section style="margin-bottom: 24px;">
+            <div class="fcc-section-header">
+                <div class="fcc-section-title-wrap">
+                    <h3 class="fcc-section-title">Live Farm Telemetry</h3>
+                    <span class="fcc-sim-badge">VIRTUAL IoT • SIMULATION MODE</span>
+                </div>
+                <span style="font-size: 0.78rem; color: var(--ab-text-muted);">Virtual sensor telemetry — hardware-ready architecture</span>
+            </div>
+
+            <div class="fcc-telemetry-grid">
+                <!-- 1. Soil Moisture -->
+                <div class="fcc-telemetry-card">
+                    <div class="fcc-telemetry-header">
+                        <span class="fcc-telemetry-label">Soil Moisture</span>
+                        <span class="fcc-telemetry-icon">💧</span>
+                    </div>
+                    <div class="fcc-telemetry-val-row">
+                        <span id="telemetry-moisture-val" class="fcc-telemetry-val">24</span>
+                        <span class="fcc-telemetry-unit">%</span>
+                    </div>
+                    <span id="telemetry-moisture-status" class="fcc-telemetry-status">Adequate Root Hydration</span>
+                    <div class="fcc-telemetry-bar-bg">
+                        <div id="telemetry-moisture-bar" class="fcc-telemetry-bar-fill" style="width: 48%;"></div>
+                    </div>
+                    <div style="font-size: 0.7rem; color: var(--ab-text-muted); margin-top: 6px; font-weight: 500;">Virtual telemetry</div>
+                </div>
+
+                <!-- 2. Ambient Temperature -->
+                <div class="fcc-telemetry-card">
+                    <div class="fcc-telemetry-header">
+                        <span class="fcc-telemetry-label">Temperature</span>
+                        <span class="fcc-telemetry-icon">🌡️</span>
+                    </div>
+                    <div class="fcc-telemetry-val-row">
+                        <span id="telemetry-temp-val" class="fcc-telemetry-val">29</span>
+                        <span class="fcc-telemetry-unit">°C</span>
+                    </div>
+                    <span id="telemetry-temp-status" class="fcc-telemetry-status">Normal Growth Range</span>
+                    <div class="fcc-telemetry-bar-bg">
+                        <div id="telemetry-temp-bar" class="fcc-telemetry-bar-fill" style="width: 58%;"></div>
+                    </div>
+                    <div style="font-size: 0.7rem; color: var(--ab-text-muted); margin-top: 6px; font-weight: 500;">Virtual telemetry</div>
+                </div>
+
+                <!-- 3. Humidity -->
+                <div class="fcc-telemetry-card">
+                    <div class="fcc-telemetry-header">
+                        <span class="fcc-telemetry-label">Relative Humidity</span>
+                        <span class="fcc-telemetry-icon">💨</span>
+                    </div>
+                    <div class="fcc-telemetry-val-row">
+                        <span id="telemetry-humidity-val" class="fcc-telemetry-val">62</span>
+                        <span class="fcc-telemetry-unit">%</span>
+                    </div>
+                    <span id="telemetry-humidity-status" class="fcc-telemetry-status">Comfortable Microclimate</span>
+                    <div class="fcc-telemetry-bar-bg">
+                        <div id="telemetry-humidity-bar" class="fcc-telemetry-bar-fill" style="width: 62%;"></div>
+                    </div>
+                    <div style="font-size: 0.7rem; color: var(--ab-text-muted); margin-top: 6px; font-weight: 500;">Virtual telemetry</div>
+                </div>
+
+                <!-- 4. Rain Probability -->
+                <div class="fcc-telemetry-card">
+                    <div class="fcc-telemetry-header">
+                        <span class="fcc-telemetry-label">Rain Probability</span>
+                        <span class="fcc-telemetry-icon">🌧️</span>
+                    </div>
+                    <div class="fcc-telemetry-val-row">
+                        <span id="telemetry-rain-val" class="fcc-telemetry-val">12</span>
+                        <span class="fcc-telemetry-unit">%</span>
+                    </div>
+                    <span id="telemetry-rain-status" class="fcc-telemetry-status">Clear Skies</span>
+                    <div class="fcc-telemetry-bar-bg">
+                        <div id="telemetry-rain-bar" class="fcc-telemetry-bar-fill" style="width: 12%;"></div>
+                    </div>
+                    <div style="font-size: 0.7rem; color: var(--ab-text-muted); margin-top: 6px; font-weight: 500;">Weather scenario / API when available</div>
+                </div>
+
+                <!-- 5. Light Intensity -->
+                <div class="fcc-telemetry-card">
+                    <div class="fcc-telemetry-header">
+                        <span class="fcc-telemetry-label">Light Intensity</span>
+                        <span class="fcc-telemetry-icon">☀️</span>
+                    </div>
+                    <div class="fcc-telemetry-val-row">
+                        <span id="telemetry-light-val" class="fcc-telemetry-val">62,000</span>
+                        <span class="fcc-telemetry-unit">lux</span>
+                    </div>
+                    <span id="telemetry-light-status" class="fcc-telemetry-status">Full Photosynthesis</span>
+                    <div class="fcc-telemetry-bar-bg">
+                        <div id="telemetry-light-bar" class="fcc-telemetry-bar-fill" style="width: 75%;"></div>
+                    </div>
+                    <div style="font-size: 0.7rem; color: var(--ab-text-muted); margin-top: 6px; font-weight: 500;">Virtual telemetry</div>
+                </div>
+
+                <!-- 6. Soil pH -->
+                <div class="fcc-telemetry-card">
+                    <div class="fcc-telemetry-header">
+                        <span class="fcc-telemetry-label">Estimated Soil pH</span>
+                        <span class="fcc-telemetry-icon">🧪</span>
+                    </div>
+                    <div class="fcc-telemetry-val-row">
+                        <span id="telemetry-ph-val" class="fcc-telemetry-val">6.6</span>
+                        <span class="fcc-telemetry-unit">pH</span>
+                    </div>
+                    <span id="telemetry-ph-status" class="fcc-telemetry-status">Optimal Cation Availability</span>
+                    <div class="fcc-telemetry-bar-bg">
+                        <div id="telemetry-ph-bar" class="fcc-telemetry-bar-fill" style="width: 66%;"></div>
+                    </div>
+                    <div style="font-size: 0.7rem; color: var(--ab-text-muted); margin-top: 6px; font-weight: 500;">Simulation / advisory estimate</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             PHASE 4: JUDGE-FACING MULTI-SIGNAL DECISION & PROVENANCE MATRIX
+             ========================================================================== -->
+        <section class="fcc-judge-card" id="fcc-judge-matrix-section">
+            <div class="fcc-judge-header">
+                <div>
+                    <div class="fcc-judge-title">
+                        <span>⚖️ Autonomous Decision Matrix & Explainability Trace</span>
+                        <span class="prov-badge prov-live" id="judge-decision-eval-badge">Deterministic Policy Core</span>
+                    </div>
+                    <p style="font-size: 0.8rem; color: #64748B; margin-top: 4px;">
+                        Canonical Farm Decision Context (20 Signals) & Multi-Signal Policy Engine (SH-AGR-001) • Real-time Decision Trace
+                    </p>
+                </div>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <a href="/frontend/pages/action-plan-trace.html" class="fcc-scenario-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px; background: #0F172A; color: #FFFFFF;">
+                        📜 Full Action Plan Trace →
+                    </a>
+                </div>
+            </div>
+
+            <!-- BORDERLINE PRESCRIPTION LOCKED ALERT (DYNAMIC) -->
+            <div id="judge-rx-locked-banner" class="fcc-rx-locked-banner" style="display: none;">
+                <div>
+                    <div class="fcc-rx-locked-title">
+                        <span>🔒 HUMAN-IN-THE-LOOP SAFETY GATE: Chemical Prescription Locked</span>
+                    </div>
+                    <div class="fcc-rx-locked-desc" id="judge-rx-locked-desc">
+                        Diagnostic confidence is borderline (30.0% – 64.99%). Chemical active ingredients & dosages are locked from farmer execution until on-site visual confirmation by a certified field agronomist.
+                    </div>
+                </div>
+                <button class="fcc-action-btn" style="background: #DC2626; color: white; white-space: nowrap;" onclick="window.location.href='/frontend/pages/field-agent-dashboard.html'">
+                    Inspect Agent Queue →
+                </button>
+            </div>
+
+            <!-- ACTIVE DECISION SUMMARY -->
+            <div class="fcc-decision-grid-summary">
+                <div class="fcc-decision-stat-box">
+                    <div class="fcc-decision-stat-label">Overall Farm Risk</div>
+                    <div class="fcc-decision-stat-val" id="judge-stat-risk" style="color: #16A34A;">MODERATE</div>
+                </div>
+                <div class="fcc-decision-stat-box">
+                    <div class="fcc-decision-stat-label">Operational Priority</div>
+                    <div class="fcc-decision-stat-val" id="judge-stat-priority" style="color: #2563EB;">ROUTINE</div>
+                </div>
+                <div class="fcc-decision-stat-box">
+                    <div class="fcc-decision-stat-label">Escalation Status</div>
+                    <div class="fcc-decision-stat-val" id="judge-stat-escalation" style="font-size: 0.95rem; color: #059669;">🛡️ Farmer Autonomous</div>
+                </div>
+                <div class="fcc-decision-stat-box">
+                    <div class="fcc-decision-stat-label">Signals Considered</div>
+                    <div class="fcc-decision-stat-val" id="judge-stat-signals">20 Verified Signals</div>
+                </div>
+            </div>
+
+            <!-- ACTIVE CONSTRAINTS & ACTIONS ROW -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-bottom: 20px;">
+                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px;">
+                    <strong style="font-size: 0.78rem; text-transform: uppercase; color: #64748B;">Active Policy Constraints:</strong>
+                    <div id="judge-constraints-list" style="margin-top: 6px; display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span class="prov-badge prov-live">NONE (ALL GATES CLEAR)</span>
+                    </div>
+                </div>
+                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px;">
+                    <strong style="font-size: 0.78rem; text-transform: uppercase; color: #64748B;">Blocked Farm Operations:</strong>
+                    <div id="judge-blocked-list" style="margin-top: 6px; font-size: 0.8rem; color: #991B1B;">
+                        None (Standard operations permitted)
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIGNAL PROVENANCE MATRIX -->
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <strong style="font-size: 0.85rem; color: #1E293B;">📊 20-Signal Canonical Provenance Matrix:</strong>
+                    <span style="font-size: 0.74rem; color: #64748B;">Strict Origin Tagging • Never Fakes Virtual Hardware</span>
+                </div>
+                <div class="fcc-matrix-table-wrap">
+                    <table class="fcc-matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Sub-State / Signal</th>
+                                <th>Observed Value</th>
+                                <th>Unit</th>
+                                <th>Source Subsystem</th>
+                                <th>Quality</th>
+                                <th>Provenance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="judge-provenance-tbody">
+                            <!-- Populated dynamically via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- DETERMINISTIC DECISION TRACE -->
+            <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <strong style="font-size: 0.85rem; color: #1E293B;">🔍 Machine Reasoning Decision Trace:</strong>
+                    <span style="font-size: 0.74rem; color: #64748B;">Audit Log of Every Rule & Gating Threshold</span>
+                </div>
+                <div class="fcc-trace-table-wrap">
+                    <table class="fcc-trace-table">
+                        <thead>
+                            <tr>
+                                <th>Evaluated Signal</th>
+                                <th>Condition</th>
+                                <th>Authoritative Rule</th>
+                                <th>Result / Effect</th>
+                                <th>Provenance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="judge-trace-tbody">
+                            <!-- Populated dynamically via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- MULTI-AGENT INTELLIGENCE & WHY DECISION SECTION -->
+        <section class="fcc-agents-grid">
+            <!-- Left: Multi-Agent Signal Streams -->
+            <div class="fcc-card">
+                <div class="fcc-section-header" style="margin-bottom: 8px;">
+                    <h3 class="fcc-section-title">Multi-Agent Intelligence Signals</h3>
+                    <span style="font-size: 0.75rem; font-weight: 700; color: var(--ab-primary-green);">5 Active Agents</span>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--ab-text-muted);">
+                    Independent specialized AI agents evaluate distinct agricultural dimensions and feed into the central Action Planner.
+                </p>
+
+                <div class="fcc-agent-signals-list">
+                    <!-- Farm Monitoring Agent -->
+                    <div class="fcc-agent-signal-item">
+                        <div class="fcc-agent-info">
+                            <span>📡</span>
+                            <div>
+                                <div class="fcc-agent-name">Farm Monitoring Agent</div>
+                                <div id="agent-signal-monitor" class="fcc-agent-output">Field stand healthy • Normal vegetative stage</div>
+                            </div>
+                        </div>
+                        <span class="fcc-agent-status-badge" style="background: #EBF3E7; color: #315C2A;">Active</span>
+                    </div>
+
+                    <!-- Water Intelligence Agent -->
+                    <div class="fcc-agent-signal-item">
+                        <div class="fcc-agent-info">
+                            <span>💧</span>
+                            <div>
+                                <div class="fcc-agent-name">Water Intelligence Agent</div>
+                                <div id="agent-signal-water" class="fcc-agent-output">Moisture balanced • No immediate irrigation needed</div>
+                            </div>
+                        </div>
+                        <span class="fcc-agent-status-badge" style="background: #EBF3E7; color: #315C2A;">Active</span>
+                    </div>
+
+                    <!-- Crop Health / Disease Agent -->
+                    <div class="fcc-agent-signal-item">
+                        <div class="fcc-agent-info">
+                            <span>🦠</span>
+                            <div>
+                                <div class="fcc-agent-name">Crop Health Agent</div>
+                                <div id="agent-signal-disease" class="fcc-agent-output">Leaf scan negative • Zero fungal lesions detected</div>
+                            </div>
+                        </div>
+                        <span class="fcc-agent-status-badge" style="background: #EBF3E7; color: #315C2A;">Active</span>
+                    </div>
+
+                    <!-- Estimated Nutrient Agent -->
+                    <div class="fcc-agent-signal-item">
+                        <div class="fcc-agent-info">
+                            <span>🧪</span>
+                            <div>
+                                <div class="fcc-agent-name">Estimated Nutrient Agent</div>
+                                <div id="agent-signal-nutrient" class="fcc-agent-output">Soil pH 6.6 • Nitrogen/Potassium absorption optimal</div>
+                            </div>
+                        </div>
+                        <span class="fcc-agent-status-badge" style="background: #EBF3E7; color: #315C2A;">Active</span>
+                    </div>
+
+                    <!-- Weather Intelligence Agent -->
+                    <div class="fcc-agent-signal-item">
+                        <div class="fcc-agent-info">
+                            <span>🌦️</span>
+                            <div>
+                                <div class="fcc-agent-name">Weather Intelligence Agent</div>
+                                <div id="agent-signal-weather" class="fcc-agent-output">Clear skies • Rain probability 12%</div>
+                            </div>
+                        </div>
+                        <span class="fcc-agent-status-badge" style="background: #EBF3E7; color: #315C2A;">Active</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: "Why This Decision?" Explainability Evidence Panel -->
+            <div class="fcc-card">
+                <div class="fcc-section-header" style="margin-bottom: 8px;">
+                    <h3 class="fcc-section-title">Action Planning Agent & Explainability</h3>
+                    <span class="fcc-sim-badge">Central Decision Core</span>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--ab-text-muted);">
+                    The Action Planning Agent cross-checks all agent signals, resolves conflicts, and produces transparent evidence-based recommendations.
+                </p>
+
+                <div class="fcc-why-panel">
+                    <div class="fcc-why-title">
+                        <span id="why-title-text">Why this farm plan was determined:</span>
+                        <span id="why-decision-policy" style="font-size: 0.72rem; color: #5A6E55; font-weight: 600;">Prototype Decision Policy (>85% High, 60–85% Med, &lt;60% Low)</span>
+                    </div>
+                    <ul class="fcc-evidence-list" id="why-evidence-list">
+                        <li class="fcc-evidence-item">
+                            <span class="fcc-evidence-check">✓</span>
+                            <span>Soil moisture at 24% is sufficient for wheat vegetative tillering stage.</span>
+                        </li>
+                        <li class="fcc-evidence-item">
+                            <span class="fcc-evidence-check">✓</span>
+                            <span>Atmospheric rain probability is low (12%), eliminating waterlogging threat.</span>
+                        </li>
+                        <li class="fcc-evidence-item">
+                            <span class="fcc-evidence-check">✓</span>
+                            <span>Zero fungal or pest infestation detected in physical sweep and leaf analysis.</span>
+                        </li>
+                    </ul>
+
+                    <div class="fcc-confidence-row">
+                        <span>Decision Confidence:</span>
+                        <span id="why-confidence-val" class="fcc-confidence-pill">94% High Confidence</span>
+                    </div>
+                </div>
+
+                <!-- Traceable Decision Persistence Badge -->
+                <div style="margin-top: 14px; font-size: 0.78rem; color: var(--ab-text-muted); display: flex; align-items: center; justify-content: space-between;">
+                    <span>Database Traceability: <code id="why-decision-id" style="background: var(--ab-cream-bg); padding: 2px 6px; border-radius: 4px;">DEC-2026-0914</code></span>
+                    <span style="color: var(--ab-primary-green); font-weight: 700;">✓ Synced with Admin Operations</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI ACTION PLANNER (P1, P2, P3) & CLOSED-LOOP VERIFICATION -->
+        <section class="fcc-card" style="margin-bottom: 24px;">
+            <div class="fcc-section-header">
+                <div>
+                    <h3 class="fcc-section-title">AI Action Plan (Prioritized Schedule)</h3>
+                    <p style="font-size: 0.8rem; color: var(--ab-text-muted); margin-top: 2px;">
+                        Closed-loop execution engine: Mark actions completed to trigger real-time sensor verification.
+                    </p>
+                </div>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <span id="fcc-decision-status-pill" class="fcc-status-pill fcc-status-online" style="font-weight: 800; font-size: 0.82rem;">🟢 AI DECISION: NO ACTION REQUIRED</span>
+                    <span id="action-plan-status-pill" class="fcc-status-pill fcc-status-online">3 Active Actions</span>
+                </div>
+            </div>
+
+            <!-- Action Plan List -->
+            <div class="fcc-action-list" id="action-plan-container">
+                <!-- P1 Action -->
+                <div class="fcc-action-item priority-p1" id="action-item-1">
+                    <div class="fcc-action-left">
+                        <span class="fcc-priority-tag">P1</span>
+                        <div class="fcc-action-text-group">
+                            <span class="fcc-action-name" id="action-1-name">Irrigate Zone A (Sub-Surface Drip)</span>
+                            <span class="fcc-action-meta" id="action-1-meta">When: Today @ 6:00 PM • Where: Plot A-2 • Volume: 420 Liters</span>
+                            <span class="fcc-action-why" id="action-1-why">Why: Prevent crop moisture stress before morning heat cycle</span>
+                        </div>
+                    </div>
+                    <div class="fcc-action-btn-group">
+                        <button class="fcc-action-btn fcc-btn-complete" onclick="FCC.completeAction(1)">
+                            ✓ Mark Completed
+                        </button>
+                    </div>
+                </div>
+
+                <!-- P2 Action -->
+                <div class="fcc-action-item priority-p2" id="action-item-2">
+                    <div class="fcc-action-left">
+                        <span class="fcc-priority-tag p2">P2</span>
+                        <div class="fcc-action-text-group">
+                            <span class="fcc-action-name" id="action-2-name">Inspect Lower Foliage for Yellow Rust</span>
+                            <span class="fcc-action-meta" id="action-2-meta">When: Tomorrow Morning • Where: North Border • Confidence: 88%</span>
+                            <span class="fcc-action-why" id="action-2-why">Why: Proactive preventative field scouting</span>
+                        </div>
+                    </div>
+                    <div class="fcc-action-btn-group">
+                        <button class="fcc-action-btn fcc-btn-complete" onclick="FCC.completeAction(2)">
+                            ✓ Mark Completed
+                        </button>
+                    </div>
+                </div>
+
+                <!-- P3 Action -->
+                <div class="fcc-action-item priority-p3" id="action-item-3">
+                    <div class="fcc-action-left">
+                        <span class="fcc-priority-tag p3">P3</span>
+                        <div class="fcc-action-text-group">
+                            <span class="fcc-action-name" id="action-3-name">Recheck Soil Hydration Sensor Node</span>
+                            <span class="fcc-action-meta" id="action-3-meta">When: In 48 Hours • Where: Zone A • Target: 28% Moisture</span>
+                            <span class="fcc-action-why" id="action-3-why">Why: Closed-loop verification of irrigation efficacy</span>
+                        </div>
+                    </div>
+                    <div class="fcc-action-btn-group">
+                        <button class="fcc-action-btn fcc-btn-complete" onclick="FCC.completeAction(3)">
+                            ✓ Mark Completed
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agricultural Treatment Safety Advisory -->
+            <div style="margin-top: 14px; padding: 10px 14px; background: rgba(212, 163, 115, 0.12); border-left: 3px solid #D4A373; border-radius: 4px; font-size: 0.76rem; color: #5A6E55; line-height: 1.4;">
+                <strong>⚠️ Safety Notice:</strong> Follow local product labels, personal protective equipment (PPE) requirements, and agricultural expert guidance before applying agricultural chemicals.
+            </div>
+
+            <!-- Closed-Loop Verification Result Box (Appears upon action completion) -->
+            <div id="fcc-verification-box" class="fcc-verification-modal">
+                <div class="fcc-verification-header">
+                    <span>🔄 Closed-Loop Action Verification:</span>
+                    <span class="fcc-sim-badge">Simulated verification</span>
+                </div>
+                <div class="fcc-verification-body" id="fcc-verification-msg">
+                    Action executed successfully. Previous soil moisture: <strong>18%</strong> • Simulated post-action moisture: <strong>32%</strong> • Status: <strong>VERIFIED / Recovery detected</strong>. Action closed.
+                </div>
+            </div>
+        </section>
+
+        <!-- DECISION IMPACT SUMMARY CARD -->
+        <section class="fcc-card" id="fcc-decision-impact-card" style="margin-bottom: 24px; display: none; background: #F8FAFC; border: 1.5px solid #CBD5E1;">
+            <div class="fcc-section-header" style="margin-bottom: 12px;">
+                <div class="fcc-section-title-wrap">
+                    <h3 class="fcc-section-title" style="color: #0F172A;">📊 DECISION IMPACT SUMMARY</h3>
+                    <span class="fcc-sim-badge">Prototype Metric</span>
+                </div>
+                <span style="font-size: 0.78rem; color: #64748B;">Adaptive AI Optimization Result</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px;">
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px; text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 800; color: #16A34A;">420 L</div>
+                    <div style="font-size: 0.75rem; color: #64748B; font-weight: 600; margin-top: 2px;">Potential water avoided</div>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px; text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 800; color: #2563EB;">91%</div>
+                    <div style="font-size: 0.75rem; color: #64748B; font-weight: 600; margin-top: 2px;">Rain probability</div>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px; text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 800; color: #D97706;">1</div>
+                    <div style="font-size: 0.75rem; color: #64748B; font-weight: 600; margin-top: 2px;">Plan re-evaluated</div>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px; text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 800; color: #DC2626;">1</div>
+                    <div style="font-size: 0.75rem; color: #64748B; font-weight: 600; margin-top: 2px;">Irrigation plan cancelled</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT CHANGED? WEATHER REPLANNING IMPACT COMPARISON PANEL -->
+        <section class="fcc-card" id="fcc-what-changed-card" style="margin-bottom: 24px; background: linear-gradient(135deg, #F0FDF4 0%, #FFFFFF 100%); border: 2px solid #86EFAC;">
+            <div class="fcc-section-header" style="margin-bottom: 12px;">
+                <div class="fcc-section-title-wrap">
+                    <h3 class="fcc-section-title" style="color: #166534;">⚡ WHAT CHANGED? — Adaptive Replanning Impact</h3>
+                    <span class="fcc-sim-badge" style="background: #DCFCE7; color: #15803D;">Weather-Driven Optimization</span>
+                </div>
+                <span id="what-changed-savings-badge" style="font-size: 0.82rem; font-weight: 800; color: #16A34A; background: #DCFCE7; padding: 4px 10px; border-radius: 6px;">💧 420 L potentially avoided</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 12px;">
+                <!-- BEFORE -->
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px;">
+                    <div style="font-size: 0.72rem; font-weight: 800; color: #64748B; text-transform: uppercase; margin-bottom: 6px;">1. Initial Assessment (Water Stress)</div>
+                    <div style="font-size: 0.88rem; color: #334155; line-height: 1.6;">
+                        <div>• Rain Probability: <strong>12%</strong></div>
+                        <div>• Scheduled Action: <strong>Irrigate Zone A</strong></div>
+                        <div>• Target Volume: <strong>420 Liters @ 6:00 PM</strong></div>
+                    </div>
+                </div>
+                <!-- AFTER -->
+                <div style="background: #FFFFFF; border: 1px solid #86EFAC; border-radius: 8px; padding: 14px;">
+                    <div style="font-size: 0.72rem; font-weight: 800; color: #16A34A; text-transform: uppercase; margin-bottom: 6px;">2. Weather Update (Heavy Rain Storm)</div>
+                    <div style="font-size: 0.88rem; color: #14532D; line-height: 1.6;">
+                        <div>• Rain Probability: <strong style="color: #DC2626;">91% (35mm Storm Inbound)</strong></div>
+                        <div>• AI Revised Action: <strong style="color: #DC2626;">❌ Irrigation Cancelled</strong></div>
+                        <div>• Potential Water Avoided: <strong style="color: #16A34A;">💧 420 Liters</strong></div>
+                    </div>
+                </div>
+            </div>
+            <div id="what-changed-factor-text" style="font-size: 0.82rem; color: #166534; font-weight: 600; background: #DCFCE7; padding: 8px 12px; border-radius: 6px;">
+                ✓ Decision Factor: Farm plan automatically revised because heavy rainfall is now expected within the irrigation window, preventing soil waterlogging and aquifer waste.
+            </div>
+        </section>
+
+        <!-- FARM DECISION TIMELINE -->
+        <section class="fcc-card" style="margin-bottom: 24px;">
+            <div class="fcc-section-header">
+                <div>
+                    <h3 class="fcc-section-title">Farm Decision Timeline</h3>
+                    <p style="font-size: 0.8rem; color: var(--ab-text-muted); margin-top: 2px;">
+                        End-to-end signal ingestion, multi-agent risk evaluation, and adaptive replanning stream.
+                    </p>
+                </div>
+                <span class="fcc-sim-badge">Live Sequence</span>
+            </div>
+            <div id="fcc-action-timeline" class="fcc-history-list">
+                <!-- Chronological progression items -->
+            </div>
+        </section>
+
+        <!-- DECISION HISTORY & TRACEABILITY TIMELINE -->
+        <section class="fcc-card">
+            <div class="fcc-section-header">
+                <div>
+                    <h3 class="fcc-section-title">Decision History & Audit Trail</h3>
+                    <p style="font-size: 0.8rem; color: var(--ab-text-muted);">
+                        Every AI recommendation, weather change, and farmer action is chronologically recorded with full telemetry snapshots.
+                    </p>
+                </div>
+                <button class="fcc-scenario-btn" onclick="FCC.clearHistory()">Reset Activity Trail</button>
+            </div>
+
+            <div class="fcc-history-list" id="fcc-history-container">
+                <!-- Chronological history items -->
+            </div>
+        </section>
+
+        <!-- PROTOTYPE ARCHITECTURE DISCLOSURE -->
+        <section class="fcc-card" style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 16px 20px; margin-top: 24px; border-radius: 8px;">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <span style="font-size: 1.25rem;">🌾</span>
+                <div style="font-size: 0.8rem; color: #475569; line-height: 1.5;">
+                    <strong style="color: #1E293B; font-size: 0.85rem;">AgriBridge Prototype Architecture:</strong>
+                    This prototype demonstrates the agricultural decision intelligence layer using virtual IoT telemetry and simulated field actions. External data sources and connected services provide real inputs where available. Physical sensor and actuator integration represents the deployment layer beyond this prototype.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- IN-APP TOAST NOTIFICATION CONTAINER -->
+    <div id="fcc-toast-container" class="fcc-toast-container"></div>
+
+    <!-- SCRIPTS -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/farm-command-center.js"></script>
+
+    <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
+    <a href="/frontend/pages/voice-assistant.html?from_page=farm-command-center" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
+        title="Voice Farming Assistant / आवाज से पूछें">
+        <div class="voice-mic-icon-box">
+            <div class="voice-pulse-ring"></div>
+            🎙️
+        </div>
+        <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
+    </a>
+
+</body>
+
+</html>
+

@@ -1,0 +1,48 @@
+# AgriBridge – Final Database Schema
+
+## Database
+agribridge_final
+
+## 1. Farmers
+
+| Field | Type | Key | Description |
+|---|---|---|---|
+| id | INT | PK | Unique farmer ID |
+| name | VARCHAR(100) | | Farmer name |
+
+## 2. Listings
+
+| Field | Type | Key | Description |
+|---|---|---|---|
+| id | INT | PK | Unique listing ID |
+| farmer_id | INT | FK | References farmers.id |
+| crop_type | VARCHAR(100) | | Type of crop |
+| photo_path | VARCHAR(255) | | Crop image path |
+| health_status | VARCHAR(100) | | Crop health information |
+| confidence | DECIMAL(5,4) | | Prediction confidence |
+| harvest_date | DATE | | Expected harvest date |
+| quantity_est | DECIMAL(10,2) | | Estimated quantity |
+| status | VARCHAR(50) | | Listing status |
+
+## 3. Orders
+
+| Field | Type | Key | Description |
+|---|---|---|---|
+| id | INT | PK | Unique order ID |
+| listing_id | INT | FK | References listings.id |
+| buyer_id | INT | | Buyer identifier |
+| committed_at | DATETIME | | Order commitment timestamp |
+
+## Relationships
+
+farmers.id
+    ↓
+listings.farmer_id
+
+listings.id
+    ↓
+orders.listing_id
+
+## Database Manager Status
+
+Schema created and foreign-key relationships verified.

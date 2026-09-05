@@ -1,0 +1,98 @@
+[
+  {
+    "crop":"Wheat",
+    "total_duration_min":120,
+    "total_duration_max":140,
+    "harvest_window":"120-140 days"
+  },
+  {
+    "crop":"Rice",
+    "total_duration_min":130,
+    "total_duration_max":160,
+    "harvest_window":"130-160 days"
+  },
+  {
+    "crop":"Corn",
+    "total_duration_min":90,
+    "total_duration_max":140,
+    "harvest_window":"90-140 days"
+  },
+  {
+    "crop":"Potato",
+    "total_duration_min":100,
+    "total_duration_max":130,
+    "harvest_window":"100-130 days"
+  },
+  {
+    "crop":"Soybean",
+    "total_duration_min":120,
+    "total_duration_max":150,
+    "harvest_window":"120-150 days"
+  },
+  {
+    "crop":"Tomato",
+    "total_duration_min":120,
+    "total_duration_max":160,
+    "harvest_window":"120-160 days"
+  },
+  {
+    "crop":"Pepper",
+    "total_duration_min":120,
+    "total_duration_max":150,
+    "harvest_window":"120-150 days"
+  },
+  {
+    "crop":"Squash",
+    "total_duration_min":90,
+    "total_duration_max":120,
+    "harvest_window":"90-120 days"
+  },
+  {
+    "crop":"Strawberry",
+    "total_duration_min":60,
+    "total_duration_max":90,
+    "harvest_window":"60-90 days"
+  },
+  {
+    "crop":"Raspberry",
+    "total_duration_min":90,
+    "total_duration_max":120,
+    "harvest_window":"90-120 days"
+  },
+  {
+    "crop":"Grape",
+    "total_duration_min":140,
+    "total_duration_max":170,
+    "harvest_window":"140-170 days"
+  },
+  {
+    "crop":"Apple",
+    "total_duration_min":160,
+    "total_duration_max":180,
+    "harvest_window":"160-180 days"
+  },
+  {
+    "crop":"Peach",
+    "total_duration_min":120,
+    "total_duration_max":150,
+    "harvest_window":"120-150 days"
+  },
+  {
+    "crop":"Cherry",
+    "total_duration_min":80,
+    "total_duration_max":90,
+    "harvest_window":"80-90 days"
+  },
+  {
+    "crop":"Blueberry",
+    "total_duration_min":100,
+    "total_duration_max":130,
+    "harvest_window":"100-130 days"
+  },
+  {
+    "crop":"Orange",
+    "total_duration_min":300,
+    "total_duration_max":360,
+    "harvest_window":"300-360 days"
+  }
+]

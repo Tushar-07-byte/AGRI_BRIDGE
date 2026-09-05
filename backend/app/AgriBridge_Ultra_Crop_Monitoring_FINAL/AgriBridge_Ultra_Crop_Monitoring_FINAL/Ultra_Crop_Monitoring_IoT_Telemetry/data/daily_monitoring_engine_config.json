@@ -1,0 +1,29 @@
+{
+    "engine_name": "AgriBridge Daily Monitoring & Decision Engine",
+    "version": "1.0",
+    "inputs": [
+        "crop",
+        "crop_start_date",
+        "monitoring_date",
+        "live_weather",
+        "iot_telemetry"
+    ],
+    "knowledge_base": [
+        "crop_stages.csv",
+        "stage_management.csv",
+        "dynamic_crop_stage_lookup.json"
+    ],
+    "decision_modules": [
+        "crop_stage",
+        "irrigation",
+        "fertilizer",
+        "disease_protection",
+        "pest_protection",
+        "harvest_timeline",
+        "weather_context",
+        "iot_telemetry"
+    ],
+    "output": "Structured daily decision context",
+    "llm_integration": "Next layer",
+    "status": "READY"
+}

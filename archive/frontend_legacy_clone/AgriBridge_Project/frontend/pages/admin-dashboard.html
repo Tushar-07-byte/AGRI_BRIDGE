@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="AgriBridge Control Center — Central operations, trust verification, marketplace monitoring, and AI agricultural intelligence.">
+
+    <title>AgriBridge Control Center | Operations & Marketplace Mission Control</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/admin-dashboard.css">
+</head>
+
+<body class="admin-body">
+
+    <!-- =========================================================
+         ADMIN SECURITY ACCESS GUARD (PASSCODE GATE: admin123)
+         ========================================================= -->
+    <div class="admin-auth-guard" id="admin-auth-guard" style="display: flex;">
+        <div class="auth-guard-card">
+            <div class="auth-guard-icon">🛡️</div>
+            <div class="auth-guard-badge">RESTRICTED ACCESS</div>
+            <h2 class="auth-guard-title">AgriBridge Mission Control</h2>
+            <p class="auth-guard-desc">This command center is restricted to authorized platform administrators. Please enter your Administrator Security Passcode to view platform operations.</p>
+            
+            <form id="admin-pin-form" class="auth-guard-form">
+                <div class="pin-input-group">
+                    <label for="admin-pin-input">ADMIN SECURITY PASSCODE</label>
+                    <div class="pin-field-wrap">
+                        <input type="password" id="admin-pin-input" placeholder="Enter security passcode..." autocomplete="off" autofocus required>
+                        <button type="button" class="pin-toggle-btn" id="pin-toggle-btn" title="Show/Hide Passcode">👁️</button>
+                    </div>
+                    <div class="pin-error-msg" id="pin-error-msg" style="display: none;"></div>
+                </div>
+
+                <div class="auth-guard-actions">
+                    <button type="submit" class="btn-primary auth-submit-btn" id="btn-submit-pin">Unlock Control Center</button>
+                    <a href="/frontend/pages/index.html" class="btn-secondary auth-exit-btn">Return to Public Portal</a>
+                </div>
+
+                <div class="auth-guard-hint">
+                    <span>🔑 Admin Passcode:</span>
+                    <strong>admin123</strong>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MAIN ADMIN LAYOUT (LOCKED BY DEFAULT) -->
+    <div class="admin-layout" id="admin-main-layout" style="display: none;">
+
+        <!-- =========================================================
+             1. ADMIN SIDEBAR NAVIGATION
+             ========================================================= -->
+        <aside class="admin-sidebar" id="admin-sidebar">
+
+            <!-- BRAND HEADER -->
+            <div class="sidebar-brand">
+                <a href="/frontend/pages/index.html" class="brand-link" title="AgriBridge Home">
+                    <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo" class="brand-logo">
+                </a>
+                <div class="brand-badge-row">
+                    <span class="admin-role-badge">👑 MISSION CONTROL</span>
+                    <span class="sys-pulse-badge" title="System Status: Operational"></span>
+                </div>
+            </div>
+
+            <!-- NAVIGATION SECTIONS -->
+            <div class="sidebar-scrollable">
+
+                <!-- 1. OVERVIEW -->
+                <div class="sidebar-group">
+                    <div class="group-label">OVERVIEW</div>
+                    <button type="button" class="nav-item active" data-view="overview">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Command Center</span>
+                    </button>
+                </div>
+
+                <!-- 2. PLATFORM DIRECTORY -->
+                <div class="sidebar-group">
+                    <div class="group-label">PLATFORM DIRECTORY</div>
+                    <button type="button" class="nav-item" data-view="users">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-text">User Directory</span>
+                        <span class="nav-count" id="count-users">28</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="farmers">
+                        <span class="nav-icon">🌾</span>
+                        <span class="nav-text">Farmers</span>
+                        <span class="nav-count" id="count-farmers">14</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="buyers">
+                        <span class="nav-icon">🛒</span>
+                        <span class="nav-text">Buyers</span>
+                        <span class="nav-count" id="count-buyers">8</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="agents">
+                        <span class="nav-icon">📋</span>
+                        <span class="nav-text">Field Agents</span>
+                        <span class="nav-count" id="count-agents">6</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="farms">
+                        <span class="nav-icon">🗺️</span>
+                        <span class="nav-text">Farm Polygons</span>
+                        <span class="nav-count" id="count-farms">18</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="listings">
+                        <span class="nav-icon">📦</span>
+                        <span class="nav-text">Harvest Listings</span>
+                        <span class="nav-count" id="count-listings">12</span>
+                    </button>
+                </div>
+
+                <!-- 3. OPERATIONS -->
+                <div class="sidebar-group">
+                    <div class="group-label">OPERATIONS & TRUST</div>
+                    <button type="button" class="nav-item" data-view="verification">
+                        <span class="nav-icon">🛡️</span>
+                        <span class="nav-text">Verification Center</span>
+                        <span class="nav-badge-pill" id="badge-pending-verif">3 PENDING</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="orders">
+                        <span class="nav-icon">💳</span>
+                        <span class="nav-text">Order Management</span>
+                        <span class="nav-count" id="count-orders">9</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="commitments">
+                        <span class="nav-icon">🤝</span>
+                        <span class="nav-text">Buyer Commitments</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="notifications">
+                        <span class="nav-icon">🔔</span>
+                        <span class="nav-text">Dispatch Logs</span>
+                    </button>
+                </div>
+
+                <!-- 4. INTELLIGENCE -->
+                <div class="sidebar-group">
+                    <div class="group-label">AI & RISK INTELLIGENCE</div>
+                    <button type="button" class="nav-item" data-view="ai-intelligence">
+                        <span class="nav-icon">🧠</span>
+                        <span class="nav-text">AI Farm Neural Vision</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="weather-risk">
+                        <span class="nav-icon">🌦️</span>
+                        <span class="nav-text">Weather & Risk Radar</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="analytics">
+                        <span class="nav-icon">📈</span>
+                        <span class="nav-text">Marketplace Analytics</span>
+                    </button>
+                </div>
+
+                <!-- 5. SECURITY -->
+                <div class="sidebar-group">
+                    <div class="group-label">GOVERNANCE & SECURITY</div>
+                    <button type="button" class="nav-item" data-view="security">
+                        <span class="nav-icon">🔒</span>
+                        <span class="nav-text">Security Center</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="login-history">
+                        <span class="nav-icon">🕒</span>
+                        <span class="nav-text">Login History</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="audit-logs">
+                        <span class="nav-icon">📜</span>
+                        <span class="nav-text">Audit Trail</span>
+                    </button>
+                </div>
+
+                <!-- 6. ADMINISTRATION -->
+                <div class="sidebar-group">
+                    <div class="group-label">ADMINISTRATION</div>
+                    <button type="button" class="nav-item" data-view="reports">
+                        <span class="nav-icon">📑</span>
+                        <span class="nav-text">CSV Reports Export</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="system-health">
+                        <span class="nav-icon">⚡</span>
+                        <span class="nav-text">System & Database</span>
+                    </button>
+                    <button type="button" class="nav-item" data-view="settings">
+                        <span class="nav-icon">⚙️</span>
+                        <span class="nav-text">Platform Settings</span>
+                    </button>
+                </div>
+
+                <!-- PORTAL QUICK-SWITCHER -->
+                <div class="sidebar-portals-box">
+                    <div class="portals-title">CLIENT PORTALS</div>
+                    <div class="portals-links">
+                        <a href="/frontend/pages/farmer-dashboard.html" class="portal-link-btn" title="Open Farmer Portal">🌾 Farmer</a>
+                        <a href="/frontend/pages/buyer-dashboard.html" class="portal-link-btn" title="Open Buyer Marketplace">🛒 Buyer</a>
+                        <a href="/frontend/pages/field-agent-dashboard.html" class="portal-link-btn" title="Open Field Agent Map">📋 Field Agent</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR FOOTER (ADMIN PROFILE) -->
+            <div class="sidebar-footer">
+                <div class="admin-user-pill">
+                    <div class="admin-avatar">AD</div>
+                    <div class="admin-info">
+                        <span class="admin-name">Admin Operations</span>
+                        <span class="admin-role-title">SuperAdmin · AgriBridge</span>
+                    </div>
+                </div>
+                <a href="/frontend/pages/login.html" class="sidebar-logout-btn" id="admin-logout-btn" title="Log Out of Control Center">
+                    🚪
+                </a>
+            </div>
+
+        </aside>
+
+
+        <!-- =========================================================
+             2. MAIN CONTENT WRAPPER
+             ========================================================= -->
+        <main class="admin-main">
+
+            <!-- TOP APPLICATION BAR -->
+            <header class="admin-topbar">
+
+                <div class="topbar-left">
+                    <button type="button" class="sidebar-toggle-btn" id="sidebar-toggle" aria-label="Toggle Navigation Sidebar">
+                        ☰
+                    </button>
+                    <div class="topbar-heading">
+                        <h1 class="topbar-title" id="current-view-title">AgriBridge Control Center</h1>
+                        <span class="topbar-subtitle">Platform operations, trust & marketplace monitoring</span>
+                    </div>
+                </div>
+
+                <!-- GLOBAL OMNI SEARCH -->
+                <div class="topbar-search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="global-admin-search" placeholder="Search farmers, buyers, listings, orders, verification..."
+                        aria-label="Global Admin Search">
+                    <button type="button" class="search-clear-btn" id="search-clear-btn" style="display:none;">✕</button>
+                </div>
+
+                <div class="topbar-right">
+                    <!-- SYSTEM STATUS PILL -->
+                    <div class="status-pill-btn">
+                        <span class="status-indicator-dot"></span>
+                        <span class="status-text">Platform Operational</span>
+                    </div>
+
+                    <!-- LIVE TIME PILL -->
+                    <div class="clock-pill" id="live-clock" title="Current Local System Time">
+                        --:--:--
+                    </div>
+
+                    <!-- REFRESH BUTTON -->
+                    <button type="button" class="topbar-icon-btn" id="admin-refresh-btn" title="Refresh Live Data">
+                        🔄
+                    </button>
+                </div>
+
+            </header>
+
+
+            <!-- GLOBAL SEARCH RESULTS POPUP -->
+            <div class="omni-search-results" id="omni-search-dropdown" style="display:none;">
+                <div class="search-results-header">
+                    <span>SEARCH RESULTS</span>
+                    <button type="button" class="search-close-btn" id="search-close-btn">Close ✕</button>
+                </div>
+                <div class="search-results-list" id="omni-search-list">
+                    <!-- Dynamic Search Results -->
+                </div>
+            </div>
+
+
+            <!-- =========================================================
+                 VIEW PANELS CONTAINER
+                 ========================================================= -->
+            <div class="admin-content-body">
+
+                <!-- -----------------------------------------------------
+                     VIEW 1: OVERVIEW / COMMAND CENTER
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel active" id="view-overview">
+
+                    <!-- ALERT NOTIFICATION BANNER -->
+                    <div class="alert-banner-box">
+                        <div class="alert-banner-icon">⚡</div>
+                        <div class="alert-banner-text">
+                            <strong>Platform Overview Active:</strong> 3 Pre-harvest lots pending Field Agent physical verification. High rain probability in Raipur District requires monitoring.
+                        </div>
+                        <button type="button" class="alert-banner-action" data-jump="verification">Review Verifications →</button>
+                    </div>
+
+                    <!-- PRIMARY KPI METRICS GRID -->
+                    <div class="kpi-grid">
+
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <span class="kpi-label">TOTAL REGISTERED USERS</span>
+                                <span class="kpi-icon bg-emerald">👥</span>
+                            </div>
+                            <div class="kpi-value" id="kpi-total-users">28</div>
+                            <div class="kpi-footer">
+                                <span class="kpi-trend positive">↑ 14.2%</span>
+                                <span class="kpi-sub">14 Farmers · 8 Buyers · 6 Agents</span>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <span class="kpi-label">ACTIVE HARVEST LISTINGS</span>
+                                <span class="kpi-icon bg-green">🌾</span>
+                            </div>
+                            <div class="kpi-value" id="kpi-total-listings">12</div>
+                            <div class="kpi-footer">
+                                <span class="kpi-trend positive">9 Verified</span>
+                                <span class="kpi-sub">3 Pending physical check</span>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <span class="kpi-label">BUYER COMMITMENTS VALUE</span>
+                                <span class="kpi-icon bg-gold">💳</span>
+                            </div>
+                            <div class="kpi-value" id="kpi-total-order-val">₹ 14.85 L</div>
+                            <div class="kpi-footer">
+                                <span class="kpi-trend positive">↑ 22.4%</span>
+                                <span class="kpi-sub">9 Forward purchase orders</span>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <span class="kpi-label">AI HEALTH SCAN ACCURACY</span>
+                                <span class="kpi-icon bg-purple">🧠</span>
+                            </div>
+                            <div class="kpi-value" id="kpi-ai-confidence">94.8%</div>
+                            <div class="kpi-footer">
+                                <span class="kpi-trend neutral">42 Neural Vision Scans</span>
+                                <span class="kpi-sub">Zero false blight alerts</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- SECONDARY KPI STRIP -->
+                    <div class="sub-kpi-strip">
+                        <div class="sub-kpi-item">
+                            <span class="sub-kpi-dot bg-green"></span>
+                            <span class="sub-kpi-name">Verified Listings:</span>
+                            <strong id="kpi-verified-count">9</strong>
+                        </div>
+                        <div class="sub-kpi-item">
+                            <span class="sub-kpi-dot bg-gold"></span>
+                            <span class="sub-kpi-name">Pending Verification:</span>
+                            <strong id="kpi-pending-count">3</strong>
+                        </div>
+                        <div class="sub-kpi-item">
+                            <span class="sub-kpi-dot bg-emerald"></span>
+                            <span class="sub-kpi-name">Farm Polygons Audited:</span>
+                            <strong id="kpi-farms-count">18</strong>
+                        </div>
+                        <div class="sub-kpi-item">
+                            <span class="sub-kpi-dot bg-red"></span>
+                            <span class="sub-kpi-name">High-Risk Weather Zones:</span>
+                            <strong id="kpi-risk-zones">1 (Raipur)</strong>
+                        </div>
+                        <div class="sub-kpi-item">
+                            <span class="sub-kpi-dot bg-blue"></span>
+                            <span class="sub-kpi-name">Security Status:</span>
+                            <strong style="color: #6F9F52;">🛡️ 100% Secure</strong>
+                        </div>
+                    </div>
+
+                    <!-- ANALYTICAL OVERVIEW GRID -->
+                    <div class="overview-charts-grid">
+
+                        <!-- CHART CARD 1 -->
+                        <div class="dashboard-card">
+                            <div class="card-title-bar">
+                                <div>
+                                    <h3>Verified Listings vs. Buyer Commitments</h3>
+                                    <span class="card-subtitle">Supply & forward demand volume correlation</span>
+                                </div>
+                                <span class="badge-tag">Real-Time Data</span>
+                            </div>
+                            <div class="custom-chart-container" id="chart-commitments">
+                                <!-- Dynamic SVG / Bar Visualizer -->
+                            </div>
+                        </div>
+
+                        <!-- RECENT VERIFICATION & ALERT FEED -->
+                        <div class="dashboard-card">
+                            <div class="card-title-bar">
+                                <div>
+                                    <h3>Verification & Dispatch Feed</h3>
+                                    <span class="card-subtitle">Ground Truth audits and quality seal actions</span>
+                                </div>
+                                <button type="button" class="card-header-btn" data-jump="verification">View Queue →</button>
+                            </div>
+                            <div class="recent-activity-list" id="overview-recent-activity">
+                                <!-- Dynamic Items -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 2: USER DIRECTORY
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-users">
+
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>User Management</h2>
+                            <p>Monitor all registered Farmers, Buyers, Field Agents, and Administrators.</p>
+                        </div>
+                        <div class="panel-header-actions">
+                            <button type="button" class="btn-secondary" id="btn-export-users">Export Users CSV</button>
+                        </div>
+                    </div>
+
+                    <!-- FILTER TOOLBAR -->
+                    <div class="table-toolbar">
+                        <div class="filter-group">
+                            <input type="text" id="filter-user-search" class="search-input" placeholder="Search by name, email, or user ID...">
+                            <select id="filter-user-role" class="filter-select">
+                                <option value="all">All Roles</option>
+                                <option value="farmer">Farmer (🌾)</option>
+                                <option value="buyer">Buyer (🛒)</option>
+                                <option value="field-agent">Field Agent (📋)</option>
+                                <option value="admin">Administrator (👑)</option>
+                            </select>
+                            <select id="filter-user-status" class="filter-select">
+                                <option value="all">All Statuses</option>
+                                <option value="active">Active</option>
+                                <option value="pending">Pending Verification</option>
+                                <option value="suspended">Suspended</option>
+                            </select>
+                        </div>
+                        <div class="table-counts-label" id="label-users-count">Showing 28 users</div>
+                    </div>
+
+                    <!-- USERS DATA TABLE -->
+                    <div class="table-responsive">
+                        <table class="admin-table" id="table-users">
+                            <thead>
+                                <tr>
+                                    <th>User ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Location</th>
+                                    <th>Status</th>
+                                    <th>Created Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-users">
+                                <!-- Dynamic User Rows -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 3: FARMERS MANAGEMENT
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-farmers">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Farmer Profiles & Crop Holdings</h2>
+                            <p>Manage farmer farm holdings, crop diagnostics, pre-harvest lots, and buyer commitments.</p>
+                        </div>
+                        <div class="panel-header-actions">
+                            <button type="button" class="btn-secondary" id="btn-export-farmers">Export Farmers CSV</button>
+                        </div>
+                    </div>
+
+                    <div class="table-toolbar">
+                        <div class="filter-group">
+                            <input type="text" id="filter-farmer-search" class="search-input" placeholder="Search farmer, district, state...">
+                            <select id="filter-farmer-crop" class="filter-select">
+                                <option value="all">All Crops</option>
+                                <option value="Wheat">Wheat</option>
+                                <option value="Rice (Basmati)">Rice (Basmati)</option>
+                                <option value="Mustard">Mustard</option>
+                                <option value="Soybean">Soybean</option>
+                                <option value="Cotton">Cotton</option>
+                            </select>
+                        </div>
+                        <div class="table-counts-label" id="label-farmers-count">Showing 14 farmers</div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="admin-table" id="table-farmers">
+                            <thead>
+                                <tr>
+                                    <th>Farmer ID</th>
+                                    <th>Farmer Name</th>
+                                    <th>Location</th>
+                                    <th>Crops Cultivated</th>
+                                    <th>Farm Area</th>
+                                    <th>AI Health Index</th>
+                                    <th>Field Verified</th>
+                                    <th>Buyer Commitments</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-farmers">
+                                <!-- Dynamic Farmer Rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 4: BUYERS MANAGEMENT
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-buyers">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Wholesale Buyer Accounts</h2>
+                            <p>Monitor procurement corporations, aggregators, committed capital, and fulfillment orders.</p>
+                        </div>
+                        <div class="panel-header-actions">
+                            <button type="button" class="btn-secondary" id="btn-export-buyers">Export Buyers CSV</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="admin-table" id="table-buyers">
+                            <thead>
+                                <tr>
+                                    <th>Buyer ID</th>
+                                    <th>Organization / Name</th>
+                                    <th>Email / Contact</th>
+                                    <th>Business Type</th>
+                                    <th>Total Orders</th>
+                                    <th>Committed Value</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-buyers">
+                                <!-- Dynamic Buyer Rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 5: FIELD AGENTS MANAGEMENT
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-agents">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Certified Field Inspectors</h2>
+                            <p>Monitor ground inspection agents, assigned territory, completed polygon checks, and audit ratings.</p>
+                        </div>
+                        <div class="panel-header-actions">
+                            <button type="button" class="btn-secondary" id="btn-export-agents">Export Agents CSV</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="admin-table" id="table-agents">
+                            <thead>
+                                <tr>
+                                    <th>Agent ID</th>
+                                    <th>Inspector Name</th>
+                                    <th>Assigned Territory</th>
+                                    <th>Contact</th>
+                                    <th>Assigned Farms</th>
+                                    <th>Pending Audits</th>
+                                    <th>Completed Checks</th>
+                                    <th>Quality Score</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-agents">
+                                <!-- Dynamic Agent Rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 6: FARMS & GEO-POLYGONS
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-farms">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Farm Polygons & Field Coordinates</h2>
+                            <p>Inspect geo-fenced boundaries, soil parameters, foliage vigor, and GPS verification status.</p>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="admin-table" id="table-farms">
+                            <thead>
+                                <tr>
+                                    <th>Farm Polygon ID</th>
+                                    <th>Farmer</th>
+                                    <th>Location</th>
+                                    <th>GPS Coordinates</th>
+                                    <th>Area (Acres)</th>
+                                    <th>Crop Stand</th>
+                                    <th>AI Vigor Index</th>
+                                    <th>Geo-Fenced</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-farms">
+                                <!-- Dynamic Farm Rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 7: LISTINGS MANAGEMENT
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-listings">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Pre-Harvest Crop Listings</h2>
+                            <p>Oversee all pre-harvest listings, expected harvest dates, pricing, and verification state.</p>
+                        </div>
+                        <div class="panel-header-actions">
+                            <button type="button" class="btn-secondary" id="btn-export-listings">Export Listings CSV</button>
+                        </div>
+                    </div>
+
+                    <!-- FILTER TOOLBAR -->
+                    <div class="table-toolbar">
+                        <div class="filter-group">
+                            <input type="text" id="filter-listing-search" class="search-input" placeholder="Search crop, farmer, listing ID...">
+                            <select id="filter-listing-status" class="filter-select">
+                                <option value="all">All Statuses</option>
+                                <option value="Verified">Verified Only</option>
+                                <option value="Pending Verification">Pending Verification</option>
+                                <option value="Committed">Committed by Buyer</option>
+                            </select>
+                            <select id="filter-listing-sort" class="filter-select">
+                                <option value="date-desc">Harvest Date (Nearest)</option>
+                                <option value="price-desc">Price (High to Low)</option>
+                                <option value="conf-desc">AI Confidence (High to Low)</option>
+                            </select>
+                        </div>
+                        <div class="table-counts-label" id="label-listings-count">Showing 12 listings</div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="admin-table" id="table-listings">
+                            <thead>
+                                <tr>
+                                    <th>Listing ID</th>
+                                    <th>Crop</th>
+                                    <th>Farmer</th>
+                                    <th>Location</th>
+                                    <th>Quantity</th>
+                                    <th>Price / kg</th>
+                                    <th>Expected Harvest</th>
+                                    <th>AI Confidence</th>
+                                    <th>Field Agent</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-listings">
+                                <!-- Dynamic Listing Rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 8: VERIFICATION COMMAND CENTER
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-verification">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Verification Command Center</h2>
+                            <p>Review Ground Truth audits, examine physical checklist findings, and issue quality seals.</p>
+                        </div>
+                        <div class="panel-header-actions">
+                            <button type="button" class="btn-secondary" id="btn-export-verifications">Export Verifications CSV</button>
+                        </div>
+                    </div>
+
+                    <!-- VERIFICATION STATS -->
+                    <div class="sub-kpi-strip" style="margin-bottom: 24px;">
+                        <div class="sub-kpi-item">
+                            <span class="sub-kpi-dot bg-gold"></span>
+                            <span class="sub-kpi-name">Pending Queue:</span>
+                            <strong id="verif-pending-stat">3 Lots</strong>
+                        </div>
+                        <div class="sub-kpi-item">
+                            <span class="sub-kpi-dot bg-green"></span>
+                            <span class="sub-kpi-name">Verified & Certified:</span>
+                            <strong id="verif-approved-stat">9 Lots</strong>
+                        </div>
+                        <div class="sub-kpi-item">
+                            <span class="sub-kpi-dot bg-emerald"></span>
+                            <span class="sub-kpi-name">Physical Quality Grade A+:</span>
+                            <strong>6 Lots</strong>
+                        </div>
+                        <div class="sub-kpi-item">
+                            <span class="sub-kpi-dot bg-purple"></span>
+                            <span class="sub-kpi-name">Re-Inspections Dispatched:</span>
+                            <strong>1 Active</strong>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="admin-table" id="table-verifications">
+                            <thead>
+                                <tr>
+                                    <th>Verification ID</th>
+                                    <th>Listing ID</th>
+                                    <th>Farmer</th>
+                                    <th>Crop & Location</th>
+                                    <th>Field Inspector</th>
+                                    <th>AI Confidence</th>
+                                    <th>Physical Grade</th>
+                                    <th>Submitted Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-verifications">
+                                <!-- Dynamic Verification Rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 9: ORDERS & COMMITMENTS
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-orders">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Order Management</h2>
+                            <p>Monitor wholesale advance buyer commitments and fulfillment lifecycle.</p>
+                        </div>
+                        <div class="panel-header-actions">
+                            <button type="button" class="btn-secondary" id="btn-export-orders">Export Orders CSV</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="admin-table" id="table-orders">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Buyer</th>
+                                    <th>Farmer</th>
+                                    <th>Crop</th>
+                                    <th>Quantity</th>
+                                    <th>Total Amount</th>
+                                    <th>Commitment Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-orders">
+                                <!-- Dynamic Order Rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 10: BUYER COMMITMENTS TRACKER
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-commitments">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Forward Buyer Pre-Harvest Commitments</h2>
+                            <p>Pre-harvest demand matching pipeline securing guaranteed revenue for farmers.</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-title-bar">
+                            <h3>Active Pre-Harvest Forward Contracts</h3>
+                            <span class="badge-tag green">₹ 14,85,000 Locked Capital</span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="admin-table" id="table-forward-commitments">
+                                <thead>
+                                    <tr>
+                                        <th>Contract ID</th>
+                                        <th>Buyer Enterprise</th>
+                                        <th>Farmer / Lot</th>
+                                        <th>Crop</th>
+                                        <th>Volume</th>
+                                        <th>Agreed Rate</th>
+                                        <th>Total Value</th>
+                                        <th>Harvest Due</th>
+                                        <th>Contract Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-forward-commitments">
+                                    <!-- Dynamic Commitment Rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 11: DISPATCH & NOTIFICATIONS LOGS
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-notifications">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Platform Dispatch & Alert Logs</h2>
+                            <p>Monitor automated SMS, WhatsApp, and in-app dispatches to farmers, buyers, and agents.</p>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="admin-table" id="table-notifications">
+                            <thead>
+                                <tr>
+                                    <th>Log ID</th>
+                                    <th>Recipient</th>
+                                    <th>Role</th>
+                                    <th>Category</th>
+                                    <th>Message Payload</th>
+                                    <th>Timestamp</th>
+                                    <th>Delivery Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-notifications">
+                                <!-- Dynamic Notification Rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 12: AI INTELLIGENCE CENTER
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-ai-intelligence">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>AI Farm Intelligence & Neural Vision Diagnostics</h2>
+                            <p>Real-time computer vision models analyzing foliage disease, pathogen severity, and yield density.</p>
+                        </div>
+                    </div>
+
+                    <div class="kpi-grid" style="margin-bottom: 24px;">
+                        <div class="kpi-card">
+                            <div class="kpi-label">TOTAL AI SCANS</div>
+                            <div class="kpi-value">42</div>
+                            <div class="kpi-sub">Across 18 farm plots</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-label">HEALTHY CROPS (90%+)</div>
+                            <div class="kpi-value text-green">34 Lots</div>
+                            <div class="kpi-sub">Grade A / A+ Stands</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-label">EARLY BLIGHT WARNINGS</div>
+                            <div class="kpi-value text-gold">1 Lot</div>
+                            <div class="kpi-sub">Yellow Rust Detected (Mild)</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-label">NEURAL ACCURACY</div>
+                            <div class="kpi-value text-purple">95.4%</div>
+                            <div class="kpi-sub">Validated against Ground Truth</div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-title-bar">
+                            <h3>Recent AI Neural Vision Diagnostic Records</h3>
+                            <span class="badge-tag">Deep Learning ResNet-50</span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="admin-table" id="table-ai-diagnostics">
+                                <thead>
+                                    <tr>
+                                        <th>Scan ID</th>
+                                        <th>Farm / Plot</th>
+                                        <th>Crop</th>
+                                        <th>Health Index</th>
+                                        <th>Disease Risk</th>
+                                        <th>Weather Risk</th>
+                                        <th>AI Confidence</th>
+                                        <th>Priority</th>
+                                        <th>Recommended Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-ai-diagnostics">
+                                    <!-- Dynamic AI Rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 13: WEATHER & RISK RADAR
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-weather-risk">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Localized Agricultural Weather & Risk Radar</h2>
+                            <p>15-Day agro-climatic forecasting, precipitation windows, and crop vulnerability alerts.</p>
+                        </div>
+                    </div>
+
+                    <div class="weather-regions-grid" id="weather-regions-container">
+                        <!-- Dynamic Region Weather Cards -->
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 14: PLATFORM ANALYTICS
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-analytics">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Marketplace & Growth Analytics</h2>
+                            <p>Transaction volume, crop distribution, verification turnaround, and regional adoption.</p>
+                        </div>
+                    </div>
+
+                    <div class="overview-charts-grid">
+                        <div class="dashboard-card">
+                            <div class="card-title-bar">
+                                <h3>Crop Distribution by Volume</h3>
+                                <span class="badge-tag">Harvest Metric Tons</span>
+                            </div>
+                            <div class="custom-chart-container" id="chart-crop-dist">
+                                <!-- Crop Distribution Chart -->
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-title-bar">
+                                <h3>Verification Turnaround Time (TAT)</h3>
+                                <span class="badge-tag">Avg 18.4 Hours</span>
+                            </div>
+                            <div class="custom-chart-container" id="chart-tat">
+                                <!-- TAT Chart -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 15: SECURITY CENTER
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-security">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Platform Security & Access Center</h2>
+                            <p>Authentication monitoring, session control, role-based permissions, and threat prevention.</p>
+                        </div>
+                    </div>
+
+                    <div class="kpi-grid" style="margin-bottom: 24px;">
+                        <div class="kpi-card">
+                            <div class="kpi-label">SECURITY POSTURE</div>
+                            <div class="kpi-value text-green">🛡️ SECURE</div>
+                            <div class="kpi-sub">Zero vulnerabilities detected</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-label">SUCCESSFUL LOGINS (24H)</div>
+                            <div class="kpi-value">54</div>
+                            <div class="kpi-sub">Across all roles</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-label">FAILED AUTH ATTEMPTS</div>
+                            <div class="kpi-value text-gold">2</div>
+                            <div class="kpi-sub">Handled by rate limiter</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-label">ACTIVE SESSIONS</div>
+                            <div class="kpi-value text-purple">12</div>
+                            <div class="kpi-sub">Encrypted tokens</div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-title-bar">
+                            <h3>Security Threat Detection Feed</h3>
+                            <span class="badge-tag green">Active Real-Time Defense</span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="admin-table" id="table-security-events">
+                                <thead>
+                                    <tr>
+                                        <th>Event ID</th>
+                                        <th>Type</th>
+                                        <th>Severity</th>
+                                        <th>Source IP / Entity</th>
+                                        <th>Description</th>
+                                        <th>Timestamp</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-security-events">
+                                    <!-- Dynamic Security Event Rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 16: LOGIN HISTORY
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-login-history">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Authentication & Login History</h2>
+                            <p>Full chronological audit log of user logins, role access, IP addresses, and browsers.</p>
+                        </div>
+                        <div class="panel-header-actions">
+                            <button type="button" class="btn-secondary" id="btn-export-logins">Export Login History CSV</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="admin-table" id="table-logins">
+                            <thead>
+                                <tr>
+                                    <th>Log ID</th>
+                                    <th>User Account</th>
+                                    <th>Role</th>
+                                    <th>IP Address</th>
+                                    <th>Device / Browser</th>
+                                    <th>Timestamp</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-logins">
+                                <!-- Dynamic Login History Rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 17: ENTERPRISE AUDIT LOGS
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-audit-logs">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Administrative Audit Trail</h2>
+                            <p>Immutable enterprise audit log recording all administrative modifications, verification decisions, and orders.</p>
+                        </div>
+                        <div class="panel-header-actions">
+                            <button type="button" class="btn-secondary" id="btn-export-audits">Export Audit Trail CSV</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="admin-table" id="table-audit-logs">
+                            <thead>
+                                <tr>
+                                    <th>Audit ID</th>
+                                    <th>Timestamp</th>
+                                    <th>Administrator</th>
+                                    <th>Action Taken</th>
+                                    <th>Target Entity</th>
+                                    <th>Entity ID</th>
+                                    <th>Status</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-audit-logs">
+                                <!-- Dynamic Audit Rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 18: CSV REPORTS EXPORT
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-reports">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Reporting & Data Export Center</h2>
+                            <p>Generate, preview, and download structured CSV datasets for audits and business intelligence.</p>
+                        </div>
+                    </div>
+
+                    <div class="reports-grid">
+
+                        <div class="report-card">
+                            <div class="report-icon">📦</div>
+                            <div class="report-content">
+                                <h3>Pre-Harvest Harvest Listings Report</h3>
+                                <p>All verified, pending, and committed harvest lots with farmer, price, and expected harvest dates.</p>
+                                <button type="button" class="btn-primary" onclick="window.AdminApp.exportReport('listings')">Download Listings CSV</button>
+                            </div>
+                        </div>
+
+                        <div class="report-card">
+                            <div class="report-icon">💳</div>
+                            <div class="report-content">
+                                <h3>Wholesale Orders & Commitments Report</h3>
+                                <p>Comprehensive transaction log including buyer commitments, fulfillment status, and contract values.</p>
+                                <button type="button" class="btn-primary" onclick="window.AdminApp.exportReport('orders')">Download Orders CSV</button>
+                            </div>
+                        </div>
+
+                        <div class="report-card">
+                            <div class="report-icon">🛡️</div>
+                            <div class="report-content">
+                                <h3>Field Verification & Quality Audits Report</h3>
+                                <p>Ground Truth physical inspection ratings, 6-point checklist scores, and inspector signatures.</p>
+                                <button type="button" class="btn-primary" onclick="window.AdminApp.exportReport('verifications')">Download Verifications CSV</button>
+                            </div>
+                        </div>
+
+                        <div class="report-card">
+                            <div class="report-icon">👥</div>
+                            <div class="report-content">
+                                <h3>Platform User Directory Report</h3>
+                                <p>Full roster of Farmers, Buyers, Field Agents, and Admins with registration and activity status.</p>
+                                <button type="button" class="btn-primary" onclick="window.AdminApp.exportReport('users')">Download Users CSV</button>
+                            </div>
+                        </div>
+
+                        <div class="report-card">
+                            <div class="report-icon">🧠</div>
+                            <div class="report-content">
+                                <h3>AI Farm Disease & Risk Diagnostics Report</h3>
+                                <p>Foliage health indices, neural confidence ratings, disease risks, and recommended actions.</p>
+                                <button type="button" class="btn-primary" onclick="window.AdminApp.exportReport('ai')">Download AI Risk CSV</button>
+                            </div>
+                        </div>
+
+                        <div class="report-card">
+                            <div class="report-icon">📜</div>
+                            <div class="report-content">
+                                <h3>Enterprise Security & Audit Trail Report</h3>
+                                <p>System access history, administrative modifications, security events, and compliance records.</p>
+                                <button type="button" class="btn-primary" onclick="window.AdminApp.exportReport('audits')">Download Audit CSV</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 19: SYSTEM HEALTH & DATABASE MONITORING
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-system-health">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>System Architecture & Microservice Health</h2>
+                            <p>Real-time telemetry for platform API endpoints, databases, AI neural services, and storage.</p>
+                        </div>
+                    </div>
+
+                    <div class="health-grid">
+
+                        <div class="health-card">
+                            <div class="health-header">
+                                <span class="health-title">Frontend Web Server</span>
+                                <span class="health-badge online">● Online (200 OK)</span>
+                            </div>
+                            <div class="health-metric">HTTP Port 3000</div>
+                            <div class="health-sub">Response Latency: 4ms · Zero Errors</div>
+                        </div>
+
+                        <div class="health-card">
+                            <div class="health-header">
+                                <span class="health-title">Backend REST API</span>
+                                <span class="health-badge" id="health-api-badge">● Checking...</span>
+                            </div>
+                            <div class="health-metric" id="health-api-status">FastAPI Gateway</div>
+                            <div class="health-sub">Endpoints: /api/listings/, /api/verifications/, /api/orders/</div>
+                        </div>
+
+                        <div class="health-card">
+                            <div class="health-header">
+                                <span class="health-title">Platform Database</span>
+                                <span class="health-badge online">● Synchronized</span>
+                            </div>
+                            <div class="health-metric">SQLite / Local Storage Data Bus</div>
+                            <div class="health-sub">Active Records: 12 Listings · 9 Orders · 18 Farms</div>
+                        </div>
+
+                        <div class="health-card">
+                            <div class="health-header">
+                                <span class="health-title">AI Computer Vision Service</span>
+                                <span class="health-badge online">● Ready</span>
+                            </div>
+                            <div class="health-metric">ResNet-50 Plant Pathology</div>
+                            <div class="health-sub">Inference Speed: 320ms · 94.8% Confidence</div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- -----------------------------------------------------
+                     VIEW 20: PLATFORM SETTINGS
+                     ----------------------------------------------------- -->
+                <section class="admin-view-panel" id="view-settings">
+                    <div class="panel-header-row">
+                        <div>
+                            <h2>Platform Governance & Operational Settings</h2>
+                            <p>Configure automated verification thresholds, marketplace commission rules, and dispatch limits.</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card" style="max-width: 800px;">
+                        <form id="admin-settings-form">
+
+                            <div class="form-group">
+                                <label for="setting-platform-name">Platform Organization Name</label>
+                                <input type="text" id="setting-platform-name" class="form-control" value="AgriBridge Smart Agriculture Platform">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="setting-verif-threshold">Minimum AI Confidence for Instant Pre-Listing (%)</label>
+                                <input type="number" id="setting-verif-threshold" class="form-control" value="85" min="50" max="99">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="setting-tat-hours">Field Agent Verification SLA (Hours)</label>
+                                <input type="number" id="setting-tat-hours" class="form-control" value="24" min="6" max="72">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="setting-admin-email">Emergency Admin Alert Dispatch Email</label>
+                                <input type="email" id="setting-admin-email" class="form-control" value="ops@agribridge.org">
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary">Save Platform Settings</button>
+                                <button type="button" class="btn-secondary" onclick="alert('Settings restored to default.')">Reset Defaults</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================================
+         3. ENTERPRISE DETAIL INSPECTION MODAL
+         ========================================================= -->
+    <div class="admin-modal-overlay" id="admin-inspect-modal" style="display:none;">
+        <div class="admin-modal-dialog">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-category" id="modal-item-category">INSPECTION</span>
+                    <h3 id="modal-item-title">Record Details</h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="modal-inspect-close">✕</button>
+            </div>
+            <div class="modal-body" id="modal-item-content">
+                <!-- Dynamic Content Payload -->
+            </div>
+            <div class="modal-footer" id="modal-item-footer">
+                <button type="button" class="btn-secondary" id="modal-close-action">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================================================
+         4. VERIFICATION DECISION MODAL
+         ========================================================= -->
+    <div class="admin-modal-overlay" id="admin-decision-modal" style="display:none;">
+        <div class="admin-modal-dialog">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-category">VERIFICATION COMMAND</span>
+                    <h3 id="decision-modal-title">Approve / Issue Quality Certificate</h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="decision-modal-close">✕</button>
+            </div>
+            <div class="modal-body" id="decision-modal-body">
+                <!-- Decision Body -->
+            </div>
+            <div class="modal-footer" id="decision-modal-footer">
+                <button type="button" class="btn-primary" id="decision-confirm-btn">Issue Digital Seal</button>
+                <button type="button" class="btn-secondary" id="decision-cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================================================
+         5. SCRIPTS
+         ========================================================= -->
+    <script src="/frontend/scripts/admin-dashboard.js"></script>
+
+</body>
+
+</html>
+

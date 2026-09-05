@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FieldAgentTask",
+  "type": "object",
+  "required": [
+    "task_id",
+    "escalation_id",
+    "farmer_id",
+    "crop",
+    "trigger_reason",
+    "priority",
+    "status",
+    "created_at"
+  ],
+  "properties": {
+    "task_id": { "type": "string" },
+    "escalation_id": { "type": "string" },
+    "farmer_id": { "type": "string" },
+    "farmer_name": { "type": "string" },
+    "farm_id": { "type": "string" },
+    "field_id": { "type": "string" },
+    "crop": { "type": "string" },
+    "crop_stage": { "type": "string" },
+    "location": { "type": "string" },
+    "trigger_type": { "type": "string" },
+    "trigger_reason": { "type": "string" },
+    "signal_details": { "type": "object" },
+    "confidence_score": { "type": ["number", "null"] },
+    "uploaded_image_url": { "type": ["string", "null"] },
+    "priority": { "type": "string", "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW"] },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "ASSIGNED",
+        "ACCEPTED",
+        "IN_PROGRESS",
+        "FIELD_VISIT",
+        "REPORT_SUBMITTED",
+        "VERIFIED",
+        "NOT_VERIFIED",
+        "INCONCLUSIVE",
+        "REJECTED",
+        "CLOSED"
+      ]
+    },
+    "assigned_agent_id": { "type": ["string", "null"] },
+    "assigned_agent_name": { "type": ["string", "null"] },
+    "rejection_reason": { "type": ["string", "null"] },
+    "chemical_recommendation_status": {
+      "type": "string",
+      "enum": ["LOCKED", "AVAILABLE", "UNAVAILABLE", "PENDING_VERIFICATION"]
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  }
+}
+

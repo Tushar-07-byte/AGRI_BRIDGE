@@ -1,0 +1,150 @@
+/* ==========================================================================
+   AGRIBRIDGE — AI CROP ANALYSIS RESULT STYLES
+   Agrova-Inspired Diagnostics & Remedy Results
+   ========================================================================== */
+
+.analysis-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: radial-gradient(circle at 50% 10%, rgba(220, 232, 210, 0.45) 0%, transparent 70%),
+                var(--ab-warm-bg);
+}
+
+.analysis-card {
+    width: 100%;
+    max-width: 660px;
+    background: #FFFFFF;
+    padding: 48px;
+    border-radius: var(--ab-radius-xl);
+    box-shadow: var(--ab-shadow-md);
+    border: 1px solid var(--ab-border);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.analysis-card h1 {
+    color: var(--ab-primary-dark);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.description {
+    color: var(--ab-text-muted);
+    font-size: 14px;
+    margin-top: -12px;
+}
+
+.crop-image-container {
+    width: 100%;
+    max-width: 380px;
+    height: 240px;
+    margin: 0 auto;
+    border-radius: var(--ab-radius-lg);
+    overflow: hidden;
+    background: var(--ab-warm-bg);
+    border: 1px solid var(--ab-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crop-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.result-section {
+    background: var(--ab-warm-bg);
+    border: 1px solid var(--ab-border);
+    border-radius: var(--ab-radius-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.result-icon {
+    font-size: 36px;
+}
+
+.result-section h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+}
+
+.result-section p {
+    font-size: 14px;
+    color: var(--ab-text-muted);
+}
+
+.guidance-section {
+    background: #E8F0E4;
+    border-left: 4px solid var(--ab-primary-green);
+    border-radius: var(--ab-radius-md);
+    padding: 20px 24px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.guidance-section h3 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--ab-primary-dark);
+    margin-bottom: 8px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.action-buttons button {
+    padding: 14px 28px;
+    border-radius: var(--ab-radius-full);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: all var(--ab-transition-fast);
+}
+
+#continue-button {
+    background: var(--ab-primary-green);
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(49, 92, 42, 0.25);
+}
+
+#continue-button:hover {
+    background: var(--ab-primary-dark);
+    transform: translateY(-2px);
+}
+
+#resubmit-button {
+    background: #FFFFFF;
+    color: var(--ab-primary-dark);
+    border: 1px solid var(--ab-border);
+}
+
+#resubmit-button:hover {
+    background: var(--ab-light-green);
+}
+
+@media (max-width: 768px) {
+    .analysis-card {
+        padding: 32px 20px;
+    }
+    .action-buttons {
+        flex-direction: column;
+    }
+}

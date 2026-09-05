@@ -1,0 +1,19 @@
+{
+  "disease_prediction": "Wheat Yellow Rust (Puccinia striiformis)",
+  "confidence": 0.91,
+  "confidence_threshold": 0.60,
+  "confidence_status": "ACCEPTABLE",
+  "field_agent_escalation": false,
+  "chemical_recommendation": {
+    "status": "AVAILABLE",
+    "verified_treatment": {
+      "chemical": "Propiconazole 25% EC @ 1.0 ml/L water",
+      "organic": "Neem Oil 10,000 ppm @ 5.0 ml/L water",
+      "phi": "14 Days Pre-Harvest Interval",
+      "source": "ICAR Wheat Protection Guidelines"
+    }
+  },
+  "farmer_message": "High-confidence pathogen detection verified against agricultural knowledge-base.",
+  "recommended_action": "Apply targeted spray in early morning calm winds."
+}
+

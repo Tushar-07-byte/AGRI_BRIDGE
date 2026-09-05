@@ -1,0 +1,745 @@
+State,District,Season,Soil_Type,Min_pH,Max_pH,Primary_Recommended_Crops,lookup_key
+Andhra Pradesh,Alluri Sitharama Raju,Kharif,Red Sandy Clay Loam / Forest Soil,5.5,6.8,"Paddy, Coffee, Millets (Ragi, Samai), Rajma, Turmeric",andhra pradesh|alluri sitharama raju|kharif|red sandy clay loam / forest soil
+Andhra Pradesh,Alluri Sitharama Raju,Rabi,Red Sandy Clay Loam / Forest Soil,5.5,6.8,"Niger, Rajma, Maize, Pulses, Mustard",andhra pradesh|alluri sitharama raju|rabi|red sandy clay loam / forest soil
+Andhra Pradesh,Alluri Sitharama Raju,Zaid,Red Sandy Clay Loam / Forest Soil,5.5,6.8,"Vegetables, Cowpea, Fruits (Pineapple, Papaya), Fodder Crops",andhra pradesh|alluri sitharama raju|zaid|red sandy clay loam / forest soil
+Andhra Pradesh,Anakapalli,Kharif,Red Loam / Laterite Soil,6.2,7.5,"Sugarcane, Paddy, Groundnut, Sesamum",andhra pradesh|anakapalli|kharif|red loam / laterite soil
+Andhra Pradesh,Anakapalli,Rabi,Red Loam / Laterite Soil,6.2,7.5,"Blackgram, Greengram, Maize, Groundnut",andhra pradesh|anakapalli|rabi|red loam / laterite soil
+Andhra Pradesh,Anakapalli,Zaid,Red Loam / Laterite Soil,6.2,7.5,"Sesamum, Watermelon, Vegetables, Cowpea",andhra pradesh|anakapalli|zaid|red loam / laterite soil
+Andhra Pradesh,Ananthapuramu,Kharif,Red Sandy Soil / Shallow Red Soil,6.8,8.2,"Groundnut, Redgram (Pigeonpea), Sorghum (Jowar), Bajra, Cotton",andhra pradesh|ananthapuramu|kharif|red sandy soil / shallow red soil
+Andhra Pradesh,Ananthapuramu,Rabi,Red Sandy Soil / Shallow Red Soil,6.8,8.2,"Bengal Gram (Chickpea), Groundnut, Sunflower, Coriander",andhra pradesh|ananthapuramu|rabi|red sandy soil / shallow red soil
+Andhra Pradesh,Ananthapuramu,Zaid,Red Sandy Soil / Shallow Red Soil,6.8,8.2,"Muskmelon, Watermelon, Fodder Sorghum, Vegetables",andhra pradesh|ananthapuramu|zaid|red sandy soil / shallow red soil
+Andhra Pradesh,Annamayya,Kharif,Red Sandy Loam / Mixed Soil,6.5,7.8,"Groundnut, Tomato, Redgram, Paddy, Sugarcane",andhra pradesh|annamayya|kharif|red sandy loam / mixed soil
+Andhra Pradesh,Annamayya,Rabi,Red Sandy Loam / Mixed Soil,6.5,7.8,"Bengal Gram, Groundnut, Sunflower, Maize",andhra pradesh|annamayya|rabi|red sandy loam / mixed soil
+Andhra Pradesh,Annamayya,Zaid,Red Sandy Loam / Mixed Soil,6.5,7.8,"Watermelon, Vegetables, Muskmelon, Fodder Crops",andhra pradesh|annamayya|zaid|red sandy loam / mixed soil
+Andhra Pradesh,Bapatla,Kharif,Coastal Alluvial / Heavy Black Clay,6.8,8.0,"Paddy, Cotton, Blackgram, Groundnut",andhra pradesh|bapatla|kharif|coastal alluvial / heavy black clay
+Andhra Pradesh,Bapatla,Rabi,Coastal Alluvial / Heavy Black Clay,6.8,8.0,"Blackgram, Greengram, Maize, Tobacco, Chillies",andhra pradesh|bapatla|rabi|coastal alluvial / heavy black clay
+Andhra Pradesh,Bapatla,Zaid,Coastal Alluvial / Heavy Black Clay,6.8,8.0,"Watermelon, Cucurbits, Sesamum, Fodder Maize",andhra pradesh|bapatla|zaid|coastal alluvial / heavy black clay
+Andhra Pradesh,Chittoor,Kharif,Red Sandy Loam / Gravelly Soil,6.2,7.6,"Groundnut, Sugarcane, Paddy, Mango, Redgram",andhra pradesh|chittoor|kharif|red sandy loam / gravelly soil
+Andhra Pradesh,Chittoor,Rabi,Red Sandy Loam / Gravelly Soil,6.2,7.6,"Groundnut, Maize, Vegetables, Pulses",andhra pradesh|chittoor|rabi|red sandy loam / gravelly soil
+Andhra Pradesh,Chittoor,Zaid,Red Sandy Loam / Gravelly Soil,6.2,7.6,"Vegetables, Watermelon, Cowpea, Fodder Crops",andhra pradesh|chittoor|zaid|red sandy loam / gravelly soil
+Andhra Pradesh,East Godavari,Kharif,Deltaic Alluvial / Clay Loam,6.0,7.5,"Paddy, Sugarcane, Maize, Banana",andhra pradesh|east godavari|kharif|deltaic alluvial / clay loam
+Andhra Pradesh,East Godavari,Rabi,Deltaic Alluvial / Clay Loam,6.0,7.5,"Paddy (Rabi), Blackgram, Greengram, Maize",andhra pradesh|east godavari|rabi|deltaic alluvial / clay loam
+Andhra Pradesh,East Godavari,Zaid,Deltaic Alluvial / Clay Loam,6.0,7.5,"Sesamum, Cowpea, Watermelon, Vegetables",andhra pradesh|east godavari|zaid|deltaic alluvial / clay loam
+Andhra Pradesh,Eluru,Kharif,Fertile Alluvial / Black Clay Loam,6.2,7.8,"Paddy, Sugarcane, Maize, Oil Palm, Cocoa",andhra pradesh|eluru|kharif|fertile alluvial / black clay loam
+Andhra Pradesh,Eluru,Rabi,Fertile Alluvial / Black Clay Loam,6.2,7.8,"Maize, Tobacco, Blackgram, Greengram, Sunflower",andhra pradesh|eluru|rabi|fertile alluvial / black clay loam
+Andhra Pradesh,Eluru,Zaid,Fertile Alluvial / Black Clay Loam,6.2,7.8,"Sesamum, Watermelon, Cucurbits, Vegetables",andhra pradesh|eluru|zaid|fertile alluvial / black clay loam
+Andhra Pradesh,Guntur,Kharif,Deep Black Cotton Soil (Vertisols),7.2,8.5,"Cotton, Chillies, Paddy, Turmeric, Redgram",andhra pradesh|guntur|kharif|deep black cotton soil (vertisols)
+Andhra Pradesh,Guntur,Rabi,Deep Black Cotton Soil (Vertisols),7.2,8.5,"Blackgram, Greengram, Tobacco, Maize, Bengal Gram",andhra pradesh|guntur|rabi|deep black cotton soil (vertisols)
+Andhra Pradesh,Guntur,Zaid,Deep Black Cotton Soil (Vertisols),7.2,8.5,"Sesamum, Watermelon, Vegetables, Fodder Crops",andhra pradesh|guntur|zaid|deep black cotton soil (vertisols)
+Andhra Pradesh,Kakinada,Kharif,Deltaic Alluvial / Coastal Sandy,6.2,7.6,"Paddy, Sugarcane, Coconut, Maize",andhra pradesh|kakinada|kharif|deltaic alluvial / coastal sandy
+Andhra Pradesh,Kakinada,Rabi,Deltaic Alluvial / Coastal Sandy,6.2,7.6,"Paddy, Blackgram, Greengram, Groundnut",andhra pradesh|kakinada|rabi|deltaic alluvial / coastal sandy
+Andhra Pradesh,Kakinada,Zaid,Deltaic Alluvial / Coastal Sandy,6.2,7.6,"Sesamum, Vegetables, Cucurbits, Watermelon",andhra pradesh|kakinada|zaid|deltaic alluvial / coastal sandy
+Andhra Pradesh,Konaseema,Kharif,Rich Deltaic Alluvial / Silt Clay,6.0,7.4,"Paddy, Coconut, Banana, Turmeric",andhra pradesh|konaseema|kharif|rich deltaic alluvial / silt clay
+Andhra Pradesh,Konaseema,Rabi,Rich Deltaic Alluvial / Silt Clay,6.0,7.4,"Paddy, Pulses (Blackgram, Greengram), Maize",andhra pradesh|konaseema|rabi|rich deltaic alluvial / silt clay
+Andhra Pradesh,Konaseema,Zaid,Rich Deltaic Alluvial / Silt Clay,6.0,7.4,"Sesamum, Vegetables, Cowpea, Watermelon",andhra pradesh|konaseema|zaid|rich deltaic alluvial / silt clay
+Andhra Pradesh,Krishna,Kharif,Krishna Deltaic Alluvial / Heavy Black Soil,6.8,8.2,"Paddy, Sugarcane, Cotton, Maize",andhra pradesh|krishna|kharif|krishna deltaic alluvial / heavy black soil
+Andhra Pradesh,Krishna,Rabi,Krishna Deltaic Alluvial / Heavy Black Soil,6.8,8.2,"Blackgram, Greengram, Maize, Groundnut, Tobacco",andhra pradesh|krishna|rabi|krishna deltaic alluvial / heavy black soil
+Andhra Pradesh,Krishna,Zaid,Krishna Deltaic Alluvial / Heavy Black Soil,6.8,8.2,"Sesamum, Watermelon, Vegetables, Fodder Crops",andhra pradesh|krishna|zaid|krishna deltaic alluvial / heavy black soil
+Andhra Pradesh,Kurnool,Kharif,Black Cotton Soil / Red Loam,7.5,8.8,"Cotton, Groundnut, Castor, Onion, Redgram, Maize",andhra pradesh|kurnool|kharif|black cotton soil / red loam
+Andhra Pradesh,Kurnool,Rabi,Black Cotton Soil / Red Loam,7.5,8.8,"Bengal Gram, Sorghum, Sunflower, Groundnut",andhra pradesh|kurnool|rabi|black cotton soil / red loam
+Andhra Pradesh,Kurnool,Zaid,Black Cotton Soil / Red Loam,7.5,8.8,"Watermelon, Muskmelon, Fodder Sorghum, Vegetables",andhra pradesh|kurnool|zaid|black cotton soil / red loam
+Andhra Pradesh,Nandyal,Kharif,Deep Black Cotton Soil / Calcareous Loam,7.2,8.6,"Cotton, Paddy, Maize, Turmeric, Redgram",andhra pradesh|nandyal|kharif|deep black cotton soil / calcareous loam
+Andhra Pradesh,Nandyal,Rabi,Deep Black Cotton Soil / Calcareous Loam,7.2,8.6,"Bengal Gram, Sorghum, Sunflower, Wheat, Tobacco",andhra pradesh|nandyal|rabi|deep black cotton soil / calcareous loam
+Andhra Pradesh,Nandyal,Zaid,Deep Black Cotton Soil / Calcareous Loam,7.2,8.6,"Watermelon, Vegetables, Fodder Maize, Muskmelon",andhra pradesh|nandyal|zaid|deep black cotton soil / calcareous loam
+Andhra Pradesh,NTR,Kharif,Alluvial Loam / Red Clay Mixed,6.5,8.0,"Paddy, Cotton, Sugarcane, Maize, Mango",andhra pradesh|ntr|kharif|alluvial loam / red clay mixed
+Andhra Pradesh,NTR,Rabi,Alluvial Loam / Red Clay Mixed,6.5,8.0,"Blackgram, Greengram, Maize, Chillies, Tobacco",andhra pradesh|ntr|rabi|alluvial loam / red clay mixed
+Andhra Pradesh,NTR,Zaid,Alluvial Loam / Red Clay Mixed,6.5,8.0,"Sesamum, Watermelon, Cucurbits, Vegetables",andhra pradesh|ntr|zaid|alluvial loam / red clay mixed
+Andhra Pradesh,Palnadu,Kharif,Black Cotton Soil / Red Sandy Loam,7.0,8.5,"Cotton, Chillies, Redgram, Paddy, Sorghum",andhra pradesh|palnadu|kharif|black cotton soil / red sandy loam
+Andhra Pradesh,Palnadu,Rabi,Black Cotton Soil / Red Sandy Loam,7.0,8.5,"Bengal Gram, Blackgram, Tobacco, Coriander",andhra pradesh|palnadu|rabi|black cotton soil / red sandy loam
+Andhra Pradesh,Palnadu,Zaid,Black Cotton Soil / Red Sandy Loam,7.0,8.5,"Watermelon, Muskmelon, Sesamum, Fodder Sorghum",andhra pradesh|palnadu|zaid|black cotton soil / red sandy loam
+Andhra Pradesh,Parvathipuram Manyam,Kharif,Red Gravelly / Forest Sandy Clay,5.8,7.2,"Paddy, Maize, Cashew, Ragi, Groundnut",andhra pradesh|parvathipuram manyam|kharif|red gravelly / forest sandy clay
+Andhra Pradesh,Parvathipuram Manyam,Rabi,Red Gravelly / Forest Sandy Clay,5.8,7.2,"Blackgram, Greengram, Mustard, Sesame",andhra pradesh|parvathipuram manyam|rabi|red gravelly / forest sandy clay
+Andhra Pradesh,Parvathipuram Manyam,Zaid,Red Gravelly / Forest Sandy Clay,5.8,7.2,"Cowpea, Vegetables, Sweet Potato, Watermelon",andhra pradesh|parvathipuram manyam|zaid|red gravelly / forest sandy clay
+Andhra Pradesh,Prakasam,Kharif,Red Sandy Loam / Saline Black Soil,7.0,8.5,"Cotton, Redgram, Groundnut, Castor, Bajra",andhra pradesh|prakasam|kharif|red sandy loam / saline black soil
+Andhra Pradesh,Prakasam,Rabi,Red Sandy Loam / Saline Black Soil,7.0,8.5,"Tobacco, Bengal Gram, Blackgram, Sunflower, Chickpea",andhra pradesh|prakasam|rabi|red sandy loam / saline black soil
+Andhra Pradesh,Prakasam,Zaid,Red Sandy Loam / Saline Black Soil,7.0,8.5,"Watermelon, Muskmelon, Sesamum, Fodder Crops",andhra pradesh|prakasam|zaid|red sandy loam / saline black soil
+Andhra Pradesh,Sri Potti Sriramulu Nellore,Kharif,Coastal Alluvial / Sandy Clay Loam,6.5,8.0,"Paddy, Sugarcane, Groundnut, Cotton",andhra pradesh|sri potti sriramulu nellore|kharif|coastal alluvial / sandy clay loam
+Andhra Pradesh,Sri Potti Sriramulu Nellore,Rabi,Coastal Alluvial / Sandy Clay Loam,6.5,8.0,"Paddy, Blackgram, Greengram, Tobacco",andhra pradesh|sri potti sriramulu nellore|rabi|coastal alluvial / sandy clay loam
+Andhra Pradesh,Sri Potti Sriramulu Nellore,Zaid,Coastal Alluvial / Sandy Clay Loam,6.5,8.0,"Sesamum, Watermelon, Cucurbits, Vegetables",andhra pradesh|sri potti sriramulu nellore|zaid|coastal alluvial / sandy clay loam
+Andhra Pradesh,Sri Sathya Sai,Kharif,Red Sandy Soil / Shallow Red Loam,6.8,8.2,"Groundnut, Redgram, Maize, Cotton, Bajra",andhra pradesh|sri sathya sai|kharif|red sandy soil / shallow red loam
+Andhra Pradesh,Sri Sathya Sai,Rabi,Red Sandy Soil / Shallow Red Loam,6.8,8.2,"Bengal Gram, Groundnut, Sunflower, Sorghum",andhra pradesh|sri sathya sai|rabi|red sandy soil / shallow red loam
+Andhra Pradesh,Sri Sathya Sai,Zaid,Red Sandy Soil / Shallow Red Loam,6.8,8.2,"Watermelon, Muskmelon, Vegetables, Fodder Sorghum",andhra pradesh|sri sathya sai|zaid|red sandy soil / shallow red loam
+Andhra Pradesh,Srikakulam,Kharif,Red Loam / Coastal Sandy Alluvial,6.0,7.5,"Paddy, Sugarcane, Cashew, Maize, Mesta (Jute)",andhra pradesh|srikakulam|kharif|red loam / coastal sandy alluvial
+Andhra Pradesh,Srikakulam,Rabi,Red Loam / Coastal Sandy Alluvial,6.0,7.5,"Blackgram, Greengram, Groundnut, Sesamum",andhra pradesh|srikakulam|rabi|red loam / coastal sandy alluvial
+Andhra Pradesh,Srikakulam,Zaid,Red Loam / Coastal Sandy Alluvial,6.0,7.5,"Sesamum, Cowpea, Cucurbits, Watermelon",andhra pradesh|srikakulam|zaid|red loam / coastal sandy alluvial
+Andhra Pradesh,Tirupati,Kharif,Red Sandy Clay Loam / Coastal Sand,6.5,7.8,"Groundnut, Paddy, Sugarcane, Redgram",andhra pradesh|tirupati|kharif|red sandy clay loam / coastal sand
+Andhra Pradesh,Tirupati,Rabi,Red Sandy Clay Loam / Coastal Sand,6.5,7.8,"Paddy, Groundnut, Blackgram, Greengram",andhra pradesh|tirupati|rabi|red sandy clay loam / coastal sand
+Andhra Pradesh,Tirupati,Zaid,Red Sandy Clay Loam / Coastal Sand,6.5,7.8,"Watermelon, Vegetables, Sesamum, Cowpea",andhra pradesh|tirupati|zaid|red sandy clay loam / coastal sand
+Andhra Pradesh,Visakhapatnam,Kharif,Red Loamy / Laterite Soil,6.0,7.5,"Paddy, Sugarcane, Maize, Ragi, Vegetables",andhra pradesh|visakhapatnam|kharif|red loamy / laterite soil
+Andhra Pradesh,Visakhapatnam,Rabi,Red Loamy / Laterite Soil,6.0,7.5,"Blackgram, Greengram, Sweet Potato, Vegetables",andhra pradesh|visakhapatnam|rabi|red loamy / laterite soil
+Andhra Pradesh,Visakhapatnam,Zaid,Red Loamy / Laterite Soil,6.0,7.5,"Vegetables, Cucurbits, Watermelon, Cowpea",andhra pradesh|visakhapatnam|zaid|red loamy / laterite soil
+Andhra Pradesh,Vizianagaram,Kharif,Red Sandy Loam / Clay Loam,6.2,7.6,"Paddy, Sugarcane, Groundnut, Maize, Mesta",andhra pradesh|vizianagaram|kharif|red sandy loam / clay loam
+Andhra Pradesh,Vizianagaram,Rabi,Red Sandy Loam / Clay Loam,6.2,7.6,"Blackgram, Greengram, Sesamum, Groundnut",andhra pradesh|vizianagaram|rabi|red sandy loam / clay loam
+Andhra Pradesh,Vizianagaram,Zaid,Red Sandy Loam / Clay Loam,6.2,7.6,"Sesamum, Cucurbits, Vegetables, Watermelon",andhra pradesh|vizianagaram|zaid|red sandy loam / clay loam
+Andhra Pradesh,West Godavari,Kharif,Rich Alluvial Silt Clay / Deltaic,6.2,7.8,"Paddy, Sugarcane, Maize, Banana",andhra pradesh|west godavari|kharif|rich alluvial silt clay / deltaic
+Andhra Pradesh,West Godavari,Rabi,Rich Alluvial Silt Clay / Deltaic,6.2,7.8,"Paddy (Rabi), Blackgram, Greengram, Maize, Tobacco",andhra pradesh|west godavari|rabi|rich alluvial silt clay / deltaic
+Andhra Pradesh,West Godavari,Zaid,Rich Alluvial Silt Clay / Deltaic,6.2,7.8,"Sesamum, Watermelon, Vegetables, Cowpea",andhra pradesh|west godavari|zaid|rich alluvial silt clay / deltaic
+Andhra Pradesh,YSR Kadapa,Kharif,Red Clay / Heavy Black Cotton Soil,7.0,8.5,"Cotton, Groundnut, Redgram, Paddy, Turmeric, Banana",andhra pradesh|ysr kadapa|kharif|red clay / heavy black cotton soil
+Andhra Pradesh,YSR Kadapa,Rabi,Red Clay / Heavy Black Cotton Soil,7.0,8.5,"Bengal Gram, Sorghum, Sunflower, Coriander, Onion",andhra pradesh|ysr kadapa|rabi|red clay / heavy black cotton soil
+Andhra Pradesh,YSR Kadapa,Zaid,Red Clay / Heavy Black Cotton Soil,7.0,8.5,"Watermelon, Muskmelon, Papaya, Vegetables, Fodder Sorghum",andhra pradesh|ysr kadapa|zaid|red clay / heavy black cotton soil
+Arunachal Pradesh,Anjaw,Kharif,Sub-Himalayan Acidic Soil / Humus-Rich Loam,4.5,5.8,"Maize, Rice, Cardamom, Buckwheat, Millets",arunachal pradesh|anjaw|kharif|sub-himalayan acidic soil / humus-rich loam
+Arunachal Pradesh,Anjaw,Rabi,Sub-Himalayan Acidic Soil / Humus-Rich Loam,4.5,5.8,"Mustard, Pulses, Barley, Off-season Vegetables",arunachal pradesh|anjaw|rabi|sub-himalayan acidic soil / humus-rich loam
+Arunachal Pradesh,Anjaw,Zaid,Sub-Himalayan Acidic Soil / Humus-Rich Loam,4.5,5.8,"Cucumber, Beans, Organic Vegetables, Maize (Green Ears)",arunachal pradesh|anjaw|zaid|sub-himalayan acidic soil / humus-rich loam
+Arunachal Pradesh,Changlang,Kharif,Acidic Loamy / Sandy Loam Soil,5.0,6.2,"Paddy (WRC), Maize, Tea, Ginger, Turmeric",arunachal pradesh|changlang|kharif|acidic loamy / sandy loam soil
+Arunachal Pradesh,Changlang,Rabi,Acidic Loamy / Sandy Loam Soil,5.0,6.2,"Mustard, Potato, Pulses, Vegetables",arunachal pradesh|changlang|rabi|acidic loamy / sandy loam soil
+Arunachal Pradesh,Changlang,Zaid,Acidic Loamy / Sandy Loam Soil,5.0,6.2,"Watermelon, Cucurbits, Cowpea, Vegetables",arunachal pradesh|changlang|zaid|acidic loamy / sandy loam soil
+Arunachal Pradesh,Dibang Valley,Kharif,Alpine / Mountainous Acidic Loam,4.5,5.5,"Maize, Paddy, Potato, Large Cardamom",arunachal pradesh|dibang valley|kharif|alpine / mountainous acidic loam
+Arunachal Pradesh,Dibang Valley,Rabi,Alpine / Mountainous Acidic Loam,4.5,5.5,"Mustard, Peas, Barley, Cabbage/Cauliflower",arunachal pradesh|dibang valley|rabi|alpine / mountainous acidic loam
+Arunachal Pradesh,Dibang Valley,Zaid,Alpine / Mountainous Acidic Loam,4.5,5.5,"Leafy Vegetables, Beans, Maize",arunachal pradesh|dibang valley|zaid|alpine / mountainous acidic loam
+Arunachal Pradesh,East Kameng,Kharif,Red Clay Loam / Acidic Forest Soil,4.8,6.0,"Jhum Rice, WRC Rice, Maize, Millets, Ginger",arunachal pradesh|east kameng|kharif|red clay loam / acidic forest soil
+Arunachal Pradesh,East Kameng,Rabi,Red Clay Loam / Acidic Forest Soil,4.8,6.0,"Mustard, Potato, Pulses, Cabbage",arunachal pradesh|east kameng|rabi|red clay loam / acidic forest soil
+Arunachal Pradesh,East Kameng,Zaid,Red Clay Loam / Acidic Forest Soil,4.8,6.0,"Cucurbits, Cowpea, Maize, Vegetables",arunachal pradesh|east kameng|zaid|red clay loam / acidic forest soil
+Arunachal Pradesh,East Siang,Kharif,Fertile Alluvial Loam / Silt Clay,5.5,6.8,"Paddy, Citrus (Orange), Sugarcane, Maize, Ginger",arunachal pradesh|east siang|kharif|fertile alluvial loam / silt clay
+Arunachal Pradesh,East Siang,Rabi,Fertile Alluvial Loam / Silt Clay,5.5,6.8,"Mustard, Potato, Pulses, Tomato, Peas",arunachal pradesh|east siang|rabi|fertile alluvial loam / silt clay
+Arunachal Pradesh,East Siang,Zaid,Fertile Alluvial Loam / Silt Clay,5.5,6.8,"Summer Moong, Watermelon, Cucurbits, Maize",arunachal pradesh|east siang|zaid|fertile alluvial loam / silt clay
+Arunachal Pradesh,Kamle,Kharif,Acidic Mountainous Loam,4.8,6.0,"Paddy, Maize, Ginger, Turmeric, Millets",arunachal pradesh|kamle|kharif|acidic mountainous loam
+Arunachal Pradesh,Kamle,Rabi,Acidic Mountainous Loam,4.8,6.0,"Mustard, Potato, Pulses, Winter Vegetables",arunachal pradesh|kamle|rabi|acidic mountainous loam
+Arunachal Pradesh,Kamle,Zaid,Acidic Mountainous Loam,4.8,6.0,"Beans, Cucumber, Vegetables, Maize",arunachal pradesh|kamle|zaid|acidic mountainous loam
+Arunachal Pradesh,Kra Daadi,Kharif,Hilly Forest Acidic Soil,4.5,5.8,"Jhum Paddy, Maize, Large Cardamom, Millets",arunachal pradesh|kra daadi|kharif|hilly forest acidic soil
+Arunachal Pradesh,Kra Daadi,Rabi,Hilly Forest Acidic Soil,4.5,5.8,"Mustard, Potato, Peas, Radish",arunachal pradesh|kra daadi|rabi|hilly forest acidic soil
+Arunachal Pradesh,Kra Daadi,Zaid,Hilly Forest Acidic Soil,4.5,5.8,"Local Cucurbits, Cowpea, Green Maize",arunachal pradesh|kra daadi|zaid|hilly forest acidic soil
+Arunachal Pradesh,Kurung Kumey,Kharif,Hilly Forest Acidic Soil,4.5,5.8,"Paddy, Maize, Cardamom, Ginger, Tapioca",arunachal pradesh|kurung kumey|kharif|hilly forest acidic soil
+Arunachal Pradesh,Kurung Kumey,Rabi,Hilly Forest Acidic Soil,4.5,5.8,"Mustard, Potato, Winter Vegetables",arunachal pradesh|kurung kumey|rabi|hilly forest acidic soil
+Arunachal Pradesh,Kurung Kumey,Zaid,Hilly Forest Acidic Soil,4.5,5.8,"Cowpea, Beans, Cucurbits",arunachal pradesh|kurung kumey|zaid|hilly forest acidic soil
+Arunachal Pradesh,Lepa Rada,Kharif,Sub-Tropical Clay Loam,5.0,6.2,"Paddy, Citrus (Mandarin), Maize, Ginger",arunachal pradesh|lepa rada|kharif|sub-tropical clay loam
+Arunachal Pradesh,Lepa Rada,Rabi,Sub-Tropical Clay Loam,5.0,6.2,"Mustard, Potato, Peas, Cabbage",arunachal pradesh|lepa rada|rabi|sub-tropical clay loam
+Arunachal Pradesh,Lepa Rada,Zaid,Sub-Tropical Clay Loam,5.0,6.2,"Cucurbits, Cowpea, Organic Vegetables",arunachal pradesh|lepa rada|zaid|sub-tropical clay loam
+Arunachal Pradesh,Lohit,Kharif,Alluvial Sandy Loam,5.5,6.8,"Paddy, Mustard, Tea, Maize, Ginger",arunachal pradesh|lohit|kharif|alluvial sandy loam
+Arunachal Pradesh,Lohit,Rabi,Alluvial Sandy Loam,5.5,6.8,"Mustard, Potato, Pulses, Vegetables",arunachal pradesh|lohit|rabi|alluvial sandy loam
+Arunachal Pradesh,Lohit,Zaid,Alluvial Sandy Loam,5.5,6.8,"Watermelon, Cucurbits, Cowpea, Vegetables",arunachal pradesh|lohit|zaid|alluvial sandy loam
+Arunachal Pradesh,Longding,Kharif,Red Sandy Clay Loam / Acidic Soil,4.8,6.0,"Jhum Rice, Maize, Tapioca, Millets, Chillies",arunachal pradesh|longding|kharif|red sandy clay loam / acidic soil
+Arunachal Pradesh,Longding,Rabi,Red Sandy Clay Loam / Acidic Soil,4.8,6.0,"Mustard, Pulses, Potato",arunachal pradesh|longding|rabi|red sandy clay loam / acidic soil
+Arunachal Pradesh,Longding,Zaid,Red Sandy Clay Loam / Acidic Soil,4.8,6.0,"Cowpea, Local Vegetables, Cucurbits",arunachal pradesh|longding|zaid|red sandy clay loam / acidic soil
+Arunachal Pradesh,Lower Dibang Valley,Kharif,Fertile Alluvial / Silt Loam,5.2,6.5,"Paddy, Ginger, Mustard, Maize, Tea",arunachal pradesh|lower dibang valley|kharif|fertile alluvial / silt loam
+Arunachal Pradesh,Lower Dibang Valley,Rabi,Fertile Alluvial / Silt Loam,5.2,6.5,"Mustard, Potato, Pulses, Vegetables",arunachal pradesh|lower dibang valley|rabi|fertile alluvial / silt loam
+Arunachal Pradesh,Lower Dibang Valley,Zaid,Fertile Alluvial / Silt Loam,5.2,6.5,"Watermelon, Cucurbits, Cowpea, Fodder Maize",arunachal pradesh|lower dibang valley|zaid|fertile alluvial / silt loam
+Arunachal Pradesh,Lower Siang,Kharif,Alluvial Clay Loam,5.2,6.5,"Paddy, Maize, Citrus, Ginger, Turmeric",arunachal pradesh|lower siang|kharif|alluvial clay loam
+Arunachal Pradesh,Lower Siang,Rabi,Alluvial Clay Loam,5.2,6.5,"Mustard, Potato, Pulses, Cabbage",arunachal pradesh|lower siang|rabi|alluvial clay loam
+Arunachal Pradesh,Lower Siang,Zaid,Alluvial Clay Loam,5.2,6.5,"Watermelon, Cucurbits, Vegetables",arunachal pradesh|lower siang|zaid|alluvial clay loam
+Arunachal Pradesh,Lower Subansiri,Kharif,Highland Acidic Clay Loam (Ziro Valley),4.8,6.0,"Paddy (Apatani Fish-Paddy system), Maize, Kiwi, Large Cardamom",arunachal pradesh|lower subansiri|kharif|highland acidic clay loam (ziro valley)
+Arunachal Pradesh,Lower Subansiri,Rabi,Highland Acidic Clay Loam (Ziro Valley),4.8,6.0,"Potato, Mustard, Garlic, Peas",arunachal pradesh|lower subansiri|rabi|highland acidic clay loam (ziro valley)
+Arunachal Pradesh,Lower Subansiri,Zaid,Highland Acidic Clay Loam (Ziro Valley),4.8,6.0,"Exotic Vegetables, Beans, Cucurbits",arunachal pradesh|lower subansiri|zaid|highland acidic clay loam (ziro valley)
+Arunachal Pradesh,Namsai,Kharif,Fertile Alluvial Plain Soil,5.5,6.8,"Paddy, Tea, Maize, Ginger, Turmeric",arunachal pradesh|namsai|kharif|fertile alluvial plain soil
+Arunachal Pradesh,Namsai,Rabi,Fertile Alluvial Plain Soil,5.5,6.8,"Mustard, Potato, Lentil, Field Pea, Tomato",arunachal pradesh|namsai|rabi|fertile alluvial plain soil
+Arunachal Pradesh,Namsai,Zaid,Fertile Alluvial Plain Soil,5.5,6.8,"Summer Moong, Watermelon, Cucurbits, Vegetables",arunachal pradesh|namsai|zaid|fertile alluvial plain soil
+Arunachal Pradesh,Pakke Kessang,Kharif,Forest Loamy Acidic Soil,4.8,6.0,"Paddy, Maize, Ginger, Large Cardamom",arunachal pradesh|pakke kessang|kharif|forest loamy acidic soil
+Arunachal Pradesh,Pakke Kessang,Rabi,Forest Loamy Acidic Soil,4.8,6.0,"Mustard, Potato, Winter Vegetables",arunachal pradesh|pakke kessang|rabi|forest loamy acidic soil
+Arunachal Pradesh,Pakke Kessang,Zaid,Forest Loamy Acidic Soil,4.8,6.0,"Cucumber, Beans, Cowpea",arunachal pradesh|pakke kessang|zaid|forest loamy acidic soil
+Arunachal Pradesh,Papum Pare,Kharif,Sub-Tropical Alluvial Loam,5.2,6.5,"Paddy, Maize, Banana, Ginger, Turmeric",arunachal pradesh|papum pare|kharif|sub-tropical alluvial loam
+Arunachal Pradesh,Papum Pare,Rabi,Sub-Tropical Alluvial Loam,5.2,6.5,"Mustard, Potato, Tomato, Pulses",arunachal pradesh|papum pare|rabi|sub-tropical alluvial loam
+Arunachal Pradesh,Papum Pare,Zaid,Sub-Tropical Alluvial Loam,5.2,6.5,"Watermelon, Cucurbits, Vegetables, Cowpea",arunachal pradesh|papum pare|zaid|sub-tropical alluvial loam
+Arunachal Pradesh,Shi Yomi,Kharif,High Alpine Acidic Loam,4.2,5.5,"Maize, Paddy, Large Cardamom, Buckwheat",arunachal pradesh|shi yomi|kharif|high alpine acidic loam
+Arunachal Pradesh,Shi Yomi,Rabi,High Alpine Acidic Loam,4.2,5.5,"Barley, Mustard, Off-season Potato",arunachal pradesh|shi yomi|rabi|high alpine acidic loam
+Arunachal Pradesh,Shi Yomi,Zaid,High Alpine Acidic Loam,4.2,5.5,"Local Vegetables, Beans",arunachal pradesh|shi yomi|zaid|high alpine acidic loam
+Arunachal Pradesh,Siang,Kharif,Hilly Clay Loam / Acidic Soil,5.0,6.2,"Paddy, Orange (Citrus), Maize, Ginger",arunachal pradesh|siang|kharif|hilly clay loam / acidic soil
+Arunachal Pradesh,Siang,Rabi,Hilly Clay Loam / Acidic Soil,5.0,6.2,"Mustard, Potato, Peas, Cabbage",arunachal pradesh|siang|rabi|hilly clay loam / acidic soil
+Arunachal Pradesh,Siang,Zaid,Hilly Clay Loam / Acidic Soil,5.0,6.2,"Cucurbits, Beans, Vegetables",arunachal pradesh|siang|zaid|hilly clay loam / acidic soil
+Arunachal Pradesh,Tawang,Kharif,High Altitude Organic Acidic Soil,4.5,5.8,"Maize, Potato, Buckwheat, Barley, Apple",arunachal pradesh|tawang|kharif|high altitude organic acidic soil
+Arunachal Pradesh,Tawang,Rabi,High Altitude Organic Acidic Soil,4.5,5.8,"Wheat, Barley, Garlic, Off-season Vegetables",arunachal pradesh|tawang|rabi|high altitude organic acidic soil
+Arunachal Pradesh,Tawang,Zaid,High Altitude Organic Acidic Soil,4.5,5.8,"Beans, Cabbage, Peas, Green Vegetables",arunachal pradesh|tawang|zaid|high altitude organic acidic soil
+Arunachal Pradesh,Tirap,Kharif,Red Sandy Loam / Acidic Soil,4.8,6.0,"Jhum Rice, WRC Paddy, Maize, Tea, Cardamom",arunachal pradesh|tirap|kharif|red sandy loam / acidic soil
+Arunachal Pradesh,Tirap,Rabi,Red Sandy Loam / Acidic Soil,4.8,6.0,"Mustard, Potato, Pulses, Vegetables",arunachal pradesh|tirap|rabi|red sandy loam / acidic soil
+Arunachal Pradesh,Tirap,Zaid,Red Sandy Loam / Acidic Soil,4.8,6.0,"Cowpea, Cucurbits, Vegetables",arunachal pradesh|tirap|zaid|red sandy loam / acidic soil
+Arunachal Pradesh,Upper Siang,Kharif,Mountainous Forest Acidic Soil,4.5,5.8,"Paddy, Maize, Orange, Large Cardamom, Yam",arunachal pradesh|upper siang|kharif|mountainous forest acidic soil
+Arunachal Pradesh,Upper Siang,Rabi,Mountainous Forest Acidic Soil,4.5,5.8,"Mustard, Potato, Peas, Radish",arunachal pradesh|upper siang|rabi|mountainous forest acidic soil
+Arunachal Pradesh,Upper Siang,Zaid,Mountainous Forest Acidic Soil,4.5,5.8,"Beans, Cucurbits, Green Vegetables",arunachal pradesh|upper siang|zaid|mountainous forest acidic soil
+Arunachal Pradesh,Upper Subansiri,Kharif,Hilly Acidic Soil / Silt Loam,4.8,6.0,"Paddy, Maize, Ginger, Turmeric, Millets",arunachal pradesh|upper subansiri|kharif|hilly acidic soil / silt loam
+Arunachal Pradesh,Upper Subansiri,Rabi,Hilly Acidic Soil / Silt Loam,4.8,6.0,"Mustard, Potato, Pulses, Cabbage",arunachal pradesh|upper subansiri|rabi|hilly acidic soil / silt loam
+Arunachal Pradesh,Upper Subansiri,Zaid,Hilly Acidic Soil / Silt Loam,4.8,6.0,"Cucurbits, Cowpea, Green Maize",arunachal pradesh|upper subansiri|zaid|hilly acidic soil / silt loam
+Arunachal Pradesh,West Kameng,Kharif,Temperate Loamy Acidic Soil,4.8,6.2,"Maize, Paddy, Tomato, Apple, Kiwi, Kiwi/Kiwi Fruit",arunachal pradesh|west kameng|kharif|temperate loamy acidic soil
+Arunachal Pradesh,West Kameng,Rabi,Temperate Loamy Acidic Soil,4.8,6.2,"Off-season Tomato, Potato, Mustard, Barley, Peas",arunachal pradesh|west kameng|rabi|temperate loamy acidic soil
+Arunachal Pradesh,West Kameng,Zaid,Temperate Loamy Acidic Soil,4.8,6.2,"Cabbage, Cauliflower, Beans, Cucurbits",arunachal pradesh|west kameng|zaid|temperate loamy acidic soil
+Arunachal Pradesh,West Siang,Kharif,Sub-Tropical Clay Loam,5.0,6.2,"Paddy, Citrus (Orange), Maize, Ginger, Pineapple",arunachal pradesh|west siang|kharif|sub-tropical clay loam
+Arunachal Pradesh,West Siang,Rabi,Sub-Tropical Clay Loam,5.0,6.2,"Mustard, Potato, Peas, Tomato",arunachal pradesh|west siang|rabi|sub-tropical clay loam
+Arunachal Pradesh,West Siang,Zaid,Sub-Tropical Clay Loam,5.0,6.2,"Cucurbits, Cowpea, Vegetables",arunachal pradesh|west siang|zaid|sub-tropical clay loam
+Arunachal Pradesh,Bichom,Kharif,Sub-Himalayan Acidic Forest Loam,4.8,6.0,"Paddy, Maize, Ginger, Kiwi, Orange",arunachal pradesh|bichom|kharif|sub-himalayan acidic forest loam
+Arunachal Pradesh,Bichom,Rabi,Sub-Himalayan Acidic Forest Loam,4.8,6.0,"Mustard, Potato, Peas, Off-season Vegetables",arunachal pradesh|bichom|rabi|sub-himalayan acidic forest loam
+Arunachal Pradesh,Bichom,Zaid,Sub-Himalayan Acidic Forest Loam,4.8,6.0,"Cucurbits, Beans, Vegetables",arunachal pradesh|bichom|zaid|sub-himalayan acidic forest loam
+Assam,Bajali,Kharif,Alluvial Silt Loam,5.2,6.5,"Sali Paddy, Sugarcane, Jute, Vegetables",assam|bajali|kharif|alluvial silt loam
+Assam,Bajali,Rabi,Alluvial Silt Loam,5.2,6.5,"Mustard, Boro Paddy, Potato, Pulses (Lentil)",assam|bajali|rabi|alluvial silt loam
+Assam,Bajali,Zaid,Alluvial Silt Loam,5.2,6.5,"Ahu Paddy, Summer Pulses, Vegetables, Cucumber",assam|bajali|zaid|alluvial silt loam
+Assam,Baksa,Kharif,Sandy Loam / Sub-Himalayan Alluvial,5.0,6.2,"Sali Paddy, Maize, Jute, Vegetables",assam|baksa|kharif|sandy loam / sub-himalayan alluvial
+Assam,Baksa,Rabi,Sandy Loam / Sub-Himalayan Alluvial,5.0,6.2,"Mustard, Boro Paddy, Potato, Blackgram",assam|baksa|rabi|sandy loam / sub-himalayan alluvial
+Assam,Baksa,Zaid,Sandy Loam / Sub-Himalayan Alluvial,5.0,6.2,"Ahu Paddy, Summer Moong, Vegetables, Watermelon",assam|baksa|zaid|sandy loam / sub-himalayan alluvial
+Assam,Barpeta,Kharif,Riverine Sandy / Active Floodplain Silt,5.5,6.8,"Sali Paddy, Jute, Sugarcane, Vegetables",assam|barpeta|kharif|riverine sandy / active floodplain silt
+Assam,Barpeta,Rabi,Riverine Sandy / Active Floodplain Silt,5.5,6.8,"Boro Paddy, Mustard, Potato, Wheat, Lentil",assam|barpeta|rabi|riverine sandy / active floodplain silt
+Assam,Barpeta,Zaid,Riverine Sandy / Active Floodplain Silt,5.5,6.8,"Jute (Early), Ahu Paddy, Summer Vegetables, Watermelon",assam|barpeta|zaid|riverine sandy / active floodplain silt
+Assam,Biswanath,Kharif,Fertile Alluvial Clay Loam,5.2,6.5,"Sali Paddy, Tea, Sugarcane, Jute",assam|biswanath|kharif|fertile alluvial clay loam
+Assam,Biswanath,Rabi,Fertile Alluvial Clay Loam,5.2,6.5,"Mustard, Boro Paddy, Potato, Pulses",assam|biswanath|rabi|fertile alluvial clay loam
+Assam,Biswanath,Zaid,Fertile Alluvial Clay Loam,5.2,6.5,"Ahu Paddy, Vegetables, Cowpea",assam|biswanath|zaid|fertile alluvial clay loam
+Assam,Bongaigaon,Kharif,Alluvial Loam / Red Sandy Loam,5.0,6.4,"Sali Paddy, Jute, Maize, Pulses",assam|bongaigaon|kharif|alluvial loam / red sandy loam
+Assam,Bongaigaon,Rabi,Alluvial Loam / Red Sandy Loam,5.0,6.4,"Mustard, Boro Paddy, Potato, Wheat",assam|bongaigaon|rabi|alluvial loam / red sandy loam
+Assam,Bongaigaon,Zaid,Alluvial Loam / Red Sandy Loam,5.0,6.4,"Ahu Paddy, Summer Vegetables, Moong",assam|bongaigaon|zaid|alluvial loam / red sandy loam
+Assam,Cachar,Kharif,Surma Valley Alluvial / Acid Silt,4.8,6.0,"Sali Paddy, Tea, Sugarcane, Pineapple",assam|cachar|kharif|surma valley alluvial / acid silt
+Assam,Cachar,Rabi,Surma Valley Alluvial / Acid Silt,4.8,6.0,"Boro Paddy, Mustard, Potato, Vegetables",assam|cachar|rabi|surma valley alluvial / acid silt
+Assam,Cachar,Zaid,Surma Valley Alluvial / Acid Silt,4.8,6.0,"Ahu Paddy, Vegetables, Cowpea",assam|cachar|zaid|surma valley alluvial / acid silt
+Assam,Charaideo,Kharif,Acidic Red Clay Loam,4.5,5.8,"Sali Paddy, Tea, Sugarcane, Ginger",assam|charaideo|kharif|acidic red clay loam
+Assam,Charaideo,Rabi,Acidic Red Clay Loam,4.5,5.8,"Mustard, Potato, Peas, Winter Vegetables",assam|charaideo|rabi|acidic red clay loam
+Assam,Charaideo,Zaid,Acidic Red Clay Loam,4.5,5.8,"Vegetables, Cowpea, Cucurbits",assam|charaideo|zaid|acidic red clay loam
+Assam,Chirang,Kharif,Bhabar-Terai Sandy Loam,5.0,6.2,"Sali Paddy, Maize, Jute, Sugarcane",assam|chirang|kharif|bhabar-terai sandy loam
+Assam,Chirang,Rabi,Bhabar-Terai Sandy Loam,5.0,6.2,"Mustard, Boro Paddy, Potato, Pulses",assam|chirang|rabi|bhabar-terai sandy loam
+Assam,Chirang,Zaid,Bhabar-Terai Sandy Loam,5.0,6.2,"Ahu Paddy, Vegetables, Summer Moong",assam|chirang|zaid|bhabar-terai sandy loam
+Assam,Darrang,Kharif,Brahmaputra Alluvial Loam,5.4,6.8,"Sali Paddy, Jute, Vegetables, Sugarcane",assam|darrang|kharif|brahmaputra alluvial loam
+Assam,Darrang,Rabi,Brahmaputra Alluvial Loam,5.4,6.8,"Boro Paddy, Mustard, Commercial Vegetables, Potato",assam|darrang|rabi|brahmaputra alluvial loam
+Assam,Darrang,Zaid,Brahmaputra Alluvial Loam,5.4,6.8,"Vegetables, Watermelon, Ahu Paddy, Cowpea",assam|darrang|zaid|brahmaputra alluvial loam
+Assam,Dhemaji,Kharif,Floodplain Sandy Alluvial,5.0,6.2,"Sali Paddy (Bao Rice), Maize, Mustard (Early)",assam|dhemaji|kharif|floodplain sandy alluvial
+Assam,Dhemaji,Rabi,Floodplain Sandy Alluvial,5.0,6.2,"Mustard, Potato, Boro Paddy, Matikalai (Blackgram)",assam|dhemaji|rabi|floodplain sandy alluvial
+Assam,Dhemaji,Zaid,Floodplain Sandy Alluvial,5.0,6.2,"Ahu Paddy, Vegetables, Cucurbits",assam|dhemaji|zaid|floodplain sandy alluvial
+Assam,Dhubri,Kharif,Active Floodplain Alluvial / Silt Clay,5.5,7.0,"Sali Paddy, Jute, Sugarcane, Vegetables",assam|dhubri|kharif|active floodplain alluvial / silt clay
+Assam,Dhubri,Rabi,Active Floodplain Alluvial / Silt Clay,5.5,7.0,"Boro Paddy, Mustard, Potato, Wheat, Chili",assam|dhubri|rabi|active floodplain alluvial / silt clay
+Assam,Dhubri,Zaid,Active Floodplain Alluvial / Silt Clay,5.5,7.0,"Jute, Summer Vegetables, Watermelon, Ahu Paddy",assam|dhubri|zaid|active floodplain alluvial / silt clay
+Assam,Dibrugarh,Kharif,Acidic Alluvial Silt Loam,4.5,5.8,"Sali Paddy, Tea, Sugarcane, Ginger",assam|dibrugarh|kharif|acidic alluvial silt loam
+Assam,Dibrugarh,Rabi,Acidic Alluvial Silt Loam,4.5,5.8,"Mustard, Potato, Boro Paddy, Vegetables",assam|dibrugarh|rabi|acidic alluvial silt loam
+Assam,Dibrugarh,Zaid,Acidic Alluvial Silt Loam,4.5,5.8,"Ahu Paddy, Vegetables, Cucurbits",assam|dibrugarh|zaid|acidic alluvial silt loam
+Assam,Dima Hasao,Kharif,Hilly Organic Acidic Red Soil,4.5,5.5,"Jhum Rice, Maize, Ginger, Turmeric, Pineapple",assam|dima hasao|kharif|hilly organic acidic red soil
+Assam,Dima Hasao,Rabi,Hilly Organic Acidic Red Soil,4.5,5.5,"Mustard, Potato, Cabbage, Off-season Vegetables",assam|dima hasao|rabi|hilly organic acidic red soil
+Assam,Dima Hasao,Zaid,Hilly Organic Acidic Red Soil,4.5,5.5,"Vegetables, Beans, Maize",assam|dima hasao|zaid|hilly organic acidic red soil
+Assam,Goalpara,Kharif,Red Sandy Loam / Alluvial Plain,5.2,6.5,"Sali Paddy, Rubber, Jute, Banana, Maize",assam|goalpara|kharif|red sandy loam / alluvial plain
+Assam,Goalpara,Rabi,Red Sandy Loam / Alluvial Plain,5.2,6.5,"Mustard, Boro Paddy, Potato, Pulses",assam|goalpara|rabi|red sandy loam / alluvial plain
+Assam,Goalpara,Zaid,Red Sandy Loam / Alluvial Plain,5.2,6.5,"Ahu Paddy, Vegetables, Cucurbits",assam|goalpara|zaid|red sandy loam / alluvial plain
+Assam,Golaghat,Kharif,Alluvial Silt Clay Loam,4.8,6.2,"Sali Paddy, Tea, Sugarcane, Pulses",assam|golaghat|kharif|alluvial silt clay loam
+Assam,Golaghat,Rabi,Alluvial Silt Clay Loam,4.8,6.2,"Mustard, Boro Paddy, Potato, Pulses",assam|golaghat|rabi|alluvial silt clay loam
+Assam,Golaghat,Zaid,Alluvial Silt Clay Loam,4.8,6.2,"Ahu Paddy, Vegetables, Cowpea",assam|golaghat|zaid|alluvial silt clay loam
+Assam,Hailakandi,Kharif,Valley Alluvial / Silt Loam,5.0,6.2,"Sali Paddy, Tea, Sugarcane, Vegetables",assam|hailakandi|kharif|valley alluvial / silt loam
+Assam,Hailakandi,Rabi,Valley Alluvial / Silt Loam,5.0,6.2,"Boro Paddy, Mustard, Potato, Pulses",assam|hailakandi|rabi|valley alluvial / silt loam
+Assam,Hailakandi,Zaid,Valley Alluvial / Silt Loam,5.0,6.2,"Ahu Paddy, Vegetables, Cucurbits",assam|hailakandi|zaid|valley alluvial / silt loam
+Assam,Hojai,Kharif,Fertile Alluvial Clay Loam,5.5,6.8,"Sali Paddy, Sugarcane, Jute, Vegetables",assam|hojai|kharif|fertile alluvial clay loam
+Assam,Hojai,Rabi,Fertile Alluvial Clay Loam,5.5,6.8,"Boro Paddy, Mustard, Potato, Pulses",assam|hojai|rabi|fertile alluvial clay loam
+Assam,Hojai,Zaid,Fertile Alluvial Clay Loam,5.5,6.8,"Ahu Paddy, Summer Moong, Vegetables",assam|hojai|zaid|fertile alluvial clay loam
+Assam,Jorhat,Kharif,Acidic Alluvial Loam,4.8,6.0,"Sali Paddy, Tea, Sugarcane, Vegetables",assam|jorhat|kharif|acidic alluvial loam
+Assam,Jorhat,Rabi,Acidic Alluvial Loam,4.8,6.0,"Mustard, Potato, Boro Paddy, Peas",assam|jorhat|rabi|acidic alluvial loam
+Assam,Jorhat,Zaid,Acidic Alluvial Loam,4.8,6.0,"Ahu Paddy, Summer Vegetables, Cowpea",assam|jorhat|zaid|acidic alluvial loam
+Assam,Kamrup,Kharif,Central Alluvial Loam,5.2,6.6,"Sali Paddy, Jute, Sugarcane, Vegetables",assam|kamrup|kharif|central alluvial loam
+Assam,Kamrup,Rabi,Central Alluvial Loam,5.2,6.6,"Boro Paddy, Mustard, Potato, Pulses",assam|kamrup|rabi|central alluvial loam
+Assam,Kamrup,Zaid,Central Alluvial Loam,5.2,6.6,"Ahu Paddy, Cucurbits, Watermelon, Vegetables",assam|kamrup|zaid|central alluvial loam
+Assam,Kamrup Metropolitan,Kharif,Alluvial Sandy Silt Loam,5.5,6.8,"Sali Paddy, Vegetables, Fruits, Flowers",assam|kamrup metropolitan|kharif|alluvial sandy silt loam
+Assam,Kamrup Metropolitan,Rabi,Alluvial Sandy Silt Loam,5.5,6.8,"Mustard, Vegetables, Potato, Boro Paddy",assam|kamrup metropolitan|rabi|alluvial sandy silt loam
+Assam,Kamrup Metropolitan,Zaid,Alluvial Sandy Silt Loam,5.5,6.8,"Urban Horticulture, Cucurbits, Vegetables",assam|kamrup metropolitan|zaid|alluvial sandy silt loam
+Assam,Karbi Anglong,Kharif,Hilly Red Loamy / Lateritic Soil,4.5,5.8,"Jhum Paddy, Maize, Ginger, Turmeric, Sugarcane",assam|karbi anglong|kharif|hilly red loamy / lateritic soil
+Assam,Karbi Anglong,Rabi,Hilly Red Loamy / Lateritic Soil,4.5,5.8,"Mustard, Potato, Pulses, Vegetables",assam|karbi anglong|rabi|hilly red loamy / lateritic soil
+Assam,Karbi Anglong,Zaid,Hilly Red Loamy / Lateritic Soil,4.5,5.8,"Vegetables, Cowpea, Maize",assam|karbi anglong|zaid|hilly red loamy / lateritic soil
+Assam,Karimganj,Kharif,Lowland Alluvial Silt / Acidic Clay,4.8,6.0,"Sali Paddy, Sugarcane, Tea, Vegetables",assam|karimganj|kharif|lowland alluvial silt / acidic clay
+Assam,Karimganj,Rabi,Lowland Alluvial Silt / Acidic Clay,4.8,6.0,"Boro Paddy, Mustard, Potato, Pulses",assam|karimganj|rabi|lowland alluvial silt / acidic clay
+Assam,Karimganj,Zaid,Lowland Alluvial Silt / Acidic Clay,4.8,6.0,"Ahu Paddy, Vegetables, Cucurbits",assam|karimganj|zaid|lowland alluvial silt / acidic clay
+Assam,Kokrajhar,Kharif,Sandy Loam / Sub-Himalayan Alluvial,5.0,6.2,"Sali Paddy, Jute, Maize, Vegetables",assam|kokrajhar|kharif|sandy loam / sub-himalayan alluvial
+Assam,Kokrajhar,Rabi,Sandy Loam / Sub-Himalayan Alluvial,5.0,6.2,"Mustard, Boro Paddy, Potato, Pulses",assam|kokrajhar|rabi|sandy loam / sub-himalayan alluvial
+Assam,Kokrajhar,Zaid,Sandy Loam / Sub-Himalayan Alluvial,5.0,6.2,"Ahu Paddy, Cucurbits, Vegetables",assam|kokrajhar|zaid|sandy loam / sub-himalayan alluvial
+Assam,Lakhimpur,Kharif,Sub-Himalayan Alluvial Floodplain,5.0,6.2,"Sali Paddy (Bao Rice), Tea, Sugarcane, Jute",assam|lakhimpur|kharif|sub-himalayan alluvial floodplain
+Assam,Lakhimpur,Rabi,Sub-Himalayan Alluvial Floodplain,5.0,6.2,"Mustard, Boro Paddy, Potato, Blackgram",assam|lakhimpur|rabi|sub-himalayan alluvial floodplain
+Assam,Lakhimpur,Zaid,Sub-Himalayan Alluvial Floodplain,5.0,6.2,"Ahu Paddy, Summer Moong, Vegetables",assam|lakhimpur|zaid|sub-himalayan alluvial floodplain
+Assam,Majuli,Kharif,Riverine Island Active Alluvial Silt,5.2,6.5,"Bao Rice, Sali Paddy, Mustard (Early), Sugarcane",assam|majuli|kharif|riverine island active alluvial silt
+Assam,Majuli,Rabi,Riverine Island Active Alluvial Silt,5.2,6.5,"Mustard, Potato, Boro Paddy, Pulses (Lentil, Pea)",assam|majuli|rabi|riverine island active alluvial silt
+Assam,Majuli,Zaid,Riverine Island Active Alluvial Silt,5.2,6.5,"Summer Pulses, Watermelon, Vegetables, Ahu Paddy",assam|majuli|zaid|riverine island active alluvial silt
+Assam,Morigaon,Kharif,Lowland Alluvial Silt,5.2,6.5,"Sali Paddy, Jute, Vegetables, Sugarcane",assam|morigaon|kharif|lowland alluvial silt
+Assam,Morigaon,Rabi,Lowland Alluvial Silt,5.2,6.5,"Boro Paddy, Mustard, Potato, Blackgram",assam|morigaon|rabi|lowland alluvial silt
+Assam,Morigaon,Zaid,Lowland Alluvial Silt,5.2,6.5,"Ahu Paddy, Vegetables, Cucurbits",assam|morigaon|zaid|lowland alluvial silt
+Assam,Nagaon,Kharif,Fertile Brahmaputra Alluvial Loam,5.5,6.8,"Sali Paddy, Jute, Sugarcane, Vegetables",assam|nagaon|kharif|fertile brahmaputra alluvial loam
+Assam,Nagaon,Rabi,Fertile Brahmaputra Alluvial Loam,5.5,6.8,"Boro Paddy, Mustard, Potato, Pulses, Wheat",assam|nagaon|rabi|fertile brahmaputra alluvial loam
+Assam,Nagaon,Zaid,Fertile Brahmaputra Alluvial Loam,5.5,6.8,"Ahu Paddy, Summer Moong, Watermelon, Vegetables",assam|nagaon|zaid|fertile brahmaputra alluvial loam
+Assam,Nalbari,Kharif,Alluvial Silt Loam,5.2,6.5,"Sali Paddy, Jute, Sugarcane, Vegetables",assam|nalbari|kharif|alluvial silt loam
+Assam,Nalbari,Rabi,Alluvial Silt Loam,5.2,6.5,"Mustard, Boro Paddy, Potato, Pulses",assam|nalbari|rabi|alluvial silt loam
+Assam,Nalbari,Zaid,Alluvial Silt Loam,5.2,6.5,"Ahu Paddy, Cucurbits, Vegetables",assam|nalbari|zaid|alluvial silt loam
+Assam,West Karbi Anglong,Kharif,Hilly Red Organic Loam,4.5,5.8,"Jhum Paddy, Maize, Ginger, Turmeric",assam|west karbi anglong|kharif|hilly red organic loam
+Assam,West Karbi Anglong,Rabi,Hilly Red Organic Loam,4.5,5.8,"Mustard, Potato, Pulses, Vegetables",assam|west karbi anglong|rabi|hilly red organic loam
+Assam,West Karbi Anglong,Zaid,Hilly Red Organic Loam,4.5,5.8,"Vegetables, Cowpea, Green Maize",assam|west karbi anglong|zaid|hilly red organic loam
+Assam,Sivasagar,Kharif,Acidic Alluvial Silt Clay,4.5,5.8,"Sali Paddy, Tea, Sugarcane, Vegetables",assam|sivasagar|kharif|acidic alluvial silt clay
+Assam,Sivasagar,Rabi,Acidic Alluvial Silt Clay,4.5,5.8,"Mustard, Potato, Boro Paddy, Pulses",assam|sivasagar|rabi|acidic alluvial silt clay
+Assam,Sivasagar,Zaid,Acidic Alluvial Silt Clay,4.5,5.8,"Ahu Paddy, Summer Vegetables, Cowpea",assam|sivasagar|zaid|acidic alluvial silt clay
+Assam,Sonitpur,Kharif,Alluvial Sandy Clay Loam,5.0,6.4,"Sali Paddy, Tea, Sugarcane, Jute",assam|sonitpur|kharif|alluvial sandy clay loam
+Assam,Sonitpur,Rabi,Alluvial Sandy Clay Loam,5.0,6.4,"Mustard, Boro Paddy, Potato, Vegetables",assam|sonitpur|rabi|alluvial sandy clay loam
+Assam,Sonitpur,Zaid,Alluvial Sandy Clay Loam,5.0,6.4,"Ahu Paddy, Summer Moong, Vegetables",assam|sonitpur|zaid|alluvial sandy clay loam
+Assam,South Salmara-Mankachar,Kharif,Active Floodplain Silt Loam,5.5,7.0,"Sali Paddy, Jute, Vegetables",assam|south salmara-mankachar|kharif|active floodplain silt loam
+Assam,South Salmara-Mankachar,Rabi,Active Floodplain Silt Loam,5.5,7.0,"Boro Paddy, Mustard, Potato, Chili",assam|south salmara-mankachar|rabi|active floodplain silt loam
+Assam,South Salmara-Mankachar,Zaid,Active Floodplain Silt Loam,5.5,7.0,"Jute, Cucurbits, Watermelon, Ahu Paddy",assam|south salmara-mankachar|zaid|active floodplain silt loam
+Assam,Tinsukia,Kharif,Acidic Alluvial / Red Loam,4.5,5.8,"Tea, Sali Paddy, Ginger, Turmeric, Citrus",assam|tinsukia|kharif|acidic alluvial / red loam
+Assam,Tinsukia,Rabi,Acidic Alluvial / Red Loam,4.5,5.8,"Mustard, Potato, Vegetables, Pulses",assam|tinsukia|rabi|acidic alluvial / red loam
+Assam,Tinsukia,Zaid,Acidic Alluvial / Red Loam,4.5,5.8,"Ahu Paddy, Vegetables, Cucurbits",assam|tinsukia|zaid|acidic alluvial / red loam
+Assam,Udalguri,Kharif,Sub-Himalayan Sandy Loam,5.0,6.2,"Sali Paddy, Tea, Maize, Jute",assam|udalguri|kharif|sub-himalayan sandy loam
+Assam,Udalguri,Rabi,Sub-Himalayan Sandy Loam,5.0,6.2,"Mustard, Boro Paddy, Potato, Pulses",assam|udalguri|rabi|sub-himalayan sandy loam
+Assam,Udalguri,Zaid,Sub-Himalayan Sandy Loam,5.0,6.2,"Ahu Paddy, Vegetables, Cowpea",assam|udalguri|zaid|sub-himalayan sandy loam
+Assam,Tamulpur,Kharif,Bhabar-Terai Sandy Clay Loam,5.0,6.2,"Sali Paddy, Maize, Jute, Sugarcane",assam|tamulpur|kharif|bhabar-terai sandy clay loam
+Assam,Tamulpur,Rabi,Bhabar-Terai Sandy Clay Loam,5.0,6.2,"Mustard, Boro Paddy, Potato, Pulses",assam|tamulpur|rabi|bhabar-terai sandy clay loam
+Assam,Tamulpur,Zaid,Bhabar-Terai Sandy Clay Loam,5.0,6.2,"Ahu Paddy, Cucurbits, Vegetables",assam|tamulpur|zaid|bhabar-terai sandy clay loam
+Karnataka,Bagalkote,Kharif,Deep Black Cotton Soil (Vertisol),7.2,8.5,"Sugarcane, Sunflower, Maize, Pigeon Pea, Pearl Millet",karnataka|bagalkote|kharif|deep black cotton soil (vertisol)
+Karnataka,Bagalkote,Rabi,Deep Black Cotton Soil (Vertisol),7.2,8.5,"Rabi Sorghum (Jowar), Chickpea (Bengal Gram), Wheat, Safflower",karnataka|bagalkote|rabi|deep black cotton soil (vertisol)
+Karnataka,Bagalkote,Zaid,Deep Black Cotton Soil (Vertisol),7.2,8.5,"Summer Groundnut, Watermelon, Vegetables, Fodder Maize",karnataka|bagalkote|zaid|deep black cotton soil (vertisol)
+Karnataka,Ballari,Kharif,Red Sandy Loam,6.8,8.2,"Cotton, Maize, Groundnut, Chili, Rice",karnataka|ballari|kharif|red sandy loam
+Karnataka,Ballari,Kharif,Deep Black Soil,6.8,8.2,"Cotton, Maize, Groundnut, Chili, Rice",karnataka|ballari|kharif|deep black soil
+Karnataka,Ballari,Rabi,Red Sandy Loam,6.8,8.2,"Rabi Sorghum, Chickpea, Sunflower, Wheat",karnataka|ballari|rabi|red sandy loam
+Karnataka,Ballari,Rabi,Deep Black Soil,6.8,8.2,"Rabi Sorghum, Chickpea, Sunflower, Wheat",karnataka|ballari|rabi|deep black soil
+Karnataka,Ballari,Zaid,Red Sandy Loam,6.8,8.2,"Summer Groundnut, Vegetables, Watermelon",karnataka|ballari|zaid|red sandy loam
+Karnataka,Ballari,Zaid,Deep Black Soil,6.8,8.2,"Summer Groundnut, Vegetables, Watermelon",karnataka|ballari|zaid|deep black soil
+Karnataka,Belagavi,Kharif,Deep Black Cotton,6.2,8.0,"Sugarcane, Paddy, Soybean, Maize, Cotton, Tobacco",karnataka|belagavi|kharif|deep black cotton
+Karnataka,Belagavi,Kharif,Red Lateritic Soil,6.2,8.0,"Sugarcane, Paddy, Soybean, Maize, Cotton, Tobacco",karnataka|belagavi|kharif|red lateritic soil
+Karnataka,Belagavi,Rabi,Deep Black Cotton,6.2,8.0,"Chickpea, Wheat, Rabi Sorghum, Safflower",karnataka|belagavi|rabi|deep black cotton
+Karnataka,Belagavi,Rabi,Red Lateritic Soil,6.2,8.0,"Chickpea, Wheat, Rabi Sorghum, Safflower",karnataka|belagavi|rabi|red lateritic soil
+Karnataka,Belagavi,Zaid,Deep Black Cotton,6.2,8.0,"Summer Groundnut, Vegetables, Pulses",karnataka|belagavi|zaid|deep black cotton
+Karnataka,Belagavi,Zaid,Red Lateritic Soil,6.2,8.0,"Summer Groundnut, Vegetables, Pulses",karnataka|belagavi|zaid|red lateritic soil
+Karnataka,Bengaluru Rural,Kharif,Red Sandy Loam / Red Lateritic Soil,5.8,7.0,"Finger Millet (Ragi), Maize, Groundnut, Pigeon Pea, Grapes",karnataka|bengaluru rural|kharif|red sandy loam / red lateritic soil
+Karnataka,Bengaluru Rural,Rabi,Red Sandy Loam / Red Lateritic Soil,5.8,7.0,"Vegetables, Horse Gram, Cowpea, Tomato",karnataka|bengaluru rural|rabi|red sandy loam / red lateritic soil
+Karnataka,Bengaluru Rural,Zaid,Red Sandy Loam / Red Lateritic Soil,5.8,7.0,"Summer Vegetables, Floriculture, Watermelon",karnataka|bengaluru rural|zaid|red sandy loam / red lateritic soil
+Karnataka,Bengaluru Urban,Kharif,Red Loamy Soil,6.0,7.2,"Finger Millet (Ragi), Maize, Vegetables, Flowers",karnataka|bengaluru urban|kharif|red loamy soil
+Karnataka,Bengaluru Urban,Rabi,Red Loamy Soil,6.0,7.2,"Winter Vegetables, Floriculture, Nursery Crops",karnataka|bengaluru urban|rabi|red loamy soil
+Karnataka,Bengaluru Urban,Zaid,Red Loamy Soil,6.0,7.2,"Urban Horticulture, Leafy Greens, Microgreens",karnataka|bengaluru urban|zaid|red loamy soil
+Karnataka,Bidar,Kharif,Deep Black Cotton,6.5,8.2,"Soybean, Pigeon Pea (Tur), Black Gram, Green Gram, Sugarcane",karnataka|bidar|kharif|deep black cotton
+Karnataka,Bidar,Kharif,Red Lateritic Soil,6.5,8.2,"Soybean, Pigeon Pea (Tur), Black Gram, Green Gram, Sugarcane",karnataka|bidar|kharif|red lateritic soil
+Karnataka,Bidar,Rabi,Deep Black Cotton,6.5,8.2,"Chickpea, Rabi Sorghum, Wheat, Safflower",karnataka|bidar|rabi|deep black cotton
+Karnataka,Bidar,Rabi,Red Lateritic Soil,6.5,8.2,"Chickpea, Rabi Sorghum, Wheat, Safflower",karnataka|bidar|rabi|red lateritic soil
+Karnataka,Bidar,Zaid,Deep Black Cotton,6.5,8.2,"Summer Sesame, Groundnut, Vegetables",karnataka|bidar|zaid|deep black cotton
+Karnataka,Bidar,Zaid,Red Lateritic Soil,6.5,8.2,"Summer Sesame, Groundnut, Vegetables",karnataka|bidar|zaid|red lateritic soil
+Karnataka,Chamarajanagar,Kharif,Red Sandy Loam to Black Soil,6.0,7.8,"Finger Millet (Ragi), Maize, Banana, Turmeric, Groundnut",karnataka|chamarajanagar|kharif|red sandy loam to black soil
+Karnataka,Chamarajanagar,Rabi,Red Sandy Loam to Black Soil,6.0,7.8,"Horse Gram, Chickpea, Sorghum, Sunflower",karnataka|chamarajanagar|rabi|red sandy loam to black soil
+Karnataka,Chamarajanagar,Zaid,Red Sandy Loam to Black Soil,6.0,7.8,"Summer Vegetables, Watermelon, Pulses",karnataka|chamarajanagar|zaid|red sandy loam to black soil
+Karnataka,Chikkaballapura,Kharif,Red Sandy Loam,5.8,7.2,"Finger Millet (Ragi), Maize, Groundnut, Tomato, Mulberry (Sericulture)",karnataka|chikkaballapura|kharif|red sandy loam
+Karnataka,Chikkaballapura,Rabi,Red Sandy Loam,5.8,7.2,"Commercial Vegetables, Potato, Chickpea, Mustard",karnataka|chikkaballapura|rabi|red sandy loam
+Karnataka,Chikkaballapura,Zaid,Red Sandy Loam,5.8,7.2,"Watermelon, Cucurbits, Summer Vegetables",karnataka|chikkaballapura|zaid|red sandy loam
+Karnataka,Chikkamagaluru,Kharif,Acidic Red Hill / Lateritic Soil,4.8,6.2,"Coffee, Pepper, Arecanut, Paddy, Cardamom, Tea",karnataka|chikkamagaluru|kharif|acidic red hill / lateritic soil
+Karnataka,Chikkamagaluru,Rabi,Acidic Red Hill / Lateritic Soil,4.8,6.2,"Pulses, Vegetables, Mustard",karnataka|chikkamagaluru|rabi|acidic red hill / lateritic soil
+Karnataka,Chikkamagaluru,Zaid,Acidic Red Hill / Lateritic Soil,4.8,6.2,"Spices, Summer Vegetables, Fruits",karnataka|chikkamagaluru|zaid|acidic red hill / lateritic soil
+Karnataka,Chitradurga,Kharif,Red Sandy Soil,6.5,8.0,"Groundnut, Maize, Finger Millet, Onion, Cotton, Pomegranate",karnataka|chitradurga|kharif|red sandy soil
+Karnataka,Chitradurga,Kharif,Shallow Black Soil,6.5,8.0,"Groundnut, Maize, Finger Millet, Onion, Cotton, Pomegranate",karnataka|chitradurga|kharif|shallow black soil
+Karnataka,Chitradurga,Rabi,Red Sandy Soil,6.5,8.0,"Chickpea, Rabi Sorghum, Sunflower, Mustard",karnataka|chitradurga|rabi|red sandy soil
+Karnataka,Chitradurga,Rabi,Shallow Black Soil,6.5,8.0,"Chickpea, Rabi Sorghum, Sunflower, Mustard",karnataka|chitradurga|rabi|shallow black soil
+Karnataka,Chitradurga,Zaid,Red Sandy Soil,6.5,8.0,"Summer Groundnut, Watermelon, Fodder Crops",karnataka|chitradurga|zaid|red sandy soil
+Karnataka,Chitradurga,Zaid,Shallow Black Soil,6.5,8.0,"Summer Groundnut, Watermelon, Fodder Crops",karnataka|chitradurga|zaid|shallow black soil
+Karnataka,Dakshina Kannada,Kharif,Coastal Alluvial,4.8,6.0,"Paddy, Coconut, Arecanut, Cashew, Rubber",karnataka|dakshina kannada|kharif|coastal alluvial
+Karnataka,Dakshina Kannada,Kharif,Acidic Lateritic Red Soil,4.8,6.0,"Paddy, Coconut, Arecanut, Cashew, Rubber",karnataka|dakshina kannada|kharif|acidic lateritic red soil
+Karnataka,Dakshina Kannada,Rabi,Coastal Alluvial,4.8,6.0,"Pulses (Black Gram, Cowpea), Vegetables",karnataka|dakshina kannada|rabi|coastal alluvial
+Karnataka,Dakshina Kannada,Rabi,Acidic Lateritic Red Soil,4.8,6.0,"Pulses (Black Gram, Cowpea), Vegetables",karnataka|dakshina kannada|rabi|acidic lateritic red soil
+Karnataka,Dakshina Kannada,Zaid,Coastal Alluvial,4.8,6.0,"Summer Paddy, Watermelon, Vegetables",karnataka|dakshina kannada|zaid|coastal alluvial
+Karnataka,Dakshina Kannada,Zaid,Acidic Lateritic Red Soil,4.8,6.0,"Summer Paddy, Watermelon, Vegetables",karnataka|dakshina kannada|zaid|acidic lateritic red soil
+Karnataka,Davanagere,Kharif,Medium Black Soil,6.5,8.0,"Paddy, Maize, Sugarcane, Cotton, Arecanut",karnataka|davanagere|kharif|medium black soil
+Karnataka,Davanagere,Kharif,Red Sandy Loam,6.5,8.0,"Paddy, Maize, Sugarcane, Cotton, Arecanut",karnataka|davanagere|kharif|red sandy loam
+Karnataka,Davanagere,Rabi,Medium Black Soil,6.5,8.0,"Chickpea, Rabi Sorghum, Sunflower",karnataka|davanagere|rabi|medium black soil
+Karnataka,Davanagere,Rabi,Red Sandy Loam,6.5,8.0,"Chickpea, Rabi Sorghum, Sunflower",karnataka|davanagere|rabi|red sandy loam
+Karnataka,Davanagere,Zaid,Medium Black Soil,6.5,8.0,"Summer Groundnut, Watermelon, Vegetables",karnataka|davanagere|zaid|medium black soil
+Karnataka,Davanagere,Zaid,Red Sandy Loam,6.5,8.0,"Summer Groundnut, Watermelon, Vegetables",karnataka|davanagere|zaid|red sandy loam
+Karnataka,Dharwad,Kharif,Deep Black Cotton Soil,6.8,8.2,"Soybean, Maize, Cotton, Groundnut, Green Gram",karnataka|dharwad|kharif|deep black cotton soil
+Karnataka,Dharwad,Kharif,Medium Red Loam,6.8,8.2,"Soybean, Maize, Cotton, Groundnut, Green Gram",karnataka|dharwad|kharif|medium red loam
+Karnataka,Dharwad,Rabi,Deep Black Cotton Soil,6.8,8.2,"Chickpea, Wheat, Rabi Sorghum, Safflower",karnataka|dharwad|rabi|deep black cotton soil
+Karnataka,Dharwad,Rabi,Medium Red Loam,6.8,8.2,"Chickpea, Wheat, Rabi Sorghum, Safflower",karnataka|dharwad|rabi|medium red loam
+Karnataka,Dharwad,Zaid,Deep Black Cotton Soil,6.8,8.2,"Summer Groundnut, Vegetables, Fodder",karnataka|dharwad|zaid|deep black cotton soil
+Karnataka,Dharwad,Zaid,Medium Red Loam,6.8,8.2,"Summer Groundnut, Vegetables, Fodder",karnataka|dharwad|zaid|medium red loam
+Karnataka,Gadag,Kharif,Deep Black Cotton Soil,7.2,8.5,"Cotton, Groundnut, Maize, Maize, Chili, Green Gram",karnataka|gadag|kharif|deep black cotton soil
+Karnataka,Gadag,Rabi,Deep Black Cotton Soil,7.2,8.5,"Rabi Sorghum, Chickpea, Sunflower, Wheat, Safflower",karnataka|gadag|rabi|deep black cotton soil
+Karnataka,Gadag,Zaid,Deep Black Cotton Soil,7.2,8.5,"Summer Groundnut, Sesame, Vegetables",karnataka|gadag|zaid|deep black cotton soil
+Karnataka,Hassan,Kharif,Red Sandy Loam,5.2,6.8,"Coffee, Potato, Paddy, Maize, Finger Millet, Pepper",karnataka|hassan|kharif|red sandy loam
+Karnataka,Hassan,Kharif,Acidic Lateritic Soil,5.2,6.8,"Coffee, Potato, Paddy, Maize, Finger Millet, Pepper",karnataka|hassan|kharif|acidic lateritic soil
+Karnataka,Hassan,Rabi,Red Sandy Loam,5.2,6.8,"Horse Gram, Chickpea, Commercial Vegetables",karnataka|hassan|rabi|red sandy loam
+Karnataka,Hassan,Rabi,Acidic Lateritic Soil,5.2,6.8,"Horse Gram, Chickpea, Commercial Vegetables",karnataka|hassan|rabi|acidic lateritic soil
+Karnataka,Hassan,Zaid,Red Sandy Loam,5.2,6.8,"Summer Vegetables, Cucurbits, Fodder",karnataka|hassan|zaid|red sandy loam
+Karnataka,Hassan,Zaid,Acidic Lateritic Soil,5.2,6.8,"Summer Vegetables, Cucurbits, Fodder",karnataka|hassan|zaid|acidic lateritic soil
+Karnataka,Haveri,Kharif,Medium Black,6.5,8.0,"Maize, Cotton, Byadgi Chili, Groundnut, Soybean",karnataka|haveri|kharif|medium black
+Karnataka,Haveri,Kharif,Red Loamy Soil,6.5,8.0,"Maize, Cotton, Byadgi Chili, Groundnut, Soybean",karnataka|haveri|kharif|red loamy soil
+Karnataka,Haveri,Rabi,Medium Black,6.5,8.0,"Chickpea, Wheat, Rabi Sorghum, Sunflower",karnataka|haveri|rabi|medium black
+Karnataka,Haveri,Rabi,Red Loamy Soil,6.5,8.0,"Chickpea, Wheat, Rabi Sorghum, Sunflower",karnataka|haveri|rabi|red loamy soil
+Karnataka,Haveri,Zaid,Medium Black,6.5,8.0,"Summer Groundnut, Watermelon, Vegetables",karnataka|haveri|zaid|medium black
+Karnataka,Haveri,Zaid,Red Loamy Soil,6.5,8.0,"Summer Groundnut, Watermelon, Vegetables",karnataka|haveri|zaid|red loamy soil
+Karnataka,Kalaburagi,Kharif,Deep Black Cotton Soil (Tur Bowl),7.2,8.6,"Pigeon Pea (Tur), Green Gram, Black Gram, Sesame, Pearl Millet",karnataka|kalaburagi|kharif|deep black cotton soil (tur bowl)
+Karnataka,Kalaburagi,Rabi,Deep Black Cotton Soil (Tur Bowl),7.2,8.6,"Chickpea, Rabi Sorghum, Sunflower, Wheat",karnataka|kalaburagi|rabi|deep black cotton soil (tur bowl)
+Karnataka,Kalaburagi,Zaid,Deep Black Cotton Soil (Tur Bowl),7.2,8.6,"Summer Sesame, Groundnut, Fodder Crops",karnataka|kalaburagi|zaid|deep black cotton soil (tur bowl)
+Karnataka,Kodagu,Kharif,Acidic Hill Soil / Organic Red Laterite,4.5,5.8,"Coffee, Black Pepper, Paddy, Cardamom, Mandarin Orange",karnataka|kodagu|kharif|acidic hill soil / organic red laterite
+Karnataka,Kodagu,Rabi,Acidic Hill Soil / Organic Red Laterite,4.5,5.8,"Off-season Vegetables, Pulses",karnataka|kodagu|rabi|acidic hill soil / organic red laterite
+Karnataka,Kodagu,Zaid,Acidic Hill Soil / Organic Red Laterite,4.5,5.8,"Horticulture Crops, Spices, Vegetables",karnataka|kodagu|zaid|acidic hill soil / organic red laterite
+Karnataka,Kolar,Kharif,Red Sandy Loam,5.8,7.2,"Finger Millet (Ragi), Groundnut, Maize, Tomato, Mulberry",karnataka|kolar|kharif|red sandy loam
+Karnataka,Kolar,Rabi,Red Sandy Loam,5.8,7.2,"Potato, Vegetables, Chickpea, Mustard",karnataka|kolar|rabi|red sandy loam
+Karnataka,Kolar,Zaid,Red Sandy Loam,5.8,7.2,"Watermelon, Summer Vegetables, Floriculture",karnataka|kolar|zaid|red sandy loam
+Karnataka,Koppal,Kharif,Medium Black Soil,6.8,8.2,"Paddy, Maize, Pearl Millet, Sunflower, Pomegranate",karnataka|koppal|kharif|medium black soil
+Karnataka,Koppal,Kharif,Red Sandy Soil,6.8,8.2,"Paddy, Maize, Pearl Millet, Sunflower, Pomegranate",karnataka|koppal|kharif|red sandy soil
+Karnataka,Koppal,Rabi,Medium Black Soil,6.8,8.2,"Rabi Sorghum, Chickpea, Wheat, Sunflower",karnataka|koppal|rabi|medium black soil
+Karnataka,Koppal,Rabi,Red Sandy Soil,6.8,8.2,"Rabi Sorghum, Chickpea, Wheat, Sunflower",karnataka|koppal|rabi|red sandy soil
+Karnataka,Koppal,Zaid,Medium Black Soil,6.8,8.2,"Summer Groundnut, Watermelon, Vegetables",karnataka|koppal|zaid|medium black soil
+Karnataka,Koppal,Zaid,Red Sandy Soil,6.8,8.2,"Summer Groundnut, Watermelon, Vegetables",karnataka|koppal|zaid|red sandy soil
+Karnataka,Mandya,Kharif,Red Loamy Alluvial Soil (Cauvery Basin),6.0,7.5,"Sugarcane, Paddy, Finger Millet (Ragi), Maize",karnataka|mandya|kharif|red loamy alluvial soil (cauvery basin)
+Karnataka,Mandya,Rabi,Red Loamy Alluvial Soil (Cauvery Basin),6.0,7.5,"Pulse Crops, Cowpea, Vegetables, Rice (Summer Paddy)",karnataka|mandya|rabi|red loamy alluvial soil (cauvery basin)
+Karnataka,Mandya,Zaid,Red Loamy Alluvial Soil (Cauvery Basin),6.0,7.5,"Summer Groundnut, Vegetables, Fodder",karnataka|mandya|zaid|red loamy alluvial soil (cauvery basin)
+Karnataka,Mysuru,Kharif,Red Sandy Loam to Medium Black Soil,6.0,7.5,"Sugarcane, Tobacco, Paddy, Finger Millet, Cotton, Banana",karnataka|mysuru|kharif|red sandy loam to medium black soil
+Karnataka,Mysuru,Rabi,Red Sandy Loam to Medium Black Soil,6.0,7.5,"Horse Gram, Chickpea, Cowpea, Sunflower",karnataka|mysuru|rabi|red sandy loam to medium black soil
+Karnataka,Mysuru,Zaid,Red Sandy Loam to Medium Black Soil,6.0,7.5,"Summer Vegetables, Watermelon, Pulses",karnataka|mysuru|zaid|red sandy loam to medium black soil
+Karnataka,Raichur,Kharif,Deep Black Cotton Soil,7.2,8.5,"Cotton, Paddy, Groundnut, Pigeon Pea, Pearl Millet",karnataka|raichur|kharif|deep black cotton soil
+Karnataka,Raichur,Kharif,Red Sandy Soil,7.2,8.5,"Cotton, Paddy, Groundnut, Pigeon Pea, Pearl Millet",karnataka|raichur|kharif|red sandy soil
+Karnataka,Raichur,Rabi,Deep Black Cotton Soil,7.2,8.5,"Rabi Sorghum, Chickpea, Sunflower, Wheat",karnataka|raichur|rabi|deep black cotton soil
+Karnataka,Raichur,Rabi,Red Sandy Soil,7.2,8.5,"Rabi Sorghum, Chickpea, Sunflower, Wheat",karnataka|raichur|rabi|red sandy soil
+Karnataka,Raichur,Zaid,Deep Black Cotton Soil,7.2,8.5,"Summer Groundnut, Watermelon, Fodder Crops",karnataka|raichur|zaid|deep black cotton soil
+Karnataka,Raichur,Zaid,Red Sandy Soil,7.2,8.5,"Summer Groundnut, Watermelon, Fodder Crops",karnataka|raichur|zaid|red sandy soil
+Karnataka,Ramanagara,Kharif,Red Sandy Loam,5.8,7.0,"Finger Millet (Ragi), Mulberry, Mango, Groundnut, Pigeon Pea",karnataka|ramanagara|kharif|red sandy loam
+Karnataka,Ramanagara,Rabi,Red Sandy Loam,5.8,7.0,"Horse Gram, Cowpea, Vegetables",karnataka|ramanagara|rabi|red sandy loam
+Karnataka,Ramanagara,Zaid,Red Sandy Loam,5.8,7.0,"Summer Vegetables, Watermelon, Cucumber",karnataka|ramanagara|zaid|red sandy loam
+Karnataka,Shivamogga,Kharif,Acidic Lateritic,5.2,6.5,"Paddy, Arecanut, Maize, Sugarcane, Ginger",karnataka|shivamogga|kharif|acidic lateritic
+Karnataka,Shivamogga,Kharif,Red Loamy Soil,5.2,6.5,"Paddy, Arecanut, Maize, Sugarcane, Ginger",karnataka|shivamogga|kharif|red loamy soil
+Karnataka,Shivamogga,Rabi,Acidic Lateritic,5.2,6.5,"Pulses, Vegetables, Black Gram",karnataka|shivamogga|rabi|acidic lateritic
+Karnataka,Shivamogga,Rabi,Red Loamy Soil,5.2,6.5,"Pulses, Vegetables, Black Gram",karnataka|shivamogga|rabi|red loamy soil
+Karnataka,Shivamogga,Zaid,Acidic Lateritic,5.2,6.5,"Summer Groundnut, Cucurbits, Vegetables",karnataka|shivamogga|zaid|acidic lateritic
+Karnataka,Shivamogga,Zaid,Red Loamy Soil,5.2,6.5,"Summer Groundnut, Cucurbits, Vegetables",karnataka|shivamogga|zaid|red loamy soil
+Karnataka,Tumakuru,Kharif,Red Sandy Soil,6.0,7.5,"Coconut, Groundnut, Finger Millet (Ragi), Arecanut, Maize",karnataka|tumakuru|kharif|red sandy soil
+Karnataka,Tumakuru,Kharif,Shallow Black Soil,6.0,7.5,"Coconut, Groundnut, Finger Millet (Ragi), Arecanut, Maize",karnataka|tumakuru|kharif|shallow black soil
+Karnataka,Tumakuru,Rabi,Red Sandy Soil,6.0,7.5,"Chickpea, Horse Gram, Mustard, Vegetables",karnataka|tumakuru|rabi|red sandy soil
+Karnataka,Tumakuru,Rabi,Shallow Black Soil,6.0,7.5,"Chickpea, Horse Gram, Mustard, Vegetables",karnataka|tumakuru|rabi|shallow black soil
+Karnataka,Tumakuru,Zaid,Red Sandy Soil,6.0,7.5,"Summer Groundnut, Watermelon, Vegetables",karnataka|tumakuru|zaid|red sandy soil
+Karnataka,Tumakuru,Zaid,Shallow Black Soil,6.0,7.5,"Summer Groundnut, Watermelon, Vegetables",karnataka|tumakuru|zaid|shallow black soil
+Karnataka,Udupi,Kharif,Coastal Acidic Alluvial,4.8,6.0,"Paddy, Coconut, Arecanut, Cashew, Black Pepper",karnataka|udupi|kharif|coastal acidic alluvial
+Karnataka,Udupi,Kharif,Laterite,4.8,6.0,"Paddy, Coconut, Arecanut, Cashew, Black Pepper",karnataka|udupi|kharif|laterite
+Karnataka,Udupi,Rabi,Coastal Acidic Alluvial,4.8,6.0,"Black Gram, Groundnut, Cowpea, Vegetables",karnataka|udupi|rabi|coastal acidic alluvial
+Karnataka,Udupi,Rabi,Laterite,4.8,6.0,"Black Gram, Groundnut, Cowpea, Vegetables",karnataka|udupi|rabi|laterite
+Karnataka,Udupi,Zaid,Coastal Acidic Alluvial,4.8,6.0,"Summer Paddy, Watermelon, Vegetables",karnataka|udupi|zaid|coastal acidic alluvial
+Karnataka,Udupi,Zaid,Laterite,4.8,6.0,"Summer Paddy, Watermelon, Vegetables",karnataka|udupi|zaid|laterite
+Karnataka,Uttara Kannada,Kharif,Coastal Alluvial,5.0,6.2,"Paddy, Arecanut, Spices, Coconut, Cashew",karnataka|uttara kannada|kharif|coastal alluvial
+Karnataka,Uttara Kannada,Kharif,Forest Hill Soil,5.0,6.2,"Paddy, Arecanut, Spices, Coconut, Cashew",karnataka|uttara kannada|kharif|forest hill soil
+Karnataka,Uttara Kannada,Rabi,Coastal Alluvial,5.0,6.2,"Pulses, Groundnut, Vegetables",karnataka|uttara kannada|rabi|coastal alluvial
+Karnataka,Uttara Kannada,Rabi,Forest Hill Soil,5.0,6.2,"Pulses, Groundnut, Vegetables",karnataka|uttara kannada|rabi|forest hill soil
+Karnataka,Uttara Kannada,Zaid,Coastal Alluvial,5.0,6.2,"Watermelon, Summer Paddy, Vegetables",karnataka|uttara kannada|zaid|coastal alluvial
+Karnataka,Uttara Kannada,Zaid,Forest Hill Soil,5.0,6.2,"Watermelon, Summer Paddy, Vegetables",karnataka|uttara kannada|zaid|forest hill soil
+Karnataka,Vijayanagara,Kharif,Red Sandy,6.8,8.2,"Paddy, Maize, Cotton, Groundnut, Sugarcane, Fig",karnataka|vijayanagara|kharif|red sandy
+Karnataka,Vijayanagara,Kharif,Deep Black Cotton Soil,6.8,8.2,"Paddy, Maize, Cotton, Groundnut, Sugarcane, Fig",karnataka|vijayanagara|kharif|deep black cotton soil
+Karnataka,Vijayanagara,Rabi,Red Sandy,6.8,8.2,"Rabi Sorghum, Chickpea, Sunflower",karnataka|vijayanagara|rabi|red sandy
+Karnataka,Vijayanagara,Rabi,Deep Black Cotton Soil,6.8,8.2,"Rabi Sorghum, Chickpea, Sunflower",karnataka|vijayanagara|rabi|deep black cotton soil
+Karnataka,Vijayanagara,Zaid,Red Sandy,6.8,8.2,"Summer Groundnut, Watermelon, Vegetables",karnataka|vijayanagara|zaid|red sandy
+Karnataka,Vijayanagara,Zaid,Deep Black Cotton Soil,6.8,8.2,"Summer Groundnut, Watermelon, Vegetables",karnataka|vijayanagara|zaid|deep black cotton soil
+Karnataka,Vijayapura,Kharif,Deep Black Cotton Soil (Dryland Agriculture),7.2,8.6,"Sugarcane, Grapes, Pearl Millet, Pigeon Pea, Maize, Lime",karnataka|vijayapura|kharif|deep black cotton soil (dryland agriculture)
+Karnataka,Vijayapura,Rabi,Deep Black Cotton Soil (Dryland Agriculture),7.2,8.6,"Rabi Sorghum (Maldandi Jowar), Chickpea, Wheat, Safflower",karnataka|vijayapura|rabi|deep black cotton soil (dryland agriculture)
+Karnataka,Vijayapura,Zaid,Deep Black Cotton Soil (Dryland Agriculture),7.2,8.6,"Summer Groundnut, Watermelon, Fodder Crops",karnataka|vijayapura|zaid|deep black cotton soil (dryland agriculture)
+Karnataka,Yadgir,Kharif,Deep Black Soil,7.0,8.4,"Paddy, Pigeon Pea, Cotton, Groundnut, Pearl Millet",karnataka|yadgir|kharif|deep black soil
+Karnataka,Yadgir,Kharif,Red Sandy Soil,7.0,8.4,"Paddy, Pigeon Pea, Cotton, Groundnut, Pearl Millet",karnataka|yadgir|kharif|red sandy soil
+Karnataka,Yadgir,Rabi,Deep Black Soil,7.0,8.4,"Chickpea, Rabi Sorghum, Sunflower, Wheat",karnataka|yadgir|rabi|deep black soil
+Karnataka,Yadgir,Rabi,Red Sandy Soil,7.0,8.4,"Chickpea, Rabi Sorghum, Sunflower, Wheat",karnataka|yadgir|rabi|red sandy soil
+Karnataka,Yadgir,Zaid,Deep Black Soil,7.0,8.4,"Summer Groundnut, Watermelon, Vegetables",karnataka|yadgir|zaid|deep black soil
+Karnataka,Yadgir,Zaid,Red Sandy Soil,7.0,8.4,"Summer Groundnut, Watermelon, Vegetables",karnataka|yadgir|zaid|red sandy soil
+Kerala,Alappuzha,Virippu (Kharif),Coastal Alluvial,4.5,6.0,"Paddy (Rice), Coconut, Banana, Tuber Crops (Tapioca)",kerala|alappuzha|virippu (kharif)|coastal alluvial
+Kerala,Alappuzha,Virippu (Kharif),Acidic Kuttanad Peat/Muck Soil (Kari/Kayal),4.5,6.0,"Paddy (Rice), Coconut, Banana, Tuber Crops (Tapioca)",kerala|alappuzha|virippu (kharif)|acidic kuttanad peat/muck soil (kari/kayal)
+Kerala,Alappuzha,Mundakan (Rabi),Coastal Alluvial,4.5,6.0,"Paddy, Vegetables, Pulses, Sweet Potato",kerala|alappuzha|mundakan (rabi)|coastal alluvial
+Kerala,Alappuzha,Mundakan (Rabi),Acidic Kuttanad Peat/Muck Soil (Kari/Kayal),4.5,6.0,"Paddy, Vegetables, Pulses, Sweet Potato",kerala|alappuzha|mundakan (rabi)|acidic kuttanad peat/muck soil (kari/kayal)
+Kerala,Alappuzha,Puncha (Summer/Zaid),Coastal Alluvial,4.5,6.0,"Puncha Paddy, Watermelon, Cucurbits, Sesame",kerala|alappuzha|puncha (summer/zaid)|coastal alluvial
+Kerala,Alappuzha,Puncha (Summer/Zaid),Acidic Kuttanad Peat/Muck Soil (Kari/Kayal),4.5,6.0,"Puncha Paddy, Watermelon, Cucurbits, Sesame",kerala|alappuzha|puncha (summer/zaid)|acidic kuttanad peat/muck soil (kari/kayal)
+Kerala,Ernakulam,Virippu (Kharif),Alluvial Silt Loam,5.0,6.2,"Paddy, Coconut, Pineapple, Rubber, Nutmeg, Banana",kerala|ernakulam|virippu (kharif)|alluvial silt loam
+Kerala,Ernakulam,Virippu (Kharif),Acidic Laterite Soil,5.0,6.2,"Paddy, Coconut, Pineapple, Rubber, Nutmeg, Banana",kerala|ernakulam|virippu (kharif)|acidic laterite soil
+Kerala,Ernakulam,Mundakan (Rabi),Alluvial Silt Loam,5.0,6.2,"Paddy, Vegetables, Pulses, Ginger",kerala|ernakulam|mundakan (rabi)|alluvial silt loam
+Kerala,Ernakulam,Mundakan (Rabi),Acidic Laterite Soil,5.0,6.2,"Paddy, Vegetables, Pulses, Ginger",kerala|ernakulam|mundakan (rabi)|acidic laterite soil
+Kerala,Ernakulam,Puncha (Summer/Zaid),Alluvial Silt Loam,5.0,6.2,"Puncha Paddy, Vegetables, Cowpea, Watermelon",kerala|ernakulam|puncha (summer/zaid)|alluvial silt loam
+Kerala,Ernakulam,Puncha (Summer/Zaid),Acidic Laterite Soil,5.0,6.2,"Puncha Paddy, Vegetables, Cowpea, Watermelon",kerala|ernakulam|puncha (summer/zaid)|acidic laterite soil
+Kerala,Idukki,Virippu (Kharif),High Range Organic Acidic Forest Soil,4.2,5.5,"Cardamom, Tea, Black Pepper, Coffee, Garlic, Elephant Foot Yam",kerala|idukki|virippu (kharif)|high range organic acidic forest soil
+Kerala,Idukki,Mundakan (Rabi),High Range Organic Acidic Forest Soil,4.2,5.5,"Cool Season Vegetables (Cabbage, Carrot), Potato, Garlic",kerala|idukki|mundakan (rabi)|high range organic acidic forest soil
+Kerala,Idukki,Puncha (Summer/Zaid),High Range Organic Acidic Forest Soil,4.2,5.5,"Spices, Summer Vegetables, Pulses",kerala|idukki|puncha (summer/zaid)|high range organic acidic forest soil
+Kerala,Kannur,Virippu (Kharif),Red Lateritic Soil,4.8,6.0,"Coconut, Paddy, Rubber, Cashew, Arecanut, Pepper",kerala|kannur|virippu (kharif)|red lateritic soil
+Kerala,Kannur,Virippu (Kharif),Coastal Alluvial,4.8,6.0,"Coconut, Paddy, Rubber, Cashew, Arecanut, Pepper",kerala|kannur|virippu (kharif)|coastal alluvial
+Kerala,Kannur,Mundakan (Rabi),Red Lateritic Soil,4.8,6.0,"Paddy, Pulses, Vegetables, Black Gram",kerala|kannur|mundakan (rabi)|red lateritic soil
+Kerala,Kannur,Mundakan (Rabi),Coastal Alluvial,4.8,6.0,"Paddy, Pulses, Vegetables, Black Gram",kerala|kannur|mundakan (rabi)|coastal alluvial
+Kerala,Kannur,Puncha (Summer/Zaid),Red Lateritic Soil,4.8,6.0,"Puncha Paddy, Cucurbits, Sesame",kerala|kannur|puncha (summer/zaid)|red lateritic soil
+Kerala,Kannur,Puncha (Summer/Zaid),Coastal Alluvial,4.8,6.0,"Puncha Paddy, Cucurbits, Sesame",kerala|kannur|puncha (summer/zaid)|coastal alluvial
+Kerala,Kasaragod,Virippu (Kharif),Acidic Red Laterite,4.8,6.0,"Coconut, Arecanut, Cashew, Rubber, Paddy",kerala|kasaragod|virippu (kharif)|acidic red laterite
+Kerala,Kasaragod,Virippu (Kharif),Coastal Sand,4.8,6.0,"Coconut, Arecanut, Cashew, Rubber, Paddy",kerala|kasaragod|virippu (kharif)|coastal sand
+Kerala,Kasaragod,Mundakan (Rabi),Acidic Red Laterite,4.8,6.0,"Paddy, Vegetables, Pulses",kerala|kasaragod|mundakan (rabi)|acidic red laterite
+Kerala,Kasaragod,Mundakan (Rabi),Coastal Sand,4.8,6.0,"Paddy, Vegetables, Pulses",kerala|kasaragod|mundakan (rabi)|coastal sand
+Kerala,Kasaragod,Puncha (Summer/Zaid),Acidic Red Laterite,4.8,6.0,"Watermelon, Vegetables, Cowpea",kerala|kasaragod|puncha (summer/zaid)|acidic red laterite
+Kerala,Kasaragod,Puncha (Summer/Zaid),Coastal Sand,4.8,6.0,"Watermelon, Vegetables, Cowpea",kerala|kasaragod|puncha (summer/zaid)|coastal sand
+Kerala,Kollam,Virippu (Kharif),Lateritic Soil,4.8,6.0,"Paddy, Coconut, Rubber, Cashew, Tapioca, Pepper",kerala|kollam|virippu (kharif)|lateritic soil
+Kerala,Kollam,Virippu (Kharif),Sandy Coastal Silt,4.8,6.0,"Paddy, Coconut, Rubber, Cashew, Tapioca, Pepper",kerala|kollam|virippu (kharif)|sandy coastal silt
+Kerala,Kollam,Mundakan (Rabi),Lateritic Soil,4.8,6.0,"Paddy, Vegetables, Pulses, Tuber Crops",kerala|kollam|mundakan (rabi)|lateritic soil
+Kerala,Kollam,Mundakan (Rabi),Sandy Coastal Silt,4.8,6.0,"Paddy, Vegetables, Pulses, Tuber Crops",kerala|kollam|mundakan (rabi)|sandy coastal silt
+Kerala,Kollam,Puncha (Summer/Zaid),Lateritic Soil,4.8,6.0,"Puncha Paddy, Vegetables, Sesame",kerala|kollam|puncha (summer/zaid)|lateritic soil
+Kerala,Kollam,Puncha (Summer/Zaid),Sandy Coastal Silt,4.8,6.0,"Puncha Paddy, Vegetables, Sesame",kerala|kollam|puncha (summer/zaid)|sandy coastal silt
+Kerala,Kottayam,Virippu (Kharif),Acidic Laterite,4.5,5.8,"Rubber, Paddy, Coconut, Nutmeg, Tapioca, Pepper",kerala|kottayam|virippu (kharif)|acidic laterite
+Kerala,Kottayam,Virippu (Kharif),Lowland Peaty Soil,4.5,5.8,"Rubber, Paddy, Coconut, Nutmeg, Tapioca, Pepper",kerala|kottayam|virippu (kharif)|lowland peaty soil
+Kerala,Kottayam,Mundakan (Rabi),Acidic Laterite,4.5,5.8,"Paddy, Vegetables, Banana, Pulses",kerala|kottayam|mundakan (rabi)|acidic laterite
+Kerala,Kottayam,Mundakan (Rabi),Lowland Peaty Soil,4.5,5.8,"Paddy, Vegetables, Banana, Pulses",kerala|kottayam|mundakan (rabi)|lowland peaty soil
+Kerala,Kottayam,Puncha (Summer/Zaid),Acidic Laterite,4.5,5.8,"Puncha Paddy, Vegetables, Cowpea",kerala|kottayam|puncha (summer/zaid)|acidic laterite
+Kerala,Kottayam,Puncha (Summer/Zaid),Lowland Peaty Soil,4.5,5.8,"Puncha Paddy, Vegetables, Cowpea",kerala|kottayam|puncha (summer/zaid)|lowland peaty soil
+Kerala,Kozhikode,Virippu (Kharif),Red Lateritic Soil,4.8,6.0,"Coconut, Paddy, Arecanut, Rubber, Pepper, Tapioca",kerala|kozhikode|virippu (kharif)|red lateritic soil
+Kerala,Kozhikode,Virippu (Kharif),Coastal Alluvial,4.8,6.0,"Coconut, Paddy, Arecanut, Rubber, Pepper, Tapioca",kerala|kozhikode|virippu (kharif)|coastal alluvial
+Kerala,Kozhikode,Mundakan (Rabi),Red Lateritic Soil,4.8,6.0,"Paddy, Pulses, Commercial Vegetables",kerala|kozhikode|mundakan (rabi)|red lateritic soil
+Kerala,Kozhikode,Mundakan (Rabi),Coastal Alluvial,4.8,6.0,"Paddy, Pulses, Commercial Vegetables",kerala|kozhikode|mundakan (rabi)|coastal alluvial
+Kerala,Kozhikode,Puncha (Summer/Zaid),Red Lateritic Soil,4.8,6.0,"Vegetables, Watermelon, Cowpea",kerala|kozhikode|puncha (summer/zaid)|red lateritic soil
+Kerala,Kozhikode,Puncha (Summer/Zaid),Coastal Alluvial,4.8,6.0,"Vegetables, Watermelon, Cowpea",kerala|kozhikode|puncha (summer/zaid)|coastal alluvial
+Kerala,Wayanad,Virippu (Kharif),Highland Organic Red Loam,4.5,5.8,"Coffee, Black Pepper, Paddy, Tea, Ginger, Cardamom, Banana",kerala|wayanad|virippu (kharif)|highland organic red loam
+Kerala,Wayanad,Virippu (Kharif),Acidic Soil,4.5,5.8,"Coffee, Black Pepper, Paddy, Tea, Ginger, Cardamom, Banana",kerala|wayanad|virippu (kharif)|acidic soil
+Kerala,Wayanad,Mundakan (Rabi),Highland Organic Red Loam,4.5,5.8,"Paddy, Vegetables, Yam, Turmeric",kerala|wayanad|mundakan (rabi)|highland organic red loam
+Kerala,Wayanad,Mundakan (Rabi),Acidic Soil,4.5,5.8,"Paddy, Vegetables, Yam, Turmeric",kerala|wayanad|mundakan (rabi)|acidic soil
+Kerala,Wayanad,Puncha (Summer/Zaid),Highland Organic Red Loam,4.5,5.8,"Summer Vegetables, Cool Season Crops, Cowpea",kerala|wayanad|puncha (summer/zaid)|highland organic red loam
+Kerala,Wayanad,Puncha (Summer/Zaid),Acidic Soil,4.5,5.8,"Summer Vegetables, Cool Season Crops, Cowpea",kerala|wayanad|puncha (summer/zaid)|acidic soil
+Kerala,Malappuram,Virippu (Kharif),Red Lateritic,4.8,6.2,"Paddy, Coconut, Rubber, Arecanut, Banana, Tapioca",kerala|malappuram|virippu (kharif)|red lateritic
+Kerala,Malappuram,Virippu (Kharif),Riverine Alluvial Soil,4.8,6.2,"Paddy, Coconut, Rubber, Arecanut, Banana, Tapioca",kerala|malappuram|virippu (kharif)|riverine alluvial soil
+Kerala,Malappuram,Mundakan (Rabi),Red Lateritic,4.8,6.2,"Paddy, Pulses, Vegetables",kerala|malappuram|mundakan (rabi)|red lateritic
+Kerala,Malappuram,Mundakan (Rabi),Riverine Alluvial Soil,4.8,6.2,"Paddy, Pulses, Vegetables",kerala|malappuram|mundakan (rabi)|riverine alluvial soil
+Kerala,Malappuram,Puncha (Summer/Zaid),Red Lateritic,4.8,6.2,"Puncha Paddy, Watermelon, Vegetables",kerala|malappuram|puncha (summer/zaid)|red lateritic
+Kerala,Malappuram,Puncha (Summer/Zaid),Riverine Alluvial Soil,4.8,6.2,"Puncha Paddy, Watermelon, Vegetables",kerala|malappuram|puncha (summer/zaid)|riverine alluvial soil
+Kerala,Palakkad,Virippu (Kharif),Fertile Black Cotton Soil,5.5,7.2,"Paddy, Sugarcane, Cotton, Groundnut, Vegetables, Mango",kerala|palakkad|virippu (kharif)|fertile black cotton soil
+Kerala,Palakkad,Virippu (Kharif),Riverine Alluvial (Granary of Kerala),5.5,7.2,"Paddy, Sugarcane, Cotton, Groundnut, Vegetables, Mango",kerala|palakkad|virippu (kharif)|riverine alluvial (granary of kerala)
+Kerala,Palakkad,Mundakan (Rabi),Fertile Black Cotton Soil,5.5,7.2,"Mundakan Paddy, Pulses (Black Gram, Horse Gram), Sesame",kerala|palakkad|mundakan (rabi)|fertile black cotton soil
+Kerala,Palakkad,Mundakan (Rabi),Riverine Alluvial (Granary of Kerala),5.5,7.2,"Mundakan Paddy, Pulses (Black Gram, Horse Gram), Sesame",kerala|palakkad|mundakan (rabi)|riverine alluvial (granary of kerala)
+Kerala,Palakkad,Puncha (Summer/Zaid),Fertile Black Cotton Soil,5.5,7.2,"Puncha Paddy, Vegetables, Groundnut, Watermelon",kerala|palakkad|puncha (summer/zaid)|fertile black cotton soil
+Kerala,Palakkad,Puncha (Summer/Zaid),Riverine Alluvial (Granary of Kerala),5.5,7.2,"Puncha Paddy, Vegetables, Groundnut, Watermelon",kerala|palakkad|puncha (summer/zaid)|riverine alluvial (granary of kerala)
+Kerala,Pathanamthitta,Virippu (Kharif),Acidic Red Laterite,4.5,5.8,"Rubber, Coconut, Paddy, Tapioca, Pepper, Sugarcane",kerala|pathanamthitta|virippu (kharif)|acidic red laterite
+Kerala,Pathanamthitta,Virippu (Kharif),Forest Soil,4.5,5.8,"Rubber, Coconut, Paddy, Tapioca, Pepper, Sugarcane",kerala|pathanamthitta|virippu (kharif)|forest soil
+Kerala,Pathanamthitta,Mundakan (Rabi),Acidic Red Laterite,4.5,5.8,"Paddy, Pulses, Vegetables, Tuber Crops",kerala|pathanamthitta|mundakan (rabi)|acidic red laterite
+Kerala,Pathanamthitta,Mundakan (Rabi),Forest Soil,4.5,5.8,"Paddy, Pulses, Vegetables, Tuber Crops",kerala|pathanamthitta|mundakan (rabi)|forest soil
+Kerala,Pathanamthitta,Puncha (Summer/Zaid),Acidic Red Laterite,4.5,5.8,"Vegetables, Cowpea, Sesame",kerala|pathanamthitta|puncha (summer/zaid)|acidic red laterite
+Kerala,Pathanamthitta,Puncha (Summer/Zaid),Forest Soil,4.5,5.8,"Vegetables, Cowpea, Sesame",kerala|pathanamthitta|puncha (summer/zaid)|forest soil
+Kerala,Thiruvananthapuram,Virippu (Kharif),Red Lateritic,5.0,6.2,"Coconut, Paddy, Tapioca, Rubber, Banana, Vegetables",kerala|thiruvananthapuram|virippu (kharif)|red lateritic
+Kerala,Thiruvananthapuram,Virippu (Kharif),Sandy Coastal Soil,5.0,6.2,"Coconut, Paddy, Tapioca, Rubber, Banana, Vegetables",kerala|thiruvananthapuram|virippu (kharif)|sandy coastal soil
+Kerala,Thiruvananthapuram,Mundakan (Rabi),Red Lateritic,5.0,6.2,"Paddy, Vegetables, Pulses, Amaranthus",kerala|thiruvananthapuram|mundakan (rabi)|red lateritic
+Kerala,Thiruvananthapuram,Mundakan (Rabi),Sandy Coastal Soil,5.0,6.2,"Paddy, Vegetables, Pulses, Amaranthus",kerala|thiruvananthapuram|mundakan (rabi)|sandy coastal soil
+Kerala,Thiruvananthapuram,Puncha (Summer/Zaid),Red Lateritic,5.0,6.2,"Watermelon, Summer Vegetables, Cowpea",kerala|thiruvananthapuram|puncha (summer/zaid)|red lateritic
+Kerala,Thiruvananthapuram,Puncha (Summer/Zaid),Sandy Coastal Soil,5.0,6.2,"Watermelon, Summer Vegetables, Cowpea",kerala|thiruvananthapuram|puncha (summer/zaid)|sandy coastal soil
+Kerala,Thrissur,Virippu (Kharif),Alluvial Clay Loam,4.8,6.2,"Paddy (Kole Wetlands), Coconut, Rubber, Banana, Nutmeg",kerala|thrissur|virippu (kharif)|alluvial clay loam
+Kerala,Thrissur,Virippu (Kharif),Acidic Kole Soil,4.8,6.2,"Paddy (Kole Wetlands), Coconut, Rubber, Banana, Nutmeg",kerala|thrissur|virippu (kharif)|acidic kole soil
+Kerala,Thrissur,Mundakan (Rabi),Alluvial Clay Loam,4.8,6.2,"Mundakan Paddy, Vegetables, Pulses",kerala|thrissur|mundakan (rabi)|alluvial clay loam
+Kerala,Thrissur,Mundakan (Rabi),Acidic Kole Soil,4.8,6.2,"Mundakan Paddy, Vegetables, Pulses",kerala|thrissur|mundakan (rabi)|acidic kole soil
+Kerala,Thrissur,Puncha (Summer/Zaid),Alluvial Clay Loam,4.8,6.2,"Kole Paddy (Summer), Watermelon, Cucurbits",kerala|thrissur|puncha (summer/zaid)|alluvial clay loam
+Kerala,Thrissur,Puncha (Summer/Zaid),Acidic Kole Soil,4.8,6.2,"Kole Paddy (Summer), Watermelon, Cucurbits",kerala|thrissur|puncha (summer/zaid)|acidic kole soil
+Maharashtra,Ahmednagar,Kharif,Medium to Deep Black Cotton Soil (Regur),7.0,8.5,"Soybean, Pearl Millet (Bajra), Cotton, Pigeon Pea (Tur), Sugarcane",maharashtra|ahmednagar|kharif|medium to deep black cotton soil (regur)
+Maharashtra,Ahmednagar,Rabi,Medium to Deep Black Cotton Soil (Regur),7.0,8.5,"Sorghum (Jowar), Wheat, Gram (Chickpea), Safflower, Onion",maharashtra|ahmednagar|rabi|medium to deep black cotton soil (regur)
+Maharashtra,Ahmednagar,Zaid,Medium to Deep Black Cotton Soil (Regur),7.0,8.5,"Groundnut, Summer Maize, Fodder Crops, Vegetables, Watermelon",maharashtra|ahmednagar|zaid|medium to deep black cotton soil (regur)
+Maharashtra,Akola,Kharif,Deep Black Cotton Soil,7.2,8.5,"Cotton, Soybean, Pigeon Pea, Green Gram (Moong), Black Gram (Urad)",maharashtra|akola|kharif|deep black cotton soil
+Maharashtra,Akola,Rabi,Deep Black Cotton Soil,7.2,8.5,"Gram (Chickpea), Wheat, Rabi Sorghum, Mustard",maharashtra|akola|rabi|deep black cotton soil
+Maharashtra,Akola,Zaid,Deep Black Cotton Soil,7.2,8.5,"Summer Groundnut, Sesame, Vegetables, Fodder Crops",maharashtra|akola|zaid|deep black cotton soil
+Maharashtra,Amravati,Kharif,Deep Black Soil,7.0,8.3,"Cotton, Soybean, Pigeon Pea, Mandarin Orange (Nagpur Santra), Sorghum",maharashtra|amravati|kharif|deep black soil
+Maharashtra,Amravati,Kharif,Red Sandy Soil in Hills,7.0,8.3,"Cotton, Soybean, Pigeon Pea, Mandarin Orange (Nagpur Santra), Sorghum",maharashtra|amravati|kharif|red sandy soil in hills
+Maharashtra,Amravati,Rabi,Deep Black Soil,7.0,8.3,"Gram, Wheat, Mustard, Vegetables",maharashtra|amravati|rabi|deep black soil
+Maharashtra,Amravati,Rabi,Red Sandy Soil in Hills,7.0,8.3,"Gram, Wheat, Mustard, Vegetables",maharashtra|amravati|rabi|red sandy soil in hills
+Maharashtra,Amravati,Zaid,Deep Black Soil,7.0,8.3,"Summer Groundnut, Summer Moong, Vegetables, Watermelon",maharashtra|amravati|zaid|deep black soil
+Maharashtra,Amravati,Zaid,Red Sandy Soil in Hills,7.0,8.3,"Summer Groundnut, Summer Moong, Vegetables, Watermelon",maharashtra|amravati|zaid|red sandy soil in hills
+Maharashtra,Chhatrapati Sambhajinagar,Kharif,Medium to Deep Black Soil,7.2,8.5,"Cotton, Maize, Pearl Millet, Soybean, Sweet Lime (Mosambi)",maharashtra|chhatrapati sambhajinagar|kharif|medium to deep black soil
+Maharashtra,Chhatrapati Sambhajinagar,Rabi,Medium to Deep Black Soil,7.2,8.5,"Gram, Rabi Sorghum, Wheat, Onion",maharashtra|chhatrapati sambhajinagar|rabi|medium to deep black soil
+Maharashtra,Chhatrapati Sambhajinagar,Zaid,Medium to Deep Black Soil,7.2,8.5,"Summer Groundnut, Vegetables, Fodder Crops, Watermelon",maharashtra|chhatrapati sambhajinagar|zaid|medium to deep black soil
+Maharashtra,Beed,Kharif,Medium to Heavy Black Soil,7.2,8.5,"Cotton, Soybean, Pearl Millet, Pigeon Pea, Black Gram",maharashtra|beed|kharif|medium to heavy black soil
+Maharashtra,Beed,Rabi,Medium to Heavy Black Soil,7.2,8.5,"Rabi Sorghum, Gram, Wheat, Safflower",maharashtra|beed|rabi|medium to heavy black soil
+Maharashtra,Beed,Zaid,Medium to Heavy Black Soil,7.2,8.5,"Summer Groundnut, Vegetables, Watermelon, Fodder",maharashtra|beed|zaid|medium to heavy black soil
+Maharashtra,Bhandara,Kharif,Deep Alluvial Silt Clay,5.8,7.2,"Paddy (Rice), Pigeon Pea, Soybean, Sugarcane",maharashtra|bhandara|kharif|deep alluvial silt clay
+Maharashtra,Bhandara,Kharif,Reddish Brown Soil,5.8,7.2,"Paddy (Rice), Pigeon Pea, Soybean, Sugarcane",maharashtra|bhandara|kharif|reddish brown soil
+Maharashtra,Bhandara,Rabi,Deep Alluvial Silt Clay,5.8,7.2,"Summer Paddy (Boro/Rabi Rice), Gram, Linseed, Mustard, Wheat",maharashtra|bhandara|rabi|deep alluvial silt clay
+Maharashtra,Bhandara,Rabi,Reddish Brown Soil,5.8,7.2,"Summer Paddy (Boro/Rabi Rice), Gram, Linseed, Mustard, Wheat",maharashtra|bhandara|rabi|reddish brown soil
+Maharashtra,Bhandara,Zaid,Deep Alluvial Silt Clay,5.8,7.2,"Summer Groundnut, Vegetables, Cowpea",maharashtra|bhandara|zaid|deep alluvial silt clay
+Maharashtra,Bhandara,Zaid,Reddish Brown Soil,5.8,7.2,"Summer Groundnut, Vegetables, Cowpea",maharashtra|bhandara|zaid|reddish brown soil
+Maharashtra,Buldhana,Kharif,Deep Black Soil,7.2,8.5,"Cotton, Soybean, Pigeon Pea, Maize, Sorghum",maharashtra|buldhana|kharif|deep black soil
+Maharashtra,Buldhana,Rabi,Deep Black Soil,7.2,8.5,"Gram, Wheat, Rabi Sorghum, Mustard, Onion",maharashtra|buldhana|rabi|deep black soil
+Maharashtra,Buldhana,Zaid,Deep Black Soil,7.2,8.5,"Summer Groundnut, Vegetables, Fodder Crops",maharashtra|buldhana|zaid|deep black soil
+Maharashtra,Chandrapur,Kharif,Sandy Loam to Deep Black Clay Soil,6.0,7.5,"Paddy, Cotton, Soybean, Pigeon Pea, Black Gram",maharashtra|chandrapur|kharif|sandy loam to deep black clay soil
+Maharashtra,Chandrapur,Rabi,Sandy Loam to Deep Black Clay Soil,6.0,7.5,"Gram, Wheat, Linseed, Mustard, Pulses",maharashtra|chandrapur|rabi|sandy loam to deep black clay soil
+Maharashtra,Chandrapur,Zaid,Sandy Loam to Deep Black Clay Soil,6.0,7.5,"Summer Paddy, Groundnut, Vegetables, Watermelon",maharashtra|chandrapur|zaid|sandy loam to deep black clay soil
+Maharashtra,Dharashiv,Kharif,Medium to Shallow Black Soil,7.2,8.5,"Soybean, Pigeon Pea, Pearl Millet, Sunflower, Sugarcane",maharashtra|dharashiv|kharif|medium to shallow black soil
+Maharashtra,Dharashiv,Rabi,Medium to Shallow Black Soil,7.2,8.5,"Rabi Sorghum, Gram, Wheat, Safflower",maharashtra|dharashiv|rabi|medium to shallow black soil
+Maharashtra,Dharashiv,Zaid,Medium to Shallow Black Soil,7.2,8.5,"Summer Groundnut, Fodder Crops, Vegetables",maharashtra|dharashiv|zaid|medium to shallow black soil
+Maharashtra,Dhule,Kharif,Deep Black Cotton Soil,7.0,8.4,"Cotton, Maize, Pearl Millet, Groundnut, Soybean",maharashtra|dhule|kharif|deep black cotton soil
+Maharashtra,Dhule,Kharif,Medium Clay,7.0,8.4,"Cotton, Maize, Pearl Millet, Groundnut, Soybean",maharashtra|dhule|kharif|medium clay
+Maharashtra,Dhule,Rabi,Deep Black Cotton Soil,7.0,8.4,"Wheat, Gram, Onion, Sorghum, Chillies",maharashtra|dhule|rabi|deep black cotton soil
+Maharashtra,Dhule,Rabi,Medium Clay,7.0,8.4,"Wheat, Gram, Onion, Sorghum, Chillies",maharashtra|dhule|rabi|medium clay
+Maharashtra,Dhule,Zaid,Deep Black Cotton Soil,7.0,8.4,"Summer Groundnut, Watermelon, Vegetables, Fodder",maharashtra|dhule|zaid|deep black cotton soil
+Maharashtra,Dhule,Zaid,Medium Clay,7.0,8.4,"Summer Groundnut, Watermelon, Vegetables, Fodder",maharashtra|dhule|zaid|medium clay
+Maharashtra,Gadchiroli,Kharif,Red Sandy Loam / Acidic Forest Soil,5.5,6.8,"Paddy, Maize, Pigeon Pea, Niger, Millets",maharashtra|gadchiroli|kharif|red sandy loam / acidic forest soil
+Maharashtra,Gadchiroli,Rabi,Red Sandy Loam / Acidic Forest Soil,5.5,6.8,"Gram, Linseed, Mustard, Vegetables, Pulses",maharashtra|gadchiroli|rabi|red sandy loam / acidic forest soil
+Maharashtra,Gadchiroli,Zaid,Red Sandy Loam / Acidic Forest Soil,5.5,6.8,"Summer Paddy, Cowpea, Vegetables",maharashtra|gadchiroli|zaid|red sandy loam / acidic forest soil
+Maharashtra,Gondia,Kharif,Alluvial Sandy Clay Loam,5.8,7.2,"Paddy, Soybean, Pigeon Pea, Sugarcane",maharashtra|gondia|kharif|alluvial sandy clay loam
+Maharashtra,Gondia,Rabi,Alluvial Sandy Clay Loam,5.8,7.2,"Summer Paddy, Gram, Linseed, Wheat, Mustard",maharashtra|gondia|rabi|alluvial sandy clay loam
+Maharashtra,Gondia,Zaid,Alluvial Sandy Clay Loam,5.8,7.2,"Summer Groundnut, Vegetables, Cowpea",maharashtra|gondia|zaid|alluvial sandy clay loam
+Maharashtra,Hingoli,Kharif,Medium to Deep Black Soil,7.2,8.5,"Soybean, Cotton, Pigeon Pea, Turmeric, Black Gram",maharashtra|hingoli|kharif|medium to deep black soil
+Maharashtra,Hingoli,Rabi,Medium to Deep Black Soil,7.2,8.5,"Gram, Rabi Sorghum, Wheat, Safflower",maharashtra|hingoli|rabi|medium to deep black soil
+Maharashtra,Hingoli,Zaid,Medium to Deep Black Soil,7.2,8.5,"Summer Groundnut, Vegetables, Fodder",maharashtra|hingoli|zaid|medium to deep black soil
+Maharashtra,Jalgaon,Kharif,Deep Black Alluvial Soil (Tapi Basin),7.2,8.6,"Cotton, Banana, Maize, Groundnut, Pigeon Pea",maharashtra|jalgaon|kharif|deep black alluvial soil (tapi basin)
+Maharashtra,Jalgaon,Rabi,Deep Black Alluvial Soil (Tapi Basin),7.2,8.6,"Wheat, Gram, Rabi Sorghum, Onion, Maize",maharashtra|jalgaon|rabi|deep black alluvial soil (tapi basin)
+Maharashtra,Jalgaon,Zaid,Deep Black Alluvial Soil (Tapi Basin),7.2,8.6,"Summer Groundnut, Watermelon, Vegetables, Sesame",maharashtra|jalgaon|zaid|deep black alluvial soil (tapi basin)
+Maharashtra,Jalna,Kharif,Medium Black Soil,7.2,8.5,"Cotton, Soybean, Maize, Sweet Lime, Pigeon Pea",maharashtra|jalna|kharif|medium black soil
+Maharashtra,Jalna,Rabi,Medium Black Soil,7.2,8.5,"Gram, Rabi Sorghum, Wheat, Safflower",maharashtra|jalna|rabi|medium black soil
+Maharashtra,Jalna,Zaid,Medium Black Soil,7.2,8.5,"Summer Groundnut, Vegetables, Fodder",maharashtra|jalna|zaid|medium black soil
+Maharashtra,Kolhapur,Kharif,Deep Black Alluvial / Red Lateritic Soil,6.0,7.8,"Sugarcane, Paddy, Soybean, Groundnut, Rice",maharashtra|kolhapur|kharif|deep black alluvial / red lateritic soil
+Maharashtra,Kolhapur,Rabi,Deep Black Alluvial / Red Lateritic Soil,6.0,7.8,"Wheat, Gram, Vegetables, Off-season Sugarcane",maharashtra|kolhapur|rabi|deep black alluvial / red lateritic soil
+Maharashtra,Kolhapur,Zaid,Deep Black Alluvial / Red Lateritic Soil,6.0,7.8,"Summer Groundnut, Fodder Crops, Vegetables",maharashtra|kolhapur|zaid|deep black alluvial / red lateritic soil
+Maharashtra,Latur,Kharif,Medium to Heavy Black Soil,7.2,8.5,"Soybean, Pigeon Pea, Cotton, Black Gram, Green Gram",maharashtra|latur|kharif|medium to heavy black soil
+Maharashtra,Latur,Rabi,Medium to Heavy Black Soil,7.2,8.5,"Gram, Rabi Sorghum, Wheat, Safflower, Sunflower",maharashtra|latur|rabi|medium to heavy black soil
+Maharashtra,Latur,Zaid,Medium to Heavy Black Soil,7.2,8.5,"Summer Groundnut, Vegetables, Fodder",maharashtra|latur|zaid|medium to heavy black soil
+Maharashtra,Mumbai City,Kharif,Coastal Alluvial / Urban Marshy Soil,6.0,7.5,"Urban Horticulture, Roof-top Gardening, Ornamental Plants",maharashtra|mumbai city|kharif|coastal alluvial / urban marshy soil
+Maharashtra,Mumbai City,Rabi,Coastal Alluvial / Urban Marshy Soil,6.0,7.5,"Microgreens, Vegetables, Nursery Plants",maharashtra|mumbai city|rabi|coastal alluvial / urban marshy soil
+Maharashtra,Mumbai City,Zaid,Coastal Alluvial / Urban Marshy Soil,6.0,7.5,"Summer Vegetables, Turf Grass, Floriculture",maharashtra|mumbai city|zaid|coastal alluvial / urban marshy soil
+Maharashtra,Mumbai Suburban,Kharif,Coastal Alluvial Loam,6.0,7.5,"Vegetables, Coconut, Arecanut, Horticulture Crops",maharashtra|mumbai suburban|kharif|coastal alluvial loam
+Maharashtra,Mumbai Suburban,Rabi,Coastal Alluvial Loam,6.0,7.5,"Winter Vegetables, Leafy Greens, Flowers",maharashtra|mumbai suburban|rabi|coastal alluvial loam
+Maharashtra,Mumbai Suburban,Zaid,Coastal Alluvial Loam,6.0,7.5,"Summer Vegetables, Cowpea, Fruits",maharashtra|mumbai suburban|zaid|coastal alluvial loam
+Maharashtra,Nagpur,Kharif,Deep Black Cotton Soil,7.0,8.4,"Cotton, Soybean, Mandarin Orange (Nagpur Santra), Pigeon Pea, Paddy",maharashtra|nagpur|kharif|deep black cotton soil
+Maharashtra,Nagpur,Rabi,Deep Black Cotton Soil,7.0,8.4,"Gram, Wheat, Mustard, Linseed, Vegetables",maharashtra|nagpur|rabi|deep black cotton soil
+Maharashtra,Nagpur,Zaid,Deep Black Cotton Soil,7.0,8.4,"Summer Groundnut, Watermelon, Vegetables, Fodder",maharashtra|nagpur|zaid|deep black cotton soil
+Maharashtra,Nanded,Kharif,Deep Black Cotton Soil,7.2,8.5,"Cotton, Soybean, Sugarcane, Pigeon Pea, Turmeric",maharashtra|nanded|kharif|deep black cotton soil
+Maharashtra,Nanded,Rabi,Deep Black Cotton Soil,7.2,8.5,"Gram, Rabi Sorghum, Wheat, Safflower",maharashtra|nanded|rabi|deep black cotton soil
+Maharashtra,Nanded,Zaid,Deep Black Cotton Soil,7.2,8.5,"Summer Groundnut, Vegetables, Fodder",maharashtra|nanded|zaid|deep black cotton soil
+Maharashtra,Nandurbar,Kharif,Hilly Red Loamy / Black Soil,6.2,7.8,"Cotton, Maize, Groundnut, Millets, Pigeon Pea",maharashtra|nandurbar|kharif|hilly red loamy / black soil
+Maharashtra,Nandurbar,Rabi,Hilly Red Loamy / Black Soil,6.2,7.8,"Wheat, Gram, Sorghum, Chillies, Onion",maharashtra|nandurbar|rabi|hilly red loamy / black soil
+Maharashtra,Nandurbar,Zaid,Hilly Red Loamy / Black Soil,6.2,7.8,"Summer Groundnut, Vegetables, Watermelon",maharashtra|nandurbar|zaid|hilly red loamy / black soil
+Maharashtra,Nashik,Kharif,Red Sandy Loam to Medium Black Soil,6.5,8.0,"Maize, Pearl Millet, Onion, Grapes, Soybean, Tomato",maharashtra|nashik|kharif|red sandy loam to medium black soil
+Maharashtra,Nashik,Rabi,Red Sandy Loam to Medium Black Soil,6.5,8.0,"Onion, Wheat, Gram, Vegetables, Grapes",maharashtra|nashik|rabi|red sandy loam to medium black soil
+Maharashtra,Nashik,Zaid,Red Sandy Loam to Medium Black Soil,6.5,8.0,"Summer Maize, Vegetables, Watermelon, Fodder",maharashtra|nashik|zaid|red sandy loam to medium black soil
+Maharashtra,Palghar,Kharif,Coastal Alluvial,5.5,6.8,"Paddy (Rice), Finger Millet (Ragi), Chikoo (Sapota), Coconut",maharashtra|palghar|kharif|coastal alluvial
+Maharashtra,Palghar,Kharif,Red Hill Soil,5.5,6.8,"Paddy (Rice), Finger Millet (Ragi), Chikoo (Sapota), Coconut",maharashtra|palghar|kharif|red hill soil
+Maharashtra,Palghar,Rabi,Coastal Alluvial,5.5,6.8,"Pulses (Wal, Cowpea), Vegetables, Mustard",maharashtra|palghar|rabi|coastal alluvial
+Maharashtra,Palghar,Rabi,Red Hill Soil,5.5,6.8,"Pulses (Wal, Cowpea), Vegetables, Mustard",maharashtra|palghar|rabi|red hill soil
+Maharashtra,Palghar,Zaid,Coastal Alluvial,5.5,6.8,"Watermelon, Vegetables, Cucumber",maharashtra|palghar|zaid|coastal alluvial
+Maharashtra,Palghar,Zaid,Red Hill Soil,5.5,6.8,"Watermelon, Vegetables, Cucumber",maharashtra|palghar|zaid|red hill soil
+Maharashtra,Parbhani,Kharif,Deep Black Cotton Soil,7.2,8.5,"Cotton, Soybean, Pigeon Pea, Sorghum, Green Gram",maharashtra|parbhani|kharif|deep black cotton soil
+Maharashtra,Parbhani,Rabi,Deep Black Cotton Soil,7.2,8.5,"Rabi Sorghum, Gram, Wheat, Safflower",maharashtra|parbhani|rabi|deep black cotton soil
+Maharashtra,Parbhani,Zaid,Deep Black Cotton Soil,7.2,8.5,"Summer Groundnut, Vegetables, Fodder",maharashtra|parbhani|zaid|deep black cotton soil
+Maharashtra,Pune,Kharif,Medium Black Soil to Red Loam,6.5,8.0,"Sugarcane, Paddy, Pearl Millet, Soybean, Vegetables, Tomato",maharashtra|pune|kharif|medium black soil to red loam
+Maharashtra,Pune,Rabi,Medium Black Soil to Red Loam,6.5,8.0,"Wheat, Gram, Onion, Rabi Sorghum, Potato",maharashtra|pune|rabi|medium black soil to red loam
+Maharashtra,Pune,Zaid,Medium Black Soil to Red Loam,6.5,8.0,"Summer Groundnut, Flowers, Vegetables, Fodder",maharashtra|pune|zaid|medium black soil to red loam
+Maharashtra,Raigad,Kharif,Coastal Saline Alluvial / Red Lateritic Soil,5.5,6.8,"Paddy, Mango (Alphonso), Coconut, Arecanut, Finger Millet",maharashtra|raigad|kharif|coastal saline alluvial / red lateritic soil
+Maharashtra,Raigad,Rabi,Coastal Saline Alluvial / Red Lateritic Soil,5.5,6.8,"Pulses (Wal/Field Bean, Cowpea), Mustard, Vegetables",maharashtra|raigad|rabi|coastal saline alluvial / red lateritic soil
+Maharashtra,Raigad,Zaid,Coastal Saline Alluvial / Red Lateritic Soil,5.5,6.8,"Watermelon, Vegetables, Cucumber",maharashtra|raigad|zaid|coastal saline alluvial / red lateritic soil
+Maharashtra,Ratnagiri,Kharif,Lateritic Acidic Red Soil,4.8,6.2,"Paddy, Mango (Alphonso), Cashew, Finger Millet, Coconut",maharashtra|ratnagiri|kharif|lateritic acidic red soil
+Maharashtra,Ratnagiri,Rabi,Lateritic Acidic Red Soil,4.8,6.2,"Pulses (Wal, Horsegram), Vegetables",maharashtra|ratnagiri|rabi|lateritic acidic red soil
+Maharashtra,Ratnagiri,Zaid,Lateritic Acidic Red Soil,4.8,6.2,"Watermelon, Cucumber, Summer Vegetables",maharashtra|ratnagiri|zaid|lateritic acidic red soil
+Maharashtra,Sangli,Kharif,Deep Black Soil,7.0,8.5,"Sugarcane, Grapes, Groundnut, Soybean, Maize, Turmeric",maharashtra|sangli|kharif|deep black soil
+Maharashtra,Sangli,Kharif,Medium Red Loam,7.0,8.5,"Sugarcane, Grapes, Groundnut, Soybean, Maize, Turmeric",maharashtra|sangli|kharif|medium red loam
+Maharashtra,Sangli,Rabi,Deep Black Soil,7.0,8.5,"Rabi Sorghum, Wheat, Gram, Maize",maharashtra|sangli|rabi|deep black soil
+Maharashtra,Sangli,Rabi,Medium Red Loam,7.0,8.5,"Rabi Sorghum, Wheat, Gram, Maize",maharashtra|sangli|rabi|medium red loam
+Maharashtra,Sangli,Zaid,Deep Black Soil,7.0,8.5,"Summer Groundnut, Vegetables, Fodder",maharashtra|sangli|zaid|deep black soil
+Maharashtra,Sangli,Zaid,Medium Red Loam,7.0,8.5,"Summer Groundnut, Vegetables, Fodder",maharashtra|sangli|zaid|medium red loam
+Maharashtra,Satara,Kharif,Red Loamy to Heavy Black Soil,6.2,8.0,"Sugarcane, Strawberry, Paddy, Soybean, Groundnut, Pearl Millet",maharashtra|satara|kharif|red loamy to heavy black soil
+Maharashtra,Satara,Rabi,Red Loamy to Heavy Black Soil,6.2,8.0,"Wheat, Gram, Onion, Rabi Sorghum, Potato",maharashtra|satara|rabi|red loamy to heavy black soil
+Maharashtra,Satara,Zaid,Red Loamy to Heavy Black Soil,6.2,8.0,"Summer Groundnut, Vegetables, Fodder",maharashtra|satara|zaid|red loamy to heavy black soil
+Maharashtra,Sindhudurg,Kharif,Lateritic Acidic Red Soil,4.8,6.2,"Paddy, Alphonso Mango, Cashew, Coconut, Spices",maharashtra|sindhudurg|kharif|lateritic acidic red soil
+Maharashtra,Sindhudurg,Rabi,Lateritic Acidic Red Soil,4.8,6.2,"Pulses (Wal, Cowpea), Off-season Vegetables",maharashtra|sindhudurg|rabi|lateritic acidic red soil
+Maharashtra,Sindhudurg,Zaid,Lateritic Acidic Red Soil,4.8,6.2,"Watermelon, Vegetables, Spices",maharashtra|sindhudurg|zaid|lateritic acidic red soil
+Maharashtra,Solapur,Kharif,Medium to Shallow Black Soil (Drought Prone),7.2,8.6,"Sugarcane, Pomegranate, Pearl Millet, Pigeon Pea, Sunflower",maharashtra|solapur|kharif|medium to shallow black soil (drought prone)
+Maharashtra,Solapur,Rabi,Medium to Shallow Black Soil (Drought Prone),7.2,8.6,"Rabi Sorghum (Maldandi Jowar), Gram, Wheat, Safflower",maharashtra|solapur|rabi|medium to shallow black soil (drought prone)
+Maharashtra,Solapur,Zaid,Medium to Shallow Black Soil (Drought Prone),7.2,8.6,"Summer Groundnut, Fodder Maize, Vegetables",maharashtra|solapur|zaid|medium to shallow black soil (drought prone)
+Maharashtra,Thane,Kharif,Coastal Alluvial Loam,5.8,7.0,"Paddy, Finger Millet, Vegetables, Banana, Guava",maharashtra|thane|kharif|coastal alluvial loam
+Maharashtra,Thane,Rabi,Coastal Alluvial Loam,5.8,7.0,"Pulses (Wal, Blackgram), Vegetables, Mustard",maharashtra|thane|rabi|coastal alluvial loam
+Maharashtra,Thane,Zaid,Coastal Alluvial Loam,5.8,7.0,"Watermelon, Cucurbits, Vegetables",maharashtra|thane|zaid|coastal alluvial loam
+Maharashtra,Wardha,Kharif,Deep Black Cotton Soil,7.0,8.4,"Cotton, Soybean, Pigeon Pea, Sorghum",maharashtra|wardha|kharif|deep black cotton soil
+Maharashtra,Wardha,Rabi,Deep Black Cotton Soil,7.0,8.4,"Gram, Wheat, Mustard, Safflower",maharashtra|wardha|rabi|deep black cotton soil
+Maharashtra,Wardha,Zaid,Deep Black Cotton Soil,7.0,8.4,"Summer Groundnut, Vegetables, Fodder",maharashtra|wardha|zaid|deep black cotton soil
+Maharashtra,Washim,Kharif,Medium to Deep Black Soil,7.2,8.5,"Soybean, Cotton, Pigeon Pea, Turmeric",maharashtra|washim|kharif|medium to deep black soil
+Maharashtra,Washim,Rabi,Medium to Deep Black Soil,7.2,8.5,"Gram, Wheat, Rabi Sorghum, Mustard",maharashtra|washim|rabi|medium to deep black soil
+Maharashtra,Washim,Zaid,Medium to Deep Black Soil,7.2,8.5,"Summer Groundnut, Sesame, Vegetables",maharashtra|washim|zaid|medium to deep black soil
+Maharashtra,Yavatmal,Kharif,Deep Black Cotton Soil,7.0,8.4,"Cotton, Soybean, Pigeon Pea, Sorghum",maharashtra|yavatmal|kharif|deep black cotton soil
+Maharashtra,Yavatmal,Rabi,Deep Black Cotton Soil,7.0,8.4,"Gram, Wheat, Mustard, Rabi Sorghum",maharashtra|yavatmal|rabi|deep black cotton soil
+Maharashtra,Yavatmal,Zaid,Deep Black Cotton Soil,7.0,8.4,"Summer Groundnut, Vegetables, Fodder",maharashtra|yavatmal|zaid|deep black cotton soil
+Punjab,Amritsar,Kharif,Alluvial Sandy Loam to Clay Loam,7.0,8.2,"Paddy (Basmati), Maize, Cotton, Sugarcane, Vegetables",punjab|amritsar|kharif|alluvial sandy loam to clay loam
+Punjab,Amritsar,Rabi,Alluvial Sandy Loam to Clay Loam,7.0,8.2,"Wheat, Mustard, Potato, Pea, Berseem (Fodder)",punjab|amritsar|rabi|alluvial sandy loam to clay loam
+Punjab,Amritsar,Zaid,Alluvial Sandy Loam to Clay Loam,7.0,8.2,"Summer Moong (Green Gram), Muskmelon, Watermelon, Sunflower",punjab|amritsar|zaid|alluvial sandy loam to clay loam
+Punjab,Barnala,Kharif,Deep Alluvial Loam Soil,7.2,8.5,"Paddy, Cotton, Maize, Sugarcane",punjab|barnala|kharif|deep alluvial loam soil
+Punjab,Barnala,Rabi,Deep Alluvial Loam Soil,7.2,8.5,"Wheat, Barley, Mustard, Gram (Chickpea)",punjab|barnala|rabi|deep alluvial loam soil
+Punjab,Barnala,Zaid,Deep Alluvial Loam Soil,7.2,8.5,"Summer Moong, Fodder Maize, Vegetables",punjab|barnala|zaid|deep alluvial loam soil
+Punjab,Bathinda,Kharif,Arid Sandy Loam to Alkaline Soil,7.5,8.8,"Cotton (Bt Cotton), Paddy, Pearl Millet (Bajra), Guar",punjab|bathinda|kharif|arid sandy loam to alkaline soil
+Punjab,Bathinda,Rabi,Arid Sandy Loam to Alkaline Soil,7.5,8.8,"Wheat, Barley, Mustard (Raya), Gram",punjab|bathinda|rabi|arid sandy loam to alkaline soil
+Punjab,Bathinda,Zaid,Arid Sandy Loam to Alkaline Soil,7.5,8.8,"Summer Moong, Cucurbits, Fodder Sorghum",punjab|bathinda|zaid|arid sandy loam to alkaline soil
+Punjab,Faridkot,Kharif,Sandy Loam to Saline Alluvial Soil,7.4,8.6,"Cotton, Paddy, Sugarcane, Maize",punjab|faridkot|kharif|sandy loam to saline alluvial soil
+Punjab,Faridkot,Rabi,Sandy Loam to Saline Alluvial Soil,7.4,8.6,"Wheat, Mustard, Barley, Potato",punjab|faridkot|rabi|sandy loam to saline alluvial soil
+Punjab,Faridkot,Zaid,Sandy Loam to Saline Alluvial Soil,7.4,8.6,"Summer Moong, Sunflower, Vegetables",punjab|faridkot|zaid|sandy loam to saline alluvial soil
+Punjab,Fatehgarh Sahib,Kharif,Fertile Alluvial Clay Loam,6.8,8.0,"Paddy, Sugarcane, Maize, Vegetables",punjab|fatehgarh sahib|kharif|fertile alluvial clay loam
+Punjab,Fatehgarh Sahib,Rabi,Fertile Alluvial Clay Loam,6.8,8.0,"Wheat, Mustard, Potato, Pea, Gobhi Sarson",punjab|fatehgarh sahib|rabi|fertile alluvial clay loam
+Punjab,Fatehgarh Sahib,Zaid,Fertile Alluvial Clay Loam,6.8,8.0,"Summer Moong, Sunflower, Vegetables",punjab|fatehgarh sahib|zaid|fertile alluvial clay loam
+Punjab,Fazilka,Kharif,Sandy Loam to Arid Coastal-like Soil,7.5,8.8,"Cotton, Paddy, Kinnow (Citrus), Guar, Sesame",punjab|fazilka|kharif|sandy loam to arid coastal-like soil
+Punjab,Fazilka,Rabi,Sandy Loam to Arid Coastal-like Soil,7.5,8.8,"Wheat, Mustard, Barley, Chickpea",punjab|fazilka|rabi|sandy loam to arid coastal-like soil
+Punjab,Fazilka,Zaid,Sandy Loam to Arid Coastal-like Soil,7.5,8.8,"Muskmelon, Watermelon, Summer Moong",punjab|fazilka|zaid|sandy loam to arid coastal-like soil
+Punjab,Firozpur,Kharif,Alluvial Sandy Loam Soil,7.2,8.5,"Paddy, Cotton, Sugarcane, Maize",punjab|firozpur|kharif|alluvial sandy loam soil
+Punjab,Firozpur,Rabi,Alluvial Sandy Loam Soil,7.2,8.5,"Wheat, Mustard, Pea, Potato, Barley",punjab|firozpur|rabi|alluvial sandy loam soil
+Punjab,Firozpur,Zaid,Alluvial Sandy Loam Soil,7.2,8.5,"Summer Moong, Sunflower, Watermelon",punjab|firozpur|zaid|alluvial sandy loam soil
+Punjab,Gurdaspur,Kharif,Sub-Mountainous Alluvial,6.5,7.8,"Paddy (Basmati), Sugarcane, Maize, Pulses",punjab|gurdaspur|kharif|sub-mountainous alluvial
+Punjab,Gurdaspur,Kharif,Clay Loam,6.5,7.8,"Paddy (Basmati), Sugarcane, Maize, Pulses",punjab|gurdaspur|kharif|clay loam
+Punjab,Gurdaspur,Rabi,Sub-Mountainous Alluvial,6.5,7.8,"Wheat, Mustard, Potato, Pea, Berseem",punjab|gurdaspur|rabi|sub-mountainous alluvial
+Punjab,Gurdaspur,Rabi,Clay Loam,6.5,7.8,"Wheat, Mustard, Potato, Pea, Berseem",punjab|gurdaspur|rabi|clay loam
+Punjab,Gurdaspur,Zaid,Sub-Mountainous Alluvial,6.5,7.8,"Summer Moong, Vegetables, Fodder Crops",punjab|gurdaspur|zaid|sub-mountainous alluvial
+Punjab,Gurdaspur,Zaid,Clay Loam,6.5,7.8,"Summer Moong, Vegetables, Fodder Crops",punjab|gurdaspur|zaid|clay loam
+Punjab,Hoshiarpur,Kharif,Kandi Sub-Mountainous Sandy Soil,6.2,7.6,"Maize, Paddy, Sugarcane, Mango, Citrus",punjab|hoshiarpur|kharif|kandi sub-mountainous sandy soil
+Punjab,Hoshiarpur,Rabi,Kandi Sub-Mountainous Sandy Soil,6.2,7.6,"Wheat, Potato, Mustard, Pea, Gram",punjab|hoshiarpur|rabi|kandi sub-mountainous sandy soil
+Punjab,Hoshiarpur,Zaid,Kandi Sub-Mountainous Sandy Soil,6.2,7.6,"Summer Vegetables, Cucurbits, Fodder Maize",punjab|hoshiarpur|zaid|kandi sub-mountainous sandy soil
+Punjab,Jalandhar,Kharif,Fertile Alluvial Loam Soil,6.8,8.2,"Paddy, Potato (Seed Potato), Maize, Sugarcane",punjab|jalandhar|kharif|fertile alluvial loam soil
+Punjab,Jalandhar,Rabi,Fertile Alluvial Loam Soil,6.8,8.2,"Wheat, Potato, Pea, Mustard, Sunflower",punjab|jalandhar|rabi|fertile alluvial loam soil
+Punjab,Jalandhar,Zaid,Fertile Alluvial Loam Soil,6.8,8.2,"Summer Moong, Vegetables, Mentha, Cucurbits",punjab|jalandhar|zaid|fertile alluvial loam soil
+Punjab,Kapurthala,Kharif,Lowland Alluvial Silt Loam,6.8,8.2,"Paddy, Maize, Sugarcane, Vegetables",punjab|kapurthala|kharif|lowland alluvial silt loam
+Punjab,Kapurthala,Rabi,Lowland Alluvial Silt Loam,6.8,8.2,"Wheat, Potato, Pea, Mustard",punjab|kapurthala|rabi|lowland alluvial silt loam
+Punjab,Kapurthala,Zaid,Lowland Alluvial Silt Loam,6.8,8.2,"Summer Moong, Muskmelon, Watermelon",punjab|kapurthala|zaid|lowland alluvial silt loam
+Punjab,Ludhiana,Kharif,Central Alluvial Loam Soil,6.8,8.0,"Paddy, Maize, Sugarcane, Vegetables, Groundnut",punjab|ludhiana|kharif|central alluvial loam soil
+Punjab,Ludhiana,Rabi,Central Alluvial Loam Soil,6.8,8.0,"Wheat, Potato, Pea, Mustard, Gobhi Sarson",punjab|ludhiana|rabi|central alluvial loam soil
+Punjab,Ludhiana,Zaid,Central Alluvial Loam Soil,6.8,8.0,"Summer Moong, Mentha, Sunflower, Cucurbits",punjab|ludhiana|zaid|central alluvial loam soil
+Punjab,Malerkotla,Kharif,Deep Alluvial Silt Loam,7.0,8.2,"Paddy, Commercial Vegetables, Maize, Sugarcane",punjab|malerkotla|kharif|deep alluvial silt loam
+Punjab,Malerkotla,Rabi,Deep Alluvial Silt Loam,7.0,8.2,"Wheat, Commercial Vegetables (Garlic, Onion), Potato, Pea",punjab|malerkotla|rabi|deep alluvial silt loam
+Punjab,Malerkotla,Zaid,Deep Alluvial Silt Loam,7.0,8.2,"Summer Vegetables, Watermelon, Summer Moong",punjab|malerkotla|zaid|deep alluvial silt loam
+Punjab,Mansa,Kharif,Arid Sandy Loam Soil,7.5,8.8,"Cotton (Bt Cotton), Paddy, Guar, Pearl Millet",punjab|mansa|kharif|arid sandy loam soil
+Punjab,Mansa,Rabi,Arid Sandy Loam Soil,7.5,8.8,"Wheat, Mustard, Barley, Chickpea",punjab|mansa|rabi|arid sandy loam soil
+Punjab,Mansa,Zaid,Arid Sandy Loam Soil,7.5,8.8,"Summer Moong, Cucurbits, Fodder Crops",punjab|mansa|zaid|arid sandy loam soil
+Punjab,Moga,Kharif,Central Alluvial Loam Soil,7.0,8.2,"Paddy, Maize, Sugarcane, Groundnut",punjab|moga|kharif|central alluvial loam soil
+Punjab,Moga,Rabi,Central Alluvial Loam Soil,7.0,8.2,"Wheat, Potato, Pea, Mustard, Barley",punjab|moga|rabi|central alluvial loam soil
+Punjab,Moga,Zaid,Central Alluvial Loam Soil,7.0,8.2,"Summer Moong, Mentha, Sunflower",punjab|moga|zaid|central alluvial loam soil
+Punjab,Pathankot,Kharif,Sub-Mountainous Hilly Red/Sandy Soil,6.0,7.5,"Paddy, Maize, Sugarcane, Mango, Litchi",punjab|pathankot|kharif|sub-mountainous hilly red/sandy soil
+Punjab,Pathankot,Rabi,Sub-Mountainous Hilly Red/Sandy Soil,6.0,7.5,"Wheat, Mustard, Potato, Pea",punjab|pathankot|rabi|sub-mountainous hilly red/sandy soil
+Punjab,Pathankot,Zaid,Sub-Mountainous Hilly Red/Sandy Soil,6.0,7.5,"Summer Vegetables, Fruits, Fodder Crops",punjab|pathankot|zaid|sub-mountainous hilly red/sandy soil
+Punjab,Patiala,Kharif,Heavy Clay Loam Alluvial Soil,6.8,8.2,"Paddy, Sugarcane, Maize, Vegetables",punjab|patiala|kharif|heavy clay loam alluvial soil
+Punjab,Patiala,Rabi,Heavy Clay Loam Alluvial Soil,6.8,8.2,"Wheat, Mustard, Potato, Pea, Sunflower",punjab|patiala|rabi|heavy clay loam alluvial soil
+Punjab,Patiala,Zaid,Heavy Clay Loam Alluvial Soil,6.8,8.2,"Summer Moong, Sunflower, Cucurbits",punjab|patiala|zaid|heavy clay loam alluvial soil
+Punjab,Rupnagar,Kharif,Sub-Mountainous Kandi Silt Soil,6.5,7.8,"Paddy, Maize, Sugarcane, Pulses",punjab|rupnagar|kharif|sub-mountainous kandi silt soil
+Punjab,Rupnagar,Rabi,Sub-Mountainous Kandi Silt Soil,6.5,7.8,"Wheat, Mustard, Pea, Potato",punjab|rupnagar|rabi|sub-mountainous kandi silt soil
+Punjab,Rupnagar,Zaid,Sub-Mountainous Kandi Silt Soil,6.5,7.8,"Summer Moong, Vegetables, Fodder Maize",punjab|rupnagar|zaid|sub-mountainous kandi silt soil
+Punjab,Sahibzada Ajit Singh Nagar,Kharif,Loamy to Sandy Alluvial Soil,6.5,7.8,"Paddy, Maize, Sugarcane, Vegetables",punjab|sahibzada ajit singh nagar|kharif|loamy to sandy alluvial soil
+Punjab,Sahibzada Ajit Singh Nagar,Rabi,Loamy to Sandy Alluvial Soil,6.5,7.8,"Wheat, Potato, Pea, Mustard",punjab|sahibzada ajit singh nagar|rabi|loamy to sandy alluvial soil
+Punjab,Sahibzada Ajit Singh Nagar,Zaid,Loamy to Sandy Alluvial Soil,6.5,7.8,"Summer Vegetables, Floriculture, Fodder",punjab|sahibzada ajit singh nagar|zaid|loamy to sandy alluvial soil
+Punjab,Sangrur,Kharif,Deep Fertile Alluvial Loam,7.0,8.4,"Paddy, Sugarcane, Maize, Cotton",punjab|sangrur|kharif|deep fertile alluvial loam
+Punjab,Sangrur,Rabi,Deep Fertile Alluvial Loam,7.0,8.4,"Wheat, Potato, Pea, Mustard, Barley",punjab|sangrur|rabi|deep fertile alluvial loam
+Punjab,Sangrur,Zaid,Deep Fertile Alluvial Loam,7.0,8.4,"Summer Moong, Vegetables, Sunflower",punjab|sangrur|zaid|deep fertile alluvial loam
+Punjab,Shahid Bhagat Singh Nagar,Kharif,Alluvial Sandy Loam Soil,6.5,7.8,"Paddy, Sugarcane, Maize, Groundnut",punjab|shahid bhagat singh nagar|kharif|alluvial sandy loam soil
+Punjab,Shahid Bhagat Singh Nagar,Rabi,Alluvial Sandy Loam Soil,6.5,7.8,"Wheat, Potato, Pea, Mustard",punjab|shahid bhagat singh nagar|rabi|alluvial sandy loam soil
+Punjab,Shahid Bhagat Singh Nagar,Zaid,Alluvial Sandy Loam Soil,6.5,7.8,"Summer Moong, Sunflower, Vegetables",punjab|shahid bhagat singh nagar|zaid|alluvial sandy loam soil
+Punjab,Sri Muktsar Sahib,Kharif,Saline,7.6,8.9,"Cotton, Paddy, Sugarcane, Guar",punjab|sri muktsar sahib|kharif|saline
+Punjab,Sri Muktsar Sahib,Kharif,Alkaline Sandy Loam,7.6,8.9,"Cotton, Paddy, Sugarcane, Guar",punjab|sri muktsar sahib|kharif|alkaline sandy loam
+Punjab,Sri Muktsar Sahib,Rabi,Saline,7.6,8.9,"Wheat, Mustard, Barley, Gram",punjab|sri muktsar sahib|rabi|saline
+Punjab,Sri Muktsar Sahib,Rabi,Alkaline Sandy Loam,7.6,8.9,"Wheat, Mustard, Barley, Gram",punjab|sri muktsar sahib|rabi|alkaline sandy loam
+Punjab,Sri Muktsar Sahib,Zaid,Saline,7.6,8.9,"Summer Moong, Cucurbits, Watermelon",punjab|sri muktsar sahib|zaid|saline
+Punjab,Sri Muktsar Sahib,Zaid,Alkaline Sandy Loam,7.6,8.9,"Summer Moong, Cucurbits, Watermelon",punjab|sri muktsar sahib|zaid|alkaline sandy loam
+Punjab,Tarn Taran,Kharif,Fertile Alluvial Loam,7.0,8.2,"Paddy (Basmati), Sugarcane, Maize",punjab|tarn taran|kharif|fertile alluvial loam
+Punjab,Tarn Taran,Rabi,Fertile Alluvial Loam,7.0,8.2,"Wheat, Potato, Pea, Mustard",punjab|tarn taran|rabi|fertile alluvial loam
+Punjab,Tarn Taran,Zaid,Fertile Alluvial Loam,7.0,8.2,"Summer Moong, Vegetables, Muskmelon",punjab|tarn taran|zaid|fertile alluvial loam
+Uttar Pradesh,Agra,Kharif,Alluvial Sandy Loam,7.2,8.5,"Pearl Millet (Bajra), Paddy, Pigeon Pea, Sesame",uttar pradesh|agra|kharif|alluvial sandy loam
+Uttar Pradesh,Agra,Kharif,Ravine Soil,7.2,8.5,"Pearl Millet (Bajra), Paddy, Pigeon Pea, Sesame",uttar pradesh|agra|kharif|ravine soil
+Uttar Pradesh,Agra,Rabi,Alluvial Sandy Loam,7.2,8.5,"Mustard, Wheat, Potato, Chickpea, Barley",uttar pradesh|agra|rabi|alluvial sandy loam
+Uttar Pradesh,Agra,Rabi,Ravine Soil,7.2,8.5,"Mustard, Wheat, Potato, Chickpea, Barley",uttar pradesh|agra|rabi|ravine soil
+Uttar Pradesh,Agra,Zaid,Alluvial Sandy Loam,7.2,8.5,"Muskmelon, Watermelon, Summer Moong, Cucurbits",uttar pradesh|agra|zaid|alluvial sandy loam
+Uttar Pradesh,Agra,Zaid,Ravine Soil,7.2,8.5,"Muskmelon, Watermelon, Summer Moong, Cucurbits",uttar pradesh|agra|zaid|ravine soil
+Uttar Pradesh,Aligarh,Kharif,Alluvial Sandy Loam Soil,7.0,8.4,"Paddy, Pearl Millet, Maize, Sugarcane, Pigeon Pea",uttar pradesh|aligarh|kharif|alluvial sandy loam soil
+Uttar Pradesh,Aligarh,Rabi,Alluvial Sandy Loam Soil,7.0,8.4,"Wheat, Mustard, Barley, Potato, Gram",uttar pradesh|aligarh|rabi|alluvial sandy loam soil
+Uttar Pradesh,Aligarh,Zaid,Alluvial Sandy Loam Soil,7.0,8.4,"Summer Moong, Vegetables, Fodder Maize",uttar pradesh|aligarh|zaid|alluvial sandy loam soil
+Uttar Pradesh,Ayodhya,Kharif,Alluvial Silt Loam Soil,6.5,7.8,"Paddy, Maize, Sugarcane, Pigeon Pea",uttar pradesh|ayodhya|kharif|alluvial silt loam soil
+Uttar Pradesh,Ayodhya,Rabi,Alluvial Silt Loam Soil,6.5,7.8,"Wheat, Mustard, Potato, Lentil, Pea",uttar pradesh|ayodhya|rabi|alluvial silt loam soil
+Uttar Pradesh,Ayodhya,Zaid,Alluvial Silt Loam Soil,6.5,7.8,"Summer Moong, Watermelon, Cucurbits",uttar pradesh|ayodhya|zaid|alluvial silt loam soil
+Uttar Pradesh,Azamgarh,Kharif,Clayey Alluvial Soil,6.8,8.0,"Paddy, Maize, Sugarcane, Pigeon Pea",uttar pradesh|azamgarh|kharif|clayey alluvial soil
+Uttar Pradesh,Azamgarh,Rabi,Clayey Alluvial Soil,6.8,8.0,"Wheat, Gram, Mustard, Lentil, Potato",uttar pradesh|azamgarh|rabi|clayey alluvial soil
+Uttar Pradesh,Azamgarh,Zaid,Clayey Alluvial Soil,6.8,8.0,"Summer Moong, Vegetables, Cowpea",uttar pradesh|azamgarh|zaid|clayey alluvial soil
+Uttar Pradesh,Bareilly,Kharif,Tarai,6.2,7.6,"Paddy, Sugarcane, Maize, Mentha",uttar pradesh|bareilly|kharif|tarai
+Uttar Pradesh,Bareilly,Kharif,Alluvial Silt Loam,6.2,7.6,"Paddy, Sugarcane, Maize, Mentha",uttar pradesh|bareilly|kharif|alluvial silt loam
+Uttar Pradesh,Bareilly,Rabi,Tarai,6.2,7.6,"Wheat, Mustard, Mentha, Pea, Potato",uttar pradesh|bareilly|rabi|tarai
+Uttar Pradesh,Bareilly,Rabi,Alluvial Silt Loam,6.2,7.6,"Wheat, Mustard, Mentha, Pea, Potato",uttar pradesh|bareilly|rabi|alluvial silt loam
+Uttar Pradesh,Bareilly,Zaid,Tarai,6.2,7.6,"Mentha (Peppermint), Summer Moong, Vegetables",uttar pradesh|bareilly|zaid|tarai
+Uttar Pradesh,Bareilly,Zaid,Alluvial Silt Loam,6.2,7.6,"Mentha (Peppermint), Summer Moong, Vegetables",uttar pradesh|bareilly|zaid|alluvial silt loam
+Uttar Pradesh,Gorakhpur,Kharif,Bangar,6.5,7.8,"Paddy, Sugarcane, Maize, Pigeon Pea",uttar pradesh|gorakhpur|kharif|bangar
+Uttar Pradesh,Gorakhpur,Kharif,Khadar Alluvial Silt,6.5,7.8,"Paddy, Sugarcane, Maize, Pigeon Pea",uttar pradesh|gorakhpur|kharif|khadar alluvial silt
+Uttar Pradesh,Gorakhpur,Rabi,Bangar,6.5,7.8,"Wheat, Lentil (Masoor), Mustard, Pea",uttar pradesh|gorakhpur|rabi|bangar
+Uttar Pradesh,Gorakhpur,Rabi,Khadar Alluvial Silt,6.5,7.8,"Wheat, Lentil (Masoor), Mustard, Pea",uttar pradesh|gorakhpur|rabi|khadar alluvial silt
+Uttar Pradesh,Gorakhpur,Zaid,Bangar,6.5,7.8,"Summer Moong, Cucurbits, Vegetables",uttar pradesh|gorakhpur|zaid|bangar
+Uttar Pradesh,Gorakhpur,Zaid,Khadar Alluvial Silt,6.5,7.8,"Summer Moong, Cucurbits, Vegetables",uttar pradesh|gorakhpur|zaid|khadar alluvial silt
+Uttar Pradesh,Jhansi,Kharif,Mixed Red,6.8,8.2,"Groundnut, Sesame, Black Gram (Urad), Soybean, Sorghum",uttar pradesh|jhansi|kharif|mixed red
+Uttar Pradesh,Jhansi,Kharif,Black Soil (Rakar/Kabar),6.8,8.2,"Groundnut, Sesame, Black Gram (Urad), Soybean, Sorghum",uttar pradesh|jhansi|kharif|black soil (rakar/kabar)
+Uttar Pradesh,Jhansi,Rabi,Mixed Red,6.8,8.2,"Chickpea (Gram), Wheat, Mustard, Lentil, Field Pea",uttar pradesh|jhansi|rabi|mixed red
+Uttar Pradesh,Jhansi,Rabi,Black Soil (Rakar/Kabar),6.8,8.2,"Chickpea (Gram), Wheat, Mustard, Lentil, Field Pea",uttar pradesh|jhansi|rabi|black soil (rakar/kabar)
+Uttar Pradesh,Jhansi,Zaid,Mixed Red,6.8,8.2,"Summer Moong, Fodder Crops, Sesame",uttar pradesh|jhansi|zaid|mixed red
+Uttar Pradesh,Jhansi,Zaid,Black Soil (Rakar/Kabar),6.8,8.2,"Summer Moong, Fodder Crops, Sesame",uttar pradesh|jhansi|zaid|black soil (rakar/kabar)
+Uttar Pradesh,Kanpur Nagar,Kharif,Central Ganga Alluvial Soil,6.8,8.2,"Paddy, Maize, Sorghum, Pigeon Pea, Sesame",uttar pradesh|kanpur nagar|kharif|central ganga alluvial soil
+Uttar Pradesh,Kanpur Nagar,Rabi,Central Ganga Alluvial Soil,6.8,8.2,"Wheat, Mustard, Chickpea, Potato, Pea",uttar pradesh|kanpur nagar|rabi|central ganga alluvial soil
+Uttar Pradesh,Kanpur Nagar,Zaid,Central Ganga Alluvial Soil,6.8,8.2,"Summer Moong, Cucurbits, Muskmelon",uttar pradesh|kanpur nagar|zaid|central ganga alluvial soil
+Uttar Pradesh,Lakhimpur Kheri,Kharif,Fertile Tarai Alluvial Soil,6.0,7.5,"Sugarcane, Paddy, Maize, Black Gram",uttar pradesh|lakhimpur kheri|kharif|fertile tarai alluvial soil
+Uttar Pradesh,Lakhimpur Kheri,Rabi,Fertile Tarai Alluvial Soil,6.0,7.5,"Wheat, Mustard, Lentil, Potato, Mustard",uttar pradesh|lakhimpur kheri|rabi|fertile tarai alluvial soil
+Uttar Pradesh,Lakhimpur Kheri,Zaid,Fertile Tarai Alluvial Soil,6.0,7.5,"Mentha, Summer Moong, Vegetables",uttar pradesh|lakhimpur kheri|zaid|fertile tarai alluvial soil
+Uttar Pradesh,Lucknow,Kharif,Ganga Alluvial Loam Soil,6.5,8.0,"Paddy, Mango, Paddy, Pigeon Pea, Maize",uttar pradesh|lucknow|kharif|ganga alluvial loam soil
+Uttar Pradesh,Lucknow,Rabi,Ganga Alluvial Loam Soil,6.5,8.0,"Wheat, Mustard, Potato, Pea, Commercial Vegetables",uttar pradesh|lucknow|rabi|ganga alluvial loam soil
+Uttar Pradesh,Lucknow,Zaid,Ganga Alluvial Loam Soil,6.5,8.0,"Summer Moong, Cucurbits, Vegetables",uttar pradesh|lucknow|zaid|ganga alluvial loam soil
+Uttar Pradesh,Mathura,Kharif,Sandy Loam to Saline Alluvial Soil,7.4,8.8,"Pearl Millet, Paddy, Cotton, Sesame, Pigeon Pea",uttar pradesh|mathura|kharif|sandy loam to saline alluvial soil
+Uttar Pradesh,Mathura,Rabi,Sandy Loam to Saline Alluvial Soil,7.4,8.8,"Mustard, Wheat, Barley, Chickpea",uttar pradesh|mathura|rabi|sandy loam to saline alluvial soil
+Uttar Pradesh,Mathura,Zaid,Sandy Loam to Saline Alluvial Soil,7.4,8.8,"Muskmelon, Watermelon, Summer Moong",uttar pradesh|mathura|zaid|sandy loam to saline alluvial soil
+Uttar Pradesh,Meerut,Kharif,Highly Fertile Alluvial Loam,6.8,8.0,"Sugarcane, Paddy, Maize, Sorghum, Vegetables",uttar pradesh|meerut|kharif|highly fertile alluvial loam
+Uttar Pradesh,Meerut,Rabi,Highly Fertile Alluvial Loam,6.8,8.0,"Wheat, Mustard, Potato, Pea, Mustard",uttar pradesh|meerut|rabi|highly fertile alluvial loam
+Uttar Pradesh,Meerut,Zaid,Highly Fertile Alluvial Loam,6.8,8.0,"Summer Moong, Cucurbits, Vegetables, Fodder Maize",uttar pradesh|meerut|zaid|highly fertile alluvial loam
+Uttar Pradesh,Mirzapur,Kharif,Vindhyan Red Sandy Soil,6.2,7.8,"Paddy, Maize, Pigeon Pea, Sesame, Black Gram",uttar pradesh|mirzapur|kharif|vindhyan red sandy soil
+Uttar Pradesh,Mirzapur,Kharif,Alluvial Loam,6.2,7.8,"Paddy, Maize, Pigeon Pea, Sesame, Black Gram",uttar pradesh|mirzapur|kharif|alluvial loam
+Uttar Pradesh,Mirzapur,Rabi,Vindhyan Red Sandy Soil,6.2,7.8,"Wheat, Chickpea, Mustard, Lentil, Barley",uttar pradesh|mirzapur|rabi|vindhyan red sandy soil
+Uttar Pradesh,Mirzapur,Rabi,Alluvial Loam,6.2,7.8,"Wheat, Chickpea, Mustard, Lentil, Barley",uttar pradesh|mirzapur|rabi|alluvial loam
+Uttar Pradesh,Mirzapur,Zaid,Vindhyan Red Sandy Soil,6.2,7.8,"Summer Moong, Vegetables, Fodder Sorghum",uttar pradesh|mirzapur|zaid|vindhyan red sandy soil
+Uttar Pradesh,Mirzapur,Zaid,Alluvial Loam,6.2,7.8,"Summer Moong, Vegetables, Fodder Sorghum",uttar pradesh|mirzapur|zaid|alluvial loam
+Uttar Pradesh,Prayagraj,Kharif,Ganga-Yamuna Alluvial Loam,6.8,8.2,"Paddy, Maize, Pearl Millet, Pigeon Pea",uttar pradesh|prayagraj|kharif|ganga-yamuna alluvial loam
+Uttar Pradesh,Prayagraj,Rabi,Ganga-Yamuna Alluvial Loam,6.8,8.2,"Wheat, Mustard, Guava (Allahabad Safeda), Potato, Chickpea",uttar pradesh|prayagraj|rabi|ganga-yamuna alluvial loam
+Uttar Pradesh,Prayagraj,Zaid,Ganga-Yamuna Alluvial Loam,6.8,8.2,"Muskmelon, Watermelon, Summer Moong, Vegetables",uttar pradesh|prayagraj|zaid|ganga-yamuna alluvial loam
+Uttar Pradesh,Varanasi,Kharif,Silt Loam Alluvial Soil,6.5,7.8,"Paddy, Maize, Vegetables, Pigeon Pea",uttar pradesh|varanasi|kharif|silt loam alluvial soil
+Uttar Pradesh,Varanasi,Rabi,Silt Loam Alluvial Soil,6.5,7.8,"Wheat, Vegetables, Mustard, Lentil, Pea",uttar pradesh|varanasi|rabi|silt loam alluvial soil
+Uttar Pradesh,Varanasi,Zaid,Silt Loam Alluvial Soil,6.5,7.8,"Summer Vegetables, Watermelon, Cucurbits",uttar pradesh|varanasi|zaid|silt loam alluvial soil

@@ -1,0 +1,52 @@
+{
+    "fields": {
+        "soil_moisture_percent": "Current volumetric soil moisture percentage",
+        "soil_temperature_c": "Root-zone soil temperature in Celsius",
+        "air_temperature_c": "Ambient temperature in Celsius",
+        "relative_humidity_percent": "Relative humidity percentage",
+        "rainfall_mm": "Rainfall received during monitoring period",
+        "leaf_wetness": "Leaf wetness indicator or sensor value",
+        "soil_ec_ds_m": "Soil electrical conductivity in dS/m",
+        "soil_ph": "Soil pH",
+        "light_hours": "Daily light exposure",
+        "wind_speed_kmh": "Wind speed in km/h"
+    },
+    "validation_limits": {
+        "soil_moisture_percent": [
+            0,
+            100
+        ],
+        "soil_temperature_c": [
+            -20,
+            70
+        ],
+        "air_temperature_c": [
+            -30,
+            70
+        ],
+        "relative_humidity_percent": [
+            0,
+            100
+        ],
+        "rainfall_mm": [
+            0,
+            1000
+        ],
+        "soil_ec_ds_m": [
+            0,
+            100
+        ],
+        "soil_ph": [
+            0,
+            14
+        ],
+        "light_hours": [
+            0,
+            24
+        ],
+        "wind_speed_kmh": [
+            0,
+            300
+        ]
+    }
+}

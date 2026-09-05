@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Commitments - AgriBridge</title>
+
+    <link rel="stylesheet" href="/frontend/styles/orders.css">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+</head>
+
+<body>
+
+    <main class="orders-page">
+
+        <section class="orders-header">
+
+            <h1 data-i18n="orders.title">My Commitments 🤝</h1>
+
+            <p data-i18n="orders.description">
+                Track buyers who have committed to purchase your crops.
+            </p>
+
+        </section>
+
+
+        <!-- Order will be inserted here -->
+
+        <section
+            id="orders-container"
+            class="orders-container">
+        </section>
+
+
+        <!-- Back Button -->
+
+        <button
+            id="dashboard-button"
+            class="dashboard-button">
+
+            ← <span data-i18n="orders.backToDashboard">Back to Dashboard</span>
+
+        </button>
+
+    </main>
+
+
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/orders.js"></script>
+
+</body>
+
+</html>

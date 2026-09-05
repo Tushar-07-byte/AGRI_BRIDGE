@@ -1,0 +1,63 @@
+{
+  "system": "AgriBridge AI",
+  "module": "Notification Action & State Management Engine",
+  "version": "1.0",
+  "monitoring_date": "2026-09-03",
+  "state_model": [
+    "SCHEDULED",
+    "DUE",
+    "ALERT",
+    "POSTPONED",
+    "RESCHEDULED",
+    "COMPLETED",
+    "CANCELLED"
+  ],
+  "valid_transitions": {
+    "SCHEDULED": [
+      "DUE",
+      "POSTPONED",
+      "RESCHEDULED",
+      "COMPLETED",
+      "CANCELLED"
+    ],
+    "DUE": [
+      "COMPLETED",
+      "POSTPONED",
+      "RESCHEDULED",
+      "CANCELLED"
+    ],
+    "ALERT": [
+      "COMPLETED",
+      "POSTPONED",
+      "RESCHEDULED",
+      "CANCELLED"
+    ],
+    "POSTPONED": [
+      "RESCHEDULED",
+      "CANCELLED"
+    ],
+    "RESCHEDULED": [
+      "DUE",
+      "COMPLETED",
+      "POSTPONED",
+      "RESCHEDULED",
+      "CANCELLED"
+    ],
+    "COMPLETED": [],
+    "CANCELLED": []
+  },
+  "features": {
+    "scheduled_notifications": true,
+    "due_alerts": true,
+    "postponement": true,
+    "manual_rescheduling": true,
+    "automatic_rescheduling": true,
+    "completion_tracking": true,
+    "notification_history": true
+  },
+  "data_sources": {
+    "weather": "LIVE_REAL",
+    "iot": "SYNTHETIC_HACKATHON_DEMO",
+    "physical_sensor_connected": false
+  }
+}

@@ -1,0 +1,621 @@
+============================================================
+                    AGRIBRIDGE PROJECT
+             DATABASE ENGINEER DOCUMENTATION
+============================================================
+
+Project Name: AgriBridge
+Role: Database Engineer
+Database: MySQL
+Database Name: agribridge_test
+
+============================================================
+1. PROJECT OVERVIEW
+============================================================
+
+AgriBridge is a farmer-focused digital platform designed to
+support agricultural listing and order management.
+
+The database manages farmers, crop listings, buyers, and
+orders. It maintains relationships between these entities
+using primary keys and foreign keys and ensures data
+integrity through relational database constraints.
+
+============================================================
+2. DATABASE OBJECTIVE
+============================================================
+
+The main objective of the database is to:
+
+1. Store farmer information.
+2. Store agricultural crop listings.
+3. Store buyer information.
+4. Store order information.
+5. Maintain relationships between farmers, listings, buyers,
+   and orders.
+6. Enforce referential integrity using foreign keys.
+7. Support reliable database queries and testing.
+8. Provide a structured database foundation for the AgriBridge
+   application.
+
+============================================================
+3. DATABASE TECHNOLOGY
+============================================================
+
+Database Management System:
+MySQL
+
+Development Tool:
+MySQL Workbench
+
+Database Name:
+agribridge_test
+
+============================================================
+4. DATABASE TABLES
+============================================================
+
+The final AgriBridge database contains four tables:
+
+1. farmers
+2. listings
+3. buyers
+4. orders
+
+
+------------------------------------------------------------
+4.1 FARMERS TABLE
+------------------------------------------------------------
+
+Purpose:
+Stores information about farmers registered in the system.
+
+Columns:
+
+id
+- INT
+- Primary Key
+- Auto Increment
+
+name
+- VARCHAR(100)
+- NOT NULL
+
+Sample Records:
+5
+
+
+------------------------------------------------------------
+4.2 LISTINGS TABLE
+------------------------------------------------------------
+
+Purpose:
+Stores agricultural crop listings created by farmers.
+
+Columns:
+
+id
+- INT
+- Primary Key
+- Auto Increment
+
+farmer_id
+- INT
+- Foreign Key referencing farmers(id)
+
+crop_type
+- VARCHAR(100)
+- NOT NULL
+
+photo_path
+- VARCHAR(255)
+
+health_status
+- VARCHAR(100)
+
+confidence
+- DECIMAL(5,4)
+
+harvest_date
+- DATE
+
+quantity_est
+- DECIMAL(10,2)
+
+status
+- VARCHAR(50)
+
+Sample Records:
+5
+
+
+------------------------------------------------------------
+4.3 BUYERS TABLE
+------------------------------------------------------------
+
+Purpose:
+Stores information about buyers associated with orders.
+
+Columns:
+
+id
+- INT
+- Primary Key
+- Auto Increment
+
+name
+- VARCHAR(100)
+- NOT NULL
+
+Sample Records:
+5
+
+
+------------------------------------------------------------
+4.4 ORDERS TABLE
+------------------------------------------------------------
+
+Purpose:
+Stores order information connecting crop listings with buyers.
+
+Columns:
+
+id
+- INT
+- Primary Key
+- Auto Increment
+
+listing_id
+- INT
+- Foreign Key referencing listings(id)
+
+buyer_id
+- INT
+- Foreign Key referencing buyers(id)
+
+committed_at
+- DATETIME
+
+Sample Records:
+5
+
+============================================================
+5. DATABASE RELATIONSHIPS
+============================================================
+
+The final database contains the following relationships:
+
+1. farmers.id → listings.farmer_id
+
+   One farmer can have multiple listings.
+
+2. listings.id → orders.listing_id
+
+   One listing can be associated with orders.
+
+3. buyers.id → orders.buyer_id
+
+   One buyer can be associated with multiple orders.
+
+Relationship structure:
+
+FARMERS
+   |
+   | 1 : N
+   |
+LISTINGS
+   |
+   | 1 : N
+   |
+ORDERS
+   |
+   | N : 1
+   |
+BUYERS
+
+============================================================
+6. PRIMARY KEYS
+============================================================
+
+Primary keys uniquely identify records in each table.
+
+farmers:
+- id
+
+listings:
+- id
+
+buyers:
+- id
+
+orders:
+- id
+
+============================================================
+7. FOREIGN KEYS
+============================================================
+
+The following foreign keys are implemented:
+
+1. listings.farmer_id
+   REFERENCES farmers(id)
+
+2. orders.listing_id
+   REFERENCES listings(id)
+
+3. orders.buyer_id
+   REFERENCES buyers(id)
+
+Foreign keys ensure that related records remain valid and
+prevent invalid references between tables.
+
+============================================================
+8. SQL FILES
+============================================================
+
+The project contains the following important SQL files:
+
+1. schema.sql
+
+Purpose:
+Contains the final database structure, table definitions,
+primary keys, and foreign-key relationships.
+
+2. seed.sql
+
+Purpose:
+Contains sample data for farmers, listings, buyers, and orders.
+
+3. AgriBridge_Database_Implementation.sql
+
+Purpose:
+Contains the database implementation, SQL operations,
+testing queries, relationship verification, and final
+database validation.
+
+============================================================
+9. SEED DATA
+============================================================
+
+Sample data was inserted for testing and demonstration.
+
+Farmers:
+5 records
+
+Listings:
+5 records
+
+Buyers:
+5 records
+
+Orders:
+5 records
+
+Buyer IDs used by the order records:
+
+101
+102
+103
+104
+105
+
+These IDs correspond to valid records in the buyers table.
+
+============================================================
+10. DATABASE TESTING
+============================================================
+
+The database was tested using MySQL Workbench.
+
+The following checks were performed:
+
+1. Database selection verification.
+2. Table existence verification.
+3. Record count verification.
+4. Farmer-listing relationship verification.
+5. Listing-order relationship verification.
+6. Buyer-order relationship verification.
+7. Foreign-key integrity verification.
+8. Final multi-table JOIN verification.
+
+
+------------------------------------------------------------
+10.1 FINAL RECORD COUNTS
+------------------------------------------------------------
+
+Farmers:
+5
+
+Listings:
+5
+
+Buyers:
+5
+
+Orders:
+5
+
+
+------------------------------------------------------------
+10.2 BUYER-ORDER JOIN TEST
+------------------------------------------------------------
+
+The buyer-order relationship was tested using a JOIN between
+orders and buyers.
+
+Result:
+5 rows returned.
+
+Status:
+PASS
+
+
+------------------------------------------------------------
+10.3 INVALID BUYER REFERENCE TEST
+------------------------------------------------------------
+
+Orders were checked for buyer IDs that do not exist in the
+buyers table.
+
+Result:
+0 invalid references.
+
+Status:
+PASS
+
+
+------------------------------------------------------------
+10.4 INVALID LISTING REFERENCE TEST
+------------------------------------------------------------
+
+Orders were checked for listing IDs that do not exist in the
+listings table.
+
+Result:
+0 invalid references.
+
+Status:
+PASS
+
+
+------------------------------------------------------------
+10.5 INVALID FARMER REFERENCE TEST
+------------------------------------------------------------
+
+Listings were checked for farmer IDs that do not exist in
+the farmers table.
+
+Result:
+0 invalid references.
+
+Status:
+PASS
+
+
+------------------------------------------------------------
+10.6 FINAL RELATIONSHIP JOIN
+------------------------------------------------------------
+
+A final JOIN was performed between:
+
+farmers
+listings
+orders
+buyers
+
+The query successfully returned 5 rows.
+
+Status:
+PASS
+
+============================================================
+11. DATA INTEGRITY VALIDATION
+============================================================
+
+The final database successfully satisfies the following
+integrity checks:
+
+- Valid farmer references: PASS
+- Valid listing references: PASS
+- Valid buyer references: PASS
+- Valid order references: PASS
+- Foreign-key constraints: PASS
+- No invalid buyer references: PASS
+- No invalid listing references: PASS
+- No invalid farmer references: PASS
+
+Overall Database Integrity:
+PASS
+
+============================================================
+12. ER DIAGRAM
+============================================================
+
+The final Entity Relationship Diagram contains four tables:
+
+1. farmers
+2. listings
+3. buyers
+4. orders
+
+Relationships represented in the ER diagram:
+
+farmers.id
+     ↓
+listings.farmer_id
+
+listings.id
+     ↓
+orders.listing_id
+
+buyers.id
+     ↓
+orders.buyer_id
+
+ER Diagram Files:
+
+AgriBridge_ER_Diagram.mwb
+AgriBridge_ER_Diagram.png
+
+============================================================
+13. SCREENSHOTS / EVIDENCE
+============================================================
+
+The project contains screenshots showing:
+
+1. Database and table creation.
+2. Farmer records.
+3. Listing records.
+4. Buyer records.
+5. Order records.
+6. Record count verification.
+7. Farmer-listing relationship.
+8. Listing-order relationship.
+9. Buyer-order relationship.
+10. Final JOIN verification.
+11. ER Diagram.
+
+ER Diagram screenshot:
+
+ER_Diagram_Final.png
+
+============================================================
+14. FINAL DATABASE STRUCTURE
+============================================================
+
+The final structure is:
+
+agribridge_test
+|
+|-- farmers
+|
+|-- listings
+|     |
+|     --> farmers
+|
+|-- buyers
+|
+|-- orders
+      |
+      |--> listings
+      |
+      |--> buyers
+
+
+Total Tables:
+4
+
+Total Sample Records:
+20
+
+Farmers:
+5
+
+Listings:
+5
+
+Buyers:
+5
+
+Orders:
+5
+
+============================================================
+15. FINAL PROJECT FILES
+============================================================
+
+The Database Engineer submission contains:
+
+01_Database
+02_SQL_files
+    - schema.sql
+    - AgriBridge_Database_Implementation.sql
+
+03_Documentation
+    - Database_Engineer_Final_Documentation.txt
+
+04_ER_Diagrams
+    - AgriBridge_ER_Diagram.mwb
+    - AgriBridge_ER_Diagram.png
+
+05-Screenshot
+    - Database testing screenshots
+    - ER_Diagram_Final.png
+
+06_seed_data
+    - seed.sql
+
+07_VIVA_notes
+
+08_Backup
+
+README.txt
+
+============================================================
+16. FINAL STATUS
+============================================================
+
+Database Engineer Role:
+COMPLETED
+
+Database Creation:
+COMPLETED
+
+Table Creation:
+COMPLETED
+
+Seed Data:
+COMPLETED
+
+Primary Keys:
+COMPLETED
+
+Foreign Keys:
+COMPLETED
+
+Buyer Table:
+COMPLETED
+
+Buyer-Order Relationship:
+COMPLETED
+
+Database Testing:
+COMPLETED
+
+Data Integrity Testing:
+COMPLETED
+
+ER Diagram:
+COMPLETED
+
+Screenshots:
+COMPLETED
+
+Documentation:
+COMPLETED
+
+Final Database Status:
+PASS
+
+============================================================
+17. CONCLUSION
+============================================================
+
+The AgriBridge database has been successfully designed,
+implemented, populated with sample data, tested, and
+validated.
+
+The final database contains farmers, listings, buyers, and
+orders with appropriate primary-key and foreign-key
+relationships.
+
+All major relationship and data-integrity tests were
+successfully completed, including the newly implemented
+orders-to-buyers relationship.
+
+The database is ready to be integrated with the AgriBridge
+application and submitted as the final Database Engineer
+deliverable.
+
+============================================================
+                 END OF DOCUMENTATION
+============================================================

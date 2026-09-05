@@ -7,120 +7,224 @@
 
     <title>Upload Crop - AgriBridge</title>
 
-    <link rel="stylesheet" href="/styles/upload-crop.css">
+    <link rel="stylesheet" href="/frontend/styles/upload-crop.css">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
 </head>
 
 <body>
 
-    <section class="upload-section">
+    <!-- ========================================= -->
+    <!-- NAVIGATION BAR                            -->
+    <!-- ========================================= -->
+    <nav class="nav">
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="/frontend/pages/farmer-dashboard.html">
+                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+            </a>
+        </div>
 
-        <h1>Upload Your Crop</h1>
+        <!-- NAVIGATION LINKS -->
+        <div class="mid">
+            <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+            <a href="/frontend/pages/upload-crop.html" class="active" data-i18n="nav.uploadCrop">AI Crop Scan</a>
+            <a href="/frontend/pages/crop-recommendation.html" data-i18n="landing.cropRecommendation">Recommendations</a>
+            <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
+            <a href="/frontend/pages/voice-assistant.html" data-i18n="nav.voiceAssistant">Voice AI</a>
+            <a href="/frontend/pages/crop-listings.html" data-i18n="nav.marketplace">Marketplace</a>
+        </div>
 
-        <p class="page-description">
-            Add your crop details and upload a photo for AI health analysis.
+        <!-- USER SECTION -->
+        <div class="register">
+            <button class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/farmer-dashboard.html'">
+                ← Back to Dashboard
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="upload-section">
+
+        <h1 data-i18n="crop.upload.title">Upload Your Crop</h1>
+
+        <p class="page-description" data-i18n="crop.upload.description">
+            Add your crop details and upload a photo for AI health analysis and weather-timed spray advice.
         </p>
 
-        <form id="crop-form">
+        <form id="crop-form" novalidate>
 
-            <!-- Crop Name -->
+            <!-- 1. CROP NAME -->
             <div class="form-group">
-
-                <label for="crop-name">
-                    Crop Name
-                </label>
-
-                <input
-                    type="text"
-                    id="crop-name"
-                    placeholder="Enter crop name"
-                    required
-                >
-
+                <label for="crop-name" data-i18n="crop.fields.cropName">Crop Name</label>
+                <div class="field-help-hint">
+                    🌾 <em>Identifies your plant so AI selects the exact disease diagnostic model.</em>
+                </div>
+                <input type="text" id="crop-name" data-i18n-placeholder="crop.placeholders.enterCropName" placeholder="Enter crop name (e.g. Tomato, Wheat, Rice)" required>
             </div>
 
-
-            <!-- Quantity -->
+            <!-- 2. HARVEST DATE -->
             <div class="form-group">
-
-                <label for="quantity">
-                    Quantity (kg)
-                </label>
-
-                <input
-                    type="number"
-                    id="quantity"
-                    placeholder="Enter quantity"
-                    min="1"
-                    required
-                >
-
+                <label for="harvest-date" data-i18n="crop.fields.harvestDate">Expected Harvest Date</label>
+                <div class="field-help-hint">
+                    📅 <em>Allows verified buyers to plan transport and commit to purchase in advance.</em>
+                </div>
+                <input type="date" id="harvest-date" required>
             </div>
 
-
-            <!-- Harvest Date -->
+            <!-- 3. LOCATION -->
             <div class="form-group">
-
-                <label for="harvest-date">
-                    Expected Harvest Date
-                </label>
-
-                <input
-                    type="date"
-                    id="harvest-date"
-                    required
-                >
-
+                <label for="location" data-i18n="crop.fields.farmLocation">Farm Location</label>
+                <div class="field-help-hint">
+                    📍 <em>Matches your district to live weather forecasts for 48-hour rain spray alerts.</em>
+                </div>
+                <input type="text" id="location" data-i18n-placeholder="crop.placeholders.enterLocation" placeholder="Enter farm location (e.g. Ludhiana, Punjab)" required>
             </div>
 
-
-            <!-- Location -->
+            <!-- 4. FARM AREA -->
             <div class="form-group">
-
-                <label for="location">
-                    Farm Location
-                </label>
-
-                <input
-                    type="text"
-                    id="location"
-                    placeholder="Enter your farm location"
-                    required
-                >
-
+                <label for="farm-area" data-i18n="crop.fields.farmArea">Farm Area (acres)</label>
+                <div class="field-help-hint">
+                    📐 <em>Used to compute total treatment volume, seed rate, and yield estimates.</em>
+                </div>
+                <input type="number" id="farm-area" min="0.01" step="0.01" placeholder="e.g. 2.5" required>
             </div>
 
-
-            <!-- Crop Image -->
+            <!-- 5. GROWTH STAGE -->
             <div class="form-group">
-
-                <label for="crop-image">
-                    Upload Crop Image
-                </label>
-
-                <input
-                    type="file"
-                    id="crop-image"
-                    accept="image/*"
-                    required
-                >
-
+                <label for="growth-stage" data-i18n="crop.fields.growthStage">Growth Stage</label>
+                <div class="field-help-hint">
+                    🌱 <em>Crops need different remedies and nutrient care at each stage of growth.</em>
+                </div>
+                <select id="growth-stage" required>
+                    <option value="" data-i18n="crop.growthStage.select">Select growth stage</option>
+                    <option value="seedling" data-i18n="crop.growthStage.seedling">Seedling</option>
+                    <option value="vegetative" data-i18n="crop.growthStage.vegetative">Vegetative</option>
+                    <option value="flowering" data-i18n="crop.growthStage.flowering">Flowering</option>
+                    <option value="fruiting" data-i18n="crop.growthStage.fruiting">Fruiting</option>
+                    <option value="maturity" data-i18n="crop.growthStage.maturity">Maturity</option>
+                </select>
             </div>
 
+            <!-- 6. IRRIGATION METHOD -->
+            <div class="form-group">
+                <label for="irrigation-method" data-i18n="crop.fields.irrigationMethod">Irrigation Method</label>
+                <div class="field-help-hint">
+                    💧 <em>Tells us how water reaches your crop to prevent fungal spread from overhead spray.</em>
+                </div>
+                <select id="irrigation-method" required>
+                    <option value="" data-i18n="crop.irrigationMethod.select">Select irrigation method</option>
+                    <option value="drip" data-i18n="crop.irrigationMethod.drip">Drip</option>
+                    <option value="sprinkler" data-i18n="crop.irrigationMethod.sprinkler">Sprinkler</option>
+                    <option value="flood" data-i18n="crop.irrigationMethod.flood">Flood</option>
+                    <option value="furrow" data-i18n="crop.irrigationMethod.furrow">Furrow</option>
+                    <option value="rainfed" data-i18n="crop.irrigationMethod.rainfed">Rainfed</option>
+                </select>
+            </div>
 
-            <!-- Image Preview -->
+            <!-- 7. IRRIGATION STATUS -->
+            <div class="form-group">
+                <label for="irrigation-status" data-i18n="crop.fields.irrigationStatus">Irrigation Status</label>
+                <div class="field-help-hint">
+                    🌊 <em>Detects if soil is dry or waterlogged, which triggers root rot pathogens.</em>
+                </div>
+                <select id="irrigation-status" required>
+                    <option value="" data-i18n="crop.irrigationStatus.select">Select irrigation status</option>
+                    <option value="dry" data-i18n="crop.irrigationStatus.dry">Dry</option>
+                    <option value="normal" data-i18n="crop.irrigationStatus.normal">Normal</option>
+                    <option value="wet" data-i18n="crop.irrigationStatus.wet">Wet</option>
+                    <option value="waterlogged" data-i18n="crop.irrigationStatus.waterlogged">Waterlogged</option>
+                </select>
+            </div>
+
+            <!-- 8. RECENT RAINFALL -->
+            <div class="form-group">
+                <label for="recent-rainfall" data-i18n="crop.fields.recentRainfall">Recent Rainfall</label>
+                <div class="field-help-hint">
+                    🌧️ <em>Helps determine if recent rain washed off past sprays or increased disease humidity.</em>
+                </div>
+                <select id="recent-rainfall" required>
+                    <option value="" data-i18n="crop.rainfall.select">Select rainfall level</option>
+                    <option value="none" data-i18n="crop.rainfall.none">None</option>
+                    <option value="low" data-i18n="crop.rainfall.low">Low</option>
+                    <option value="moderate" data-i18n="crop.rainfall.moderate">Moderate</option>
+                    <option value="heavy" data-i18n="crop.rainfall.heavy">Heavy</option>
+                </select>
+            </div>
+
+            <!-- 9. HUMIDITY -->
+            <div class="form-group">
+                <label for="humidity" data-i18n="crop.fields.humidity">Humidity</label>
+                <div class="field-help-hint">
+                    🌫️ <em>High humidity creates warm, moist air where fungal spores multiply rapidly.</em>
+                </div>
+                <select id="humidity" required>
+                    <option value="" data-i18n="crop.humidity.select">Select humidity</option>
+                    <option value="low" data-i18n="crop.humidity.low">Low</option>
+                    <option value="moderate" data-i18n="crop.humidity.moderate">Moderate</option>
+                    <option value="high" data-i18n="crop.humidity.high">High</option>
+                </select>
+            </div>
+
+            <!-- 10. FERTILIZER APPLIED -->
+            <div class="form-group">
+                <label for="fertilizer-applied" data-i18n="crop.fields.fertilizerApplied">Fertilizer Applied</label>
+                <div class="field-help-hint">
+                    🧪 <em>Ensures remedy advice avoids harmful chemical reactions with applied nutrients.</em>
+                </div>
+                <select id="fertilizer-applied" required>
+                    <option value="" data-i18n="crop.fertilizer.select">Select fertilizer</option>
+                    <option value="None" data-i18n="crop.fertilizer.none">None</option>
+                    <option value="Urea" data-i18n="crop.fertilizer.urea">Urea</option>
+                    <option value="DAP" data-i18n="crop.fertilizer.dap">DAP</option>
+                    <option value="NPK" data-i18n="crop.fertilizer.npk">NPK</option>
+                    <option value="MOP (Potassium)" data-i18n="crop.fertilizer.mop">MOP (Potassium)</option>
+                    <option value="SSP" data-i18n="crop.fertilizer.ssp">SSP</option>
+                    <option value="Compost" data-i18n="crop.fertilizer.compost">Compost</option>
+                    <option value="Farmyard Manure (FYM)" data-i18n="crop.fertilizer.fym">Farmyard Manure (FYM)</option>
+                    <option value="Vermicompost" data-i18n="crop.fertilizer.vermicompost">Vermicompost</option>
+                    <option value="Organic Fertilizer" data-i18n="crop.fertilizer.organic">Organic Fertilizer</option>
+                    <option value="Micronutrient Fertilizer" data-i18n="crop.fertilizer.micronutrient">Micronutrient Fertilizer</option>
+                    <option value="Other" data-i18n="crop.fertilizer.other">Other</option>
+                </select>
+            </div>
+
+            <!-- 12. PREVIOUS CROP -->
+            <div class="form-group">
+                <label for="previous-crop" data-i18n="crop.fields.previousCrop">Previous Crop</label>
+                <div class="field-help-hint">
+                    🔄 <em>Tracks soil disease history and guides crop rotation to break pathogen cycles.</em>
+                </div>
+                <input type="text" id="previous-crop" placeholder="e.g. Wheat, Rice, Mustard" required>
+            </div>
+
+            <!-- 13. DISEASE SEVERITY -->
+            <div class="form-group">
+                <label for="disease-severity" data-i18n="crop.fields.diseaseSeverity">Observed Disease Severity</label>
+                <div class="field-help-hint">
+                    🔍 <em>Determines if mild bio-pesticides or immediate chemical action is required.</em>
+                </div>
+                <select id="disease-severity" required>
+                    <option value="" data-i18n="crop.diseaseSeverity.select">Select severity</option>
+                    <option value="low" data-i18n="crop.diseaseSeverity.low">Low</option>
+                    <option value="moderate" data-i18n="crop.diseaseSeverity.moderate">Moderate</option>
+                    <option value="high" data-i18n="crop.diseaseSeverity.high">High</option>
+                </select>
+            </div>
+
+            <!-- 14. IMAGE UPLOAD -->
+            <div class="form-group">
+                <label for="crop-image" data-i18n="crop.fields.uploadImage">Upload Crop Image</label>
+                <div class="field-help-hint">
+                    📸 <em>Take a clear, well-lit photo of an infected leaf for accurate AI detection.</em>
+                </div>
+                <input type="file" id="crop-image" accept="image/jpeg,image/png,image/jpg" required>
+            </div>
+
             <div class="preview-container">
-
-                <img
-                    id="image-preview"
-                    src=""
-                    alt="Crop image preview"
-                >
-
+                <img id="image-preview" src="" alt="Crop image preview">
             </div>
 
-
-            <!-- Submit -->
-            <button type="submit" id="analyze-button">
+            <button type="button" id="analyze-button" data-i18n="crop.upload.analyzeButton">
                 Analyze Crop
             </button>
 
@@ -129,10 +233,23 @@
         <p id="message"></p>
 
     </section>
+    </main>
 
+        <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
+    <a href="/frontend/pages/voice-assistant.html?from_page=upload-crop" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
+        title="Voice Farming Assistant / आवाज से पूछें">
+        <div class="voice-mic-icon-box">
+            <div class="voice-pulse-ring"></div>
+            🎙️
+        </div>
+        <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
+    </a>
 
-    <script src="/scripts/upload-crop.js"></script>
-
+    <!-- SCRIPTS -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/auth.js"></script>
+    <script src="/frontend/scripts/upload-crop.js"></script>
 </body>
 
 </html>

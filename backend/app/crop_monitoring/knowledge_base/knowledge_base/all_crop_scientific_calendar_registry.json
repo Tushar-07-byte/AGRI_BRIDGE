@@ -1,0 +1,1906 @@
+{
+    "wheat": {
+        "crop_id": "wheat",
+        "crop_name": "Wheat",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Wheat",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "rice": {
+        "crop_id": "rice",
+        "crop_name": "Rice",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Rice",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "apple": {
+        "crop_id": "apple",
+        "crop_name": "Apple",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Apple",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "blueberry": {
+        "crop_id": "blueberry",
+        "crop_name": "Blueberry",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Blueberry",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "cherry": {
+        "crop_id": "cherry",
+        "crop_name": "Cherry",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Cherry",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "corn": {
+        "crop_id": "corn",
+        "crop_name": "Corn",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Corn",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "grape": {
+        "crop_id": "grape",
+        "crop_name": "Grape",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Grape",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "orange": {
+        "crop_id": "orange",
+        "crop_name": "Orange",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Orange",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "peach": {
+        "crop_id": "peach",
+        "crop_name": "Peach",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Peach",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "pepper": {
+        "crop_id": "pepper",
+        "crop_name": "Pepper",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Pepper",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "potato": {
+        "crop_id": "potato",
+        "crop_name": "Potato",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Potato",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "raspberry": {
+        "crop_id": "raspberry",
+        "crop_name": "Raspberry",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Raspberry",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "soybean": {
+        "crop_id": "soybean",
+        "crop_name": "Soybean",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Soybean",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "squash": {
+        "crop_id": "squash",
+        "crop_name": "Squash",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Squash",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "strawberry": {
+        "crop_id": "strawberry",
+        "crop_name": "Strawberry",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Strawberry",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "tomato": {
+        "crop_id": "tomato",
+        "crop_name": "Tomato",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Tomato",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    }
+}

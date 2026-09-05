@@ -1,0 +1,17 @@
+{
+  "system": "AgriBridge AI",
+  "module": "Custom LLM Farmer Guidance Engine",
+  "version": "1.0",
+  "status": "CONTEXT_READY",
+  "llm_connected": false,
+  "architecture": "Monitoring Engine → Structured Context → LLM → Farmer Guidance",
+  "llm_role": "Explain verified monitoring decisions",
+  "decision_engine_authority": true,
+  "llm_can_override_decisions": false,
+  "weather_source": "LIVE_REAL",
+  "iot_source": "SYNTHETIC_HACKATHON_DEMO",
+  "physical_iot_connected": false,
+  "context_file": "/content/drive/MyDrive/AgriBridge_AI/Ultra_Crop_Monitoring_IoT_Telemetry/results/llm_guidance_context.json",
+  "request_file": "/content/drive/MyDrive/AgriBridge_AI/Ultra_Crop_Monitoring_IoT_Telemetry/results/llm_request_payload.json",
+  "output_file": "/content/drive/MyDrive/AgriBridge_AI/Ultra_Crop_Monitoring_IoT_Telemetry/results/farmer_guidance.json"
+}

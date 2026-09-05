@@ -1,0 +1,72 @@
+{
+    "farmer_context": {
+        "farmer_id": "TEST_FARMER_001",
+        "location": {
+            "country": "India",
+            "state": "Uttar Pradesh",
+            "district": "Example District",
+            "village": "Example Village",
+            "latitude": null,
+            "longitude": null
+        }
+    },
+    "crop_context": {
+        "crop_id": "wheat",
+        "crop_name": "Wheat",
+        "variety": "",
+        "planting_date": "2026-09-01",
+        "days_after_planting": 0,
+        "growth_stage": "Sowing"
+    },
+    "recommended_activity": {
+        "irrigation": "",
+        "fertilizer": "",
+        "crop_protection_reference": ""
+    },
+    "weather_context": {
+        "current_weather": {
+            "temperature": 28,
+            "humidity": 65,
+            "rainfall": 0,
+            "wind_speed": 8,
+            "weather_condition": "Clear"
+        },
+        "forecast": {
+            "forecast_days": 7,
+            "daily": []
+        },
+        "agricultural_context": {
+            "rain_expected": false,
+            "heavy_rain_expected": false,
+            "high_temperature": false,
+            "low_temperature": false,
+            "high_wind": false,
+            "high_humidity": false
+        }
+    },
+    "monitoring_context": {
+        "timing_status": "overdue",
+        "weather_decision": "Keep",
+        "weather_reasons": [],
+        "farmer_action_required": true
+    },
+    "disease_monitoring_policy": {
+        "inspection_guidance_only": true,
+        "inspection_message": null,
+        "diagnosis": false,
+        "prediction": false,
+        "model_inference": false,
+        "redirect_to_disease_detection": true
+    },
+    "llm_instructions": {
+        "use_scientific_calendar": true,
+        "use_weather_context": true,
+        "use_location_context": true,
+        "use_crop_context": true,
+        "give_simple_farmer_guidance": true,
+        "avoid_unverified_claims": true,
+        "do_not_invent_agricultural_timings": true,
+        "do_not_diagnose_disease": true,
+        "provide_reasoning": true
+    }
+}

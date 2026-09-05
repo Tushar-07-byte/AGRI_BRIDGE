@@ -1,0 +1,41 @@
+{
+  "farmer": {
+    "country": "India",
+    "state": "uttar pradesh",
+    "district": "sultanpur",
+    "village": "Dhanpatganj",
+    "crop": "rice",
+    "planting_date": "2026-09-02",
+    "current_stage": "flowering"
+  },
+  "weather": {
+    "humidity": 79,
+    "current_rainfall_mm": 0.5,
+    "seven_day_rainfall_mm": 154.0,
+    "minimum_temperature_c": 24.4,
+    "maximum_temperature_c": 30.9,
+    "maximum_wind_kmh": 21.6,
+    "risk": "moderate"
+  },
+  "risk": {
+    "risk_level": "moderate",
+    "risk_score": 0.4,
+    "primary_risk": "weather",
+    "action_required": true
+  },
+  "action": {
+    "what": "Review planned field operations against current weather conditions.",
+    "when": "2026-09-03",
+    "timing": "Within 24 hours, subject to weather re-check",
+    "priority": "moderate"
+  },
+  "notification": {
+    "status": "PENDING",
+    "backend_delivery_required": true,
+    "weather_recheck_required": true
+  },
+  "field_agent": {
+    "required": false
+  },
+  "task_status": "PENDING"
+}

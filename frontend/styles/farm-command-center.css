@@ -1,0 +1,1232 @@
+/* ==========================================================================
+   AGRIBRIDGE — AI FARM COMMAND CENTER STYLESHEET
+   Agro-Tech Editorial Design System (Production Ready)
+   ========================================================================== */
+
+:root {
+    --ab-primary-green: #315C2A;
+    --ab-primary-dark: #1E3B19;
+    --ab-primary-light: #4D8B42;
+    --ab-light-accent: #DCE8D2;
+    --ab-cream-bg: #F5F5EF;
+    --ab-card-bg: #FFFFFF;
+    --ab-text-dark: #1A2617;
+    --ab-text-muted: #5A6E55;
+    --ab-border-color: #E2E8DC;
+    --ab-gold: #D4A373;
+    --ab-gold-light: #FFF4E5;
+
+    /* Risk & Status Tokens */
+    --risk-low-bg: #E8F5E9;
+    --risk-low-text: #2E7D32;
+    --risk-med-bg: #FEF3C7;
+    --risk-med-text: #B45309;
+    --risk-high-bg: #FEE2E2;
+    --risk-high-text: #DC2626;
+
+    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+    --ab-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --ab-shadow-md: 0 4px 14px rgba(30, 59, 25, 0.08);
+    --ab-shadow-lg: 0 10px 30px rgba(30, 59, 25, 0.12);
+    --ab-radius-sm: 8px;
+    --ab-radius-md: 14px;
+    --ab-radius-lg: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.fcc-body {
+    background-color: var(--ab-cream-bg);
+    color: var(--ab-text-dark);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   TOP NAVIGATION BAR (UNIFIED DESIGN)
+   ========================================================================== */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 36px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--ab-border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+}
+
+.logo img {
+    height: 42px;
+    object-fit: contain;
+    display: block;
+}
+
+.mid {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mid a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+}
+
+.mid a:hover {
+    color: var(--ab-primary-green);
+    background: #E8F5E9;
+}
+
+.mid a.active {
+    color: #FFFFFF !important;
+    background: var(--ab-primary-green) !important;
+    box-shadow: 0 2px 8px rgba(49, 92, 42, 0.25);
+}
+
+.register {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-role-badge {
+    background: #ECFDF5;
+    color: #065F46;
+    border: 1px solid #A7F3D0;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stylish-btn {
+    padding: 8px 18px;
+    border-radius: 24px;
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ab-btn-secondary {
+    background: #F1F5F9;
+    color: #334155;
+    border: 1px solid #CBD5E1;
+}
+
+.ab-btn-secondary:hover {
+    background: #E2E8F0;
+    color: #0F172A;
+}
+
+/* Offline Status Toggle Button */
+.fcc-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.fcc-status-online {
+    background: #EBF3E7;
+    color: #315C2A;
+    border-color: #C3DFC0;
+}
+
+.fcc-status-offline {
+    background: #FEE2E2;
+    color: #DC2626;
+    border-color: #FECACA;
+}
+
+.fcc-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+/* Farm Profile Chip */
+.fcc-profile-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--ab-cream-bg);
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: 1px solid var(--ab-border-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.fcc-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: var(--ab-radius-sm);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ab-primary-green);
+    background: var(--ab-light-accent);
+    transition: background 0.2s;
+}
+
+.fcc-nav-link:hover {
+    background: #c7dbb9;
+}
+
+/* ==========================================================================
+   MAIN LAYOUT & GRID
+   ========================================================================== */
+
+.fcc-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px 28px;
+    width: 100%;
+    flex: 1;
+}
+
+/* Grand Finale 1-Click Banner */
+.fcc-demo-banner {
+    background: linear-gradient(135deg, #1E3B19 0%, #315C2A 100%);
+    color: #FFFFFF;
+    border-radius: var(--ab-radius-md);
+    padding: 16px 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--ab-shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.fcc-demo-banner-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.fcc-demo-icon {
+    font-size: 1.8rem;
+}
+
+.fcc-demo-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.fcc-demo-desc {
+    font-size: 0.82rem;
+    opacity: 0.85;
+}
+
+.fcc-demo-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.fcc-demo-btn {
+    background: #FFFFFF;
+    color: var(--ab-primary-green);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    border-radius: var(--ab-radius-sm);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.fcc-demo-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   SCENARIO CONTROL BAR
+   ========================================================================== */
+
+.fcc-scenario-bar {
+    background: var(--ab-card-bg);
+    border: 1px solid var(--ab-border-color);
+    border-radius: var(--ab-radius-md);
+    padding: 14px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--ab-shadow-sm);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.fcc-scenario-title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fcc-scenario-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ab-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.fcc-scenario-chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.fcc-scenario-btn {
+    background: var(--ab-cream-bg);
+    border: 1px solid var(--ab-border-color);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--ab-text-dark);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.fcc-scenario-btn:hover {
+    border-color: var(--ab-primary-green);
+    background: #EBF3E7;
+}
+
+.fcc-scenario-btn.active {
+    background: var(--ab-primary-green);
+    color: #FFFFFF;
+    border-color: var(--ab-primary-green);
+    box-shadow: 0 2px 6px rgba(49, 92, 42, 0.25);
+}
+
+.fcc-sim-badge {
+    background: #FEF3C7;
+    color: #B45309;
+    border: 1px solid #FCD34D;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   TOP SECTION: FARM HEALTH SCORE & OVERVIEW
+   ========================================================================== */
+
+.fcc-hero-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 960px) {
+    .fcc-hero-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fcc-score-card {
+    background: var(--ab-card-bg);
+    border: 1px solid var(--ab-border-color);
+    border-radius: var(--ab-radius-md);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: var(--ab-shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.fcc-score-dial-wrap {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.fcc-score-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.fcc-score-circle-bg {
+    fill: none;
+    stroke: var(--ab-cream-bg);
+    stroke-width: 10;
+}
+
+.fcc-score-circle-val {
+    fill: none;
+    stroke: var(--ab-primary-green);
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 377;
+    stroke-dashoffset: 53; /* default ~86% */
+    transition: stroke-dashoffset 0.8s ease, stroke 0.4s ease;
+}
+
+.fcc-score-num-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fcc-score-num {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--ab-primary-green);
+    line-height: 1;
+}
+
+.fcc-score-denom {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--ab-text-muted);
+}
+
+.fcc-score-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ab-text-dark);
+    margin-bottom: 4px;
+}
+
+.fcc-score-status-pill {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+    background: #EBF3E7;
+    color: #315C2A;
+    margin-bottom: 8px;
+}
+
+.fcc-score-desc {
+    font-size: 0.8rem;
+    color: var(--ab-text-muted);
+    line-height: 1.4;
+}
+
+/* Modular 5-Risk Cards Grid */
+.fcc-risk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+}
+
+.fcc-risk-card {
+    background: var(--ab-card-bg);
+    border: 1px solid var(--ab-border-color);
+    border-radius: var(--ab-radius-md);
+    padding: 16px;
+    box-shadow: var(--ab-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-top: 4px solid var(--ab-primary-green);
+}
+
+.fcc-risk-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--ab-shadow-md);
+}
+
+.fcc-risk-card.risk-low {
+    border-top-color: #2E7D32;
+}
+
+.fcc-risk-card.risk-medium {
+    border-top-color: #F59E0B;
+}
+
+.fcc-risk-card.risk-high {
+    border-top-color: #DC2626;
+}
+
+.fcc-risk-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.fcc-risk-icon-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.fcc-risk-badge {
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.fcc-risk-badge.badge-low {
+    background: var(--risk-low-bg);
+    color: var(--risk-low-text);
+}
+
+.fcc-risk-badge.badge-med {
+    background: var(--risk-med-bg);
+    color: var(--risk-med-text);
+}
+
+.fcc-risk-badge.badge-high {
+    background: var(--risk-high-bg);
+    color: var(--risk-high-text);
+}
+
+.fcc-risk-metric-box {
+    margin-bottom: 10px;
+}
+
+.fcc-risk-score-val {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--ab-text-dark);
+}
+
+.fcc-risk-factors {
+    font-size: 0.75rem;
+    color: var(--ab-text-muted);
+    line-height: 1.35;
+    margin-bottom: 8px;
+}
+
+.fcc-risk-action-hint {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--ab-primary-green);
+    background: #F2F7EF;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border-left: 3px solid var(--ab-primary-green);
+}
+
+/* ==========================================================================
+   VIRTUAL IoT TELEMETRY GRID (HARDWARE-READY PROTOTYPE)
+   ========================================================================== */
+
+.fcc-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.fcc-section-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fcc-section-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--ab-text-dark);
+}
+
+.fcc-telemetry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.fcc-telemetry-card {
+    background: var(--ab-card-bg);
+    border: 1px solid var(--ab-border-color);
+    border-radius: var(--ab-radius-md);
+    padding: 16px;
+    box-shadow: var(--ab-shadow-sm);
+    position: relative;
+}
+
+.fcc-telemetry-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.fcc-telemetry-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--ab-text-muted);
+    text-transform: uppercase;
+}
+
+.fcc-telemetry-icon {
+    font-size: 1.1rem;
+}
+
+.fcc-telemetry-val-row {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.fcc-telemetry-val {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--ab-primary-green);
+}
+
+.fcc-telemetry-unit {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ab-text-muted);
+}
+
+.fcc-telemetry-status {
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--ab-text-muted);
+}
+
+.fcc-telemetry-bar-bg {
+    width: 100%;
+    height: 4px;
+    background: var(--ab-cream-bg);
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.fcc-telemetry-bar-fill {
+    height: 100%;
+    background: var(--ab-primary-green);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+/* ==========================================================================
+   MULTI-AGENT REASONING & WHY DECISION PANEL
+   ========================================================================== */
+
+.fcc-agents-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 960px) {
+    .fcc-agents-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fcc-card {
+    background: var(--ab-card-bg);
+    border: 1px solid var(--ab-border-color);
+    border-radius: var(--ab-radius-md);
+    padding: 20px;
+    box-shadow: var(--ab-shadow-sm);
+}
+
+.fcc-agent-signals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.fcc-agent-signal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: var(--ab-radius-sm);
+    background: var(--ab-cream-bg);
+    border: 1px solid var(--ab-border-color);
+}
+
+.fcc-agent-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fcc-agent-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ab-text-dark);
+}
+
+.fcc-agent-output {
+    font-size: 0.8rem;
+    color: var(--ab-text-muted);
+}
+
+.fcc-agent-status-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+/* Why This Decision Panel */
+.fcc-why-panel {
+    background: #F9FBF8;
+    border: 1px solid #D7E5D3;
+    border-radius: var(--ab-radius-md);
+    padding: 18px;
+    margin-top: 14px;
+}
+
+.fcc-why-title {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--ab-primary-green);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fcc-evidence-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.fcc-evidence-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--ab-text-dark);
+}
+
+.fcc-evidence-check {
+    color: var(--ab-primary-green);
+    font-weight: 800;
+}
+
+.fcc-confidence-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px dashed #D7E5D3;
+    font-size: 0.82rem;
+}
+
+.fcc-confidence-pill {
+    background: #EBF3E7;
+    color: #315C2A;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+/* ==========================================================================
+   AI ACTION PLAN & CLOSED-LOOP VERIFICATION
+   ========================================================================== */
+
+.fcc-action-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.fcc-action-item {
+    background: var(--ab-card-bg);
+    border: 1px solid var(--ab-border-color);
+    border-radius: var(--ab-radius-md);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--ab-shadow-sm);
+    transition: all 0.2s;
+    border-left: 5px solid var(--ab-primary-green);
+    gap: 14px;
+}
+
+.fcc-action-item.priority-p1 {
+    border-left-color: #DC2626;
+}
+
+.fcc-action-item.priority-p2 {
+    border-left-color: #F59E0B;
+}
+
+.fcc-action-item.priority-p3 {
+    border-left-color: #2E7D32;
+}
+
+.fcc-action-item.status-completed {
+    opacity: 0.75;
+    background: #F8FAF7;
+    border-left-color: #9CA3AF;
+}
+
+.fcc-action-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.fcc-priority-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 3px 6px;
+    border-radius: 4px;
+    background: #FEE2E2;
+    color: #DC2626;
+}
+
+.fcc-priority-tag.p2 {
+    background: #FEF3C7;
+    color: #B45309;
+}
+
+.fcc-priority-tag.p3 {
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
+.fcc-action-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.fcc-action-name {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--ab-text-dark);
+}
+
+.fcc-action-meta {
+    font-size: 0.78rem;
+    color: var(--ab-text-muted);
+}
+
+.fcc-action-why {
+    font-size: 0.78rem;
+    color: var(--ab-primary-green);
+    font-weight: 500;
+}
+
+.fcc-action-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fcc-action-btn {
+    padding: 8px 14px;
+    border-radius: var(--ab-radius-sm);
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.fcc-btn-complete {
+    background: var(--ab-primary-green);
+    color: #FFFFFF;
+}
+
+.fcc-btn-complete:hover {
+    background: var(--ab-primary-dark);
+}
+
+/* Verification Result Box */
+.fcc-verification-modal {
+    background: #F0FDF4;
+    border: 1px solid #BBF7D0;
+    border-radius: var(--ab-radius-md);
+    padding: 16px;
+    margin-top: 14px;
+    display: none;
+}
+
+.fcc-verification-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #166534;
+    margin-bottom: 8px;
+}
+
+.fcc-verification-body {
+    font-size: 0.82rem;
+    color: #15803D;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   DECISION HISTORY & AUDIT LOG
+   ========================================================================== */
+
+.fcc-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 280px;
+    overflow-y: auto;
+    margin-top: 12px;
+}
+
+.fcc-history-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px;
+    border-radius: var(--ab-radius-sm);
+    background: var(--ab-cream-bg);
+    font-size: 0.8rem;
+}
+
+.fcc-history-time {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--ab-text-muted);
+    min-width: 60px;
+}
+
+.fcc-history-event {
+    color: var(--ab-text-dark);
+    line-height: 1.35;
+}
+
+/* ==========================================================================
+   OFFLINE QUEUE DRAWER & TOASTS
+   ========================================================================== */
+
+.fcc-offline-queue-bar {
+    background: #FEF3C7;
+    border: 1px solid #FCD34D;
+    border-radius: var(--ab-radius-md);
+    padding: 12px 18px;
+    margin-bottom: 20px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fcc-toast-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fcc-toast {
+    background: #1E3B19;
+    color: #FFFFFF;
+    padding: 12px 18px;
+    border-radius: var(--ab-radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: var(--ab-shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: toastSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border-left: 4px solid var(--ab-gold);
+}
+
+@keyframes toastSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   PHASE 4: JUDGE-FACING MULTI-SIGNAL DECISION & PROVENANCE MATRIX
+   ========================================================================== */
+
+.fcc-judge-card {
+    background: #FFFFFF;
+    border: 1.5px solid #CBD5E1;
+    border-radius: var(--ab-radius-md);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
+.fcc-judge-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #E2E8F0;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.fcc-judge-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0F172A;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prov-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid transparent;
+}
+
+.prov-live {
+    background: #DCFCE7;
+    color: #15803D;
+    border-color: #86EFAC;
+}
+
+.prov-simulated {
+    background: #DBEAFE;
+    color: #1D4ED8;
+    border-color: #93C5FD;
+}
+
+.prov-cached {
+    background: #F3E8FF;
+    color: #7E22CE;
+    border-color: #D8B4FE;
+}
+
+.prov-derived {
+    background: #FEF3C7;
+    color: #B45309;
+    border-color: #FCD34D;
+}
+
+.prov-declared {
+    background: #E0F2FE;
+    color: #0369A1;
+    border-color: #7DD3FC;
+}
+
+.prov-unavailable {
+    background: #F1F5F9;
+    color: #64748B;
+    border-color: #CBD5E1;
+}
+
+.fcc-decision-grid-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.fcc-decision-stat-box {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 14px;
+}
+
+.fcc-decision-stat-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #64748B;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.fcc-decision-stat-val {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.fcc-matrix-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.fcc-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+.fcc-matrix-table th {
+    background: #F1F5F9;
+    color: #334155;
+    font-weight: 700;
+    padding: 10px 12px;
+    border-bottom: 1px solid #CBD5E1;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.fcc-matrix-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #F1F5F9;
+    color: #1E293B;
+}
+
+.fcc-matrix-table tr:hover {
+    background: #F8FAFC;
+}
+
+.fcc-trace-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+}
+
+.fcc-trace-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.78rem;
+    text-align: left;
+}
+
+.fcc-trace-table th {
+    background: #F8FAFC;
+    color: #475569;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.fcc-trace-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #F1F5F9;
+    font-family: var(--font-body);
+}
+
+.fcc-rx-locked-banner {
+    background: #FEF2F2;
+    border: 1.5px solid #FCA5A5;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.fcc-rx-locked-title {
+    color: #991B1B;
+    font-weight: 800;
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fcc-rx-locked-desc {
+    color: #7F1D1D;
+    font-size: 0.8rem;
+    margin-top: 2px;
+}
+
+

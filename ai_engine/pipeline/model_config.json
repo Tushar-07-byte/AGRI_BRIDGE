@@ -1,0 +1,17 @@
+{
+    "plantvillage": {
+        "model_name": "AgriBridge_PlantVillage_EfficientNetB0_Stage2_Best.keras",
+        "model_path": "AgriBridge_PlantVillage_EfficientNetB0_Stage2_Best.keras",
+        "num_classes": 38
+    },
+    "rice": {
+        "model_name": "AgriBridge Rice EfficientNetB0 V2",
+        "model_path": "AgriBridge_Rice_EfficientNetB0_V2_Phase2_Best.keras",
+        "num_classes": 6
+    },
+    "wheat": {
+        "model_name": "AgriBridge Wheat EfficientNetB0 Stage 2 Best",
+        "model_path": "AgriBridge_Wheat_EfficientNetB0_Stage2_Best.keras",
+        "num_classes": 5
+    }
+}

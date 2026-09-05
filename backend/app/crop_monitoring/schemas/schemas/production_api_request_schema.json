@@ -1,0 +1,38 @@
+{
+    "system": {
+        "country": "India",
+        "production_mode": true,
+        "date_tracking": true,
+        "live_weather": true,
+        "gemini_enabled": true,
+        "dynamic_calendar": true,
+        "notifications": true,
+        "marketplace": true
+    },
+    "required_fields": [
+        "state",
+        "district",
+        "village",
+        "crop_id"
+    ],
+    "optional_fields": [
+        "farmer_id",
+        "planting_date",
+        "current_stage",
+        "latitude",
+        "longitude"
+    ],
+    "supported_crop_source": "/content/drive/MyDrive/AgriBridge_AI/Crop_Monitoring/knowledge_base/crop_registry.json",
+    "input_rules": {
+        "country": "India",
+        "state": "Dynamic Indian state",
+        "district": "Dynamic Indian district",
+        "village": "Dynamic Indian village",
+        "crop_id": "One of the registered AgriBridge crops",
+        "planting_date": "Optional YYYY-MM-DD",
+        "current_stage": "Optional crop lifecycle stage",
+        "latitude": "Optional geographic coordinate",
+        "longitude": "Optional geographic coordinate"
+    },
+    "created_at": "2026-09-01T07:39:38.045195"
+}

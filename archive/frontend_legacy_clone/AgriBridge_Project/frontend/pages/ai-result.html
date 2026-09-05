@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Crop Analysis - AgriBridge</title>
+
+    <link rel="stylesheet" href="/frontend/styles/ai-result.css">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+</head>
+
+<body>
+
+    <main class="analysis-page">
+
+        <section class="analysis-card">
+
+            <h1 data-i18n="aiResult.title">Crop Analysis</h1>
+
+            <p class="description" data-i18n="aiResult.description">
+                Our AI has analyzed your uploaded crop image.
+            </p>
+
+
+            <!-- =========================================
+                 CROP IMAGE
+            ========================================== -->
+
+            <div class="crop-image-container">
+
+                <img
+                    id="crop-image"
+                    src=""
+                    alt="Uploaded crop"
+                >
+
+            </div>
+
+
+            <!-- =========================================
+                 MAIN RESULT
+            ========================================== -->
+
+            <div class="result-section">
+
+                <div id="result-icon" class="result-icon">
+                    🌱
+                </div>
+
+                <h2 id="result-title" data-i18n="aiResult.analyzing">
+                    Analyzing...
+                </h2>
+
+                <p id="result-message" data-i18n="aiResult.loadingAnalysis">
+                    Loading AI analysis...
+                </p>
+
+            </div>
+
+
+            <!-- =========================================
+                 AI ANALYSIS
+            ========================================== -->
+
+            <div
+                id="guidance-section"
+                class="guidance-section">
+
+                <h3 data-i18n="aiResult.analysisRecommendations">AI Analysis & Recommendations</h3>
+
+            </div>
+
+
+            <!-- =========================================
+                 ACTIONS
+            ========================================== -->
+
+            <div class="action-buttons">
+
+                <button
+                    id="continue-button"
+                    type="button"
+                    data-i18n="aiResult.continue">
+                    Continue
+                </button>
+
+                <button
+                    id="resubmit-button"
+                    type="button"
+                    data-i18n="aiResult.resubmit">
+                    Resubmit Image
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/ai-result.js"></script>
+
+</body>
+
+</html>

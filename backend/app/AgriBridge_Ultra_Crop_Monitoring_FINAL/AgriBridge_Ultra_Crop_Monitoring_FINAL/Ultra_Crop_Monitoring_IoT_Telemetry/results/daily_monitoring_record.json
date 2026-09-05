@@ -1,0 +1,217 @@
+{
+  "system": "AgriBridge AI",
+  "module": "Ultra Crop Monitoring with IoT Telemetry",
+  "generated_at": "2026-09-03T19:00:14.417066",
+  "monitoring_date": "2026-09-03",
+  "crop": "Wheat",
+  "crop_start_date": "2026-08-01",
+  "days_after_planting": 33,
+  "current_stage": "Crown Root Initiation (CRI)",
+  "next_stage": "Tillering & Jointing",
+  "days_to_stage_transition": 7,
+  "harvest_status": "GROWING",
+  "days_to_harvest": 67,
+  "data_sources": {
+    "weather": {
+      "mode": "LIVE_REAL",
+      "source": "Open-Meteo",
+      "latitude": 25.3176,
+      "longitude": 82.9739
+    },
+    "iot": {
+      "mode": "SYNTHETIC_DEMO",
+      "telemetry_mode": "SYNTHETIC_HACKATHON_DEMO",
+      "physical_sensor_connected": false
+    }
+  },
+  "live_weather": {
+    "temperature_c": 25.7,
+    "relative_humidity_percent": 94.0,
+    "rainfall_mm": 0.0,
+    "wind_speed_kmh": 10.6,
+    "weather_condition": "Partly cloudy",
+    "precipitation_probability_percent": 0
+  },
+  "iot_telemetry": {
+    "device_id": "AGRIBRIDGE-SIM-IOT-001",
+    "observed_at": "2026-09-03T19:00:16.592583+00:00",
+    "telemetry_mode": "SYNTHETIC_HACKATHON_DEMO",
+    "crop": "Wheat",
+    "crop_stage": "Crown Root Initiation (CRI)",
+    "soil_moisture_percent": 30.56,
+    "soil_temperature_c": 23.62,
+    "air_temperature_c": 25.7,
+    "relative_humidity_percent": 94.0,
+    "rainfall_mm": 0.0,
+    "leaf_wetness": true,
+    "soil_ec_ds_m": 0.93,
+    "soil_ph": 6.49,
+    "light_hours": 6.83,
+    "wind_speed_kmh": 10.6,
+    "physical_sensor_connected": false
+  },
+  "stage_management": {
+    "crop": "Wheat",
+    "stage": "Dough & Maturity",
+    "start_day": 100,
+    "end_day": 120,
+    "irrigation": "5th irrigation around Day 100–105.",
+    "irrigation_frequency": "Final irrigation according to crop and soil condition.",
+    "critical_irrigation": NaN,
+    "irrigation_stop_rule": "Stop all water 15 days before harvest.",
+    "fertilizer": "No fertilizer required.",
+    "fertilizer_dose": NaN,
+    "fertilizer_method": NaN,
+    "organic_management": NaN,
+    "disease_protection": "Monitor for loose smut; no chemical sprays close to harvest.",
+    "pest_protection": "Continue field monitoring until harvest.",
+    "weather_sensitivity": "Avoid late irrigation close to harvest."
+  },
+  "decisions": {
+    "irrigation": {
+      "status": "SCHEDULED",
+      "priority": "LOW",
+      "reason": "Soil moisture is currently adequate. Continue monitoring according to the stage plan."
+    },
+    "disease": {
+      "risk": "HIGH",
+      "action": "Increase disease scouting because moisture conditions are favorable."
+    },
+    "pest": {
+      "risk": "MEDIUM",
+      "action": "Scout crop for pest activity before taking control action."
+    },
+    "weather_stress": {
+      "risk": "LOW",
+      "action": "No major weather stress detected."
+    },
+    "fertilizer": {
+      "status": "SCHEDULED",
+      "plan": "No fertilizer required.",
+      "dose": "nan",
+      "method": "nan",
+      "reason": "Follow the stage-specific fertilizer plan."
+    }
+  },
+  "today_actions": [
+    {
+      "action_id": "IRRIGATION",
+      "title": "Irrigation Monitoring",
+      "status": "SCHEDULED",
+      "priority": "LOW",
+      "reason": "Soil moisture is currently adequate. Continue monitoring according to the stage plan."
+    },
+    {
+      "action_id": "FERTILIZER",
+      "title": "Fertilizer / Nutrition",
+      "status": "SCHEDULED",
+      "priority": "MEDIUM",
+      "reason": "Follow the stage-specific fertilizer plan."
+    },
+    {
+      "action_id": "DISEASE_SCOUTING",
+      "title": "Disease Scouting",
+      "status": "SCHEDULED",
+      "priority": "HIGH",
+      "reason": "Increase disease scouting because moisture conditions are favorable."
+    },
+    {
+      "action_id": "PEST_SCOUTING",
+      "title": "Pest Scouting",
+      "status": "SCHEDULED",
+      "priority": "MEDIUM",
+      "reason": "Scout crop for pest activity before taking control action."
+    }
+  ],
+  "notification_queue": {
+    "system": "AgriBridge AI",
+    "module": "Ultra Crop Monitoring with IoT Telemetry",
+    "generated_at": "2026-09-03T19:00:14.417066",
+    "monitoring_date": "2026-09-03",
+    "crop": "Wheat",
+    "crop_start_date": "2026-08-01",
+    "crop_age_days": 33,
+    "current_stage": "Crown Root Initiation (CRI)",
+    "next_stage": "Tillering & Jointing",
+    "notifications": [
+      {
+        "notification_id": "NTF-02B7F37DF7",
+        "created_at": "2026-09-03T19:00:16.594464",
+        "notification_type": "IRRIGATION_MONITORING",
+        "action_id": "IRRIGATION",
+        "crop": "Wheat",
+        "crop_stage": "Crown Root Initiation (CRI)",
+        "title": "Irrigation Monitoring",
+        "message": "Soil moisture is 30.6%. Continue monitoring irrigation needs.",
+        "priority": "LOW",
+        "status": "SCHEDULED",
+        "scheduled_for": "2026-09-03",
+        "reason": "Soil moisture is currently adequate. Continue monitoring according to the stage plan.",
+        "source": "DECISION_ENGINE",
+        "weather_mode": "LIVE_REAL",
+        "iot_mode": "SYNTHETIC_DEMO",
+        "demo_flag": true
+      },
+      {
+        "notification_id": "NTF-83461DB129",
+        "created_at": "2026-09-03T19:00:16.594590",
+        "notification_type": "FERTILIZER_REMINDER",
+        "action_id": "FERTILIZER",
+        "crop": "Wheat",
+        "crop_stage": "Crown Root Initiation (CRI)",
+        "title": "Fertilizer Scheduled",
+        "message": "Stage-specific fertilizer management is scheduled for Wheat.",
+        "priority": "MEDIUM",
+        "status": "SCHEDULED",
+        "scheduled_for": "2026-09-03",
+        "reason": "Follow the stage-specific fertilizer plan.",
+        "source": "DECISION_ENGINE",
+        "weather_mode": "LIVE_REAL",
+        "iot_mode": "SYNTHETIC_DEMO",
+        "demo_flag": true
+      },
+      {
+        "notification_id": "NTF-59E4E1E0D8",
+        "created_at": "2026-09-03T19:00:16.594714",
+        "notification_type": "DISEASE_ALERT",
+        "action_id": "DISEASE_SCOUTING",
+        "crop": "Wheat",
+        "crop_stage": "Crown Root Initiation (CRI)",
+        "title": "High Disease Risk",
+        "message": "Moisture conditions are favorable for disease development. Scout the crop today.",
+        "priority": "HIGH",
+        "status": "DUE",
+        "scheduled_for": "2026-09-03",
+        "reason": "Increase disease scouting because moisture conditions are favorable.",
+        "source": "DECISION_ENGINE",
+        "weather_mode": "LIVE_REAL",
+        "iot_mode": "SYNTHETIC_DEMO",
+        "demo_flag": true
+      },
+      {
+        "notification_id": "NTF-F698A7B8AC",
+        "created_at": "2026-09-03T19:00:16.594791",
+        "notification_type": "PEST_SCOUTING",
+        "action_id": "PEST_SCOUTING",
+        "crop": "Wheat",
+        "crop_stage": "Crown Root Initiation (CRI)",
+        "title": "Pest Scouting Reminder",
+        "message": "Weather conditions may support pest activity. Scout the crop before taking control action.",
+        "priority": "MEDIUM",
+        "status": "SCHEDULED",
+        "scheduled_for": "2026-09-03",
+        "reason": "Scout crop for pest activity before taking control action.",
+        "source": "DECISION_ENGINE",
+        "weather_mode": "LIVE_REAL",
+        "iot_mode": "SYNTHETIC_DEMO",
+        "demo_flag": true
+      }
+    ],
+    "notification_count": 4,
+    "high_priority_count": 1,
+    "due_count": 1,
+    "postponed_count": 0,
+    "daily_priority": "HIGH"
+  },
+  "llm_ready": true
+}

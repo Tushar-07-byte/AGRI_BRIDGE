@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgriBridge AI Notification Action",
+  "type": "object",
+  "required": [
+    "notification_id",
+    "action"
+  ],
+  "properties": {
+    "notification_id": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "COMPLETE",
+        "POSTPONE",
+        "RESCHEDULE",
+        "CANCEL"
+      ]
+    },
+    "reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "new_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    }
+  }
+}

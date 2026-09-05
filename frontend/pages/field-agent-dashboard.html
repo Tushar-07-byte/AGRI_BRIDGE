@@ -4,159 +4,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Field Agent Dashboard - AgriBridge</title>
-
-    <link rel="stylesheet" href="../styles/field-agent-dashboard.css">
+    <title>Field Agent Operations Hub — AgriBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/field-agent-dashboard.css">
 </head>
 
 <body>
-    <nav class="nav">
+    <div class="dashboard-wrapper">
 
-        <!-- LOGO -->
-
-        <div class="logo">
-            <a href="field-agent-dashboard.html">
-                <img src="/assets/logo/logo.png" alt="Agri-Bridge Logo">
-            </a>
-        </div>
-
-
-        <!-- FIELD AGENT NAVIGATION -->
-
-        <div class="mid">
-
-            <a href="field-agent-dashboard.html" class="active">
-                Dashboard
-            </a>
-
-            <a href="#pending-container">
-                Pending Verification
-            </a>
-
-        </div>
-
-
-        <!-- USER -->
-
-        <div class="register">
-
-            <span class="user-role">
-                👨‍🌾 Field Agent
-            </span>
-
-            <button class="stylish-btn" onclick="window.location.href='/pages/index.html'">
-
-                Logout
-
-            </button>
-
-        </div>
-
-    </nav>
-
-
-
-    <!-- =========================================
-         HEADER
-         ========================================= -->
-
-    <header class="dashboard-header">
-
-        <div>
-            <h1>Field Agent Dashboard</h1>
-            <p>Review and verify farmer crop submissions.</p>
-        </div>
-
-    </header>
-
-
-    <!-- =========================================
-         MAIN CONTENT
-         ========================================= -->
-
-    <main class="dashboard-container">
-
-
-        <!-- =====================================
-             DASHBOARD OVERVIEW
-             ===================================== -->
-
-        <section class="overview-section">
-
-            <h2>Verification Overview</h2>
-
-            <div class="overview-grid">
-
-                <div class="overview-card">
-
-                    <div class="overview-icon">
-                        📋
-                    </div>
-
-                    <div>
-                        <h3>Pending</h3>
-                        <p>3</p>
-                    </div>
-
-                </div>
-
-
-                <div class="overview-card">
-
-                    <div class="overview-icon">
-                        ✅
-                    </div>
-
-                    <div>
-                        <h3>Verified</h3>
-                        <p>12</p>
-                    </div>
-
-                </div>
-
-
-                <div class="overview-card">
-
-                    <div class="overview-icon">
-                        ❌
-                    </div>
-
-                    <div>
-                        <h3>Rejected</h3>
-                        <p>2</p>
-                    </div>
-
-                </div>
-
+        <!-- =========================================================
+             AGRIBRIDGE — UNIFIED MASTER NAVBAR
+             ========================================================= -->
+        <nav class="nav">
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="/frontend/pages/field-agent-dashboard.html">
+                    <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+                </a>
             </div>
 
-        </section>
-
-
-        <!-- =====================================
-             PENDING VERIFICATIONS
-             ===================================== -->
-
-        <section class="pending-section">
-
-            <h2 class="section-title">
-                Pending Verifications
-            </h2>
-
-            <div id="pending-container" class="pending-container">
-
-                <!-- JavaScript will add pending crops here -->
-
+            <!-- NAVIGATION LINKS -->
+            <div class="mid">
+                <a href="/frontend/pages/field-agent-dashboard.html" class="active" data-i18n="nav.dashboard">Dashboard</a>
+                <a href="#pending-section" data-i18n="nav.pendingVerification">Pending Crops</a>
+                <a href="#escalations-section">AI Escalations</a>
+                <a href="/frontend/pages/field-agent-map.html">🗺️ Field Map</a>
+                <a href="/frontend/pages/field-agent-help.html" data-i18n="nav.getHelp">Assistance Hub</a>
             </div>
 
-        </section>
+            <!-- USER & ACTIONS -->
+            <div class="register">
+                <div id="language-selector-container"></div>
+                <span class="user-role-badge">
+                    🌱 Field Agent
+                </span>
+                <button type="button" class="stylish-btn ab-btn-primary" onclick="if(window.AgriBridgeAuth){AgriBridgeAuth.logout();}else{window.location.href='/frontend/pages/login.html';}" data-i18n="nav.logout">
+                    Logout
+                </button>
+            </div>
+        </nav>
 
-    </main>
+        <!-- =========================================
+             MAIN DASHBOARD CONTENT
+             ========================================= -->
+        <main class="dashboard-container">
+
+            <!-- AGENT HERO BANNER -->
+            <section class="agent-hero-banner">
+                <div class="hero-text-side">
+                    <div class="ab-badge ab-badge-gold">🌱 REGIONAL AGRONOMY & QUALITY VERIFICATION</div>
+                    <h1 class="hero-heading" data-i18n="fieldAgent.dashboard.title">
+                        Field Agent Operations Hub
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="fieldAgent.dashboard.description">
+                        Inspect farmer crop submissions, verify harvest quality parameters, and triage borderline AI disease escalations.
+                    </p>
+
+                    <div class="agent-status-chips">
+                        <div class="status-chip">
+                            <span class="chip-dot"></span>
+                            <span>Status: <strong>On Duty • Active</strong></span>
+                        </div>
+                        <div class="status-chip">
+                            <span class="chip-icon">📍</span>
+                            <span>Jurisdiction: <strong>Regional Cluster</strong></span>
+                        </div>
+                        <div class="status-chip">
+                            <span class="chip-icon">⚡</span>
+                            <span>Verification SLA: <strong>24h Target</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QUICK ACTIONS WIDGET -->
+                <div class="agent-quick-card">
+                    <div class="quick-card-header">
+                        <span>⚡ FIELD OPERATIONS</span>
+                    </div>
+                    <div class="quick-card-links">
+                        <a href="/frontend/pages/field-agent-map.html" class="quick-action-link">
+                            <span class="action-icon">🗺️</span>
+                            <div>
+                                <strong>Interactive Field Map</strong>
+                                <small>Geotagged farm locations</small>
+                            </div>
+                        </a>
+                        <a href="/frontend/pages/upload-crop.html" class="quick-action-link">
+                            <span class="action-icon">🔍</span>
+                            <div>
+                                <strong>On-Site Disease Scan</strong>
+                                <small>MobileNetV2 crop diagnostics</small>
+                            </div>
+                        </a>
+                        <a href="/frontend/pages/field-agent-help.html" class="quick-action-link">
+                            <span class="action-icon">🆘</span>
+                            <div>
+                                <strong>Farmer Help Tickets</strong>
+                                <small>Advisory requests</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================================
+                 SUMMARY METRIC CARDS
+                 ========================================= -->
+            <section class="metrics-section">
+                <div class="metrics-grid">
+
+                    <div class="metric-card metric-pending">
+                        <div class="metric-icon-wrap">📋</div>
+                        <div class="metric-data">
+                            <span class="metric-label" data-i18n="fieldAgent.dashboard.pending">Pending Review</span>
+                            <h3 class="metric-value" id="kpi-pending">--</h3>
+                            <small class="metric-hint">Awaiting agent inspection</small>
+                        </div>
+                    </div>
+
+                    <div class="metric-card metric-verified">
+                        <div class="metric-icon-wrap">✅</div>
+                        <div class="metric-data">
+                            <span class="metric-label" data-i18n="fieldAgent.dashboard.verified">Verified Crops</span>
+                            <h3 class="metric-value" id="kpi-verified">--</h3>
+                            <small class="metric-hint">Approved for marketplace</small>
+                        </div>
+                    </div>
+
+                    <div class="metric-card metric-rejected">
+                        <div class="metric-icon-wrap">❌</div>
+                        <div class="metric-data">
+                            <span class="metric-label" data-i18n="fieldAgent.dashboard.rejected">Rejected</span>
+                            <h3 class="metric-value" id="kpi-rejected">--</h3>
+                            <small class="metric-hint">Quality criteria not met</small>
+                        </div>
+                    </div>
+
+                    <div class="metric-card metric-escalations">
+                        <div class="metric-icon-wrap">⚡</div>
+                        <div class="metric-data">
+                            <span class="metric-label">AI Escalations</span>
+                            <h3 class="metric-value" id="kpi-escalations">--</h3>
+                            <small class="metric-hint">Borderline 30-65% confidence</small>
+                        </div>
+                    </div>
+
+                    <div class="metric-card metric-disease" style="border-left: 4px solid #10B981;">
+                        <div class="metric-icon-wrap">🔬</div>
+                        <div class="metric-data">
+                            <span class="metric-label">Disease Scans</span>
+                            <h3 class="metric-value" id="kpi-disease-scans">--</h3>
+                            <small class="metric-hint">Pending Rx verification</small>
+                        </div>
+                    </div>
+
+                    <div class="metric-card metric-visits" style="border-left: 4px solid #EF4444;">
+                        <div class="metric-icon-wrap">🚜</div>
+                        <div class="metric-data">
+                            <span class="metric-label">Field Visits</span>
+                            <h3 class="metric-value" id="kpi-field-visits">--</h3>
+                            <small class="metric-hint">On-site audit assigned</small>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- =========================================
+                 DISEASE DIAGNOSTIC VERIFICATION SECTION (HITL)
+                 ========================================= -->
+            <section id="disease-section" class="dashboard-section">
+                <div class="section-header-row">
+                    <div>
+                        <div class="section-badge badge-warning" style="background:#ECFDF5; color:#065F46; border-color:#A7F3D0;">
+                            🔬 HUMAN-IN-THE-LOOP CLINICAL REVIEW
+                        </div>
+                        <h2 class="section-title">Pending Disease Diagnostic Scans</h2>
+                        <p class="section-desc">
+                            Farmer leaf scans awaiting agronomist review. Approve to issue ICAR agronomic prescription, or Reject to dispatch an on-site field visit. (Isolated from Marketplace).
+                        </p>
+                    </div>
+                    <button class="btn-refresh" onclick="loadDiseaseScansQueue()" title="Refresh Disease Scans">
+                        🔄 Refresh Queue
+                    </button>
+                </div>
+
+                <div id="disease-container" class="disease-grid">
+                    <div class="loading-state">
+                        <div class="spinner"></div>
+                        <p>Loading disease diagnostic scans...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================================
+                 PENDING FIELD VISITS (ON-SITE AUDITS)
+                 ========================================= -->
+            <section id="field-visits-section" class="dashboard-section">
+                <div class="section-header-row">
+                    <div>
+                        <div class="section-badge badge-warning" style="background:#FEF2F2; color:#991B1B; border-color:#FECACA;">
+                            🚜 PHYSICAL ON-SITE AUDITS
+                        </div>
+                        <h2 class="section-title">Pending Field Visits (Dispatches)</h2>
+                        <p class="section-desc">
+                            Crops flagged as requiring physical leaf inspection and agronomist verification before chemical prescription.
+                        </p>
+                    </div>
+                    <button class="btn-refresh" onclick="loadFieldVisitsQueue()" title="Refresh Field Visits">
+                        🔄 Refresh Visits
+                    </button>
+                </div>
+
+                <div id="field-visits-container" class="visits-grid">
+                    <div class="loading-state">
+                        <div class="spinner"></div>
+                        <p>Loading pending field visits...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================================
+                 AI BORDERLINE ESCALATIONS SECTION
+                 ========================================= -->
+            <section id="escalations-section" class="dashboard-section">
+                <div class="section-header-row">
+                    <div>
+                        <div class="section-badge badge-warning">⚡ IMMEDIATE ATTENTION REQUIRED</div>
+                        <h2 class="section-title">AI Disease Diagnostic Escalations (30%–65% Confidence)</h2>
+                        <p class="section-desc">
+                            Automated ML confidence gating has flagged these crop scans for human agronomist on-site review.
+                        </p>
+                    </div>
+                    <button class="btn-refresh" onclick="loadEscalationsQueue()" title="Refresh Queue">
+                        🔄 Refresh Queue
+                    </button>
+                </div>
+
+                <div id="escalations-container" class="escalations-grid">
+                    <div class="loading-state">
+                        <div class="spinner"></div>
+                        <p>Loading AI escalations queue...</p>
+                    </div>
+                </div>
+            </section>
 
 
-    <script src="../scripts/field-agent-dashboard.js"></script>
+            <!-- =========================================
+                 PENDING CROP LISTINGS FOR VERIFICATION
+                 ========================================= -->
+            <section id="pending-section" class="dashboard-section">
+                <div class="section-header-row">
+                    <div>
+                        <div class="section-badge badge-success">📦 MARKETPLACE VERIFICATION PIPELINE</div>
+                        <h2 class="section-title" data-i18n="fieldAgent.dashboard.pendingVerifications">
+                            Farmer Harvest Crop Submissions
+                        </h2>
+                        <p class="section-desc">
+                            Review crop photographs, farmer quantity declarations, harvest dates, and AI health scores before approving for wholesale buyers.
+                        </p>
+                    </div>
+                    <div class="filter-toolbar">
+                        <input type="text" id="cropSearchInput" placeholder="🔍 Search crop or farmer..." class="search-input" onkeyup="filterCropCards()">
+                    </div>
+                </div>
 
+                <div id="pending-container" class="pending-grid">
+                    <div class="loading-state">
+                        <div class="spinner"></div>
+                        <p data-i18n="fieldAgent.dashboard.loadingSubmissions">Loading crop submissions...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================================
+                 RECENTLY VERIFIED CROPS ARCHIVE
+                 ========================================= -->
+            <section id="verified-section" class="dashboard-section">
+                <div class="section-header-row">
+                    <div>
+                        <div class="section-badge badge-neutral">📜 AUDIT LOG</div>
+                        <h2 class="section-title">Verified Crops History</h2>
+                        <p class="section-desc">Historical log of approved crops currently published in the buyer marketplace.</p>
+                    </div>
+                </div>
+
+                <div id="verified-container" class="verified-grid">
+                    <!-- Populated dynamically -->
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+            <p>© 2026 AgriBridge — Autonomous Farm-to-Field Advisory & Action Orchestration Platform.</p>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/auth.js"></script>
+    <script src="/frontend/scripts/image-utils.js"></script>
+    <script src="/frontend/scripts/field-agent-dashboard.js"></script>
 </body>
 
 </html>

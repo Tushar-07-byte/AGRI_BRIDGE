@@ -1,0 +1,34 @@
+{
+    "location": {
+        "state": "",
+        "district": "",
+        "village": "",
+        "latitude": null,
+        "longitude": null
+    },
+    "timestamp": "",
+    "current_weather": {
+        "temperature": null,
+        "humidity": null,
+        "rainfall": null,
+        "wind_speed": null,
+        "weather_condition": ""
+    },
+    "forecast": {
+        "forecast_days": 7,
+        "daily": []
+    },
+    "weather_alerts": [],
+    "agricultural_context": {
+        "rain_expected": false,
+        "heavy_rain_expected": false,
+        "high_temperature": false,
+        "low_temperature": false,
+        "high_wind": false,
+        "high_humidity": false
+    },
+    "source": {
+        "provider": "",
+        "last_updated": ""
+    }
+}

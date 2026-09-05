@@ -1,0 +1,22 @@
+{
+    "module": "AgriBridge Live Weather + IoT Integration",
+    "version": "1.0",
+    "weather": {
+        "status": "ADAPTER_READY",
+        "provider": "External Weather API",
+        "real_data_required": true
+    },
+    "iot": {
+        "status": "ADAPTER_READY",
+        "provider": "External IoT Gateway / Device",
+        "real_data_required": true
+    },
+    "validation": {
+        "weather": true,
+        "iot": true,
+        "freshness": true
+    },
+    "output": "Unified normalized monitoring input",
+    "next_layer": "Dynamic Daily Calendar Engine",
+    "status": "READY"
+}

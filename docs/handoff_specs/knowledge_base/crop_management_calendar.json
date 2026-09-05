@@ -1,0 +1,544 @@
+{
+    "wheat": {
+        "crop_name": "Wheat",
+        "stages": [
+            {
+                "stage": "Sowing",
+                "day_range": "Day 0",
+                "irrigation": "Halka Paani",
+                "fertilizer": "50kg DAP + 25kg MOP + 10kg Zinc",
+                "crop_protection": "None specified"
+            },
+            {
+                "stage": "CRI",
+                "day_range": "Day 20-25",
+                "irrigation": "1st Paani",
+                "fertilizer": "45kg Urea",
+                "crop_protection": "Weedicide: Clodinafop / Sulfosulfuron"
+            },
+            {
+                "stage": "Tillering",
+                "day_range": "Day 40-45",
+                "irrigation": "2nd Paani",
+                "fertilizer": "45kg Urea",
+                "crop_protection": "Rust/Yellow Rust: Propiconazole 25% EC"
+            },
+            {
+                "stage": "Booting",
+                "day_range": "Day 60-65",
+                "irrigation": "3rd Paani",
+                "fertilizer": "None specified",
+                "crop_protection": "Aphids: Imidacloprid 17.8% SL"
+            },
+            {
+                "stage": "Flowering",
+                "day_range": "Day 80-85",
+                "irrigation": "4th Paani",
+                "fertilizer": "NPK 0-52-34",
+                "crop_protection": "Blight: Mancozeb"
+            }
+        ]
+    },
+    "rice": {
+        "crop_name": "Rice",
+        "stages": [
+            {
+                "stage": "Transplanting",
+                "day_range": "Day 0",
+                "irrigation": "2-3 cm Paani",
+                "fertilizer": "50kg DAP + 25kg MOP + 10kg Zinc",
+                "crop_protection": "None specified"
+            },
+            {
+                "stage": "Tillering",
+                "day_range": "Day 15-20",
+                "irrigation": "Halki Irrigation",
+                "fertilizer": "30kg Urea",
+                "crop_protection": "Stem Borer: Cartap Hydrochloride 4G"
+            },
+            {
+                "stage": "Maximum Tillering",
+                "day_range": "Day 35-40",
+                "irrigation": "2-3 din khet sukhne dein",
+                "fertilizer": "30kg Urea",
+                "crop_protection": "Sheath Blight: Hexaconazole 5% EC"
+            },
+            {
+                "stage": "Panicle",
+                "day_range": "Day 60-65",
+                "irrigation": "5 cm Standing Paani",
+                "fertilizer": "20kg Urea + 15kg MOP",
+                "crop_protection": "BPH: Pymetrozine / Dinotefuran"
+            },
+            {
+                "stage": "Milking",
+                "day_range": "Day 85-90",
+                "irrigation": "Moist Soil",
+                "fertilizer": "NPK 0-0-50",
+                "crop_protection": "Gundhi Bug: Chlorpyrifos"
+            }
+        ]
+    },
+    "corn": {
+        "crop_name": "Corn",
+        "stages": [
+            {
+                "stage": "Sowing",
+                "day_range": "Day 0",
+                "irrigation": "Moist Soil",
+                "fertilizer": "40kg DAP + 20kg MOP + 10kg Zinc",
+                "crop_protection": "None specified"
+            },
+            {
+                "stage": "V4",
+                "day_range": "Day 15-20",
+                "irrigation": "1st Paani",
+                "fertilizer": "35kg Urea",
+                "crop_protection": "Fall Armyworm: Emamectin Benzoate"
+            },
+            {
+                "stage": "Knee-high",
+                "day_range": "Day 40-45",
+                "irrigation": "2nd Paani",
+                "fertilizer": "35kg Urea",
+                "crop_protection": "Fall Armyworm repeat: Chlorantraniliprole"
+            },
+            {
+                "stage": "Tasseling",
+                "day_range": "Day 65-70",
+                "irrigation": "Critical Paani",
+                "fertilizer": "NPK 0-0-50",
+                "crop_protection": "Leaf Blight: Mancozeb"
+            }
+        ]
+    },
+    "potato": {
+        "crop_name": "Potato",
+        "stages": [
+            {
+                "stage": "Planting",
+                "day_range": "Day 0",
+                "irrigation": "Light Irrigation",
+                "fertilizer": "75kg DAP + 50kg MOP + 10kg Zinc",
+                "crop_protection": "None specified"
+            },
+            {
+                "stage": "Earthing Up",
+                "day_range": "Day 20-25",
+                "irrigation": "7-10 din gap",
+                "fertilizer": "45kg Urea",
+                "crop_protection": "None specified"
+            },
+            {
+                "stage": "Tuber Growth",
+                "day_range": "Day 45-50",
+                "irrigation": "Nami banayein",
+                "fertilizer": "45kg Urea + Boron",
+                "crop_protection": "Early Blight: Chlorothalonil / Mancozeb"
+            },
+            {
+                "stage": "Maturity",
+                "day_range": "Day 70-75",
+                "irrigation": "Stop 10 days before",
+                "fertilizer": "NPK 0-0-50 Spray",
+                "crop_protection": "Late Blight: Cymoxanil + Mancozeb"
+            }
+        ]
+    },
+    "soybean": {
+        "crop_name": "Soybean",
+        "stages": [
+            {
+                "stage": "Sowing",
+                "day_range": "Day 0",
+                "irrigation": "Moist Soil",
+                "fertilizer": "40kg SSP + 15kg Potash",
+                "crop_protection": "Weedicide: Imazethapyr 10% SL"
+            },
+            {
+                "stage": "Vegetative",
+                "day_range": "Day 20-25",
+                "irrigation": "Light Paani",
+                "fertilizer": "15kg Urea Optional",
+                "crop_protection": "Girdle Beetle / Caterpillar: Chlorantraniliprole"
+            },
+            {
+                "stage": "Flowering",
+                "day_range": "Day 45-50",
+                "irrigation": "Critical Paani",
+                "fertilizer": "Sulphur + Boron",
+                "crop_protection": "Rust / Leaf Spot: Tebucanazole"
+            },
+            {
+                "stage": "Pod Stage",
+                "day_range": "Day 65-70",
+                "irrigation": "2nd Critical Paani",
+                "fertilizer": "NPK 0-52-34",
+                "crop_protection": "Pod Borer: Emamectin Benzoate"
+            }
+        ]
+    },
+    "tomato": {
+        "crop_name": "Tomato",
+        "stages": [
+            {
+                "stage": "Transplanting",
+                "day_range": "Day 0",
+                "irrigation": "Ropai ke baad paani",
+                "fertilizer": "50kg DAP + 30kg MOP",
+                "crop_protection": "Damping off: Copper Oxychloride"
+            },
+            {
+                "stage": "Vegetative",
+                "day_range": "Day 15-20",
+                "irrigation": "5-7 din gap",
+                "fertilizer": "25kg Urea",
+                "crop_protection": "Whitefly / Virus: Cyantraniliprole / Imidacloprid"
+            },
+            {
+                "stage": "Flowering",
+                "day_range": "Day 35-40",
+                "irrigation": "Regular Drip/Flood",
+                "fertilizer": "Calcium Nitrate + Boron",
+                "crop_protection": "Early/Late Blight: Azoxystrobin + Difenoconazole"
+            },
+            {
+                "stage": "Fruiting",
+                "day_range": "Day 60+",
+                "irrigation": "Nami Maintain",
+                "fertilizer": "NPK 13-0-45 Weekly",
+                "crop_protection": "Fruit Borer: Spinetoram / Chlorantraniliprole"
+            }
+        ]
+    },
+    "pepper": {
+        "crop_name": "Pepper",
+        "stages": [
+            {
+                "stage": "Transplanting",
+                "day_range": "Day 0",
+                "irrigation": "Turant baad paani",
+                "fertilizer": "40kg DAP + 25kg MOP",
+                "crop_protection": "Root Rot: Trichoderma / Metalaxyl"
+            },
+            {
+                "stage": "Vegetative",
+                "day_range": "Day 20-25",
+                "irrigation": "6-8 din gap",
+                "fertilizer": "20kg Urea",
+                "crop_protection": "Thrips: Fipronil / Spinetoram"
+            },
+            {
+                "stage": "Flowering",
+                "day_range": "Day 45-50",
+                "irrigation": "Regular Paani",
+                "fertilizer": "Calcium Nitrate",
+                "crop_protection": "Mites: Spiromesifen"
+            },
+            {
+                "stage": "Fruiting",
+                "day_range": "Day 70+",
+                "irrigation": "Light Irrigation",
+                "fertilizer": "15-15-15 NPK",
+                "crop_protection": "Fruit Rot / Anthracnose: Difenoconazole"
+            }
+        ]
+    },
+    "squash": {
+        "crop_name": "Squash",
+        "stages": [
+            {
+                "stage": "Sowing",
+                "day_range": "Day 0",
+                "irrigation": "Moist Soil",
+                "fertilizer": "30kg DAP + 20kg Potash",
+                "crop_protection": "Seedling Fly: Chlorpyrifos"
+            },
+            {
+                "stage": "Vining",
+                "day_range": "Day 20",
+                "irrigation": "4-5 din gap",
+                "fertilizer": "20kg Urea",
+                "crop_protection": "Downy Mildew: Metalaxyl + Mancozeb"
+            },
+            {
+                "stage": "Flowering",
+                "day_range": "Day 40",
+                "irrigation": "Critical Paani",
+                "fertilizer": "Micronutrients",
+                "crop_protection": "Fruit Fly: Malathion + Pheromone traps"
+            },
+            {
+                "stage": "Harvesting",
+                "day_range": "Day 60+",
+                "irrigation": "Alternate days",
+                "fertilizer": "NPK 13-0-45",
+                "crop_protection": "Powdery Mildew: Penconazole / Sulphur"
+            }
+        ]
+    },
+    "strawberry": {
+        "crop_name": "Strawberry",
+        "stages": [
+            {
+                "stage": "Planting",
+                "day_range": "Day 0",
+                "irrigation": "Daily light drip",
+                "fertilizer": "20kg DAP + Compost",
+                "crop_protection": "Root Rot: Carbendazim"
+            },
+            {
+                "stage": "Growth",
+                "day_range": "Day 20",
+                "irrigation": "2 din mein once",
+                "fertilizer": "19-19-19 Drip",
+                "crop_protection": "Mites / Aphids: Abamectin / Thiamethoxam"
+            },
+            {
+                "stage": "Bloom",
+                "day_range": "Day 40",
+                "irrigation": "Consistent moisture",
+                "fertilizer": "Calcium + Boron",
+                "crop_protection": "Botrytis: Pyraclostrobin / Switch"
+            },
+            {
+                "stage": "Fruiting",
+                "day_range": "Day 60+",
+                "irrigation": "Regular Drip",
+                "fertilizer": "NPK 0-0-50",
+                "crop_protection": "Slugs / Snails: Metaldehyde bait"
+            }
+        ]
+    },
+    "raspberry": {
+        "crop_name": "Raspberry",
+        "stages": [
+            {
+                "stage": "Bud Break",
+                "day_range": "Day 1",
+                "irrigation": "7-10 din interval",
+                "fertilizer": "NPK 10-10-10 + Manure",
+                "crop_protection": "Crown Gall / Cane Blight: Copper Hydroxide"
+            },
+            {
+                "stage": "Bloom",
+                "day_range": "Day 30",
+                "irrigation": "Regular Paani",
+                "fertilizer": "10kg Urea",
+                "crop_protection": "Raspberry Beetle: Deltamethrin"
+            },
+            {
+                "stage": "Fruit Set",
+                "day_range": "Day 60",
+                "irrigation": "Critical Moisture",
+                "fertilizer": "Potassium Sulphate",
+                "crop_protection": "Spotted Wing Drosophila: Spinctor / Exirel"
+            },
+            {
+                "stage": "Post Harvest",
+                "day_range": "Post Harvest",
+                "irrigation": "Halka Paani",
+                "fertilizer": "Organic Compost",
+                "crop_protection": "Powdery Mildew: Sulphur dust"
+            }
+        ]
+    },
+    "grape": {
+        "crop_name": "Grape",
+        "stages": [
+            {
+                "stage": "Pruning",
+                "day_range": "Day 1",
+                "irrigation": "Heavy Paani",
+                "fertilizer": "DAP + Compost",
+                "crop_protection": "Flea Beetle: Carbaryl / Imidacloprid"
+            },
+            {
+                "stage": "Bloom",
+                "day_range": "Day 30",
+                "irrigation": "Halki Irrigation",
+                "fertilizer": "19-19-19 Soluble",
+                "crop_protection": "Downy Mildew: Bordeaux Mixture / Metalaxyl"
+            },
+            {
+                "stage": "Veraison",
+                "day_range": "Day 60",
+                "irrigation": "Paani Kam Karein",
+                "fertilizer": "Calcium + Boron",
+                "crop_protection": "Powdery Mildew: Myclobutanil / Sulphur"
+            },
+            {
+                "stage": "Berry Growth",
+                "day_range": "Day 90",
+                "irrigation": "Harvest 10d pehle band",
+                "fertilizer": "Sulphate of Potash",
+                "crop_protection": "Mealybug: Buprofezin"
+            }
+        ]
+    },
+    "apple": {
+        "crop_name": "Apple",
+        "stages": [
+            {
+                "stage": "Spring Bud Break",
+                "day_range": "Seasonal",
+                "irrigation": "Baseline moisture",
+                "fertilizer": "FYM + 500g NPK/tree",
+                "crop_protection": "Scab: Dodine / Captan / Mancozeb"
+            },
+            {
+                "stage": "Petal Fall",
+                "day_range": "30 days",
+                "irrigation": "10-15 din gap",
+                "fertilizer": "Boron + Zinc Spray",
+                "crop_protection": "San Jose Scale: Superior Horticultural Oil"
+            },
+            {
+                "stage": "Fruit Set",
+                "day_range": "60 days",
+                "irrigation": "Critical Stage",
+                "fertilizer": "Calcium Nitrate Spray",
+                "crop_protection": "Codling Moth / Caterpillar: Chlorantraniliprole"
+            },
+            {
+                "stage": "Pre-Harvest",
+                "day_range": "100 days",
+                "irrigation": "Halka Paani",
+                "fertilizer": "High Potash Spray",
+                "crop_protection": "Alternaria Leaf Blight: Difenoconazole"
+            }
+        ]
+    },
+    "peach": {
+        "crop_name": "Peach",
+        "stages": [
+            {
+                "stage": "Bloom",
+                "day_range": "Seasonal",
+                "irrigation": "Light Paani",
+                "fertilizer": "Organic Manure + NPK",
+                "crop_protection": "Leaf Curl: Copper Oxychloride"
+            },
+            {
+                "stage": "Petal Fall",
+                "day_range": "30 days",
+                "irrigation": "10 din mein 1 baar",
+                "fertilizer": "Urea 150g/tree",
+                "crop_protection": "Peach Fruit Borer: Phosalone / Emamectin"
+            },
+            {
+                "stage": "Pit Hardening",
+                "day_range": "60 days",
+                "irrigation": "Critical Paani",
+                "fertilizer": "Micronutrients",
+                "crop_protection": "Brown Rot: Propiconazole / Tebuconazole"
+            },
+            {
+                "stage": "Fruit Growth",
+                "day_range": "90 days",
+                "irrigation": "7-10 din interval",
+                "fertilizer": "Potassium Sulphate",
+                "crop_protection": "Aphids: Thiamethoxam"
+            }
+        ]
+    },
+    "cherry": {
+        "crop_name": "Cherry",
+        "stages": [
+            {
+                "stage": "Bloom",
+                "day_range": "Seasonal",
+                "irrigation": "Spring moisture",
+                "fertilizer": "NPK 15-15-15 Base",
+                "crop_protection": "Leaf Spot: Mancozeb / Copper Hydroxide"
+            },
+            {
+                "stage": "Fruit Set",
+                "day_range": "30 days",
+                "irrigation": "10-12 din gap",
+                "fertilizer": "Urea 0.5% Spray",
+                "crop_protection": "Cherry Fruit Fly: Dimethoate / Acetamiprid"
+            },
+            {
+                "stage": "Ripening",
+                "day_range": "60 days",
+                "irrigation": "Moderate Paani",
+                "fertilizer": "Potassium Spray",
+                "crop_protection": "Fruit Rot / Brown Rot: Fenbuconazole"
+            },
+            {
+                "stage": "Post Harvest",
+                "day_range": "Post Harvest",
+                "irrigation": "Halka Paani",
+                "fertilizer": "Compost",
+                "crop_protection": "Bacterial Canker: Copper Spray"
+            }
+        ]
+    },
+    "blueberry": {
+        "crop_name": "Blueberry",
+        "stages": [
+            {
+                "stage": "Bud Break",
+                "day_range": "Seasonal",
+                "irrigation": "Drip",
+                "fertilizer": "Ammonium Sulphate",
+                "crop_protection": "Mummy Berry Disease: Tebuconazole"
+            },
+            {
+                "stage": "Bloom",
+                "day_range": "30 days",
+                "irrigation": "Continuous Drip",
+                "fertilizer": "Acidic NPK 12-12-12",
+                "crop_protection": "Blueberry Maggot: Spinosad"
+            },
+            {
+                "stage": "Fruit Set",
+                "day_range": "60 days",
+                "irrigation": "High Moisture",
+                "fertilizer": "Iron Chelates + Mg",
+                "crop_protection": "Aphids: Insecticidal Soap / Imidacloprid"
+            },
+            {
+                "stage": "Harvest Window",
+                "day_range": "Harvest",
+                "irrigation": "Regular Drip",
+                "fertilizer": "Potassium Sulphate",
+                "crop_protection": "Anthracnose Fruit Rot: Azoxystrobin"
+            }
+        ]
+    },
+    "orange": {
+        "crop_name": "Orange",
+        "stages": [
+            {
+                "stage": "Bloom",
+                "day_range": "Feb/Mar",
+                "irrigation": "1st Heavy Paani",
+                "fertilizer": "500g NPK + 50kg Gobar",
+                "crop_protection": "Citrus Psylla / Thrips: Dimethoate / Imidacloprid"
+            },
+            {
+                "stage": "Fruit Drop",
+                "day_range": "May/June",
+                "irrigation": "7-10 din interval",
+                "fertilizer": "Urea + Zinc/Iron Spray",
+                "crop_protection": "Citrus Canker: Streptocycline + Copper"
+            },
+            {
+                "stage": "Fruit Expansion",
+                "day_range": "Sept/Oct",
+                "irrigation": "12-15 din interval",
+                "fertilizer": "SSP + Potash 300g",
+                "crop_protection": "Fruit Fly: Methyl Eugenol Traps + Spray"
+            },
+            {
+                "stage": "Pre-Harvest",
+                "day_range": "Nov/Dec",
+                "irrigation": "Halka Paani",
+                "fertilizer": "NPK 0-0-50 Spray",
+                "crop_protection": "Phytophthora: Ridomil Gold"
+            }
+        ]
+    }
+}

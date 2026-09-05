@@ -1,0 +1,72 @@
+{
+    "decision": {
+        "decision_id": "",
+        "farmer_id": "",
+        "farm_id": "",
+        "field_id": "",
+        "crop_id": "",
+        "crop_name": "",
+        "crop_stage": "",
+        "days_after_sowing_or_planting": 0,
+        "activity": {
+            "activity_id": "",
+            "activity_name": "",
+            "category": ""
+        },
+        "timing": {
+            "recommended_date": "",
+            "recommended_time": "",
+            "original_date": "",
+            "date_changed": false
+        },
+        "inputs_considered": {
+            "crop_stage": true,
+            "days_after_sowing_or_planting": true,
+            "scientific_crop_calendar": true,
+            "weather": true,
+            "location": true,
+            "soil_information": true,
+            "irrigation_information": true
+        },
+        "weather_impact": {
+            "considered": false,
+            "impact": "",
+            "decision": "",
+            "reason": ""
+        },
+        "scientific_basis": {
+            "calendar_reference": "",
+            "source_references": []
+        },
+        "recommendation": {
+            "title": "",
+            "message": "",
+            "instructions": [],
+            "priority": "medium"
+        },
+        "disease_monitoring": {
+            "inspection_only": true,
+            "diagnosis": false,
+            "prediction": false,
+            "model_inference": false,
+            "inspection_message": "Inspect crop leaves for spots, discoloration, unusual marks, wilting, or unhealthy appearance",
+            "redirect_to_disease_detection": false
+        },
+        "calendar": {
+            "update_required": false,
+            "update_type": "",
+            "previous_date": "",
+            "new_date": ""
+        },
+        "notification": {
+            "required": false,
+            "title": "",
+            "message": "",
+            "scheduled_date": "",
+            "sent": false
+        },
+        "status": "pending",
+        "generated_at": "",
+        "generated_by": ""
+    }
+}

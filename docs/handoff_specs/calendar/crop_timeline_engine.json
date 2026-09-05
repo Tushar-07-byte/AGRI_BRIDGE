@@ -1,0 +1,15 @@
+{
+    "engine": "AgriBridge Crop Timeline Engine",
+    "purpose": "Track crop age and lifecycle position using sowing or planting date",
+    "input": [
+        "crop",
+        "planting_or_sowing_date",
+        "reference_date"
+    ],
+    "output": [
+        "days_after_sowing_or_planting",
+        "timeline_status"
+    ],
+    "stage_duration_source": "Scientific Crop Calendar",
+    "dynamic_updates": true
+}

@@ -1,0 +1,49 @@
+{
+    "farmer": {
+        "farmer_id": "",
+        "name": "",
+        "language": "en",
+        "location": {
+            "state": "",
+            "district": "",
+            "village": "",
+            "latitude": null,
+            "longitude": null
+        }
+    },
+    "farm": {
+        "farm_id": "",
+        "farm_name": "",
+        "total_area": null,
+        "area_unit": "acre"
+    },
+    "field": {
+        "field_id": "",
+        "field_name": "",
+        "area": null,
+        "area_unit": "acre",
+        "soil": {
+            "soil_type": "",
+            "ph": null,
+            "nitrogen": null,
+            "phosphorus": null,
+            "potassium": null,
+            "organic_matter": null
+        },
+        "irrigation": {
+            "available": true,
+            "method": "",
+            "water_source": ""
+        }
+    },
+    "crop": {
+        "crop_id": "",
+        "crop_name": "",
+        "variety": "",
+        "planting_type": "",
+        "sowing_or_planting_date": "",
+        "expected_harvest_date": "",
+        "current_stage": "",
+        "status": "active"
+    }
+}

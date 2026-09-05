@@ -1,0 +1,35 @@
+{
+    "country": "India",
+    "location": {
+        "state": "Uttar Pradesh",
+        "district": "Example District",
+        "village": "Example Village",
+        "latitude": null,
+        "longitude": null
+    },
+    "crop": {
+        "crop_id": "wheat",
+        "crop_name": "Wheat",
+        "variety": ""
+    },
+    "weather_requirements": {
+        "current_weather": true,
+        "forecast_days": 7,
+        "weather_alerts": true,
+        "temperature": true,
+        "humidity": true,
+        "rainfall": true,
+        "wind_speed": true,
+        "weather_condition": true
+    },
+    "agricultural_processing": {
+        "crop_specific": true,
+        "location_aware": true,
+        "forecast_aware": true,
+        "weather_risk_analysis": true,
+        "irrigation_decision_support": true,
+        "spray_weather_check": true,
+        "disease_favorable_weather_check": true
+    },
+    "status": "ready_for_weather_provider"
+}

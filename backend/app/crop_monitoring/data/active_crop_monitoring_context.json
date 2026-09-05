@@ -1,0 +1,195 @@
+{
+    "country": "India",
+    "crop_id": "wheat",
+    "crop_name": "Wheat",
+    "farmer_id": "TEST_FARMER_001",
+    "location": {
+        "country": "India",
+        "state": "Uttar Pradesh",
+        "district": "Example District",
+        "village": "Example Village",
+        "latitude": null,
+        "longitude": null
+    },
+    "planting": {
+        "planting_date": "2026-09-01",
+        "days_after_planting": 0
+    },
+    "scientific_crop_calendar": {
+        "crop_name": "Wheat",
+        "season": [],
+        "regions": [],
+        "planting_window": {
+            "start": "",
+            "end": ""
+        },
+        "lifecycle": {
+            "farm_preparation": {
+                "stage_name": "Farm Preparation",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "soil_preparation": {
+                "stage_name": "Soil Preparation",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "seed_treatment": {
+                "stage_name": "Seed Selection / Treatment",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "sowing": {
+                "stage_name": "Sowing",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "germination": {
+                "stage_name": "Germination",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "early_growth": {
+                "stage_name": "Early Growth",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "vegetative_growth": {
+                "stage_name": "Vegetative Growth",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "nutrient_management": {
+                "stage_name": "Nutrient Management",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "irrigation_management": {
+                "stage_name": "Irrigation Management",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "disease_pest_monitoring": {
+                "stage_name": "Disease & Pest Monitoring",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "weather_decisions": {
+                "stage_name": "Weather-based Decisions",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "flowering_reproductive": {
+                "stage_name": "Flowering / Reproductive Stage",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "maturity": {
+                "stage_name": "Maturity",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "harvest_planning": {
+                "stage_name": "Harvest Planning",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "post_harvest": {
+                "stage_name": "Post-Harvest",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            },
+            "marketplace": {
+                "stage_name": "Marketplace",
+                "start_day": null,
+                "end_day": null,
+                "activities": []
+            }
+        },
+        "weather_considerations": [],
+        "scientific_sources": [],
+        "verification": {
+            "verified": false,
+            "verified_date": "",
+            "verified_by": ""
+        }
+    },
+    "crop_management_calendar": {
+        "crop_name": "Wheat",
+        "stages": [
+            {
+                "stage": "Sowing",
+                "day_range": "Day 0",
+                "irrigation": "Halka Paani",
+                "fertilizer": "50kg DAP + 25kg MOP + 10kg Zinc",
+                "crop_protection": "None specified"
+            },
+            {
+                "stage": "CRI",
+                "day_range": "Day 20-25",
+                "irrigation": "1st Paani",
+                "fertilizer": "45kg Urea",
+                "crop_protection": "Weedicide: Clodinafop / Sulfosulfuron"
+            },
+            {
+                "stage": "Tillering",
+                "day_range": "Day 40-45",
+                "irrigation": "2nd Paani",
+                "fertilizer": "45kg Urea",
+                "crop_protection": "Rust/Yellow Rust: Propiconazole 25% EC"
+            },
+            {
+                "stage": "Booting",
+                "day_range": "Day 60-65",
+                "irrigation": "3rd Paani",
+                "fertilizer": "None specified",
+                "crop_protection": "Aphids: Imidacloprid 17.8% SL"
+            },
+            {
+                "stage": "Flowering",
+                "day_range": "Day 80-85",
+                "irrigation": "4th Paani",
+                "fertilizer": "NPK 0-52-34",
+                "crop_protection": "Blight: Mancozeb"
+            }
+        ]
+    },
+    "monitoring": {
+        "enabled": true,
+        "weather_aware": true,
+        "dynamic_calendar": true,
+        "notifications": true
+    },
+    "disease_policy": {
+        "inspection_only": true,
+        "diagnosis": false,
+        "prediction": false,
+        "model_inference": false,
+        "redirect_to_disease_detection": true
+    },
+    "marketplace": {
+        "enabled": true,
+        "platform": "AgriBridge Marketplace",
+        "price_monitoring": true,
+        "selling_time_guidance": true,
+        "selling_place_guidance": true,
+        "ultimate_goal": "Crop Sold"
+    },
+    "selected_for_farmer": true,
+    "selection_source": "Farmer Crop Profile"
+}

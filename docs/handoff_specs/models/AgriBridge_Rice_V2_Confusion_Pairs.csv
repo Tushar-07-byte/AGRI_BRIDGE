@@ -1,0 +1,18 @@
+True Class,Predicted Class,Errors,Mean_Confidence
+Leaf scald,Bacterial Leaf Blight,7,0.5926891224724906
+Sheath Blight,Bacterial Leaf Blight,4,0.6352327466011047
+Brown Spot,Leaf Blast,4,0.608941987156868
+Leaf Blast,Brown Spot,3,0.6078004837036133
+Brown Spot,Healthy Rice Leaf,3,0.6491498152414957
+Brown Spot,Leaf scald,2,0.6433793306350708
+Healthy Rice Leaf,Brown Spot,2,0.8196574747562408
+Bacterial Leaf Blight,Leaf scald,2,0.5484234988689423
+Bacterial Leaf Blight,Leaf Blast,2,0.6490976512432098
+Leaf Blast,Bacterial Leaf Blight,2,0.7622216641902924
+Bacterial Leaf Blight,Brown Spot,1,0.7954201102256775
+Brown Spot,Bacterial Leaf Blight,1,0.5721641778945923
+Leaf Blast,Leaf scald,1,0.662264347076416
+Leaf Blast,Sheath Blight,1,0.728260338306427
+Leaf scald,Leaf Blast,1,0.7308839559555054
+Sheath Blight,Brown Spot,1,0.3462921679019928
+Sheath Blight,Leaf Blast,1,0.40653112530708313

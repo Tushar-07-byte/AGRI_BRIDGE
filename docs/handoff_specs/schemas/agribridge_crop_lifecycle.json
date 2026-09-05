@@ -1,0 +1,97 @@
+[
+    {
+        "stage_id": 1,
+        "stage": "Farm Preparation",
+        "category": "preparation"
+    },
+    {
+        "stage_id": 2,
+        "stage": "Soil Preparation",
+        "category": "preparation"
+    },
+    {
+        "stage_id": 3,
+        "stage": "Seed Selection / Treatment",
+        "category": "preparation"
+    },
+    {
+        "stage_id": 4,
+        "stage": "Sowing",
+        "category": "planting"
+    },
+    {
+        "stage_id": 5,
+        "stage": "Germination",
+        "category": "growth"
+    },
+    {
+        "stage_id": 6,
+        "stage": "Early Growth",
+        "category": "growth"
+    },
+    {
+        "stage_id": 7,
+        "stage": "Vegetative Growth",
+        "category": "growth"
+    },
+    {
+        "stage_id": 8,
+        "stage": "Nutrient Management",
+        "category": "management"
+    },
+    {
+        "stage_id": 9,
+        "stage": "Irrigation Management",
+        "category": "management"
+    },
+    {
+        "stage_id": 10,
+        "stage": "Disease & Pest Monitoring",
+        "category": "monitoring"
+    },
+    {
+        "stage_id": 11,
+        "stage": "Weather-based Decisions",
+        "category": "weather"
+    },
+    {
+        "stage_id": 12,
+        "stage": "Flowering / Reproductive Stage",
+        "category": "growth"
+    },
+    {
+        "stage_id": 13,
+        "stage": "Maturity",
+        "category": "growth"
+    },
+    {
+        "stage_id": 14,
+        "stage": "Harvest Planning",
+        "category": "harvest"
+    },
+    {
+        "stage_id": 15,
+        "stage": "Post-Harvest",
+        "category": "post_harvest"
+    },
+    {
+        "stage_id": 16,
+        "stage": "Marketplace",
+        "category": "marketplace"
+    },
+    {
+        "stage_id": 17,
+        "stage": "Price Monitoring",
+        "category": "marketplace"
+    },
+    {
+        "stage_id": 18,
+        "stage": "Best Time / Place to Sell",
+        "category": "marketplace"
+    },
+    {
+        "stage_id": 19,
+        "stage": "Crop Sold",
+        "category": "completed"
+    }
+]

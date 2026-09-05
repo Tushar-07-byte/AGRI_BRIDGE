@@ -7,18 +7,41 @@
 
     <title>My Commitments - AgriBridge</title>
 
-    <link rel="stylesheet" href="../styles/orders.css">
+    <link rel="stylesheet" href="/frontend/styles/orders.css">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
 </head>
 
 <body>
+
+    <nav class="nav">
+        <div class="logo">
+            <a href="/frontend/pages/index.html">
+                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+            </a>
+        </div>
+
+        <div class="mid">
+            <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+            <a href="/frontend/pages/crop-listings.html" data-i18n="nav.marketplace">Marketplace</a>
+            <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
+            <a href="/frontend/pages/orders.html" class="active" data-i18n="farmer.orders.title">Orders</a>
+            <a href="/frontend/pages/farmer-profile.html" data-i18n="nav.myProfile">Profile</a>
+        </div>
+
+        <div class="register">
+            <button type="button" class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/farmer-dashboard.html'">
+                ← Back to Dashboard
+            </button>
+        </div>
+    </nav>
 
     <main class="orders-page">
 
         <section class="orders-header">
 
-            <h1>My Commitments 🤝</h1>
+            <h1 data-i18n="orders.title">My Commitments 🤝</h1>
 
-            <p>
+            <p data-i18n="orders.description">
                 Track buyers who have committed to purchase your crops.
             </p>
 
@@ -39,14 +62,27 @@
             id="dashboard-button"
             class="dashboard-button">
 
-            ← Back to Dashboard
+            ← <span data-i18n="orders.backToDashboard">Back to Dashboard</span>
 
         </button>
 
     </main>
 
 
-    <script src="../scripts/orders.js"></script>
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/auth.js"></script>
+    <script src="/frontend/scripts/image-utils.js"></script>
+    <script src="/frontend/scripts/orders.js"></script>
+    <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
+    <a href="/frontend/pages/voice-assistant.html?from_page=orders" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
+        title="Voice Farming Assistant / आवाज से पूछें">
+        <div class="voice-mic-icon-box">
+            <div class="voice-pulse-ring"></div>
+            🎙️
+        </div>
+        <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
+    </a>
 
 </body>
 

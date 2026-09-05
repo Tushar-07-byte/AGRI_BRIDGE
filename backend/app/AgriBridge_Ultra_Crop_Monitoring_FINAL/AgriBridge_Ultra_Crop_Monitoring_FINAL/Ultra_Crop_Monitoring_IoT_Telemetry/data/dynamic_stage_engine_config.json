@@ -1,0 +1,45 @@
+{
+    "engine_name": "AgriBridge Dynamic Crop Stage Engine",
+    "version": "1.0",
+    "purpose": "Determine crop growth stage and retrieve stage-wise management.",
+    "data_sources": [
+        "crop_master.csv",
+        "crop_stages.csv",
+        "stage_management.csv"
+    ],
+    "supported_crops": [
+        "Apple",
+        "Blueberry",
+        "Cherry",
+        "Corn",
+        "Grape",
+        "Orange",
+        "Peach",
+        "Pepper",
+        "Potato",
+        "Raspberry",
+        "Rice",
+        "Soybean",
+        "Squash",
+        "Strawberry",
+        "Tomato",
+        "Wheat"
+    ],
+    "stage_records": 61,
+    "management_records": 61,
+    "calculation_method": "Days After Planting/Sowing/Transplanting",
+    "outputs": [
+        "current_stage",
+        "next_stage",
+        "stage_progress_percent",
+        "days_to_next_stage",
+        "harvest_timeline",
+        "irrigation",
+        "fertilizer",
+        "organic_management",
+        "disease_protection",
+        "pest_protection",
+        "weather_sensitivity",
+        "irrigation_stop_rule"
+    ]
+}

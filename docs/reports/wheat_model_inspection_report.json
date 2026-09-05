@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-09-02 15:33:46",
+  "phase1_model": {
+    "model_name": "AgriBridge_Wheat_EfficientNetB0_Phase1",
+    "path": "c:\\Users\\TUSHAR\\Projects\\AgriBridge - 2\\backend\\AI_Engine\\AgriBridge_Wheat_EfficientNetB0_Phase1.keras",
+    "is_directory": true,
+    "total_size_bytes": 17133916,
+    "file_hashes": [
+      [
+        "config.json",
+        "8f17dd1e64c1310890c290837baa10586e4cd976cfd3e259bd76c7510c81ef1d",
+        230900
+      ],
+      [
+        "metadata.json",
+        "57aacd713460c325b9fd92705b493198fb347e3e2859869b132a157cced1607b",
+        64
+      ],
+      [
+        "model.weights.h5",
+        "ed53cc8fab2e7daf4534e111901a84a34bcb994fc52383a4bf639a84a5fd3731",
+        16902952
+      ]
+    ],
+    "input_shape": [
+      null,
+      224,
+      224,
+      3
+    ],
+    "output_shape": [
+      null,
+      5
+    ],
+    "num_classes": 5,
+    "output_activation": "softmax",
+    "backbone": "Functional (efficientnetb0)",
+    "total_layers": 6,
+    "trainable_parameters": 6405,
+    "non_trainable_parameters": 4049599,
+    "total_parameters": 4056004,
+    "trainable_layers_count": 5,
+    "frozen_layers_count": 1,
+    "embedded_preprocessing_layers": [],
+    "loss": "sparse_categorical_crossentropy",
+    "optimizer": "Adam"
+  },
+  "stage2_model": {
+    "model_name": "AgriBridge_Wheat_EfficientNetB0_Stage2_Best",
+    "path": "c:\\Users\\TUSHAR\\Projects\\AgriBridge - 2\\AgriBridge_Wheat_EfficientNetB0_Stage2_Best.keras",
+    "is_directory": true,
+    "total_size_bytes": 33427156,
+    "file_hashes": [
+      [
+        "config.json",
+        "13b49cb73e43e33752ddecd28b2daff86adf0dcf0c35982d23d014a0ff4ee4e7",
+        219380
+      ],
+      [
+        "metadata.json",
+        "b4d6238728be218344ad50b464fc0cd83ab943080dc956f6b4a5d7997c9b68f4",
+        64
+      ],
+      [
+        "model.weights.h5",
+        "9c7194f626f235f4d8dae86e072a55d49be09f9ae222bb5d0a7972eb94045eea",
+        33207712
+      ]
+    ],
+    "input_shape": [
+      null,
+      224,
+      224,
+      3
+    ],
+    "output_shape": [
+      null,
+      5
+    ],
+    "num_classes": 5,
+    "output_activation": "softmax",
+    "backbone": "Functional (efficientnetb0)",
+    "total_layers": 5,
+    "trainable_parameters": 2043925,
+    "non_trainable_parameters": 2012071,
+    "total_parameters": 4055996,
+    "trainable_layers_count": 4,
+    "frozen_layers_count": 1,
+    "embedded_preprocessing_layers": [],
+    "loss": "sparse_categorical_crossentropy",
+    "optimizer": "Adam"
+  }
+}

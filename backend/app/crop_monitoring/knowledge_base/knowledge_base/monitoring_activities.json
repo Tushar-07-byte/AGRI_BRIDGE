@@ -1,0 +1,125 @@
+{
+    "farm_preparation": {
+        "name": "Farm Preparation",
+        "stage": "Farm Preparation",
+        "farmer_action": "Prepare the farm according to the crop and local recommendations",
+        "weather_sensitive": true
+    },
+    "soil_preparation": {
+        "name": "Soil Preparation",
+        "stage": "Soil Preparation",
+        "farmer_action": "Prepare and condition the soil",
+        "weather_sensitive": true
+    },
+    "seed_selection_treatment": {
+        "name": "Seed Selection / Treatment",
+        "stage": "Seed Selection / Treatment",
+        "farmer_action": "Select suitable planting material and follow verified treatment guidance",
+        "weather_sensitive": false
+    },
+    "sowing_planting": {
+        "name": "Sowing / Planting",
+        "stage": "Sowing",
+        "farmer_action": "Carry out sowing or planting within the recommended window",
+        "weather_sensitive": true
+    },
+    "germination_check": {
+        "name": "Germination Check",
+        "stage": "Germination",
+        "farmer_action": "Check germination and early establishment",
+        "weather_sensitive": true
+    },
+    "early_growth_check": {
+        "name": "Early Growth Check",
+        "stage": "Early Growth",
+        "farmer_action": "Check crop establishment and early growth",
+        "weather_sensitive": true
+    },
+    "vegetative_growth_check": {
+        "name": "Vegetative Growth Check",
+        "stage": "Vegetative Growth",
+        "farmer_action": "Check crop growth and field condition",
+        "weather_sensitive": true
+    },
+    "nutrient_management": {
+        "name": "Nutrient Management",
+        "stage": "Nutrient Management",
+        "farmer_action": "Check nutrient requirements and follow verified recommendations",
+        "weather_sensitive": true
+    },
+    "irrigation_management": {
+        "name": "Irrigation Management",
+        "stage": "Irrigation Management",
+        "farmer_action": "Check soil moisture and irrigation requirement",
+        "weather_sensitive": true
+    },
+    "leaf_health_inspection": {
+        "name": "Leaf Health Inspection",
+        "stage": "Disease & Pest Monitoring",
+        "farmer_action": "Inspect leaves for spots, discoloration, unusual marks, wilting, or unhealthy appearance",
+        "weather_sensitive": true,
+        "disease_prediction": false,
+        "redirect_to_disease_detection": true
+    },
+    "pest_monitoring": {
+        "name": "Pest Monitoring",
+        "stage": "Disease & Pest Monitoring",
+        "farmer_action": "Inspect the crop for visible pest activity or damage",
+        "weather_sensitive": true,
+        "disease_prediction": false
+    },
+    "weather_check": {
+        "name": "Weather-based Decision",
+        "stage": "Weather-based Decisions",
+        "farmer_action": "Review upcoming weather conditions before planned activities",
+        "weather_sensitive": true
+    },
+    "flowering_monitoring": {
+        "name": "Flowering / Reproductive Stage Check",
+        "stage": "Flowering / Reproductive Stage",
+        "farmer_action": "Monitor crop development during the reproductive stage",
+        "weather_sensitive": true
+    },
+    "maturity_check": {
+        "name": "Maturity Check",
+        "stage": "Maturity",
+        "farmer_action": "Check crop maturity indicators",
+        "weather_sensitive": true
+    },
+    "harvest_planning": {
+        "name": "Harvest Planning",
+        "stage": "Harvest Planning",
+        "farmer_action": "Prepare for harvest according to crop maturity and weather",
+        "weather_sensitive": true
+    },
+    "post_harvest": {
+        "name": "Post-Harvest Management",
+        "stage": "Post-Harvest",
+        "farmer_action": "Follow appropriate drying, handling, storage, and quality practices",
+        "weather_sensitive": true
+    },
+    "marketplace_preparation": {
+        "name": "Marketplace Preparation",
+        "stage": "Marketplace",
+        "farmer_action": "Prepare harvested crop for market",
+        "weather_sensitive": false
+    },
+    "price_monitoring": {
+        "name": "Price Monitoring",
+        "stage": "Price Monitoring",
+        "farmer_action": "Review current market prices",
+        "weather_sensitive": false
+    },
+    "market_timing": {
+        "name": "Best Time / Place to Sell",
+        "stage": "Best Time / Place to Sell",
+        "farmer_action": "Review available market opportunities before selling",
+        "weather_sensitive": false
+    },
+    "crop_sold": {
+        "name": "Crop Sold",
+        "stage": "Crop Sold",
+        "farmer_action": "Record completed sale",
+        "weather_sensitive": false
+    }
+}

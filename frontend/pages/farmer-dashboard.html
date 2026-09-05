@@ -4,177 +4,706 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmer Dashboard - AgriBridge</title>
-    <link rel="stylesheet" href="/styles/farmer-dashboard.css">
+    <title>Farmer Command Center — AgriBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/farmer-dashboard.css">
 </head>
 
 <body>
+    <div class="dashboard-wrapper">
 
-    <nav class="nav">
-
-        <!-- LOGO -->
-        <div class="logo">
-            <a href="farmer-dashboard.html">
-                <img src="/assets/logo/logo.png" alt="Agri-Bridge Logo">
-            </a>
-        </div>
-
-        <!-- FARMER NAVIGATION -->
-        <div class="mid">
-            <a href="farmer-dashboard.html" class="active">Dashboard</a>
-            <a href="upload-crop.html">Upload Crop</a>
-            <a href="crop-listings.html">My Listings</a>
-            <a href="orders.html">Commitments</a>
-        </div>
-
-        <!-- USER -->
-        <div class="register">
-            <span class="user-role">👨‍🌾 Farmer</span>
-            <button type="button" class="stylish-btn" onclick="window.location.href='/pages/index.html';">
-                Logout
-            </button>
-        </div>
-
-    </nav>
-
-    <section class="welcome-section">
-        <h1>Welcome, Farmer! 👨‍🌾</h1>
-        <p>
-            Manage your crops, monitor their health,
-            and connect with buyers using AI-powered insights.
-        </p>
-        <h4>Growing smarter, earning better.</h4>
-    </section>
-
-    <section class="action-section">
-        <h2 class="section-title">Quick Actions</h2>
-
-        <div class="card-grid">
-
-            <a href="upload-crop.html" class="action-card">
-                <div class="card-icon">📤</div>
-                <h3>Upload Crop</h3>
-                <p>Upload your crop details and a photo for AI health analysis.</p>
-            </a>
-
-            <a href="crop-listings.html" class="action-card">
-                <div class="card-icon">📋</div>
-                <h3>My Listings</h3>
-                <p>View and manage your crops available for buyers.</p>
-            </a>
-
-            <a href="ai-result.html" class="action-card">
-                <div class="card-icon">🩺</div>
-                <h3>Crop Health</h3>
-                <p>View AI-powered health analysis of your crops.</p>
-            </a>
-
-            <a href="orders.html" class="action-card">
-                <div class="card-icon">🤝</div>
-                <h3>Commitments</h3>
-                <p>Track buyers who have committed to purchase your crops.</p>
-            </a>
-
-        </div>
-    </section>
-
-    <section class="stats-section">
-
-        <h2 class="section-title">Overview</h2>
-
-        <div class="stats-grid">
-
-            <div class="stat-card">
-                <div class="stat-icon">🌾</div>
-                <h3>Total Crops</h3>
-                <p class="stat-number">5</p>
+        <!-- =========================================================
+             AGRIBRIDGE — UNIFIED MASTER NAVBAR
+             ========================================================= -->
+        <nav class="nav">
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="/frontend/pages/index.html">
+                    <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+                </a>
             </div>
 
-            <div class="stat-card">
-                <div class="stat-icon">📋</div>
-                <h3>Active Listings</h3>
-                <p class="stat-number">3</p>
+            <!-- NAVIGATION LINKS -->
+            <div class="mid">
+                <a href="/frontend/pages/farmer-dashboard.html" class="active" data-i18n="nav.dashboard">Dashboard</a>
+                <a href="/frontend/pages/crop-monitoring.html">Crop Monitoring</a>
+                <a href="/frontend/pages/upload-crop.html" data-i18n="farmer.quickActions.uploadCrop">AI Crop Scan</a>
+                <a href="/frontend/pages/crop-listings.html" data-i18n="nav.marketplace">Marketplace</a>
+                <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
+                <a href="/frontend/pages/voice-assistant.html" data-i18n="nav.voiceAssistant">Voice AI</a>
+                <a href="/frontend/pages/farm-command-center.html" class="nav-fcc-link">⚡ Command Center</a>
             </div>
 
-            <div class="stat-card">
-                <div class="stat-icon">🤝</div>
-                <h3>Commitments</h3>
-                <p class="stat-number">2</p>
+            <!-- USER & ACTIONS -->
+            <div class="register">
+                <div id="language-selector-container"></div>
+                <a href="#notification-center" class="nav-notif-btn" id="navNotifBtn" title="Farmer Notification Dashboard">
+                    🔔 <span class="nav-notif-badge" id="navNotifCount">0</span>
+                </a>
+                <a href="/frontend/pages/farmer-profile.html" class="user-role-badge" style="text-decoration: none;" title="Farmer Profile">
+                    👨‍🌾 <span id="navbarUserName">Farmer</span>
+                </a>
+                <button type="button" class="stylish-btn ab-btn-primary" onclick="if(window.AgriBridgeAuth){AgriBridgeAuth.logout();}else{window.location.href='/frontend/pages/login.html';}" data-i18n="nav.logout">
+                    Logout
+                </button>
+            </div>
+        </nav>
+
+        <!-- ========================================= -->
+        <!-- MAIN DASHBOARD CONTENT                    -->
+        <!-- ========================================= -->
+        <main class="dashboard-container">
+
+            <!-- WELCOME & FARM PROFILE BANNER -->
+            <section class="welcome-banner">
+                <div class="welcome-text-side">
+                    <div class="ab-badge ab-badge-gold">🌱 LIVE FARM COMMAND CENTER</div>
+                    <h1 class="welcome-heading">
+                        <span data-i18n="farmer.dashboard.title">Welcome,</span>
+                        <span id="farmer-name">Farmer</span>!
+                    </h1>
+                    <p class="welcome-sub" data-i18n="farmer.dashboard.subtitle">
+                        Manage your crops, inspect AI disease diagnostics, monitor real-time weather, and connect with verified buyers.
+                    </p>
+
+                    <div class="farmer-summary-chips">
+                        <div class="summary-chip">
+                            <span class="chip-icon">🌾</span>
+                            <span class="chip-label" data-i18n="farmer.summary.area">Farm Area:</span>
+                            <strong id="farm-area">--</strong>
+                        </div>
+                        <div class="summary-chip clickable-chip" id="farmLocationChip" title="Click to select or change your farm location">
+                            <span class="chip-icon">📍</span>
+                            <span class="chip-label" data-i18n="farmer.summary.location">Location:</span>
+                            <strong id="farm-location">--</strong>
+                            <span style="font-size: 11px; color: #10B981; margin-left: 4px;">✏️</span>
+                        </div>
+                        <div class="summary-chip status-chip">
+                            <span class="chip-icon">✓</span>
+                            <span>Status: <strong>Active & Verified</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LIVE MINI-WEATHER CARD -->
+                <div class="welcome-quick-weather" id="miniWeatherCard"
+                    onclick="window.location.href='/frontend/pages/weather-dashboard.html'"
+                    title="Click to view 15-day weather & spray window">
+                    <div class="mini-weather-header">
+                        <span>🌦️ Live Farm Weather</span>
+                        <span class="mini-weather-link">View 15-Day →</span>
+                    </div>
+                    <div class="mini-weather-main">
+                        <div class="mini-temp" id="miniWeatherTemp">28°C</div>
+                        <div class="mini-weather-cond">
+                            <strong id="miniWeatherDesc">Clear sky</strong>
+                            <span id="miniWeatherDetails">Humidity: 58% • Wind: 5 km/h</span>
+                        </div>
+                    </div>
+                    <div class="mini-weather-advisory" id="miniWeatherAdvisory">
+                        🌱 Good conditions for fertilizer and foliar spray
+                    </div>
+                </div>
+            </section>
+
+            <!-- LIVE TIMING ADVICE ALERT BANNER (WEATHER-AWARE SPRAY TIMING) -->
+            <div id="timing-alert-banner" class="timing-alert-banner" style="display: none;">
+                <div class="timing-alert-inner">
+                    <span class="timing-alert-icon" id="timing-alert-icon">⚠️</span>
+                    <div class="timing-alert-body">
+                        <span class="timing-alert-badge" id="timing-alert-badge"
+                            data-i18n="farmer.timingAlert.badge">LIVE ADVISORY</span>
+                        <p class="timing-alert-message" id="timing-alert-message"
+                            data-i18n="farmer.timingAlert.loading">Checking live weather forecast...</p>
+                    </div>
+                </div>
+                <a href="/frontend/pages/weather-dashboard.html" class="timing-alert-action" id="timing-alert-action"
+                    data-i18n="farmer.timingAlert.viewForecast">
+                    View 15-Day Forecast →
+                </a>
             </div>
 
-            <div class="stat-card">
-                <div class="stat-icon">🩺</div>
-                <h3>Healthy Crops</h3>
-                <p class="stat-number">4</p>
+            <!-- =========================================================
+                 AUTONOMOUS DECISION LOOP & PRECISION ACTION HUB (PHASE 5)
+                 ========================================================= -->
+            <section class="autonomous-loop-section" id="autonomousLoopSection">
+                <div class="loop-header-row">
+                    <div class="loop-title-wrap">
+                        <div class="loop-badge-strip">
+                            <span class="ab-badge ab-badge-green">⚡ AUTONOMOUS FARM-TO-FIELD LOOP</span>
+                            <span id="provenance-badge" class="ab-badge ab-badge-gray">SOURCE: LIVE SIGNALS</span>
+                            <span id="policy-authority-badge" class="ab-badge ab-badge-gold">POLICY: DETERMINISTIC ENGINE</span>
+                        </div>
+                        <h2 class="section-title">Current Farm Decision & Execution Status</h2>
+                        <span class="section-hint">End-to-end signal fusion, explainable policy rules, weather gating & field task lifecycle</span>
+                    </div>
+                    <div class="loop-controls-wrap">
+                        <button type="button" class="loop-refresh-btn" id="btnRefreshAutonomousLoop" title="Refresh live decision context from server">
+                            🔄 Refresh Status
+                        </button>
+                    </div>
+                </div>
+
+                <!-- DEMO SCENARIO INSPECTION BAR -->
+                <div class="demo-scenario-bar" id="demoScenarioBar">
+                    <div class="demo-bar-label">
+                        <span>🧪 <strong>Autonomous Demo Scenarios:</strong></span>
+                        <span class="demo-sim-pill" id="demoSimPill" style="display:none;">DEMO / SIMULATED SIGNAL</span>
+                    </div>
+                    <div class="demo-scenario-btns">
+                        <button type="button" class="scenario-btn active" data-scenario="LIVE" id="btnScenarioLive">🌱 Live Farm</button>
+                        <button type="button" class="scenario-btn" data-scenario="SCENARIO_A" id="btnScenarioA" title="High Confidence + Safe Weather -> ALLOWED -> Scheduled Task">A: Allowed (Safe Weather)</button>
+                        <button type="button" class="scenario-btn" data-scenario="SCENARIO_B" id="btnScenarioB" title="High Confidence + Rain Risk -> DEFERRED -> Weather Hold">B: Weather Hold (Rain)</button>
+                        <button type="button" class="scenario-btn" data-scenario="SCENARIO_C" id="btnScenarioC" title="Borderline Confidence -> REQUIRES_HUMAN_REVIEW -> Prescription Locked">C: Expert Review (Borderline)</button>
+                        <button type="button" class="scenario-btn" data-scenario="SCENARIO_D" id="btnScenarioD" title="Agronomist Verified -> Re-evaluate -> ALLOWED">D: Human Verified (ICAR Rx)</button>
+                        <button type="button" class="scenario-btn" data-scenario="SCENARIO_F" id="btnScenarioF" title="Simulated IoT Telemetry Signal">F: Simulated IoT Signal</button>
+                    </div>
+                </div>
+
+                <!-- 4-COLUMN AUTONOMOUS STATUS GRID -->
+                <div class="autonomous-grid">
+
+                    <!-- CARD 1: CROP HEALTH & DIAGNOSTIC STATE -->
+                    <div class="auto-card" id="cardCropHealth">
+                        <div class="auto-card-header">
+                            <span class="auto-card-icon">🩺</span>
+                            <div class="auto-card-title-wrap">
+                                <h3>Crop Health & Pathogen</h3>
+                                <span class="auto-card-subtitle" id="healthSignalSource">Source: EfficientNet-B0</span>
+                            </div>
+                            <span class="status-pill pill-allowed" id="healthStatusPill">--</span>
+                        </div>
+                        <div class="auto-card-body">
+                            <div class="auto-metric-main">
+                                <div class="auto-metric-val" id="autoPathogenName">Checking...</div>
+                                <div class="auto-metric-sub" id="autoScientificName">--</div>
+                            </div>
+                            <div class="auto-detail-list">
+                                <div class="auto-detail-row">
+                                    <span>Diagnostic Confidence:</span>
+                                    <strong id="autoConfidenceVal">--%</strong>
+                                </div>
+                                <div class="auto-detail-row">
+                                    <span>Prescription Status:</span>
+                                    <strong id="autoPrescriptionLock">--</strong>
+                                </div>
+                                <div class="auto-detail-row">
+                                    <span>Signal Quality:</span>
+                                    <strong id="autoSignalQuality">--</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2: DETERMINISTIC POLICY DECISION ("WHY THIS DECISION?") -->
+                    <div class="auto-card" id="cardPolicyDecision">
+                        <div class="auto-card-header">
+                            <span class="auto-card-icon">🧠</span>
+                            <div class="auto-card-title-wrap">
+                                <h3>Why This Decision?</h3>
+                                <span class="auto-card-subtitle" id="policyDecisionId">Policy Engine: MultiSignalPolicyEngine</span>
+                            </div>
+                            <span class="status-pill pill-allowed" id="decisionResultPill">--</span>
+                        </div>
+                        <div class="auto-card-body">
+                            <div class="decision-reasoning-box" id="decisionExplanationBox">
+                                <ul class="decision-bullet-list" id="decisionBulletsList">
+                                    <li>Loading deterministic decision trace...</li>
+                                </ul>
+                            </div>
+                            <div class="auto-detail-list" style="margin-top: 10px;">
+                                <div class="auto-detail-row">
+                                    <span>Overall Risk Level:</span>
+                                    <strong id="autoRiskLevel">--</strong>
+                                </div>
+                                <div class="auto-detail-row">
+                                    <span>Human Review:</span>
+                                    <strong id="autoEscalationStatus">--</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3: WEATHER CONSTRAINTS & EXECUTION WINDOW -->
+                    <div class="auto-card" id="cardWeatherConstraints">
+                        <div class="auto-card-header">
+                            <span class="auto-card-icon">🌦️</span>
+                            <div class="auto-card-title-wrap">
+                                <h3>Weather Constraint</h3>
+                                <span class="auto-card-subtitle" id="weatherForecastSource">Open-Meteo Precision Feed</span>
+                            </div>
+                            <span class="status-pill pill-safe" id="weatherConstraintPill">--</span>
+                        </div>
+                        <div class="auto-card-body">
+                            <div class="auto-metric-main">
+                                <div class="auto-metric-val" id="weatherWindowVal">Checking...</div>
+                                <div class="auto-metric-sub" id="weatherConditionSummary">--</div>
+                            </div>
+                            <div class="auto-detail-list">
+                                <div class="auto-detail-row">
+                                    <span>Precipitation Risk (48h):</span>
+                                    <strong id="autoRainProbVal">--%</strong>
+                                </div>
+                                <div class="auto-detail-row">
+                                    <span>Wind Drift Risk:</span>
+                                    <strong id="autoWindVal">-- km/h</strong>
+                                </div>
+                                <div class="auto-detail-row">
+                                    <span>Foliar Spray Advisory:</span>
+                                    <strong id="autoSprayAdvisory">--</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4: ACTIVE PLAN TASK & FROZEN LIFECYCLE ACTION -->
+                    <div class="auto-card" id="cardPlanTask">
+                        <div class="auto-card-header">
+                            <span class="auto-card-icon">📋</span>
+                            <div class="auto-card-title-wrap">
+                                <h3>Field Execution Task</h3>
+                                <span class="auto-card-subtitle" id="taskPlanId">Plan: #--</span>
+                            </div>
+                            <span class="status-pill pill-pending" id="taskLifecyclePill">PENDING</span>
+                        </div>
+                        <div class="auto-card-body">
+                            <div class="auto-metric-main">
+                                <div class="auto-metric-val" id="autoTaskTitle" style="font-size: 15px;">No active task</div>
+                                <div class="auto-metric-sub" id="autoTaskTiming">Scheduled: --</div>
+                            </div>
+
+                            <!-- TASK LIFECYCLE PROGRESS STEPPER -->
+                            <div class="task-stepper" id="taskLifecycleStepper">
+                                <div class="stepper-step active" id="step-pending">
+                                    <span class="step-dot">1</span>
+                                    <span class="step-label">PENDING</span>
+                                </div>
+                                <div class="stepper-line" id="line-1"></div>
+                                <div class="stepper-step" id="step-acknowledged">
+                                    <span class="step-dot">2</span>
+                                    <span class="step-label">ACKNOWLEDGED</span>
+                                </div>
+                                <div class="stepper-line" id="line-2"></div>
+                                <div class="stepper-step" id="step-in_progress">
+                                    <span class="step-dot">3</span>
+                                    <span class="step-label">IN PROGRESS</span>
+                                </div>
+                                <div class="stepper-line" id="line-3"></div>
+                                <div class="stepper-step" id="step-completed">
+                                    <span class="step-dot">4</span>
+                                    <span class="step-label">COMPLETED</span>
+                                </div>
+                            </div>
+
+                            <!-- DYNAMIC ACTION BUTTON -->
+                            <div class="task-action-wrap" style="margin-top: 14px;">
+                                <button type="button" class="task-advance-btn" id="btnAdvanceTask" disabled>
+                                    🔒 No Action Available
+                                </button>
+                                <a href="/frontend/pages/action-plan-trace.html" id="linkViewTrace" class="btn-subtle" style="display: block; text-align: center; margin-top: 8px; font-size: 12px;">
+                                    View Autonomous Decision Trace →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ACTIVE CROPS & FIELD LIFECYCLE MONITOR -->
+            <section class="active-crops-section" id="activeCropsSection">
+                <div class="section-title-row">
+                    <h2 class="section-title">🌾 Active Crops Under Monitoring</h2>
+                    <span class="section-hint">Live field telemetry, growth stages & dynamic task tracking</span>
+                </div>
+                <div class="active-crops-grid" id="activeCropsGrid">
+                    <div class="active-crop-loading" style="padding: 24px; text-align: center; color: #64748B; background: white; border-radius: 14px; border: 1px dashed #CBD5E1;">
+                        Loading active crop lifecycle status...
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================================================
+                 FARMER NOTIFICATION DASHBOARD & ACTION COMMAND CENTER
+                 ========================================================= -->
+            <section class="notification-dashboard-section" id="notification-center">
+                <div class="section-title-row">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div class="notif-bell-badge-wrap">
+                            <span style="font-size: 22px;">🔔</span>
+                            <span class="notif-count-pill" id="notif-unread-count">0</span>
+                        </div>
+                        <div>
+                            <h2 class="section-title">Farmer Notification Dashboard</h2>
+                            <span class="section-hint">Field agent reviews, ICAR prescriptions & inspection schedule alerts</span>
+                        </div>
+                    </div>
+                    <div class="notif-header-actions">
+                        <button type="button" class="btn-mark-all-read" id="btnMarkAllNotifsRead">
+                            ✓ Mark All Read
+                        </button>
+                    </div>
+                </div>
+
+                <!-- NOTIFICATION FILTER TABS -->
+                <div class="notif-filter-tabs" id="notifFilterTabs">
+                    <button type="button" class="notif-tab-btn active" data-filter="ALL">
+                        📋 All (<span id="tab-count-all">0</span>)
+                    </button>
+                    <button type="button" class="notif-tab-btn" data-filter="TREATMENTS">
+                        🩺 Verified Rx (<span id="tab-count-treatments">0</span>)
+                    </button>
+                    <button type="button" class="notif-tab-btn" data-filter="INSPECTIONS">
+                        🚨 Field Visits (<span id="tab-count-inspections">0</span>)
+                    </button>
+                    <button type="button" class="notif-tab-btn" data-filter="WEATHER">
+                        🌦️ Weather (<span id="tab-count-weather">0</span>)
+                    </button>
+                    <button type="button" class="notif-tab-btn" data-filter="ORDERS">
+                        🤝 Orders (<span id="tab-count-orders">0</span>)
+                    </button>
+                </div>
+
+                <!-- NOTIFICATIONS CARDS CONTAINER -->
+                <div class="farmer-notifications-list" id="farmer-notifications-container">
+                    <div class="notif-loading-state">
+                        <div class="notif-spinner"></div>
+                        <span>Loading farmer notifications & field agent decisions...</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FARM KPI METRICS STRIP -->
+            <section class="kpi-metrics-row">
+                <div class="kpi-metric-card" onclick="window.location.href='/frontend/pages/crop-listings.html'">
+                    <div class="kpi-icon bg-green">📋</div>
+                    <div class="kpi-info">
+                        <span class="kpi-label" data-i18n="farmer.metrics.activeListings">Active Listings</span>
+                        <strong class="kpi-val" id="kpi-active-listings">0</strong>
+                    </div>
+                </div>
+
+                <div class="kpi-metric-card" onclick="window.location.href='/frontend/pages/orders.html'">
+                    <div class="kpi-icon bg-gold">🤝</div>
+                    <div class="kpi-info">
+                        <span class="kpi-label" data-i18n="farmer.metrics.buyerOrders">Buyer Commitments</span>
+                        <strong class="kpi-val" id="kpi-buyer-orders">0</strong>
+                    </div>
+                </div>
+
+                <div class="kpi-metric-card" onclick="window.location.href='/frontend/pages/weather-dashboard.html'">
+                    <div class="kpi-icon bg-blue">🌧️</div>
+                    <div class="kpi-info">
+                        <span class="kpi-label" data-i18n="farmer.metrics.rainRisk">Rain Risk (48h)</span>
+                        <strong class="kpi-val" id="kpi-rain-prob">--</strong>
+                    </div>
+                </div>
+
+                <div class="kpi-metric-card" onclick="window.location.href='/frontend/pages/ai-result.html'">
+                    <div class="kpi-icon bg-purple">🩺</div>
+                    <div class="kpi-info">
+                        <span class="kpi-label" data-i18n="farmer.metrics.cropHealth">AI Plant Health</span>
+                        <strong class="kpi-val" id="kpi-health-score">Ready to Scan</strong>
+                    </div>
+                </div>
+            </section>
+
+            <!-- QUICK ACTIONS GRID -->
+            <section class="action-section">
+                <div class="section-title-row">
+                    <h2 class="section-title" data-i18n="farmer.quickActions.title">Quick Farm Actions</h2>
+                    <span class="section-hint">Select a core workflow to begin</span>
+                </div>
+
+                <div class="action-card-grid">
+
+                    <!-- UPLOAD CROP -->
+                    <a href="/frontend/pages/upload-crop.html" class="action-card">
+                        <div class="action-icon-box">📤</div>
+                        <div class="action-card-text">
+                            <h3 data-i18n="farmer.quickActions.uploadCrop">Upload Crop Photo</h3>
+                            <p data-i18n="farmer.quickActions.uploadCropDesc">Upload crop photos for instant deep-learning plant health and disease analysis.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <!-- MY LISTINGS -->
+                    <a href="/frontend/pages/crop-listings.html" class="action-card">
+                        <div class="action-icon-box bg-gold">📋</div>
+                        <div class="action-card-text">
+                            <h3 data-i18n="farmer.quickActions.myListings">My Marketplace Listings</h3>
+                            <p data-i18n="farmer.quickActions.myListingsDesc">Manage pre-harvest crop listings and view buyer commitments.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <!-- CROP HEALTH -->
+                    <a href="/frontend/pages/ai-result.html" class="action-card">
+                        <div class="action-icon-box bg-green">🩺</div>
+                        <div class="action-card-text">
+                            <h3 data-i18n="farmer.quickActions.cropHealth">Crop Health & Remedies</h3>
+                            <p data-i18n="farmer.quickActions.cropHealthDesc">Review verified disease diagnostics, treatment schedules, and bio-pesticides.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <!-- CROP MONITORING & ADVISORY -->
+                    <a href="/frontend/pages/crop-monitoring.html" class="action-card">
+                        <div class="action-icon-box bg-green">⏱️</div>
+                        <div class="action-card-text">
+                            <h3>Dynamic Crop Monitoring</h3>
+                            <p>Date-aware lifecycle tracking, Open-Meteo weather decisions, and Gemini AI prescriptions.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <!-- CROP RECOMMENDATION -->
+                    <a href="/frontend/pages/crop-recommendation.html" class="action-card">
+                        <div class="action-icon-box">🌱</div>
+                        <div class="action-card-text">
+                            <h3 data-i18n="landing.cropRecommendation">Crop Recommendations</h3>
+                            <p>Soil and climate matched crop suitability rankings with estimated yield & profit insights.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <!-- WEATHER DASHBOARD -->
+                    <a href="/frontend/pages/weather-dashboard.html" class="action-card">
+                        <div class="action-icon-box">🌦️</div>
+                        <div class="action-card-text">
+                            <h3 data-i18n="nav.weather">15-Day Weather & Advisory</h3>
+                            <p>All 36 States/UTs and 729 districts with agricultural rain alerts and spray windows.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <!-- VOICE ASSISTANT -->
+                    <a href="/frontend/pages/voice-assistant.html" class="action-card">
+                        <div class="action-icon-box bg-gold">🎙️</div>
+                        <div class="action-card-text">
+                            <h3 data-i18n="nav.voiceAssistant">Voice Farming Assistant</h3>
+                            <p>24/7 Helpline: Ask farming questions in Hindi, Punjabi, Marathi, Bengali, Tamil, Telugu, and more.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <!-- AUTONOMOUS ACTION PLAN TRACE -->
+                    <a href="/frontend/pages/action-plan-trace.html" class="action-card">
+                        <div class="action-icon-box bg-purple">⚡</div>
+                        <div class="action-card-text">
+                            <h3>AI Decision Trace & Observability</h3>
+                            <p>Inspect step-by-step reasoning, meteorological re-evaluations, and adaptive replanning history.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <!-- AI FARM COMMAND CENTER -->
+                    <a href="/frontend/pages/farm-command-center.html" class="action-card" style="border: 1px solid rgba(16, 185, 129, 0.4); background: linear-gradient(135deg, rgba(240, 253, 244, 0.8), rgba(220, 252, 231, 0.4));">
+                        <div class="action-icon-box bg-green">⚡</div>
+                        <div class="action-card-text">
+                            <h3 style="color: #065F46;">AI Farm Command Center</h3>
+                            <p>Virtual IoT telemetry, automated storm decision alerts, irrigation optimization, and mission control.</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- =========================================================
+                 AUTONOMOUS FIELD ACTION PLANS & REASONING TRACES (PROMPT 6)
+                 ========================================================= -->
+            <section class="action-plans-section" style="margin-bottom: 30px;">
+                <div class="section-title-row">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span style="font-size: 20px;">⚡</span>
+                        <h2 class="section-title">Autonomous Field Action Plans & Reasoning Traces</h2>
+                        <span class="ab-badge ab-badge-gold" style="font-size: 11px;">LIVE AGENT REASONING</span>
+                    </div>
+                    <a href="/frontend/pages/action-plan-trace.html" class="title-link">Open Full Observability Suite →</a>
+                </div>
+
+                <div id="action-plans-container" class="action-plans-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin-top: 16px;">
+                    <!-- Dynamically populated by farmer-dashboard.js -->
+                </div>
+            </section>
+
+            <!-- TWO-COLUMN DASHBOARD LOWER ROW -->
+            <div class="dashboard-split-row">
+
+                <!-- LEFT: INCOMING ORDERS & BUYER COMMITMENTS -->
+                <section class="orders-section">
+                    <div class="section-title-row">
+                        <h2 class="section-title" data-i18n="farmer.orders.title">Incoming Buyer Orders</h2>
+                        <a href="/frontend/pages/orders.html" class="title-link">View All Orders →</a>
+                    </div>
+
+                    <div id="orders-container" class="orders-container">
+                        <!-- Populated dynamically by farmer-dashboard.js -->
+                    </div>
+                </section>
+
+                <!-- RIGHT: RECENT ACTIVITY & AI ADVISORIES -->
+                <section class="activity-section">
+                    <div class="section-title-row">
+                        <h2 class="section-title" data-i18n="farmer.activity.title">Farm Activity & Alerts</h2>
+                    </div>
+
+                    <div id="activity-container" class="activity-container">
+                        <!-- Populated dynamically by farmer-dashboard.js -->
+                    </div>
+                </section>
+
             </div>
 
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-bottom">
+                <p>© 2026 AgriBridge. Farmer Command Center. Building resilient agriculture for India.</p>
+                <div class="footer-bottom-links">
+                    <a href="/frontend/pages/voice-assistant.html">Voice Assistant</a> •
+                    <a href="/frontend/pages/weather-dashboard.html">Weather</a> •
+                    <a href="/frontend/pages/crop-listings.html">Marketplace</a> •
+                    <a href="/frontend/pages/farmer-profile.html">Edit Profile</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+        <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
+    <a href="/frontend/pages/voice-assistant.html?from_page=farmer-dashboard" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
+        title="Voice Farming Assistant / आवाज से पूछें">
+        <div class="voice-mic-icon-box">
+            <div class="voice-pulse-ring"></div>
+            🎙️
         </div>
+        <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
+    </a>
 
-    </section>
+    <!-- FARM LOCATION SELECTOR MODAL (1-TIME SELECTION & DEFAULT SETTER) -->
+    <div id="farmLocationModal" class="ab-location-modal" style="display: none;">
+        <div class="ab-modal-overlay" id="closeLocationOverlay"></div>
+        <div class="ab-modal-content">
+            <div class="ab-modal-header">
+                <div class="ab-modal-icon-badge">📍</div>
+                <div class="ab-modal-title-wrap">
+                    <h3>Select Your Farm Location</h3>
+                    <p>Choose your State and District once to get hyper-local weather alerts, spray timing, and crop advisories.</p>
+                </div>
+                <button type="button" class="ab-modal-close-btn" id="closeLocationModalBtn" aria-label="Close modal">✕</button>
+            </div>
 
-    <section class="orders-section">
+            <div class="ab-modal-body">
+                <!-- STATE SELECT -->
+                <div class="ab-form-group">
+                    <label for="modalStateSelect">STATE / UNION TERRITORY</label>
+                    <div class="ab-select-wrap">
+                        <select id="modalStateSelect" class="ab-custom-select">
+                            <option value="">-- Choose State / UT --</option>
+                        </select>
+                    </div>
+                </div>
 
-        <h2 class="section-title">Incoming Orders</h2>
+                <!-- DISTRICT SELECT -->
+                <div class="ab-form-group">
+                    <label for="modalDistrictSelect">DISTRICT</label>
+                    <div class="ab-select-wrap">
+                        <select id="modalDistrictSelect" class="ab-custom-select" disabled>
+                            <option value="">-- Choose District --</option>
+                        </select>
+                    </div>
+                </div>
 
-        <div id="orders-container" class="orders-container">
+                <!-- GPS AUTO DETECT -->
+                <div class="ab-gps-divider">
+                    <span>OR QUICK DETECT</span>
+                </div>
 
-            <!-- JavaScript will display the order here -->
+                <button type="button" class="ab-gps-btn" id="modalGpsBtn">
+                    🛰️ Auto-Detect Current GPS Location
+                </button>
+                <div id="modalGpsStatus" class="ab-gps-status" style="display: none;"></div>
+            </div>
 
+            <div class="ab-modal-footer">
+                <button type="button" class="stylish-btn ab-btn-primary ab-save-loc-btn" id="saveLocationBtn" disabled>
+                    Save Farm Location & Load Live Weather →
+                </button>
+            </div>
         </div>
+    </div>
 
-    </section>
+    <!-- =========================================================
+         RESCHEDULE FIELD INSPECTION MODAL (FARMER ACTION)
+         ========================================================= -->
+    <div id="rescheduleInspectionModal" class="ab-location-modal" style="display: none;">
+        <div class="ab-modal-overlay" id="closeRescheduleOverlay"></div>
+        <div class="ab-modal-content" style="max-width: 520px;">
+            <div class="ab-modal-header" style="background: linear-gradient(135deg, #FFFBEB, #FEF3C7); border-bottom: 1px solid #FDE68A;">
+                <div class="ab-modal-icon-badge" style="background: #D97706; color: white;">📅</div>
+                <div class="ab-modal-title-wrap">
+                    <h3 style="color: #92400E;">Reschedule Field Inspection</h3>
+                    <p style="color: #B45309;">Choose a convenient date for the Agri-Student Field Agent to visit your farm plot.</p>
+                </div>
+                <button type="button" class="ab-modal-close-btn" id="closeRescheduleModalBtn" aria-label="Close modal">✕</button>
+            </div>
 
-    <section class="activity-section">
+            <div class="ab-modal-body" style="padding: 22px;">
+                <input type="hidden" id="rescheduleRecordId" value="">
+                <div id="rescheduleCropInfo" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 12px 16px; margin-bottom: 18px; font-size: 13px; color: #334155;">
+                    <!-- Filled dynamically -->
+                </div>
 
-        <h2 class="section-title">Recent Activity</h2>
+                <label style="font-size: 11px; font-weight: 800; color: #475569; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; display: block;">
+                    QUICK SELECTION
+                </label>
+                <div class="reschedule-quick-chips" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+                    <button type="button" class="quick-date-chip" data-days="1">Tomorrow</button>
+                    <button type="button" class="quick-date-chip" data-days="2">In 2 Days</button>
+                    <button type="button" class="quick-date-chip" data-days="3">In 3 Days</button>
+                    <button type="button" class="quick-date-chip" data-days="5">In 5 Days</button>
+                    <button type="button" class="quick-date-chip" data-days="7">Next Week</button>
+                </div>
 
-        <div class="activity-container">
+                <div class="ab-form-group">
+                    <label for="rescheduleCustomDate" style="font-size: 11px; font-weight: 800; color: #475569; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px; display: block;">
+                        OR SELECT CUSTOM VISIT DATE
+                    </label>
+                    <input type="date" id="rescheduleCustomDate" class="ab-custom-input" style="width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid #CBD5E1; font-size: 14px; box-sizing: border-box;">
+                </div>
 
-            <div class="activity-item">
-                <div class="activity-icon">🌱</div>
-
-                <div class="activity-content">
-                    <h3>Tomato crop uploaded</h3>
-                    <p>2 hours ago</p>
+                <div class="ab-form-group" style="margin-top: 14px;">
+                    <label for="rescheduleNotes" style="font-size: 11px; font-weight: 800; color: #475569; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px; display: block;">
+                        NOTE FOR FIELD AGENT (OPTIONAL)
+                    </label>
+                    <textarea id="rescheduleNotes" class="ab-custom-textarea" rows="2" placeholder="e.g. Please visit in the morning before 11:00 AM..." style="width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid #CBD5E1; font-size: 13px; box-sizing: border-box; resize: vertical;"></textarea>
                 </div>
             </div>
 
-
-            <div class="activity-item">
-                <div class="activity-icon">🩺</div>
-
-                <div class="activity-content">
-                    <h3>AI health analysis completed</h3>
-                    <p>3 hours ago</p>
-                </div>
+            <div class="ab-modal-footer" style="display: flex; gap: 10px; justify-content: flex-end; padding: 16px 22px; background: #F8FAFC; border-top: 1px solid #E2E8F0; border-radius: 0 0 16px 16px;">
+                <button type="button" class="stylish-btn" id="btnCancelReschedule" style="background: #FFFFFF; color: #475569; border: 1px solid #CBD5E1; padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer;">
+                    Cancel
+                </button>
+                <button type="button" class="stylish-btn ab-btn-primary" id="btnSubmitReschedule" style="padding: 8px 18px; border-radius: 8px; font-weight: 700; cursor: pointer;">
+                    📅 Confirm New Inspection Date
+                </button>
             </div>
-
-
-            <div class="activity-item">
-                <div class="activity-icon">📋</div>
-
-                <div class="activity-content">
-                    <h3>Wheat listing created</h3>
-                    <p>Yesterday</p>
-                </div>
-            </div>
-
-
-            <div class="activity-item">
-                <div class="activity-icon">🤝</div>
-
-                <div class="activity-content">
-                    <h3>Buyer committed to purchase 50 kg</h3>
-                    <p>Yesterday</p>
-                </div>
-            </div>
-
         </div>
+    </div>
 
-    </section>
-
-    <script src="/scripts/farmer-dashboard.js"></script>
-
+    <!-- SCRIPTS -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/auth.js"></script>
+    <script src="/frontend/scripts/farmer-dashboard.js"></script>
 </body>
 
 </html>

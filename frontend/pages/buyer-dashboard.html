@@ -4,103 +4,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Buyer Dashboard - AgriBridge</title>
-
-    <link rel="stylesheet" href="/styles/buyer-dashboard.css">
+    <title>Buyer Marketplace Operations — AgriBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/buyer-dashboard.css">
 </head>
 
 <body>
+    <div class="dashboard-wrapper">
 
-    <nav class="nav">
-
-        <!-- LOGO -->
-
-        <div class="logo">
-            <a href="buyer-dashboard.html">
-                <img src="/assets/logo/logo.png" alt="Agri-Bridge Logo">
-            </a>
-        </div>
-
-
-        <!-- BUYER NAVIGATION -->
-
-        <div class="mid">
-
-            <a href="buyer-dashboard.html" class="active">
-                Dashboard
-            </a>
-
-            <a href="buyer-dashboard.html#listings">
-                Verified Crops
-            </a>
-
-        </div>
-
-
-        <!-- USER -->
-
-        <div class="register">
-
-            <span class="user-role">
-                🛒 Buyer
-            </span>
-
-            <button class="stylish-btn" onclick="window.location.href='/pages/index.html'">
-
-                Logout
-
-            </button>
-
-        </div>
-
-    </nav>
-
-    <!-- =========================================
-         HEADER
-         ========================================= -->
-
-    <header class="dashboard-header">
-
-        <div>
-            <h1>Buyer Dashboard</h1>
-
-            <p>
-                Find verified crops directly from farmers.
-            </p>
-        </div>
-
-    </header>
-
-
-    <!-- =========================================
-         VERIFIED CROPS
-         ========================================= -->
-
-    <main>
-
-        <section id="listings" class="listings-section">
-
-            <h2>Verified Crop Listings</h2>
-
-            <p class="section-description">
-                These crops have been checked and verified
-                by our field agents.
-            </p>
-
-
-            <!-- JavaScript will add crops here -->
-
-            <div id="listings-container" class="listings-container">
-
+        <!-- =========================================================
+             AGRIBRIDGE — UNIFIED MASTER NAVBAR
+             ========================================================= -->
+        <nav class="nav">
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="/frontend/pages/buyer-dashboard.html">
+                    <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+                </a>
             </div>
 
-        </section>
+            <!-- NAVIGATION LINKS -->
+            <div class="mid">
+                <a href="/frontend/pages/buyer-dashboard.html" class="active" data-i18n="nav.dashboard">Dashboard</a>
+                <a href="#listings-section" data-i18n="buyer.dashboard.verifiedCropListings">Verified Lots</a>
+                <a href="#orders-section">My Commitments</a>
+                <a href="/frontend/pages/crop-listings.html">Commodity Feed</a>
+            </div>
 
-    </main>
+            <!-- USER & ACTIONS -->
+            <div class="register">
+                <div id="language-selector-container"></div>
+                <span class="user-role-badge" id="buyer-badge">
+                    🛒 Verified Buyer
+                </span>
+                <button type="button" class="stylish-btn ab-btn-primary" onclick="if(window.AgriBridgeAuth){AgriBridgeAuth.logout();}else{window.location.href='/frontend/pages/login.html';}" data-i18n="nav.logout">
+                    Logout
+                </button>
+            </div>
+        </nav>
 
+        <!-- =========================================================
+             MAIN DASHBOARD CONTENT
+             ========================================================= -->
+        <main class="dashboard-container">
 
-    <script src="/scripts/buyer-dashboard.js"></script>
+            <!-- BUYER HERO BANNER -->
+            <section class="buyer-hero-banner">
+                <div class="hero-text-side">
+                    <div class="ab-badge ab-badge-gold">🛒 WHOLESALE PROCUREMENT & DIRECT FARM FORWARD CONTRACTS</div>
+                    <h1 class="hero-heading" data-i18n="buyer.dashboard.title">
+                        Buyer Marketplace Operations
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="buyer.dashboard.description">
+                        Source verified Grade-A agricultural produce directly from certified Indian farmers. All lots feature lab-audited quality metrics, field agent sign-offs, and transparent dispatch schedules.
+                    </p>
+
+                    <div class="buyer-status-chips">
+                        <div class="status-chip">
+                            <span class="chip-dot"></span>
+                            <span id="buyer-status-text">Status: <strong>Verified Buyer • Active</strong></span>
+                        </div>
+                        <div class="status-chip">
+                            <span>🛡️ Quality Standard: <strong>100% Agent Audited</strong></span>
+                        </div>
+                        <div class="status-chip">
+                            <span>⚡ Contract SLA: <strong>Direct Farm Dispatch</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QUICK ACTIONS WIDGET -->
+                <div class="buyer-quick-card">
+                    <div class="quick-card-header">
+                        <span>⚡ PROCUREMENT TOOLS</span>
+                    </div>
+                    <div class="quick-card-links">
+                        <a href="#listings-section" class="quick-action-link">
+                            <span class="action-icon">📦</span>
+                            <div>
+                                <strong>Browse Verified Lots</strong>
+                                <small>Grade-A inspected crops</small>
+                            </div>
+                        </a>
+                        <a href="#orders-section" class="quick-action-link">
+                            <span class="action-icon">🤝</span>
+                            <div>
+                                <strong>My Commitments</strong>
+                                <small>Active purchase orders</small>
+                            </div>
+                        </a>
+                        <a href="/frontend/pages/crop-listings.html" class="quick-action-link">
+                            <span class="action-icon">📈</span>
+                            <div>
+                                <strong>Mandi Price Benchmark</strong>
+                                <small>Direct commodity indices</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================================
+                 SUMMARY METRIC CARDS
+                 ========================================= -->
+            <section class="metrics-section">
+                <div class="metrics-grid">
+
+                    <div class="metric-card metric-available">
+                        <div class="metric-icon-wrap">📦</div>
+                        <div class="metric-data">
+                            <span class="metric-label">Verified Lots</span>
+                            <h3 class="metric-value" id="kpi-available-lots">--</h3>
+                            <small class="metric-hint">Available for procurement</small>
+                        </div>
+                    </div>
+
+                    <div class="metric-card metric-orders">
+                        <div class="metric-icon-wrap">🤝</div>
+                        <div class="metric-data">
+                            <span class="metric-label">My Commitments</span>
+                            <h3 class="metric-value" id="kpi-my-orders">--</h3>
+                            <small class="metric-hint">Active purchase contracts</small>
+                        </div>
+                    </div>
+
+                    <div class="metric-card metric-volume">
+                        <div class="metric-icon-wrap">⚖️</div>
+                        <div class="metric-data">
+                            <span class="metric-label">Available Volume</span>
+                            <h3 class="metric-value" id="kpi-total-volume">--</h3>
+                            <small class="metric-hint">Total declared lot weight</small>
+                        </div>
+                    </div>
+
+                    <div class="metric-card metric-qa">
+                        <div class="metric-icon-wrap">🛡️</div>
+                        <div class="metric-data">
+                            <span class="metric-label">Quality Audited</span>
+                            <h3 class="metric-value" id="kpi-qa-rate">100%</h3>
+                            <small class="metric-hint">Field agent certified lots</small>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- =========================================
+                 VERIFIED CROP LISTINGS SECTION
+                 ========================================= -->
+            <section id="listings-section" class="dashboard-section">
+                <div class="section-header-row">
+                    <div>
+                        <div class="section-badge badge-success">📦 VERIFIED WHOLESALE COMMODITIES</div>
+                        <h2 class="section-title" data-i18n="buyer.dashboard.verifiedCropListings">
+                            Verified Crop Marketplace
+                        </h2>
+                        <p class="section-desc" data-i18n="buyer.dashboard.sectionDescription">
+                            Review crops verified on-site by certified AgriBridge Field Agents. Place purchase commitments directly with farmers.
+                        </p>
+                    </div>
+                    <div class="filter-toolbar">
+                        <input type="text" id="cropSearchInput" placeholder="🔍 Search crop, farmer, or region..." class="search-input" onkeyup="filterListings()">
+                        <select id="cropTypeFilter" class="filter-select" onchange="filterListings()">
+                            <option value="">All Crop Types</option>
+                            <option value="tomato">Tomato</option>
+                            <option value="potato">Potato</option>
+                            <option value="wheat">Wheat</option>
+                            <option value="rice">Rice</option>
+                            <option value="cotton">Cotton</option>
+                            <option value="maize">Maize</option>
+                        </select>
+                        <button class="btn-refresh" onclick="loadVerifiedListings()" title="Refresh Marketplace">
+                            🔄 Refresh Market
+                        </button>
+                    </div>
+                </div>
+
+                <!-- JavaScript will add crops here -->
+                <div id="listings-container" class="listings-container">
+                    <div class="empty-state">
+                        <p>Loading verified crop listings...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================================
+                 MY PURCHASE COMMITMENTS & ORDERS SECTION
+                 ========================================= -->
+            <section id="orders-section" class="dashboard-section">
+                <div class="section-header-row">
+                    <div>
+                        <div class="section-badge badge-info">🤝 ACTIVE FORWARD CONTRACTS</div>
+                        <h2 class="section-title">My Purchase Commitments</h2>
+                        <p class="section-desc">
+                            All confirmed purchase orders and forward agreements dispatched to farmers through your buyer account.
+                        </p>
+                    </div>
+                    <button class="btn-refresh" onclick="loadMyOrders()" title="Refresh Orders">
+                        🔄 Refresh Orders
+                    </button>
+                </div>
+
+                <div id="orders-container" class="orders-grid">
+                    <div class="empty-state">
+                        <p>Loading purchase commitments...</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+            <p>© 2026 AgriBridge Wholesale Network • Empowering Direct Farm-to-Buyer Trade with Agronomic Transparency</p>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/auth.js"></script>
+    <script src="/frontend/scripts/image-utils.js"></script>
+    <script src="/frontend/scripts/buyer-dashboard.js"></script>
 
 </body>
 

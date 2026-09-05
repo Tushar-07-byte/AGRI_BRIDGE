@@ -1,0 +1,11 @@
+{
+  "action": "REJECT",
+  "task_id": "TASK_ESC_9082",
+  "agent_id": "AGENT_007",
+  "agent_name": "Rahul Verma",
+  "timestamp": "2026-09-04T10:35:00Z",
+  "new_status": "REJECTED",
+  "rejection_reason": "Farm is located in Sector 9, assigned to South Zone Agent Sunil Kumar.",
+  "audit_trail_preserved": true
+}
+

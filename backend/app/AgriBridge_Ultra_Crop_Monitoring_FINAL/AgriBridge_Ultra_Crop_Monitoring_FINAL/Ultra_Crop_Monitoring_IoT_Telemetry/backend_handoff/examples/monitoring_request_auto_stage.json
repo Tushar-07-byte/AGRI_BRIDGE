@@ -1,0 +1,29 @@
+{
+  "farm_id": "FARM_001",
+  "field_id": "FIELD_001",
+  "telemetry_id": "TEL_001",
+  "location": {
+    "state": "Uttar Pradesh",
+    "district": "Varanasi",
+    "village": "Demo Village",
+    "latitude": 25.3176,
+    "longitude": 82.9739
+  },
+  "crop": {
+    "crop_name": "Wheat",
+    "planting_date": "2026-08-01",
+    "crop_stage_mode": "AUTO"
+  },
+  "telemetry": {
+    "soil_moisture_percent": 30.56,
+    "soil_temperature_c": 23.62,
+    "air_temperature_c": 25.7,
+    "relative_humidity_percent": 94.0,
+    "rainfall_mm": 0.0,
+    "leaf_wetness": true,
+    "soil_ec_ds_m": 0.93,
+    "soil_ph": 6.49,
+    "light_hours": 8.0,
+    "wind_speed_kmh": 10.6
+  }
+}

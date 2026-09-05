@@ -1,0 +1,103 @@
+{
+    "weather_schema": {
+        "temperature_c": "Current air temperature in Celsius",
+        "feels_like_c": "Apparent temperature in Celsius",
+        "relative_humidity_percent": "Relative humidity percentage",
+        "rainfall_mm": "Observed rainfall in millimetres",
+        "rain_probability_percent": "Forecast probability of precipitation",
+        "wind_speed_kmh": "Wind speed in kilometres per hour",
+        "weather_condition": "Current weather condition",
+        "cloud_cover_percent": "Cloud cover percentage",
+        "forecast_available": "Whether forecast information is available",
+        "forecast": "Normalized future weather forecast"
+    },
+    "weather_limits": {
+        "temperature_c": [
+            -50,
+            70
+        ],
+        "feels_like_c": [
+            -50,
+            80
+        ],
+        "relative_humidity_percent": [
+            0,
+            100
+        ],
+        "rainfall_mm": [
+            0,
+            2000
+        ],
+        "rain_probability_percent": [
+            0,
+            100
+        ],
+        "wind_speed_kmh": [
+            0,
+            400
+        ],
+        "cloud_cover_percent": [
+            0,
+            100
+        ]
+    },
+    "iot_schema": {
+        "soil_moisture_percent": "Current volumetric soil moisture percentage",
+        "soil_temperature_c": "Root-zone soil temperature in Celsius",
+        "air_temperature_c": "Ambient temperature in Celsius",
+        "relative_humidity_percent": "Relative humidity percentage",
+        "rainfall_mm": "Rainfall received during monitoring period",
+        "leaf_wetness": "Leaf wetness indicator or sensor value",
+        "soil_ec_ds_m": "Soil electrical conductivity in dS/m",
+        "soil_ph": "Soil pH",
+        "light_hours": "Daily light exposure",
+        "wind_speed_kmh": "Wind speed in km/h"
+    },
+    "iot_limits": {
+        "soil_moisture_percent": [
+            0,
+            100
+        ],
+        "soil_temperature_c": [
+            -20,
+            70
+        ],
+        "air_temperature_c": [
+            -30,
+            70
+        ],
+        "relative_humidity_percent": [
+            0,
+            100
+        ],
+        "rainfall_mm": [
+            0,
+            1000
+        ],
+        "soil_ec_ds_m": [
+            0,
+            100
+        ],
+        "soil_ph": [
+            0,
+            14
+        ],
+        "light_hours": [
+            0,
+            24
+        ],
+        "wind_speed_kmh": [
+            0,
+            300
+        ]
+    },
+    "supported_sources": {
+        "weather": "External live weather API",
+        "iot": "External IoT telemetry gateway/device"
+    },
+    "data_policy": {
+        "fake_data": false,
+        "sample_data": false,
+        "real_time_data_required": true
+    }
+}

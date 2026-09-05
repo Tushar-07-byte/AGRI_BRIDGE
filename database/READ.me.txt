@@ -1,0 +1,79 @@
+============================================================
+                    AGRIBRIDGE
+              DATABASE ENGINEER README
+============================================================
+
+Project: AgriBridge
+Database: agribridge_test
+Database System: MySQL
+Tool: MySQL Workbench
+
+============================================================
+DATABASE TABLES
+============================================================
+
+1. farmers
+2. listings
+3. buyers
+4. orders
+
+============================================================
+SAMPLE DATA
+============================================================
+
+Farmers  : 5
+Listings : 5
+Buyers   : 5
+Orders   : 5
+
+============================================================
+RELATIONSHIPS
+============================================================
+
+farmers.id  → listings.farmer_id
+
+listings.id → orders.listing_id
+
+buyers.id   → orders.buyer_id
+
+============================================================
+SQL FILES
+============================================================
+
+schema.sql
+seed.sql
+AgriBridge_Database_Implementation.sql
+
+============================================================
+ER DIAGRAM
+============================================================
+
+AgriBridge_ER_Diagram.mwb
+AgriBridge_ER_Diagram.png
+
+============================================================
+TESTING STATUS
+============================================================
+
+Farmer → Listing       : PASS
+Listing → Order        : PASS
+Buyer → Order          : PASS
+Foreign Key Integrity : PASS
+Final JOIN             : PASS
+
+Invalid Farmer References : 0
+Invalid Listing References: 0
+Invalid Buyer References  : 0
+
+============================================================
+FINAL STATUS
+============================================================
+
+Database Engineer Role: COMPLETED
+
+The AgriBridge database has been created, populated,
+tested, validated, and documented.
+
+The database is ready for final team submission.
+
+============================================================

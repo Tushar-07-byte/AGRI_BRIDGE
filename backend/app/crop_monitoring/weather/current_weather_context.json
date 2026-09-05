@@ -1,0 +1,86 @@
+{
+    "status": "available",
+    "provider": "Open-Meteo",
+    "fetched_at": "2026-09-01T07:20:05.596886",
+    "location": {
+        "latitude": 26.25788,
+        "longitude": 82.07269,
+        "resolved_name": "Sultānpur"
+    },
+    "current": {
+        "temperature": 27.2,
+        "humidity": 95,
+        "precipitation": 0.3,
+        "rainfall": 0.3,
+        "wind_speed": 9.8,
+        "wind_direction": 72,
+        "weather_code": 55,
+        "condition": "Dense drizzle",
+        "observed_at": "2026-09-01T12:45"
+    },
+    "seven_day_forecast": [
+        {
+            "date": "2026-09-01",
+            "temperature_max": 30.3,
+            "temperature_min": 25.3,
+            "rainfall": 8.9,
+            "precipitation": 27.2,
+            "wind_speed_max": 10.3,
+            "weather_condition": "Thunderstorm with slight hail"
+        },
+        {
+            "date": "2026-09-02",
+            "temperature_max": 29.7,
+            "temperature_min": 25.5,
+            "rainfall": 6.2,
+            "precipitation": 13.9,
+            "wind_speed_max": 19.2,
+            "weather_condition": "Thunderstorm"
+        },
+        {
+            "date": "2026-09-03",
+            "temperature_max": 30.7,
+            "temperature_min": 25.9,
+            "rainfall": 1.1,
+            "precipitation": 2.3,
+            "wind_speed_max": 22.0,
+            "weather_condition": "Thunderstorm"
+        },
+        {
+            "date": "2026-09-04",
+            "temperature_max": 31.4,
+            "temperature_min": 26.4,
+            "rainfall": 2.5,
+            "precipitation": 3.3,
+            "wind_speed_max": 19.2,
+            "weather_condition": "Thunderstorm"
+        },
+        {
+            "date": "2026-09-05",
+            "temperature_max": 30.3,
+            "temperature_min": 25.9,
+            "rainfall": 1.5,
+            "precipitation": 6.6,
+            "wind_speed_max": 15.0,
+            "weather_condition": "Thunderstorm with slight hail"
+        },
+        {
+            "date": "2026-09-06",
+            "temperature_max": 31.1,
+            "temperature_min": 25.9,
+            "rainfall": 1.2,
+            "precipitation": 2.4,
+            "wind_speed_max": 13.2,
+            "weather_condition": "Thunderstorm"
+        },
+        {
+            "date": "2026-09-07",
+            "temperature_max": 31.4,
+            "temperature_min": 26.2,
+            "rainfall": 3.0,
+            "precipitation": 4.8,
+            "wind_speed_max": 12.3,
+            "weather_condition": "Thunderstorm"
+        }
+    ]
+}

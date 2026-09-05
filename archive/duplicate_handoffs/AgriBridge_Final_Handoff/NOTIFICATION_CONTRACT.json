@@ -1,0 +1,25 @@
+{
+  "notification_id": "<generated>",
+  "event_id": "<generated>",
+  "recipient": {
+    "type": "farmer",
+    "country": "India",
+    "state": "<dynamic>",
+    "district": "<dynamic>",
+    "village": "<dynamic>"
+  },
+  "message": {
+    "title": "AgriBridge Farm Action",
+    "action": "<WHAT>",
+    "when": "<WHEN>",
+    "where": "<WHERE>",
+    "why": "<WHY>",
+    "priority": "<low|moderate|high|critical>"
+  },
+  "delivery": {
+    "required": true,
+    "status": "PENDING",
+    "handled_by": "Backend notification service"
+  },
+  "weather_recheck_required": true
+}

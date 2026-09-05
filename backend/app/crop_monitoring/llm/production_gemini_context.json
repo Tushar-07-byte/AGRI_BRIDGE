@@ -1,0 +1,324 @@
+{
+    "system": {
+        "name": "AgriBridge",
+        "country": "India",
+        "current_date": "2026-09-01",
+        "current_time": "06:59:10",
+        "session_id": "AGRIBRIDGE_20260901_065910"
+    },
+    "farmer": {
+        "farmer_id": "FARMER_20260901070849",
+        "location": {
+            "country": "India",
+            "state": "Uttar Pradesh",
+            "district": "Sultanpur",
+            "village": "Dhanpatganj",
+            "latitude": null,
+            "longitude": null
+        }
+    },
+    "crop": {
+        "crop_id": "tomato",
+        "crop_name": "Tomato"
+    },
+    "date_context": {
+        "planting_date": "2026-09-01",
+        "days_after_planting": 0,
+        "date_status": "available"
+    },
+    "crop_stage": {
+        "current_stage": "showing",
+        "stage_number": null,
+        "total_lifecycle_stages": 16,
+        "next_stage": null,
+        "stage_source": "farmer_input"
+    },
+    "scientific_calendar": {
+        "crop_id": "tomato",
+        "crop_name": "Tomato",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Tomato",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "management_calendar": {
+        "crop_name": "Tomato",
+        "stages": [
+            {
+                "stage": "Transplanting",
+                "day_range": "Day 0",
+                "irrigation": "Ropai ke baad paani",
+                "fertilizer": "50kg DAP + 30kg MOP",
+                "crop_protection": "Damping off: Copper Oxychloride"
+            },
+            {
+                "stage": "Vegetative",
+                "day_range": "Day 15-20",
+                "irrigation": "5-7 din gap",
+                "fertilizer": "25kg Urea",
+                "crop_protection": "Whitefly / Virus: Cyantraniliprole / Imidacloprid"
+            },
+            {
+                "stage": "Flowering",
+                "day_range": "Day 35-40",
+                "irrigation": "Regular Drip/Flood",
+                "fertilizer": "Calcium Nitrate + Boron",
+                "crop_protection": "Early/Late Blight: Azoxystrobin + Difenoconazole"
+            },
+            {
+                "stage": "Fruiting",
+                "day_range": "Day 60+",
+                "irrigation": "Nami Maintain",
+                "fertilizer": "NPK 13-0-45 Weekly",
+                "crop_protection": "Fruit Borer: Spinetoram / Chlorantraniliprole"
+            }
+        ]
+    },
+    "weather": {
+        "provider": "Open-Meteo",
+        "status": "available",
+        "current": {
+            "temperature": 27.2,
+            "humidity": 95,
+            "precipitation": 0.3,
+            "rainfall": 0.3,
+            "wind_speed": 9.8,
+            "wind_direction": 72,
+            "weather_code": 55,
+            "condition": "Dense drizzle",
+            "observed_at": "2026-09-01T12:45"
+        },
+        "seven_day_forecast": [
+            {
+                "date": "2026-09-01",
+                "temperature_max": 30.3,
+                "temperature_min": 25.3,
+                "rainfall": 8.9,
+                "precipitation": 27.2,
+                "wind_speed_max": 10.3,
+                "weather_condition": "Thunderstorm with slight hail"
+            },
+            {
+                "date": "2026-09-02",
+                "temperature_max": 29.7,
+                "temperature_min": 25.5,
+                "rainfall": 6.2,
+                "precipitation": 13.9,
+                "wind_speed_max": 19.2,
+                "weather_condition": "Thunderstorm"
+            },
+            {
+                "date": "2026-09-03",
+                "temperature_max": 30.7,
+                "temperature_min": 25.9,
+                "rainfall": 1.1,
+                "precipitation": 2.3,
+                "wind_speed_max": 22.0,
+                "weather_condition": "Thunderstorm"
+            },
+            {
+                "date": "2026-09-04",
+                "temperature_max": 31.4,
+                "temperature_min": 26.4,
+                "rainfall": 2.5,
+                "precipitation": 3.3,
+                "wind_speed_max": 19.2,
+                "weather_condition": "Thunderstorm"
+            },
+            {
+                "date": "2026-09-05",
+                "temperature_max": 30.3,
+                "temperature_min": 25.9,
+                "rainfall": 1.5,
+                "precipitation": 6.6,
+                "wind_speed_max": 15.0,
+                "weather_condition": "Thunderstorm with slight hail"
+            },
+            {
+                "date": "2026-09-06",
+                "temperature_max": 31.1,
+                "temperature_min": 25.9,
+                "rainfall": 1.2,
+                "precipitation": 2.4,
+                "wind_speed_max": 13.2,
+                "weather_condition": "Thunderstorm"
+            },
+            {
+                "date": "2026-09-07",
+                "temperature_max": 31.4,
+                "temperature_min": 26.2,
+                "rainfall": 3.0,
+                "precipitation": 4.8,
+                "wind_speed_max": 12.3,
+                "weather_condition": "Thunderstorm"
+            }
+        ]
+    },
+    "weather_analysis": {
+        "overall_risk": "high",
+        "decision": "Keep",
+        "reason": "Current weather conditions do not indicate a major reason to change scheduled crop activities.",
+        "risks": {
+            "rain_risk": {
+                "level": "low",
+                "reason": "No significant rainfall signal detected"
+            },
+            "heavy_rain_risk": {
+                "level": "moderate",
+                "reason": "Seven day forecast indicates repeated rainfall"
+            },
+            "heat_risk": {
+                "level": "low",
+                "reason": "No strong heat signal detected"
+            },
+            "cold_risk": {
+                "level": "low",
+                "reason": "No strong cold signal detected"
+            },
+            "wind_risk": {
+                "level": "low",
+                "reason": "Wind conditions are currently manageable"
+            },
+            "humidity_risk": {
+                "level": "high",
+                "reason": "Very high humidity is currently present"
+            },
+            "waterlogging_risk": {
+                "level": "low",
+                "reason": "No strong waterlogging signal detected"
+            },
+            "dryness_risk": {
+                "level": "low",
+                "reason": "No strong dryness signal detected"
+            }
+        }
+    },
+    "disease_policy": {
+        "inspection_only": true,
+        "diagnosis": false,
+        "prediction": false,
+        "model_inference": false
+    },
+    "marketplace": {
+        "enabled": true,
+        "platform": "AgriBridge Marketplace",
+        "crop_listing": true,
+        "buyer_connection": true,
+        "price_monitoring": true,
+        "market_price_comparison": true,
+        "selling_time_guidance": true,
+        "selling_place_guidance": true,
+        "crop_sale_tracking": true
+    }
+}

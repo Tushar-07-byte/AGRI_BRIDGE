@@ -1,0 +1,45 @@
+{
+  "rules": [
+    {
+      "trigger_type": "LOW_CONFIDENCE_DISEASE_PREDICTION",
+      "priority": "HIGH",
+      "target_role": "Field Crop Pathologist / Field Agent",
+      "chemical_lock_required": true,
+      "sla_hours": 12,
+      "description": "Triggered when AI disease confidence falls below the configured threshold."
+    },
+    {
+      "trigger_type": "UNUSUAL_SENSOR_READING",
+      "priority": "HIGH",
+      "target_role": "IoT Field Technician / Field Agent",
+      "chemical_lock_required": false,
+      "sla_hours": 12,
+      "description": "Triggered when a sensor produces impossible or suspicious telemetry (e.g. soil moisture = 0%)."
+    },
+    {
+      "trigger_type": "SENSOR_DATA_MISSING",
+      "priority": "MEDIUM",
+      "target_role": "Field Agent",
+      "chemical_lock_required": false,
+      "sla_hours": 24,
+      "description": "Triggered when telemetry heartbeat is lost for more than 4 consecutive intervals."
+    },
+    {
+      "trigger_type": "SENSOR_VALUE_OUT_OF_RANGE",
+      "priority": "MEDIUM",
+      "target_role": "Field Agent",
+      "chemical_lock_required": false,
+      "sla_hours": 24,
+      "description": "Triggered when values fall outside physical biological boundaries."
+    },
+    {
+      "trigger_type": "CRITICAL_PEST_OUTBREAK_RISK",
+      "priority": "CRITICAL",
+      "target_role": "Senior Field Agronomist",
+      "chemical_lock_required": false,
+      "sla_hours": 6,
+      "description": "Triggered when multi-farm pest alerts indicate rapid regional spread."
+    }
+  ]
+}
+

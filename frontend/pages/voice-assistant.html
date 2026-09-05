@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Assistant — AgriBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/voice-assistant.css">
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- NAVIGATION                                -->
+    <!-- ========================================= -->
+    <nav class="nav">
+        <div class="logo">
+            <a href="/frontend/pages/index.html">
+                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+            </a>
+        </div>
+
+        <div class="mid">
+            <a href="/frontend/pages/farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+            <a href="/frontend/pages/weather-dashboard.html" data-i18n="nav.weather">Weather</a>
+            <a href="/frontend/pages/crop-recommendation.html" data-i18n="landing.cropRecommendation">Recommendations</a>
+            <a href="/frontend/pages/crop-listings.html" data-i18n="nav.marketplace">Marketplace</a>
+            <a href="/frontend/pages/voice-assistant.html" class="active" data-i18n="nav.voiceAssistant">Voice AI</a>
+            <a href="/frontend/pages/farmer-profile.html" data-i18n="nav.myProfile">Profile</a>
+        </div>
+
+        <div class="register">
+            <button type="button" class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/farmer-dashboard.html'">
+                ← Back to Dashboard
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- VOICE ASSISTANT MAIN CONTAINER            -->
+    <!-- ========================================= -->
+    <main class="voice-assistant-page">
+
+        <!-- HEADER -->
+        <header class="assistant-header">
+            <div class="header-badge" data-i18n="voiceAssistant.agricultureOnlyNote">
+                🌱 Saathi — Multilingual Farmer Voice Companion
+            </div>
+            <h1 data-i18n="voiceAssistant.title">AgriBridge Saathi</h1>
+            <p data-i18n="voiceAssistant.subtitle">
+                Main Saathi hoon. Aap mujhse normal tarike se baat kar sakte hain. Speak naturally in Hindi, Hinglish, Punjabi, Marathi, Bengali, Tamil, Telugu, or any Indian language!
+            </p>
+        </header>
+
+        <!-- ACTIVE FARM & CROP CONTEXT BAR (Hidden in Step 1) -->
+        <section class="farm-context-bar" style="display: none;">
+            <div class="context-item">
+                <span class="context-icon">🌾</span>
+                <span class="context-label" data-i18n="voiceAssistant.cropContext">Active Crop:</span>
+                <select id="context-crop" class="context-select">
+                    <option value="">Select Crop (Optional)</option>
+                    <option value="Wheat">Wheat (गेहूं)</option>
+                    <option value="Rice">Rice (धान / चावल)</option>
+                    <option value="Potato">Potato (आलू)</option>
+                    <option value="Tomato">Tomato (टमाटर)</option>
+                    <option value="Cotton">Cotton (कपास / नरमा)</option>
+                    <option value="Soybean">Soybean (सोयाबीन)</option>
+                    <option value="Corn">Corn (मक्का)</option>
+                    <option value="Mustard">Mustard (सरसों)</option>
+                    <option value="Gram">Gram (चना)</option>
+                    <option value="Onion">Onion (प्याज)</option>
+                    <option value="Chilli">Chilli (मिर्च)</option>
+                    <option value="Sugarcane">Sugarcane (गन्ना)</option>
+                    <option value="Apple">Apple (सेब)</option>
+                    <option value="Grape">Grape (अंगूर)</option>
+                </select>
+            </div>
+
+            <div class="context-item">
+                <span class="context-icon">🌿</span>
+                <span class="context-label" data-i18n="voiceAssistant.growthStage">Growth Stage:</span>
+                <select id="context-growth-stage" class="context-select">
+                    <option value="">Select Stage</option>
+                    <option value="Seedling">Seedling (अंकुरण)</option>
+                    <option value="Vegetative">Vegetative (बढ़वार)</option>
+                    <option value="Flowering">Flowering (फूल आना)</option>
+                    <option value="Fruiting">Fruiting (फल लगना)</option>
+                    <option value="Maturity">Maturity (पकाव / कटाई)</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- CONVERSATION / MESSAGE FEED -->
+        <section class="assistant-conversation-card">
+            <div id="assistant-conversation" class="conversation-feed">
+                <!-- Welcome greeting bubble -->
+                <div class="assistant-message bot-message">
+                    <div class="message-icon">🤝</div>
+                    <div class="message-content">
+                        <strong>Saathi (साथी)</strong>
+                        <p id="assistant-welcome-message">
+                            Namaste ji! Main Saathi hoon. Aap mujhse normal tarike se baat kar sakte hain. Jab bhi aapko meri zarurat ho, bas mujhse baat kijiye.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK SUGGESTION CHIPS -->
+            <div class="quick-chips-row">
+                <button type="button" class="quick-chip" onclick="triggerQuickPrompt('Bhai mujhe mandi bhav dekhna hai')">
+                    💰 Mandi Bhav kahan hai?
+                </button>
+                <button type="button" class="quick-chip" onclick="triggerQuickPrompt('Mujhe disease check karna hai, kya karu?')">
+                    🔬 Disease check kahan karein?
+                </button>
+                <button type="button" class="quick-chip" onclick="triggerQuickPrompt('Mausam aur barish dekhna hai')">
+                    ⛅ Weather kaise dekhein?
+                </button>
+                <button type="button" class="quick-chip" onclick="triggerQuickPrompt('Upar wala button kaunsa hai?')">
+                    🧭 Upar wala button kaunsa hai?
+                </button>
+                <button type="button" class="quick-chip" onclick="triggerQuickPrompt('Namaste Saathi ji, aap kaise ho?')">
+                    🎙️ नमस्ते साथी! आप कैसे हैं?
+                </button>
+            </div>
+        </section>
+
+        <!-- VOICE INTERACTION CORE -->
+        <section class="voice-control-card">
+            <div class="pulse-container" id="pulse-wrapper">
+                <button type="button" id="voice-button" class="voice-mic-btn" aria-label="Tap to speak">
+                    🎙️
+                </button>
+            </div>
+
+            <div id="voice-status" class="voice-status-text" data-i18n="voiceAssistant.idle">
+                Tap the microphone and speak naturally in any language
+            </div>
+
+            <div id="voice-subtext" class="voice-subtext">
+                (Tap mic anytime to interrupt and speak)
+            </div>
+
+            <div class="voice-actions-row">
+                <button type="button" id="stop-voice-btn" class="stylish-btn ab-btn-secondary" style="display: none;">
+                    ⏹️ Stop Speaking
+                </button>
+                <button type="button" id="replay-voice-btn" class="stylish-btn ab-btn-gold" style="display: none;">
+                    🔊 Replay Spoken Answer
+                </button>
+            </div>
+        </section>
+
+        <!-- TEXT FALLBACK INTERFACE -->
+        <section class="text-fallback-card">
+            <div class="text-fallback-toggle">
+                <span class="toggle-icon">⌨️</span>
+                <span data-i18n="voiceAssistant.typeInstead">Type your question instead:</span>
+            </div>
+            <form id="text-assistant-form" class="text-input-group">
+                <input
+                    type="file"
+                    id="assistant-image-input"
+                    accept="image/jpeg,image/png,image/jpg"
+                    style="display: none;"
+                >
+                <button type="button" id="attach-image-btn" class="stylish-btn ab-btn-secondary" title="Attach Leaf Photo" style="padding: 8px 12px;">
+                    📷
+                </button>
+                <input
+                    type="text"
+                    id="assistant-text-input"
+                    class="text-query-field"
+                    placeholder="Say hello, ask a farming question, or upload crop photo..."
+                    data-i18n-placeholder="voiceAssistant.typePlaceholder"
+                    autocomplete="off"
+                >
+                <button type="submit" id="send-text-btn" class="stylish-btn ab-btn-primary" data-i18n="voiceAssistant.send">
+                    Talk to Saathi →
+                </button>
+            </form>
+            <div id="image-preview-bar" style="display: none; padding: 6px 14px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; margin-top: 8px; font-size: 13px; align-items: center; justify-content: space-between;">
+                <span id="image-preview-name" style="color: #166534; font-weight: 500;">Attached photo: leaf.jpg</span>
+                <button type="button" id="remove-image-btn" style="background: none; border: none; cursor: pointer; color: #dc2626; font-weight: bold;">✕ Remove</button>
+            </div>
+        </section>
+
+        <!-- FIRST-TIME FARMER ONBOARDING MODAL (PROMPT -1D) -->
+        <div id="va-onboarding-modal" class="va-modal-overlay" style="display: none;">
+            <div class="va-modal-card">
+                <div class="va-modal-header">
+                    <span class="va-modal-icon">👋</span>
+                    <h2>Personalize Your Voice Advisor</h2>
+                    <p>Tell us your name and how you'd like your agricultural answers.</p>
+                </div>
+                
+                <form id="va-onboarding-form" class="va-modal-form">
+                    <div class="va-form-group">
+                        <label for="va-input-name">Your Name (आपका नाम):</label>
+                        <input type="text" id="va-input-name" class="va-modal-input" placeholder="e.g. Ramesh Kumar" required />
+                    </div>
+                    
+                    <div class="va-form-group">
+                        <label>How would you like your advice?</label>
+                        <div class="va-pref-cards">
+                            <label class="va-pref-card active">
+                                <input type="radio" name="va-style-pref" value="simple" checked />
+                                <div class="va-pref-info">
+                                    <strong>⚡ Short & Simple (1–2 sentences)</strong>
+                                    <span>Quick, direct answers easy to listen to on the phone.</span>
+                                </div>
+                            </label>
+                            <label class="va-pref-card">
+                                <input type="radio" name="va-style-pref" value="detailed" />
+                                <div class="va-pref-info">
+                                    <strong>📚 Detailed Explanations</strong>
+                                    <span>Comprehensive agronomic reasoning and step-by-step guidance.</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="stylish-btn ab-btn-primary va-modal-btn">
+                        💾 Save & Start Voice Helpline →
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- AUDIO PLAYER -->
+    <audio id="assistant-audio-player" style="display: none;"></audio>
+
+    <!-- SCRIPTS -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/auth.js"></script>
+    <script src="/frontend/scripts/voice-assistant.js"></script>
+</body>
+
+</html>

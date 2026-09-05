@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pymysql
+python-dotenv
+python-multipart
+tensorflow
+pandas
+httpx
+gTTS
+pytest
+python-pptx
+

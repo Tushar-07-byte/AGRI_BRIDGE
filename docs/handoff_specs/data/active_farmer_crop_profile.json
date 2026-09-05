@@ -1,0 +1,40 @@
+{
+    "farmer": {
+        "farmer_id": "TEST_FARMER_001"
+    },
+    "location": {
+        "country": "India",
+        "state": "Uttar Pradesh",
+        "district": "Example District",
+        "village": "Example Village",
+        "latitude": null,
+        "longitude": null
+    },
+    "farm": {
+        "farm_id": "",
+        "soil_type": "",
+        "irrigation_type": ""
+    },
+    "field": {
+        "field_id": ""
+    },
+    "crop": {
+        "crop_id": "wheat",
+        "crop_name": "Wheat",
+        "variety": ""
+    },
+    "planting": {
+        "planting_date": "2026-09-01",
+        "days_after_planting": 0
+    },
+    "monitoring": {
+        "enabled": true,
+        "weather_integration": true,
+        "scientific_calendar": true,
+        "dynamic_calendar": true,
+        "notifications": true,
+        "disease_inspection_guidance": true
+    },
+    "status": "active",
+    "created_at": "2026-08-31T17:52:00.257629"
+}

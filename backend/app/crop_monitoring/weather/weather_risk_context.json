@@ -1,0 +1,57 @@
+{
+    "crop": "Tomato",
+    "analysis_time": "2026-09-01T07:22:02.327971",
+    "weather_status": "available",
+    "overall_risk": "high",
+    "risks": {
+        "rain_risk": {
+            "level": "low",
+            "reason": "No significant rainfall signal detected"
+        },
+        "heavy_rain_risk": {
+            "level": "moderate",
+            "reason": "Seven day forecast indicates repeated rainfall"
+        },
+        "heat_risk": {
+            "level": "low",
+            "reason": "No strong heat signal detected"
+        },
+        "cold_risk": {
+            "level": "low",
+            "reason": "No strong cold signal detected"
+        },
+        "wind_risk": {
+            "level": "low",
+            "reason": "Wind conditions are currently manageable"
+        },
+        "humidity_risk": {
+            "level": "high",
+            "reason": "Very high humidity is currently present"
+        },
+        "waterlogging_risk": {
+            "level": "low",
+            "reason": "No strong waterlogging signal detected"
+        },
+        "dryness_risk": {
+            "level": "low",
+            "reason": "No strong dryness signal detected"
+        }
+    },
+    "weather_decision": "Keep",
+    "decision_reason": "Current weather conditions do not indicate a major reason to change scheduled crop activities.",
+    "measurements": {
+        "temperature": 27.2,
+        "humidity": 95.0,
+        "rainfall": 0.3,
+        "wind_speed": 9.8,
+        "seven_day_rainfall": 24.400000000000002,
+        "maximum_forecast_temperature": 31.4,
+        "minimum_forecast_temperature": 25.3,
+        "maximum_forecast_wind": 22.0
+    },
+    "policy": {
+        "disease_prediction": false,
+        "disease_diagnosis": false,
+        "disease_model_inference": false
+    }
+}

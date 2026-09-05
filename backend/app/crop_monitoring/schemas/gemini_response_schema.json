@@ -1,0 +1,17 @@
+{
+    "current_stage": "string",
+    "stage_status": "string",
+    "next_stage": "string or null",
+    "weather_summary": "string",
+    "weather_risk": "low | moderate | high",
+    "weather_decision": "string",
+    "recommended_action": "string",
+    "irrigation_guidance": "string",
+    "fertilizer_guidance": "string",
+    "crop_protection_guidance": "string",
+    "monitoring_guidance": "string",
+    "marketplace_guidance": "string",
+    "safety_information": "string",
+    "important_note": "string",
+    "sources": "array"
+}

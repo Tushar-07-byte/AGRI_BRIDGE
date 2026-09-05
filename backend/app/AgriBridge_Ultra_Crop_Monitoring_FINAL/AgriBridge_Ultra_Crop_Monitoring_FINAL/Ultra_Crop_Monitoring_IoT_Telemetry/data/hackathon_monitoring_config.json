@@ -1,0 +1,27 @@
+{
+    "module": "AgriBridge Hackathon Monitoring Input",
+    "version": "1.0",
+    "weather": {
+        "mode": "LIVE_REAL",
+        "provider": "Open-Meteo",
+        "api_key_required": false
+    },
+    "iot": {
+        "mode": "SYNTHETIC_DEMO",
+        "physical_sensor": false,
+        "purpose": "Hackathon prototype demonstration"
+    },
+    "iot_scenarios": [
+        "auto",
+        "dry",
+        "wet",
+        "optimal"
+    ],
+    "data_transparency": {
+        "weather_is_live": true,
+        "iot_is_simulated": true,
+        "physical_sensor_claim": false
+    },
+    "next_layer": "Dynamic Daily Calendar Engine",
+    "status": "READY"
+}

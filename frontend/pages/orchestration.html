@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AgriBridge Orchestration Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #output { white-space: pre-wrap; background:#f5f5f5; padding:10px; border:1px solid #ccc; }
+        .demo-label { color: #555; font-size: 0.9em; }
+        .section { margin-top: 20px; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: #fafafa; }
+        .section h3 { margin-top: 0; }
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-weight: bold; }
+        .badge.low { background:#d4edda; color:#155724; }
+        .badge.moderate { background:#fff3cd; color:#856404; }
+        .badge.high { background:#f8d7da; color:#721c24; }
+        .badge.critical { background:#f5c6cb; color:#842029; }
+        .spinner { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 24px; height: 24px; animation: spin 1s linear infinite; margin: 10px 0; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .error { color:#b71c1c; background:#ffebee; padding:10px; border:1px solid #f44336; border-radius:4px; margin-top:10px; }
+        #output { white-space: pre-wrap; background:#f5f5f5; padding:10px; border:1px solid #ccc; margin-top:10px; }
+    </style>
+</head>
+<body>
+    <h1>Orchestration Demo (Simulated Data)</h1>
+    <p class="demo-label">This UI uses deterministic demo overrides for soil moisture and rain probability.</p>
+    <button id="runBtn">Run Orchestration</button>
+    <h2>Response</h2>
+    <div id="loading" class="spinner" style="display:none;"></div>
+    <div id="error" class="error" style="display:none;"></div>
+
+    <!-- Structured Result Sections -->
+    <div id="decision-summary" class="section" style="display:none;">
+        <h3>Decision Summary</h3>
+        <p>Overall Risk: <span id="overallRisk" class="badge"></span></p>
+        <p>Priority: <span id="priority" class="badge"></span></p>
+        <p>Escalation: <span id="escalationStatus" class="badge"></span></p>
+        <p id="escalationReason" style="display:none;">Reason: <span></span></p>
+    </div>
+    <div id="signal-summary" class="section" style="display:none;">
+        <h3>Signal Summary</h3>
+        <p>Signals considered: <span id="signalsCount"></span></p>
+    </div>
+    <div id="decision-trace" class="section" style="display:none;">
+        <h3>Why this decision?</h3>
+        <details>
+            <summary>Show decision trace</summary>
+            <pre id="traceContent"></pre>
+        </details>
+    </div>
+    <div id="action-plan" class="section" style="display:none;">
+        <h3>Action Plan</h3>
+        <ul id="actionList"></ul>
+    </div>
+    <div id="escalation" class="section" style="display:none;">
+        <h3>Escalation Details</h3>
+        <p id="escalationDetail"></p>
+    </div>
+    <div id="notifications" class="section" style="display:none;">
+        <h3>Notifications</h3>
+        <ul id="notificationList"></ul>
+    </div>
+
+    <h2>Response (Developer Debug)</h2>
+    <div id="output"></div>
+
+    <script>
+        const btn = document.getElementById('runBtn');
+        const out = document.getElementById('output');
+        const loading = document.getElementById('loading');
+        const errorDiv = document.getElementById('error');
+        const decisionSummary = document.getElementById('decision-summary');
+        const signalSummary = document.getElementById('signal-summary');
+        const decisionTrace = document.getElementById('decision-trace');
+        const actionPlan = document.getElementById('action-plan');
+        const escalationDiv = document.getElementById('escalation');
+        const notificationsDiv = document.getElementById('notifications');
+
+        btn.addEventListener('click', async () => {
+            // Reset UI
+            out.textContent = '';
+            errorDiv.style.display = 'none';
+            decisionSummary.style.display = 'none';
+            signalSummary.style.display = 'none';
+            decisionTrace.style.display = 'none';
+            actionPlan.style.display = 'none';
+            escalationDiv.style.display = 'none';
+            notificationsDiv.style.display = 'none';
+
+            btn.disabled = true;
+            loading.style.display = 'block';
+            const payload = {
+                state: "Punjab",
+                district: "Ludhiana",
+                village: "Samrala",
+                crop_id: "wheat",
+                planting_date: "2023-11-01",
+                current_stage: "Tillering",
+                latitude: 30.9,
+                longitude: 75.9,
+                farmer_id: 1,
+                soil_moisture_vwc: 20.0,
+                rain_probability: 80
+            };
+            try {
+                const resp = await fetch('/api/orchestration/plan', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!resp.ok) {
+                    throw new Error(`HTTP ${resp.status} ${resp.statusText}`);
+                }
+                const data = await resp.json();
+                // Raw debug view
+                out.textContent = JSON.stringify(data, null, 2);
+
+                // Populate structured UI
+                const msd = data.multi_signal_decision || {};
+                // Decision Summary
+                const riskBadge = document.getElementById('overallRisk');
+                const priorityBadge = document.getElementById('priority');
+                const escalationBadge = document.getElementById('escalationStatus');
+                riskBadge.textContent = data.overall_risk || 'N/A';
+                riskBadge.className = `badge ${data.overall_risk}`;
+                priorityBadge.textContent = msd.priority || 'N/A';
+                priorityBadge.className = `badge ${msd.priority}`;
+                const escalated = data.escalation_required;
+                escalationBadge.textContent = escalated ? 'Required' : 'None';
+                escalationBadge.className = `badge ${escalated ? 'high' : 'low'}`;
+                if (escalated && data.escalation_reason) {
+                    const reasonEl = document.getElementById('escalationReason');
+                    reasonEl.style.display = 'block';
+                    reasonEl.querySelector('span').textContent = data.escalation_reason;
+                } else {
+                    document.getElementById('escalationReason').style.display = 'none';
+                }
+                decisionSummary.style.display = 'block';
+
+                // Signal Summary
+                const signalsCountEl = document.getElementById('signalsCount');
+                signalsCountEl.textContent = data.signals_considered_count ?? (msd.signals_considered ?? '0');
+                signalSummary.style.display = 'block';
+
+                // Decision Trace
+                if (Array.isArray(msd.decision_trace) && msd.decision_trace.length) {
+                    const tracePre = document.getElementById('traceContent');
+                    tracePre.textContent = JSON.stringify(msd.decision_trace, null, 2);
+                    decisionTrace.style.display = 'block';
+                }
+
+                // Action Plan
+                if (Array.isArray(msd.recommended_actions) && msd.recommended_actions.length) {
+                    const ul = document.getElementById('actionList');
+                    ul.innerHTML = '';
+                    msd.recommended_actions.forEach(act => {
+                        const li = document.createElement('li');
+                        li.textContent = act;
+                        ul.appendChild(li);
+                    });
+                    actionPlan.style.display = 'block';
+                }
+
+                // Escalation Details
+                if (escalated) {
+                    const escDetail = document.getElementById('escalationDetail');
+                    escDetail.textContent = data.escalation_reason || 'Field‑agent intervention required.';
+                    escalationDiv.style.display = 'block';
+                }
+
+                // Notifications
+                if (Array.isArray(data.notifications) && data.notifications.length) {
+                    const notifUl = document.getElementById('notificationList');
+                    notifUl.innerHTML = '';
+                    data.notifications.forEach(notif => {
+                        const li = document.createElement('li');
+                        li.textContent = `${notif.title}: ${notif.message}`;
+                        notifUl.appendChild(li);
+                    });
+                    notificationsDiv.style.display = 'block';
+                }
+            } catch (e) {
+                errorDiv.textContent = `Orchestration failed: ${e.message}`;
+                errorDiv.style.display = 'block';
+                out.textContent = 'Error: ' + e;
+            } finally {
+                btn.disabled = false;
+                loading.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+

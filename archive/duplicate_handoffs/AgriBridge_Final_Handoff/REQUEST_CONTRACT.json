@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "example_ai_ml_path": "/api/v1/crop-monitoring/final",
+  "request": {
+    "country": "India",
+    "state": "<dynamic>",
+    "district": "<dynamic>",
+    "village": "<dynamic>",
+    "crop": "<dynamic>",
+    "planting_date": "<optional YYYY-MM-DD>",
+    "current_stage": "<optional>",
+    "weather": "<optional>"
+  },
+  "note": "Do not hard-code farmer, location, crop or weather."
+}

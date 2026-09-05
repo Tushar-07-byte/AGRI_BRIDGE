@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - AgriBridge</title>
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f0f4f0;
+        }
+        .confirmation-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 90%;
+        }
+        .checkmark {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+        h1 {
+            color: #2d6a4f;
+            margin-bottom: 8px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            margin: 8px;
+        }
+        .primary-btn {
+            background: #2d6a4f;
+            color: white;
+        }
+        .secondary-btn {
+            background: #e8f5e9;
+            color: #2d6a4f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="confirmation-card">
+        <div class="checkmark">✅</div>
+        <h1 data-i18n="orderConfirmation.title">Order Confirmed!</h1>
+        <p data-i18n="orderConfirmation.message">Your commitment has been successfully sent to the farmer. The farmer will be notified about your purchase intent.</p>
+        <p data-i18n="orderConfirmation.nextSteps">You can track the status of your order from the farmer dashboard.</p>
+        <div>
+            <a href="/frontend/pages/buyer-dashboard.html" class="btn primary-btn" data-i18n="orderConfirmation.backToDashboard">Back to Dashboard</a>
+        </div>
+    </div>
+
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+</body>
+
+</html>

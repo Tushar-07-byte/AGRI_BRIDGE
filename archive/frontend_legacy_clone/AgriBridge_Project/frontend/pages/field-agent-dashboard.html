@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Field Agent Dashboard - AgriBridge</title>
+
+    <link rel="stylesheet" href="/frontend/styles/field-agent-dashboard.css">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+</head>
+
+<body>
+    <nav class="nav">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+            <a href="/frontend/pages/field-agent-dashboard.html">
+                <img src="/frontend/assets/logo/logo.png" alt="Agri-Bridge Logo">
+            </a>
+        </div>
+
+
+        <!-- FIELD AGENT NAVIGATION -->
+
+        <div class="mid">
+
+            <a href="/frontend/pages/field-agent-dashboard.html" class="active" data-i18n="nav.dashboard">
+                Dashboard
+            </a>
+
+            <a href="#pending-container" data-i18n="nav.pendingVerification">
+                Pending Verification
+            </a>
+
+        </div>
+
+
+        <!-- USER -->
+
+        <div class="register">
+
+            <span class="user-role" data-i18n="fieldAgent.dashboard.pending">
+                👨‍🌾 Field Agent
+            </span>
+
+            <button class="stylish-btn" onclick="window.location.href='/frontend/pages/index.html'" data-i18n="nav.logout">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header class="dashboard-header">
+
+        <div>
+            <h1 data-i18n="fieldAgent.dashboard.title">Field Agent Dashboard</h1>
+            <p data-i18n="fieldAgent.dashboard.description">Review and verify farmer crop submissions.</p>
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main class="dashboard-container">
+
+
+        <!-- =====================================
+             DASHBOARD OVERVIEW
+             ===================================== -->
+
+        <section class="overview-section">
+
+            <h2 data-i18n="fieldAgent.dashboard.verificationOverview">Verification Overview</h2>
+
+            <div class="overview-grid">
+
+                <div class="overview-card">
+
+                    <div class="overview-icon">
+                        📋
+                    </div>
+
+                    <div>
+                        <h3 data-i18n="fieldAgent.dashboard.pending">Pending</h3>
+                        <p>3</p>
+                    </div>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <div class="overview-icon">
+                        ✅
+                    </div>
+
+                    <div>
+                        <h3 data-i18n="fieldAgent.dashboard.verified">Verified</h3>
+                        <p>12</p>
+                    </div>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <div class="overview-icon">
+                        ❌
+                    </div>
+
+                    <div>
+                        <h3 data-i18n="fieldAgent.dashboard.rejected">Rejected</h3>
+                        <p>2</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PENDING VERIFICATIONS
+             ===================================== -->
+
+        <section class="pending-section">
+
+            <h2 class="section-title" data-i18n="fieldAgent.dashboard.pendingVerifications">
+                Pending Verifications
+            </h2>
+
+            <div id="pending-container" class="pending-container">
+
+                <!-- JavaScript will add pending crops here -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/image-utils.js"></script>
+    <script src="/frontend/scripts/field-agent-dashboard.js"></script>
+
+</body>
+
+</html>

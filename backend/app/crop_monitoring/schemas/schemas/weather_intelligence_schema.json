@@ -1,0 +1,54 @@
+{
+    "weather": {
+        "weather_id": "",
+        "location": {
+            "state": "",
+            "district": "",
+            "village": "",
+            "latitude": null,
+            "longitude": null
+        },
+        "timestamp": "",
+        "current": {
+            "temperature": null,
+            "humidity": null,
+            "rainfall": null,
+            "wind_speed": null,
+            "weather_condition": ""
+        },
+        "forecast": {
+            "forecast_days": 3,
+            "daily": []
+        },
+        "agricultural_conditions": {
+            "rain_risk": "low",
+            "heat_risk": "low",
+            "cold_risk": "low",
+            "wind_risk": "low",
+            "humidity_risk": "low",
+            "disease_favorable": false
+        },
+        "source": {
+            "provider": "",
+            "last_updated": ""
+        }
+    },
+    "weather_impact": {
+        "activity_id": "",
+        "activity": "",
+        "original_date": "",
+        "weather_checked_date": "",
+        "decision": "",
+        "possible_decisions": [
+            "keep",
+            "advance",
+            "postpone",
+            "cancel",
+            "monitor"
+        ],
+        "new_recommended_date": "",
+        "reason": "",
+        "weather_factors": [],
+        "confidence": null
+    }
+}

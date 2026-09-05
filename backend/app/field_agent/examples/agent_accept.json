@@ -1,0 +1,10 @@
+{
+  "action": "ACCEPT",
+  "task_id": "TASK_ESC_9081",
+  "agent_id": "AGENT_007",
+  "agent_name": "Rahul Verma",
+  "timestamp": "2026-09-04T10:30:00Z",
+  "new_status": "ACCEPTED",
+  "notes": "Task accepted. Scheduled farm inspection visit for 2:00 PM today."
+}
+

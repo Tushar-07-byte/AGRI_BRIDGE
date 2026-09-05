@@ -1,0 +1,140 @@
+{
+    "metadata": {
+        "name": "AgriBridge Crop Knowledge Base",
+        "version": "1.0",
+        "country": "India",
+        "description": "Structured agricultural knowledge for crop lifecycle guidance",
+        "last_updated": ""
+    },
+    "crops": {
+        "wheat": {
+            "crop_name": "Wheat",
+            "crop_category": "Cereal",
+            "seasons": [
+                "Rabi"
+            ],
+            "country": "India",
+            "lifecycle": {
+                "preparation": {
+                    "stage_name": "Farm Preparation",
+                    "activities": [
+                        "soil_testing",
+                        "land_preparation",
+                        "seed_selection",
+                        "seed_treatment"
+                    ]
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "activities": [
+                        "sowing",
+                        "initial_irrigation"
+                    ]
+                },
+                "early_growth": {
+                    "stage_name": "Germination and Early Growth",
+                    "activities": [
+                        "germination_monitoring",
+                        "weed_monitoring",
+                        "soil_moisture_monitoring"
+                    ]
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "activities": [
+                        "irrigation_monitoring",
+                        "nutrient_monitoring",
+                        "weed_monitoring",
+                        "disease_monitoring",
+                        "pest_monitoring"
+                    ]
+                },
+                "reproductive_stage": {
+                    "stage_name": "Flowering and Reproductive Growth",
+                    "activities": [
+                        "irrigation_monitoring",
+                        "nutrient_monitoring",
+                        "disease_monitoring",
+                        "weather_monitoring"
+                    ]
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "activities": [
+                        "maturity_monitoring",
+                        "harvest_preparation",
+                        "weather_monitoring"
+                    ]
+                },
+                "harvest": {
+                    "stage_name": "Harvest",
+                    "activities": [
+                        "harvest_timing",
+                        "weather_check",
+                        "harvesting"
+                    ]
+                },
+                "post_harvest": {
+                    "stage_name": "Post Harvest",
+                    "activities": [
+                        "drying",
+                        "storage",
+                        "quality_check"
+                    ]
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "activities": [
+                        "market_price_check",
+                        "buyer_check",
+                        "market_selection",
+                        "selling"
+                    ]
+                }
+            },
+            "monitoring": {
+                "soil": [
+                    "soil_moisture",
+                    "soil_type",
+                    "soil_ph",
+                    "nitrogen",
+                    "phosphorus",
+                    "potassium"
+                ],
+                "weather": [
+                    "temperature",
+                    "rainfall",
+                    "humidity",
+                    "wind_speed",
+                    "forecast"
+                ],
+                "crop_health": [
+                    "leaf_condition",
+                    "growth_progress",
+                    "disease_symptoms",
+                    "pest_symptoms"
+                ]
+            },
+            "disease_monitoring": {
+                "model": "AgriBridge_Wheat_EfficientNetB0_Stage2",
+                "classes": [
+                    "BlackPoint",
+                    "FusariumFootRot",
+                    "HealthyLeaf",
+                    "LeafBlight",
+                    "WheatBlast"
+                ]
+            },
+            "harvest": {
+                "monitoring_required": true,
+                "weather_check_required": true
+            },
+            "marketplace": {
+                "enabled": true,
+                "price_monitoring": true,
+                "buyer_monitoring": true
+            },
+            "sources": []
+        }
+    }
+}

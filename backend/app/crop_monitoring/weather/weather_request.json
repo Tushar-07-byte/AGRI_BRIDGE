@@ -1,0 +1,18 @@
+{
+    "country": "India",
+    "state": "Uttar Pradesh",
+    "district": "Example District",
+    "village": "Example Village",
+    "latitude": null,
+    "longitude": null,
+    "required_data": {
+        "current_weather": true,
+        "temperature": true,
+        "humidity": true,
+        "rainfall": true,
+        "wind_speed": true,
+        "weather_condition": true,
+        "forecast_days": 7,
+        "weather_alerts": true
+    }
+}

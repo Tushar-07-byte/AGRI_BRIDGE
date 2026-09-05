@@ -11,12 +11,32 @@
     <title>Review Crop - AgriBridge</title>
 
     <link rel="stylesheet"
-          href="../styles/verification-review.css">
+          href="/frontend/styles/verification-review.css">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
 
 </head>
 
 
 <body>
+
+    <nav class="nav">
+        <div class="logo">
+            <a href="/frontend/pages/index.html">
+                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+            </a>
+        </div>
+
+        <div class="mid">
+            <a href="/frontend/pages/field-agent-dashboard.html" data-i18n="nav.dashboard">Agent Dashboard</a>
+            <a href="/frontend/pages/verification-review.html" class="active">Review Submission</a>
+        </div>
+
+        <div class="register">
+            <button type="button" class="stylish-btn ab-btn-secondary" onclick="window.location.href='/frontend/pages/field-agent-dashboard.html'">
+                ← Back to Queue
+            </button>
+        </div>
+    </nav>
 
     <main class="review-page">
 
@@ -29,9 +49,9 @@
 
             <div class="review-header">
 
-                <h1>Crop Verification</h1>
+                <h1 data-i18n="verification.review.title">Crop Verification</h1>
 
-                <p>
+                <p data-i18n="verification.review.description">
                     Review the crop information before
                     approving or rejecting the submission.
                 </p>
@@ -133,7 +153,7 @@
 
             <div class="ai-result-section">
 
-                <h2>AI Analysis</h2>
+                <h2 data-i18n="verification.review.aiAnalysis">AI Analysis</h2>
 
 
                 <div class="ai-result-box">
@@ -145,11 +165,11 @@
 
                     <div class="ai-result-content">
 
-                        <h3>
+                        <h3 data-i18n="verification.review.aiCheckPassed">
                             AI Check Passed
                         </h3>
 
-                        <p>
+                        <p data-i18n="verification.review.aiCheckPassedDesc">
                             The crop passed the initial
                             AI health check.
                         </p>
@@ -167,9 +187,9 @@
 
             <div class="decision-section">
 
-                <h2>Verification Decision</h2>
+                <h2 data-i18n="verification.review.decision">Verification Decision</h2>
 
-                <p>
+                <p data-i18n="verification.review.decisionQuestion">
                     Does the submitted information
                     match the crop shown in the image?
                 </p>
@@ -182,7 +202,7 @@
                         class="approve-button"
                         type="button">
 
-                        ✓ Approve Crop
+                        <span data-i18n="verification.review.approveCrop">✓ Approve Crop</span>
 
                     </button>
 
@@ -192,7 +212,7 @@
                         class="reject-button"
                         type="button">
 
-                        ✕ Reject Crop
+                        <span data-i18n="verification.review.rejectCrop">✕ Reject Crop</span>
 
                     </button>
 
@@ -213,8 +233,11 @@
     </main>
 
 
-    <script src="../scripts/verification-review.js"></script>
-
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/auth.js"></script>
+    <script src="/frontend/scripts/image-utils.js"></script>
+    <script src="/frontend/scripts/verification-review.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,193 @@
+{
+    "journey_id": "WHEAT_2026-09-01_JOURNEY",
+    "country": "India",
+    "farmer_id": "TEST_FARMER_001",
+    "location": {
+        "state": "Uttar Pradesh",
+        "district": "Example District",
+        "village": "Example Village",
+        "latitude": null,
+        "longitude": null
+    },
+    "crop": {
+        "crop_id": "wheat",
+        "crop_name": "Wheat",
+        "variety": "",
+        "planting_date": "2026-09-01",
+        "days_after_planting": 0
+    },
+    "lifecycle": [
+        {
+            "stage_number": 1,
+            "stage": "Farm Preparation"
+        },
+        {
+            "stage_number": 2,
+            "stage": "Soil Preparation"
+        },
+        {
+            "stage_number": 3,
+            "stage": "Seed Selection / Treatment"
+        },
+        {
+            "stage_number": 4,
+            "stage": "Sowing"
+        },
+        {
+            "stage_number": 5,
+            "stage": "Germination"
+        },
+        {
+            "stage_number": 6,
+            "stage": "Early Growth"
+        },
+        {
+            "stage_number": 7,
+            "stage": "Vegetative Growth"
+        },
+        {
+            "stage_number": 8,
+            "stage": "Nutrient Management"
+        },
+        {
+            "stage_number": 9,
+            "stage": "Irrigation Management"
+        },
+        {
+            "stage_number": 10,
+            "stage": "Disease & Pest Monitoring"
+        },
+        {
+            "stage_number": 11,
+            "stage": "Weather-based Decisions"
+        },
+        {
+            "stage_number": 12,
+            "stage": "Flowering / Reproductive Stage"
+        },
+        {
+            "stage_number": 13,
+            "stage": "Maturity"
+        },
+        {
+            "stage_number": 14,
+            "stage": "Harvest Planning"
+        },
+        {
+            "stage_number": 15,
+            "stage": "Post-Harvest"
+        },
+        {
+            "stage_number": 16,
+            "stage": "Marketplace"
+        },
+        {
+            "stage_number": 17,
+            "stage": "Price Monitoring"
+        },
+        {
+            "stage_number": 18,
+            "stage": "Best Time / Place to Sell"
+        },
+        {
+            "stage_number": 19,
+            "stage": "Crop Sold"
+        }
+    ],
+    "scheduled_monitoring": [
+        {
+            "event_id": "WHEAT_ACTIVITY_001",
+            "stage": "Sowing",
+            "recommended_date": "2026-09-01",
+            "activities": {
+                "irrigation": "Halka Paani",
+                "fertilizer": "50kg DAP + 25kg MOP + 10kg Zinc",
+                "crop_protection": "None specified"
+            },
+            "weather_check_required": true,
+            "notification_required": true
+        },
+        {
+            "event_id": "WHEAT_ACTIVITY_002",
+            "stage": "CRI",
+            "recommended_date": "2026-09-21",
+            "activities": {
+                "irrigation": "1st Paani",
+                "fertilizer": "45kg Urea",
+                "crop_protection": "Weedicide: Clodinafop / Sulfosulfuron"
+            },
+            "weather_check_required": true,
+            "notification_required": true
+        },
+        {
+            "event_id": "WHEAT_ACTIVITY_003",
+            "stage": "Tillering",
+            "recommended_date": "2026-10-11",
+            "activities": {
+                "irrigation": "2nd Paani",
+                "fertilizer": "45kg Urea",
+                "crop_protection": "Rust/Yellow Rust: Propiconazole 25% EC"
+            },
+            "weather_check_required": true,
+            "notification_required": true
+        },
+        {
+            "event_id": "WHEAT_ACTIVITY_004",
+            "stage": "Booting",
+            "recommended_date": "2026-10-31",
+            "activities": {
+                "irrigation": "3rd Paani",
+                "fertilizer": "None specified",
+                "crop_protection": "Aphids: Imidacloprid 17.8% SL"
+            },
+            "weather_check_required": true,
+            "notification_required": true
+        },
+        {
+            "event_id": "WHEAT_ACTIVITY_005",
+            "stage": "Flowering",
+            "recommended_date": "2026-11-20",
+            "activities": {
+                "irrigation": "4th Paani",
+                "fertilizer": "NPK 0-52-34",
+                "crop_protection": "Blight: Mancozeb"
+            },
+            "weather_check_required": true,
+            "notification_required": true
+        }
+    ],
+    "monitoring_policy": {
+        "start": "Farm Preparation",
+        "end": "Crop Sold",
+        "continuous_monitoring": true,
+        "weather_aware": true,
+        "location_aware": true,
+        "crop_specific": true,
+        "dynamic_calendar": true,
+        "notifications": true
+    },
+    "disease_policy": {
+        "inspection_guidance_only": true,
+        "diagnosis": false,
+        "prediction": false,
+        "model_inference": false,
+        "redirect_to_disease_detection": true
+    },
+    "marketplace_policy": {
+        "marketplace_included": true,
+        "price_monitoring": true,
+        "selling_time_guidance": true,
+        "selling_place_guidance": true,
+        "platform": "AgriBridge Marketplace",
+        "primary_destination": "AgriBridge Marketplace",
+        "selling_flow": [
+            "Harvest Planning",
+            "Post-Harvest",
+            "Marketplace",
+            "Price Monitoring",
+            "Best Time / Place to Sell",
+            "Crop Sold"
+        ]
+    },
+    "generated_at": "2026-08-31T18:23:46.243898"
+}

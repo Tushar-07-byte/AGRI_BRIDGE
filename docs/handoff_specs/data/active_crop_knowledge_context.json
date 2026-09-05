@@ -1,0 +1,158 @@
+{
+    "crop_id": "tomato",
+    "crop_name": "Tomato",
+    "scientific_calendar": {
+        "crop_id": "tomato",
+        "crop_name": "Tomato",
+        "calendar_available": true,
+        "scientific_calendar": {
+            "crop_name": "Tomato",
+            "season": [],
+            "regions": [],
+            "planting_window": {
+                "start": "",
+                "end": ""
+            },
+            "lifecycle": {
+                "farm_preparation": {
+                    "stage_name": "Farm Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "soil_preparation": {
+                    "stage_name": "Soil Preparation",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "seed_treatment": {
+                    "stage_name": "Seed Selection / Treatment",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "sowing": {
+                    "stage_name": "Sowing",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "germination": {
+                    "stage_name": "Germination",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "early_growth": {
+                    "stage_name": "Early Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "vegetative_growth": {
+                    "stage_name": "Vegetative Growth",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "nutrient_management": {
+                    "stage_name": "Nutrient Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "irrigation_management": {
+                    "stage_name": "Irrigation Management",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "disease_pest_monitoring": {
+                    "stage_name": "Disease & Pest Monitoring",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "weather_decisions": {
+                    "stage_name": "Weather-based Decisions",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "flowering_reproductive": {
+                    "stage_name": "Flowering / Reproductive Stage",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "maturity": {
+                    "stage_name": "Maturity",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "harvest_planning": {
+                    "stage_name": "Harvest Planning",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "post_harvest": {
+                    "stage_name": "Post-Harvest",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                },
+                "marketplace": {
+                    "stage_name": "Marketplace",
+                    "start_day": null,
+                    "end_day": null,
+                    "activities": []
+                }
+            },
+            "weather_considerations": [],
+            "scientific_sources": [],
+            "verification": {
+                "verified": false,
+                "verified_date": "",
+                "verified_by": ""
+            }
+        }
+    },
+    "management_calendar": {
+        "crop_name": "Tomato",
+        "stages": [
+            {
+                "stage": "Transplanting",
+                "day_range": "Day 0",
+                "irrigation": "Ropai ke baad paani",
+                "fertilizer": "50kg DAP + 30kg MOP",
+                "crop_protection": "Damping off: Copper Oxychloride"
+            },
+            {
+                "stage": "Vegetative",
+                "day_range": "Day 15-20",
+                "irrigation": "5-7 din gap",
+                "fertilizer": "25kg Urea",
+                "crop_protection": "Whitefly / Virus: Cyantraniliprole / Imidacloprid"
+            },
+            {
+                "stage": "Flowering",
+                "day_range": "Day 35-40",
+                "irrigation": "Regular Drip/Flood",
+                "fertilizer": "Calcium Nitrate + Boron",
+                "crop_protection": "Early/Late Blight: Azoxystrobin + Difenoconazole"
+            },
+            {
+                "stage": "Fruiting",
+                "day_range": "Day 60+",
+                "irrigation": "Nami Maintain",
+                "fertilizer": "NPK 13-0-45 Weekly",
+                "crop_protection": "Fruit Borer: Spinetoram / Chlorantraniliprole"
+            }
+        ]
+    },
+    "weather_aware": true,
+    "date_aware": true
+}

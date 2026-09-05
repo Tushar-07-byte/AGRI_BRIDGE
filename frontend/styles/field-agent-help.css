@@ -1,0 +1,534 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+}
+
+
+body {
+
+    background-color: #f1f8e9;
+
+    color: #333;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.nav {
+
+    height: 80px;
+
+    padding: 20px 60px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background-color: white;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.nav img {
+
+    height: 70px;
+
+    width: auto;
+}
+
+
+.mid {
+
+    display: flex;
+
+    gap: 35px;
+
+    background-color: #f2f4f3;
+
+    padding: 14px 20px;
+
+    border-radius: 30px;
+}
+
+
+.mid a {
+
+    position: relative;
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+.mid a.active {
+
+    color: #2E7D32;
+}
+
+
+.register {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.user-role {
+
+    color: #2E7D32;
+
+    font-weight: 600;
+}
+
+
+.stylish-btn {
+
+    border: none;
+
+    background-color: #2E7D32;
+
+    color: white;
+
+    padding: 9px 16px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.help-header {
+
+    max-width: 900px;
+
+    margin: 45px auto 35px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+.help-header-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 35px;
+
+    background-color: #f1f8e9;
+
+    border-radius: 50%;
+}
+
+
+.help-header h1 {
+
+    color: #2E7D32;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+.help-header p {
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.help-container {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 0 30px 60px;
+}
+
+
+.help-container > h2 {
+
+    color: #245f28;
+
+    font-size: 23px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   AGENT GRID
+========================================= */
+
+.agents-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   AGENT CARD
+========================================= */
+
+.agent-card {
+
+    padding: 25px;
+
+    background-color: white;
+
+    border: 1px solid #e4eee3;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.agent-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(46, 125, 50, 0.12);
+}
+
+
+/* =========================================
+   AGENT PROFILE
+========================================= */
+
+.agent-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.agent-avatar {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+
+    background-color: #f1f8e9;
+
+    border-radius: 50%;
+}
+
+
+.agent-card h3 {
+
+    color: #2E7D32;
+
+    font-size: 19px;
+
+    margin-bottom: 4px;
+}
+
+
+.agent-role {
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   AGENT DETAILS
+========================================= */
+
+.agent-specialization {
+
+    color: #555;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+
+.agent-location {
+
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   ONLINE STATUS
+========================================= */
+
+.agent-status {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+
+    background-color: #e8f5e9;
+
+    color: #2E7D32;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   REQUEST BUTTON
+========================================= */
+
+.request-button {
+
+    width: 100%;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #2E7D32;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.request-button:hover {
+
+    background-color: #1B5E20;
+
+    transform: translateY(-2px);
+}
+
+
+.request-button:disabled {
+
+    background-color: #81c784;
+
+    cursor: default;
+
+    transform: none;
+}
+
+
+/* =========================================
+   REQUEST MESSAGE
+========================================= */
+
+.request-message {
+
+    min-height: 25px;
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #2E7D32;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+
+    display: block;
+
+    margin: 30px auto 0;
+
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: white;
+
+    color: #2E7D32;
+
+    border: 1px solid #2E7D32;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .agents-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .nav {
+
+        height: auto;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .mid {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .register {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .help-header {
+
+        margin: 25px 15px;
+
+        padding: 35px 20px;
+    }
+
+
+    .help-header h1 {
+
+        font-size: 25px;
+    }
+
+
+    .help-container {
+
+        padding: 0 20px 50px;
+    }
+
+
+    .agents-container {
+
+        grid-template-columns: 1fr;
+    }
+
+}

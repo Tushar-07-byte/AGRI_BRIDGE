@@ -5,96 +5,1744 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AI Crop Analysis - AgriBridge</title>
+    <meta name="description"
+        content="AgriBridge AI Crop Diagnostic and Treatment Prescription — AI-powered crop health analysis, treatment guidance, dosage calculation, weather advisory and recovery planning.">
 
-    <link rel="stylesheet" href="/styles/ai-result.css">
+    <meta name="theme-color" content="#163116">
+
+    <title>AI Crop Diagnostic & Treatment Prescription — AgriBridge</title>
+
+    <!-- =========================================================
+         FONTS
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- =========================================================
+         GLOBAL STYLES
+    ========================================================== -->
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/ai-result.css">
 </head>
 
 <body>
 
-    <main class="analysis-page">
+    <!-- =========================================================
+         NAVIGATION BAR
+    ========================================================== -->
+    <nav class="nav" aria-label="Primary navigation">
 
-        <section class="analysis-card">
-
-            <h1>Crop Analysis</h1>
-
-            <p class="description">
-                Our AI has analyzed your uploaded crop image.
-            </p>
-
-
-            <!-- Crop Image -->
-
-            <div class="crop-image-container">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="/frontend/pages/farmer-dashboard.html"
+                aria-label="AgriBridge Farmer Dashboard">
 
                 <img
-                    id="crop-image"
-                    src=""
-                    alt="Uploaded crop"
-                >
+                    src="/frontend/assets/logo/logo.png"
+                    alt="AgriBridge Logo"
+                    onerror="this.onerror=null; this.src='/frontend/assets/logo/logo.svg';">
+            </a>
+        </div>
+
+        <!-- Main Navigation -->
+        <div class="mid">
+
+            <a href="/frontend/pages/farmer-dashboard.html"
+                data-i18n="nav.dashboard">
+                Dashboard
+            </a>
+
+            <a href="/frontend/pages/upload-crop.html"
+                class="active"
+                aria-current="page"
+                data-i18n="nav.uploadCrop">
+                AI Crop Scan
+            </a>
+
+            <a href="/frontend/pages/crop-recommendation.html"
+                data-i18n="landing.cropRecommendation">
+                Recommendations
+            </a>
+
+            <a href="/frontend/pages/weather-dashboard.html"
+                data-i18n="nav.weather">
+                Weather
+            </a>
+
+            <a href="/frontend/pages/voice-assistant.html"
+                data-i18n="nav.voiceAssistant">
+                Voice AI
+            </a>
+
+            <a href="/frontend/pages/crop-listings.html"
+                data-i18n="nav.marketplace">
+                Marketplace
+            </a>
+
+        </div>
+
+        <!-- Navigation Actions -->
+        <div class="register"
+            style="display:flex;align-items:center;gap:12px;">
+
+            <div id="language-selector-container"></div>
+
+            <button
+                type="button"
+                class="stylish-btn ab-btn-secondary"
+                onclick="window.location.href='/frontend/pages/farmer-dashboard.html'">
+
+                <span aria-hidden="true">←</span>
+                Dashboard
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================================
+         DEMO / FAILSAFE BANNER
+    ========================================================== -->
+    <div
+        id="demo-mode-banner"
+        class="demo-banner"
+        style="display:none;"
+        role="region"
+        aria-label="Demo diagnostic scenarios">
+
+        <div class="demo-banner-content">
+
+            <span class="demo-badge">
+                💡 Judge / Demo Mode
+            </span>
+
+            <span class="demo-text">
+                Viewing sample diagnostic. Test different scenarios:
+            </span>
+
+            <div class="demo-switch-pills">
+
+                <button
+                    type="button"
+                    class="demo-pill active"
+                    id="demo-pill-tomato"
+                    onclick="loadPresetCase('tomato_early_blight')">
+
+                    🍅 Tomato Early Blight
+
+                </button>
+
+                <button
+                    type="button"
+                    class="demo-pill"
+                    id="demo-pill-potato"
+                    onclick="loadPresetCase('potato_late_blight')">
+
+                    🥔 Potato Late Blight
+
+                </button>
+
+                <button
+                    type="button"
+                    class="demo-pill"
+                    id="demo-pill-corn"
+                    onclick="loadPresetCase('corn_healthy')">
+
+                    🌽 Corn Healthy
+
+                </button>
 
             </div>
 
+            <a
+                href="/frontend/pages/upload-crop.html"
+                class="demo-upload-link">
 
-            <!-- Result -->
+                Upload New Crop →
 
-            <div class="result-section">
+            </a>
 
-                <div id="result-icon" class="result-icon">
-                    🌱
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         MAIN DIAGNOSTIC PAGE
+    ========================================================== -->
+    <main class="analysis-page">
+
+        <div class="report-wrapper">
+
+
+            <!-- =====================================================
+                 REPORT HEADER
+            ====================================================== -->
+            <header class="report-header">
+
+                <div class="breadcrumb"
+                    aria-label="Breadcrumb">
+
+                    <a href="/frontend/pages/farmer-dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <span aria-hidden="true">/</span>
+
+                    <a href="/frontend/pages/upload-crop.html">
+                        Crop Health Scan
+                    </a>
+
+                    <span aria-hidden="true">/</span>
+
+                    <span class="current"
+                        aria-current="page">
+
+                        Diagnostic Prescription
+
+                    </span>
+
                 </div>
 
-                <h2 id="result-title">
-                    AI Check Passed
-                </h2>
 
-                <p id="result-message">
-                    Your crop has passed the initial AI health check
-                    and is ready for field verification.
-                </p>
+                <!-- Report Actions -->
+                <div class="report-actions-top no-print">
+
+                    <button
+                        id="btn-tts"
+                        class="action-btn action-btn-audio"
+                        type="button"
+                        title="Listen to prescription in your language"
+                        aria-label="Listen to prescription">
+
+                        <span class="btn-icon"
+                            aria-hidden="true">
+                            🔊
+                        </span>
+
+                        <span id="tts-btn-text">
+                            Listen (आवाज में सुनें)
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        id="btn-print"
+                        class="action-btn action-btn-print"
+                        type="button"
+                        title="Print or download Kisan Health Prescription">
+
+                        <span class="btn-icon"
+                            aria-hidden="true">
+                            📄
+                        </span>
+
+                        <span>
+                            Download / Print Rx
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        id="btn-share"
+                        class="action-btn action-btn-share"
+                        type="button"
+                        title="Share report with local agri-dealer or Kisan group">
+
+                        <span class="btn-icon"
+                            aria-hidden="true">
+                            💬
+                        </span>
+
+                        <span>
+                            Share on WhatsApp
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- =====================================================
+                 PRINT HEADER
+            ====================================================== -->
+            <div class="print-only-header">
+
+                <div class="print-brand">
+
+                    <h2>
+                        🌱 AgriBridge — Kisan AI Diagnostic & Clinical Prescription Card
+                    </h2>
+
+                    <p>
+                        Agricultural Health & Extension Advisory Report
+                    </p>
+
+                </div>
+
+                <div
+                    class="print-meta"
+                    id="print-timestamp">
+                </div>
 
             </div>
 
 
-            <!-- Guidance -->
-
-            <div id="guidance-section" class="guidance-section">
-
-                <h3>What you should do</h3>
-
-                <ul>
-                    <li>Upload a clear image of the crop.</li>
-                    <li>Make sure the crop is clearly visible.</li>
-                    <li>Avoid blurry or dark images.</li>
-                </ul>
-
+            <!-- =====================================================
+                 HUMAN-IN-THE-LOOP (HITL) FIELD AGENT VERIFICATION BANNER
+            ====================================================== -->
+            <div id="field-agent-status-banner" class="hitl-banner pending" style="display:none;" role="status">
+                <div class="hitl-banner-icon" id="hitl-banner-icon">⏳</div>
+                <div class="hitl-banner-content">
+                    <div class="hitl-banner-title" id="hitl-banner-title">
+                        Pending Field Agent Review
+                    </div>
+                    <div class="hitl-banner-desc" id="hitl-banner-desc">
+                        Your diagnostic scan has been queued for human-in-the-loop review by an Agri-Student Field Agent. Chemical dosage and prescription are locked until verified to ensure ICAR agronomic compliance.
+                    </div>
+                </div>
+                <div class="hitl-banner-badge" id="hitl-banner-badge">
+                    PENDING REVIEW
+                </div>
             </div>
 
 
-            <!-- Actions -->
+            <!-- =====================================================
+                 HERO DIAGNOSTIC CARD
+            ====================================================== -->
+            <section
+                class="hero-diagnostic-card"
+                aria-labelledby="result-title">
 
-            <div class="action-buttons">
 
-                <button
-                    id="continue-button"
-                    type="button">
-                    Continue
-                </button>
 
-                <button
-                    id="resubmit-button"
-                    type="button">
-                    Resubmit Image
-                </button>
+                <!-- =================================================
+                     CROP IMAGE
+                ================================================== -->
+                <div class="crop-visual-box">
 
-            </div>
+                    <div
+                        class="crop-image-container"
+                        id="image-zoom-box">
 
-        </section>
+                        <img
+                            id="crop-image"
+                            src=""
+                            alt="Analyzed crop leaf"
+                            loading="eager"
+                            onerror="this.onerror=null; this.src='/frontend/assets/logo/logo.png';">
+
+
+                        <div
+                            class="status-overlay-badge"
+                            id="status-overlay-badge"
+                            role="status">
+
+                            <span
+                                class="badge-dot"
+                                aria-hidden="true">
+                            </span>
+
+                            <span id="overlay-status-text">
+                                Diagnosis Complete
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="image-controls no-print">
+
+                        <button
+                            type="button"
+                            class="img-ctrl-btn"
+                            id="btn-compare-reference">
+
+                            <span aria-hidden="true">🔍</span>
+                            Compare with Reference Standard
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     DIAGNOSTIC SUMMARY
+                ================================================== -->
+                <div class="diagnostic-summary-box">
+
+
+                    <!-- Crop -->
+                    <div
+                        class="crop-type-pill"
+                        id="crop-type-pill">
+
+                        🌱
+
+                        <span id="crop-name-text">
+                            Crop: Loading...
+                        </span>
+
+                    </div>
+
+
+                    <!-- Diagnosis -->
+                    <h1
+                        id="result-title"
+                        class="disease-main-title">
+
+                        Analyzing Crop Symptoms...
+
+                    </h1>
+
+
+                    <!-- Scientific Classification -->
+                    <p
+                        id="result-scientific-name"
+                        class="scientific-name">
+
+                        Pathogen classification in progress
+
+                    </p>
+
+
+                    <!-- Description -->
+                    <p
+                        id="result-message"
+                        class="disease-summary-desc">
+
+                        Please wait while the AI neural network correlates
+                        leaf lesion patterns with agronomic databases.
+
+                    </p>
+
+
+                    <!-- =================================================
+                         METRICS
+                    ================================================== -->
+                    <div class="metrics-grid">
+
+
+                        <!-- Severity -->
+                        <div
+                            class="metric-card"
+                            id="metric-severity-card">
+
+                            <div class="metric-header">
+
+                                <span class="metric-title">
+                                    Disease Severity
+                                </span>
+
+                                <span
+                                    class="severity-tag"
+                                    id="severity-badge">
+
+                                    Moderate
+
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="meter-bar"
+                                role="progressbar"
+                                aria-label="Disease severity"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-valuenow="50">
+
+                                <div
+                                    class="meter-fill"
+                                    id="severity-meter-fill"
+                                    style="width:50%;">
+                                </div>
+
+                            </div>
+
+
+                            <div class="meter-labels">
+
+                                <span>Mild</span>
+                                <span>Moderate</span>
+                                <span>Severe</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- AI Confidence -->
+                        <div class="metric-card">
+
+                            <div class="metric-header">
+
+                                <span class="metric-title">
+                                    AI Vision Confidence
+                                </span>
+
+                                <span
+                                    class="confidence-val"
+                                    id="confidence-percentage">
+
+                                    98.4%
+
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="confidence-bar"
+                                role="progressbar"
+                                aria-label="AI confidence"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-valuenow="98.4">
+
+                                <div
+                                    class="confidence-fill"
+                                    id="confidence-fill"
+                                    style="width:98%;">
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                class="metric-sub"
+                                id="model-name-sub">
+
+                                Model: AgriBridge Deep CNN
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Yield Risk -->
+                        <div class="metric-card">
+
+                            <div class="metric-header">
+
+                                <span class="metric-title">
+                                    Yield Loss at Risk
+                                </span>
+
+                                <span
+                                    class="risk-val"
+                                    id="yield-risk-val">
+
+                                    20 - 35%
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="risk-indicator">
+
+                                <span
+                                    class="indicator-icon"
+                                    aria-hidden="true">
+
+                                    ⚠️
+
+                                </span>
+
+                                <span id="yield-risk-sub">
+
+                                    Preventable with immediate Rx
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 PRESCRIPTION DASHBOARD
+            ====================================================== -->
+            <section
+                class="prescription-tabs-container"
+                aria-label="Crop treatment and recovery information">
+
+
+                <!-- TAB NAVIGATION -->
+                <div
+                    class="tab-nav no-print"
+                    role="tablist"
+                    aria-label="Diagnostic information">
+
+
+                    <button
+                        type="button"
+                        class="tab-btn active"
+                        data-tab="tab-treatment"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="tab-treatment">
+
+                        🩺 Clinical Treatment & Rx
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="tab-btn"
+                        data-tab="tab-dosage"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="tab-dosage">
+
+                        🧮 Dosage & Acreage Calculator
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="tab-btn"
+                        data-tab="tab-weather"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="tab-weather">
+
+                        🌦️ Spray Timing & Weather
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="tab-btn"
+                        data-tab="tab-recovery"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="tab-recovery">
+
+                        📈 7-Day Recovery Roadmap
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="tab-btn"
+                        data-tab="tab-farm"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="tab-farm">
+
+                        🌾 Farm Profile Context
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     TAB 1 — TREATMENT
+                ================================================== -->
+                <div
+                    id="tab-treatment"
+                    class="tab-panel active"
+                    role="tabpanel"
+                    aria-labelledby="tab-treatment">
+
+                    <div class="treatment-grid">
+
+
+                        <!-- Organic -->
+                        <article class="treatment-card organic-card">
+
+                            <div class="card-badge organic-badge">
+                                🌱 Organic / Biological Remedy
+                            </div>
+
+                            <h3>
+                                Natural & Bio-Pesticide Control
+                            </h3>
+
+                            <div
+                                class="treatment-content"
+                                id="organic-treatment-text">
+
+                                Spray Neem oil formulation or a suitable
+                                registered biological fungicide according
+                                to the product label and local agricultural
+                                advisory.
+
+                            </div>
+
+                            <div class="treatment-perk">
+
+                                <span>
+                                    🛡️ Eco-friendly treatment option
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Chemical -->
+                        <article class="treatment-card chemical-card">
+
+                            <div class="card-badge chemical-badge">
+                                🧪 Fast-Acting Chemical Control
+                            </div>
+
+                            <h3>
+                                Targeted Fungicidal Application
+                            </h3>
+
+                            <div
+                                class="treatment-content"
+                                id="chemical-treatment-text">
+
+                                Apply only a locally registered fungicide
+                                recommended for the diagnosed crop and disease,
+                                strictly according to the manufacturer label.
+
+                            </div>
+
+                            <div class="treatment-perk chemical-perk">
+
+                                <span>
+                                    ⏱️ Follow label-prescribed application
+                                    interval and PHI
+                                </span>
+
+                            </div>
+
+                            <div class="ai-dosage-disclaimer">
+                                <span class="disclaimer-icon">ℹ️</span>
+                                <span>This is AI-generated decision support. Confirm dosage and application method with your local agricultural extension officer before use.</span>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Prevention / Sanitation -->
+                    <div class="guidance-grid">
+
+
+                        <article class="info-block prevention-block">
+
+                            <div class="info-block-header">
+
+                                <span
+                                    class="block-icon"
+                                    aria-hidden="true">
+                                    🛡️
+                                </span>
+
+                                <h4>
+                                    Preventive Cultural Practices
+                                </h4>
+
+                            </div>
+
+                            <div
+                                id="prevention-text"
+                                class="block-body">
+
+                                Ensure proper crop spacing to facilitate
+                                air circulation. Avoid practices that keep
+                                foliage wet for prolonged periods.
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="info-block sanitation-block">
+
+                            <div class="info-block-header">
+
+                                <span
+                                    class="block-icon"
+                                    aria-hidden="true">
+                                    🧹
+                                </span>
+
+                                <h4>
+                                    Field Sanitation Protocol
+                                </h4>
+
+                            </div>
+
+                            <div
+                                id="sanitation-text"
+                                class="block-body">
+
+                                Remove severely infected plant material
+                                and dispose of it safely according to
+                                local agricultural guidance.
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     TAB 2 — DOSAGE
+                ================================================== -->
+                <div
+                    id="tab-dosage"
+                    class="tab-panel"
+                    role="tabpanel">
+
+                    <div class="dosage-calculator-card">
+
+                        <div class="calc-header">
+
+                            <div>
+
+                                <h3>
+                                    🧮 Precision Farm-Scale Dosage Calculator
+                                </h3>
+
+                                <p>
+                                    Calculate treatment quantity and water
+                                    requirements based on your farm area.
+                                </p>
+
+                            </div>
+
+
+                            <div class="acreage-input-group">
+
+                                <label for="farm-acres-input">
+                                    Your Farm Area:
+                                </label>
+
+                                <div class="input-with-unit">
+
+                                    <input
+                                        type="number"
+                                        id="farm-acres-input"
+                                        value="2.5"
+                                        min="0.1"
+                                        max="100"
+                                        step="0.5"
+                                        inputmode="decimal">
+
+                                    <span class="unit-tag">
+                                        Acres
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Calculator Results -->
+                        <div class="dosage-results-grid">
+
+
+                            <div class="calc-result-box">
+
+                                <span class="calc-icon">💧</span>
+
+                                <span class="calc-label">
+                                    Total Water Required
+                                </span>
+
+                                <strong
+                                    class="calc-value"
+                                    id="calc-water-val">
+
+                                    500 Liters
+
+                                </strong>
+
+                                <span class="calc-hint">
+                                    Based on configured water volume
+                                </span>
+
+                            </div>
+
+
+                            <div class="calc-result-box organic-highlight">
+
+                                <span class="calc-icon">🌿</span>
+
+                                <span class="calc-label">
+                                    Organic Treatment Dose
+                                </span>
+
+                                <strong
+                                    class="calc-value"
+                                    id="calc-organic-val">
+
+                                    1.25 Liters
+
+                                </strong>
+
+                                <span class="calc-hint">
+                                    Calculated from selected recommendation
+                                </span>
+
+                            </div>
+
+
+                            <div class="calc-result-box chemical-highlight">
+
+                                <span class="calc-icon">🧪</span>
+
+                                <span class="calc-label">
+                                    Chemical Treatment Dose
+                                </span>
+
+                                <strong
+                                    class="calc-value"
+                                    id="calc-chemical-val">
+
+                                    1.00 kg
+
+                                </strong>
+
+                                <span class="calc-hint">
+                                    Based on configured treatment rate
+                                </span>
+
+                            </div>
+
+
+                            <div class="calc-result-box">
+
+                                <span class="calc-icon">🎒</span>
+
+                                <span class="calc-label">
+                                    Knapsack Sprayer Tanks
+                                </span>
+
+                                <strong
+                                    class="calc-value"
+                                    id="calc-tanks-val">
+
+                                    31 Tanks
+
+                                </strong>
+
+                                <span class="calc-hint">
+                                    Assuming 16L standard tank
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="ai-dosage-disclaimer" style="margin-top: 18px;">
+                            <span class="disclaimer-icon">ℹ️</span>
+                            <span>This is AI-generated decision support. Confirm dosage and application method with your local agricultural extension officer before use.</span>
+                        </div>
+
+                        <!-- Safety Checklist -->
+                        <div class="safety-checklist">
+
+                            <h4>
+                                👨‍🌾 Safe Spraying Application Checklist
+                            </h4>
+
+                            <div class="checklist-items">
+
+                                <label class="check-item">
+                                    <input type="checkbox" checked>
+                                    Wear appropriate PPE including gloves,
+                                    eye protection and respiratory protection
+                                    where required by the product label.
+                                </label>
+
+                                <label class="check-item">
+                                    <input type="checkbox" checked>
+                                    Use the nozzle and spray pressure
+                                    recommended for the product.
+                                </label>
+
+                                <label class="check-item">
+                                    <input type="checkbox" checked>
+                                    Never spray against wind direction.
+                                </label>
+
+                                <label class="check-item">
+                                    <input type="checkbox" checked>
+                                    Follow the product label for PHI,
+                                    re-entry interval and application rate.
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     TAB 3 — WEATHER
+                ================================================== -->
+                <div
+                    id="tab-weather"
+                    class="tab-panel"
+                    role="tabpanel">
+
+                    <div
+                        class="weather-timing-card"
+                        id="weather-timing-card">
+
+
+                        <div
+                            class="weather-alert-box"
+                            id="weather-alert-box">
+
+                            <div
+                                class="alert-icon-big"
+                                id="weather-alert-icon">
+
+                                🌦️
+
+                            </div>
+
+
+                            <div class="alert-text-content">
+
+                                <h3 id="weather-alert-headline">
+
+                                    Evaluating Live Weather Conditions...
+
+                                </h3>
+
+                                <p id="weather-alert-desc">
+
+                                    Checking temperature, humidity,
+                                    rainfall probability and wind conditions
+                                    to determine a suitable spraying window.
+
+                                </p>
+
+
+                                <div
+                                    class="window-pill"
+                                    id="weather-window-pill">
+
+                                    🗓️
+
+                                    <strong>
+                                        Recommended Spray Window:
+                                    </strong>
+
+                                    <span id="window-time-text">
+
+                                        Tomorrow 6:00 AM – 9:00 AM
+
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Weather Parameters -->
+                        <div class="weather-params-grid">
+
+
+                            <div class="weather-metric">
+
+                                <span class="wm-icon">🌡️</span>
+
+                                <span class="wm-label">
+                                    Temperature
+                                </span>
+
+                                <span
+                                    class="wm-val"
+                                    id="wm-temp">
+
+                                    22°C - 28°C
+
+                                </span>
+
+                                <span
+                                    class="wm-status safe">
+
+                                    ✅ Favorable
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="weather-metric">
+
+                                <span class="wm-icon">💨</span>
+
+                                <span class="wm-label">
+                                    Wind Speed
+                                </span>
+
+                                <span
+                                    class="wm-val"
+                                    id="wm-wind">
+
+                                    4 - 8 km/h
+
+                                </span>
+
+                                <span
+                                    class="wm-status safe">
+
+                                    ✅ Low Drift Risk
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="weather-metric">
+
+                                <span class="wm-icon">🌧️</span>
+
+                                <span class="wm-label">
+                                    Rain Risk
+                                </span>
+
+                                <span
+                                    class="wm-val"
+                                    id="wm-rain">
+
+                                    Low (&lt;15%)
+
+                                </span>
+
+                                <span
+                                    class="wm-status safe">
+
+                                    ✅ Low Runoff Risk
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="weather-metric">
+
+                                <span class="wm-icon">💧</span>
+
+                                <span class="wm-label">
+                                    Field Humidity
+                                </span>
+
+                                <span
+                                    class="wm-val"
+                                    id="wm-humidity">
+
+                                    Moderate (65%)
+
+                                </span>
+
+                                <span
+                                    class="wm-status neutral">
+
+                                    ℹ️ Standard
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="weather-card-footer no-print">
+
+                            <span>
+                                Want minute-by-minute local forecast?
+                            </span>
+
+                            <a
+                                href="/frontend/pages/weather-dashboard.html"
+                                class="weather-link-btn">
+
+                                Open AgriBridge Weather Center →
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     TAB 4 — RECOVERY
+                ================================================== -->
+                <div
+                    id="tab-recovery"
+                    class="tab-panel"
+                    role="tabpanel">
+
+                    <div class="roadmap-card">
+
+
+                        <div class="roadmap-header">
+
+                            <div>
+
+                                <h3>
+                                    📈 7-Day Crop Recovery & Market Release Plan
+                                </h3>
+
+                                <p>
+                                    Follow the recommended monitoring
+                                    milestones and reassess crop health
+                                    before further treatment decisions.
+                                </p>
+
+                            </div>
+
+
+                            <div class="recovery-rate-badge">
+
+                                <span>
+                                    🌱 Recovery depends on disease severity
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Timeline -->
+                        <div class="timeline-steps">
+
+
+                            <div class="timeline-step">
+
+                                <div class="step-marker">
+                                    Day 1
+                                </div>
+
+                                <div class="step-content">
+
+                                    <h4>
+                                        Initial Treatment & Field Inspection
+                                    </h4>
+
+                                    <p>
+                                        Apply the selected treatment only
+                                        according to its registered label.
+                                        Remove severely affected material
+                                        where appropriate.
+                                    </p>
+
+                                    <span class="step-tag status-action">
+                                        Immediate Action
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-step">
+
+                                <div class="step-marker">
+                                    Day 3
+                                </div>
+
+                                <div class="step-content">
+
+                                    <h4>
+                                        Lesion Progress Inspection
+                                    </h4>
+
+                                    <p>
+                                        Compare current symptoms with the
+                                        original scan and check whether
+                                        disease progression has slowed.
+                                    </p>
+
+                                    <span class="step-tag status-monitor">
+                                        Observation
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-step">
+
+                                <div class="step-marker">
+                                    Day 5
+                                </div>
+
+                                <div class="step-content">
+
+                                    <h4>
+                                        Crop Recovery Assessment
+                                    </h4>
+
+                                    <p>
+                                        Evaluate new growth, leaf condition,
+                                        disease spread and overall plant vigor.
+                                    </p>
+
+                                    <span class="step-tag status-action">
+                                        Assessment
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-step">
+
+                                <div class="step-marker">
+                                    Day 7
+                                </div>
+
+                                <div class="step-content">
+
+                                    <h4>
+                                        AI Follow-Up Verification
+                                    </h4>
+
+                                    <p>
+                                        Upload a follow-up crop image to
+                                        compare the latest condition with
+                                        the previous diagnostic.
+                                    </p>
+
+                                    <span class="step-tag status-verified">
+                                        Follow-Up Scan
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     TAB 5 — FARM CONTEXT
+                ================================================== -->
+                <div
+                    id="tab-farm"
+                    class="tab-panel"
+                    role="tabpanel">
+
+                    <div class="farm-context-grid">
+
+
+                        <div class="farm-info-card">
+
+                            <h3>
+                                🌾 Field & Agronomic Parameters
+                            </h3>
+
+                            <div
+                                class="farm-specs-list"
+                                id="farm-specs-list">
+
+                                <!-- Populated dynamically by JS -->
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="farm-advisory-card">
+
+                            <h3>
+                                📍 Regional & Soil Advisory
+                            </h3>
+
+                            <div
+                                class="advice-pill-list"
+                                id="farm-advice-list">
+
+                                <!-- Populated dynamically by JS -->
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 VERIFICATION & SAFETY
+            ====================================================== -->
+            <section class="verification-badge-card">
+
+                <div
+                    class="vb-icon"
+                    aria-hidden="true">
+
+                    🛡️
+
+                </div>
+
+
+                <div class="vb-content">
+
+                    <div class="vb-title">
+
+                        <strong>
+                            Diagnostic Knowledge & Safety Information
+                        </strong>
+
+                        <span
+                            class="verified-pill"
+                            id="verification-status-pill">
+
+                            ✅ Dataset Supported
+
+                        </span>
+
+                    </div>
+
+
+                    <p id="verification-source-text">
+
+                        Diagnostic knowledge and recommendations are
+                        generated using the configured AgriBridge AI model,
+                        agricultural knowledge base and referenced crop
+                        disease datasets.
+
+                    </p>
+
+
+                    <p
+                        class="vb-safety"
+                        id="verification-safety-text">
+
+                        Safety Note: Always follow registered manufacturer
+                        product-label recommendations, approved dilution
+                        ratios, PPE requirements, re-entry intervals and
+                        pre-harvest intervals. When uncertain, consult a
+                        qualified agricultural extension professional.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 BOTTOM ACTION DOCK
+            ====================================================== -->
+            <footer class="bottom-action-dock no-print">
+
+
+                <div class="dock-left">
+
+                    <button
+                        type="button"
+                        id="resubmit-button"
+                        class="dock-btn btn-secondary">
+
+                        📷 Scan Another Crop
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="btn-voice-qa"
+                        class="dock-btn btn-voice">
+
+                        🎙️ Ask AgriBot Voice AI
+
+                    </button>
+
+                </div>
+
+
+                <div class="dock-right">
+
+                    <button
+                        type="button"
+                        id="continue-button"
+                        class="dock-btn btn-primary">
+
+                        Continue to Crop Listing & Verification →
+
+                    </button>
+
+                </div>
+
+            </footer>
+
+        </div>
 
     </main>
 
 
-    <script src="/scripts/ai-result.js"></script>
+    <!-- =========================================================
+         REFERENCE COMPARISON MODAL
+    ========================================================== -->
+    <div
+        id="comparison-modal"
+        class="modal-backdrop"
+        style="display:none;"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="comparison-modal-title">
+
+        <div class="modal-window">
+
+
+            <div class="modal-header">
+
+                <h3 id="comparison-modal-title">
+                    🔍 Botanical Reference Comparison
+                </h3>
+
+
+                <button
+                    type="button"
+                    class="modal-close-btn"
+                    id="btn-close-modal"
+                    aria-label="Close comparison">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+
+                <div class="compare-grid">
+
+
+                    <!-- Uploaded Sample -->
+                    <div class="compare-card">
+
+                        <h4>
+                            Your Uploaded Sample
+                        </h4>
+
+                        <div class="compare-img-box">
+
+                            <img
+                                id="modal-uploaded-img"
+                                src=""
+                                alt="Uploaded crop sample">
+
+                        </div>
+
+                        <p
+                            class="compare-caption"
+                            id="modal-uploaded-caption">
+
+                            Symptom pattern detected on target foliage.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- Reference -->
+                    <div class="compare-card">
+
+                        <h4>
+                            Reference Standard Symptoms
+                        </h4>
+
+                        <div class="compare-img-box">
+
+                            <img
+                                id="modal-reference-img"
+                                src="/frontend/assets/logo/logo.png"
+                                alt="Reference disease symptom">
+
+                        </div>
+
+                        <p
+                            class="compare-caption"
+                            id="modal-reference-caption">
+
+                            Reference symptom characteristics
+                            for comparison.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Diagnostic Markers -->
+                <div class="symptom-key-list">
+
+                    <h4>
+                        Key Visual Diagnostic Markers:
+                    </h4>
+
+                    <ul id="modal-markers-list">
+
+                        <li>
+                            Characteristic lesion patterns.
+                        </li>
+
+                        <li>
+                            Leaf discoloration surrounding affected tissue.
+                        </li>
+
+                        <li>
+                            Possible curling, drying or premature
+                            defoliation depending on disease severity.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="stylish-btn ab-btn-primary"
+                    id="btn-modal-understood">
+
+                    Understood
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <!-- Internationalization -->
+    <script src="/frontend/scripts/i18n.js"></script>
+
+    <!-- Language Selector -->
+    <script src="/frontend/scripts/language-selector.js"></script>
+
+    <!-- Authentication -->
+    <script src="/frontend/scripts/auth.js"></script>
+
+    <!-- AI Result Logic -->
+    <script src="/frontend/scripts/ai-result.js"></script>
+
+
+    <!-- =========================================================
+         SMALL ACCESSIBILITY / MODAL FALLBACK
+    ========================================================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const modal = document.getElementById("comparison-modal");
+            const closeBtn = document.getElementById("btn-close-modal");
+            const understoodBtn = document.getElementById("btn-modal-understood");
+
+            function closeComparisonModal() {
+                if (modal) {
+                    modal.style.display = "none";
+                    document.body.classList.remove("modal-open");
+                }
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener("click", closeComparisonModal);
+            }
+
+            if (understoodBtn) {
+                understoodBtn.addEventListener("click", closeComparisonModal);
+            }
+
+            if (modal) {
+                modal.addEventListener("click", function (event) {
+
+                    if (event.target === modal) {
+                        closeComparisonModal();
+                    }
+
+                });
+            }
+
+            document.addEventListener("keydown", function (event) {
+
+                if (event.key === "Escape" && modal) {
+                    closeComparisonModal();
+                }
+
+            });
+
+        });
+    </script>
+
+    <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
+    <a href="/frontend/pages/voice-assistant.html?from_page=ai-result" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
+        title="Voice Farming Assistant / आवाज से पूछें">
+        <div class="voice-mic-icon-box">
+            <div class="voice-pulse-ring"></div>
+            🎙️
+        </div>
+        <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
+    </a>
 
 </body>
 

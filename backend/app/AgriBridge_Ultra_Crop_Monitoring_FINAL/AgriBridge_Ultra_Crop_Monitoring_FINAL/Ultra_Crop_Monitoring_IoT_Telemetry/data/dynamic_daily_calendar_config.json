@@ -1,0 +1,27 @@
+{
+    "engine_name": "AgriBridge Dynamic Daily Calendar Engine",
+    "version": "1.0",
+    "input_layers": [
+        "Dynamic Crop Stage Engine",
+        "Stage Management Database",
+        "Live Weather Integration",
+        "IoT Telemetry Integration"
+    ],
+    "decision_layers": [
+        "Irrigation",
+        "Fertilizer",
+        "Disease Risk",
+        "Pest Risk",
+        "Weather Stress",
+        "Daily Priority"
+    ],
+    "output_layers": [
+        "Today's Actions",
+        "Tomorrow Focus",
+        "Harvest Timeline",
+        "LLM Decision Context"
+    ],
+    "rule_based_decisions": true,
+    "llm_generation": "Next layer",
+    "status": "READY"
+}

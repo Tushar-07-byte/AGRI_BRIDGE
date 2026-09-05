@@ -1,0 +1,179 @@
+{
+    "package_id": "FARM_GUIDANCE_20260831183947",
+    "generated_at": "2026-08-31T18:39:47.585007",
+    "country": "India",
+    "farmer": {
+        "farmer_id": "TEST_FARMER_001"
+    },
+    "location": {
+        "state": "Uttar Pradesh",
+        "district": "Example District",
+        "village": "Example Village",
+        "latitude": null,
+        "longitude": null
+    },
+    "crop": {
+        "crop_id": "wheat",
+        "crop_name": "Wheat",
+        "variety": "",
+        "planting_date": "2026-09-01",
+        "days_after_planting": 0
+    },
+    "current_stage": {
+        "stage_name": "Sowing",
+        "current_action": {
+            "title": "Perform Wheat Sowing and Basal Fertilizer Application",
+            "summary": "Complete the overdue wheat sowing activity immediately while clear weather persists.",
+            "irrigation": "Provide light irrigation (Halka Paani) post-sowing to ensure proper soil moisture for germination.",
+            "fertilizer": "Apply 50kg DAP + 25kg MOP + 10kg Zinc per acre as a basal dose during sowing.",
+            "crop_protection": "No specific chemical protection required at this stage."
+        },
+        "timing": {
+            "recommended_date": "2026-09-01",
+            "timing_status": "overdue"
+        },
+        "reason": "Complete the overdue wheat sowing activity immediately while clear weather persists.",
+        "weather_impact": {
+            "decision": "Current weather is clear at 28°C with no rain expected. It is safe to proceed with sowing and light irrigation.",
+            "reasons": [
+                "Current weather is clear at 28°C with no rain expected. It is safe to proceed with sowing and light irrigation."
+            ]
+        }
+    },
+    "next_stage": {
+        "stage_number": 5,
+        "stage_name": "Germination",
+        "expected_timeline": "Within 4 to 7 days post-sowing",
+        "what_to_expect": "Look for uniform seed emergence across the field. Ensure soil does not form a hard crust that prevents seedling breakthrough."
+    },
+    "crop_journey": {
+        "total_stages": 19,
+        "current_stage": "Sowing",
+        "complete_journey": [
+            {
+                "stage_number": 1,
+                "stage": "Farm Preparation"
+            },
+            {
+                "stage_number": 2,
+                "stage": "Soil Preparation"
+            },
+            {
+                "stage_number": 3,
+                "stage": "Seed Selection / Treatment"
+            },
+            {
+                "stage_number": 4,
+                "stage": "Sowing"
+            },
+            {
+                "stage_number": 5,
+                "stage": "Germination"
+            },
+            {
+                "stage_number": 6,
+                "stage": "Early Growth"
+            },
+            {
+                "stage_number": 7,
+                "stage": "Vegetative Growth"
+            },
+            {
+                "stage_number": 8,
+                "stage": "Nutrient Management"
+            },
+            {
+                "stage_number": 9,
+                "stage": "Irrigation Management"
+            },
+            {
+                "stage_number": 10,
+                "stage": "Disease & Pest Monitoring"
+            },
+            {
+                "stage_number": 11,
+                "stage": "Weather-based Decisions"
+            },
+            {
+                "stage_number": 12,
+                "stage": "Flowering / Reproductive Stage"
+            },
+            {
+                "stage_number": 13,
+                "stage": "Maturity"
+            },
+            {
+                "stage_number": 14,
+                "stage": "Harvest Planning"
+            },
+            {
+                "stage_number": 15,
+                "stage": "Post-Harvest"
+            },
+            {
+                "stage_number": 16,
+                "stage": "Marketplace"
+            },
+            {
+                "stage_number": 17,
+                "stage": "Price Monitoring"
+            },
+            {
+                "stage_number": 18,
+                "stage": "Best Time / Place to Sell"
+            },
+            {
+                "stage_number": 19,
+                "stage": "Crop Sold"
+            }
+        ],
+        "monitoring_start": "Farm Preparation",
+        "monitoring_end": "Crop Sold"
+    },
+    "calendar": {
+        "event_id": "WHEAT_ACTIVITY_001",
+        "original_date": "2026-09-01",
+        "recommended_date": "2026-09-01",
+        "weather_decision": "Keep",
+        "status": "scheduled"
+    },
+    "disease_monitoring": {
+        "inspection_only": true,
+        "diagnosis": false,
+        "prediction": false,
+        "model_inference": false,
+        "redirect_to_disease_detection": true,
+        "guidance": "Inspect emerging seedlings for spots, discoloration, or wilting. If abnormal leaves or seedlings are noticed, take a clear photograph and use the AgriBridge Disease Detection feature."
+    },
+    "notification": {
+        "notification_id": "NOTIF_20260831183719",
+        "title": "Wheat Sowing activity recommended",
+        "message": "Complete the overdue wheat sowing activity immediately while clear weather persists.",
+        "status": "pending",
+        "next_stage_preview": {
+            "stage": "Germination",
+            "expected_timeline": "Within 4 to 7 days post-sowing",
+            "what_to_expect": "Look for uniform seed emergence across the field. Ensure soil does not form a hard crust that prevents seedling breakthrough."
+        }
+    },
+    "marketplace": {
+        "platform": "AgriBridge Marketplace",
+        "crop_listing": true,
+        "buyer_connection": true,
+        "price_monitoring": true,
+        "market_price_comparison": true,
+        "selling_time_guidance": true,
+        "selling_place_guidance": true,
+        "crop_sale_tracking": true,
+        "ultimate_goal": "Crop Sold"
+    },
+    "system_status": {
+        "monitoring_enabled": true,
+        "weather_aware": true,
+        "dynamic_calendar": true,
+        "notifications_enabled": true,
+        "llm_enabled": true,
+        "marketplace_enabled": true,
+        "disease_prediction": false
+    }
+}

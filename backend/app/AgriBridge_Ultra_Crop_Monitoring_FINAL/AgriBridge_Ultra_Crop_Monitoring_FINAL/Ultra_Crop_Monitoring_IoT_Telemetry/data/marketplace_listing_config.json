@@ -1,0 +1,24 @@
+{
+  "module": "PRE_HARVEST_MARKETPLACE_LISTING",
+  "enabled": true,
+  "reminder_days": [
+    6,
+    3,
+    1
+  ],
+  "first_reminder_days_before_harvest": 6,
+  "follow_up_days_before_harvest": 3,
+  "final_reminder_days_before_harvest": 1,
+  "backend_owned_field": "marketplace.crop_listed",
+  "ai_ml_owned": [
+    "harvest_timing",
+    "listing_reminder_timing",
+    "notification_generation"
+  ],
+  "backend_owned": [
+    "marketplace_listing_status",
+    "actual_crop_listing",
+    "buyer_data",
+    "transactions"
+  ]
+}

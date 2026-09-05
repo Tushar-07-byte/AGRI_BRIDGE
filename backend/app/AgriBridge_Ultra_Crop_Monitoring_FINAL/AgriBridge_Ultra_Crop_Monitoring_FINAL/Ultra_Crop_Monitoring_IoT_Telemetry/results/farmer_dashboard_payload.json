@@ -1,0 +1,134 @@
+{
+  "system": {
+    "name": "AgriBridge AI",
+    "module": "Ultra Crop Monitoring",
+    "dashboard_version": "1.1",
+    "generated_at": "2026-09-03T19:20:16.739447",
+    "llm_provider": "Google Gemini",
+    "llm_mode": "LIVE_LLM"
+  },
+  "crop": {
+    "name": "Wheat",
+    "age_days": 33,
+    "current_stage": "Crown Root Initiation (CRI)",
+    "next_stage": "Tillering & Jointing",
+    "monitoring_date": "2026-09-03",
+    "days_to_harvest": 67
+  },
+  "farm_status": {
+    "overall_priority": "LOW",
+    "irrigation": "SCHEDULED",
+    "disease_risk": "HIGH",
+    "pest_risk": "MEDIUM",
+    "weather_stress": "LOW",
+    "fertilizer": "SCHEDULED"
+  },
+  "weather": {
+    "source": "LIVE_REAL",
+    "temperature_c": 25.7,
+    "humidity_percent": 94.0,
+    "rainfall_mm": 0.0,
+    "rain_probability_percent": 0,
+    "wind_speed_kmh": 10.6
+  },
+  "iot": {
+    "source": "SYNTHETIC_HACKATHON_DEMO",
+    "physical_sensor_connected": false,
+    "soil_moisture_percent": 30.56,
+    "soil_temperature_c": 23.62,
+    "soil_ec_ds_m": 0.93,
+    "soil_ph": 6.49,
+    "leaf_wetness": true
+  },
+  "farmer_guidance": {
+    "summary": "Your Wheat crop is 33 days old and in the Crown Root Initiation (CRI) stage. High humidity and wet leaf conditions create a high risk for disease development, making field scouting your most important task today.",
+    "priority_alerts": [
+      {
+        "title": "High Disease Risk",
+        "priority": "HIGH",
+        "status": "DUE",
+        "explanation": "Increase disease scouting today because high humidity (94%) and leaf wetness create favorable conditions for disease development."
+      }
+    ],
+    "todays_actions": [
+      {
+        "action": "Disease Scouting",
+        "priority": "HIGH",
+        "status": "DUE",
+        "reason": "Increase disease scouting because moisture conditions are favorable."
+      },
+      {
+        "action": "Pest Scouting",
+        "priority": "MEDIUM",
+        "status": "SCHEDULED",
+        "reason": "Scout crop for pest activity before taking control action."
+      },
+      {
+        "action": "Fertilizer / Nutrition",
+        "priority": "MEDIUM",
+        "status": "SCHEDULED",
+        "reason": "Follow the stage-specific fertilizer plan."
+      },
+      {
+        "action": "Irrigation Monitoring",
+        "priority": "LOW",
+        "status": "SCHEDULED",
+        "reason": "Soil moisture is currently adequate. Continue monitoring according to the stage plan."
+      }
+    ],
+    "why_it_matters": [
+      "High disease risk does not mean your crop is currently diseased; scouting helps catch early symptoms before problems spread.",
+      "Soil moisture is adequate at 30.56%, so additional watering is not currently needed.",
+      "Scouting for pests before applying treatments prevents unnecessary costs and protects crop health."
+    ],
+    "next_stage_harvest": {
+      "next_stage": "Tillering & Jointing",
+      "harvest_status": "GROWING",
+      "days_to_harvest": 67
+    }
+  },
+  "notifications": {
+    "counts": {
+      "scheduled": 3,
+      "due": 1,
+      "alert": 0,
+      "postponed": 0,
+      "rescheduled": 0,
+      "completed": 0,
+      "cancelled": 0
+    },
+    "items": [
+      {
+        "title": "High Disease Risk",
+        "status": "DUE",
+        "priority": "HIGH",
+        "date": "2026-09-03"
+      },
+      {
+        "title": "Pest Scouting Reminder",
+        "status": "SCHEDULED",
+        "priority": "MEDIUM",
+        "date": "2026-09-03"
+      },
+      {
+        "title": "Fertilizer Scheduled",
+        "status": "SCHEDULED",
+        "priority": "MEDIUM",
+        "date": "2026-09-03"
+      },
+      {
+        "title": "Irrigation Monitoring",
+        "status": "SCHEDULED",
+        "priority": "LOW",
+        "date": "2026-09-03"
+      }
+    ]
+  },
+  "data_transparency": {
+    "weather": "LIVE_REAL",
+    "iot": "SYNTHETIC_HACKATHON_DEMO",
+    "physical_sensor_connected": false,
+    "llm": "Google Gemini",
+    "llm_mode": "LIVE_LLM"
+  }
+}

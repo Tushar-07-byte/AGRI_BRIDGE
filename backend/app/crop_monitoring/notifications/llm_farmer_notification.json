@@ -1,0 +1,45 @@
+{
+    "notification_id": "NOTIF_20260831183719",
+    "farmer_id": "TEST_FARMER_001",
+    "crop_id": "wheat",
+    "crop": "Wheat",
+    "stage": "Sowing",
+    "date": "2026-09-01",
+    "title": "Wheat Sowing activity recommended",
+    "message": "Complete the overdue wheat sowing activity immediately while clear weather persists.",
+    "action": {
+        "title": "Perform Wheat Sowing and Basal Fertilizer Application",
+        "summary": "Complete the overdue wheat sowing activity immediately while clear weather persists.",
+        "irrigation": "Provide light irrigation (Halka Paani) post-sowing to ensure proper soil moisture for germination.",
+        "fertilizer": "Apply 50kg DAP + 25kg MOP + 10kg Zinc per acre as a basal dose during sowing.",
+        "crop_protection": "No specific chemical protection required at this stage."
+    },
+    "weather_decision": "Keep",
+    "calendar_status": "scheduled",
+    "next_stage_preview": {
+        "stage": "Germination",
+        "expected_timeline": "Within 4 to 7 days post-sowing",
+        "what_to_expect": "Look for uniform seed emergence across the field. Ensure soil does not form a hard crust that prevents seedling breakthrough."
+    },
+    "disease_guidance": {
+        "inspection_only": true,
+        "guidance": "Inspect emerging seedlings for spots, discoloration, or wilting. If abnormal leaves or seedlings are noticed, take a clear photograph and use the AgriBridge Disease Detection feature.",
+        "diagnosis": false,
+        "prediction": false,
+        "model_inference": false,
+        "redirect_to_disease_detection": true
+    },
+    "marketplace": {
+        "platform": "AgriBridge Marketplace",
+        "ultimate_goal": "Healthy crop management will prepare your harvest for listing and sale on the AgriBridge Marketplace."
+    },
+    "notification_type": "activity_reminder",
+    "status": "pending",
+    "created_at": "2026-08-31T18:37:19.633208",
+    "disease_inspection_guidance": {
+        "enabled": false,
+        "stage": "Sowing",
+        "message": "",
+        "disease_detection_redirect": false
+    }
+}

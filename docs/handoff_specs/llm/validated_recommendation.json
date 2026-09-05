@@ -1,0 +1,46 @@
+{
+    "recommendation_id": "REC_TEST_001",
+    "farmer_id": "TEST_FARMER_001",
+    "farm_id": "",
+    "field_id": "",
+    "crop_id": "wheat",
+    "crop": "Wheat",
+    "growth_stage": "Sowing",
+    "action": {
+        "irrigation": "Halka Paani",
+        "fertilizer": "50kg DAP + 25kg MOP + 10kg Zinc",
+        "crop_protection": "None specified"
+    },
+    "timing": {
+        "recommended_date": "2026-09-01",
+        "timing_status": "overdue"
+    },
+    "reason": "Activity is based on the supplied crop management calendar.",
+    "weather_impact": {
+        "decision": "Keep",
+        "reasons": []
+    },
+    "calendar": {
+        "update_required": false,
+        "original_date": "2026-09-01",
+        "updated_date": ""
+    },
+    "notification": {
+        "required": true,
+        "sent": false,
+        "type": "activity_reminder"
+    },
+    "farmer_action": {
+        "required": true,
+        "completed": false,
+        "instructions": "Follow the scheduled crop management activity."
+    },
+    "safety": {
+        "warning": "Follow verified agricultural guidance and product labels."
+    },
+    "sources": [
+        "AgriBridge Scientific Crop Management Calendar"
+    ],
+    "generated_at": "2026-08-31T18:12:26.892334",
+    "model": "LLM"
+}

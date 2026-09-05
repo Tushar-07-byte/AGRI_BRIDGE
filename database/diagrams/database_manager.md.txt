@@ -1,0 +1,75 @@
+# AgriBridge – Database Manager Documentation
+
+## Role
+Database Manager / Database Engineer
+
+## Database
+agribridge_final
+
+## Tables
+
+### 1. Farmers
+Stores farmer information.
+
+Fields:
+- id – Primary Key
+- name – Farmer name
+
+### 2. Listings
+Stores farmer crop listings.
+
+Fields:
+- id – Primary Key
+- farmer_id – Foreign Key to farmers.id
+- crop_type – Crop type
+- photo_path – Crop image path
+- health_status – Crop health status
+- confidence – AI prediction confidence
+- harvest_date – Expected harvest date
+- quantity_est – Estimated crop quantity
+- status – Listing status
+
+### 3. Orders
+Stores orders associated with crop listings.
+
+Fields:
+- id – Primary Key
+- listing_id – Foreign Key to listings.id
+- buyer_id – Buyer identifier
+- committed_at – Order commitment time
+
+## Relationships
+
+farmers.id
+    ↓
+listings.farmer_id
+
+listings.id
+    ↓
+orders.listing_id
+
+## Database Testing
+
+Farmers records: 5
+Listings records: 5
+Orders records: 5
+
+Foreign-key integrity:
+- listings → farmers: PASS
+- orders → listings: PASS
+
+JOIN verification:
+- Farmer → Listing → Order: PASS
+
+Data integrity:
+- Listings without valid farmer: 0
+- Orders without valid listing: 0
+
+## SQL Files
+
+- schema.sql – Database structure
+- seed.sql – Sample/demo data
+
+## Status
+
+Database schema created, populated, tested and verified.

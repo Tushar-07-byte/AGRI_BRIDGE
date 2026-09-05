@@ -1,0 +1,9 @@
+{
+    "total_crops": 16,
+    "total_stage_records": 61,
+    "total_management_records": 61,
+    "missing_management_stages": 0,
+    "extra_management_stages": 0,
+    "all_stages_matched": true,
+    "engine_status": "READY"
+}

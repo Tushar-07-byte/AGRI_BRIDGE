@@ -1,40 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgriBridge - Choose Your Role</title>
-    <link rel="stylesheet" href="/styles/choose-roles.css">
+    <title>AgriBridge | Create Your Account</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/choose-roles.css">
 </head>
+
 <body>
 
-    <main class="container">
-        <div class="signup-card">
-            
-            <header class="card-header">
-                <h2>Join AgriBridge</h2>
-                <p>Select your role to get started on the platform.</p>
-            </header>
+    <div class="auth-page-wrapper">
 
-            <form id="role-form" action="#" method="POST">
-                <div class="form-group">
-                    <label for="choose-role">I am a...</label>
-                    <select id="choose-role" name="role" required>
-                        <option value="" disabled selected>Select your role</option>
-                        <option value="farmer">🌾 Farmer</option>
-                        <option value="buyer">🛒 Buyer</option>
-                        <option value="field-agent">📋 Field Agent</option>
-                    </select>
+        <!-- TOP BAR -->
+        <header class="auth-topbar">
+            <a href="/frontend/pages/index.html" class="auth-brand-logo">
+                <img src="/frontend/assets/logo/logo.png" alt="AgriBridge Logo">
+            </a>
+
+            <div class="auth-top-actions">
+                <a href="/frontend/pages/index.html" class="back-home-link">
+                    ← Back to Home
+                </a>
+            </div>
+        </header>
+
+        <!-- MAIN SIGNUP CARD -->
+        <main class="auth-container">
+            <div class="auth-card">
+
+                <div class="auth-badge">
+                    🌱 JOIN AGRIBRIDGE PLATFORM
                 </div>
 
-                <button type="submit" id="continue-btn" class="primary-btn">
-                    Continue
-                </button>
-            </form>
+                <h1 class="auth-title">Create an Account</h1>
+                <p class="auth-subtitle">
+                    Select your role to get started with AgriBridge intelligent agronomy and digital marketplace.
+                </p>
 
+                <!-- DYNAMIC ALERT / NOTIFICATION BOX -->
+                <div id="signup-alert-box" class="auth-alert-box"></div>
+
+                <!-- REGISTRATION FORM -->
+                <form id="signup-form">
+
+                    <label class="section-label">Select Your Role</label>
+
+                    <div class="role-cards-grid">
+
+                        <!-- FARMER ROLE -->
+                        <div class="role-select-card active" data-role="farmer">
+                            <div class="role-icon-box bg-green">
+                                🌾
+                            </div>
+                            <div class="role-info">
+                                <div class="role-header-row">
+                                    <h3>Farmer</h3>
+                                    <span class="role-check-indicator">✓</span>
+                                </div>
+                                <p>Get crop insights, weather intelligence, recommendations and marketplace access.</p>
+                            </div>
+                        </div>
+
+                        <!-- BUYER ROLE -->
+                        <div class="role-select-card" data-role="buyer">
+                            <div class="role-icon-box bg-gold">
+                                🛒
+                            </div>
+                            <div class="role-info">
+                                <div class="role-header-row">
+                                    <h3>Buyer</h3>
+                                    <span class="role-check-indicator">✓</span>
+                                </div>
+                                <p>Discover agricultural products and connect directly with verified farmers.</p>
+                            </div>
+                        </div>
+
+                        <!-- FIELD AGENT ROLE -->
+                        <div class="role-select-card" data-role="field-agent">
+                            <div class="role-icon-box bg-slate">
+                                🌱
+                            </div>
+                            <div class="role-info">
+                                <div class="role-header-row">
+                                    <h3>Field Agent</h3>
+                                    <span class="role-check-indicator">✓</span>
+                                </div>
+                                <p>Support farmers with agricultural services and field intelligence.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- HIDDEN SELECT FOR FORM COMPATIBILITY -->
+                    <select id="choose-role" name="role" style="display: none;">
+                        <option value="farmer" selected>Farmer</option>
+                        <option value="buyer">Buyer</option>
+                        <option value="field-agent">Field Agent</option>
+                    </select>
+
+                    <!-- ACCOUNT DETAILS -->
+                    <div class="form-inputs-group">
+
+                        <!-- FULL NAME -->
+                        <div class="input-field-wrap">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                        </div>
+
+                        <!-- MOBILE NUMBER -->
+                        <div class="input-field-wrap">
+                            <label for="signup-mobile">Mobile Number</label>
+                            <div class="input-with-prefix">
+                                <span class="input-prefix">+91</span>
+                                <input type="tel" id="signup-mobile" placeholder="10-digit mobile number" maxlength="10" required>
+                            </div>
+                        </div>
+
+                        <!-- PASSWORD -->
+                        <div class="input-field-wrap">
+                            <div class="input-label-row">
+                                <label for="signup-password">Create Password</label>
+                                <button type="button" class="text-btn" id="toggle-signup-password">👁️ Show</button>
+                            </div>
+                            <input type="password" id="signup-password" placeholder="Minimum 8 characters" minlength="8" required>
+                            <div class="password-strength-wrap">
+                                <div class="password-strength-bar">
+                                    <div id="password-strength-fill" class="password-strength-fill"></div>
+                                </div>
+                                <span id="password-strength-text" class="password-strength-text"></span>
+                            </div>
+                        </div>
+
+                        <!-- CONFIRM PASSWORD -->
+                        <div class="input-field-wrap">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                            <input type="password" id="signup-confirm-password" placeholder="Re-enter password" minlength="8" required>
+                        </div>
+
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <button type="submit" id="signup-submit-btn" class="auth-submit-btn">
+                        Create Account & Continue →
+                    </button>
+
+                </form>
+
+
+
+                <!-- FOOTER SWITCH -->
+                <div class="auth-footer-switch">
+                    Already have an account? <a href="/frontend/pages/login.html">Log In</a>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- FOOTER BRANDING -->
+        <footer class="auth-page-footer">
+            © 2026 AgriBridge. Smart Agriculture & Multi-stakeholder Platform.
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/auth.js"></script>
+    <script src="/frontend/scripts/signup.js"></script>
+
+    <!-- PERSISTENT FLOATING VOICE ASSISTANT (SAATHI) -->
+    <a href="/frontend/pages/voice-assistant.html?from_page=signup" class="floating-voice-widget" aria-label="Open Saathi Voice Assistant"
+        title="Voice Farming Assistant / आवाज से पूछें">
+        <div class="voice-mic-icon-box">
+            <div class="voice-pulse-ring"></div>
+            🎙️
         </div>
-    </main>
+        <span class="voice-widget-label" data-i18n="nav.voiceAssistant">Voice AI</span>
+    </a>
 
-    <script src="/scripts/choose_role.js"></script>
 </body>
+
 </html>

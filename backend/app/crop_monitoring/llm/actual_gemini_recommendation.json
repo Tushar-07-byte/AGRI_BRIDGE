@@ -1,0 +1,49 @@
+{
+    "recommendation_id": "REC-20260901-WHEAT-001",
+    "farmer_id": "FARMER-UP-001",
+    "farm_id": "FARM-UP-001",
+    "field_id": "FIELD-WHEAT-01",
+    "crop_id": "CROP-WHEAT-2026",
+    "crop": "Wheat",
+    "growth_stage": "Sowing",
+    "action": {
+        "irrigation": "Halka Paani (Light irrigation)",
+        "fertilizer": "50kg DAP + 25kg MOP + 10kg Zinc",
+        "crop_protection": "None specified"
+    },
+    "timing": {
+        "recommended_date": "2026-09-01",
+        "timing_status": "On Schedule"
+    },
+    "reason": "Clear weather conditions permit scheduled sowing, application of basal fertilizers, and light irrigation to promote optimal seed germination.",
+    "weather_impact": {
+        "decision": "Keep",
+        "reasons": [
+            "Weather is clear with zero rainfall and light winds, providing ideal conditions for sowing and light irrigation."
+        ]
+    },
+    "calendar": {
+        "update_required": false,
+        "original_date": "2026-09-01",
+        "updated_date": "2026-09-01"
+    },
+    "notification": {
+        "required": true,
+        "sent": true,
+        "type": "Sowing Schedule Reminder"
+    },
+    "farmer_action": {
+        "required": true,
+        "completed": false,
+        "instructions": "Proceed with sowing wheat today. Apply 50kg DAP, 25kg MOP, and 10kg Zinc as basal fertilizer. Provide light irrigation (Halka Paani) after sowing. As seedlings emerge, regularly inspect the leaves for spots, discoloration, unusual marks, wilting, or an unhealthy appearance. If an abnormal leaf is observed, take a clear leaf photograph and use the AgriBridge Disease Detection feature."
+    },
+    "safety": {
+        "warning": "Wear protective gloves and mask when handling fertilizers. Avoid over-irrigation to prevent seed rotting."
+    },
+    "sources": [
+        "Supplied Scientific Crop Calendar",
+        "AgriBridge Weather Advisory"
+    ],
+    "generated_at": "2026-09-01T08:00:00Z",
+    "model": "AgriBridge Agricultural Monitoring Assistant"
+}

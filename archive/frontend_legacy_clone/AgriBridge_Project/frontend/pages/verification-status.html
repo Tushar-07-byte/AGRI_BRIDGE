@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verification Status - AgriBridge</title>
+
+    <link rel="stylesheet" href="/frontend/styles/verification-status.css">
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+</head>
+
+<body>
+
+    <main class="verification-page">
+
+        <section class="verification-card">
+
+            <div class="status-icon">
+                🌱
+            </div>
+
+            <h1 data-i18n="verification.status.title">Crop Verification</h1>
+
+            <p class="status-title" id="status-title" data-i18n="verification.status.waitingForVerification">
+                Waiting for Verification
+            </p>
+
+            <p class="status-message" id="status-message" data-i18n="verification.status.waitingDesc">
+                Your crop has passed the initial AI health check
+                and is now waiting for field-agent verification.
+            </p>
+
+            <!-- Status -->
+
+            <div class="status-box">
+
+                <span class="status-label" data-i18n="verification.status.currentStatus">
+                    Current Status
+                </span>
+
+                <span class="status-value" id="status-value" data-i18n="verification.status.pending">
+                    Pending
+                </span>
+
+            </div>
+
+
+            <!-- Verification Information -->
+
+            <div class="info-box">
+
+                <h3 data-i18n="verification.status.whatHappensNext">What happens next?</h3>
+
+                <p data-i18n="verification.status.nextStepDesc">
+                    A field agent will review your crop information
+                    and verify the crop before it becomes available
+                    to buyers.
+                </p>
+
+            </div>
+
+
+            <!-- Back Button -->
+
+            <button id="dashboard-button" type="button" data-i18n="verification.status.backToDashboard">
+                Back to Dashboard
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="/frontend/scripts/i18n.js"></script>
+    <script src="/frontend/scripts/language-selector.js"></script>
+    <script src="/frontend/scripts/verification-status.js"></script>
+
+</body>
+
+</html>

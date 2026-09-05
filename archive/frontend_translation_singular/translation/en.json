@@ -1,0 +1,12 @@
+{
+  "navbar": {
+    "home": "Home",
+    "marketplace": "Marketplace",
+    "about": "About",
+    "login": "Login",
+    "register": "Register"
+  },
+  "language": {
+    "select": "Language"
+  }
+}

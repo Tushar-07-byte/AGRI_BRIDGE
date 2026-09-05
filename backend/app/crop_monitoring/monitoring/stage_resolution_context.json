@@ -1,0 +1,19 @@
+{
+    "status": "stage_resolution_pending",
+    "crop": "Tomato",
+    "current_date": "2026-09-01",
+    "planting_date": "2026-09-01",
+    "days_after_planting": 0,
+    "current_stage": {
+        "stage_number": null,
+        "stage_key": null,
+        "stage_name": null
+    },
+    "next_stage": {
+        "stage_number": null,
+        "stage_key": null,
+        "stage_name": null
+    },
+    "lifecycle_timing_available": false,
+    "resolution_source": "scientific_crop_calendar"
+}

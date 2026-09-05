@@ -1,0 +1,62 @@
+{
+    "recommendation": {
+        "recommendation_id": "",
+        "farmer_id": "",
+        "farm_id": "",
+        "field_id": "",
+        "crop_id": "",
+        "crop": "",
+        "growth_stage": "",
+        "action": {
+            "type": "",
+            "name": "",
+            "status": "recommended",
+            "priority": "medium"
+        },
+        "timing": {
+            "recommended_date": "",
+            "recommended_time": "",
+            "deadline": "",
+            "original_date": "",
+            "date_changed": false
+        },
+        "reason": {
+            "summary": "",
+            "scientific_reason": "",
+            "weather_reason": "",
+            "field_reason": ""
+        },
+        "weather_impact": {
+            "considered": false,
+            "impact": "",
+            "decision": ""
+        },
+        "calendar": {
+            "update_required": false,
+            "update_type": "",
+            "previous_date": "",
+            "new_date": ""
+        },
+        "notification": {
+            "required": true,
+            "priority": "medium",
+            "title": "",
+            "message": "",
+            "scheduled_time": "",
+            "sent": false
+        },
+        "farmer_action": {
+            "required": true,
+            "instructions": [],
+            "confirmation_required": false
+        },
+        "safety": {
+            "confidence": null,
+            "requires_expert_verification": false,
+            "warning": ""
+        },
+        "sources": [],
+        "generated_at": "",
+        "model": ""
+    }
+}
